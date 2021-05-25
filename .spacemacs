@@ -33,9 +33,7 @@
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(go
-     javascript
-     ;; ----------------------------------------------------------------
+   '(;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
@@ -44,10 +42,6 @@
      ;; version-control
      ;; chinese
      ;; cnfonts
-     ;; yaml
-     python
-     eaf
-     html
      helm
      auto-completion
      better-defaults
@@ -58,11 +52,10 @@
      markdown
      org
      treemacs
-     tabnine
      (shell :variables
       shell-default-height 40
       shell-default-position 'bottom
-      )
+     )
      )
 
    ;; List of additional packages that will be installed without being wrapped
@@ -197,8 +190,8 @@
    ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
    ;; number is the project limit and the second the limit on the recent files
    ;; within a project.
-   dotspacemacs-startup-lists '((recents . 9)
-                                (projects . 9))
+   dotspacemacs-startup-lists '((recents . 3)
+                                (projects . 3))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -207,7 +200,7 @@
    dotspacemacs-show-startup-list-numbers t
 
    ;; The minimum delay in seconds between number key presses. (default 0.4)
-   dotspacemacs-startup-buffer-multi-digit-delay 0.6
+   dotspacemacs-startup-buffer-multi-digit-delay 0.7
 
    ;; Default major mode for a new empty buffer. Possible values are mode
    ;; names such as `text-mode'; and `nil' to use Fundamental mode.
@@ -347,7 +340,7 @@
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
 
    ;; If non-nil `spacemacs/toggle-fullscreen' will not use native fullscreen.
    ;; Use to disable fullscreen animations in OSX. (default nil)
@@ -490,7 +483,7 @@
    ;; `trailing' to delete only the whitespace at end of lines, `changed' to
    ;; delete only whitespace for changed lines or `nil' to disable cleanup.
    ;; (default nil)
-   dotspacemacs-whitespace-cleanup nil
+   dotspacemacs-whitespace-cleanup `trailing
 
    ;; If non nil activate `clean-aindent-mode' which tries to correct
    ;; virtual indentation of simple modes. This can interfer with mode specific
@@ -590,7 +583,7 @@
     :config
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces))
-  ;;---------------------------------------------------------------------------- 
+  ;;----------------------------------------------------------------------------
 
   ;; lsp-start
   ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
@@ -605,7 +598,7 @@
            (html-mode . lsp)
            (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp)
-  
+
   ;; optionally
   (use-package lsp-ui :commands lsp-ui-mode)
   ;; (use-package dap-mode)
@@ -623,12 +616,12 @@
     :config
     (which-key-mode))
   ;; lsp-end
-  ;;---------------------------------------------------------------------------- 
+  ;;----------------------------------------------------------------------------
 
     ;; dap-mode-end
-    ;;---------------------------------------------------------------------------- 
+    ;;----------------------------------------------------------------------------
 
-    ;; add quickly exit 
+    ;; add quickly exit
     (setq-default evil-escape-key-sequence "jk")
 
     ;; Trigger completion immediately.
