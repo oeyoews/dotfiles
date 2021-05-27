@@ -41,14 +41,14 @@
      ;; multiple-cursors
      ;; version-control
      ;; chinese
+     ;; spell-checking
      ;; cnfonts
      helm
      auto-completion
      better-defaults
      emacs-lisp
-     ;; spell-checking
-     syntax-checking
-     lsp
+     ;; syntax-checking
+     ;; lsp
      markdown
      org
      treemacs
@@ -245,7 +245,7 @@
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 14.0
+                               :size 16.0
                                ;; :weight normal
                                :weight Semibold
                                :width normal)
@@ -584,33 +584,33 @@
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces))
 
-  ;; lsp-start
-  (use-package lsp-mode
-    :init
-    (setq lsp-keymap-prefix "C-c l")
-    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-           (c-mode . lsp)
-           (c++-mode . lsp)
-           ;; (python-mode . lsp)
-           ;; (html-mode . lsp)
-           (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp)
+  ;; ;; lsp-start
+  ;; (use-package lsp-mode
+  ;;   :init
+  ;;   (setq lsp-keymap-prefix "C-c l")
+  ;;   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+  ;;          (c-mode . lsp)
+  ;;          (c++-mode . lsp)
+  ;;          ;; (python-mode . lsp)
+  ;;          ;; (html-mode . lsp)
+  ;;          (lsp-mode . lsp-enable-which-key-integration))
+  ;;   :commands lsp)
 
-  ;; optionally
-  (use-package lsp-ui :commands lsp-ui-mode)
-  ;; if you are helm user
-  (use-package helm-lsp :commands helm-lsp-workspace-symbol)
+  ;; ;; optionally
+  ;; (use-package lsp-ui :commands lsp-ui-mode)
+  ;; ;; if you are helm user
+  ;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
-  ;; if you are ivy user
-  (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-  (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+  ;; ;; if you are ivy user
+  ;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+  ;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 
-  ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-  ;; optional if you want which-key integration
-  (use-package which-key
-    :config
-    (which-key-mode))
-  ;; lsp-end
+  ;; ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+  ;; ;; optional if you want which-key integration
+  ;; (use-package which-key
+  ;;   :config
+  ;;   (which-key-mode))
+  ;; ;; lsp-end
 
     ;; add quickly exit
     (setq-default evil-escape-key-sequence "jk")
