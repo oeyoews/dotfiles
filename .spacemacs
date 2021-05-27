@@ -46,7 +46,7 @@
      auto-completion
      better-defaults
      emacs-lisp
-     spell-checking
+     ;; spell-checking
      syntax-checking
      lsp
      markdown
@@ -583,26 +583,21 @@
     :config
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces))
-  ;;----------------------------------------------------------------------------
 
   ;; lsp-start
-  ;; set prefix for lsp-command-keymap (few alternatives - "C-l", "C-c l")
-  ;; if you want which-key integration
   (use-package lsp-mode
     :init
     (setq lsp-keymap-prefix "C-c l")
     :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
            (c-mode . lsp)
            (c++-mode . lsp)
-           (python-mode . lsp)
-           (html-mode . lsp)
+           ;; (python-mode . lsp)
+           ;; (html-mode . lsp)
            (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp)
 
   ;; optionally
   (use-package lsp-ui :commands lsp-ui-mode)
-  ;; (use-package dap-mode)
-
   ;; if you are helm user
   (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
@@ -616,10 +611,6 @@
     :config
     (which-key-mode))
   ;; lsp-end
-  ;;----------------------------------------------------------------------------
-
-    ;; dap-mode-end
-    ;;----------------------------------------------------------------------------
 
     ;; add quickly exit
     (setq-default evil-escape-key-sequence "jk")
