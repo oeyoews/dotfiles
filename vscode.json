@@ -14,32 +14,33 @@
     },
 
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "$HOME/下载/Vimrc/.vimrc",
+    "vim.vimrc.path": "$HOME/Downloads/Vimrc/.vimrc",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "vim.sneak": true,
     "vim.sneakReplacesF": true,
-
+    
     "vim.insertModeKeyBindings": [
     {
         "before": ["j", "k"],
         "after": ["<Esc>"]
     }
     ],
-
+    
     "workbench.startupEditor": "none",
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Solarized Dark",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#107c34",
+        "statusBar.background": "#8c8bc5da",
         "statusBar.noFolderBackground": "#10b92c",
         "statusBar.debuggingBackground": "#3ca70a",
-        "statusBar.foreground": "#4c098b"
+        "statusBar.foreground": "#00040fd7",
     },
 
 
     "[jsonc]": {
+
         "editor.quickSuggestions": {
             "strings": true
         },
@@ -59,4 +60,8 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "update.mode": "none",
     "update.showReleaseNotes": false,
+    "vim.useSystemClipboard": true,
+    "cSpell.userWords": [
+        "oeyoews"
+    ],
 }
