@@ -48,7 +48,7 @@
      better-defaults
      emacs-lisp
      ;; syntax-checking
-     ;; lsp
+     lsp
      markdown
      org
      treemacs
@@ -244,10 +244,10 @@
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("DeJaVu Sans Mono"
+                               ;;"Source Code Pro"
                                :size 16.0
-                               ;; :weight normal
-                               :weight Semibold
+                               :weight Regular
                                :width normal)
 
    ;; The leader key (default "SPC")
@@ -584,33 +584,31 @@
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces))
 
-  ;; ;; lsp-start
-  ;; (use-package lsp-mode
-  ;;   :init
-  ;;   (setq lsp-keymap-prefix "C-c l")
-  ;;   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-  ;;          (c-mode . lsp)
-  ;;          (c++-mode . lsp)
-  ;;          ;; (python-mode . lsp)
-  ;;          ;; (html-mode . lsp)
-  ;;          (lsp-mode . lsp-enable-which-key-integration))
-  ;;   :commands lsp)
+  ;; lsp-start
+  (use-package lsp-mode
+    :init
+    (setq lsp-keymap-prefix "C-c l")
+    :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
+           (c-mode . lsp)
+           (c++-mode . lsp)
+           (lsp-mode . lsp-enable-which-key-integration))
+    :commands lsp)
 
-  ;; ;; optionally
-  ;; (use-package lsp-ui :commands lsp-ui-mode)
-  ;; ;; if you are helm user
-  ;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
+  ;; optionally
+  (use-package lsp-ui :commands lsp-ui-mode)
+  ;; if you are helm user
+  (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 
-  ;; ;; if you are ivy user
-  ;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-  ;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+  ;; if you are ivy user
+  (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+  (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 
-  ;; ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-  ;; ;; optional if you want which-key integration
-  ;; (use-package which-key
-  ;;   :config
-  ;;   (which-key-mode))
-  ;; ;; lsp-end
+  ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+  ;; optional if you want which-key integration
+  (use-package which-key
+    :config
+    (which-key-mode))
+  ;; lsp-end
 
     ;; add quickly exit
     (setq-default evil-escape-key-sequence "jk")
@@ -658,7 +656,7 @@ This function is called at the very end of Spacemacs initialization."
      ("XXX+" . "#dc752f")
      ("\\?\\?\\?+" . "#dc752f")))
  '(package-selected-packages
-   '(eaf eglot flyspell-correct-helm flyspell-correct auto-dictionary gruvbox-theme autothemer monokai-theme pyim xr pangu-spacing find-by-pinyin-dired chinese-conv ace-pinyin pinyinlib dap-mode bui web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data add-node-modules-path yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key vterm volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org terminal-here symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons shell-pop restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort popwin poetry pippel pipenv pip-requirements pcre2el password-generator paradox overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file nose nameless multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-pyright lsp-origami lorem-ipsum live-py-mode link-hint indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word cython-mode company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell))
+   '(origami lsp-mode pos-tip eaf eglot flyspell-correct-helm flyspell-correct auto-dictionary gruvbox-theme autothemer monokai-theme pyim xr pangu-spacing find-by-pinyin-dired chinese-conv ace-pinyin pinyinlib dap-mode bui web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data add-node-modules-path yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key vterm volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org terminal-here symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons shell-pop restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort popwin poetry pippel pipenv pip-requirements pcre2el password-generator paradox overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file nose nameless multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-pyright lsp-origami lorem-ipsum live-py-mode link-hint indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word cython-mode company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell))
  '(pdf-view-midnight-colors '("#b2b2b2" . "#292b2e")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
