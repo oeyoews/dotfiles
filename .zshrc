@@ -18,3 +18,4 @@ alias neo='fastfetch | lolcat'
 alias ema='emacs'
 set -o vi
 alias rm='trash'
+alias open='xdg-open'
