@@ -9,14 +9,20 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
+set -o vi
+export EDITOR=/usr/bin/vim
+
+# source
 source /usr/share/nvm/init-nvm.sh
+
+# alias 
 alias cl='clear'
 alias ls='lsd'
-export EDITOR=/usr/bin/vim
 alias ping="ping -c 5"
 alias neo='fastfetch | lolcat'
 alias ema='emacs'
-set -o vi
 alias rm='trash'
 alias open='xdg-open'
 alias wego='curl -s wttr.in | lolcat'
+alias py='python'
+

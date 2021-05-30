@@ -51,3 +51,5 @@ default_height = 30
 [layers.override_cmd]
     c = ["clangd"]
     
+[[custom_plugins]]
+repo = 'frazrepo/vim-rainbow'

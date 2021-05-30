@@ -32,9 +32,9 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#8c8bc5da",
-        "statusBar.noFolderBackground": "#10b92c",
-        "statusBar.debuggingBackground": "#3ca70a",
+        "statusBar.background": "#8be960da",
+        "statusBar.noFolderBackground": "#37d459",
+        "statusBar.debuggingBackground": "#c57519",
         "statusBar.foreground": "#00040fd7"
     },
 
@@ -75,4 +75,6 @@
     "editor.formatOnType": true,
     "json.trace.server": "verbose",
     "editor.defaultFormatter": "xaver.clang-format",
+    "leetcode.hint.commandShortcut": false,
+    "markdown-preview-enhanced.previewTheme": "one-dark.css"
 }
