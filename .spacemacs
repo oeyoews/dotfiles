@@ -226,7 +226,8 @@
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;;spacemacs-dark
-                         sanityinc-solarized-dark
+                         ;; sanityinc-solarized-dark
+                         doom-one
                          )
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -538,6 +539,9 @@
 
   ;; fix spell-checking
   (setq ispell-extra-args '("--lang=en_US"))
+
+  ;; shutdown this startup
+  ;; (setq inhibit-splash-screen 1)
 
   ;; remove cl warnings
   (setq byte-compile-warnings '(not cl-functions obsolete))

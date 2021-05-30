@@ -10,7 +10,7 @@
     "debug.onTaskErrors": "showErrors",
     "debug.console.fontFamily": "Source Code Pro",
     "[c]": {
-        "editor.defaultFormatter": "ms-vscode.cpptools"
+        "editor.defaultFormatter": "xaver.clang-format"
     },
 
     "vim.vimrc.enable": true,
@@ -19,6 +19,7 @@
     "vim.easymotion": true,
     "vim.sneak": true,
     "vim.sneakReplacesF": true,
+    "vim.useSystemClipboard": true,
     "vim.insertModeKeyBindings": [
     {
         "before": ["j", "k"],
@@ -26,7 +27,7 @@
     }
     ],
     
-    "workbench.colorTheme": "Better Solarized Dark",
+    "workbench.colorTheme": "One Dark Pro",
     "workbench.startupEditor": "none",
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
@@ -34,11 +35,10 @@
         "statusBar.background": "#8c8bc5da",
         "statusBar.noFolderBackground": "#10b92c",
         "statusBar.debuggingBackground": "#3ca70a",
-        "statusBar.foreground": "#00040fd7",
+        "statusBar.foreground": "#00040fd7"
     },
 
     "[jsonc]": {
-
         "editor.quickSuggestions": {
             "strings": true
         },
@@ -48,9 +48,6 @@
     "window.dialogStyle": "custom",
     "http.proxySupport": "off",
     "git.enabled": false,
-    "markdown.extension.toc.slugifyMode": "vscode",
-    "markdown-preview-enhanced.previewTheme": "solarized-dark.css",
-    "markdown-preview-enhanced.printBackground": true,
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
     "terminal.integrated.fontFamily": "Source Code Pro",
@@ -58,7 +55,7 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "update.mode": "none",
     "update.showReleaseNotes": false,
-    "vim.useSystemClipboard": true,
+    "terminal.integrated.fontSize": 18,
     "cSpell.userWords": [
         "oeyoews"
     ],
@@ -68,4 +65,14 @@
     "leetcode.hint.configWebviewMarkdown": false,
     "leetcode.hint.commentDescription": false,
     "leetcode.defaultLanguage": "c",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "json.trace.server": "verbose",
+    "editor.defaultFormatter": "xaver.clang-format"
 }
