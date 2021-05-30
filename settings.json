@@ -74,5 +74,5 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "json.trace.server": "verbose",
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "xaver.clang-format",
 }
