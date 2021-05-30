@@ -19,7 +19,6 @@
     "vim.easymotion": true,
     "vim.sneak": true,
     "vim.sneakReplacesF": true,
-    
     "vim.insertModeKeyBindings": [
     {
         "before": ["j", "k"],
@@ -27,6 +26,7 @@
     }
     ],
     
+    "workbench.colorTheme": "Better Solarized Dark",
     "workbench.startupEditor": "none",
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
@@ -36,7 +36,6 @@
         "statusBar.debuggingBackground": "#3ca70a",
         "statusBar.foreground": "#00040fd7",
     },
-
 
     "[jsonc]": {
 
@@ -63,7 +62,7 @@
     "cSpell.userWords": [
         "oeyoews"
     ],
-    "workbench.colorTheme": "Better Solarized Dark",
+    
     "leetcode.endpoint": "leetcode-cn",
     "leetcode.workspaceFolder": "/home/oeyoews/.leetcode",
     "leetcode.hint.configWebviewMarkdown": false,
