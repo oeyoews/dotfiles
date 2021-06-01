@@ -52,4 +52,8 @@ default_height = 30
     c = ["clangd"]
     
 [[custom_plugins]]
-repo = 'frazrepo/vim-rainbow'
+  repo = 'frazrepo/vim-rainbow'
+
+[[custom_plugins]]
+  repo = 'https://gitee.com/mirrors/taglist.vim'
+  merge = false

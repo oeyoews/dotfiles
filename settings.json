@@ -76,5 +76,5 @@
     "json.trace.server": "verbose",
     "editor.defaultFormatter": "xaver.clang-format",
     "leetcode.hint.commandShortcut": false,
-    "markdown-preview-enhanced.previewTheme": "one-dark.css"
+    "markdown-preview-enhanced.previewTheme": "vue.css"
 }
