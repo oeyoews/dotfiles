@@ -49,7 +49,10 @@ default_height = 30
     c = ["clangd"]
 
 [[custom_plugins]]
-  repo = 'frazrepo/vim-rainbow'
+  repo = "https://hub.fastgit.org/luochen1990/rainbow.git"
+  # repo = 'frazrepo/vim-rainbow'
 
 [[layers]]
   name = 'colorscheme'
+
+

@@ -76,6 +76,5 @@
     "json.trace.server": "verbose",
     "editor.defaultFormatter": "xaver.clang-format",
     "leetcode.hint.commandShortcut": false,
-    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
-    "window.zoomLevel": 1
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css"
 }
