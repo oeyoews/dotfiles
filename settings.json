@@ -14,7 +14,7 @@
     },
 
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "$HOME/Downloads/Vimrc/.vimrc",
+    "vim.vimrc.path": "$HOME/Download/Vimrc/.vimrc",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "vim.sneak": true,
@@ -76,5 +76,6 @@
     "json.trace.server": "verbose",
     "editor.defaultFormatter": "xaver.clang-format",
     "leetcode.hint.commandShortcut": false,
-    "markdown-preview-enhanced.previewTheme": "vue.css"
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+    "window.zoomLevel": 1
 }

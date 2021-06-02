@@ -25,4 +25,4 @@ alias rm='trash'
 alias open='xdg-open'
 alias wego='curl -s wttr.in | lolcat'
 alias py='python'
-
+alias ra='ranger'

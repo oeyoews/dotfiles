@@ -11,8 +11,8 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "palenight"
     colorscheme_bg = "dark"
+    colorscheme = "onedark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -36,9 +36,6 @@ default_position = 'bottom'
 default_height = 30
 
 [[layers]]
-  name = "colorscheme"
-
-[[layers]]
   name = "format"
   name = "lang#c"
   name = "lsp"
@@ -50,10 +47,9 @@ default_height = 30
 
 [layers.override_cmd]
     c = ["clangd"]
-    
+
 [[custom_plugins]]
   repo = 'frazrepo/vim-rainbow'
 
-[[custom_plugins]]
-  repo = 'https://gitee.com/mirrors/taglist.vim'
-  merge = false
+[[layers]]
+  name = 'colorscheme'
