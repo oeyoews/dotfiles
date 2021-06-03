@@ -41,39 +41,5 @@ default_height = 30
 [[layers]]
   name = 'colorscheme'
 
-[[layers]]
-  name = 'insearch'
-
-# c/c++
-[[layers]]
-  name = "lang#c"
-
-[[layers]]
-  name = "lsp"
-
-[[layers]]
-  name = "lang#c"
-  enable_clang_syntax_highlight = true
-
-[[layers]]
-  name = "lsp"
-  filetypes = [
-    "c",
-    "cpp"
-  ]
-  [layers.override_cmd]
-    c = ["clangd"]
-
-[[layers]]
-  name = "format"
-
-# plugin
-[[custom_plugins]]
-  repo = "https://hub.fastgit.org/luochen1990/rainbow.git"
-  # repo = 'frazrepo/vim-rainbow'
-
-[[custom_plugins]]
-  repo = "https://hub.fastgit.org/codota/tabnine-vim"
-
-[[custom_plugins]]
-  repo = "https://hub.fastgit.org/neoclide/coc.nvim"
+# [[layers]]
+  # name = "format"
