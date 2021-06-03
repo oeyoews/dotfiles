@@ -11,13 +11,16 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
+
     colorscheme_bg = "dark"
     colorscheme = "onedark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
+
     enable_guicolors = true
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
+
     statusline_separator = "arrow"
     statusline_iseparator = "arrow"
     buffer_index_type = 4
@@ -36,23 +39,41 @@ default_position = 'bottom'
 default_height = 30
 
 [[layers]]
-  name = "format"
+  name = 'colorscheme'
+
+[[layers]]
+  name = 'insearch'
+
+# c/c++
+[[layers]]
   name = "lang#c"
+
+[[layers]]
   name = "lsp"
+
+[[layers]]
+  name = "lang#c"
   enable_clang_syntax_highlight = true
+
+[[layers]]
+  name = "lsp"
   filetypes = [
     "c",
     "cpp"
   ]
-
-[layers.override_cmd]
+  [layers.override_cmd]
     c = ["clangd"]
 
+[[layers]]
+  name = "format"
+
+# plugin
 [[custom_plugins]]
   repo = "https://hub.fastgit.org/luochen1990/rainbow.git"
   # repo = 'frazrepo/vim-rainbow'
 
-[[layers]]
-  name = 'colorscheme'
+[[custom_plugins]]
+  repo = "https://hub.fastgit.org/codota/tabnine-vim"
 
-
+[[custom_plugins]]
+  repo = "https://hub.fastgit.org/neoclide/coc.nvim"
