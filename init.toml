@@ -13,7 +13,6 @@
     # layer
 
     colorscheme_bg = "dark"
-    colorscheme = "onedark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
 
@@ -38,8 +37,12 @@ name = 'shell'
 default_position = 'bottom'
 default_height = 30
 
-[[layers]]
-  name = 'colorscheme'
+# [[custom_plugins]]
+  # repo = "https://hub.fastgit.org/airblade/vim-gitgutter"
 
-# [[layers]]
-  # name = "format"
+
+[[custom_plugins]]
+  repo = "https://hub.fastgit.org/iamcco/markdown-preview.nvim"
+  
+[[custom_plugins]]
+  repo = "https://hub.fastgit.org/neoclide/coc.nvim.git"

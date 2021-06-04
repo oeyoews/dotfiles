@@ -1,3 +1,5 @@
 [user]
 	email = 2956398608@qq.com
 	name = oeyoews
+[credential]
+	helper = store

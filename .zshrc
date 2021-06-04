@@ -10,7 +10,9 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 set -o vi
-export EDITOR=/usr/bin/vim
+# == export EDITOR=vim
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 # source
 source /usr/share/nvm/init-nvm.sh
