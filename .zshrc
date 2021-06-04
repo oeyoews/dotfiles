@@ -16,6 +16,7 @@ export EDITOR="$VISUAL"
 
 # source
 source /usr/share/nvm/init-nvm.sh
+source $HOME/.local/share/gem/ruby/3.0.0/bin
 
 # alias 
 alias cl='clear'
