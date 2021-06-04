@@ -11,7 +11,7 @@ fi
 
 set -o vi
 # == export EDITOR=vim
-export VISUAL="vim"
+export VISUAL="nvim"
 export EDITOR="$VISUAL"
 
 # source
@@ -29,3 +29,4 @@ alias wego='curl -s wttr.in | lolcat'
 alias py='python'
 alias ra='ranger'
 alias ts='trans -b'
+alias vim='nvim'

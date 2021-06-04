@@ -37,12 +37,14 @@ name = 'shell'
 default_position = 'bottom'
 default_height = 30
 
-# [[custom_plugins]]
-  # repo = "https://hub.fastgit.org/airblade/vim-gitgutter"
-
-
 [[custom_plugins]]
   repo = "https://hub.fastgit.org/iamcco/markdown-preview.nvim"
   
 [[custom_plugins]]
   repo = "https://hub.fastgit.org/neoclide/coc.nvim.git"
+
+[[custom_plugins]]
+  repo = 'https://hub.fastgit.org/francoiscabrol/ranger.vim.git'
+
+[[custom_plugins]]
+  repo = "https://gitclone.com/github.com/dstein64/vim-startuptime"
