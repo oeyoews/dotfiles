@@ -16,7 +16,7 @@ export EDITOR="$VISUAL"
 
 # source
 source /usr/share/nvm/init-nvm.sh
-source $HOME/.local/share/gem/ruby/3.0.0/bin
+# source $HOME/.local/share/gem/ruby/3.0.0/bin
 
 # alias 
 alias cl='clear'
@@ -30,3 +30,4 @@ alias wego='curl -s wttr.in | lolcat'
 alias py='python'
 alias ra='ranger'
 alias ts='trans -b'
+

@@ -34,14 +34,7 @@
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
-     ;; `M-m f e R' (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     ;; multiple-cursors
-     ;; version-control
-     ;; spell-checking
+     python
      helm
      auto-completion
      better-defaults
@@ -190,8 +183,8 @@
    ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
    ;; number is the project limit and the second the limit on the recent files
    ;; within a project.
-   dotspacemacs-startup-lists '((recents . 3)
-                                (projects . 3))
+   dotspacemacs-startup-lists '((recents . 9)
+                                (projects . 9))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -239,7 +232,7 @@
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
    ;; dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.0)
-   dotspacemacs-mode-line-theme '(vim-powerline :separator wave :separator-scale 1.0)
+   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.0)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -353,7 +346,7 @@
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup 'nil
 
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
@@ -480,7 +473,7 @@
    dotspacemacs-icon-title-format nil
 
    ;; Show trailing whitespace (default t)
-   dotspacemacs-show-trailing-whitespace nil
+   dotspacemacs-show-trailing-whitespace t
 
    ;; Delete whitespace while saving buffer. Possible values are `all'
    ;; to aggressively delete empty line and long sequences of whitespace,
@@ -529,6 +522,10 @@
 
   (defun dotspacemacs/user-init ()
 
+    (setq configuration-layer-elpa-archives
+          '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
+            ("org-cn"   . "http://mirrors.ustc.edu.cn/elpa/org/")
+            ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
   ;; add analyse in buffer
   (add-hook 'emacs-startup-hook
             (lambda ()
@@ -541,19 +538,12 @@
   ;; fix spell-checking
   (setq ispell-extra-args '("--lang=en_US"))
 
-  ;; shutdown this startup
-  ;; (setq inhibit-splash-screen 1)
-
   ;; remove cl warnings
   (setq byte-compile-warnings '(not cl-functions obsolete))
 
   ;; quickly garbage to solve.
   (setq gc-cons-threshold (* 50 1000 1000))
 
-  (setq configuration-layer-elpa-archives
-    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
       "Initialization for user code:
     This function is called immediately after `dotspacemacs/init', before layer
@@ -571,8 +561,8 @@
 
   (defun dotspacemacs/user-config ()
 
-  ;; (fancy-battery-mode)
-  ;; (display-time-mode)
+  (display-time-mode)
+  (fancy-battery-mode)
   (global-company-mode)
 
   ;; add space automatically
@@ -621,7 +611,7 @@
     (setq-default evil-escape-key-sequence "jk")
 
     ;; Trigger completion immediately.
-    (setq company-idle-delay 0.1)
+    (setq company-idle-delay 0.0)
 
     ;; Number the candidates (use M-1, M-2 etc to select completions).
     (setq company-show-numbers t)
