@@ -30,4 +30,7 @@ alias wego='curl -s wttr.in | lolcat'
 alias py='python'
 alias ra='ranger'
 alias ts='trans -b'
+alias top='bpytop'
+alias sourcez='$HOME/.zshrc'
+alias vimz='$HOME/.zshrc'
 
