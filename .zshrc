@@ -10,6 +10,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 set -o vi
+
 # == export EDITOR=vim
 export VISUAL="vim"
 export EDITOR="$VISUAL"
@@ -22,7 +23,7 @@ source /usr/share/nvm/init-nvm.sh
 alias cl='clear'
 alias ls='lsd'
 alias ping="ping -c 3"
-alias neo='fastfetch | lolcat'
+alias neo='neofetch| lolcat'
 alias ema='emacs'
 alias rm='trash'
 alias open='xdg-open'
@@ -31,6 +32,5 @@ alias py='python'
 alias ra='ranger'
 alias ts='trans -b'
 alias top='bpytop'
-alias sourcez='$HOME/.zshrc'
-alias vimz='$HOME/.zshrc'
-
+alias sourz='source $HOME/.zshrc'
+alias vimz='vim $HOME/.zshrc'
