@@ -22,7 +22,7 @@ source /usr/share/nvm/init-nvm.sh
 # alias 
 alias cl='clear'
 alias ls='lsd'
-alias ping="ping -c 3"
+alias ping="ping -c 2"
 alias neo='neofetch| lolcat'
 alias ema='emacs'
 alias rm='trash'
