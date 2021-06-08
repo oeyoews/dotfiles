@@ -1,5 +1,6 @@
 # Use powerline
 USE_POWERLINE="true"
+
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
@@ -9,7 +10,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-set -o vi
+# set -o vi
 
 # == export EDITOR=vim
 export VISUAL="vim"
@@ -32,5 +33,7 @@ alias py='python'
 alias ra='ranger'
 alias ts='trans -b'
 alias top='bpytop'
-alias sourz='source $HOME/.zshrc'
-alias vimz='vim $HOME/.zshrc'
+alias soz='source $HOME/.zshrc'
+alias viz='vim $HOME/.zshrc'
+alias pacman='sudo pacman'
+alias his='history 100'
