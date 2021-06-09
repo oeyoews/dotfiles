@@ -10,7 +10,7 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-# set -o vi
+set -o vi
 
 # == export EDITOR=vim
 export VISUAL="vim"
@@ -37,3 +37,7 @@ alias soz='source $HOME/.zshrc'
 alias viz='vim $HOME/.zshrc'
 alias pacman='sudo pacman'
 alias his='history 100'
+
+# function upate {
+   # sudo pacman -Syu
+# }
