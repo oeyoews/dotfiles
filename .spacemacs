@@ -34,18 +34,17 @@
    dotspacemacs-configuration-layers
    '(html
      python
-     helm
+     ivy
      syntax-checking
      auto-completion
+     neotree
      better-defaults
      emacs-lisp
-     syntax-checking
      lsp
      c-c++
      markdown
      org
-     treemacs
-     themes-megapack
+     ;; themes-megapack
      (shell :variables
             shell-default-height 40
             shell-default-position 'bottom
@@ -60,7 +59,7 @@
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(pangu-spacing git-gutter)
+   dotspacemacs-additional-packages '(pangu-spacing git-gutter all-the-icons-ivy-rich)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -184,8 +183,8 @@
    ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
    ;; number is the project limit and the second the limit on the recent files
    ;; within a project.
-   dotspacemacs-startup-lists '((recents . 9)
-                                (projects . 9))
+   dotspacemacs-startup-lists '((recents . 5)
+                                (projects . 5))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -229,7 +228,6 @@
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   ;; dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.0)
    dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.0)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
@@ -239,9 +237,8 @@
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("DeJaVu Sans Mono"
-                               ;;"Source Code Pro"
-                               :size 15.0
+   dotspacemacs-default-font '("Source Code Pro Medium"
+                               :size 16.0
                                :weight Regular
                                :width normal)
 
@@ -525,12 +522,8 @@
           ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
-  ;; (setq configuration-layer-elpa-archives
-  ;;       '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-  ;;         ("org-cn"   . "http://mirrors.ustc.edu.cn/elpa/org/")
-  ;;         ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
-
-
+  ;; remove cl warnings
+  (setq byte-compile-warnings '(not cl-functions obsolete))
 
   ;; add analyse in buffer
   (add-hook 'emacs-startup-hook
@@ -544,13 +537,9 @@
   ;; fix spell-checking
   (setq ispell-extra-args '("--lang=en_US"))
 
-  ;; set default workspace
-  ;; (setq default-directory "/tmp/")
-  ;; ;; demo
-  ;; (setq inhibit-compacting-font-caches t)
-
-  ;; remove cl warnings
-  (setq byte-compile-warnings '(not cl-functions obsolete))
+  ;; neotree settings
+  (setq neo-theme 'icons)
+  (setq neo-vc-integration ' (face) )
 
   ;; quickly garbage to solve.
   (setq gc-cons-threshold (* 50 1000 1000))
@@ -572,6 +561,34 @@
 
 (defun dotspacemacs/user-config ()
 
+  (global-company-mode)
+
+  ;; add quickly exit
+  (setq-default evil-escape-key-sequence "jk")
+
+  ;; add git-gutter
+  (global-git-gutter-mode +1)
+
+  (use-package all-the-icons-ivy-rich
+    :ensure t
+    :init (all-the-icons-ivy-rich-mode 1))
+
+  (use-package ivy-rich
+    :ensure t
+    :init (ivy-rich-mode 1))
+
+  ;; The icon size
+  (setq all-the-icons-ivy-rich-icon-size 1.0)
+
+  ;; Definitions for ivy-rich transformers.
+  ;; See `ivy-rich-display-transformers-list' for details."
+  all-the-icons-ivy-rich-display-transformers-list
+
+  ;; Slow Rendering
+  ;; If you experience a slow down in performance when rendering multiple icons simultaneously,
+  ;; you can try setting the following variable
+  (setq inhibit-compacting-font-caches t)
+
   ;; lsp-start
   (use-package lsp-mode
     :init
@@ -582,21 +599,6 @@
            (python-mode . lsp)
            (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp)
-
-  ;; ;; optionally
-  ;; (use-package lsp-ui :commands lsp-ui-mode)
-  ;; ;; if you are helm user
-  ;; (use-package helm-lsp :commands helm-lsp-workspace-symbol)
-
-  ;; if you are ivy user
-  ;; (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-  ;; (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
-
-  ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-  ;; optional if you want which-key integration
-  ;; (use-package which-key
-  ;;   :config
-  ;;   (which-key-mode))
   ;; lsp-end
 
   ;; add space automatically
@@ -614,17 +616,6 @@
     :config
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces))
-
-
-  ;; (display-time-mode)
-  ;; (fancy-battery-mode)
-  (global-company-mode)
-
-  ;; add git-gutter
-  (global-git-gutter-mode +1)
-
-  ;; add quickly exit
-  (setq-default evil-escape-key-sequence "jk")
 
   ;; Trigger completion immediately.
   (setq company-idle-delay 0.1)
@@ -646,31 +637,8 @@
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(evil-want-Y-yank-to-eol nil)
- '(hl-todo-keyword-faces
-   '(("TODO" . "#dc752f")
-     ("NEXT" . "#dc752f")
-     ("THEM" . "#2d9574")
-     ("PROG" . "#4f97d7")
-     ("OKAY" . "#4f97d7")
-     ("DONT" . "#f2241f")
-     ("FAIL" . "#f2241f")
-     ("DONE" . "#86dc2f")
-     ("NOTE" . "#b1951d")
-     ("KLUDGE" . "#b1951d")
-     ("HACK" . "#b1951d")
-     ("TEMP" . "#b1951d")
-     ("FIXME" . "#dc752f")
-     ("XXX+" . "#dc752f")
-     ("\\?\\?\\?+" . "#dc752f")))
- '(package-selected-packages
-   '(ivy-rich all-the-icons-ivy helm-core wgrep smex lsp-ivy ivy-yasnippet ivy-xref ivy-rtags ivy-purpose ivy-hydra ivy-avy counsel-projectile slime with-editor git-gutter helm-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme origami lsp-mode pos-tip eaf eglot flyspell-correct-helm flyspell-correct auto-dictionary gruvbox-theme autothemer monokai-theme pyim xr pangu-spacing find-by-pinyin-dired chinese-conv ace-pinyin pinyinlib dap-mode bui web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data add-node-modules-path yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key vterm volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org terminal-here symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons shell-pop restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort popwin poetry pippel pipenv pip-requirements pcre2el password-generator paradox overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file nose nameless multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-pyright lsp-origami lorem-ipsum live-py-mode link-hint indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word cython-mode company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell))
- '(pdf-view-midnight-colors '("#b2b2b2" . "#292b2e")))
+
+  '(pdf-view-midnight-colors '("#b2b2b2" . "#292b2e")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -683,4 +651,30 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
  '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
  '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
-)
+  (custom-set-variables
+
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(evil-want-Y-yank-to-eol nil)
+   '(hl-todo-keyword-faces
+     '(("TODO" . "#dc752f")
+       ("NEXT" . "#dc752f")
+       ("THEM" . "#2d9574")
+       ("PROG" . "#4f97d7")
+       ("OKAY" . "#4f97d7")
+       ("DONT" . "#f2241f")
+       ("FAIL" . "#f2241f")
+       ("DONE" . "#86dc2f")
+       ("NOTE" . "#b1951d")
+       ("KLUDGE" . "#b1951d")
+       ("HACK" . "#b1951d")
+       ("TEMP" . "#b1951d")
+       ("FIXME" . "#dc752f")
+       ("XXX+" . "#dc752f")
+       ("\\?\\?\\?+" . "#dc752f")))
+
+   '(package-selected-packages
+     '(all-the-icons-ivy-rich grip-mode treemacs cfrs pfuture posframe neotree ivy-rich all-the-icons-ivy helm-core wgrep smex lsp-ivy ivy-yasnippet ivy-xref ivy-rtags ivy-purpose ivy-hydra ivy-avy counsel-projectile slime with-editor git-gutter helm-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme origami lsp-mode pos-tip eaf eglot flyspell-correct-helm flyspell-correct auto-dictionary gruvbox-theme autothemer monokai-theme pyim xr pangu-spacing find-by-pinyin-dired chinese-conv ace-pinyin pinyinlib dap-mode bui web-mode web-beautify tagedit slim-mode scss-mode sass-mode pug-mode prettier-js impatient-mode simple-httpd helm-css-scss haml-mode emmet-mode counsel-css counsel swiper ivy company-web web-completion-data add-node-modules-path yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key vterm volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree treemacs-projectile treemacs-persp treemacs-icons-dired treemacs-evil toc-org terminal-here symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons shell-pop restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort popwin poetry pippel pipenv pip-requirements pcre2el password-generator paradox overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain open-junk-file nose nameless multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-pyright lsp-origami lorem-ipsum live-py-mode link-hint indent-guide importmagic hybrid-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-ls-git helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish devdocs define-word cython-mode company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell))
+  )

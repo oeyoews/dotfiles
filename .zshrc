@@ -35,9 +35,7 @@ alias ts='trans -b'
 alias top='bpytop'
 alias soz='source $HOME/.zshrc'
 alias viz='vim $HOME/.zshrc'
-alias pacman='sudo pacman'
+alias pacman='time sudo pacman'
+alias yay='time yay'
 alias his='history 100'
-
-# function upate {
-   # sudo pacman -Syu
-# }
+alias startuptime='systemd-analyze'
