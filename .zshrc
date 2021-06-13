@@ -1,3 +1,4 @@
+
 # =============
 # 2021年 06月 13日 星期日 16:36:14 CST
 # __  __                 _               
@@ -17,10 +18,26 @@ USE_POWERLINE="true"
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
     source /usr/share/zsh/manjaro-zsh-config
 fi
+
 # Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-    source /usr/share/zsh/manjaro-zsh-prompt
+# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+    # source /usr/share/zsh/manjaro-zsh-prompt
+# fi
+
+# =============
+# p10k
+# =============
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+source ~/.p10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # =============
 # vi in terminal
@@ -61,3 +78,5 @@ alias yay='time yay'
 alias his='history 100'
 alias startuptime='systemd-analyze'
 alias sl='sl | lolcat'
+
+
