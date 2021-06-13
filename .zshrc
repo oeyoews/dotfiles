@@ -49,6 +49,9 @@ set -o vi
 # =============
 # export VISUAL="vim"
 # export EDITOR="$VISUAL"
+# test path 
+# echo $PATH or env |rg someone
+# export PATH=$PATH:~/src/note/
 export EDITOR=vim
 
 # =============
