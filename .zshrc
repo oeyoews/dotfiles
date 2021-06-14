@@ -81,3 +81,20 @@ alias yay='time yay'
 alias his='history 100'
 alias stime='systemd-analyze'
 alias sl='sl | lolcat'
+alias cd..="cd .."
+alias cdh="cd ~"
+alias mkfile='touch'
+
+
+# =============
+# some function
+# =============
+
+function myIp() {
+  curl ifconfig.co
+}
+
+mcd () {
+  mkdir -p $1
+  cd $1
+}
