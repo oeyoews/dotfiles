@@ -1,13 +1,12 @@
 # ================================================
 # 2021年 06月 13日 星期日 16:36:14 CST
 # Author: oeyoews
-# 
-#  __  __                       _                   
-# |  \/  |  _   _   ____  ___  | |__    _ __    ___ 
+#  __  __                       _
+# |  \/  |  _   _   ____  ___  | |__    _ __    ___
 # | |\/| | | | | | |_  / / __| | '_ \  | '__|  / __|
-# | |  | | | |_| |  / /  \__ \ | | | | | |    | (__ 
+# | |  | | | |_| |  / /  \__ \ | | | | | |    | (__
 # |_|  |_|  \__, | /___| |___/ |_| |_| |_|     \___|
-#           |___/                                   
+#           |___/
 # ================================================
 
 # =============
@@ -45,6 +44,7 @@ source ~/.p10k/powerlevel10k.zsh-theme
 # =============
 # vi in terminal
 # =============
+# set -o emacs
 set -o vi
 
 # =============
@@ -52,7 +52,6 @@ set -o vi
 # =============
 # export VISUAL="vim"
 # export EDITOR="$VISUAL"
-# test path
 # echo $PATH or env |rg someone
 # export PATH=$PATH:~/src/note/
 export EDITOR=vim
@@ -91,6 +90,8 @@ alias mkfile='touch'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 alias update_mirrors='sudo pacman-mirrors -m rank -c China -i'
+alias cd-='cd -'
+alias vim='nvim'
 
 # =============
 # some function
@@ -104,21 +105,14 @@ function mcd () {
 # git style
 # =============
 alias gits='git status'
-
+alias gopen='git-open'
 # =============
 # some shell examples
 # =============
 # sudo pacman -S --noconfirm vim
 # echo '\n' | sudo pacman -Syu vim
-function get_linux_platform_type()
-{
-    if which apt-get > /dev/null ; then
-        echo "ubuntu" # debian ubuntu系列
-    elif which yum > /dev/null ; then
-        echo "centos" # centos redhat系列
-    elif which pacman > /dev/null; then
-        echo "archlinux" # archlinux系列
-    else
-        echo "invaild"
-    fi
-}
+
+# =============
+# zsh autosuggest-accept
+# =============
+bindkey ',' autosuggest-accept
