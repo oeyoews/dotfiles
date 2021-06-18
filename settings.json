@@ -1,3 +1,12 @@
+// ========================================================
+// Author: oeyoews
+// 2021年 06月 18日 星期五 19:51:41 CST
+//  _    __                             __      
+// | |  / /   _____  _____  ____   ____/ /  ___ 
+// | | / /   / ___/ / ___/ / __ \ / __  /  / _ \
+// | |/ /   (__  ) / /__  / /_/ // /_/ /  /  __/
+// |___/   /____/  \___/  \____/ \__,_/   \___/ 
+// ========================================================
 {
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
@@ -83,5 +92,5 @@
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "on",
     "workbench.editor.enablePreview": false,
-    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
 }
