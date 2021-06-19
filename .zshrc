@@ -93,7 +93,7 @@ alias update_mirrors='sudo pacman-mirrors -m rank -c China -i'
 alias cd-='cd -'
 alias vim='nvim'
 alias figlet='figlet -W -f slant'
-
+alias ms='musicbox'
 # =============
 # some function
 # =============
