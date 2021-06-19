@@ -9,7 +9,6 @@
 ;; 2021年 06月 13日 星期日 16:39:40 CST
 ;; Author: oeyoews
 ;; =========================================================
-
 (defun dotspacemacs/layers ()
   "Layer configuration:
     This function should only modify configuration layer settings."
@@ -52,7 +51,7 @@
      lsp
      c-c++
      markdown
-     org
+     ;; org
      (shell :variables
             shell-default-height 40
             shell-default-position 'bottom)
@@ -335,7 +334,7 @@
    ;; If non-nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
 
    ;; If non-nil the frame is fullscreen when Emacs starts up. (default nil)
    ;; (Emacs 24.4+ only)
@@ -430,7 +429,7 @@
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server nil
+   dotspacemacs-enable-server t
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
@@ -441,7 +440,7 @@
 
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server nil
+   dotspacemacs-persistent-server t
 
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
@@ -531,6 +530,8 @@
 
   ;; remove cl warnings
   (setq byte-compile-warnings '(not cl-functions obsolete))
+  ;; shutdown 自动调节行高
+  (setq auto-window-vscroll nil)
 
   ;; add analyse in buffer
   (add-hook 'emacs-startup-hook
@@ -543,6 +544,9 @@
 
   ;; fix spell-checking
   (setq ispell-extra-args '("--lang=en_US"))
+
+  ;; auto link link_file
+  (setq vc-follow-symlinks t)
 
   ;; neotree settings
   (setq neo-theme 'icons)
