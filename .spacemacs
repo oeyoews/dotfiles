@@ -51,7 +51,6 @@
      lsp
      c-c++
      markdown
-     ;; org
      (shell :variables
             shell-default-height 40
             shell-default-position 'bottom)
