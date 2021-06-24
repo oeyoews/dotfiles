@@ -2,9 +2,13 @@
 #!/bin/bash
 # Author:
 # Date:
+# OS: manjaro for this vim script
 # Descriable:
+# bug: need sudo bash vim.sh to execute
+# bug2: need to adjust this  vim8 if exit
 # =====================================================
 
+function main() {
 yes | sudo pacman -R vim
 git clone https://hub.fastgit.org/vim/vim  .vim8  --depth 1
 cd .vim8/src
@@ -19,3 +23,7 @@ cd .vim8/src
             --enable-cscope \
             --prefix=/usr/local
 make install
+
+success="success install vim8 by script manually"
+echo "$success"
+}
