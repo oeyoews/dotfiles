@@ -42,9 +42,9 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#8be960da",
-        "statusBar.noFolderBackground": "#37d459",
-        "statusBar.debuggingBackground": "#c57519",
+        "statusBar.background": "#60b2e9da",
+        "statusBar.noFolderBackground": "#5937d4",
+        "statusBar.debuggingBackground": "#27c519",
         "statusBar.foreground": "#00040fd7"
     },
 
@@ -70,11 +70,6 @@
         "oeyoews"
     ],
     
-    "leetcode.endpoint": "leetcode-cn",
-    "leetcode.workspaceFolder": "/home/oeyoews/.leetcode",
-    "leetcode.hint.configWebviewMarkdown": false,
-    "leetcode.hint.commentDescription": false,
-    "leetcode.defaultLanguage": "c",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -85,7 +80,6 @@
     "editor.formatOnType": true,
     "json.trace.server": "verbose",
     "editor.defaultFormatter": "xaver.clang-format",
-    "leetcode.hint.commandShortcut": false,
     "markdown-preview-enhanced.previewTheme": "atom-dark.css",
     "editor.tabSize": 4,
     "editor.cursorStyle": "line",

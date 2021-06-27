@@ -91,7 +91,7 @@ alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 alias update_mirrors='sudo pacman-mirrors -m rank -c China -i'
 alias cd-='cd -'
-alias vim='nvim'
+# alias vim='nvim'
 alias figlet='figlet -W -f slant'
 alias ms='musicbox'
 # =============
@@ -119,3 +119,14 @@ alias gopen='git-open'
 bindkey ',' autosuggest-accept
 
 alias halt='halt -p'
+setopt EXTENDED_HISTORY
+setopt MENU_COMPLETE
+
+autoload -U compinit
+compinit
+# alias visudo='EDITOR=vim visudo'
+# python -m http
+function pym() {
+  ip addr | rg 192
+  python -m http.server
+}
