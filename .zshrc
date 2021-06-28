@@ -66,7 +66,9 @@ source /usr/share/nvm/init-nvm.sh # if nothing , not comment this source
 # =============
 alias cl='clear'
 alias vi='vim'
-alias ls='lsd'
+# lsd or colors
+# alias ls='lsd'
+alias ls='colorls'
 alias ping="ping -c 2"
 alias neo='neofetch| lolcat'
 alias ema='emacs -nw'
@@ -91,6 +93,8 @@ alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 alias update_mirrors='sudo pacman-mirrors -m rank -c China -i'
 alias cd-='cd -'
+# sudo pacman-mirrors -aS unstable/testing/stable
+alias pacman-m='sudo pacman-mirrors -m rank -c China -i'
 # alias vim='nvim'
 alias figlet='figlet -W -f slant'
 alias ms='musicbox'
