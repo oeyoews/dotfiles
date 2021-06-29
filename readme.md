@@ -10,3 +10,6 @@
 
 ### nvim
 nvim  ln -sf ~/dotfiles/.vim .config/nvim
+
+### grub
+* path: /etc/default/grub
