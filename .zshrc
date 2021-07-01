@@ -12,25 +12,26 @@
 # ==================
 # oh-my-zsh
 # ==================
-# load oh-my-zsh.sh
-source ~/.oh-my-zsh/oh-my-zsh.sh 
-# p10k 依赖文件
-source ~/.p10k/powerlevel10k.zsh-theme 
+source ~/.oh-my-zsh/oh-my-zsh.sh  # load oh-my-zsh.sh
+source ~/.p10k/powerlevel10k.zsh-theme  # p10k 依赖文件
 # plugins
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source .p10k.zsh # a link file
+source ~/.p10k.zsh # a link file
 bindkey ',' autosuggest-accept # zsh autosuggest-accept
 
 # export PATH=$PATH:~/src/note/
+# or PATH='/usr/bin:/usr/sbin/:$PATH'
 export EDITOR=vim
 
 source /usr/share/nvm/init-nvm.sh # install and source it
 
+# autoload -Uz compinit && compinit -i TODO
+
+set -o vi
 # =============
 # function config
 # =============
-
 # mkdir fastly
 function mcd () {
   mkdir -p $1
@@ -59,8 +60,9 @@ alias ls='colorls'
 alias ping="ping -c 2"
 alias neo='neofetch| lolcat'
 alias ema='emacs -nw'
-alias cp='cp -r'
-alias rm='trash'
+alias cp='cp -r -i'
+alias mv="mv -i"
+alias rm='trash -i'
 alias open='xdg-open'
 alias wego='curl -s wttr.in | lolcat'
 alias py='python'
@@ -69,7 +71,7 @@ alias ts='trans -b'
 alias top='bpytop'
 alias soz='source $HOME/.zshrc'
 alias viz='vim $HOME/.zshrc'
-alias pacman='time sudo pacman'
+alias pacmans='time sudo pacman -S'
 alias yay='time yay'
 alias his='history 100'
 alias stime='systemd-analyze'
@@ -80,11 +82,14 @@ alias dust="dust -r"
 alias mkfile='touch'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
+alias update='sudo pacman -Syu'
 alias update_mirrors='sudo pacman-mirrors -m rank -c China -i'
+alias yayr='yay -R'
 alias cd-='cd -'
 alias pacman-m='sudo pacman-mirrors -m rank -c China -i' # sudo pacman-mirrors -aS unstable/testing/stable
 alias halt='halt -p'
-alias vito='vim todo'
+alias vito='vim ~/todo'
+alias echo='echo -e'
 alias figlet='figlet -W -f slant'
 alias ms='musicbox'
-
+lpath=~/src/DOTFILES/
