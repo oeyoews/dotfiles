@@ -21,7 +21,7 @@ source ~/.p10k.zsh # a link file
 bindkey ',' autosuggest-accept # zsh autosuggest-accept
 
 # export PATH=$PATH:~/src/note/
-# or PATH='/usr/bin:/usr/sbin/:$PATH'
+# or PATH='/usr/bin:/usr/sbin/:$PATH' $PATH 是把所有的系统中存在的所有路径全部放进来
 export EDITOR=vim
 
 source /usr/share/nvm/init-nvm.sh # install and source it
