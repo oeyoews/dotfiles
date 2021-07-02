@@ -11,7 +11,6 @@ source ~/.p10k/powerlevel10k.zsh-theme  # p10k 依赖文件
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.p10k.zsh # a link file
-zmodload zsh/zprof
 # bindkey ',' autosuggest-accept   # zsh autosuggest-accept
 
 # export PATH=$PATH:~/src/note/
