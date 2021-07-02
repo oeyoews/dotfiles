@@ -1,12 +1,6 @@
 # ==============================================================
-# 2021年 06月 13日 星期日 16:36:14 CST
-# Author: oeyoews
-#     __  ___                    _
-#    /  |/  /   __  __ _   __   (_)   ____ ___    _____  _____
-#   / /|_/ /   / / / /| | / /  / /   / __ `__ \  / ___/ / ___/
-#  / /  / /   / /_/ / | |/ /  / /   / / / / / / / /    / /__
-# /_/  /_/    \__, /  |___/  /_/   /_/ /_/ /_/ /_/     \___/
-#            /____/
+# date: 2021年 06月 13日 星期日 16:36:14 CST
+# author: oeyoews
 # ==============================================================
 
 # ==================
@@ -14,19 +8,17 @@
 # ==================
 source ~/.oh-my-zsh/oh-my-zsh.sh  # load oh-my-zsh.sh
 source ~/.p10k/powerlevel10k.zsh-theme  # p10k 依赖文件
-# plugins
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.p10k.zsh # a link file
-bindkey ',' autosuggest-accept # zsh autosuggest-accept
+zmodload zsh/zprof
+# bindkey ',' autosuggest-accept   # zsh autosuggest-accept
 
 # export PATH=$PATH:~/src/note/
 # or PATH='/usr/bin:/usr/sbin/:$PATH' $PATH 是把所有的系统中存在的所有路径全部放进来
 export EDITOR=vim
 
 source /usr/share/nvm/init-nvm.sh # install and source it
-
-# autoload -Uz compinit && compinit -i TODO
 
 set -o vi
 # =============
