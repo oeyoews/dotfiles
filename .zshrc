@@ -6,11 +6,12 @@
 # ==================
 # oh-my-zsh
 # ==================
-source ~/.oh-my-zsh/oh-my-zsh.sh  # load oh-my-zsh.sh
-source ~/.p10k/powerlevel10k.zsh-theme  # p10k 依赖文件
-source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.p10k.zsh # a link file
+ZSH=~/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh  # load oh-my-zsh.sh
+source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/.p10k/powerlevel10k.zsh-theme  # p10k 依赖文件
+source $ZSH/.p10k.zsh # a link file
 # bindkey ',' autosuggest-accept   # zsh autosuggest-accept
 
 # export PATH=$PATH:~/src/note/
@@ -47,40 +48,46 @@ alias gitu='git add . && git commit && git push'
 # =============
 alias cl='clear'
 alias vi='vim'
-alias ls='colorls'
 alias ping="ping -c 2"
-alias neo='neofetch| lolcat'
 alias ema='emacs -nw'
 alias cp='cp -r -i'
 alias mv="mv -i"
 alias rm='trash -i'
 alias open='xdg-open'
-alias wego='curl -s wttr.in | lolcat'
+alias yay='time yay'
+alias his='history 100'
 alias py='python'
+alias sl='sl | lolcat'
+alias cdh="cd ~"
+alias dust="dust -r"
+alias yayr='yay -R'
+alias cd-='cd -'
+alias halt='halt -p'
+alias vito='vim ~/todo'
+alias ms='musicbox'
+alias 'echo'='echo -e'
+alias 'cd..'="cd .."
+alias mkfile='touch'
 alias ra='ranger'
 alias ts='trans -b'
 alias top='bpytop'
-alias soz='source $HOME/.zshrc'
+alias jctl='journalctl -b'
+alias neo='neofetch --ascii_distro a'
 alias viz='vim $HOME/.zshrc'
-alias pacmans='time sudo pacman -S'
-alias yay='time yay'
-alias his='history 100'
 alias stime='systemd-analyze'
-alias sl='sl | lolcat'
-alias 'cd..'="cd .."
-alias cdh="cd ~"
-alias dust="dust -r"
-alias mkfile='touch'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
+alias figlet='figlet -W -f slant'
+alias soz='source $HOME/.zshrc'
+alias pacmans='time sudo pacman -S'
+alias wego='curl -s wttr.in | lolcat'
+alias pacman-m='sudo pacman-mirrors -m rank -c China -i' # sudo pacman-mirrors -aS unstable/testing/stable
 alias update='sudo pacman -Syu'
 alias update_mirrors='sudo pacman-mirrors -m rank -c China -i'
-alias yayr='yay -R'
-alias cd-='cd -'
-alias pacman-m='sudo pacman-mirrors -m rank -c China -i' # sudo pacman-mirrors -aS unstable/testing/stable
-alias halt='halt -p'
-alias vito='vim ~/todo'
-alias echo='echo -e'
-alias figlet='figlet -W -f slant'
-alias ms='musicbox'
-lpath=~/src/DOTFILES/
+alias cdt="cd $HOME/temp"
+
+# ==============
+# path variables
+# ==============
+DOT=~/src/DOTFILES
+NOTE=$HOME/src/note

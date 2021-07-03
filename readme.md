@@ -17,3 +17,6 @@ nvim  ln -sf ~/dotfiles/.vim .config/nvim
 
 ### dotfiles
 * ln -s all dotfiles to $HOME
+
+### neofetch 
+.config/neofetch/config.conf
