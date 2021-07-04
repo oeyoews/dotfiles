@@ -4,8 +4,8 @@
 # Date:
 # OS: manjaro for this vim script
 # Descriable:
-# bug: need sudo bash vim.sh to execute
-# bug2: need to adjust this  vim8 if exit
+# note: need sudo bash vim.sh to execute
+# bug2?: need to adjust this  vim8 if exit
 # =====================================================
 
 function main() {
