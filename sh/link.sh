@@ -1,6 +1,8 @@
 echo START:
+
 # .zshrc
 ln -sf $LPATH/.zshrc $HOME/
+source $HOME/.zshrc
 # omz
 LPATH=~/src/DOTFILES
 ln -sf $LPATH/.oh-my-zsh $HOME/
