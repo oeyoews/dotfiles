@@ -4,15 +4,6 @@ function zsh_stats() {
     | grep -v "./" | sort -nr | head -20 | column -c3 -s " " -t | nl
 }
 
-function uninstall_oh_my_zsh() {
-  env ZSH="$ZSH" sh "$ZSH/tools/uninstall.sh"
-}
-
-function upgrade_oh_my_zsh() {
-  echo >&2 "${fg[yellow]}Note: \`$0\` is deprecated. Use \`omz update\` instead.$reset_color"
-  omz update
-}
-
 function takedir() {
   mkdir -p $@ && cd ${@:$#}
 }
@@ -249,4 +240,20 @@ function omz_urldecode {
   fi
 
   echo -E "$decoded"
+}
+
+
+function mcd () {
+  mkdir -p $1
+  cd $1
+}
+
+function pym() {
+  ip addr | rg inet
+  python -m http.server
+}
+
+function color() {
+for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
+  ${${(M)$((i%6)):#3}:+$'\n'}; done
 }
