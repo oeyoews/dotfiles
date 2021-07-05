@@ -22,3 +22,6 @@ export EDITOR='vim'
 source $NVM/init-nvm.sh 
 
 alias vimpk="vim $CPK/p10k-rainbow.zsh"
+# tips 
+# d will show some recent directory
+# l == ls -al

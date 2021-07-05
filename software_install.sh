@@ -1,0 +1,2 @@
+# manjaro 
+vim ranger 
