@@ -82,12 +82,12 @@ for config_file ($ZSH/lib/*.zsh); do
 done
 
 # Load all of the plugins that were defined in ~/.zshrc
-for plugin ($plugins); do
-  if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
-    source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
-  elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
-    source $ZSH/plugins/$plugin/$plugin.plugin.zsh
-  fi
-done
+# for plugin ($plugins); do
+  # if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
+    # source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
+  # elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
+    # source $ZSH/plugins/$plugin/$plugin.plugin.zsh
+  # fi
+# done
 
 unset config_file
