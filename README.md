@@ -5,14 +5,18 @@
 ### vscode (setting.json)
 - .config/Code/User/setting.json
 ### ranger 
-- ln -s ~/src/DOTFILES/ranger/ ~/.config/'
+-  ~/.config/'
 ### p10k
 - .p10k.zsh 
 ### nvim
-nvim  ln -sf ~/dotfiles/.vim .config/nvim
+ .config/nvim
 ### grub
-* path: /etc/default/grub backup it, 
+* /etc/default/grub backup it, 
 ### all first directory dotfiles
-* ln -s all dotfiles to $HOME
+*  all dotfiles to $HOME
 ### neofetch 
 .config/neofetch/config.conf
+### nvim
+ .config/nvim
+
+# if [ -d ] todo 判断文件是否存在，如果文件存在，则备份文件为 .._bk
