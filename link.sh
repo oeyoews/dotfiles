@@ -1,11 +1,12 @@
 #!/usr/bin/zsh
+
+SUCCESS="success link"
 echo START:
-zsh
 LPATH=$HOME/src/DOTFILES
 # .zshrc
 ln -sf $LPATH/.zshrc $HOME/
-source $HOME/.zshrc
 # omz
-ln -sf $LPATH/omz $HOME/.omz
-exec zsh
-echo 1:success link .omz/
+ln -sf $LPATH/omz $HOME/.omz && echo ${SUCCESS} link .omz
+# vscode
+ln -sf $LPATH/setting.json
+echo  ${SUCCESS} vscode.setting.json
