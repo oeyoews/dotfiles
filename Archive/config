@@ -1,0 +1,6 @@
+# ~/.ssh/config
+# ssh-copy-id hp
+Host hp
+  HostName 192.168.68.125
+  User admin
+  Port 22

@@ -25,3 +25,5 @@ alias vimpk="vim $CPK/p10k-rainbow.zsh"
 # tips 
 # d will show some recent directory
 # l == ls -al
+alias ipr='ip addr | rg 192'
+alias sctl='systemctl'
