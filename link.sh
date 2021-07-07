@@ -23,7 +23,7 @@ echo -e Green_Success "LINK_START:\n"
 MS3="=== rm omz directory and ln a new omz directory === "
 MS4="=== success link OMZ ==="
 if [ -d ~/.omz/ ]; then
-    rm ~/.omz
+    rm  -v ~/.omz
     echo $MS3
 fi
 ln -si $PWD/omz ~/.omz
@@ -36,10 +36,10 @@ export VSCODE=~/.config/Code/User
 MS1="This vscode may be not installed, please install it!"
 MS2="rm exist file vscode_configure(old)"
 if [ ! -d ${VSCODE} ]; then
-  mkdir -p ${VSCODE}
+  mkdir -pv ${VSCODE}
   echo $MS1
 elif [ -e ${VSCODE}/settings.json ]; then
-  rm ${VSCODE}/settings.json
+  rm  -v ${VSCODE}/settings.json
   echo $MS2
 fi
 
