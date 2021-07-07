@@ -32,7 +32,8 @@ function link_vscode() {
 
 function link_all_dotfiles_in_home() {
   MS2="Success link all dotfiles in home"
-  ln -si $PWD/dotfiles/.* ~
+  # ln -si $PWD/dotfiles/.* ~
+  ln -si $PWD/dotfiles/* ~
   echo "$MS2"
 }
 

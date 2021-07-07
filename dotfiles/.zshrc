@@ -34,3 +34,7 @@ else
   vim ~/todol.md
 fi
 }
+
+# git 
+alias gitc="git checkout ."
+alias gitr="git rm --cache ."
