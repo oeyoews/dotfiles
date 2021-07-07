@@ -2,8 +2,12 @@
 # 2021年 07月 06日 星期二 23:53:25 CST
 
 function pacman() {
-  SW="vim ranger trash-cli base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc netease-cloud-music google-chrome foliate emacs obs-studio typora visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition"
-  sudo pacman -S --noconfirm ${SW}
+  SW1="vim ranger trash-cli base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc  google-chrome foliate emacs obs-studio typora "
+  sudo pacman -S --noconfirm ${SW1}
+}
+
+function large_pacman() {
+  SW2="visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition netease-cloud-music"
 }
 
 function misc() {
@@ -16,6 +20,7 @@ function pip() {
 
 function main() {
   pacman
+  large_pacman
   # pip
   # yay
 }
