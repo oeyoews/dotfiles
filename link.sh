@@ -17,11 +17,11 @@ function Red_Error(){
 # Yellow_Warnning "WARNING"
 # Red_Error "ERROR"
 #########################################################
-echo LINK_START:
+echo -e Green_Success "LINK_START:\n"
 
 # note if .omz exit it will show .omz/omz need to add a adjust
-MS3="rm omz directory and ln a new omz directory"
-MS$="success link OMZ"
+MS3="=== rm omz directory and ln a new omz directory === "
+MS4="=== success link OMZ ==="
 if [ -d ~/.omz/ ]; then
     rm ~/.omz
     echo $MS3
@@ -43,14 +43,16 @@ elif [ -e ${VSCODE}/settings.json ]; then
   echo $MS2
 fi
 
-ln -si $PWD/settings.json ${VSCODE}/
+MS5="success link vscode_configure"
+ln -si $PWD/settings.json ${VSCODE}/ && echo $MS5
 # INPUT
 ln -si $PWD/.pam_environment ~
 # GITCONFIG
 ln -si $PWD/.gitconfig ~
 # ranger
 sudo cp -r $PWD/ranger ~/.config/
-# zshrc
+# zshrc seem to need password TODO
 ln -si $PWD/.zshrc ~
+
 
 Green_Success "FINSH"
