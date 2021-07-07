@@ -12,7 +12,7 @@ NVM=/usr/share/nvm
 source $ZSH/p10k/powerlevel10k.zsh-theme  
 source $ZSH/p10k-rainbow.zsh 
 source $ZSH/plugins/zsh-autosuggestions.zsh 
-bindkey ',' autosuggest-accept
+bindkey ',' autosuggest-accept # in ranger, it not work.
 # don't modify this plugin name and del files
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey "\eq" push-line-or-edit
@@ -27,3 +27,12 @@ alias vimpk="vim $CPK/p10k-rainbow.zsh"
 # l == ls -al
 alias ipr='ip addr | rg 192'
 alias sctl='systemctl'
+
+
+function vitol() {
+if [ ! -e ~/todol.md ]; then
+  touch ~/todol.md && vim ~/todol.md && echo "creat ~/todol.md"
+else
+  vim ~/todol.md
+fi
+}

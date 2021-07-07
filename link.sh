@@ -34,10 +34,8 @@ function Red_Error(){
 # Red_Error "错误"
 
 #########################################################
-export VAR='1'
-VARS=2
-sh double.sh
 echo START:
+
 # LPATH=$HOME/src/DOTFILES
 # .ZSHRC
 ln -si $PWD/.zshrc ~
@@ -54,8 +52,6 @@ echo ${SUCCESS} link OMZ
 
 # VSCODE
 # if vscode not install and this dir will not exit ,so it will make a error
-# simlar namefile can be exist at the sime time , we can use -L(link) or
-# -h (soft link)
 VSCODE="~/.config/Code/User/"
 if [ ! -d $VSCODE ]; then
   echo "this vscode may be not installed, please install it!"
