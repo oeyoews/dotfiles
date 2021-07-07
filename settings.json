@@ -80,4 +80,5 @@
     "editor.wordWrap": "on",
     "workbench.editor.enablePreview": false,
     "terminal.integrated.defaultProfile.linux": "bash",
+    "window.zoomLevel": -1,
 }

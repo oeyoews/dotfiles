@@ -349,7 +349,9 @@
   # modify
   typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=40
   typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=40
+  # TYPESET -G powerlevel9k_vcs_untracked_background=2
   typeset -g POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND=2
+  # TYPESET -G powerlevel9k_vcs_conflicted_background=3
   typeset -g POWERLEVEL9K_VCS_CONFLICTED_BACKGROUND=3
   typeset -g POWERLEVEL9K_VCS_LOADING_BACKGROUND=8
 

@@ -2,11 +2,9 @@
 # author: oeyoews
 
 # set path
-DOT=$HOME/src/DOTFILES
-CPK=~/src/DOTFILES/omz
-NOTE=$HOME/src/note
-ZSH=$HOME/.omz # don't modify it
-NVM=/usr/share/nvm
+export DOT=~/src/DOTFILES
+export ZSH=~/.omz # don't modify it
+export NVM=/usr/share/nvm
 
 # ZSH
 source $ZSH/p10k/powerlevel10k.zsh-theme  
@@ -21,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 source $NVM/init-nvm.sh 
 
-alias vimpk="vim $CPK/p10k-rainbow.zsh"
+alias vimpk="vim $ZSH/p10k-rainbow.zsh"
 # tips 
 # d will show some recent directory
 # l == ls -al
