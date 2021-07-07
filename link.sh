@@ -36,7 +36,7 @@ export VSCODE=~/.config/Code/User
 MS1="This vscode may be not installed, please install it!"
 MS2="rm exist file vscode_configure(old)"
 if [ ! -d ${VSCODE} ]; then
-  mkdir -r ${VSCODE}
+  mkdir -p ${VSCODE}
   echo $MS1
 elif [ -e ${VSCODE}/settings.json ]; then
   rm ${VSCODE}/settings.json
