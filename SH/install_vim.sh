@@ -1,17 +1,14 @@
-# =====================================================
-#!/bin/bash
-# Author:
-# Date:
-# OS: manjaro for this vim script
-# Descriable:
-# note: need sudo bash vim.sh to execute
-# bug2?: need to adjust this  vim8 if exit
-# =====================================================
+#!/usr/bin/bash
+
+# Date: 2021-07-08 23:39:21 
+# OS: Manjaro for this vim script
+# NOTE: need sudo 
 
 function main() {
+  rm -rf ~/.vim8
 yes | sudo pacman -R vim
-git clone https://hub.fastgit.org/vim/vim  .vim8  --depth 1
-cd .vim8/src
+git clone https://hub.fastgit.org/vim/vim  ~/.vim8  --depth 1
+cd ~/.vim8/src
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp=yes \
@@ -24,6 +21,8 @@ cd .vim8/src
             --prefix=/usr/local
 make install
 
-success="success install vim8 by script manually"
-echo "$success"
+SUCCESS="Success install vim8 by script manually"
+echo "$SUCCESS"
 }
+
+main
