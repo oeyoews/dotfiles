@@ -12,7 +12,7 @@ function file_judge() {
 }
 
 function install_vim() {
-  git clone --depth 1 ${IP} ${HOME}/
+  git clone --depth 1 ${IP} ${HOME}/.vim # NOTO add '.vim'
   echo "Finish to intall oeyoews/.vim for ${WHO}."
   echo "Just enjoy it!"
 }
