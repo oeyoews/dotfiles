@@ -1,17 +1,7 @@
 #!/usr/bin/env bash
 
-#=============================================================================
-# install.sh --- bootstrap script for SpaceVim
-# Copyright (c) 2016-2020 Shidong Wang & Contributors
-# Author: Shidong Wang < wsdjeg at 163.com >
-# URL: https://spacevim.org
-# License: GPLv3
-#=============================================================================
-
-# Init option {{{
 Color_off='\033[0m'       # Text Reset
 
-# terminal color template {{{
 # Regular Colors
 Black='\033[0;30m'        # Black
 Red='\033[0;31m'          # Red
@@ -81,25 +71,23 @@ On_IBlue='\033[0;104m'    # Blue
 On_IPurple='\033[0;105m'  # Purple
 On_ICyan='\033[0;106m'    # Cyan
 On_IWhite='\033[0;107m'   # White
-# }}}
 
 # version
 Version='1.7.0-dev'
 #System name
 System="$(uname -s)"
 
+# need_cmd {{{
+# need_cmd () {
+  # if ! hash "$1" &>/dev/null; then
+    # error "需要 '$1' （找不到命令）"
+    # exit 1
+  # fi
+# }
 # }}}
 
-need_cmd {{{
-need_cmd () {
-  if ! hash "$1" &>/dev/null; then
-    error "需要 '$1' （找不到命令）"
-    exit 1
-  fi
-}
-}}}
-
 # success/info/error/warn {{{
+# TODO
 msg() {
   printf '%b\n' "$1" >&2
 }
@@ -126,9 +114,7 @@ warn () {
 echo_with_color () {
   printf '%b\n' "$1$2$Color_off" >&2
 }
-# }}}
 
-# fetch_repo {{{
 fetch_repo () {
   if [[ -d "$HOME/.SpaceVim" ]]; then
     info "正在更新 SpaceVim..."
@@ -142,9 +128,7 @@ fetch_repo () {
     success "SpaceVim 安装已完成"
   fi
 }
-# }}}
 
-# install_vim {{{
 install_vim () {
   if [[ -f "$HOME/.vimrc" ]]; then
     mv "$HOME/.vimrc" "$HOME/.vimrc_back"
@@ -448,7 +432,5 @@ main () {
     install_done
   fi
 }
-
-# }}}
 
 main $@

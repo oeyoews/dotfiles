@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 # 2021-07-08 15:41:09 
 
-IP="https://hub.fastgit.org/oeyoews/.vim"
+# IP="https://hub.fastgit.org/oeyoews/.vim"
+IP="https://gitee.com/oeyoews/vim.git"
 WHO="$(whoami)"
 
 function file_judge() {

@@ -3,6 +3,7 @@
 
 # set path
 export DOT=~/src/DOTFILES
+export NOTE=~/src/note
 export ZSH=~/.omz # don't modify it
 export NVM=/usr/share/nvm
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node

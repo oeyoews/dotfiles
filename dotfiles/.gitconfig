@@ -3,3 +3,5 @@
 	name = oeyoews
 [credential]
 	helper = store
+[init]
+	defaultBranch = main
