@@ -19,6 +19,7 @@ alias ping="ping -c 2"
 alias py='python'
 alias pacmans='time sudo pacman -S'
 alias pacmanm='sudo pacman-mirrors -m rank -c China -i' # sudo pacman-mirrors -aS unstable/testing/stable
+alias pacmanmu='sudo pacman-mirrors -aS  unstable -m rank -c China -i'
 alias rm='trash -i'
 alias ra='ranger'
 alias gits='git status'
