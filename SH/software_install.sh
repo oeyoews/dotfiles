@@ -16,6 +16,10 @@ function misc() {
   yay ${SW3}
 }
 
+function npm() {
+  npm i -g git-open
+}
+
 function pip() {
   pip install magic-wormhole netease-musicbox
 }
