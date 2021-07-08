@@ -452,9 +452,3 @@ main () {
 # }}}
 
 main $@
-
-# vim:set nofoldenable foldmethod=marker:
-1wwwwn
-
-1wwwwn12ssss
-1wwwwn12ssss

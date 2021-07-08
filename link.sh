@@ -1,4 +1,5 @@
 #!/bin/bash
+# 2021-07-08 14:57:21 
 
 function Green_Success(){
   printf '\033[1;32;40m[success]==>  %b\033[0m\n' "$1";
@@ -15,7 +16,7 @@ function Red_Error(){
 
 # ranger
 function misc() {
-  sudo cp -r ${PWD}/ranger ~/.config/
+  sudo cp -ir ${PWD}/ranger ~/.config/
 }
 
 function link_vscode() {
@@ -47,22 +48,22 @@ function install_fonts() {
 }
 
 function print_logo() {
-
-  echo '    __     _             __              __   '
-  echo '   / /    (_)   ____    / /__   _____   / /_  '
-  echo '  / /    / /   / __ \  / //_/  / ___/  / __ \ '
-  echo ' / /___ / /   / / / / / ,<    (__  )  / / / / '
-  echo '/_____//_/   /_/ /_/ /_/|_|  /____/  /_/ /_/  '
-  echo '                                                  ... is now installed!'
-  echo ''
-  echo ''
-  echo 'Just enjoy it!'
+  echo -e '\n'
+  echo -e "\e[42m All configure file linkd successfully!^_^ \
+    Just enjoy it!\e[0m"
 }
 
-function main(){
-  link_all_dotfiles_in_home
-  link_vscode
-  print_logo
+function print_date() {
+  echo  $(date)
+}
+
+function main(){ # NOTE: Function can't is empty
+
+  # link_all_dotfiles_in_home
+  # link_vscode
+  print_date
+  # Green_Success demo
+  # print_logo
   # Green_Success "FINSH"
 }
 

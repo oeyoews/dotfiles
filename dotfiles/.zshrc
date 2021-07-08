@@ -5,6 +5,7 @@
 export DOT=~/src/DOTFILES
 export ZSH=~/.omz # don't modify it
 export NVM=/usr/share/nvm
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 
 # ZSH
 source $ZSH/p10k/powerlevel10k.zsh-theme  
@@ -28,13 +29,16 @@ alias sctl='systemctl'
 
 
 function vitol() {
-if [ ! -e ~/todol.md ]; then
-  touch ~/todol.md && vim ~/todol.md && echo "creat ~/todol.md"
-else
-  vim ~/todol.md
-fi
+  if [ ! -e ~/todol.md ]; then
+    touch ~/todol.md && vim ~/todol.md && echo "creat ~/todol.md"
+  else
+    vim ~/todol.md
+  fi
 }
 
 # git 
 alias gitc="git checkout ."
 alias gitr="git rm --cache ."
+
+setopt correct # auto correct mistakes
+setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
