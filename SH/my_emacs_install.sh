@@ -11,7 +11,7 @@ function file_judge() {
 }
 
 function install_emacs() {
-  git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d --depth 1
+  git clone -b develop https://hub.fastgit.org/syl20bnr/spacemacs ~/.emacs.d --depth 1
   echo "Finish to intall oeyoews/.emacs.d for ${WHO}."
   echo "Just enjoy it!"
 }
