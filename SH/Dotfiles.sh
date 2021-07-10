@@ -1,5 +1,7 @@
 #/usr/bin/zsh
-# crontab -e && echo " 0 0 */1 * * zsh $DOT/SH/Dotfiles.sh
+# crontab -e 
+# 0 0 */1 * * zsh ~/src/DOTFILES/SH/Dotfiles.sh
+# note add zsh or bash,because this sudo 
 
 function main() {
   cd $HOME/src/DOTFILES && git add . && git commit -m "This is a auto push for Dotfiles." && git push
