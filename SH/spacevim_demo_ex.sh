@@ -322,9 +322,7 @@ welcome () {
     echo_with_color ${Yellow} "                    版本 : ${Version}  中文官网 : https://spacevim.org/cn/    "
 }
 
-# }}}
 
-# download_font {{{
 download_font () {
   url="https://raw.githubusercontent.com/wsdjeg/DotFiles/7a75a186c6db9ad6f02cafba8d4c7bc78f47304c/local/share/fonts/${1// /%20}"
   path="$HOME/.local/share/fonts/$1"
@@ -338,9 +336,7 @@ download_font () {
   fi
 }
 
-# }}}
 
-# install_fonts {{{
 install_fonts () {
   if [[ ! -d "$HOME/.local/share/fonts" ]]; then
     mkdir -p $HOME/.local/share/fonts
@@ -372,9 +368,6 @@ install_fonts () {
   success "字体安装已完成!"
 }
 
-# }}}
-
-### main {{{
 main () {
   if [ $# -gt 0 ]
   then
