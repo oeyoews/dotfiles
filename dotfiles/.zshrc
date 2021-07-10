@@ -43,3 +43,16 @@ alias gitr="git rm --cache ."
 
 setopt correct # auto correct mistakes
 setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
+
+# TMUX
+function tmux() {
+  if which tmux >/dev/null 2>&1; then
+    # if no session is started, start a new session
+    test -z ${TMUX} && tmux
+
+            # when quitting tmux, try to attach
+            while test -z ${TMUX}; do
+              tmux attach || break
+            done
+  fi
+}

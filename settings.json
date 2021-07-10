@@ -10,7 +10,7 @@
 
     "debug.console.fontSize": 18,
     "debug.onTaskErrors": "showErrors",
-    "debug.console.fontFamily": "Source Code Pro",
+    "debug.console.fontFamily": "Source Code Variable",
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },
@@ -52,7 +52,7 @@
     "git.enabled": false,
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
-    "terminal.integrated.fontFamily": "Source Code Pro Semibold",
+    "terminal.integrated.fontFamily": "Source Code Variable",
     "window.titleBarStyle": "custom",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "update.mode": "none",
@@ -78,7 +78,8 @@
     "editor.insertSpaces": false,
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "on",
-    "workbench.editor.enablePreview": false,
-    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "window.zoomLevel": -1,
+    "editor.fontFamily": "'Source Code Variable'",
+    //  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 }
