@@ -38,7 +38,7 @@ function takeurl() {
 }
 
 function takegit() {
-  git clone $1
+  git clone --depth 1 $1
   cd $(basename ${1%%.git})
 }
 
@@ -242,12 +242,7 @@ function omz_urldecode {
   echo -E "$decoded"
 }
 
-
-function mcd () {
-  mkdir -p $1
-  cd $1
-}
-
+# self add
 function pym() {
   ip addr | rg inet
   python -m http.server
@@ -256,4 +251,34 @@ function pym() {
 function color() {
 for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
   ${${(M)$((i%6)):#3}:+$'\n'}; done
+}
+
+function nvm() {
+  export NVM=/usr/share/nvm
+  export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+  source $NVM/init-nvm.sh 
+}
+
+# TMUX
+# if no session is started, start a new session
+# when quitting tmux, try to attach
+function tmux() {
+  if which tmux >/dev/null 2>&1; then
+    test -z ${TMUX} && tmux
+    while test -z ${TMUX}; do
+      tmux attach || break
+    done
+  fi
+}
+
+function time_zsh() {
+  time zsh -i -c exit
+}
+
+function vitol() {
+  if [ ! -e ~/todol.md ]; then
+    touch ~/todol.md && vim ~/todol.md && echo "creat ~/todol.md"
+  else
+    vim ~/todol.md
+  fi
 }

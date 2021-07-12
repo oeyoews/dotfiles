@@ -51,3 +51,9 @@ alias viz='vim $HOME/.zshrc'
 alias worms='wormhole send'
 alias wormr='wormhole receive'
 alias wego='curl -s wttr.in | lolcat'
+alias vimpk="vim $ZSH/p10k-rainbow.zsh"
+alias ipr='ip addr | rg 192'
+alias sctl='systemctl'
+alias gitc="git checkout ."
+alias gitr="git rm --cache ."
+

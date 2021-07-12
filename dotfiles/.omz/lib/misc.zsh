@@ -33,3 +33,7 @@ fi
 
 # recognize comments
 setopt interactivecomments
+# auto correct mistakes
+# setopt correct
+# If a new command is a duplicate, remove the older one
+setopt histignorealldups
