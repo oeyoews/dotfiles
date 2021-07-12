@@ -18,3 +18,5 @@ source $ZSH/oh-my-zsh.sh
 alias vihosts="sudo vim /etc/hosts"
 # Lastly, put this highlighting to last, to fix some display bug
 source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias cdd="cd $DOT"

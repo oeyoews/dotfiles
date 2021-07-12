@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/bash
 # 2021-07-08 14:57:21
 
 function green_success(){
@@ -17,7 +17,8 @@ function red_error(){
 # ranger
 function misc() {
     # need passwd
-    sudo cp -ir ${PWD}/ranger ~/.config/
+    sudo rm -rf ~/.config/ranger
+    sudo cp -r ${PWD}/ranger ~/.config/ranger
 }
 
 function link_vscode() {
@@ -35,7 +36,7 @@ function link_vscode() {
 
 function all_dotfiles() {
     MS3="Success link all dotfiles in home"
-    ln -si $PWD/dotfiles/.[a-zA-Z]* ~
+    ln -si $PWD/dotfiles/.[a-z]* ~
     # : can't use .* in git dir, because it can ln . and .. dir.
     # :so, must be put them in another dir, to avoid dir like .git and .gitconfig and so on
     # : can't use * to instead of dot, because it can't to instead it use ==> .[a-zA-Z]*
@@ -43,6 +44,7 @@ function all_dotfiles() {
 }
 
 function install_fonts() {
+  # NOTE: need wait to test
     # fc-list: show all font list
     mkdir ~/.fonts
     git clone --depth 1 git@gitee.com:oeyoews/fonts.git ~/.fonts/
@@ -65,7 +67,8 @@ function main(){
     # NOTE: Function can't is empty
     WHO="$(whoami)"
     MS4="Username is correct. Start to exectue this link.sh"
-    read -t 20 -sp "Please input the computer's username(in 20 seconds): " USERNAME
+    # in zsh, it will take an error
+    read -t 20 -p "Please input the computer's username(in 20 seconds): " USERNAME
     if [ "$USERNAME" == "$WHO" ]
     then
         green_success "$MS4"
