@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# install_vim
 # 2021-07-08 15:41:09 
 
 # IP="https://hub.fastgit.org/oeyoews/.vim"

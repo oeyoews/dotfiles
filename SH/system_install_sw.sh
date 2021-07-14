@@ -3,7 +3,7 @@
 
 function pacman() {
   # use gvim to instead vim
-  SW1="gvim ranger trash-cli tldr base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc  google-chrome foliate emacs obs-studio typora putty"
+  SW1="gvim ranger trash-cli tldr base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc  google-chrome foliate emacs obs-studio typora putty tree"
   sudo pacman -S --noconfirm ${SW1}
 }
 
@@ -12,7 +12,7 @@ function large_pacman() {
   sudo pacman -S --noconfirm ${SW2}
 }
 
-  # TODO fcitx-qt5 fcitx-configtool nvm  virtual-desktop com.qq.tim.spark wechat-uos wudao-dict-git fcitx-sogoupinyin gnome-keyring xunlei-bin jdk8-openjdk font-manager-git cronie
+  # TODO fcitx-qt5 fcitx-configtool nvm  virtual-desktop com.qq.tim.spark wechat-uos wudao-dict-git fcitx-sogoupinyin gnome-keyring xunlei-bin jdk8-openjdk font-manager-git cronie fgit tcping-git
 
   function main() {
     pacman

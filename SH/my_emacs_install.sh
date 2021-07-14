@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# descriable: emacs install_emacs
 # 2021-07-08 15:41:09 
 
 WHO="$(whoami)"
