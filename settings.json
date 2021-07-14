@@ -79,7 +79,7 @@
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "on",
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "window.zoomLevel": -1,
     "editor.fontFamily": "'Source Code Variable'",
+    "window.zoomLevel": 1,
     //  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 }

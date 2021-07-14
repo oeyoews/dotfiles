@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# https://www.cnblogs.com/gentlemanhai/p/11803596.html 介绍
 
 function Green_Success(){
   printf '\033[1;32;40m[Success]==>  %b\033[0m\n' "$1";
