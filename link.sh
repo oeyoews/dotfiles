@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # 2021-07-08 14:57:21
 
 function green_success(){
@@ -36,6 +36,7 @@ function link_vscode() {
 
 function all_dotfiles() {
     MS3="Success link all dotfiles in home"
+    # all files in this folder not only dotfiles
     ln -si $PWD/dotfiles/.[a-z]* ~
     # : can't use .* in git dir, because it can ln . and .. dir.
     # :so, must be put them in another dir, to avoid dir like .git and .gitconfig and so on
@@ -67,7 +68,6 @@ function main(){
     # NOTE: Function can't is empty
     WHO="$(whoami)"
     MS4="Username is correct. Start to exectue this link.sh"
-    # in zsh, it will take an error
     read -t 20 -p "Please input the computer's username(in 20 seconds): " USERNAME
     if [ "$USERNAME" == "$WHO" ]
     then
