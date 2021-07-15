@@ -3,12 +3,12 @@
 # 
 function dotfiles() {
   cd $HOME/src/DOTFILES && git add . && git commit -m "This is a auto push for Dotfiles." && git push
-  echo "Date:$(date) User:$(whoami) success for crontab (Dotfiles)" >> $PWD/Log/crontab_for_Dotfiles.log
+  echo "Date:$(date) User:$(whoami) success for crontab (Dotfiles)" >> $PWD/log
 }
 
 function note() {
   cd $HOME/src/note  && git add . && git commit -m "This is a auto push for note." && git push
-  echo "Date:$(date) User:$(whoami) success for crontab (note)" >> $PWD/Log/crontab_for_Note.log
+  echo "Date:$(date) User:$(whoami) success for crontab (note)" >> $PWD/log
 }
 
 function main() {
