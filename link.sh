@@ -22,26 +22,26 @@ function misc() {
 }
 
 function link_vscode() {
-    VSCODE=~/.config/Code/User
-    MS1="This vscode may be not installed, please install it!"
-    MS2="success link vscode_configure"
-    if [ ! -e ${VSCODE} ]
+    vscode=~/.config/Code/User
+    ms1="This vscode may be not installed, please install it!"
+    ms2="success link vscode_configure"
+    if [ ! -e ${vscode} ]
     then
-        mkdir -pv ${VSCODE}
-        echo "$MS1"
+        mkdir -pv ${vscode}
+        echo "$ms1"
     fi
-    ln -si $PWD/settings.json ${VSCODE}/
-    echo "$MS2"
+    ln -si $PWD/settings.json ${vscode}/
+    echo "$ms2"
 }
 
 function all_dotfiles() {
-    MS3="Success link all dotfiles in home"
+    ms3="Success link all dotfiles in home"
     # all files in this folder not only dotfiles
     ln -si $PWD/dotfiles/.[a-z]* ~
     # : can't use .* in git dir, because it can ln . and .. dir.
     # :so, must be put them in another dir, to avoid dir like .git and .gitconfig and so on
     # : can't use * to instead of dot, because it can't to instead it use ==> .[a-zA-Z]*
-    echo "$MS3"
+    echo "$ms3"
 }
 
 function install_fonts() {
@@ -66,12 +66,12 @@ function finish() {
 
 function main(){
     # NOTE: Function can't is empty
-    WHO="$(whoami)"
-    MS4="Username is correct. Start to exectue this link.sh"
-    read -t 20 -p "Please input the computer's username(in 20 seconds): " USERNAME
-    if [ "$USERNAME" == "$WHO" ]
+    who="$(whoami)"
+    ms4="Username is correct. Start to exectue this link.sh"
+    read -t 20 -p "Please input the computer's username(in 20 seconds): " username
+    if [ "$username" == "$who" ]
     then
-        green_success "$MS4"
+        green_success "$ms4"
         misc
         link_vscode
         all_dotfiles
