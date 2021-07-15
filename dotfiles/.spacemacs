@@ -534,6 +534,7 @@
   ;; shutdown 自动调节行高
   (setq auto-window-vscroll nil)
 
+  ;; (setq x-select-enable-primary t)
   ;; add analyse in buffer
   (add-hook 'emacs-startup-hook
             (lambda ()
@@ -592,6 +593,10 @@
   ;; The icon size
   (setq all-the-icons-ivy-rich-icon-size 1.0)
 
+  ;; special symbols
+  (set-face-attribute 'nobreak-space nil
+                      :background nil
+                      :underline nil)
   ;; Definitions for ivy-rich transformers.
   ;; See `ivy-rich-display-transformers-list' for details."
   all-the-icons-ivy-rich-display-transformers-list

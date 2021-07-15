@@ -10,3 +10,4 @@ set rnu
 set incsearch
 set cc=80
 syntax on
+set ideajoin
