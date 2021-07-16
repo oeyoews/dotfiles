@@ -1,19 +1,31 @@
 #!/usr/bin/env bash
-# 2021-07-14 15:12:04
-# 
-function dotfiles() {
-  cd $HOME/src/DOTFILES && git add . && git commit -m "This is a auto push for Dotfiles." && git push
-  echo "Date:$(date) User:$(whoami) success for crontab (Dotfiles)" >> $PWD/log
+
+# Date: 2021-07-14 15:12:04
+# Descriable: use crontab auto push for 
+# push_repo: @DOTFILES @note
+# Author: @oeyoew
+
+function test_file() {
+  # test
+  # -o == ||; -a == &&  分号 用于分割命令或者表达式
+  [ -f ~/src/DOTFILES/ -a -f ~/src/note ] || echo "No such file exist"
+  test -f log ||  { touch log; echo "touch log in $PWD" >> log; }
 }
 
-function note() {
-  cd $HOME/src/note  && git add . && git commit -m "This is a auto push for note." && git push
-  echo "Date:$(date) User:$(whoami) success for crontab (note)" >> $PWD/log
+function repo() {
+  # git
+  git add .
+  git commit -m "This is a auto push for repo."
+  git push
+  echo  -e "<<<\nUser: $(whoami)\nDate:$(date)\nSuccess for crontab\n>>>\n" >> $PWD/log
 }
 
 function main() {
-  dotfiles
-  note
+  test_file
+  cd $HOME/src/DOTFILES
+  repo
+  cd $HOME/src/note
+  repo
 }
 
 main

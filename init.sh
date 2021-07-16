@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
+
 # Date: 2021-07-08 14:57:21
+# Modify time: 2021-07-16 16:27:58 
 # Descriable: link dotfiles
+# Version: 1.0
 
 # ranger
 function ranger() {
-  # NOTE: any Function can't is empty
-  # need password
-  sudo rm -rf ~/.config/ranger
-  sudo cp -r ${PWD}/ranger ~/.config/ranger
+  ranger_path=~/.config/ranger
+  test -d $ranger_path && rm -rf $ranger_path 
+  ln -si  $PWD/ranger ~/.config/ranger
 }
 
 # vscode settings.json
@@ -19,7 +21,6 @@ function vscode() {
 
 # dotfiles
 function dotfiles() {
-  # . instead of all symbols, not itself
   msg_2="Success link all dotfiles in home"
   ln -si $PWD/dotfiles/.[a-z]* ~
   echo "$msg_2"
