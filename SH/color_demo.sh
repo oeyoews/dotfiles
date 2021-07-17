@@ -3,6 +3,7 @@
 
 function Green_Success(){
   printf '\033[1;32;40m[Success]==>  %b\033[0m\n' "$1";
+  echo -e "\e[42m $now 美化成功！注销登录后即可看到效果^_^ \e[0m"
 }
 
 function Yellow_Warnning(){
@@ -11,10 +12,8 @@ function Yellow_Warnning(){
 
 function Red_Error(){
   printf '\033[1;31;40m[Error]  %b\033[0m\n' "$1";
-  exit 1;
 }
 
-# Green_Success "error"
 
 now=`date +"%Y-%m-%d %H:%M:%S"`
 cat>titlebar.ini<<EOF
@@ -33,4 +32,3 @@ height=28
 backgroundColor=#E3E3E3
 EOF
 
-echo -e "\e[42m $now 美化成功！注销登录后即可看到效果^_^ \e[0m"
