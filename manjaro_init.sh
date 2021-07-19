@@ -14,8 +14,9 @@ function ranger() {
 
 # dotfiles
 function dotfiles() {
+  hide_files="find $PWD/dotfiles -name ".*" "
   msg_2="Success link all dotfiles in home"
-  ln -si $PWD/dotfiles/.[a-z]* ~
+  ln -si $hide_files ~
   echo "$msg_2"
 }
 
