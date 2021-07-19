@@ -12,13 +12,6 @@ function ranger() {
   ln -si  $PWD/ranger ~/.config/ranger
 }
 
-# vscode settings.json
-function vscode() {
-  vscode=~/.config/Code/User
-  test -d $vscode || mkdir -pv $vscode
-  ln -si $PWD/settings.json ${vscode}/
-}
-
 # dotfiles
 function dotfiles() {
   msg_2="Success link all dotfiles in home"
@@ -38,7 +31,6 @@ function user() {
 function main(){
   user
   # ranger
-  # vscode
   # dotfiles
   finish
 }

@@ -5,6 +5,7 @@ Host hp
   HostName 192.168.68.125
   User admin
   Port 22
+
 # avoid some warning for gitlab
 Host gitlab.com
   UpdateHostKeys no

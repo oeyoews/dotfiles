@@ -3,7 +3,7 @@
 
 function pacman() {
   # use gvim to instead vim
-  SW1="gvim ranger trash-cli tldr base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc  google-chrome foliate emacs obs-studio typora putty tree shotwell"
+  SW1="gvim ranger trash-cli tldr base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc  google-chrome foliate emacs obs-studio typora putty tree shotwell ventoy"
   sudo pacman -S --noconfirm ${SW1}
 }
 

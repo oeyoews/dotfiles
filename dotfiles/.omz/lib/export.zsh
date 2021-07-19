@@ -2,4 +2,4 @@
 
 export DOT=~/src/DOTFILES
 export NOTE=~/src/note
-export EDITOR='vim'
+export EDITOR=vim

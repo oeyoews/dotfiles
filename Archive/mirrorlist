@@ -8,5 +8,5 @@
 ##
 
 ## Country : China
-Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/unstable/$repo/$arch
-
+# Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/unstable/$repo/$arch
+Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/stable/$repo/$arch
