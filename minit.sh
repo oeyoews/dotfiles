@@ -4,36 +4,26 @@
 # Modify time: 2021-07-16 16:27:58 
 # Descriable: link dotfiles
 # Version: 1.0
+# TODO: how to interactive
 
-# ranger
 function ranger() {
   ranger_path=~/.config/ranger
   test -d $ranger_path && rm -rf $ranger_path 
-  ln -si  $PWD/ranger ~/.config/ranger
+  ln -sf  $PWD/ranger ~/.config/ranger
 }
 
 # dotfiles
 function dotfiles() {
-  hide_files="find $PWD/dotfiles -name ".*" "
+  hide_files="`find $PWD/dotfiles -maxdepth 1 -name ".*" `"
   msg_2="Success link all dotfiles in home"
-  ln -si $hide_files ~
+  ln -sf $hide_files ~
   echo "$msg_2"
 }
 
-function finish() {
-  echo -e "\n\e[42mAll configure file linkd successfully!^_^ Just enjoy it!\e[0m"
-    }
-
-function user() {
-  read -t 20 -p "Input username: " user
-  [[ $user == $(whoami) ]] || exit 1
-}
-
 function main(){
-  user
   # ranger
   # dotfiles
-  finish
+  echo -e "\n\e[42mAll configure file linkd successfully!^_^ Just enjoy it!\e[0m"
 }
 
 main
