@@ -32,7 +32,7 @@ function repo() {
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
     echo_log
   else 
-    echo "This repo is clean for $PWD"
+    echo "This repo is clean for $PWD\n"
   fi
 }
 
