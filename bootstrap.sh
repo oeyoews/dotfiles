@@ -9,10 +9,11 @@ function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace
   # NOTE: last line can't add `\`
   rm -rf ~/.crontab.conf \
-    ~/.spacsmacs \
+    ~/.spacemacs \
     ~/.pam_environment \
     ~/.gitconfig \
     ~/.ideavimrc \
+    ~/.npmrc \
     ~/.omz ~/.zshrc \
     ~/.tmux.conf
   }
