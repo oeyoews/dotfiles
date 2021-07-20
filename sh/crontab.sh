@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
-
 # Date: 2021-07-14 15:12:04
 # Descriable: use crontab auto push for
 # push_repo: @DOTFILES @note
 # Author: @oeyoew
 
 function echo_log() {
-    cat >> log <<EOF
- User: `whoami`
- Date: `date`
- Success for this $PWD
 
- EOF
+cat>log<<EOF
+user
+date
+EOF
+
 }
 
 function repo() {
@@ -31,3 +30,4 @@ function main() {
 }
 
 main
+
