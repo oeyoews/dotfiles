@@ -4,6 +4,8 @@ set -e # exit status if not 0, exit
 set -u # if variable is not define, show error
 # set -v # show verbose info for sh
 # set -n # just read sh, but not execute this sh,  just like breakpoint
+# sh -n shell_name.sh # debug sh( syntax error)
+# `:` use to instead of placeholder , like pass in python
 
 function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace

@@ -4,13 +4,19 @@
 # push_repo: @DOTFILES @note
 # Author: @oeyoew
 
+color_begin='\e[1;32m'  # green
+color_off='\e[0m'
+
 function echo_log() {
+  # NOTE: second can't appear whitespace
 cat>log<<EOF
 <<<
 user: `whoami`
 date: `date`
+
 >>>
 EOF
+echo -e "${color_begin} This is a demo $color_off"
 }
 
 function repo() {
