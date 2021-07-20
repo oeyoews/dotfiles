@@ -14,6 +14,7 @@ function rm_config() {
     ~/.gitconfig \
     ~/.ideavimrc \
     ~/.npmrc \
+    ~/.config/Code/User/setting.json \
     ~/.omz ~/.zshrc \
     ~/.tmux.conf
   }
@@ -34,9 +35,9 @@ function misc() {
   stow ranger
 }
 function main() {
-  stow_first
   rm_config
-  misc
+  stow_first
+  # misc
 }
 
 main

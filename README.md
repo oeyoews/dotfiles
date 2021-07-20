@@ -23,5 +23,6 @@
 
 ## Installation
 ### Second <stow> <!-- * 2021-07-20 12:48:25  -->
+* need install stow
 * git clone --depth 1 https://gitlab.com/oeyoews/dotfiles.git ~
 * cd dotfiles/bootstrap && sh bootstrap.sh

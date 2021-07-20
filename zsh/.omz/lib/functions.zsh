@@ -259,15 +259,7 @@ function nvm() {
   source $NVM/init-nvm.sh 
 }
 
-
 function time_zsh() {
   time zsh -i -c exit
 }
 
-function vitol() {
-  if [ ! -e ~/todol.md ]; then
-    touch ~/todol.md && vim ~/todol.md && echo "creat ~/todol.md"
-  else
-    vim ~/todol.md
-  fi
-}

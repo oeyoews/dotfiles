@@ -20,6 +20,7 @@ source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 alias cdd="cd ~/dotfiles/"
 alias vihosts="sudo vim /etc/hosts"
+alias fzf="fzf --reverse --height 40% --preview 'head -100 {}'"
 
 # TMUX
 # if no session is started, start a new session
