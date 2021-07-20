@@ -6,6 +6,8 @@
 # Version: 1.0
 # TODO: how to interactive
 
+set -e 
+
 function ranger() {
   ranger_path=~/.config/ranger
   test -d $ranger_path && rm -rf $ranger_path 
