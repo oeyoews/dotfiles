@@ -6,9 +6,10 @@
 
 function echo_log() {
 cat>log<<EOF
-user
-date
-
+<<<
+user: `whoami`
+date: `date`
+>>>
 EOF
 }
 
