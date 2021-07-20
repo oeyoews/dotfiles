@@ -30,9 +30,9 @@ function repo() {
 }
 
 function main() {
-    cd $HOME/dotfiles
+    cd ~/dotfiles
     repo
-    cd $HOME/src/note
+    cd ~/src/note
     repo
 }
 

@@ -87,7 +87,6 @@ System="$(uname -s)"
 # }}}
 
 # success/info/error/warn {{{
-# TODO
 msg() {
   printf '%b\n' "$1" >&2
 }
