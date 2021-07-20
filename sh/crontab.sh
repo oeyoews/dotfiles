@@ -4,7 +4,7 @@
 # push_repo: @DOTFILES @note
 # Author: @oeyoew
 
-color_begin='\e[1;32m'  # green
+color_begin='\e[1;32m'  # green forecolor
 color_off='\e[0m'
 
 function echo_log() {
@@ -21,6 +21,7 @@ echo -e "${color_begin} success $color_off"
 
 function repo() {
   # -n 判断是否有值
+  # NOTE string
   if [ -n "`git status -s`" ]
   then
     git add .
