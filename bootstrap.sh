@@ -3,12 +3,12 @@
 set -e # exit status if not 0, exit
 set -u # if variable is not define, show error
 # set -v # show verbose info for sh
-set -n # just read sh, but not execute this sh,  just like breakpoint
+# set -n # just read sh, but not execute this sh,  just like breakpoint
 
 function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace
   # NOTE: last line can't add `\`
-  rm -rf ~/.crontab.conf \
+  rm -rfv ~/.crontab.conf \
     ~/.spacemacs \
     ~/.pam_environment \
     ~/.gitconfig \
@@ -38,7 +38,7 @@ function misc() {
 function main() {
   rm_config
   stow_first
-  # misc
+  misc
 }
 
 main
