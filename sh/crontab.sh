@@ -20,6 +20,9 @@ echo -e "${color_begin} success $color_off"
 }
 
 function repo() {
+  # -n 判断是否有值
+  if [ -n "`git status -s`" ]
+  then
     git add .
     # git commit -m "This is a auto push for repo."
     git commit -m "This is a auto push for $PWD."
@@ -27,6 +30,7 @@ function repo() {
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
     echo_log
+  fi
 }
 
 function main() {
