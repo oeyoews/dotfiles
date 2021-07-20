@@ -15,6 +15,7 @@ function rm_config() {
     ~/.ideavimrc \
     ~/.npmrc \
     ~/.config/Code/User/setting.json \
+    ~/.config/ranger \
     ~/.omz ~/.zshrc \
     ~/.tmux.conf
   }
