@@ -5,12 +5,11 @@
 # Author: @oeyoew
 
 function echo_log() {
-
 cat>log<<EOF
 user
 date
-EOF
 
+EOF
 }
 
 function repo() {
