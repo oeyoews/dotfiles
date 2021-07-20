@@ -259,17 +259,6 @@ function nvm() {
   source $NVM/init-nvm.sh 
 }
 
-# TMUX
-# if no session is started, start a new session
-# when quitting tmux, try to attach
-function tmux() {
-  if which tmux >/dev/null 2>&1; then
-    test -z ${TMUX} && tmux
-    while test -z ${TMUX}; do
-      tmux attach || break
-    done
-  fi
-}
 
 function time_zsh() {
   time zsh -i -c exit
