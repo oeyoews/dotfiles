@@ -7,6 +7,7 @@ set -u # if variable is not define, show error
 # sh -n shell_name.sh  # debug sh( syntax error)
 # sh -vs shell_name.sh # dubug all 
 # `:` use to instead of placeholder , like pass in python
+# set -eu
 
 function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace
@@ -40,6 +41,7 @@ function misc() {
 }
 function main() {
   rm_config
+  cd ~/dotfiles
   stow_first
   misc
 }

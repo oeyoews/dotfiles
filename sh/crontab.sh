@@ -31,9 +31,9 @@ function repo() {
   # NOTE string
   if [ -n "`git status -s`" ]
   then
-    git add .
+    git add . &>/dev/null
     # git commit -m "This is a auto push for repo."
-    git commit -m "This is a auto push for $PWD."
+    git commit -m "This is a auto push for $PWD." &>/dev/null
     git push
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
