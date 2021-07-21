@@ -14,7 +14,7 @@ function color_echo() {
 
 function echo_log() {
   # NOTE: second can't appear whitespace
-  cat>>"$PWD"/log<<EOF
+  cat>>log<<EOF
 <<<
 user: $(whoami)
 date: $(date)
@@ -34,7 +34,7 @@ function repo() {
     git commit -m "This is a auto push for '$PWD'." 
     git push) &>>"$PWD/log"
     # in repo's directory, touch log and record
-    test -f "$PWD/log" ||  { touch "$PWD/log"; echo "touch log in '$PWD'" >> "$PWD/log"; }
+    # test -f "$PWD/log" ||  { touch "$PWD/log"; echo "touch log in '$PWD'" >> "$PWD/log"; }
   else 
     echo -e "This repo is clean for '$PWD/log' \n"
   fi

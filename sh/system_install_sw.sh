@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # OS: Linux_Manjaro 
 # 2021-07-08 22:25:21 
 
@@ -5,17 +6,25 @@ set -e
 
 function pacman() {
   # use gvim to instead vim
-  SW1="gvim ranger trash-cli tldr base-devel neofetch lolcat translate-shell ripgrep duf tokei cloc  google-chrome foliate emacs obs-studio typora putty tree shotwell ventoy fzf qqmusic-bin" 
-  sudo pacman -S --noconfirm ${SW1}
-}
+  sh -c "sudo pacman -S --noconfirm  \
+        gvim ranger trash-cli tldr   \
+        base-devel neofetch lolcat   \
+        translate-shell ripgrep duf  \
+        tokei cloc  google-chrome    \
+        foliate emacs obs-studio     \
+        typora putty tree shotwell   \
+        ventoy fzf qqmusic-bin shellcheck
+      "
+    }
 
-function large_pacman() {
-  SW2="visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition netease-cloud-music"
-  sudo pacman -S --noconfirm ${SW2}
-}
+  function large_pacman() {
+    sh -c "sudo pacman -S --noconfirm \
+visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition netease-cloud-music
+    "
+  }
 
 function misc() {
-  <<EOF
+  &>>/dev/null<<EOF
   fcitx-qt5 fcitx-configtool # 输入法
   fcitx-sogoupinyin          # sogou
   nvm                        # node 版本管理
