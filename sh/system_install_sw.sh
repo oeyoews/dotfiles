@@ -24,7 +24,7 @@ visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition netease-
   }
 
 function misc() {
-  &>>/dev/null<<EOF
+  cat>/tmp/system_software_install<<EOF
   fcitx-qt5 fcitx-configtool # 输入法
   fcitx-sogoupinyin          # sogou
   nvm                        # node 版本管理

@@ -12,7 +12,7 @@ set -u # if variable is not define, show error
 function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace
   # NOTE: last line can't add `\`
-  test -f "$PWD"/log ||  { touch "$PWD"/log; echo "touch log in ${PWD}" >> "$PWD"/log; }
+  test -f "$PWD/log" ||  { touch "$PWD/log"; echo "touch log in ${PWD}" >> "$PWD"/log; }
   (rm -rfv ~/.crontab.conf \
     ~/.spacemacs \
     ~/.pam_environment \
@@ -22,8 +22,8 @@ function rm_config() {
     ~/.config/Code/User/setting.json \
     ~/.config/ranger \
     ~/.omz ~/.zshrc \
-    ~/.tmux.conf) &>>"$PWD"/log
-    echo -e "$(date)" &>>"$PWD"/log
+    ~/.tmux.conf) &>>"$PWD/log"
+    echo -e "$(date)" &>>"$PWD/log"
     echo -e "Execute Time for $0 : \e[35m ${SECONDS} \e[0m seconds"
   }
 
@@ -37,7 +37,7 @@ function misc() {
 }
 function main() {
   rm_config
-  cd ~/dotfiles
+  cd ~/dotfiles || exit
   stow_first
   misc
 }
