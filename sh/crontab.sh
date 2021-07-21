@@ -8,7 +8,8 @@
 # color_off='\e[0m'
 
 function color_echo() {
-  print "\e[35m %b \e[0m" $1
+  # NOTE: printf not print
+  printf "\e[35m %b \e[0m" $1
 }
 
 # alias echo="echo -e"
@@ -31,10 +32,12 @@ function repo() {
   # NOTE string
   if [ -n "`git status -s`" ]
   then
-    git add . &>/dev/null
+    (git add . 
+    # &>/dev/null
     # git commit -m "This is a auto push for repo."
-    git commit -m "This is a auto push for $PWD." &>/dev/null
-    git push
+    git commit -m "This is a auto push for $PWD." 
+    # &>/dev/null
+    git push)
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
     echo_log
