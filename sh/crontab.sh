@@ -33,7 +33,7 @@ function repo() {
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
   else 
-    echo -e "This repo is clean for $PWD\n"
+    echo -e "This repo is clean for $PWD/log \n"
   fi
   echo_log
 }
@@ -43,6 +43,7 @@ function main() {
   repo
   cd ~/src/note
   repo
+  echo -e "Time: $SECONDS\n"
 }
 
 main
