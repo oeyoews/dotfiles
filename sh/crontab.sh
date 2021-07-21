@@ -24,7 +24,7 @@ date: `date`
 
 EOF
 # echo -e "${color_begin} success $color_off"
-color_echo "success  $PWD"
+color_echo "success  for $PWD\n"
 }
 
 function repo() {
