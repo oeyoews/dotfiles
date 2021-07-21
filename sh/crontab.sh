@@ -4,19 +4,14 @@
 # push_repo: @DOTFILES @note
 # Author: @oeyoew
 
-# color_begin='\e[1;32m'  # green forecolor
-# color_off='\e[0m'
-
 function color_echo() {
   # NOTE: printf not print
   printf "\e[35m %b \e[0m" $1
 }
 
-# alias echo="echo -e"
-
 function echo_log() {
   # NOTE: second can't appear whitespace
-cat>>log<<EOF
+  cat>>log<<EOF
 <<<
 user: `whoami`
 date: `date`
@@ -33,11 +28,8 @@ function repo() {
   if [ -n "`git status -s`" ]
   then
     (git add . 
-    # &>/dev/null
-    # git commit -m "This is a auto push for repo."
     git commit -m "This is a auto push for $PWD." 
-    # &>/dev/null
-    git push) &>$PWD/log
+    git push) &>>$PWD/log
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
     echo_log
@@ -47,10 +39,10 @@ function repo() {
 }
 
 function main() {
-    cd ~/dotfiles
-    repo
-    cd ~/src/note
-    repo
+  cd ~/dotfiles
+  repo
+  cd ~/src/note
+  repo
 }
 
 main

@@ -12,7 +12,8 @@ set -u # if variable is not define, show error
 function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace
   # NOTE: last line can't add `\`
-  rm -rfv ~/.crontab.conf \
+  test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
+  (rm -rfv ~/.crontab.conf \
     ~/.spacemacs \
     ~/.pam_environment \
     ~/.gitconfig \
@@ -21,23 +22,16 @@ function rm_config() {
     ~/.config/Code/User/setting.json \
     ~/.config/ranger \
     ~/.omz ~/.zshrc \
-    ~/.tmux.conf
+    ~/.tmux.conf) &>>$PWD/log
+    echo "`date`\n" &>>$PWD/log
   }
 
 function stow_first() {
-  stow crontab
-  stow emacs
-  stow fcitx
-  stow git
-  stow idea
-  stow npm
-  stow tmux
-  stow zsh
+  stow crontab emacs fcitx git idea npm tmux zsh
 }
 
 function misc() {
-  stow vscode
-  stow ranger
+  stow vscode ranger
 }
 function main() {
   rm_config
