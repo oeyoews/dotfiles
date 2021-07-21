@@ -4,19 +4,26 @@
 # push_repo: @DOTFILES @note
 # Author: @oeyoew
 
-color_begin='\e[1;32m'  # green forecolor
-color_off='\e[0m'
+# color_begin='\e[1;32m'  # green forecolor
+# color_off='\e[0m'
+
+function color_echo() {
+  print "\e[35m %b \e[0m" $1
+}
+
+# alias echo="echo -e"
 
 function echo_log() {
   # NOTE: second can't appear whitespace
-cat>log<<EOF
+cat>>log<<EOF
 <<<
 user: `whoami`
 date: `date`
-
 >>>
+
 EOF
-echo -e "${color_begin} success $color_off"
+# echo -e "${color_begin} success $color_off"
+color_echo "success  $PWD"
 }
 
 function repo() {
