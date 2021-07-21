@@ -5,6 +5,7 @@
 # Author: @oeyoew
 
 set -e
+# use shellcheck to write better script
 
 function color_echo() {
   # NOTE: printf not print
