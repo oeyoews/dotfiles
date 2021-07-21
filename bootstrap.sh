@@ -23,11 +23,13 @@ function rm_config() {
     ~/.config/ranger \
     ~/.omz ~/.zshrc \
     ~/.tmux.conf) &>>$PWD/log
-    echo "`date`\n" &>>$PWD/log
+    echo -e "`date`\n" &>>$PWD/log
+    echo -e "Execute Time for $0 : \e[35m ${SECONDS} \e[0m seconds"
   }
 
 function stow_first() {
   stow crontab emacs fcitx git idea npm tmux zsh
+  echo -e "\e[32msuccess for stow\e[0m"
 }
 
 function misc() {

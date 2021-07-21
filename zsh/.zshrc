@@ -22,6 +22,7 @@ alias cdd="cd ~/dotfiles/"
 alias vihosts="sudo vim /etc/hosts"
 alias fzf="fzf --reverse --height 40% --preview 'head -100 {}'"
 alias date='date +"%Y-%m-%d %H:%M:%S"'
+# ps -ef | grep/rg TIM && kill PID
 # TMUX
 # if no session is started, start a new session
 # when quitting tmux, try to attach
