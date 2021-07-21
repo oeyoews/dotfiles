@@ -32,10 +32,10 @@ function repo() {
     git push) &>>$PWD/log
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
-    echo_log
   else 
     echo -e "This repo is clean for $PWD\n"
   fi
+  echo_log
 }
 
 function main() {
