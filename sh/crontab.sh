@@ -37,7 +37,7 @@ function repo() {
     # git commit -m "This is a auto push for repo."
     git commit -m "This is a auto push for $PWD." 
     # &>/dev/null
-    git push)
+    git push) &>/dev/null
     # in repo's directory, touch log and record
     test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
     echo_log
