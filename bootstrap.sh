@@ -5,14 +5,14 @@ set -u # if variable is not define, show error
 # set -v # show verbose info for sh
 # set -n # just read sh, but not execute this sh,  just like breakpoint
 # sh -n shell_name.sh  # debug sh( syntax error)
-# sh -vs shell_name.sh # dubug all 
+# sh -vs shell_name.sh # dubug all
 # `:` use to instead of placeholder , like pass in python
 # set -eu
 
 function rm_config() {
   # NOTE: input `\` , enter directly ,can't add whitespace
   # NOTE: last line can't add `\`
-  test -f $PWD/log ||  { touch $PWD/log; echo "touch log in $PWD" >> $PWD/log; }
+  test -f "$PWD"/log ||  { touch "$PWD"/log; echo "touch log in ${PWD}" >> "$PWD"/log; }
   (rm -rfv ~/.crontab.conf \
     ~/.spacemacs \
     ~/.pam_environment \
@@ -22,8 +22,8 @@ function rm_config() {
     ~/.config/Code/User/setting.json \
     ~/.config/ranger \
     ~/.omz ~/.zshrc \
-    ~/.tmux.conf) &>>$PWD/log
-    echo -e "`date`\n" &>>$PWD/log
+    ~/.tmux.conf) &>>"$PWD"/log
+    echo -e "$(date)" &>>"$PWD"/log
     echo -e "Execute Time for $0 : \e[35m ${SECONDS} \e[0m seconds"
   }
 
