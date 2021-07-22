@@ -13,20 +13,25 @@ function pacman() {
         tokei cloc  google-chrome    \
         foliate emacs obs-studio     \
         typora putty tree shotwell   \
-        ventoy fzf qqmusic-bin shellcheck
+        ventoy fzf  shellcheck
       "
     }
 
+  function fcitx_config() {
+      sh -c "sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-material-color manjaro-asian-input-support-fcitx5"
+  }
+
   function large_pacman() {
     sh -c "sudo pacman -S --noconfirm \
+      filezilla # file transfer
 visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition netease-cloud-music
     "
   }
 
 function misc() {
   cat>/tmp/system_software_install<<EOF
-  fcitx-qt5 fcitx-configtool # 输入法
-  fcitx-sogoupinyin          # sogou
+  fcitx-qt5 fcitx-configtool # 输入法 deprecated
+  fcitx-sogoupinyin          # sogou  deprecated
   nvm                        # node 版本管理
   virtual-desktop            # plasma widget
   com.qq.tim.spark           # tim
@@ -40,12 +45,19 @@ function misc() {
   fgit                       # hub.fastgit.org
   deskreen                   # 投屏软件
   tcping-git  
+  qqmusic-bin
 EOF
+}
+function clean_package() {
+  sh -c "yes | sudo pacman -Scc"
 }
 
 function main() {
-  pacman
-  large_pacman
+  fcitx-config
+  # pacman
+  # large_pacman
+  # misc
+  clean_package
 }
 
 main

@@ -28,7 +28,7 @@ function rm_config() {
   }
 
 function stow_first() {
-  stow crontab emacs fcitx git idea npm tmux zsh
+  stow crontab emacs git idea npm tmux zsh
   echo -e "\e[32msuccess for stow\e[0m"
 }
 
