@@ -56,17 +56,8 @@
 
    dotspacemacs-elpa-timeout 5
 
-   ;; Set `gc-cons-threshold' and `gc-cons-percentage' when startup finishes.
-   ;; This is an advanced option and should not be changed unless you suspect
-   ;; performance issues due to garbage collection operations.
-   ;; (default '(100000000 0.1))
    dotspacemacs-gc-cons '(100000000 0.1)
 
-   ;; Set `read-process-output-max' when startup finishes.
-   ;; This defines how much data is read from a foreign process.
-   ;; Setting this >= 1 MB should increase performance for lsp servers
-   ;; in emacs 27.
-   ;; (default (* 1024 1024))
    dotspacemacs-read-process-output-max (* 1024 1024)
 
    dotspacemacs-use-spacelpa nil
@@ -75,9 +66,6 @@
 
    dotspacemacs-check-for-update nil
 
-   ;; If non-nil, a form that evaluates to a package directory. For example, to
-   ;; use different package directories for different Emacs versions, set this
-   ;; to `emacs-version'. (default 'emacs-version)
    dotspacemacs-elpa-subdirectory 'emacs-version
 
    ;; One of `vim', `emacs' or `hybrid'.
@@ -87,16 +75,6 @@
 
    dotspacemacs-startup-banner 'official
 
-   ;; List of items to show in startup buffer or an association list of
-   ;; the form `(list-type . list-size)`. If nil then it is disabled.
-   ;; Possible values for list-type are:
-   ;; `recents' `recents-by-project' `bookmarks' `projects' `agenda' `todos'.
-   ;; List sizes may be nil, in which case
-   ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   ;; The exceptional case is `recents-by-project', where list-type must be a
-   ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
-   ;; number is the project limit and the second the limit on the recent files
-   ;; within a project.
    dotspacemacs-startup-lists '((recents . 5)
                                 (projects . 5))
 
@@ -109,39 +87,18 @@
    ;; The minimum delay in seconds between number key presses. (default 0.4)
    dotspacemacs-startup-buffer-multi-digit-delay 0.7
 
-   ;; Default major mode for a new empty buffer. Possible values are mode
-   ;; names such as `text-mode'; and `nil' to use Fundamental mode.
-   ;; (default `text-mode')
    dotspacemacs-new-empty-buffer-major-mode 'text-mode
 
-   ;; Default major mode of the scratch buffer (default `text-mode')
-   ;; dotspacemacs-scratch-mode 'text-mode
    dotspacemacs-scratch-mode 'text-mode
 
-   ;; If non-nil, *scratch* buffer will be persistent. Things you write down in
-   ;; *scratch* buffer will be saved and restored automatically.
    dotspacemacs-scratch-buffer-persistent nil
 
-   ;; If non-nil, `kill-buffer' on *scratch* buffer
-   ;; will bury it instead of killing.
    dotspacemacs-scratch-buffer-unkillable nil
 
-   ;; Initial message in the scratch buffer, such as "Welcome to Spacemacs!"
-   ;; (default nil)
    dotspacemacs-initial-scratch-message nil
 
-   ;; List of themes, the first of the list is loaded when spacemacs starts.
-   ;; Press `SPC T n' to cycle to the next theme in the list (works great
-   ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-dark)
 
-   ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
-   ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
-   ;; first three are spaceline themes. `doom' is the doom-emacs mode-line.
-   ;; `vanilla' is default Emacs mode-line. `custom' is a user defined themes,
-   ;; refer to the DOCUMENTATION.org for more info on how to create your own
-   ;; spaceline theme. Value can be a symbol or list with additional properties.
-   ;; (default '(spacemacs :separator wave :separator-scale 1.5))
    dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.5)
 
    dotspacemacs-colorize-cursor-according-to-state t
@@ -162,18 +119,8 @@
 
    dotspacemacs-major-mode-leader-key ","
 
-   ;; Major mode leader key accessible in `emacs state' and `insert state'.
-   ;; (default "C-M-m" for terminal mode, "<M-return>" for GUI mode).
-   ;; Thus M-RET should work as leader key in both GUI and terminal modes.
-   ;; C-M-m also should work in terminal mode, but not in GUI mode.
    dotspacemacs-major-mode-emacs-leader-key (if window-system "<M-return>" "C-M-m")
 
-   ;; These variables control whether separate commands are bound in the GUI to
-   ;; the key pairs `C-i', `TAB' and `C-m', `RET'.
-   ;; Setting it to a non-nil value, allows for separate commands under `C-i'
-   ;; and TAB or `C-m' and `RET'.
-   ;; In the terminal, these pairs are generally indistinguishable, so this only
-   ;; works in the GUI. (default nil)
    dotspacemacs-distinguish-gui-tab nil
 
    dotspacemacs-default-layout-name "Default"
@@ -208,14 +155,8 @@
 
    dotspacemacs-undecorated-at-startup t
 
-   ;; A value from the range (0..100), in increasing opacity, which describes
-   ;; the transparency level of a frame when it's active or selected.
-   ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-active-transparency 90
 
-   ;; A value from the range (0..100), in increasing opacity, which describes
-   ;; the transparency level of a frame when it's inactive or deselected.
-   ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-inactive-transparency 90
 
    ;; If non-nil show the titles of transient states. (default t)
@@ -224,14 +165,8 @@
    ;; If non-nil show the color guide hint for transient state keys. (default t)
    dotspacemacs-show-transient-state-color-guide t
 
-   ;; If non-nil unicode symbols are displayed in the mode line.
-   ;; If you use Emacs as a daemon and wants unicode characters only in GUI set
-   ;; the value to quoted `display-graphic-p'. (default t)
    dotspacemacs-mode-line-unicode-symbols t
 
-   ;; If non-nil smooth scrolling (native-scrolling) is enabled. Smooth
-   ;; scrolling overrides the default behavior of Emacs which recenters point
-   ;; when it reaches the top or bottom of the screen. (default t)
    dotspacemacs-smooth-scrolling t
 
    dotspacemacs-scroll-bar-while-scrolling t
@@ -258,39 +193,20 @@
 
    dotspacemacs-frame-title-format "%I@%S"
 
-   ;; Format specification for setting the icon title format
-   ;; (default nil - same as frame-title-format)
    dotspacemacs-icon-title-format nil
 
    dotspacemacs-show-trailing-whitespace t
 
    dotspacemacs-whitespace-cleanup `trailing
 
-   ;; If non nil activate `clean-aindent-mode' which tries to correct
-   ;; virtual indentation of simple modes. This can interfer with mode specific
-   ;; indent handling like has been reported for `go-mode'.
-   ;; If it does deactivate it here.
-   ;; (default t)
    dotspacemacs-use-clean-aindent-mode t
 
-   ;; If non-nil shift your number row to match the entered keyboard layout
-   ;; (only in insert state). Currently supported keyboard layouts are:
-   ;; `qwerty-us', `qwertz-de' and `querty-ca-fr'.
-   ;; New layouts can be added in `spacemacs-editing' layer.
-   ;; (default nil)
    dotspacemacs-swap-number-row nil
 
-   ;; Either nil or a number of seconds. If non-nil zone out after the specified
-   ;; number of seconds. (default nil)
    dotspacemacs-zone-out-when-idle nil
 
-   ;; Run `spacemacs/prettify-org-buffer' when
-   ;; visiting README.org files of Spacemacs.
-   ;; (default nil)
    dotspacemacs-pretty-docs nil
 
-   ;; If nil the home buffer shows the full path of agenda items
-   ;; and todos. If non nil only the file name is shown.
    dotspacemacs-home-shorten-agenda-source nil
 
    ;; If non-nil then byte-compile some of Spacemacs files.
