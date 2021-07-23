@@ -23,7 +23,7 @@
      emacs-lisp
      lsp
      markdown
-     c-c++
+     ;; c-c++
      (ranger :variables
              ranger-show-preview t
              ranger-show-hidden t
@@ -310,7 +310,7 @@
     (setq lsp-keymap-prefix "C-c l")
     :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
            (c-mode . lsp)
-           (c++-mode . lsp)
+           ;; (c++-mode . lsp)
            (python-mode . lsp)
            (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp)

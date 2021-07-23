@@ -13,7 +13,8 @@ function pacman() {
         tokei cloc  google-chrome    \
         foliate emacs obs-studio     \
         typora putty tree shotwell   \
-        ventoy fzf  shellcheck
+        ventoy fzf  shellcheck latte-dock \
+        cmake
       "
     }
 

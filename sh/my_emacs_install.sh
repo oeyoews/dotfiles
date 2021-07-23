@@ -2,23 +2,13 @@
 # descriable: emacs install_emacs
 # 2021-07-08 15:41:09 
 
-WHO="$(whoami)"
-
-function file_judge() {
-  rm -rf ${HOME}/.emacs.d_bk
-  if [ -d ${HOME}/.vim ]; then
-    mv ${HOME}/.vim ${HOME}/.emacs.d_bk
-  fi
-}
-
 function install_emacs() {
+  cd "$HOME" || exit
   git clone -b develop https://hub.fastgit.org/syl20bnr/spacemacs ~/.emacs.d --depth 1
-  echo "Finish to intall oeyoews/.emacs.d for ${WHO}."
   echo "Just enjoy it!"
 }
 
 function main() {
-  file_judge
   install_emacs
 }
 

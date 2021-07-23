@@ -14,6 +14,7 @@ function color_echo() {
 
 function echo_log() {
   # NOTE: second can't appear whitespace
+  # cat << EOF......\nEOF
   cat>>log<<EOF
 <<<
 user: $(whoami)
@@ -41,11 +42,17 @@ function repo() {
   echo_log
 }
 
+function emacs_pull() {
+ cd ~/.emacs.d/ || exit 
+ git pull &>/dev/null
+}
+
 function main() {
   cd ~/dotfiles || exit
   repo
   cd ~/src/note || exit
   repo
+  emacs_pull
   echo -e "\n\e[32mTime: $SECONDS\n\e[0m"
 }
 
