@@ -80,5 +80,6 @@
     "editor.wordWrap": "on",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "editor.fontFamily": "'Source Code Variable'",
+    "window.zoomLevel": -2,
     //  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 }
