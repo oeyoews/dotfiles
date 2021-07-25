@@ -18,9 +18,23 @@ function pacman() {
       "
     }
 
-  function fcitx_config() {
+  function fcitx_config5() {
       sh -c "sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-material-color manjaro-asian-input-support-fcitx5"
   }
+
+
+  function remove_fcitx_config5() {
+      # NOTE: fcitx 与fcitx5 有冲突
+      sh -c "sudo pacman -Rscn fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-material-color manjaro-asian-input-support-fcitx5"
+  }
+
+function sogoupinyin_for_fcitx() {
+  sh -c " sudo pacman -S fcitx-configtool"
+  # NOTE:
+  # yay fcitx-sogoupinyin 
+  # yay manjaro-asian-input-support-fcitx or # add .pam_environment (todo: test
+  # .pam_env)
+}
 
   function large_pacman() {
     sh -c "sudo pacman -S --noconfirm \
@@ -54,11 +68,11 @@ function clean_package() {
 }
 
 function main() {
-  fcitx-config
+  # remove_fcitx_config5
   # pacman
   # large_pacman
   # misc
-  clean_package
+  # clean_package
 }
 
 main

@@ -23,6 +23,8 @@ alias vihosts="sudo vim /etc/hosts"
 alias fzf="fzf --reverse --height 40% --preview 'head -100 {}'"
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 # ps -ef | grep/rg TIM && kill PID
+# ps -eo pid,ppid,%mem,%cpu,comm --sort=-%mem | head
+# echo $XDG_SESSION_TYPE
 # TMUX
 # if no session is started, start a new session
 # when quitting tmux, try to attach
