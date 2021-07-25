@@ -48,6 +48,7 @@ visual-studio-code-bin libreoffice-fresh intellij-idea-ultimate-edition netease-
 
 function misc() {
   cat>/tmp/system_software_install<<EOF
+  manjaro-settings-manjaro   # kernel manager
   fcitx-qt5 fcitx-configtool # 输入法 deprecated
   fcitx-sogoupinyin          # sogou  deprecated
   nvm                        # node 版本管理
