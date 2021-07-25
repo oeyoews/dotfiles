@@ -14,18 +14,21 @@ function pacman() {
         foliate emacs obs-studio     \
         typora putty tree shotwell   \
         ventoy fzf  shellcheck latte-dock \
-        cmake
+        cmake clang
       "
     }
 
   function fcitx_config5() {
-      sh -c "sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-material-color manjaro-asian-input-support-fcitx5"
+    # not recommend, have some bug
+      sh -c "sudo pacman -S fcitx5-im fcitx5-chinese-addons \
+            fcitx5-pinyin-zhwiki fcitx5-material-color \
+            manjaro-asian-input-support-fcitx5"
   }
 
 
   function remove_fcitx_config5() {
       # NOTE: fcitx 与fcitx5 有冲突
-      sh -c "sudo pacman -Rscn fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-material-color manjaro-asian-input-support-fcitx5"
+      sh -c "sudo pacman -Rscn fcitx5"
   }
 
 function sogoupinyin_for_fcitx() {
@@ -72,7 +75,7 @@ function main() {
   # pacman
   # large_pacman
   # misc
-  # clean_package
+  clean_package
 }
 
 main
