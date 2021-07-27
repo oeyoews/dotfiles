@@ -10,6 +10,7 @@ function repo() {
     git add . 
     git commit -m "This is a auto push." 
     git push 
+    echo '===end'
 }
 
 function emacs_update() {
@@ -23,7 +24,7 @@ function main() {
   cd ~/src/note || exit
   repo
   emacs_update
-  echo "$SECONDS"
+  echo "$(SECONDS)"
   # if
 }
 
