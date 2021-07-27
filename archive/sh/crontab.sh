@@ -9,6 +9,7 @@ set -e
 function repo() {
     git add . 
     git commit -m "This is a auto push." 
+# TODO
     git push 
     echo '===end'
 }
@@ -19,13 +20,12 @@ function emacs_update() {
 }
 
 function main() {
-  cd ~/dotfiles || exit
-  repo
   cd ~/src/note || exit
   repo
+  cd ~/dotfiles || exit
+  repo
   emacs_update
-  echo "$(SECONDS)"
-  # if
+  echo $SECONDS
 }
 
 main
