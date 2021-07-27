@@ -33,7 +33,7 @@ function stow_first() {
 }
 
 function misc() {
-  stow vscode ranger
+  stow vscode_cnf ranger
 }
 function main() {
   rm_config
