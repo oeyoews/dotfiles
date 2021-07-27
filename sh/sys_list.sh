@@ -1,30 +1,39 @@
 cmake
-xdm(xtreme download manager)
-powertop
+clang                      # spacevim need 
+# python-pip
+tmux
+xunlei-bin                 # xunlei
+# (xtreme download manager)
+xdm
+powertop # 耗电分析
+# mysql tool
 mycli
 typora
 foliate                    # book read
 obs                        # record video
-gvim 
+# system clipboard link
+gvim                      
 ranger
+# secure rm
 trash-cli
 google-chrome
+firefox
 neofetch
 lolcat
-firefox
-# pacman 
+# pacman
 base-devel                
+# grep enhanced, like grep
 ripgrep
 duf
+# like du -sh
 dust
 fzf
 tree
 shellcheck                 # check error language
-clang
 ventoy
 fcitx-configtool           # config fcitx
 fcitx-im
-fcitx5-material-color      # skin
+fcitx5-material-color      # input skin
 libreoffice-fresh          # office
 netease-cloud-music        # music
 visual-studio-code-bin     # vscode
@@ -37,7 +46,6 @@ com.qq.tim.spark           # tim
 wechat-uos                 # wechat
 wudao-dict-git             # wudao directory
 gnome-keyring              # for vscode synchronize
-xunlei-bin                 # xunlei
 jdk8-openjdk               # jdk
 fgit                       # hub.fastgit.org
 deskreen                   # 投屏软件
@@ -46,5 +54,5 @@ intellij-idea-ultimate-edition
 filezilla # file transfer
 # auto add .pam_env  like
 manjaro-asian-input-support-fcitx 
-# npm
+# npm fast open repo
 git-open

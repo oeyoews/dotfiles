@@ -28,3 +28,4 @@
 * git clone --depth 1 https://gitlab.com/oeyoews/dotfiles.git ~
 * cd dotfiles/bootstrap && sh bootstrap.sh
 
+- note: sddm use stow --target=/ sddm
