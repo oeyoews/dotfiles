@@ -45,6 +45,7 @@ function main() {
   repo
   emacs_pull
   echo -e "\n\e[32mTime: $SECONDS\n\e[0m"
+  # if
 }
 
 main
