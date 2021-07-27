@@ -315,3 +315,14 @@ EOF
 }
 
 main "$@"
+
+
+https://git.sjtu.edu.cn/sjtug/ohmyzsh.git
+https://mirror.sjtu.edu.cn/docs/git/ohmyzsh.git
+
+
+curl	REPO=sjtug/ohmyzsh REMOTE=https://git.sjtu.edu.cn/${REPO}.git sh -c "$(curl -fsSL https://git.sjtu.edu.cn/sjtug/ohmyzsh/-/raw/master/tools/install.sh\?inline\=false)"
+wget	REPO=sjtug/ohmyzsh REMOTE=https://git.sjtu.edu.cn/${REPO}.git sh -c "$(wget -O- https://git.sjtu.edu.cn/sjtug/ohmyzsh/-/raw/master/tools/install.sh\?inline\=false)"
+fetch	REPO=sjtug/ohmyzsh REMOTE=https://git.sjtu.edu.cn/${REPO}.git sh -c "$(fetch -o - https://git.sjtu.edu.cn/sjtug/ohmyzsh/-/raw/master/tools/install.sh\?inline\=false)"
+替换现有仓库上游
+git -C $ZSH remote set-url origin https://git.sjtu.edu.cn/sjtug/ohmyzsh.git

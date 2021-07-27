@@ -12,6 +12,7 @@ function install_vim() {
 function install_emacs() {
   cd "$HOME" || exit
   git clone -b develop https://hub.fastgit.org/syl20bnr/spacemacs ~/.emacs.d --depth 1
+  # https://git.sjtu.edu.cn/sjtug/spacemacs.git
 }
 
 function main() {

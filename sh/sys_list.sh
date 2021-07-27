@@ -1,4 +1,7 @@
 cmake
+xdm(xtreme download manager)
+powertop
+mycli
 typora
 foliate                    # book read
 obs                        # record video
