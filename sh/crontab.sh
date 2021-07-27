@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Date: 2021-07-14 15:12:04
-# Descriable: use crontab auto push for
+# Descriable: crontab auto push for
 # push_repo: @dotfiles @note
 # Author: @oeyoew
 
