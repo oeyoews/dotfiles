@@ -1,4 +1,8 @@
 cmake
+libreoffice-fresh          # office
+netease-cloud-music        # music
+manjaro-settings-manjaro   # kernel manager
+visual-studio-code-bin     # vscode
 clang                      # spacevim need 
 # python-pip
 tmux
@@ -31,15 +35,21 @@ fzf
 tree
 shellcheck                 # check error language
 ventoy
-fcitx-configtool           # config fcitx
-fcitx-im
+#
+#========= fcitx5
+# pacman (auto install fcitx-im)
+manjaro-asian-input-support-fcitx5
+# yay
 fcitx5-material-color      # input skin
-libreoffice-fresh          # office
-netease-cloud-music        # music
-visual-studio-code-bin     # vscode
-manjaro-settings-manjaro   # kernel manager
-fcitx-qt5 fcitx-configtool # 输入法
-fcitx-sogoupinyin          # sogou
+# 词库 pacman
+fcitx5-pinyin-zhwiki
+# archlinuxcn
+fcitx5-pinyin-moegirl
+# fcitx input method
+# C-` 调整为简化字
+fcitx5-rime
+#========
+#
 nvm                        # node 版本管理
 virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
@@ -53,6 +63,5 @@ deskreen                   # 投屏软件
 intellij-idea-ultimate-edition 
 filezilla # file transfer
 # auto add .pam_env  like
-manjaro-asian-input-support-fcitx 
 # npm fast open repo
 git-open

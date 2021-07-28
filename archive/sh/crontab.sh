@@ -4,19 +4,14 @@
 # push_repo: @dotfiles @note
 # Author: @oeyoew
 
+# if exit status is nil, exit
 set -e
 
 function repo() {
     git add . 
     git commit -m "This is a auto push." 
-# TODO
     git push 
     echo '===end'
-}
-
-function emacs_update() {
- cd ~/.emacs.d/ || exit 
- git pull 
 }
 
 function main() {
