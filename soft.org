@@ -1,4 +1,5 @@
 cmake
+cloc # like wc
 gnome-todo
 cdate
 clang                      # spacevim need

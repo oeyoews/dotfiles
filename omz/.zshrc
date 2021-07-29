@@ -6,18 +6,21 @@ export ZSH=~/.omz
 #
 source $ZSH/p10k/powerlevel10k.zsh-theme  
 source $ZSH/p10k-rainbow.zsh 
-source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-# source $ZSH/plugins/sudo.zsh
+
+# zsh time 
+# time -i -c zsh exit 
 # Key: comma
-bindkey ',' autosuggest-accept
 # TODO: In ranger, it not work, try fix it in config
 # Don't modify this plugin name and del files
 # Key: alt + q
-bindkey "\eq" push-line-or-edit
-source $ZSH/oh-my-zsh.sh  
 #
 # Lastly, put this highlighting to last, to fix some display bug
-source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# NOTE: plugins first , after source oh-my-zsh.sh
+plugins=( zsh-autosuggestions sudo zsh-syntax-highlighting )
+source $ZSH/oh-my-zsh.sh  
+bindkey ',' autosuggest-accept
+bindkey "\eq" push-line-or-edit
 #
 alias cdd="cd ~/dotfiles/"
 alias vihosts="sudo vim /etc/hosts"

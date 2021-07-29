@@ -1,8 +1,31 @@
+# If ZSH is not defined, use the current script's directory.
+[[ -z "$ZSH" ]] && export ZSH="${${(%):-%x}:a:h}"
+
+# Set ZSH_CACHE_DIR to the path where cache files should be created
+# or else we will use the default cache/
+if [[ -z "$ZSH_CACHE_DIR" ]]; then
+  ZSH_CACHE_DIR="$ZSH/cache"
+fi
+
+# Check for updates on initial load...
+# comment three lins to ban update
+# if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
+  # source $ZSH/tools/check_for_upgrade.sh
+# fi
+
+# Initializes Oh My Zsh
+
 # add a function path
 fpath=($ZSH/functions $ZSH/completions $fpath)
 
 # Load all stock functions (from $fpath files) called below.
 autoload -U compaudit compinit
+
+# Set ZSH_CUSTOM to the path where your custom config files
+# and plugins exists, or else we will use the default custom/
+if [[ -z "$ZSH_CUSTOM" ]]; then
+    ZSH_CUSTOM="$ZSH/custom"
+fi
 
 
 is_plugin() {
@@ -82,12 +105,27 @@ for config_file ($ZSH/lib/*.zsh); do
 done
 
 # Load all of the plugins that were defined in ~/.zshrc
-# for plugin ($plugins); do
-  # if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
-    # source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
-  # elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
-    # source $ZSH/plugins/$plugin/$plugin.plugin.zsh
-  # fi
-# done
+for plugin ($plugins); do
+  if [ -f $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh ]; then
+    source $ZSH_CUSTOM/plugins/$plugin/$plugin.plugin.zsh
+  elif [ -f $ZSH/plugins/$plugin/$plugin.plugin.zsh ]; then
+    source $ZSH/plugins/$plugin/$plugin.plugin.zsh
+  fi
+done
 
+# Load all of your custom configurations from custom/
+for config_file ($ZSH_CUSTOM/*.zsh(N)); do
+  source $config_file
+done
 unset config_file
+
+# Load the theme
+if [ ! "$ZSH_THEME" = ""  ]; then
+  if [ -f "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme" ]; then
+    source "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme"
+  elif [ -f "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme" ]; then
+    source "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme"
+  else
+    source "$ZSH/themes/$ZSH_THEME.zsh-theme"
+  fi
+fi
