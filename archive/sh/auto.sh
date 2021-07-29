@@ -6,7 +6,7 @@
 
 # if exit status is nil, exit
 set -e
-path="$HOME"
+
 function repo() {
     git add . 
     git commit -m "This is a auto push." 
@@ -19,10 +19,7 @@ function main() {
   repo
   cd ~/dotfiles || exit
   repo
-  emacs_update
   echo $SECONDS
 }
 
 main
-
-if

@@ -2,6 +2,9 @@ cmake
 cloc # like wc
 gnome-todo
 cdate
+# like ps painting
+yay gtk-theme-mackos-mojave
+krita
 clang                      # spacevim need
 libreoffice-fresh          # office
 netease-cloud-music        # music
@@ -79,3 +82,5 @@ yay gnome-shell-extension-kimpanel
 # yay
 # if use kimpanel, not use this skin
 fcitx5-material-color      # input skin
+pip install magic-wormhole
+sudo pacman -S python-pip
