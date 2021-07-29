@@ -6,7 +6,7 @@
 
 # if exit status is nil, exit
 set -e
-
+path="$HOME"
 function repo() {
     git add . 
     git commit -m "This is a auto push." 
@@ -25,3 +25,4 @@ function main() {
 
 main
 
+if

@@ -209,6 +209,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Current directory background color.
+  # modified by @oeyoews :dir color 
   typeset -g POWERLEVEL9K_DIR_BACKGROUND=4
   # Default current directory foreground color.
   # typeset -g POWERLEVEL9K_DIR_FOREGROUND=254
@@ -350,7 +351,7 @@
 
   #####################################[ vcs: git status ]######################################
   # Version control system colors.
-  # modify
+  # modify git
   typeset -g POWERLEVEL9K_VCS_CLEAN_BACKGROUND=40
   typeset -g POWERLEVEL9K_VCS_MODIFIED_BACKGROUND=40
   # TYPESET -G powerlevel9k_vcs_untracked_background=2
@@ -535,7 +536,7 @@
   ###################[ command_execution_time: duration of the last command ]###################
   # Execution time color.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=0
-  # modify
+  # modify time
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND=45
   # Show duration of the last command if takes at least this many seconds.
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=3

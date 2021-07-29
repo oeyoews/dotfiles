@@ -1,11 +1,14 @@
 cmake
+gnome-todo
+cdate
+clang                      # spacevim need
 libreoffice-fresh          # office
 netease-cloud-music        # music
 manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
-clang                      # spacevim need 
 # python-pip
 tmux
+konsole(取消重拍)
 xunlei-bin                 # xunlei
 # (xtreme download manager)
 xdm
@@ -16,7 +19,7 @@ typora
 foliate                    # book read
 obs                        # record video
 # system clipboard link
-gvim                      
+gvim
 ranger
 # secure rm
 trash-cli
@@ -24,8 +27,12 @@ google-chrome
 firefox
 neofetch
 lolcat
+# ls -al | xclip
+# 防火墙
+gufw 
+xclip 
 # pacman
-base-devel                
+base-devel
 # grep enhanced, like grep
 ripgrep
 duf
@@ -39,8 +46,6 @@ ventoy
 #========= fcitx5
 # pacman (auto install fcitx-im)
 manjaro-asian-input-support-fcitx5
-# yay
-fcitx5-material-color      # input skin
 # 词库 pacman
 fcitx5-pinyin-zhwiki
 # archlinuxcn
@@ -60,8 +65,15 @@ jdk8-openjdk               # jdk
 fgit                       # hub.fastgit.org
 deskreen                   # 投屏软件
 # idea
-intellij-idea-ultimate-edition 
+intellij-idea-ultimate-edition
 filezilla # file transfer
 # auto add .pam_env  like
 # npm fast open repo
 git-open
+yay nemo
+# (note: if turn on input method panel , all fcitx skin will don't work)
+yay gnome-shell-extension-kimpanel
+# (F3 extra pane)
+# yay
+# if use kimpanel, not use this skin
+fcitx5-material-color      # input skin
