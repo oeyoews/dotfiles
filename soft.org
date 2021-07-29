@@ -26,7 +26,8 @@ ranger
 trash-cli
 google-chrome
 firefox
-neofetch
+# neofetch deprecate
+fastfetch
 lolcat
 # ls -al | xclip
 # 防火墙
