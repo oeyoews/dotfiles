@@ -3,14 +3,13 @@
 
 export ZSH=~/.omz
 
-# time -i -c zsh exit 
-
 # Theme appearence
 # NOTE: plugins first , after source oh-my-zsh.sh
 plugins=( 
   zsh-autosuggestions
   sudo 
   zsh-syntax-highlighting
+  extract
 )
 source $ZSH/oh-my-zsh.sh  
 source $ZSH/p10k/powerlevel10k.zsh-theme  
@@ -27,6 +26,7 @@ alias vimhost="sudo vim /etc/hosts"
 # alias fzf="fzf --reverse --height 40% --preview 'head -100 {}'"
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 alias cdn='cd $NOTE/linux'
+alias og='google-chrome-stable'
 
 # ps -ef | grep/rg TIM && kill PID
 # killall -9 name
@@ -59,11 +59,6 @@ alias check='shellcheck'
 # when quitting tmux, try to attach
 # NOTE: Turn On: to comment this function fitst and last line
 # not suit split in konsole, but can creat new tab use C-S t
-# function tmux() {
-  if which tmux >/dev/null 2>&1; then
-    test -z ${TMUX} && tmux
-    while test -z ${TMUX}; do
-      tmux attach || break
-    done
-  fi
-# }
+
+# auto start tmux
+# ontmux

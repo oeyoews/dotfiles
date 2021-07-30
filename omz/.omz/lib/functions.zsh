@@ -259,7 +259,12 @@ function nvm() {
   source $NVM/init-nvm.sh 
 }
 
-function time_zsh() {
+function ztime() {
   time zsh -i -c exit
 }
 
+function ontmux() {
+  if which tmux >/dev/null 2>&1; then
+      test -z ${TMUX} && tmux
+      fi
+    }
