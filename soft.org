@@ -78,7 +78,6 @@ filezilla # file transfer
 # auto add .pam_env  like
 # npm fast open repo
 git-open
-nemo
 # (F3 extra pane)
 # yay
 # if use kimpanel, not use this skin

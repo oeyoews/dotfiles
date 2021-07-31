@@ -2,7 +2,7 @@ function zsh_stats() {
   fc -l 1 \
     | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' \
     | grep -v "./" | sort -nr | head -20 | column -c3 -s " " -t | nl
-}
+  }
 
 function takedir() {
   mkdir -p $@ && cd ${@:$#}
@@ -16,13 +16,13 @@ function open_command() {
     darwin*)  open_cmd='open' ;;
     cygwin*)  open_cmd='cygstart' ;;
     linux*)   [[ "$(uname -r)" != *icrosoft* ]] && open_cmd='nohup xdg-open' || {
-                open_cmd='cmd.exe /c start ""'
-                [[ -e "$1" ]] && { 1="$(wslpath -w "${1:a}")" || return 1 }
-              } ;;
+      open_cmd='cmd.exe /c start ""'
+          [[ -e "$1" ]] && { 1="$(wslpath -w "${1:a}")" || return 1 }
+        } ;;
     msys*)    open_cmd='start ""' ;;
     *)        echo "Platform $OSTYPE not supported"
-              return 1
-              ;;
+      return 1
+      ;;
   esac
 
   ${=open_cmd} "$@" &>/dev/null
@@ -64,7 +64,7 @@ function take() {
 #    1 if it does not exist
 #
 function alias_value() {
-    (( $+aliases[$1] )) && echo $aliases[$1]
+  (( $+aliases[$1] )) && echo $aliases[$1]
 }
 
 #
@@ -79,7 +79,7 @@ function alias_value() {
 #    Always 0
 #
 function try_alias_value() {
-    alias_value "$1" || echo "$1"
+  alias_value "$1" || echo "$1"
 }
 
 #
@@ -92,8 +92,8 @@ function try_alias_value() {
 #    0 if the variable exists, 3 if it was set
 #
 function default() {
-    (( $+parameters[$1] )) && return 0
-    typeset -g "$1"="$2"   && return 3
+  (( $+parameters[$1] )) && return 0
+  typeset -g "$1"="$2"   && return 3
 }
 
 #
@@ -106,8 +106,8 @@ function default() {
 #    0 if the env variable exists, 3 if it was set
 #
 function env_default() {
-    [[ ${parameters[$1]} = *-export* ]] && return 0
-    export "$1=$2" && return 3
+  [[ ${parameters[$1]} = *-export* ]] && return 0
+  export "$1=$2" && return 3
 }
 
 
@@ -249,9 +249,9 @@ function pym() {
 }
 
 function 255_color() {
-for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
-  ${${(M)$((i%6)):#3}:+$'\n'}; done
-}
+  for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
+    ${${(M)$((i%6)):#3}:+$'\n'}; done
+  }
 
 function nvm() {
   export NVM=/usr/share/nvm
@@ -265,6 +265,8 @@ function ztime() {
 
 function ontmux() {
   if which tmux >/dev/null 2>&1; then
-      test -z ${TMUX} && tmux
-      fi
-    }
+    if [ -z "$TMUX" ]; then
+      tmux attach -t default || tmux new -s default
+    fi
+  fi
+}

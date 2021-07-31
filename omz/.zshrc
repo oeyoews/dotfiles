@@ -1,21 +1,17 @@
-# Date: 2021-07-20 14:38:34 
+# Date: 2021-07-20 14:38:34
 # Author: oeyoews
 
 export ZSH=~/.omz
-
-# Theme appearence
-# NOTE: plugins first , after source oh-my-zsh.sh
-plugins=( 
+plugins=(
   zsh-autosuggestions
-  sudo 
+  sudo
   zsh-syntax-highlighting
   extract
 )
-source $ZSH/oh-my-zsh.sh  
-source $ZSH/p10k/powerlevel10k.zsh-theme  
-source $ZSH/p10k-rainbow.zsh 
+source $ZSH/oh-my-zsh.sh
+source $ZSH/p10k-rainbow.zsh
 
-# auto complete
+# auto complete for autosuggest plugin
 bindkey ',' autosuggest-accept
 # Key: alt + q
 bindkey "\eq" push-line-or-edit
@@ -36,7 +32,7 @@ alias kvm='sudo virt-manager'
 # killall -9 name
 # ps -eo pid,ppid,%mem,%cpu,comm --sort=-%mem | head
 # echo $XDG_SESSION_TYPE
-# show all linkfile : ls -al | grep -- \-\> 
+# show all linkfile : ls -al | grep -- \-\>
 
  # netstat -atlunp
  # git config --global http.proxy 'socks5://127.0.0.1:1080'
@@ -44,15 +40,15 @@ alias kvm='sudo virt-manager'
  # git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 function onproxy() {
-   export https_proxy=http://127.0.0.1:8889 
-   export http_proxy=http://127.0.0.1:8889 
-   export all_proxy=socks5://127.0.0.1:8889 
+   export https_proxy=http://127.0.0.1:8889
+   export http_proxy=http://127.0.0.1:8889
+   export all_proxy=socks5://127.0.0.1:8889
    # curl cip.cc 代理后 cip.cc 访问会很慢
    curl ip.sb
  }
 
 alias offproxy="unset http_proxy https_proxy all_proxy && curl cip.cc"
-# ?
+#
 alias cip='curl cip.cc'
 alias logoutg="gnome-session-quit"
 alias opensshd='sudo systemctl restart sshd.service && systemctl status sshd.service'
@@ -65,4 +61,4 @@ alias check='shellcheck'
 # not suit split in konsole, but can creat new tab use C-S t
 
 # auto start tmux
-# ontmux
+ontmux

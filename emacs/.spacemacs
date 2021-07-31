@@ -145,7 +145,7 @@
 
    dotspacemacs-switch-to-buffer-prefers-purpose nil
 
-   dotspacemacs-loading-progress-bar nil
+   dotspacemacs-loading-progress-bar t
 
    dotspacemacs-fullscreen-at-startup nil
 
