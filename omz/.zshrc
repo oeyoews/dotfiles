@@ -27,6 +27,10 @@ alias vimhost="sudo vim /etc/hosts"
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 alias cdn='cd $NOTE/linux'
 alias og='google-chrome-stable'
+alias vimpac='sudo vim /etc/pacman.conf'
+alias vimirr='sudo vim /etc/pacman.d/mirrorlist'
+alias kvm='sudo virt-manager'
+# systemd-analyze critical-chain
 
 # ps -ef | grep/rg TIM && kill PID
 # killall -9 name

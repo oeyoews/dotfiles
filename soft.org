@@ -1,6 +1,10 @@
 cmake
 cloc # like wc
-gnome-todo
+# (note: if turn on input method panel , all fcitx skin will don't work)
+gnome-shell-extension-kimpanel
+gnome-keyring              # for vscode synchronize
+gnome-shell-extension-unite
+gpaste
 cdate
 # like ps painting
 yay gtk-theme-mackos-mojave
@@ -65,7 +69,6 @@ virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
 wechat-uos                 # wechat
 wudao-dict-git             # wudao directory
-gnome-keyring              # for vscode synchronize
 jdk8-openjdk               # jdk
 fgit                       # hub.fastgit.org
 deskreen                   # 投屏软件
@@ -75,12 +78,22 @@ filezilla # file transfer
 # auto add .pam_env  like
 # npm fast open repo
 git-open
-yay nemo
-# (note: if turn on input method panel , all fcitx skin will don't work)
-yay gnome-shell-extension-kimpanel
+nemo
 # (F3 extra pane)
 # yay
 # if use kimpanel, not use this skin
 fcitx5-material-color      # input skin
 pip install magic-wormhole
 sudo pacman -S python-pip
+# pip
+magic-wormhole netease-musicbox
+
+# gnome-extensions list
+trayIconsReloaded@selfmade.pl
+lock
+transparent-shell@siroj42.github.io
+caffeine@patapon.info
+GPaste@gnome-shell-extensions.gnome.org
+unite@hardpixel.eu
+windowsNavigator@gnome-shell-extensions.gcampax.github.com
+kimpanel@kde.org
