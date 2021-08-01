@@ -11,6 +11,9 @@
 # - cygwin (Windows running Cygwin)
 # - wl-copy, wl-paste (if $WAYLAND_DISPLAY is set)
 # - xclip (if $DISPLAY is set)
+# xclip some usage:
+# xclip -i from-copy.file
+# xclip -o to-paste.file
 # - xsel (if $DISPLAY is set)
 # - lemonade (for SSH) https://github.com/pocke/lemonade
 # - doitclient (for SSH) http://www.chiark.greenend.org.uk/~sgtatham/doit/

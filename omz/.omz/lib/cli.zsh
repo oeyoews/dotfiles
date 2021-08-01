@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+# todo learn
+
 function omz {
   [[ $# -gt 0 ]] || {
     _omz::help

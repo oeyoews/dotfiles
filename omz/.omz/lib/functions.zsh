@@ -29,6 +29,7 @@ function open_command() {
 }
 
 function takeurl() {
+  # 创建临时文件 ？
   data=$(mktemp)
   curl -L $1 > $data
   tar xf $data
@@ -242,7 +243,8 @@ function omz_urldecode {
   echo -E "$decoded"
 }
 
-# self add
+# =========  self add ================
+
 function pym() {
   ip addr | rg inet
   python -m http.server
@@ -259,17 +261,9 @@ function nvm() {
   source $NVM/init-nvm.sh 
 }
 
-function ztime() {
+function zsh-time() {
   time zsh -i -c exit
 }
-
-# function ontmux() {
-  # if which tmux >/dev/null 2>&1; then
-    # if [ -z "$TMUX" ]; then
-      # tmux attach -t default || tmux new -s default
-    # fi
-  # fi
-# }
 
 # proxy
 function onproxy() {
@@ -279,3 +273,13 @@ function onproxy() {
    # curl cip.cc 代理后 cip.cc 访问会很慢
    curl ip.sb
  }
+
+# not suit konsole
+# function ontmux() {
+  # if which tmux >/dev/null 2>&1; then
+    # if [ -z "$TMUX" ]; then
+      # tmux attach -t default || tmux new -s default
+    # fi
+  # fi
+# }
+

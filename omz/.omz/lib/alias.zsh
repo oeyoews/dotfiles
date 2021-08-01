@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 # =============
-# alias
+# self alias
 # =============
 
 alias cl='clear'
@@ -10,12 +10,13 @@ alias cp='cp -r -i'
 alias dust="dust -r"
 alias 'echo'='echo -e'
 alias ema='emacs -nw'
-alias emz='ema $HOME/.zshrc'
+alias emaz='ema $HOME/.zshrc'
 alias open='xdg-open'
-alias ping="ping -c 2"
+alias ping="ping -c 5"
 alias py='python'
 alias pacmans='time sudo pacman -S'
-alias pacmanm='sudo pacman-mirrors -m rank -c China -i' # sudo pacman-mirrors -aS unstable/testing/stable
+# sudo pacman-mirrors -aS unstable/testing/stable
+alias pacmanm='sudo pacman-mirrors -m rank -c China -i' 
 alias pacmanmu='sudo pacman-mirrors -aS  unstable -m rank -c China -i'
 alias rm='trash -i'
 alias ra='ranger'
@@ -26,14 +27,14 @@ alias mv="mv -i"
 alias mkfile='touch'
 alias ms='musicbox'
 alias fast='fastfetch| lolcat'
-alias yay='time yay'
+# alias yay='time yay'
 alias yayy="yay -Yc"
 alias yayr='yay -Rscn'
 alias halt='halt -p'
 alias his='history 100'
 alias sl='sl | lolcat'
 alias ts='trans -b'
-alias top='bpytop'
+alias btop='bpytop'
 alias jctl='journalctl -b'
 alias stime='systemd-analyze'
 alias soz='source $HOME/.zshrc'
@@ -69,3 +70,5 @@ alias og='google-chrome-stable'
 alias vimpac='sudo vim /etc/pacman.conf'
 alias vimirr='sudo vim /etc/pacman.d/mirrorlist'
 alias kvm='sudo virt-manager'
+alias sctime="systemd-analyze critical-chain"
+

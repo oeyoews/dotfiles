@@ -10,6 +10,12 @@ setopt complete_in_word
 setopt always_to_end
 
 # should this be in keybindings?
+# modify
+# auto complete for autosuggest plugin
+bindkey ',' autosuggest-accept
+# Key: alt + q
+bindkey "\eq" push-line-or-edit
+
 bindkey -M menuselect '^o' accept-and-infer-next-history
 zstyle ':completion:*:*:*:*:*' menu select
 
