@@ -11,13 +11,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source $ZSH/p10k-rainbow.zsh
 
-# auto complete for autosuggest plugin
-bindkey ',' autosuggest-accept
-# Key: alt + q
-bindkey "\eq" push-line-or-edit
-
-# systemd-analyze critical-chain
-
 # ps -ef | grep/rg TIM && kill PID
 # killall -9 name
 # ps -eo pid,ppid,%mem,%cpu,comm --sort=-%mem | head
@@ -28,5 +21,4 @@ bindkey "\eq" push-line-or-edit
  # git config --global http.proxy 'socks5://127.0.0.1:1080'
  # git config --global http.proxy 'localhost:8080'
  # git config --global https.proxy 'socks5://127.0.0.1:1080'
-
 
