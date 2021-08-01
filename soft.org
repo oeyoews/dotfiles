@@ -8,6 +8,7 @@ gpaste
 cdate
 # like ps painting
 yay gtk-theme-mackos-mojave
+gtk-theme-macos-sierra-archers-git
 krita
 clang                      # spacevim need
 libreoffice-fresh          # office

@@ -59,6 +59,3 @@ alias check='shellcheck'
 # when quitting tmux, try to attach
 # NOTE: Turn On: to comment this function fitst and last line
 # not suit split in konsole, but can creat new tab use C-S t
-
-# auto start tmux
-ontmux

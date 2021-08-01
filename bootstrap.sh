@@ -10,10 +10,7 @@ set -u # if variable is not define, show error
 # set -eu
 
 function rm_config() {
-  # NOTE: input `\` , enter directly ,can't add whitespace
-  # NOTE: last line can't add `\`
-  test -f "$PWD/log" ||  { touch "$PWD/log"; echo "touch log in ${PWD}" >> "$PWD"/log; }
-  (rm -rfv ~/.crontab.conf \
+  rm -rfv ~/.crontab.conf \
     ~/.spacemacs \
     ~/.pam_environment \
     ~/.gitconfig \
@@ -22,13 +19,13 @@ function rm_config() {
     ~/.config/Code/User/setting.json \
     ~/.config/ranger \
     ~/.omz ~/.zshrc \
-    ~/.tmux.conf) &>>"$PWD/log"
-    echo -e "$(date)" &>>"$PWD/log"
-    echo -e "Execute Time for $0 : \e[35m ${SECONDS} \e[0m seconds"
-  }
+    ~/.tmux.conf 
+
+  echo -e "Execute Time for $0 : \e[35m $SECONDS \e[0m seconds"
+}
 
 function stow_first() {
-  stow crontab_load emacs git_config ideavimrc npmirror tmux omz
+  # stow crontab_load emacs git_config ideavimrc npmirror tmux omz
   echo -e "\e[32msuccess for stow\e[0m"
 }
 

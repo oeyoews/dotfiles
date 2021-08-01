@@ -6,9 +6,6 @@
 
 alias cl='clear'
 alias cdt="cd $HOME/temp"
-alias cd-='cd -'
-alias cdh="cd ~"
-alias 'cd..'="cd .."
 alias cp='cp -r -i'
 alias dust="dust -r"
 alias 'echo'='echo -e'
