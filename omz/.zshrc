@@ -22,3 +22,4 @@ source $ZSH/p10k-rainbow.zsh
  # git config --global http.proxy 'localhost:8080'
  # git config --global https.proxy 'socks5://127.0.0.1:1080'
 
+ alias google="google-chrome-stable"
