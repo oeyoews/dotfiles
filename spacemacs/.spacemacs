@@ -8,15 +8,14 @@
 
    ;; some layer
    dotspacemacs-configuration-layers
-   '(;; need comment .emacs.d/
-
-     org
+   '(org
      ivy
      syntax-checking
      auto-completion
      neotree
      better-defaults
      emacs-lisp
+     ;; c-c++
      lsp
      markdown
      ;; bottom shell like terminal
@@ -216,7 +215,8 @@
   ;; change repo's source
   (setq configuration-layer-elpa-archives
         '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-          ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+          ;; ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+          ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
   ;; remove cl warnings, unless modify emacs source code, because cl move to cl-lib
