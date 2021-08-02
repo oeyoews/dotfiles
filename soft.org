@@ -1,3 +1,5 @@
+* Software
+flameshot
 cmake
 cloc # like wc
 # (note: if turn on input method panel , all fcitx skin will don't work)
@@ -39,8 +41,8 @@ fastfetch
 lolcat
 # ls -al | xclip
 # 防火墙
-gufw 
-xclip 
+gufw
+xclip
 # pacman
 base-devel
 # grep enhanced, like grep
