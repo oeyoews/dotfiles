@@ -39,3 +39,5 @@ source $ZSH/p10k-rainbow.zsh
  # prtsc = screenshot
  # shift + tab = switch input method
  # super + G = open google-chrome-stable
+ #
+ # sudoedit = sudo -e / calling user

@@ -7,7 +7,7 @@
 
    ;; some layer
    dotspacemacs-configuration-layers
-   '(
+   '(vimscript
      org
      deft
      ;; chinese
@@ -22,7 +22,7 @@
      ;; markdown
      ;; bottom shell like terminal
      (shell :variables
-            shell-default-shell 'eshell
+            shell-default-term-shell "/bin/bash"
             shell-default-height 50
             shell-default-position 'bottom
             )
@@ -260,7 +260,7 @@
   (add-hook 'emacs-startup-hook
             (lambda ()
               (message "Startup Time: %s"
-               ;; "Emacs ready in %s with %d garbage collections."
+                       ;; "Emacs ready in %s with %d garbage collections."
                        (format "%.2f seconds"
                                (float-time
                                 (time-subtract after-init-time before-init-time)))
@@ -390,7 +390,10 @@
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces)))
 
-
+;; fastly insert time
+(defun now ()
+  (interactive)
+  ( insert (current-time-string)))
 
 
 ;; self evil
