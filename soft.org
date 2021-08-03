@@ -99,3 +99,6 @@ GPaste@gnome-shell-extensions.gnome.org
 unite@hardpixel.eu
 windowsNavigator@gnome-shell-extensions.gcampax.github.com
 kimpanel@kde.org
+
+# start: mocp
+moc

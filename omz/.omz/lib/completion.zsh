@@ -10,7 +10,7 @@ setopt complete_in_word
 setopt always_to_end
 
 # should this be in keybindings?
-# modify
+# modify complete
 # auto complete for autosuggest plugin
 bindkey ',' autosuggest-accept
 # Key: alt + q

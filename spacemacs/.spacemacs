@@ -1,4 +1,3 @@
-;;; self config for spacemacs
 (defun dotspacemacs/layers ()
 
   (setq-default
@@ -17,7 +16,7 @@
      emacs-lisp
      ;; c-c++
      lsp
-     markdown
+     ;; markdown
      ;; bottom shell like terminal
      (shell :variables
             shell-default-height 40
@@ -25,6 +24,7 @@
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
+                                      ;; benchmark-init
                                       ;; left gutter
                                       git-gutter
                                       ;; ivy icons
@@ -59,12 +59,13 @@
    ;; a package repo
    dotspacemacs-verify-spacelpa-archives t
 
-   dotspacemacs-elpa-subdirectory 'emacs-version
+   ;; dotspacemacs-elpa-subdirectory 'emacs-version
 
    ;; mode: hybrid vim emacs
    dotspacemacs-editing-style 'hybrid
 
-   dotspacemacs-startup-banner 'official
+   ;; dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner nil
 
    dotspacemacs-startup-lists '((recents . 5)
                                 (todos)
@@ -74,7 +75,7 @@
    dotspacemacs-startup-buffer-responsive t
 
    ;; list use numbers in homepage
-   dotspacemacs-show-startup-list-numbers t
+   dotspacemacs-show-startup-list-numbers nil
 
    ;; The minimum delay in seconds between number key presses. (default 0.4)
    dotspacemacs-startup-buffer-multi-digit-delay 0.4
@@ -138,9 +139,9 @@
    dotspacemacs-switch-to-buffer-prefers-purpose t
 
    ;; load process bar in the buttom
-   dotspacemacs-loading-progress-bar t
+   dotspacemacs-loading-progress-bar nil
 
-   ;; fullscreen in startup time
+   ;; fullscreen in startup
    dotspacemacs-fullscreen-at-startup nil
 
    ;; remove title bar
@@ -165,9 +166,11 @@
 
    ;; scroll smoothly
    dotspacemacs-smooth-scrolling t
+
+   ;; show scroll bar
    dotspacemacs-scroll-bar-while-scrolling nil
 
-   ;; relative line number
+   ;; show relative line number
    dotspacemacs-line-numbers 'relative
 
    dotspacemacs-folding-method 'evil
@@ -179,7 +182,8 @@
    dotspacemacs-smart-closing-parenthesis t
 
    ;; highlight delimiters
-   dotspacemacs-highlight-delimiters 'all
+   ;; 'all or nil, default is nil
+   dotspacemacs-highlight-delimiters nil
 
    ;; relate server
    dotspacemacs-enable-server t
@@ -212,7 +216,7 @@
 
 (defun dotspacemacs/user-init ()
 
-  ;; change repo's source
+  ;; change emacs repo's source
   (setq configuration-layer-elpa-archives
         '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
           ;; ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
@@ -226,14 +230,7 @@
   (setq auto-window-vscroll nil)
 
   ;; (setq x-select-enable-primary t)
-  ;; add analyse in buffer
-  (add-hook 'emacs-startup-hook
-            (lambda ()
-              (message "Emacs ready in %s with %d garbage collections."
-                       (format "%.2f seconds"
-                               (float-time
-                                (time-subtract after-init-time before-init-time)))
-                       gcs-done)))
+
 
   ;; fix layer's error: spell-checking
   (setq ispell-extra-args '("--lang=en_US"))
@@ -247,6 +244,17 @@
 
   ;; quickly garbage to solve.
   (setq gc-cons-threshold (* 50 1000 1000))
+
+  ;; add analyse in minbuffer
+  (add-hook 'emacs-startup-hook
+            (lambda ()
+              (message "Startup Time: %s"
+               ;; "Emacs ready in %s with %d garbage collections."
+                       (format "%.2f seconds"
+                               (float-time
+                                (time-subtract after-init-time before-init-time)))
+                       gcs-done)))
+
 
 
   "Initialization for user code:
@@ -264,6 +272,9 @@
 
 
 (defun dotspacemacs/user-config ()
+
+  ;; warning level
+  ;; (setq warning-minimum-level :emergency)
 
   ;; completion auto global
   (global-company-mode)
@@ -333,7 +344,36 @@
 
 
 
-
+;; self evil
+(defun evilified-state--evilify-event (map map-symbol evil-map event evil-value
+                                           &optional processed pending-funcs)
+  "Evilify EVENT in MAP and return a list of PROCESSED events."
+  (if (and event (or evil-value pending-funcs))
+      (let* ((kbd-event (kbd (single-key-description event)))
+             (map-value (lookup-key map kbd-event))
+             (evil-value (or evil-value
+                             (lookup-key evil-map kbd-event)
+                             (car (pop pending-funcs)))))
+        (when evil-value
+          (evil-define-key 'evilified map kbd-event evil-value))
+        (when map-value
+          (add-to-list 'pending-funcs (cons map-value event) 'append))
+        (push event processed)
+        (setq processed (evilified-state--evilify-event
+                         map map-symbol evil-map
+                         (evilified-state--find-new-event event) nil
+                         processed pending-funcs)))
+    (when pending-funcs
+      ;; (spacemacs-buffer/warning
+      (message
+       (concat (format (concat "Auto-evilication could not remap these "
+                               "functions in map `%s':\n")
+                       map-symbol)
+               (mapconcat (lambda (x)
+                            (format "   - `%s' originally mapped on `%s'"
+                                    (car x) (single-key-description (cdr x))))
+                          pending-funcs "\n")))))
+  processed)
 
 
 

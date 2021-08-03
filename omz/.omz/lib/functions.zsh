@@ -255,7 +255,7 @@ function 255_color() {
     ${${(M)$((i%6)):#3}:+$'\n'}; done
   }
 
-function nvm() {
+function onvm() {
   export NVM=/usr/share/nvm
   export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
   source $NVM/init-nvm.sh 
