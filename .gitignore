@@ -1,3 +1,4 @@
 *.zwc
 log
 cache
+.spacemacs.env

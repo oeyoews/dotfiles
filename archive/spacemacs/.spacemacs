@@ -7,7 +7,10 @@
 
    ;; some layer
    dotspacemacs-configuration-layers
-   '(org
+   '(
+     ;; (org :variables org-projectiles "~/.org")
+     org
+     deft
      ivy
      syntax-checking
      auto-completion
@@ -59,16 +62,18 @@
    ;; a package repo
    dotspacemacs-verify-spacelpa-archives t
 
-   ;; dotspacemacs-elpa-subdirectory 'emacs-version
+   ;;为每个 Emacs 版本定义不同的目录
+   dotspacemacs-elpa-subdirectory 'emacs-version
 
    ;; mode: hybrid vim emacs
    dotspacemacs-editing-style 'hybrid
 
-   ;; dotspacemacs-startup-banner 'official
+   ;; 'official or nil
    dotspacemacs-startup-banner nil
 
    dotspacemacs-startup-lists '((recents . 5)
                                 (todos)
+                                (agenda)
                                 (projects . 5))
 
    ;; True if the home buffer should respond to resize events. (default t)
@@ -271,13 +276,19 @@
   dump.")
 
 
+;; @oeyoews
 (defun dotspacemacs/user-config ()
+
+  ;; deft
+  ( setq deft-extensions ' ( "org"  "md"  "txt" ) )
+  ;; file  folder
+  ( setq deft-directory "~/.deft" )
 
   ;; warning level
   ;; (setq warning-minimum-level :emergency)
 
   ;; completion auto global
-  (global-company-mode)
+  ;; (global-company-mode)
 
   ;; Trigger completion immediately.
   (setq company-idle-delay 0.1)

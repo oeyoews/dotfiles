@@ -29,12 +29,13 @@ source $ZSH/p10k-rainbow.zsh
  # git config --global https.proxy 'socks5://127.0.0.1:1080'
 
  alias google="google-chrome-stable"
- # vim --startuptime start.log xxx.py 
+ # vim --startuptime start.log xxx.py
  # nvme-cli smart-log /dev/nvme01
  # nvme list
- 
+
  # gnome 40 shortcuts
  # super + w = shutdown current window
  # super + m = start music client
  # prtsc = screenshot
  # shift + tab = switch input method
+ # super + G = open google-chrome-stable
