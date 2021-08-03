@@ -8,9 +8,9 @@
    ;; some layer
    dotspacemacs-configuration-layers
    '(
-     ;; (org :variables org-projectiles "~/.org")
      org
      deft
+     ;; chinese
      ivy
      syntax-checking
      auto-completion
@@ -22,11 +22,15 @@
      ;; markdown
      ;; bottom shell like terminal
      (shell :variables
-            shell-default-height 40
-            shell-default-position 'bottom))
+            shell-default-shell 'eshell
+            shell-default-height 50
+            shell-default-position 'bottom
+            )
+     )
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
+                                      ivy-posframe
                                       ;; benchmark-init
                                       ;; left gutter
                                       git-gutter
@@ -68,19 +72,24 @@
    ;; mode: hybrid vim emacs
    dotspacemacs-editing-style 'hybrid
 
-   ;; 'official or nil
-   dotspacemacs-startup-banner nil
+   ;; disable show version
+   dotspacemacs-startup-buffer-show-version nil
 
-   dotspacemacs-startup-lists '((recents . 5)
-                                (todos)
-                                (agenda)
-                                (projects . 5))
+   ;; 'official or nil
+   ;; show banner
+   dotspacemacs-startup-banner 'random
+
+   ;; show recents file
+   dotspacemacs-startup-lists '((recents . 3)
+                                ;; (todos)
+                                ;; (agenda)
+                                (projects . 2))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
 
    ;; list use numbers in homepage
-   dotspacemacs-show-startup-list-numbers nil
+   dotspacemacs-show-startup-list-numbers t
 
    ;; The minimum delay in seconds between number key presses. (default 0.4)
    dotspacemacs-startup-buffer-multi-digit-delay 0.4
@@ -97,7 +106,8 @@
    dotspacemacs-themes '(spacemacs-dark)
 
    ;; dash status: vim-powerline doom spacemacs
-   dotspacemacs-mode-line-theme '(vim-powerline  :separator wave :separator-scale 1.5)
+   ;; dotspacemacs-mode-line-theme '(vim-powerline  :separator wave :separator-scale 1.2)
+   dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.5)
 
    ;; 根据光标状态显示颜色
    dotspacemacs-colorize-cursor-according-to-state t
@@ -159,8 +169,8 @@
    dotspacemacs-undecorated-at-startup t
 
    ;; transparency settings in active and inactive
-   dotspacemacs-active-transparency 80
-   dotspacemacs-inactive-transparency 80
+   dotspacemacs-active-transparency 100
+   dotspacemacs-inactive-transparency 100
 
    ;; transient settings
    dotspacemacs-show-transient-state-title nil
@@ -186,9 +196,9 @@
 
    dotspacemacs-smart-closing-parenthesis t
 
-   ;; highlight delimiters
+   ;; highlight delimiters(brackers)
    ;; 'all or nil, default is nil
-   dotspacemacs-highlight-delimiters nil
+   dotspacemacs-highlight-delimiters 'all
 
    ;; relate server
    dotspacemacs-enable-server t
@@ -236,16 +246,12 @@
 
   ;; (setq x-select-enable-primary t)
 
-
   ;; fix layer's error: spell-checking
   (setq ispell-extra-args '("--lang=en_US"))
 
   ;; auto link link_file
   (setq vc-follow-symlinks t)
 
-  ;; neotree settings
-  (setq neo-theme 'icons)
-  (setq neo-vc-integration ' (face) )
 
   ;; quickly garbage to solve.
   (setq gc-cons-threshold (* 50 1000 1000))
@@ -279,8 +285,23 @@
 ;; @oeyoews
 (defun dotspacemacs/user-config ()
 
-  ;; deft
+  ;; space t l
+  (spacemacs/toggle-truncate-lines-on)
+  ;; Visual line navigation for textual modes
+  (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
+
+  ;; neotree settings
+  (setq neo-theme 'icons)
+  (setq neo-vc-integration ' (face) )
+
+  ;; exit spacemacs homepage
+  ;; not recommend ,can't to open file directly
+  ;; (quit-window)
+
+
+  ;; deft plugin for org md txt
   ( setq deft-extensions ' ( "org"  "md"  "txt" ) )
+
   ;; file  folder
   ( setq deft-directory "~/.deft" )
 
@@ -306,11 +327,9 @@
   (use-package all-the-icons-ivy-rich
     :ensure t
     :init (all-the-icons-ivy-rich-mode 1))
-
   (use-package ivy-rich
     :ensure t
     :init (ivy-rich-mode 1))
-
   ;; The icon size
   (setq all-the-icons-ivy-rich-icon-size 1.0)
   ;; Definitions for ivy-rich transformers.
@@ -322,6 +341,25 @@
   (set-face-attribute 'nobreak-space nil
                       :background nil
                       :underline nil)
+
+  ;; ivy extensions postframe
+  ;; need add aditional packages first
+  (use-package ivy-posframe
+    :init
+    (setq ivy-posframe-display-functions-alist
+          '(
+            ;; (swiper          . ivy-posframe-display-at-frame-center)
+            ;; (complete-symbol . ivy-posframe-display-at-frame-center)
+            ;; (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+            (t               . ivy-posframe-display-at-frame-center))))
+
+  ;; show border
+  ;; (setq ivy-posframe-parameters
+  ;;       '((left-fringe . 8)
+  ;;         (right-fringe . 8)))
+
+  ;; enable ivy-postframe
+  (ivy-posframe-mode 1)
 
   ;; Slow Rendering
   ;; If you experience a slow down in performance when rendering multiple icons simultaneously,
