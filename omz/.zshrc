@@ -1,6 +1,8 @@
 # Date: 2021-07-20 14:38:34
 # Author: oeyoews
-
+#
+# zprof analyse statup tim for zsh
+zmodload zsh/zprof
 export ZSH=~/.omz
 plugins=(
   zsh-autosuggestions
@@ -28,7 +30,7 @@ source $ZSH/p10k-rainbow.zsh
  # git config --global http.proxy 'localhost:8080'
  # git config --global https.proxy 'socks5://127.0.0.1:1080'
 
- alias google="google-chrome-stable"
+ # less use
  # vim --startuptime start.log xxx.py
  # nvme-cli smart-log /dev/nvme01
  # nvme list
@@ -41,3 +43,12 @@ source $ZSH/p10k-rainbow.zsh
  # super + G = open google-chrome-stable
  #
  # sudoedit = sudo -e / calling user
+ 
+export ALTERNATE_EDITOR="" 
+export EDITOR="emacsclient -t"                  # $EDITOR opens in terminal
+export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
+alias emacs="emacsclient  -c -q -n"
+alias ema="emacsclient -t"
+
+# disable secure check for compfix.zsh oh-my-zsh.sh
+export ZSH_DISABLE_COMPFIX="true"

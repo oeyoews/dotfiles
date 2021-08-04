@@ -5,7 +5,7 @@
 # Author: @oeyoew
 
 # if exit status is nil, exit
-set -e
+# set -e
 
 function repo() {
     git add . 
@@ -15,9 +15,9 @@ function repo() {
 }
 
 function main() {
-  cd ~/src/note || exit
-  repo
   cd ~/dotfiles || exit
+  repo
+  cd ~/src/note || exit
   repo
   echo $SECONDS
 }

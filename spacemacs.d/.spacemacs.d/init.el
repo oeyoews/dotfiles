@@ -7,6 +7,7 @@
 
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
+   ;; ? differert add-list
    dotspacemacs-configuration-layer-path '()
 
    ;; some layer
@@ -204,11 +205,10 @@
    dotspacemacs-highlight-delimiters 'all
 
    ;; relate server
-   dotspacemacs-enable-server t
+   dotspacemacs-enable-server nil
    dotspacemacs-server-socket-dir nil
 
    ;; even quit emacs. the emacs server still active
-   ;; but use space q q , it will kill emacs server
    dotspacemacs-persistent-server t
 
    ;; search tools
@@ -295,9 +295,9 @@
   (nyan-mode 1)
 
   ;; space t l
-  (spacemacs/toggle-truncate-lines-on)
+  ;; (spacemacs/toggle-truncate-lines-on)
   ;; Visual line navigation for textual modes
-  (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
+  ;; (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
 
   ;; neotree settings
   (setq neo-theme 'icons)
@@ -404,6 +404,23 @@
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces)))
 
+;; eaf
+; (use-package eaf
+  ; :load-path "~/.spacemacs.d/eaf" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
+  ; :init
+  ; (use-package epc :defer t :ensure t)
+  ; (use-package ctable :defer t :ensure t)
+  ; (use-package deferred :defer t :ensure t)
+  ; (use-package s :defer t :ensure t)
+  ; :custom
+  ; (eaf-browser-continue-where-left-off t)
+  ; :config
+  ; (setq eaf-browser-enable-adblocker t)
+  ; (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+  ; (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+  ; (eaf-bind-key take_photo "p" eaf-camera-keybinding)
+  ; (eaf-bind-key nil "M-q" eaf-browser-keybinding)) ;; unbind, see more in the Wiki
+
 ;; fastly insert time
 (defun now ()
   (interactive)
@@ -488,24 +505,24 @@
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-  (custom-set-variables
-   ;; custom-set-variables was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(evil-want-Y-yank-to-eol nil)
-   '(package-selected-packages
-     '(dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(evil-goggles-change-face ((t (:inherit diff-removed))))
-   '(evil-goggles-delete-face ((t (:inherit diff-removed))))
-   '(evil-goggles-paste-face ((t (:inherit diff-added))))
-   '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
-   '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
-   '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
-   '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
-  )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-want-Y-yank-to-eol nil)
+ '(package-selected-packages
+   '(zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-goggles-change-face ((t (:inherit diff-removed))))
+ '(evil-goggles-delete-face ((t (:inherit diff-removed))))
+ '(evil-goggles-paste-face ((t (:inherit diff-added))))
+ '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
+ '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
+ '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
+ '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
+)

@@ -76,17 +76,15 @@ if ! command grep -q -Fx "$zcompdump_revision" "$ZSH_COMPDUMP" 2>/dev/null \
   zcompdump_refresh=1
 fi
 
+# true @oeyoews speed up zsh startup time
 if [[ $ZSH_DISABLE_COMPFIX != true ]]; then
   source $ZSH/lib/compfix.zsh
-  # If completion insecurities exist, warn the user
   handle_completion_insecurities
-  # Load only from secure directories
   compinit -i -C -d "${ZSH_COMPDUMP}"
 else
-  # If the user wants it, load from all found directories
   compinit -u -C -d "${ZSH_COMPDUMP}"
 fi
-
+#
 # Append zcompdump metadata if missing
 if (( $zcompdump_refresh )); then
   # Use `tee` in case the $ZSH_COMPDUMP filename is invalid, to silence the error
