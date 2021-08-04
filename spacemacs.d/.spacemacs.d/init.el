@@ -8,41 +8,29 @@
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
    dotspacemacs-configuration-layer-path '()
 
-   ;; some layer
+   ;; layers
    dotspacemacs-configuration-layers
    '(vimscript
      org
      deft
-     ;; chinese
      ivy
      syntax-checking
      auto-completion
      neotree
      better-defaults
      emacs-lisp
-     ;; themes-megapack
-     c-c++
-     lsp
-     markdown
      (shell :variables
             shell-default-term-shell "/bin/bash"
-            shell-default-height 50
-            shell-default-position 'bottom
-            )
-     )
+            shell-default-height 40
+            shell-default-position 'bottom))
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
-                                      ivy-posframe
-                                      nyan-mode
-                                      ;; benchmark-init
                                       git-gutter
                                       all-the-icons-ivy-rich)
 
-   ;; frozen packages
    dotspacemacs-frozen-packages '()
 
-   ;; 消除开始波浪字符, 排除包vim-tilde-fringe
    dotspacemacs-excluded-packages '(vi-tilde-fringe)
 
    ;; install packages just used
@@ -183,8 +171,7 @@
    ;; mode-line support unicode
    dotspacemacs-mode-line-unicode-symbols t
 
-   ;; scroll smoothly cursor center
-   dotspacemacs-smooth-scrolling nil
+   dotspacemacs-smooth-scrolling t
 
    ;; show scroll bar
    dotspacemacs-scroll-bar-while-scrolling nil
@@ -200,8 +187,6 @@
 
    dotspacemacs-smart-closing-parenthesis t
 
-   ;; highlight delimiters(brackers)
-   ;; 'all or nil, default is nil
    dotspacemacs-highlight-delimiters 'all
 
    ;; relate server
@@ -215,10 +200,7 @@
    dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
 
    dotspacemacs-show-trailing-whitespace t
-
-   ;; clean whitespace in save
    dotspacemacs-whitespace-cleanup `trailing
-
    dotspacemacs-use-clean-aindent-mode t
 
    ;; close swap number
@@ -226,7 +208,7 @@
 
    dotspacemacs-zone-out-when-idle nil
 
-   dotspacemacs-pretty-docs t
+   dotspacemacs-pretty-docs nil
 
    dotspacemacs-home-shorten-agenda-source t
 
@@ -240,7 +222,6 @@
   ;; change emacs repo's source
   (setq configuration-layer-elpa-archives
         '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-          ;; ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
           ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
           ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
@@ -288,16 +269,8 @@
   dump.")
 
 
-;; @oeyoews
+;; oeyoews
 (defun dotspacemacs/user-config ()
-
-  ;; rainbow cat (nyan-cat)
-  (nyan-mode 1)
-
-  ;; space t l
-  (spacemacs/toggle-truncate-lines-on)
-  ;; Visual line navigation for textual modes
-  (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
 
   ;; neotree settings
   (setq neo-theme 'icons)
@@ -336,11 +309,7 @@
   ;; Definitions for ivy-rich transformers. ;; ?
   all-the-icons-ivy-rich-display-transformers-list
 
-  ;; ibuffer icon
-  ;; (use-package all-the-icons-ibuffer
-  ;;   :ensure t
-  ;;   :init (all-the-icons-ibuffer-mode 1))
-
+  ;; translate
   (use-package english-teacher
     :load-path "~/.spacemacs.d/english-teacher.el/"
     :hook ((Info-mode
@@ -353,27 +322,9 @@
   ;; show translate in minbuffer
   (setq english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
 
-  ;; special symbols 消除短横线
   (set-face-attribute 'nobreak-space nil
                       :background nil
                       :underline nil)
-
-  ;; ivy extensions postframe
-  ;; need add aditional packages first
-  (use-package ivy-posframe
-    :init
-    (setq ivy-posframe-display-functions-alist
-          '(
-            ;; (swiper          . ivy-posframe-display-at-frame-center)
-            ;; (complete-symbol . ivy-posframe-display-at-frame-center)
-            ;; (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
-            (t               . ivy-posframe-display-at-frame-center))))
-  ;; show border
-  ;; (setq ivy-posframe-parameters
-  ;;       '((left-fringe . 8)
-  ;;         (right-fringe . 8)))
-  ;; enable ivy-postframe
-  (ivy-posframe-mode 1)
 
   ;; Slow Rendering
   ;; If you experience a slow down in performance when rendering multiple icons simultaneously,

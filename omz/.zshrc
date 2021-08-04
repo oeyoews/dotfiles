@@ -4,6 +4,9 @@
 # zprof analyse statup tim for zsh
 zmodload zsh/zprof
 
+# disable secure check for compfix.zsh oh-my-zsh.sh
+export ZSH_DISABLE_COMPFIX="true"
+
 export ZSH=~/.omz
 plugins=(
   zsh-autosuggestions
@@ -45,11 +48,10 @@ source $ZSH/p10k-rainbow.zsh
  #
  # sudoedit = sudo -e / calling user
 
-export ALTERNATE_EDITOR=""
-export EDITOR="emacsclient -t "                  # $EDITOR opens in terminal
-export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
-alias emacs="emacsclient  -c -q -n"
-alias ema="emacsclient -t"
+# export ALTERNATE_EDITOR=""
+# export EDITOR="emacsclient -t "                  # $EDITOR opens in terminal
+# export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
+#
+# alias emacs="emacsclient  -c -q -n"
+# alias ema="emacsclient -t"
 
-# disable secure check for compfix.zsh oh-my-zsh.sh
-export ZSH_DISABLE_COMPFIX="true"
