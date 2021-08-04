@@ -5,9 +5,7 @@
    dotspacemacs-enable-lazy-installation 'unused
    dotspacemacs-ask-for-lazy-installation t
 
-   ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   ;; ? differert add-list
    dotspacemacs-configuration-layer-path '()
 
    ;; some layer
@@ -22,10 +20,10 @@
      neotree
      better-defaults
      emacs-lisp
-     ;; c-c++
+     ;; themes-megapack
+     c-c++
      lsp
-     ;; markdown
-     ;; bottom shell like terminal
+     markdown
      (shell :variables
             shell-default-term-shell "/bin/bash"
             shell-default-height 50
@@ -107,20 +105,22 @@
    dotspacemacs-scratch-buffer-persistent nil
 
    ;; spacemacs theme
-   dotspacemacs-themes '(spacemacs-dark)
+   dotspacemacs-themes '(doom-one
+                         ;; spacemacs-dark
+                         )
 
    ;; dash status: vim-powerline doom spacemacs
    ;; dotspacemacs-mode-line-theme '(vim-powerline  :separator wave :separator-scale 1.2)
-   dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.3)
 
    ;; 根据光标状态显示颜色
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; font settings
    dotspacemacs-default-font '("Source Code Variable"
-                               :size 14.0
-                               :weight Regular
-                               :width normal)
+                                                :size 14.0
+                                                :weight normal
+                                                :width normal)
 
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-command-key "SPC"
@@ -295,9 +295,9 @@
   (nyan-mode 1)
 
   ;; space t l
-  ;; (spacemacs/toggle-truncate-lines-on)
+  (spacemacs/toggle-truncate-lines-on)
   ;; Visual line navigation for textual modes
-  ;; (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
+  (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
 
   ;; neotree settings
   (setq neo-theme 'icons)
@@ -311,7 +311,7 @@
                   deft-extensions '("md" "org")))
 
   ;; completion auto global
-  ;; (global-company-mode)
+  (global-company-mode)
 
   ;; Trigger completion immediately.
   (setq company-idle-delay 0.1)
@@ -405,21 +405,21 @@
     (evil-goggles-use-diff-faces)))
 
 ;; eaf
-; (use-package eaf
-  ; :load-path "~/.spacemacs.d/eaf" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
-  ; :init
-  ; (use-package epc :defer t :ensure t)
-  ; (use-package ctable :defer t :ensure t)
-  ; (use-package deferred :defer t :ensure t)
-  ; (use-package s :defer t :ensure t)
-  ; :custom
-  ; (eaf-browser-continue-where-left-off t)
-  ; :config
-  ; (setq eaf-browser-enable-adblocker t)
-  ; (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-  ; (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-  ; (eaf-bind-key take_photo "p" eaf-camera-keybinding)
-  ; (eaf-bind-key nil "M-q" eaf-browser-keybinding)) ;; unbind, see more in the Wiki
+                                        ; (use-package eaf
+                                        ; :load-path "~/.spacemacs.d/eaf" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
+                                        ; :init
+                                        ; (use-package epc :defer t :ensure t)
+                                        ; (use-package ctable :defer t :ensure t)
+                                        ; (use-package deferred :defer t :ensure t)
+                                        ; (use-package s :defer t :ensure t)
+                                        ; :custom
+                                        ; (eaf-browser-continue-where-left-off t)
+                                        ; :config
+                                        ; (setq eaf-browser-enable-adblocker t)
+                                        ; (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
+                                        ; (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
+                                        ; (eaf-bind-key take_photo "p" eaf-camera-keybinding)
+                                        ; (eaf-bind-key nil "M-q" eaf-browser-keybinding)) ;; unbind, see more in the Wiki
 
 ;; fastly insert time
 (defun now ()
@@ -505,24 +505,26 @@
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(evil-want-Y-yank-to-eol nil)
- '(package-selected-packages
-   '(zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(evil-goggles-change-face ((t (:inherit diff-removed))))
- '(evil-goggles-delete-face ((t (:inherit diff-removed))))
- '(evil-goggles-paste-face ((t (:inherit diff-added))))
- '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
- '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
- '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
- '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
-)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(custom-safe-themes
+     '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
+   '(evil-want-Y-yank-to-eol nil)
+   '(package-selected-packages
+     '(ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(evil-goggles-change-face ((t (:inherit diff-removed))))
+   '(evil-goggles-delete-face ((t (:inherit diff-removed))))
+   '(evil-goggles-paste-face ((t (:inherit diff-added))))
+   '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
+   '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
+   '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
+   '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
+  )
