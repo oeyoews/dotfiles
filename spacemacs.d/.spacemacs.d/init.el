@@ -5,6 +5,10 @@
    dotspacemacs-enable-lazy-installation 'unused
    dotspacemacs-ask-for-lazy-installation t
 
+   ;; List of additional paths where to look for configuration layers.
+   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
+   dotspacemacs-configuration-layer-path '()
+
    ;; some layer
    dotspacemacs-configuration-layers
    '(vimscript
@@ -31,10 +35,9 @@
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
                                       ivy-posframe
+                                      nyan-mode
                                       ;; benchmark-init
-                                      ;; left gutter
                                       git-gutter
-                                      ;; ivy icons
                                       all-the-icons-ivy-rich)
 
    ;; frozen packages
@@ -169,8 +172,8 @@
    dotspacemacs-undecorated-at-startup t
 
    ;; transparency settings in active and inactive
-   dotspacemacs-active-transparency 100
-   dotspacemacs-inactive-transparency 100
+   dotspacemacs-active-transparency 80
+   dotspacemacs-inactive-transparency 80
 
    ;; transient settings
    dotspacemacs-show-transient-state-title nil
@@ -179,8 +182,8 @@
    ;; mode-line support unicode
    dotspacemacs-mode-line-unicode-symbols t
 
-   ;; scroll smoothly
-   dotspacemacs-smooth-scrolling t
+   ;; scroll smoothly cursor center
+   dotspacemacs-smooth-scrolling nil
 
    ;; show scroll bar
    dotspacemacs-scroll-bar-while-scrolling nil
@@ -203,6 +206,9 @@
    ;; relate server
    dotspacemacs-enable-server t
    dotspacemacs-server-socket-dir nil
+
+   ;; even quit emacs. the emacs server still active
+   ;; but use space q q , it will kill emacs server
    dotspacemacs-persistent-server t
 
    ;; search tools
@@ -285,6 +291,9 @@
 ;; @oeyoews
 (defun dotspacemacs/user-config ()
 
+  ;; rainbow cat (nyan-cat)
+  (nyan-mode 1)
+
   ;; space t l
   (spacemacs/toggle-truncate-lines-on)
   ;; Visual line navigation for textual modes
@@ -294,19 +303,12 @@
   (setq neo-theme 'icons)
   (setq neo-vc-integration ' (face) )
 
-  ;; exit spacemacs homepage
-  ;; not recommend ,can't to open file directly
-  ;; (quit-window)
-
-
-  ;; deft plugin for org md txt
-  ( setq deft-extensions ' ( "org"  "md"  "txt" ) )
-
-  ;; file  folder
-  ( setq deft-directory "~/.deft" )
-
-  ;; warning level
-  ;; (setq warning-minimum-level :emergency)
+  ;; deft
+  (use-package deft
+    :bind ("<f8>" . deft)
+    :commands (deft)
+    :config (setq deft-directory "~/.deft/"
+                  deft-extensions '("md" "org")))
 
   ;; completion auto global
   ;; (global-company-mode)
@@ -323,19 +325,33 @@
   ;; add git-gutter settings
   (global-git-gutter-mode +1)
 
-  ;; ivy settings
+  ;; ivy icon settings
   (use-package all-the-icons-ivy-rich
     :ensure t
     :init (all-the-icons-ivy-rich-mode 1))
   (use-package ivy-rich
     :ensure t
     :init (ivy-rich-mode 1))
-  ;; The icon size
   (setq all-the-icons-ivy-rich-icon-size 1.0)
-  ;; Definitions for ivy-rich transformers.
-  ;; See `ivy-rich-display-transformers-list' for details."
-  ;; ?
+  ;; Definitions for ivy-rich transformers. ;; ?
   all-the-icons-ivy-rich-display-transformers-list
+
+  ;; ibuffer icon
+  ;; (use-package all-the-icons-ibuffer
+  ;;   :ensure t
+  ;;   :init (all-the-icons-ibuffer-mode 1))
+
+  (use-package english-teacher
+    :load-path "~/.spacemacs.d/english-teacher.el/"
+    :hook ((Info-mode
+            elfeed-show-mode
+            eww-mode
+            Man-mode
+            Woman-Mode) . english-teacher-follow-mode))
+  (setq english-teacher-backend 'google)
+
+  ;; show translate in minbuffer
+  (setq english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
 
   ;; special symbols 消除短横线
   (set-face-attribute 'nobreak-space nil
@@ -352,12 +368,10 @@
             ;; (complete-symbol . ivy-posframe-display-at-frame-center)
             ;; (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
             (t               . ivy-posframe-display-at-frame-center))))
-
   ;; show border
   ;; (setq ivy-posframe-parameters
   ;;       '((left-fringe . 8)
   ;;         (right-fringe . 8)))
-
   ;; enable ivy-postframe
   (ivy-posframe-mode 1)
 
@@ -395,6 +409,11 @@
   (interactive)
   ( insert (current-time-string)))
 
+;; org config
+(with-eval-after-load 'org
+  ;; in startup , fold all heading auto
+  (setq org-startup-folded t)
+  )
 
 ;; self evil
 (defun evilified-state--evilify-event (map map-symbol evil-map event evil-value
