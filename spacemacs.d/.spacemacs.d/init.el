@@ -2,7 +2,7 @@
 
   (setq-default
    dotspacemacs-distribution 'spacemacs
-   dotspacemacs-enable-lazy-installation 'unused
+  dotspacemacs-enable-lazy-installation 'unused
    dotspacemacs-ask-for-lazy-installation t
 
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
@@ -10,24 +10,26 @@
 
    ;; layers
    dotspacemacs-configuration-layers
-   '(vimscript
+   '(markdown
+     vimscript
      org
      deft
      ivy
      syntax-checking
      auto-completion
      neotree
+     ;; Chinese
      better-defaults
      emacs-lisp
      (shell :variables
-            shell-default-term-shell "/bin/bash"
-            shell-default-full-span nil
-            shell-default-height 40
-            shell-default-position 'bottom))
+            shell-default-term-shell "/bin/tmux"
+            ;; shell-default-height 50
+            shell-default-position 'full))
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
                                       centaur-tabs
+                                      indent-guide
                                       org-bullets
                                       evil-goggles
                                       git-gutter
@@ -101,13 +103,15 @@
 
    ;; dash status: vim-powerline doom spacemacs
    ;; dotspacemacs-mode-line-theme '(vim-powerline  :separator wave :separator-scale 1.2)
-   dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.3)
+   dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.5)
 
    ;; 根据光标状态显示颜色
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; font settings
-   dotspacemacs-default-font '("Source Code Variable"
+   dotspacemacs-default-font '(
+                               ;; "Source Code Variable"
+                               "Droid Sans Mono"
                                                 :size 14.0
                                                 :weight normal
                                                 :width normal)
@@ -122,7 +126,6 @@
    dotspacemacs-distinguish-gui-tab nil
 
    dotspacemacs-default-layout-name "Default"
-
    dotspacemacs-display-default-layout nil
 
    ;; resume last layout: nil
@@ -248,7 +251,7 @@
             (lambda ()
               (message "Startup Time: %s"
                        ;; "Emacs ready in %s with %d garbage collections."
-                       (format "%.2f seconds"
+                       (format "%.2f seconds. Enjoy it!"
                                (float-time
                                 (time-subtract after-init-time before-init-time)))
                        gcs-done)))
@@ -272,6 +275,10 @@
 ;; oeyoews
 (defun dotspacemacs/user-config ()
 
+
+  ;; disable backup files  auto
+  (setq make-backup-files nil)
+
   ;; cursor center like vim set so=2
   (setq scroll-conservatively 101
         scroll-margin 2)
@@ -286,25 +293,26 @@
   ;;   (org-ellipsis "⤵")
   ;;   :hook (org-mode . org-bullets-mode))
 
+  (use-package indent-guide
+    :init (indent-guide-global-mode t))
+  (setq indent-guide-delay 1.0)
+  (set-face-background 'indent-guide-face "dimgray")
+
   ;; tab navigator
   (use-package centaur-tabs
+    :if window-system
     :demand
     :config
-    (centaur-tabs-mode t)
-    :bind
-    (:map evil-normal-state-map
-	     ("g t" . centaur-tabs-forward)
-	     ("g T" . centaur-tabs-backward))
-    ; ("C-<prior>" . centaur-tabs-backward)
-    ; ("C-<next>" . centaur-tabs-forward)
-    )
+    (centaur-tabs-mode t))
+  (setq centaur-tabs-height 20)
   (setq centaur-tabs-style "alternate")
-  (centaur-tabs-headline-match)
   (setq centaur-tabs-set-icons t)
   (setq centaur-tabs-set-bar 'left)
   (setq centaur-tabs-set-modified-marker t)
   (setq centaur-tabs-modified-marker "*")
+  (setq centaur-tabs-gray-out-icons 'buffer)
   (setq centaur-tabs-cycle-scope 'tabs)
+  (setq centaur-tabs-label-fixed-length 8)
 
   ;; deft
   (use-package deft
@@ -326,17 +334,20 @@
   (setq-default evil-escape-key-sequence "jk")
 
   ;; add git-gutter settings
-  (global-git-gutter-mode +1)
+  ;; (use-package git-gutter
+  ;;   :init
+  ;;   )
+    (global-git-gutter-mode t)
 
   ;; ivy icon settings
   (use-package all-the-icons-ivy-rich
     :if window-system
     :ensure t
-    :init (all-the-icons-ivy-rich-mode 1))
+    :init (all-the-icons-ivy-rich-mode t))
   (use-package ivy-rich
     :if window-system
     :ensure t
-    :init (ivy-rich-mode 1))
+    :init (ivy-rich-mode t))
   (setq all-the-icons-ivy-rich-icon-size 1.0)
 
   ;; translate
@@ -365,7 +376,7 @@
   ;; add space automatically for layer settings
   (use-package pangu-spacing
     :config
-    (global-pangu-spacing-mode 1)
+    (global-pangu-spacing-mode t)
     (add-hook 'org-mode-hook
               '(lambda ()
                  (set (make-local-variable 'pangu-spacing-real-insert-separtor) t))))
@@ -388,13 +399,10 @@
 
 ;; org config
 (with-eval-after-load 'org
-
-
   ;; in startup , fold all heading auto
   (setq org-startup-folded t)
 
   ;; 设置 bullet list, 让 headline 变漂亮
-  ;; error ?
   ;; (setq org-bullets-bullet-list '("☰" "☷" "☯" "☭"))
 
 
@@ -428,7 +436,7 @@
   (setq org-ellipsis "▼")
 
   ;; inline image 不用展示实际大小，可以自定义大小显示
-  (setq org-image-actual-width '(450))
+  ;; (setq org-image-actual-width '(450))
 
   (setq org-hierarchical-todo-statistics nil)
 
@@ -441,9 +449,9 @@
         org-confirm-babel-evaluate nil
         org-support-shift-select 'always)
 
-  (setq org-default-notes-file "~/temp/demo.org")
+  ;; (setq org-default-notes-file "~/temp/demo.org")
 
-  (setq org-refile-targets '("~/temp/demo.org" :maxlevel . 3))
+  ;; (setq org-refile-targets '("~/temp/demo.org" :maxlevel . 3))
 
 
   (setq org-todo-keywords
@@ -457,6 +465,7 @@
   )
 
 ;; self evil
+;; how to triggers
 (defun evilified-state--evilify-event (map map-symbol evil-map event evil-value
                                            &optional processed pending-funcs)
   "Evilify EVENT in MAP and return a list of PROCESSED events."
@@ -538,7 +547,7 @@ This function is called at the very end of Spacemacs initialization."
    '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   '(org-bullets ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
+   '(vmd-mode valign markdown-mode emoji-cheat-sheet-plus helm helm-core company-emoji org-bullets ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
