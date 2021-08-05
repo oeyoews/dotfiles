@@ -21,11 +21,15 @@
      emacs-lisp
      (shell :variables
             shell-default-term-shell "/bin/bash"
+            shell-default-full-span nil
             shell-default-height 40
             shell-default-position 'bottom))
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
+                                      centaur-tabs
+                                      org-bullets
+                                      evil-goggles
                                       git-gutter
                                       all-the-icons-ivy-rich)
 
@@ -71,8 +75,6 @@
 
    ;; show recents file
    dotspacemacs-startup-lists '((recents . 3)
-                                ;; (todos)
-                                ;; (agenda)
                                 (projects . 2))
 
    ;; True if the home buffer should respond to resize events. (default t)
@@ -131,14 +133,14 @@
    ;; autosave file to .cache
    dotspacemacs-auto-save-file-location 'cache
 
-   ;; ?
-   dotspacemacs-max-rollback-slots 4
+   ;; gutter columns
+   dotspacemacs-max-rollback-slots 3
 
    ;; disable paste pop state
    dotspacemacs-enable-paste-transient-state nil
 
    ;; delay about which-key
-   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-delay 0.6
 
    ;; which-key position
    dotspacemacs-which-key-position 'bottom
@@ -149,14 +151,12 @@
    dotspacemacs-loading-progress-bar nil
 
    ;; fullscreen in startup
-   dotspacemacs-fullscreen-at-startup nil
+   dotspacemacs-fullscreen-at-startup t
+   ;; maximized startup
+   dotspacemacs-maximized-at-startup nil
 
    ;; remove title bar
    dotspacemacs-fullscreen-use-non-native t
-
-   ;; maximized startup
-   dotspacemacs-maximized-at-startup t
-
    ;; remove startup title bar
    dotspacemacs-undecorated-at-startup t
 
@@ -190,7 +190,7 @@
    dotspacemacs-highlight-delimiters 'all
 
    ;; relate server
-   dotspacemacs-enable-server nil
+   dotspacemacs-enable-server t
    dotspacemacs-server-socket-dir nil
 
    ;; even quit emacs. the emacs server still active
@@ -272,9 +272,39 @@
 ;; oeyoews
 (defun dotspacemacs/user-config ()
 
+  ;; cursor center like vim set so=2
+  (setq scroll-conservatively 101
+        scroll-margin 2)
+
   ;; neotree settings
   (setq neo-theme 'icons)
   (setq neo-vc-integration ' (face) )
+
+  ;; (use-package org-bullets
+  ;;   :custom
+  ;;   (org-bullets-bullet-list '("◉" "☯" "○" "☯" "✸" "☯" "✿" "☯" "✜" "☯" "◆" "☯" "▶"))
+  ;;   (org-ellipsis "⤵")
+  ;;   :hook (org-mode . org-bullets-mode))
+
+  ;; tab navigator
+  (use-package centaur-tabs
+    :demand
+    :config
+    (centaur-tabs-mode t)
+    :bind
+    (:map evil-normal-state-map
+	     ("g t" . centaur-tabs-forward)
+	     ("g T" . centaur-tabs-backward))
+    ; ("C-<prior>" . centaur-tabs-backward)
+    ; ("C-<next>" . centaur-tabs-forward)
+    )
+  (setq centaur-tabs-style "alternate")
+  (centaur-tabs-headline-match)
+  (setq centaur-tabs-set-icons t)
+  (setq centaur-tabs-set-bar 'left)
+  (setq centaur-tabs-set-modified-marker t)
+  (setq centaur-tabs-modified-marker "*")
+  (setq centaur-tabs-cycle-scope 'tabs)
 
   ;; deft
   (use-package deft
@@ -300,14 +330,14 @@
 
   ;; ivy icon settings
   (use-package all-the-icons-ivy-rich
+    :if window-system
     :ensure t
     :init (all-the-icons-ivy-rich-mode 1))
   (use-package ivy-rich
+    :if window-system
     :ensure t
     :init (ivy-rich-mode 1))
   (setq all-the-icons-ivy-rich-icon-size 1.0)
-  ;; Definitions for ivy-rich transformers. ;; ?
-  all-the-icons-ivy-rich-display-transformers-list
 
   ;; translate
   (use-package english-teacher
@@ -322,6 +352,7 @@
   ;; show translate in minbuffer
   (setq english-teacher-show-result-function 'english-teacher-eldoc-show-result-function)
 
+  ;; breaks symbols disablejk
   (set-face-attribute 'nobreak-space nil
                       :background nil
                       :underline nil)
@@ -330,15 +361,6 @@
   ;; If you experience a slow down in performance when rendering multiple icons simultaneously,
   ;; you can try setting the following variable
   (setq inhibit-compacting-font-caches t)
-
-  ;; lsp settings
-  ;; (use-package lsp-mode
-  ;;   :init
-  ;;   (setq lsp-keymap-prefix "C-c l")
-  ;;   :hook (;; replace XXX-mode with concrete major-mode(e. g. python-mode)
-  ;;          (c-mode . lsp)
-  ;;          (lsp-mode . lsp-enable-which-key-integration))
-  ;;   :commands lsp)
 
   ;; add space automatically for layer settings
   (use-package pangu-spacing
@@ -349,28 +371,15 @@
                  (set (make-local-variable 'pangu-spacing-real-insert-separtor) t))))
 
   ;; add highlightyank-layer
+  ;; don't work ?
   (use-package evil-goggles
     :ensure t
     :config
     (evil-goggles-mode)
     (evil-goggles-use-diff-faces)))
+(setq evil-goggles-pulse t) ;; default is to pulse when running in a graphic display
 
-;; eaf
-                                        ; (use-package eaf
-                                        ; :load-path "~/.spacemacs.d/eaf" ; Set to "/usr/share/emacs/site-lisp/eaf" if installed from AUR
-                                        ; :init
-                                        ; (use-package epc :defer t :ensure t)
-                                        ; (use-package ctable :defer t :ensure t)
-                                        ; (use-package deferred :defer t :ensure t)
-                                        ; (use-package s :defer t :ensure t)
-                                        ; :custom
-                                        ; (eaf-browser-continue-where-left-off t)
-                                        ; :config
-                                        ; (setq eaf-browser-enable-adblocker t)
-                                        ; (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-                                        ; (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-                                        ; (eaf-bind-key take_photo "p" eaf-camera-keybinding)
-                                        ; (eaf-bind-key nil "M-q" eaf-browser-keybinding)) ;; unbind, see more in the Wiki
+
 
 ;; fastly insert time
 (defun now ()
@@ -379,8 +388,72 @@
 
 ;; org config
 (with-eval-after-load 'org
+
+
   ;; in startup , fold all heading auto
   (setq org-startup-folded t)
+
+  ;; 设置 bullet list, 让 headline 变漂亮
+  ;; error ?
+  ;; (setq org-bullets-bullet-list '("☰" "☷" "☯" "☭"))
+
+
+  ;; 插入今年的时间进度条
+  (defun make-progress (width percent has-number?)
+    (let* ((done (/ percent 100.0))
+           (done-width (floor (* width done))))
+      (concat
+       "["
+       (make-string done-width ?/)
+       (make-string (- width done-width) ? )
+       "]"
+       (if has-number? (concat " " (number-to-string percent) "%"))
+       )))
+
+  (defun insert-day-progress ()
+    (interactive)
+    (let* ((today (time-to-day-in-year (current-time)))
+           (percent (floor (* 100 (/ today 365.0)))))
+      (insert (make-progress 30 percent t))
+      ))
+
+  (evil-leader/set-key "oit" 'insert-day-progress)
+
+  ;; 打开 org-indent mode
+  (setq org-startup-indented t)
+
+  (setq org-remember-clock-out-on-exit t)
+
+  ;; 折叠时不再显示「...」, 换个你喜欢的符号
+  (setq org-ellipsis "▼")
+
+  ;; inline image 不用展示实际大小，可以自定义大小显示
+  (setq org-image-actual-width '(450))
+
+  (setq org-hierarchical-todo-statistics nil)
+
+  (setq org-html-validation-link nil)
+
+  ;; Let's have pretty source code blocks
+  (setq org-edit-src-content-indentation 0
+        org-src-tab-acts-natively t
+        org-src-fontify-natively t
+        org-confirm-babel-evaluate nil
+        org-support-shift-select 'always)
+
+  (setq org-default-notes-file "~/temp/demo.org")
+
+  (setq org-refile-targets '("~/temp/demo.org" :maxlevel . 3))
+
+
+  (setq org-todo-keywords
+        '((sequence "TODO" "HACK" "|" "DONE")))
+
+  ;; 调试好久的颜色，效果超赞！todo keywords 增加背景色
+  ;; (setf org-todo-keyword-faces '(("TODO" . (:foreground "white" :background "#95A5A6"   :weight bold))
+  ;;                                ("HACK" . (:foreground "white" :background "#2E8B57"  :weight bold))
+  ;;                                ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
+
   )
 
 ;; self evil
@@ -456,26 +529,26 @@
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-  (custom-set-variables
-   ;; custom-set-variables was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(custom-safe-themes
-     '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
-   '(evil-want-Y-yank-to-eol nil)
-   '(package-selected-packages
-     '(ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(evil-goggles-change-face ((t (:inherit diff-removed))))
-   '(evil-goggles-delete-face ((t (:inherit diff-removed))))
-   '(evil-goggles-paste-face ((t (:inherit diff-added))))
-   '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
-   '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
-   '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
-   '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
-  )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
+ '(evil-want-Y-yank-to-eol nil)
+ '(package-selected-packages
+   '(org-bullets ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-goggles-change-face ((t (:inherit diff-removed))))
+ '(evil-goggles-delete-face ((t (:inherit diff-removed))))
+ '(evil-goggles-paste-face ((t (:inherit diff-added))))
+ '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
+ '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
+ '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
+ '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
+)

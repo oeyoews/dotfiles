@@ -48,10 +48,10 @@ source $ZSH/p10k-rainbow.zsh
  #
  # sudoedit = sudo -e / calling user
 
-# export ALTERNATE_EDITOR=""
-# export EDITOR="emacsclient -t "                  # $EDITOR opens in terminal
-# export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
+export ALTERNATE_EDITOR=""
+export EDITOR="emacsclient -t "                  # $EDITOR opens in terminal
+export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 #
-# alias emacs="emacsclient  -c -q -n"
-# alias ema="emacsclient -t"
+alias eg="emacsclient  -c -q -n"
+alias et="emacsclient -t"
 
