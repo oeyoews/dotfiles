@@ -53,11 +53,15 @@ source $ZSH/p10k-rainbow.zsh
  #
  # sudoedit = sudo -e / calling user
 
+# https://www.emacswiki.org/emacs/EmacsClient
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t "                  # $EDITOR opens in terminal
 export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 #
+# Note: emacs is restart emacs every times
+# gui emacs
+alias emacs="emacs &"
 alias eg="emacsclient  -c -q -n"
+# tui emacs
 alias et="emacsclient -t"
 alias crow="crow -b"
-

@@ -29,16 +29,15 @@
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
                                       centaur-tabs
-                                      dashboard
                                       indent-guide
-                                      org-bullets
                                       evil-goggles
                                       git-gutter
                                       all-the-icons-ivy-rich)
 
    dotspacemacs-frozen-packages '()
 
-   dotspacemacs-excluded-packages '(vi-tilde-fringe)
+   ;; vi-tilde-fringe
+   dotspacemacs-excluded-packages '()
 
    ;; install packages just used
    dotspacemacs-install-packages 'used-only))
@@ -99,7 +98,9 @@
 
    ;; spacemacs theme
    dotspacemacs-themes '(doom-solarized-dark
-                         ;; doom-city-lights ;; doom-one ;; spacemacs-dark
+                         ;; doom-city-lights ;;
+                         doom-one
+                         ;; spacemacs-dark
                         )
 
    ; dotspacemacs-themes (if window-system lab-dark)
@@ -115,7 +116,7 @@
    ;; font settings
    dotspacemacs-default-font '(;; "Source Code Variable"
                                "Droid Sans Mono"
-                                                :size 14.0
+                                                :size 16.0
                                                 :weight normal
                                                 :width normal)
 
@@ -279,6 +280,8 @@
 ;; oeyoews
 (defun dotspacemacs/user-config ()
 
+  ;; Note: need crear this file by hand
+  (setq custom-file "~/.emacs.d/private/custom.el")
 
   ;; exit insert status like vim quickly
   (setq-default evil-escape-key-sequence "jk")
@@ -287,6 +290,7 @@
   (setq make-backup-files nil)
 
   ;; cursor center like vim set so=2
+  ;; ?
   (setq scroll-conservatively 1000
         scroll-margin 2)
 
@@ -294,18 +298,7 @@
   (setq neo-theme 'icons)
   (setq neo-vc-integration ' (face) )
 
-  ;; (use-package org-bullets
-  ;;   :custom
-  ;;   (org-bullets-bullet-list '("◉" "☯" "○" "☯" "✸" "☯" "✿" "☯" "✜" "☯" "◆" "☯" "▶"))
   ;;   (org-ellipsis "⤵")
-  ;;   :hook (org-mode . org-bullets-mode))
-
-
-  ;; dashboard
-  (use-package dashboard
-    :ensure t
-    :config
-    (dashboard-setup-startup-hook))
 
   ;; tab navigator
   (use-package centaur-tabs
@@ -411,52 +404,21 @@
   (interactive)
   ( insert (current-time-string)))
 
-;; (insert "debug oeyoews 333")
-
 ;; org config
 (with-eval-after-load 'org
 
   ;; in startup , fold all heading auto
   (setq org-startup-folded t)
 
-  ;; 设置 bullet list, 让 headline 变漂亮
   ;; (setq org-bullets-bullet-list '("☰" "☷" "☯" "☭"))
 
-
-  ;; 插入今年的时间进度条
-  ;; (defun make-progress (width percent has-number?)
-  ;;   (let* ((done (/ percent 100.0))
-  ;;          (done-width (floor (* width done))))
-  ;;     (concat
-  ;;      "["
-  ;;      (make-string done-width ?/)
-  ;;      (make-string (- width done-width) ? )
-  ;;      "]"
-  ;;      (if has-number? (concat " " (number-to-string percent) "%"))
-  ;;      )))
-
-  ;; (defun insert-day-progress ()
-  ;;   (interactive)
-  ;;   (let* ((today (time-to-day-in-year (current-time)))
-  ;;          (percent (floor (* 100 (/ today 365.0)))))
-  ;;     (insert (make-progress 30 percent t))
-  ;;     ))
-  ;; (evil-leader/set-key "oit" 'insert-day-progress)
-
-  ;; 打开 org-indent mode
   (setq org-startup-indented t)
 
   (setq org-remember-clock-out-on-exit t)
 
-  ;; 折叠时不再显示「...」, 换个你喜欢的符号
   (setq org-ellipsis "▼")
 
-  ;; inline image 不用展示实际大小，可以自定义大小显示
-  ;; (setq org-image-actual-width '(450))
-
   ;; (setq org-hierarchical-todo-statistics nil)
-
-  ;; (setq org-html-validation-link nil)
 
   ;; Let's have pretty source code blocks
   ;; (setq org-edit-src-content-indentation 0
@@ -479,101 +441,3 @@
   ;;                                ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
 
   )
-
-;; self evil
-;; how to triggers
-;; (defun evilified-state--evilify-event (map map-symbol evil-map event evil-value
-;;                                            &optional processed pending-funcs)
-;;   "Evilify EVENT in MAP and return a list of PROCESSED events."
-;;   (if (and event (or evil-value pending-funcs))
-;;       (let* ((kbd-event (kbd (single-key-description event)))
-;;              (map-value (lookup-key map kbd-event))
-;;              (evil-value (or evil-value
-;;                              (lookup-key evil-map kbd-event)
-;;                              (car (pop pending-funcs)))))
-;;         (when evil-value
-;;           (evil-define-key 'evilified map kbd-event evil-value))
-;;         (when map-value
-;;           (add-to-list 'pending-funcs (cons map-value event) 'append))
-;;         (push event processed)
-;;         (setq processed (evilified-state--evilify-event
-;;                          map map-symbol evil-map
-;;                          (evilified-state--find-new-event event) nil
-;;                          processed pending-funcs)))
-;;     (when pending-funcs
-;;       ;; (spacemacs-buffer/warning
-;;       (message
-;;        (concat (format (concat "Auto-evilication could not remap these "
-;;                                "functions in map `%s':\n")
-;;                        map-symbol)
-;;                (mapconcat (lambda (x)
-;;                             (format "   - `%s' originally mapped on `%s'"
-;;                                     (car x) (single-key-description (cdr x))))
-;;                           pending-funcs "\n")))))
-;;   processed)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("0466adb5554ea3055d0353d363832446cd8be7b799c39839f387abb631ea0995" "cbdf8c2e1b2b5c15b34ddb5063f1b21514c7169ff20e081d39cf57ffee89bc1e" "333958c446e920f5c350c4b4016908c130c3b46d590af91e1e7e2a0611f1e8c5" "a82ab9f1308b4e10684815b08c9cac6b07d5ccb12491f44a942d845b406b0296" "13880fa28757754bc40c85b05689c801ddaa877f2fe65abf1779f37776281ef1" "97db542a8a1731ef44b60bc97406c1eb7ed4528b0d7296997cbb53969df852d6" "e19ac4ef0f028f503b1ccafa7c337021834ce0d1a2bca03fcebc1ef635776bea" "835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
- '(evil-want-Y-yank-to-eol nil)
- '(package-selected-packages
-   '(lab-themes vmd-mode valign markdown-mode emoji-cheat-sheet-plus helm helm-core company-emoji org-bullets ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(evil-goggles-change-face ((t (:inherit diff-removed))))
- '(evil-goggles-delete-face ((t (:inherit diff-removed))))
- '(evil-goggles-paste-face ((t (:inherit diff-added))))
- '(evil-goggles-undo-redo-add-face ((t (:inherit diff-added))))
- '(evil-goggles-undo-redo-change-face ((t (:inherit diff-changed))))
- '(evil-goggles-undo-redo-remove-face ((t (:inherit diff-removed))))
- '(evil-goggles-yank-face ((t (:inherit diff-changed)))))
-)
