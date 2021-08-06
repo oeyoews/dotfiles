@@ -274,12 +274,11 @@ function onproxy() {
    curl ip.sb
  }
 
-# not suit konsole
-# function ontmux() {
-  # if which tmux >/dev/null 2>&1; then
-    # if [ -z "$TMUX" ]; then
-      # tmux attach -t default || tmux new -s default
-    # fi
-  # fi
-# }
+function ontmux() {
+  if which tmux >/dev/null 2>&1; then
+    if [ -z "$TMUX" ]; then
+      tmux attach -t default || tmux new -s default
+    fi
+  fi
+}
 

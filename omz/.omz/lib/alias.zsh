@@ -4,7 +4,7 @@
 # self alias
 # =============
 
-alias cl='clear'
+alias c='clear'
 alias cdt="cd $HOME/temp"
 # alias cp='cp -r -i'
 alias dust="dust -r"
@@ -24,7 +24,7 @@ alias yayy="yay -Yc"
 alias yayr='yay -Rscn'
 alias his='history 100'
 alias sl='sl | lolcat'
-alias ts='trans -b'
+# alias ts='trans -b'
 alias btop='bpytop'
 alias soz='source $HOME/.zshrc'
 alias tlpt='sudo tlp-stat -t'
@@ -33,8 +33,8 @@ alias figlet='figlet -W -f slant'
 alias update='sudo pacman -Syu'
 alias vito='vim ~/todo.org'
 alias viz='vim $HOME/.zshrc'
-alias worms='wormhole send'
-alias wormr='wormhole receive'
+# alias worms='wormhole send'
+# alias wormr='wormhole receive'
 alias wego='curl -s wttr.in | lolcat'
 alias ipr='ip addr | rg 192'
 alias sctl='systemctl'

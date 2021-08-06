@@ -1,5 +1,3 @@
-// 2021年 06月 18日 星期五 19:51:41 CST
-// .config/Code/User/settings.json
 {
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": false,
@@ -34,10 +32,10 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#60b2e9da",
-        "statusBar.noFolderBackground": "#5937d4",
-        "statusBar.debuggingBackground": "#27c519",
-        "statusBar.foreground": "#00040fd7"
+        "statusBar.background": "#1a1d1db0",
+        "statusBar.noFolderBackground": "#0c0d0fa6",
+        "statusBar.debuggingBackground": "#16091b6b",
+        "statusBar.foreground": "#fcfdfbfa"
     },
 
     "[jsonc]": {
@@ -79,6 +77,6 @@
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "on",
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "editor.fontFamily": "'Source Code Variable'",
+    "editor.fontFamily": "'Droid Sans Mono'",
     //  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 }

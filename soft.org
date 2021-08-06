@@ -19,7 +19,7 @@ manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
 # python-pip
 tmux
-konsole(取消重拍)
+# konsole(取消重拍)
 xunlei-bin                 # xunlei
 # (xtreme download manager)
 xdm
@@ -41,8 +41,8 @@ fastfetch
 lolcat
 # ls -al | xclip
 # 防火墙
-gufw
-xclip
+# gufw
+# xclip
 # pacman
 base-devel
 # grep enhanced, like grep
@@ -68,10 +68,10 @@ fcitx5-rime
 #========
 #
 nvm                        # node 版本管理
-virtual-desktop            # plasma widget
+# virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
 wechat-uos                 # wechat
-wudao-dict-git             # wudao directory
+# wudao-dict-git             # wudao directory
 jdk8-openjdk               # jdk
 fgit                       # hub.fastgit.org
 deskreen                   # 投屏软件
@@ -102,3 +102,5 @@ kimpanel@kde.org
 
 # start: mocp
 moc
+# translate
+crow-translate

@@ -9,7 +9,7 @@ export ZSH_DISABLE_COMPFIX="true"
 
 export ZSH=~/.omz
 plugins=(
-  zsh-autosuggestions
+  # zsh-autosuggestions
   sudo
   zsh-syntax-highlighting
   extract
@@ -21,6 +21,11 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 source $ZSH/p10k-rainbow.zsh
+
+# auto complete for autosuggest plugin
+# 怎么判定是否启用zsh-autosuggestions plugins
+# bindkey ',' autosuggest-accept
+
 
 # ps -ef | grep/rg TIM && kill PID
 # killall -9 name
@@ -54,4 +59,5 @@ export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 #
 alias eg="emacsclient  -c -q -n"
 alias et="emacsclient -t"
+alias crow="crow -b"
 

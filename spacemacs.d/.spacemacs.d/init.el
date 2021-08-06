@@ -22,13 +22,14 @@
      better-defaults
      emacs-lisp
      (shell :variables
-            shell-default-term-shell "/bin/tmux"
+            shell-default-term-shell "/bin/bash"
             ;; shell-default-height 50
             shell-default-position 'full))
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
                                       centaur-tabs
+                                      dashboard
                                       indent-guide
                                       org-bullets
                                       evil-goggles
@@ -47,7 +48,7 @@
   (setq-default
    dotspacemacs-enable-emacs-pdumper nil
    dotspacemacs-emacs-pdumper-executable-file "emacs"
-   dotspacemacs-emacs-dumper-dump-file (format "spacemacs-%s.pdmp" emacs-version)
+   ;; dotspacemacs-emacs-dumper-dump-file (format "spacemacs-%s.pdmp" emacs-version)
 
    ;; enable elpa's https
    dotspacemacs-elpa-https t
@@ -97,20 +98,22 @@
    dotspacemacs-scratch-buffer-persistent nil
 
    ;; spacemacs theme
-   dotspacemacs-themes '(doom-one
-                         ;; spacemacs-dark
-                         )
+   dotspacemacs-themes '(doom-solarized-dark
+                         ;; doom-city-lights ;; doom-one ;; spacemacs-dark
+                        )
+
+   ; dotspacemacs-themes (if window-system lab-dark)
 
    ;; dash status: vim-powerline doom spacemacs
-   ;; dotspacemacs-mode-line-theme '(vim-powerline  :separator wave :separator-scale 1.2)
-   dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.5)
+   dotspacemacs-mode-line-theme '(vim-powerline  :separator wave :separator-scale 1.2)
+   ;; dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.2)
+   ;; dotspacemacs-mode-line-theme '(doom :separator wave :separator-scale 1.5)
 
    ;; 根据光标状态显示颜色
    dotspacemacs-colorize-cursor-according-to-state t
 
    ;; font settings
-   dotspacemacs-default-font '(
-                               ;; "Source Code Variable"
+   dotspacemacs-default-font '(;; "Source Code Variable"
                                "Droid Sans Mono"
                                                 :size 14.0
                                                 :weight normal
@@ -134,6 +137,7 @@
    dotspacemacs-large-file-size 1
 
    ;; autosave file to .cache
+   ;; dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-auto-save-file-location 'cache
 
    ;; gutter columns
@@ -276,11 +280,14 @@
 (defun dotspacemacs/user-config ()
 
 
+  ;; exit insert status like vim quickly
+  (setq-default evil-escape-key-sequence "jk")
+
   ;; disable backup files  auto
   (setq make-backup-files nil)
 
   ;; cursor center like vim set so=2
-  (setq scroll-conservatively 101
+  (setq scroll-conservatively 1000
         scroll-margin 2)
 
   ;; neotree settings
@@ -293,10 +300,12 @@
   ;;   (org-ellipsis "⤵")
   ;;   :hook (org-mode . org-bullets-mode))
 
-  (use-package indent-guide
-    :init (indent-guide-global-mode t))
-  (setq indent-guide-delay 1.0)
-  (set-face-background 'indent-guide-face "dimgray")
+
+  ;; dashboard
+  (use-package dashboard
+    :ensure t
+    :config
+    (dashboard-setup-startup-hook))
 
   ;; tab navigator
   (use-package centaur-tabs
@@ -325,13 +334,11 @@
   (global-company-mode)
 
   ;; Trigger completion immediately.
-  (setq company-idle-delay 0.1)
+  (setq company-idle-delay 0.2)
 
   ;; Number the candidates (use M-1, M-2 etc to select completions).
   (setq company-show-numbers t)
 
-  ;; exit insert status like vim quickly
-  (setq-default evil-escape-key-sequence "jk")
 
   ;; add git-gutter settings
   ;; (use-package git-gutter
@@ -368,6 +375,13 @@
                       :background nil
                       :underline nil)
 
+  ;; indent guides
+  (use-package indent-guide
+    :init (indent-guide-global-mode t))
+  (setq indent-guide-delay 0.3)
+  (set-face-background 'indent-guide-face "dimgray")
+
+
   ;; Slow Rendering
   ;; If you experience a slow down in performance when rendering multiple icons simultaneously,
   ;; you can try setting the following variable
@@ -397,8 +411,11 @@
   (interactive)
   ( insert (current-time-string)))
 
+;; (insert "debug oeyoews 333")
+
 ;; org config
 (with-eval-after-load 'org
+
   ;; in startup , fold all heading auto
   (setq org-startup-folded t)
 
@@ -407,25 +424,24 @@
 
 
   ;; 插入今年的时间进度条
-  (defun make-progress (width percent has-number?)
-    (let* ((done (/ percent 100.0))
-           (done-width (floor (* width done))))
-      (concat
-       "["
-       (make-string done-width ?/)
-       (make-string (- width done-width) ? )
-       "]"
-       (if has-number? (concat " " (number-to-string percent) "%"))
-       )))
+  ;; (defun make-progress (width percent has-number?)
+  ;;   (let* ((done (/ percent 100.0))
+  ;;          (done-width (floor (* width done))))
+  ;;     (concat
+  ;;      "["
+  ;;      (make-string done-width ?/)
+  ;;      (make-string (- width done-width) ? )
+  ;;      "]"
+  ;;      (if has-number? (concat " " (number-to-string percent) "%"))
+  ;;      )))
 
-  (defun insert-day-progress ()
-    (interactive)
-    (let* ((today (time-to-day-in-year (current-time)))
-           (percent (floor (* 100 (/ today 365.0)))))
-      (insert (make-progress 30 percent t))
-      ))
-
-  (evil-leader/set-key "oit" 'insert-day-progress)
+  ;; (defun insert-day-progress ()
+  ;;   (interactive)
+  ;;   (let* ((today (time-to-day-in-year (current-time)))
+  ;;          (percent (floor (* 100 (/ today 365.0)))))
+  ;;     (insert (make-progress 30 percent t))
+  ;;     ))
+  ;; (evil-leader/set-key "oit" 'insert-day-progress)
 
   ;; 打开 org-indent mode
   (setq org-startup-indented t)
@@ -438,16 +454,16 @@
   ;; inline image 不用展示实际大小，可以自定义大小显示
   ;; (setq org-image-actual-width '(450))
 
-  (setq org-hierarchical-todo-statistics nil)
+  ;; (setq org-hierarchical-todo-statistics nil)
 
-  (setq org-html-validation-link nil)
+  ;; (setq org-html-validation-link nil)
 
   ;; Let's have pretty source code blocks
-  (setq org-edit-src-content-indentation 0
-        org-src-tab-acts-natively t
-        org-src-fontify-natively t
-        org-confirm-babel-evaluate nil
-        org-support-shift-select 'always)
+  ;; (setq org-edit-src-content-indentation 0
+  ;;       org-src-tab-acts-natively t
+  ;;       org-src-fontify-natively t
+  ;;       org-confirm-babel-evaluate nil
+  ;;       org-support-shift-select 'always)
 
   ;; (setq org-default-notes-file "~/temp/demo.org")
 
@@ -466,35 +482,35 @@
 
 ;; self evil
 ;; how to triggers
-(defun evilified-state--evilify-event (map map-symbol evil-map event evil-value
-                                           &optional processed pending-funcs)
-  "Evilify EVENT in MAP and return a list of PROCESSED events."
-  (if (and event (or evil-value pending-funcs))
-      (let* ((kbd-event (kbd (single-key-description event)))
-             (map-value (lookup-key map kbd-event))
-             (evil-value (or evil-value
-                             (lookup-key evil-map kbd-event)
-                             (car (pop pending-funcs)))))
-        (when evil-value
-          (evil-define-key 'evilified map kbd-event evil-value))
-        (when map-value
-          (add-to-list 'pending-funcs (cons map-value event) 'append))
-        (push event processed)
-        (setq processed (evilified-state--evilify-event
-                         map map-symbol evil-map
-                         (evilified-state--find-new-event event) nil
-                         processed pending-funcs)))
-    (when pending-funcs
-      ;; (spacemacs-buffer/warning
-      (message
-       (concat (format (concat "Auto-evilication could not remap these "
-                               "functions in map `%s':\n")
-                       map-symbol)
-               (mapconcat (lambda (x)
-                            (format "   - `%s' originally mapped on `%s'"
-                                    (car x) (single-key-description (cdr x))))
-                          pending-funcs "\n")))))
-  processed)
+;; (defun evilified-state--evilify-event (map map-symbol evil-map event evil-value
+;;                                            &optional processed pending-funcs)
+;;   "Evilify EVENT in MAP and return a list of PROCESSED events."
+;;   (if (and event (or evil-value pending-funcs))
+;;       (let* ((kbd-event (kbd (single-key-description event)))
+;;              (map-value (lookup-key map kbd-event))
+;;              (evil-value (or evil-value
+;;                              (lookup-key evil-map kbd-event)
+;;                              (car (pop pending-funcs)))))
+;;         (when evil-value
+;;           (evil-define-key 'evilified map kbd-event evil-value))
+;;         (when map-value
+;;           (add-to-list 'pending-funcs (cons map-value event) 'append))
+;;         (push event processed)
+;;         (setq processed (evilified-state--evilify-event
+;;                          map map-symbol evil-map
+;;                          (evilified-state--find-new-event event) nil
+;;                          processed pending-funcs)))
+;;     (when pending-funcs
+;;       ;; (spacemacs-buffer/warning
+;;       (message
+;;        (concat (format (concat "Auto-evilication could not remap these "
+;;                                "functions in map `%s':\n")
+;;                        map-symbol)
+;;                (mapconcat (lambda (x)
+;;                             (format "   - `%s' originally mapped on `%s'"
+;;                                     (car x) (single-key-description (cdr x))))
+;;                           pending-funcs "\n")))))
+;;   processed)
 
 
 
@@ -544,10 +560,10 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
+   '("0466adb5554ea3055d0353d363832446cd8be7b799c39839f387abb631ea0995" "cbdf8c2e1b2b5c15b34ddb5063f1b21514c7169ff20e081d39cf57ffee89bc1e" "333958c446e920f5c350c4b4016908c130c3b46d590af91e1e7e2a0611f1e8c5" "a82ab9f1308b4e10684815b08c9cac6b07d5ccb12491f44a942d845b406b0296" "13880fa28757754bc40c85b05689c801ddaa877f2fe65abf1779f37776281ef1" "97db542a8a1731ef44b60bc97406c1eb7ed4528b0d7296997cbb53969df852d6" "e19ac4ef0f028f503b1ccafa7c337021834ce0d1a2bca03fcebc1ef635776bea" "835868dcd17131ba8b9619d14c67c127aa18b90a82438c8613586331129dda63" "246cd0eb818bfd347b20fb6365c228fddf24ab7164752afe5e6878cb29b0204e" default))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
-   '(vmd-mode valign markdown-mode emoji-cheat-sheet-plus helm helm-core company-emoji org-bullets ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
+   '(lab-themes vmd-mode valign markdown-mode emoji-cheat-sheet-plus helm helm-core company-emoji org-bullets ivy-rtags google-c-style flycheck-ycmd flycheck-rtags disaster cpp-auto-include company-ycmd ycmd request-deferred deferred company-rtags rtags company-c-headers ccls zenburn-theme zen-and-art-theme white-sand-theme underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme toxi-theme tao-theme tangotango-theme tango-plus-theme tango-2-theme sunny-day-theme sublime-themes subatomic256-theme subatomic-theme spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme seti-theme reverse-theme rebecca-theme railscasts-theme purple-haze-theme professional-theme planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme organic-green-theme omtose-phellack-theme oldlace-theme occidental-theme obsidian-theme noctilux-theme naquadah-theme mustang-theme monokai-theme monochrome-theme molokai-theme moe-theme modus-vivendi-theme modus-operandi-theme modus-themes minimal-theme material-theme majapahit-theme madhat2r-theme lush-theme light-soap-theme kaolin-themes jbeans-theme jazz-theme ir-black-theme inkpot-theme heroku-theme hemisu-theme hc-zenburn-theme gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme gandalf-theme flatui-theme flatland-theme farmhouse-theme eziam-theme exotica-theme espresso-theme dracula-theme doom-themes django-theme darktooth-theme darkokai-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized clues-theme chocolate-theme autothemer cherry-blossom-theme busybee-theme bubbleberry-theme birds-of-paradise-plus-theme badwolf-theme apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes afternoon-theme zones dap-mode lsp-treemacs bui treemacs cfrs pfuture posframe yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vimrc-mode uuidgen use-package unfill undo-tree toc-org terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex slim-mode shell-pop scss-mode sass-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox pangu-spacing overseer org-superstar org-rich-yank org-projectile org-present org-pomodoro org-mime org-download org-cliplink open-junk-file npm-mode nose nodejs-repl neotree nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make google-translate golden-ratio gnuplot git-gutter gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-package flycheck-elsa flx-ido fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word dactyl-mode cython-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode blacken auto-yasnippet auto-highlight-symbol auto-compile all-the-icons-ivy-rich aggressive-indent ace-window ace-link ac-ispell)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
