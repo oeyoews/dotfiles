@@ -19,7 +19,7 @@ manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
 # python-pip
 tmux
-# konsole(取消重拍)
+konsole(取消重拍)
 xunlei-bin                 # xunlei
 # (xtreme download manager)
 xdm
@@ -104,3 +104,8 @@ kimpanel@kde.org
 moc
 # translate
 crow-translate
+
+# https://www.cnblogs.com/kevingrace/p/10188283.html
+# terminal session recorder
+asciinema 
+
