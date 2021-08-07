@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Date: 2021-07-20 14:38:34
 # Author: oeyoews
 #
@@ -20,7 +27,6 @@ plugins=(
   # nvm
 )
 source $ZSH/oh-my-zsh.sh
-source $ZSH/p10k-rainbow.zsh
 
 # auto complete for autosuggest plugin
 # 怎么判定是否启用zsh-autosuggestions plugins
@@ -60,8 +66,13 @@ export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 #
 # Note: emacs is restart emacs every times
 # gui emacs
+# \emacs -q # original emacs
 alias emacs="emacs &"
 alias eg="emacsclient  -c -q -n"
 # tui emacs
 alias et="emacsclient -t"
 alias crow="crow -b"
+
+# To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
+# source $ZSH/p10k-rainbow.zsh
+[[ ! -f ~/.omz/p10k-rainbow.zsh ]] || source ~/.omz/p10k-rainbow.zsh
