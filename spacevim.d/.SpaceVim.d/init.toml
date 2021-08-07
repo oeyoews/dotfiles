@@ -112,3 +112,9 @@ name = "debug"
 
 [[custom_plugins]]
 repo = 'machakann/vim-highlightedyank'
+
+# [[custom_plugins]]
+# repo = 'luochen1990/rainbow'
+
+[[custom_plugins]]
+repo = 'justinmk/vim-syntax-extra'

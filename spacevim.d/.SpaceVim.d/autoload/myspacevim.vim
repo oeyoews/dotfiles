@@ -1,12 +1,8 @@
 function! myspacevim#before() abort
-  " let g:neomake_c_enabled_makers = ['clang']
-  " nnoremap jk <esc>
-
 endfunction
 "
 "
 function! myspacevim#after() abort
-  " iunmap jk
 
   if has("autocmd")
     au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
@@ -19,17 +15,19 @@ function! myspacevim#after() abort
     au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
   endif
 
-  "
   " insert time in insert mode
   " usage: input 'xtime' and space or enter
   iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
 
+  " shar system clipboard
   set clipboard^=unnamed 
+
   set wrap
-  set so=5
   set showbreak=->
+
+  set so=5
+
 endfunction
-"
 "
 " function! myspacevim#before() abort
 " call SpaceVim#custom#SPCGroupName(['G'], '+TestGroup')
