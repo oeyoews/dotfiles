@@ -67,7 +67,7 @@ export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 # Note: emacs is restart emacs every times
 # gui emacs
 # \emacs -q # original emacs
-alias emacs="emacs &"
+# alias emacs="emacs &"
 alias eg="emacsclient  -c -q -n"
 # tui emacs
 alias et="emacsclient -t"
@@ -76,3 +76,4 @@ alias crow="crow -b"
 # To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
 # source $ZSH/p10k-rainbow.zsh
 [[ ! -f ~/.omz/p10k-rainbow.zsh ]] || source ~/.omz/p10k-rainbow.zsh
+set -o vi
