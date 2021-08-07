@@ -78,5 +78,5 @@ alias ts='crow -b'
 # source $ZSH/p10k-rainbow.zsh
 [[ ! -f ~/.omz/p10k-rainbow.zsh ]] || source ~/.omz/p10k-rainbow.zsh
 
-# vim mode is confict to autosuggest ,
+# NOTE:vim mode is confict to autosuggest ,
 # set -o vi

@@ -5,7 +5,7 @@ cloc # like wc
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 gnome-keyring              # for vscode synchronize
-gnome-shell-extension-unite
+# gnome-shell-extension-unite
 gpaste
 cdate
 # like ps painting
@@ -96,7 +96,7 @@ lock
 transparent-shell@siroj42.github.io
 caffeine@patapon.info
 GPaste@gnome-shell-extensions.gnome.org
-unite@hardpixel.eu
+# unite@hardpixel.eu
 windowsNavigator@gnome-shell-extensions.gcampax.github.com
 kimpanel@kde.org
 
