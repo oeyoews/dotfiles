@@ -71,7 +71,8 @@ export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 alias eg="emacsclient  -c -q -n"
 # tui emacs
 alias et="emacsclient -t"
-alias crow="crow -b"
+# alias crow="crow -b"
+alias ts='crow -b'
 
 # To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
 # source $ZSH/p10k-rainbow.zsh
