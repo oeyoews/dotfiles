@@ -16,7 +16,7 @@ export ZSH_DISABLE_COMPFIX="true"
 
 export ZSH=~/.omz
 plugins=(
-  # zsh-autosuggestions
+  zsh-autosuggestions
   sudo
   zsh-syntax-highlighting
   extract
@@ -30,7 +30,7 @@ source $ZSH/oh-my-zsh.sh
 
 # auto complete for autosuggest plugin
 # 怎么判定是否启用zsh-autosuggestions plugins
-# bindkey ',' autosuggest-accept
+bindkey ',' autosuggest-accept
 
 
 # ps -ef | grep/rg TIM && kill PID
@@ -76,4 +76,6 @@ alias crow="crow -b"
 # To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
 # source $ZSH/p10k-rainbow.zsh
 [[ ! -f ~/.omz/p10k-rainbow.zsh ]] || source ~/.omz/p10k-rainbow.zsh
-set -o vi
+
+# vim mode is confict to autosuggest ,
+# set -o vi
