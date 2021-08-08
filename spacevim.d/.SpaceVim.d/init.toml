@@ -1,3 +1,6 @@
+# vimscript tutorial: 
+# https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
+
 # All SpaceVim option below [option] section
 [options]
 # set spacevim theme. by default colorscheme layer is not loaded,
@@ -8,29 +11,29 @@
 enable_guicolors = true
 # Disable statusline separator, if you want to use other value, please
 # install nerd fonts
+# buttom bar
 statusline_separator = "arrow"
+# top bar
 statusline_iseparator = "arrow"
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
 enable_statusline_mode = true
 # wrap_line = true
 
-# enable_googlesuggest = true
+enable_googlesuggest = true
 
 bootstrap_before = "myspacevim#before"
 bootstrap_after  = "myspacevim#after"
 
-filemanager = "defx"
-# - vimfiler （默认）
-# - nerdtree
-# - defx
+# vimfiler nerdtree defx
+filemanager = "vimfiler"
 
-colorscheme = "palenight"
 # colorscheme = "gruvbox"
 # colorscheme_bg = "dark"
 # colorscheme = "onedark"
 # random_theme = true
 # frequency = "daily"
+colorscheme = "palenight"
 
 # guifont = "SourceCodePro Nerd Font Mono:h11"
 guifont = "Droid Sans Mono:h11"
@@ -47,7 +50,7 @@ auto_completion_tab_key_behavior = "smart"
 [[layers]]
 name = 'shell'
 default_position = 'top'
-default_height = 30
+default_height = 50
 enable = true
 
 # onedark
@@ -116,12 +119,12 @@ repo = 'machakann/vim-highlightedyank'
 # [[custom_plugins]]
 # repo = 'luochen1990/rainbow'
 
-[[custom_plugins]]
-repo = 'justinmk/vim-syntax-extra'
+# [[custom_plugins]]
+# repo = 'justinmk/vim-syntax-extra'
 
 
 [[custom_plugins]]
 repo = 'jceb/vim-orgmode'
 
-[[custom_plugins]]
-repo = 'voldikss/vim-floaterm'
+# [[custom_plugins]]
+# repo = 'voldikss/vim-floaterm'

@@ -1,11 +1,15 @@
 function! myspacevim#before() abort
 
+  " set rtp+=~/path/to/your/localplugin
+
   " modify leader "\" to comma
   let g:mapleader = ','
+  " let g:maplocalleader = '\\'
+
 
   " float terminal
-  let g:floaterm_keymap_toggle = '<Leader>ft'
-  let g:floaterm_keymap_kill ='<leader>fk'
+  " let g:floaterm_keymap_toggle = '<Leader>ft'
+  " let g:floaterm_keymap_kill ='<leader>fk'
 
 endfunction
 
@@ -33,24 +37,21 @@ function! myspacevim#after() abort
   set wrap
   set showbreak=->
   set so=5
+  set nu
 
   " org mode for vim 
+  " ?
   packloadall
   silent! helptags ALL
 
+  echom "Enjoy vim! >^.^<"
 
 endfunction
-"
+
 " function! myspacevim#before() abort
 " call SpaceVim#custom#SPCGroupName(['G'], '+TestGroup')
 " call SpaceVim#custom#SPC('nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
-" endfunctionh
 "
-" function! myspacevim#before() abort
 " call SpaceVim#custom#LangSPCGroupName('python', ['G'], '+TestGroup')
 " call SpaceVim#custom#LangSPC('python', 'nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
-" endfunction
-
-" function! myspacevim#before() abort
-  " set rtp+=~/path/to/your/localplugin
 " endfunction
