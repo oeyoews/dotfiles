@@ -1,9 +1,17 @@
 function! myspacevim#before() abort
+
+  " modify leader "\" to comma
+  let g:mapleader = ','
+
+  " float terminal
+  let g:floaterm_keymap_toggle = '<Leader>ft'
+  let g:floaterm_keymap_kill ='<leader>fk'
+
 endfunction
-"
-"
+
 function! myspacevim#after() abort
 
+  " cursor status in normal
   if has("autocmd")
     au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
     au InsertEnter,InsertChange *
@@ -15,17 +23,21 @@ function! myspacevim#after() abort
     au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
   endif
 
-  " insert time in insert mode
   " usage: input 'xtime' and space or enter
   iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
 
   " shar system clipboard
   set clipboard^=unnamed 
 
+  " better read
   set wrap
   set showbreak=->
-
   set so=5
+
+  " org mode for vim 
+  packloadall
+  silent! helptags ALL
+
 
 endfunction
 "
@@ -39,6 +51,6 @@ endfunction
 " call SpaceVim#custom#LangSPC('python', 'nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
 " endfunction
 
-function! myspacevim#before() abort
+" function! myspacevim#before() abort
   " set rtp+=~/path/to/your/localplugin
-endfunction
+" endfunction

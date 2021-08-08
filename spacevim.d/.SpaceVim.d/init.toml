@@ -118,3 +118,10 @@ repo = 'machakann/vim-highlightedyank'
 
 [[custom_plugins]]
 repo = 'justinmk/vim-syntax-extra'
+
+
+[[custom_plugins]]
+repo = 'jceb/vim-orgmode'
+
+[[custom_plugins]]
+repo = 'voldikss/vim-floaterm'
