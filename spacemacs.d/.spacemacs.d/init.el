@@ -12,6 +12,7 @@
    dotspacemacs-configuration-layers
    '(markdown
      vimscript
+     debug
      org
      deft
      ivy
@@ -22,9 +23,9 @@
      better-defaults
      emacs-lisp
      (shell :variables
-            shell-default-term-shell "/bin/bash"
+            shell-default-term-shell "/bin/zsh"
             ;; shell-default-height 50
-            shell-default-position 'full))
+            shell-default-position 'top))
 
    ;; additional packages
    dotspacemacs-additional-packages '(pangu-spacing
@@ -97,7 +98,8 @@
    dotspacemacs-scratch-buffer-persistent nil
 
    ;; spacemacs theme
-   dotspacemacs-themes '(doom-solarized-dark
+   dotspacemacs-themes '(
+                         ;; doom-solarized-dark
                          ;; doom-city-lights ;;
                          doom-one
                          ;; spacemacs-dark
@@ -327,7 +329,7 @@
   (global-company-mode)
 
   ;; Trigger completion immediately.
-  (setq company-idle-delay 0.2)
+  (setq company-idle-delay 0.1)
 
   ;; Number the candidates (use M-1, M-2 etc to select completions).
   (setq company-show-numbers t)
@@ -337,15 +339,15 @@
   ;; (use-package git-gutter
   ;;   :init
   ;;   )
-    (global-git-gutter-mode t)
+  (global-git-gutter-mode t)
 
   ;; ivy icon settings
   (use-package all-the-icons-ivy-rich
-    :if window-system
+    ;; :if window-system
     :ensure t
     :init (all-the-icons-ivy-rich-mode t))
   (use-package ivy-rich
-    :if window-system
+    ;; :if window-system
     :ensure t
     :init (ivy-rich-mode t))
   (setq all-the-icons-ivy-rich-icon-size 1.0)

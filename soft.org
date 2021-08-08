@@ -112,3 +112,4 @@ crow-translate
 # terminal session recorder
 asciinema 
 
+kate

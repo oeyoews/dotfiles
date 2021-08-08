@@ -6,7 +6,7 @@
 
 function install_vim() {
   cd "$HOME" || exit
-  git clone --branch=main --depth 1 https://gitee.com/oeyoews/vim.git ~/.vim
+  # git clone --branch=main --depth 1 https://gitee.com/oeyoews/vim.git ~/.vim
 }
 
 function install_emacs() {
@@ -16,7 +16,7 @@ function install_emacs() {
 }
 
 function main() {
-  install_vim
+  # install_vim
   install_emacs
   echo "Just enjoy it!"
 }

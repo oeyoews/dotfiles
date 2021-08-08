@@ -59,6 +59,8 @@ bindkey ',' autosuggest-accept
  #
  # sudoedit = sudo -e / calling user
 
+
+function spacemacs() {
 # https://www.emacswiki.org/emacs/EmacsClient
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t "                  # $EDITOR opens in terminal
@@ -66,11 +68,19 @@ export VISUAL="emacsclient -c -a emacs"         # $VISUAL opens in GUI mode
 #
 # Note: emacs is restart emacs every times
 # gui emacs
+# emacsclient -nw（连接到现有的守护进程）
 # \emacs -q # original emacs
 # alias emacs="emacs &"
 alias eg="emacsclient  -c -q -n"
 # tui emacs
 alias et="emacsclient -t"
+}
+
+# doom() {
+  alias eg="emacs"
+  alias et="emacs -nw"
+# }
+
 # alias crow="crow -b"
 alias ts='crow -b'
 
