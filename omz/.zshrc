@@ -102,3 +102,6 @@ alias ts='crow -b'
 
 # NOTE:vim mode is confict to autosuggest ,
 # set -o vi
+
+# doom
+alias doom="~/.emacs.d/bin/doom"

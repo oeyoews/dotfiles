@@ -32,43 +32,37 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; (setq doom-theme 'doom-one)
+;; doom-one doom-dracula
 ( setq doom-theme 'doom-dracula )
 
+;; org
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+(setq org-superstar-headline-bullets-list '("☰" "☷" "☯" "☭"))
+(setq org-startup-folded t)
+(setq org-startup-indented t)
+(setq org-ellipsis "▼")
 
+;; deft
+;; shortkeys: `space n d'
+(setq deft-directory "~/.deft/")
+
+;; line numbers
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type nil)
 
-
-;; add analyse in minbuffer
-  ;; (add-hook 'emacs-startup-hook
-  ;;           (lambda ()
-  ;;             (message "Startup Time: %s"
-  ;;                      ;; "Emacs ready in %s with %d garbage collections."
-  ;;                      (format "%.2f seconds. Enjoy it!"
-  ;;                              (float-time
-  ;;                               (time-subtract after-init-time before-init-time)))
-  ;;                      gcs-done)))
 
 ;; scrolling better
 (setq scroll-conservatively 1000
         scroll-margin 2)
 
-;; org settings
-;; in startup , fold all heading auto
-(setq org-startup-folded t)
-(setq org-startup-indented t)
-(setq org-ellipsis "▼")
-
 ;; change emacs repo's source
-  ;; (setq configuration-layer-elpa-archives
-  ;;       '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-  ;;         ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
-  ;;         ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+  (setq configuration-layer-elpa-archives
+        '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+          ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
+          ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
 ;; no backup fill
 (setq make-backup-files nil)
@@ -92,39 +86,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-;; (when IS-WINDOWS
-;;   (when (display-graphic-p)
-;;     (defun set-font (english chinese english-size chinese-size)
-;;       (set-face-attribute 'default nil :font
-;;                           (format   "%s:pixelsize=%d"  english english-size))
-;;       (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;         (set-fontset-font (frame-parameter nil 'font) charset
-;;                           (font-spec :family chinese :size chinese-size))))
-;;     (set-font "Source Code Pro" "simsun" 16 16)
-;;     ))
-
-
-;; (defun +my/better-font()
-;;   (interactive)
-;;   ;; english font
-;;   (if (display-graphic-p)
-;;       (progn
-;;         (set-face-attribute 'default nil :font (format "%s:pixelsize=%d" "Fira Code" 17)) ;; 11 13 17 19 23
-;;         ;; chinese font
-;;         (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;           (set-fontset-font (frame-parameter nil 'font)
-;;                             charset
-;;                             (font-spec :family "Sarasa Mono SC")))) ;; 14 16 20 22 28
-;;     ))
-
-;; (defun +my|init-font(frame)
-;;   (with-selected-frame frame
-;;     (if (display-graphic-p)
-;;         (+my/better-font))))
-
-;; (if (and (fboundp 'daemonp) (daemonp))
-;;     (add-hook 'after-make-frame-functions #'+my|init-font)
-;;   (+my/better-font))
 
 ;; (pushnew! initial-frame-alist '(width . 200) '(height . 55))
 ;; (add-hook 'window-setup-hook #'toggle-frame-maximized)
@@ -152,16 +113,11 @@
 ;; can do both in `lisp-interaction-mode'.
 (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
 
-;; Line numbers are pretty slow all around. The performance boost of
-;; disabling them outweighs the utility of always keeping them on.
-(setq display-line-numbers-type nil)
-
-
 ;; IMO, modern editors have trained a bad habit into us all: a burning need for
 ;; completion all the time -- as we type, as we breathe, as we pray to the
 ;; ancient ones -- but how often do you *really* need that information? I say
 ;; rarely. So opt for manual completion:
-(setq company-idle-delay nil)
+(setq company-idle-delay 0.1)
 
 
 ;; Disable invasive lsp-mode features
@@ -184,22 +140,3 @@
 
 ;; Hide the menu for as minimalistic a startup screen as possible.
 ;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-
-  ;; fix layer's error: spell-checking
-  ; (setq ispell-extra-args '("--lang=en_US"))
-;; (setq ispell-list-command "--list" )
-
-;; add to ~/.doom.d/config.el
-;; (custom-set-faces!
-;;   '(default :background nil))
-
-;; (setq byte-compile-warnings '(not cl-functions obsolete))
-
-;; (add-hook 'emacs-startup-hook
-;;             (lambda ()
-;;               (message "Startup Time: %s"
-;;                        ;; "Emacs ready in %s with %d garbage collections."
-;;                        (format "%.2f seconds. Enjoy it!"
-;;                                (float-time
-;;                                 (time-subtract after-init-time before-init-time)))
-;;                        gcs-done)))

@@ -1,21 +1,35 @@
+" spacevim vimrc 2021-08-09 13:38:45 
+
+" ==
+" before function
+" ==
 function! myspacevim#before() abort
-
-  " set rtp+=~/path/to/your/localplugin
-
-  " modify leader "\" to comma
   let g:mapleader = ','
-  " let g:maplocalleader = '\\'
+  set nu
+  "  better read
+  set showbreak=->
+  set so=3
+
+  autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
+  function  AddTitleForShell()
+    call append(0,"# CreatTime: ".strftime("%Y-%m-%d %H:%M"))
+    call append(1,"#!/bin/bash")
+  endfunction
 
 
-  " float terminal
-  " let g:floaterm_keymap_toggle = '<Leader>ft'
-  " let g:floaterm_keymap_kill ='<leader>fk'
+  autocmd BufNewFile *.c exec ":call AddTitleForC()"
+  function  AddTitleForC()
+    call append(0,"// CreatTime: ".strftime("%Y-%m-%d %H:%M"))
+    call append(1,"#include <stdio.h>")
+  endfunction
 
 endfunction
 
+" ==
+" after function
+" ==
 function! myspacevim#after() abort
-
-  " cursor status in normal
+  " better cursor 
   if has("autocmd")
     au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
     au InsertEnter,InsertChange *
@@ -27,31 +41,18 @@ function! myspacevim#after() abort
     au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
   endif
 
-  " usage: input 'xtime' and space or enter
+  " insert format time 
   iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
 
-  " shar system clipboard
+  "  share system clipboard
   set clipboard^=unnamed 
 
-  " better read
   set wrap
-  set showbreak=->
-  set so=5
-  set nu
 
-  " org mode for vim 
-  " ?
+  " org-mode 
   packloadall
   silent! helptags ALL
 
-  echom "Enjoy vim! >^.^<"
-
+  " message
+  " echom "Enjoy vim! >^.^<"
 endfunction
-
-" function! myspacevim#before() abort
-" call SpaceVim#custom#SPCGroupName(['G'], '+TestGroup')
-" call SpaceVim#custom#SPC('nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
-"
-" call SpaceVim#custom#LangSPCGroupName('python', ['G'], '+TestGroup')
-" call SpaceVim#custom#LangSPC('python', 'nore', ['G', 't'], 'echom 1', 'echomessage 1', 1)
-" endfunction
