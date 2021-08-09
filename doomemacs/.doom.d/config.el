@@ -1,13 +1,14 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+;; Tutorial for doom: https://tecosaur.github.io/emacs-config/config.html
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "oeyoews"
+      user-mail-address "oeyoews@jyao4783.gmail")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -32,21 +33,18 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; doom-one doom-dracula
-( setq doom-theme 'doom-dracula )
+;; doom-one doom-dracula doom-vibrant
+(setq doom-theme 'doom-one)
 
 ;; org
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+;; (setq org-roam-directory "~/org/")
 (setq org-superstar-headline-bullets-list '("☰" "☷" "☯" "☭"))
 (setq org-startup-folded t)
 (setq org-startup-indented t)
 (setq org-ellipsis "▼")
-
-;; deft
-;; shortkeys: `space n d'
-(setq deft-directory "~/.deft/")
 
 ;; line numbers
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -99,6 +97,9 @@
 (add-hook! '+doom-dashboard-functions :append
   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
 
+( setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
+
+
 (setq avy-all-windows t)
 (map! :leader
       :prefix "j"
@@ -140,3 +141,10 @@
 
 ;; Hide the menu for as minimalistic a startup screen as possible.
 ;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+
+
+(setq doom-fallback-buffer-name "☯ Doom"
+      +doom-dashboard-name "☯ Doom")
+
+
+(setq yas-triggers-in-field t)
