@@ -14,6 +14,7 @@ zmodload zsh/zprof
 # disable secure check for compfix.zsh oh-my-zsh.sh
 export ZSH_DISABLE_COMPFIX="true"
 
+# @oh-my-zsh
 export ZSH=~/.omz
 plugins=(
   zsh-autosuggestions
@@ -28,6 +29,7 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
+# @bindkeys
 # auto complete for autosuggest plugin
 # 怎么判定是否启用zsh-autosuggestions plugins
 bindkey ',' autosuggest-accept
@@ -60,6 +62,7 @@ bindkey ',' autosuggest-accept
  # sudoedit = sudo -e / calling user
 
 
+# @spacemacs
 function spacemacs() {
 # https://www.emacswiki.org/emacs/EmacsClient
 export ALTERNATE_EDITOR=""
@@ -76,14 +79,23 @@ alias eg="emacsclient  -c -q -n"
 alias et="emacsclient -t"
 }
 
+## @doom
 # doom() {
   alias eg="emacs"
   alias et="emacs -nw"
 # }
 
+## @translate
 # alias crow="crow -b"
+# chinese to english
+# usage: crow -h
+# crow -p foo(foo)
+# crow -u bar(=>)
+alias tse='crow -t en'
+# english to system language (chinese)
 alias ts='crow -b'
 
+# @p10k
 # To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
 # source $ZSH/p10k-rainbow.zsh
 [[ ! -f ~/.omz/p10k-rainbow.zsh ]] || source ~/.omz/p10k-rainbow.zsh

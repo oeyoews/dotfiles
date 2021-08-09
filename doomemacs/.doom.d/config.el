@@ -45,23 +45,23 @@
 
 
 ;; add analyse in minbuffer
-  (add-hook 'emacs-startup-hook
-            (lambda ()
-              (message "Startup Time: %s"
-                       ;; "Emacs ready in %s with %d garbage collections."
-                       (format "%.2f seconds. Enjoy it!"
-                               (float-time
-                                (time-subtract after-init-time before-init-time)))
-                       gcs-done)))
+  ;; (add-hook 'emacs-startup-hook
+  ;;           (lambda ()
+  ;;             (message "Startup Time: %s"
+  ;;                      ;; "Emacs ready in %s with %d garbage collections."
+  ;;                      (format "%.2f seconds. Enjoy it!"
+  ;;                              (float-time
+  ;;                               (time-subtract after-init-time before-init-time)))
+  ;;                      gcs-done)))
 
+;; scrolling better
 (setq scroll-conservatively 1000
         scroll-margin 2)
 
+;; org settings
 ;; in startup , fold all heading auto
-  (setq org-startup-folded t)
-
+(setq org-startup-folded t)
 (setq org-startup-indented t)
-
 (setq org-ellipsis "▼")
 
 ;; change emacs repo's source
@@ -70,6 +70,7 @@
   ;;         ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
   ;;         ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
 
+;; no backup fill
 (setq make-backup-files nil)
 (setq company-idle-delay 0.1)
 
@@ -189,7 +190,16 @@
 ;; (setq ispell-list-command "--list" )
 
 ;; add to ~/.doom.d/config.el
-(custom-set-faces!
-  '(default :background nil))
+;; (custom-set-faces!
+;;   '(default :background nil))
 
 ;; (setq byte-compile-warnings '(not cl-functions obsolete))
+
+;; (add-hook 'emacs-startup-hook
+;;             (lambda ()
+;;               (message "Startup Time: %s"
+;;                        ;; "Emacs ready in %s with %d garbage collections."
+;;                        (format "%.2f seconds. Enjoy it!"
+;;                                (float-time
+;;                                 (time-subtract after-init-time before-init-time)))
+;;                        gcs-done)))
