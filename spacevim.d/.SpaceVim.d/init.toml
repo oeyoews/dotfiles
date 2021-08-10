@@ -2,79 +2,59 @@
 # https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
 # 2021-08-09 09:47:11 
 
+# Options
 # All SpaceVim option below [option] section
 [options]
-# set spacevim theme. by default colorscheme layer is not loaded,
-# if you want to use more colorscheme, please load the colorscheme
-# layer
-# Disable guicolors in basic mode, many terminal do not support 24bit
-# true colors
+# terminal ture color
 enable_guicolors = true
-# Disable statusline separator, if you want to use other value, please
-# install nerd fonts
-# buttom bar
-statusline_separator = "arrow"
-# top bar
+# top statine
 statusline_iseparator = "arrow"
+# buttom statine
+statusline_separator = "arrow"
+
+# icon type
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
 enable_statusline_mode = true
-# wrap_line = true
 
-enable_googlesuggest = true
-
+# bootstrap function
 bootstrap_before = "myspacevim#before"
 bootstrap_after  = "myspacevim#after"
 
-# vimfiler nerdtree defx
+# option: vimfiler nerdtree defx
 filemanager = "vimfiler"
 
-# colorscheme = "gruvbox"
-# colorscheme_bg = "dark"
-# colorscheme = "onedark"
-# random_theme = true
-# frequency = "daily"
+# option: onedark gruvbox
 colorscheme = "palenight"
 
-# guifont = "SourceCodePro Nerd Font Mono:h11"
+# font
 guifont = "Droid Sans Mono:h11"
 
-# automatic_update = true
-
-# # layer
-# Enable autocomplete layer
+# Layer
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
 
+# shortkeys: ctrl p and  spc f f (parent dir)
+# multi cursor: spc s e
+[[layers]]
+name = "leaderf"
+
 [[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 50
-enable = true
 
-# onedark
 [[layers]]
 name = "colorscheme"
 
 [[layers]]
 name = "incsearch"
 
-# [[custom_plugins]]
-# repo = "lilydjwg/colorizer"
-# on_cmd = ["ColorHighlight", "ColorToggle"]
-# merged = false
-
-# [[custom_plugins]]
-# repo = "https://gitlab.com/code-stats/code-stats-vim.git"
-# merged = false
-# [options]
-# 请注意，该值为一个 List，每一个选项为插件的名称，而非 github 仓库地址。
-# disabled_plugins = ["clighter", "clighter8"]
-
-# [[custom_plugins]]
-# repo = 'luochen1990/rainbow'
+# spc w c : read mode (only one)
+[[layers]]
+name = "tools"
 
 [[layers]]
 name = "lang#toml"
@@ -92,6 +72,7 @@ name = "lang#vim"
 
 [[layers]]
 name = "lang#python"
+enable = false
 
 [[layers]]
 name = "lang#c"
@@ -101,7 +82,7 @@ enable_clang_syntax_highlight = true
 name = "lsp"
 filetypes = [
   "c",
-  "cpp"
+# "cpp"
 ]
 [layers.override_cmd]
 c = ["clangd"]
@@ -111,21 +92,13 @@ name = "format"
 
 [[layers]]
 name = "debug"
+enable = false
 
-# [options]
-
+# Plugins
 [[custom_plugins]]
 repo = 'machakann/vim-highlightedyank'
-
-# [[custom_plugins]]
-# repo = 'luochen1990/rainbow'
-
-# [[custom_plugins]]
-# repo = 'justinmk/vim-syntax-extra'
-
+merged = true
 
 [[custom_plugins]]
 repo = 'jceb/vim-orgmode'
-
-# [[custom_plugins]]
-# repo = 'voldikss/vim-floaterm'
+merged = true
