@@ -5,6 +5,7 @@
 ;; https://learnxinyminutes.com/docs/zh-cn/elisp-cn/
 ;; https://www.cheng92.com/emacs/doom-emacs-with-org/
 ;; Tutorial: https://learnxinyminutes.com/docs/zh-cn/elisp-cn/
+;; http://smacs.github.io/elisp/
 ;;
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
