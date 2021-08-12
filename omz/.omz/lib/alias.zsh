@@ -34,6 +34,7 @@ alias c='clear'
 alias sctl='systemctl'
 alias pacmans='sudo pacman -S'
 alias yayy="yay -Yc"
+alias cp="cp -r"
 alias yayr='yay -Rscn'
 
 # @on
@@ -71,3 +72,6 @@ alias gitu='git add . && git commit && git push'
 
 
 
+# 防止在某些情况输入过快
+alias vi="nvim"
+alias vim="nvim"

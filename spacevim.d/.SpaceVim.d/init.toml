@@ -2,6 +2,8 @@
 # https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
 # 2021-08-09 09:47:11 
 
+# Check log: SPC h L 
+
 # Options
 # All SpaceVim option below [option] section
 [options]
@@ -38,6 +40,8 @@ auto_completion_tab_key_behavior = "smart"
 
 # shortkeys: ctrl p and  spc f f (parent dir)
 # multi cursor: spc s e
+# spc f r : open recent files
+# spc f f : search file
 [[layers]]
 name = "leaderf"
 
@@ -101,4 +105,9 @@ merged = true
 
 [[custom_plugins]]
 repo = 'jceb/vim-orgmode'
+merged = true
+
+
+[[custom_plugins]]
+repo = "dstein64/vim-startuptime.git"
 merged = true

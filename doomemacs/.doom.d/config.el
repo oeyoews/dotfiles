@@ -40,14 +40,14 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; doom-one doom-dracula doom-vibrant
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-dracula)
 
 ;; org
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 ;; (setq org-roam-directory "~/org/")
-(setq org-superstar-headline-bullets-list '("☰" "☷" "☯" "☭"))
+(setq org-superstar-headline-bullets-list '("☰" "☷" "☭"))
 (setq org-startup-folded t)
 (setq org-startup-indented t)
 (setq org-ellipsis "▼")
@@ -153,3 +153,6 @@
 
 ;; use yasnipets
 (setq yas-triggers-in-field t)
+
+;; ispell tips error
+(setq company-ispell-dictionary ispell-dictionary)

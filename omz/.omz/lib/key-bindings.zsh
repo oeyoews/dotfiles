@@ -1,6 +1,7 @@
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Zle-Builtins
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets
+# https://zsh.sourceforge.io/Intro/intro_toc.html
 
 # Make sure that the terminal is in application mode when zle is active, since
 # only then values from $terminfo are valid
@@ -16,7 +17,7 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
 fi
 
 # Use emacs key bindings
-bindkey -e
+# bindkey -e
 
 # [PageUp] - Up a line of history
 if [[ -n "${terminfo[kpp]}" ]]; then
@@ -135,4 +136,14 @@ bindkey "^[m" copy-prev-shell-word
 #bindkey '^I' complete-word
 ## Fix weird sequence that rxvt produces
 #bindkey -s '^[[Z' '\t'
-#
+
+export KEYTIMEOUT=15
+
+## vi-mode ###############
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins ' ' magic-space
+# bindkey -M viins '^I' expand-or-complete-prefix
+
+## autosuggest for zsh ##
+bindkey ',' autosuggest-accept
