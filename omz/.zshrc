@@ -99,3 +99,8 @@ alias et="emacs -nw"
 # git config --global url.https://github.com.cnpmjs.org/.insteadof https://github.com/
 alias doom="~/.emacs.d/bin/doom"
 # export PATH=$PATH:~/.emacs.d/bin
+#
+#
+#
+
+alias cp="cp -r"
