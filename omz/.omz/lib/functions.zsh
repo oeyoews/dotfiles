@@ -250,22 +250,14 @@ function pym() {
   python -m http.server
 }
 
-function 255_color() {
-  for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
-    ${${(M)$((i%6)):#3}:+$'\n'}; done
-  }
-
+# @nvm
 function onvm() {
   export NVM=/usr/share/nvm
   export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
   source $NVM/init-nvm.sh 
 }
 
-function zsh-time() {
-  time zsh -i -c exit
-}
-
-# proxy
+# @proxy
 function onproxy() {
    export https_proxy=http://127.0.0.1:8889
    export http_proxy=http://127.0.0.1:8889
@@ -273,12 +265,29 @@ function onproxy() {
    # curl cip.cc 代理后 cip.cc 访问会很慢
    curl ip.sb
  }
+alias offproxy="unset http_proxy https_proxy all_proxy && curl cip.cc"
 
-function ontmux() {
-  if which tmux >/dev/null 2>&1; then
-    if [ -z "$TMUX" ]; then
-      tmux attach -t default || tmux new -s default
-    fi
-  fi
-}
+
+# @deprecated
+#
+# tmux
+# function ontmux() {
+  # if which tmux >/dev/null 2>&1; then
+    # if [ -z "$TMUX" ]; then
+      # tmux attach -t default || tmux new -s default
+    # fi
+  # fi
+# }
+
+# zsh
+# function zsh-time() {
+  # time zsh -i -c exit
+# }
+
+
+# color
+# function 255color() {
+  # for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
+    # ${${(M)$((i%6)):#3}:+$'\n'}; done
+  # }
 
