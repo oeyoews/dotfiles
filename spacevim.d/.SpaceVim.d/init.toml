@@ -44,6 +44,7 @@ auto_completion_tab_key_behavior = "smart"
 # multi cursor: spc s e
 # spc f r : open recent files
 # spc f f : search file
+# ctrl+p
 [[layers]]
 name = "leaderf"
 

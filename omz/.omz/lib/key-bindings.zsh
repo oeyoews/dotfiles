@@ -147,3 +147,36 @@ bindkey -M viins ' ' magic-space
 
 ## autosuggest for zsh ##
 bindkey ',' autosuggest-accept
+
+
+# surround
+# autoload -Uz surround
+# zle -N delete-surround surround
+# zle -N add-surround surround
+# zle -N change-surround surround
+# bindkey -a cs change-surround
+# bindkey -a ds delete-surround
+# bindkey -a ys add-surround
+#
+#
+# Open current prompt in external editor
+# autoload -Uz edit-command-line; zle -N edit-command-line
+bindkey '^ ' edit-command-line
+
+# bindkey -M viins '^n' history-substring-search-down
+# bindkey -M viins '^p' history-substring-search-up
+bindkey -M viins '^s' history-incremental-pattern-search-backward
+bindkey -M viins '^u' backward-kill-line
+bindkey -M viins '^w' backward-kill-word
+bindkey -M viins '^b' backward-word
+bindkey -M viins '^f' forward-word
+bindkey -M viins '^g' push-line-or-edit
+bindkey -M viins '^a' beginning-of-line
+bindkey -M viins '^e' end-of-line
+bindkey -M viins '^d' push-line-or-edit
+
+# in vi-mode state visual
+bindkey -M vicmd '^k' kill-line
+# like man in vi-mode visual
+bindkey -M vicmd 'H'  run-help
+
