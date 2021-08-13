@@ -288,6 +288,11 @@ alias offproxy="unset http_proxy https_proxy all_proxy && curl cip.cc"
 # color
 function 256color() {
   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
-    ${${(M)$((i%6)):#3}:+$'\n'}; done
+    ${${(M)$((i%12)):#3}:+$'\n'}; done
   }
 
+function nvm_prompt_info() {
+  which nvm &>/dev/null || return
+  local nvm_prompt=${$(nvm current)#v}
+  echo "${ZSH_THEME_NVM_PROMPT_PREFIX}${nvm_prompt}${ZSH_THEME_NVM_PROMPT_SUFFIX}"
+}

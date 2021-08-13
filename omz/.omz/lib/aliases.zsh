@@ -10,6 +10,7 @@
 # alias glogout="gnome-session-quit"
 # alias py='python'
 # alias "pacman-mirrors"='sudo pacman-mirrors -m rank -c China -i'
+# alias update='sudo pacman -Syu'
 
 # @vim
 # vim --startuptime /tmp/vim-startuptime.log xxx.py
@@ -21,12 +22,11 @@ alias viz='vim $HOME/.zshrc'
 alias cdd="cd ~/dotfiles/"
 alias cdn='cd $NOTE/linux'
 alias cdt="cd $HOME/temp"
-alias soz='source $HOME/.zshrc'
+alias soz='source $HOME/.zshrc && exec zsh'
 
 # @system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 alias his='history 100'
-alias update='sudo pacman -Syu'
 alias fast='fastfetch'
 alias open='xdg-open'
 alias c='clear'
@@ -90,3 +90,20 @@ alias ssh="kitty +kitten ssh"
 # alias wego='curl -s wttr.in | lolcat'
 alias wego='curl -s wttr.in'
 
+
+# translate use crow
+
+## @translate
+# alias crow="crow -b"
+# chinese to english
+# usage: crow -h
+# crow -p foo(foo)
+# crow -u bar(=>)
+alias tse='crow -t en'
+# english to system language (chinese)
+alias ts='crow -b'
+
+# Misc
+alias ports='netstat -tulanp'
+alias jc="journalctl -xe"
+alias sc="systemctl"
