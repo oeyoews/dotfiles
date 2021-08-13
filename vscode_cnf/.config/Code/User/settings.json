@@ -50,7 +50,6 @@
     "git.enabled": false,
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
-    "terminal.integrated.fontFamily": "Source Code Variable",
     "window.titleBarStyle": "custom",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "update.mode": "none",
@@ -78,5 +77,6 @@
     "editor.wordWrap": "on",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "editor.fontFamily": "'Droid Sans Mono'",
+    "terminal.integrated.fontFamily": "Droid Sans Mono",
     //  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
 }
