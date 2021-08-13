@@ -1,6 +1,7 @@
 " spacevim vimrc 2021-08-09 13:38:45 
 " 函数 bootstrap_before 将在读取用户配置后执行，
 " 而函数 bootstrap_after 将在 VimEnter autocmd 之后执行。
+" https://yianwillis.github.io/vimcdoc/doc/autocmd.html
 
 " ==
 " before function
@@ -58,6 +59,8 @@ function! myspacevim#after() abort
   " org-mode 
   packloadall
   silent! helptags ALL
+
+  set guifont=Droid\ Sans\ Mono\ 14
 
   " message
   " echom "Enjoy vim! >^.^<"

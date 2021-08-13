@@ -64,6 +64,8 @@ alias ping="ping -c 5"
 alias ipr='ip addr | rg 192'
 
 # @git 
+# git -C ~/.emacs.d/ pull, more info about git ,
+# use tldr(rust) git 
 alias gopen='git-open'
 alias gits='git status'
 alias gitc="git checkout ."
@@ -71,7 +73,13 @@ alias gitr="git rm --cache ."
 alias gitu='git add . && git commit && git push'
 
 
-
 # 防止在某些情况输入过快
-alias vi="nvim"
-alias vim="nvim"
+alias vi="vim"
+# alias vim="nvim"
+
+
+## kitty
+# not recomment use tmux in local
+alias ssh="kitty +kitten ssh"
+# infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
+# kitty list-fonts

@@ -69,10 +69,8 @@ plugins=(
 [[ ! -f ~/.omz/p10k-rainbow.zsh ]] || source ~/.omz/p10k-rainbow.zsh
 
 ## @doom
-# doom() {
 alias eg="emacs"
 alias et="emacs -nw"
-# }
 
 # @doom
 # alias doom="~/.emacs.d/bin/doom"
