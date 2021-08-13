@@ -19,5 +19,6 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting extract)
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
 # source $ZSH/p10k-rainbow.zsh
-ZSH_THEME="p10k/powerlevel10k"
-[[ ! -f ~/.omz/themes/p10k/p10k-rainbow.zsh ]] || source ~/.omz/themes/p10k/p10k-rainbow.zsh
+# ZSH_THEME="p10k/powerlevel10k"
+[[ ! -f $ZSH/themes/p10k/powerlevel10k.zsh-theme ]] || source $ZSH/themes/p10k/powerlevel10k.zsh-theme
+[[ ! -f $ZSH/themes/p10k/p10k-rainbow.zsh ]] || source $ZSH/themes/p10k/p10k-rainbow.zsh

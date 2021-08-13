@@ -116,23 +116,3 @@ for plugin ($plugins); do
     source $ZSH/plugins/$plugin/$plugin.plugin.zsh
   fi
 done
-
-# Load all of your custom configurations from custom/
-# for config_file ($ZSH_CUSTOM/*.zsh(N)); do
-# source $config_file
-# done
-# unset config_file
-
-# Load the theme
-# ?
-if [ ! "$ZSH_THEME" = ""  ]; then
-  # if [ -f "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme" ]; then
-  # source "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme"
-  # elif [ -f "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme" ]; then
-  # source "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme"
-  # if
-    source "$ZSH/themes/$ZSH_THEME.zsh-theme"
-  # fi
-fi
-
-source $ZSH/themes/p10k/powerlevel10k.zsh-theme

@@ -35,7 +35,7 @@
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
-    newline                 # \n
+    # newline                 # \n
     prompt_char             # prompt symbol
   )
 
@@ -100,7 +100,8 @@
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     # time                  # current time
     # =========================[ Line #2 ]=========================
-    newline
+    # not use newline to avoid resizing window become mess
+    # newline
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
     proxy                 # system-wide http/https/ftp proxy

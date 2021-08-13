@@ -18,6 +18,7 @@ alias c='clear'
 alias sctl='systemctl'
 alias pacmans='sudo pacman -S'
 alias yayy="yay -Yc"
+# yay -Qi ssmtp # show info about ssmtp 
 alias cp="cp -r"
 alias yayr='yay -Rscn'
 
@@ -92,6 +93,7 @@ alias jc="journalctl -xe"
 alias sc="systemctl"
 alias zprof="zprof > /tmp/zprof.log"
 alias btop='bpytop'
+alias zsh_time="time (repeat 10 zsh -i -c exit)"
 
 # export
 export NOTE=~/src/note
