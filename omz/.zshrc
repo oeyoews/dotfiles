@@ -75,3 +75,5 @@ alias et="emacs -nw"
 # @doom
 # alias doom="~/.emacs.d/bin/doom"
 export PATH=$PATH:~/.emacs.d/bin
+
+export EDITOR=vim

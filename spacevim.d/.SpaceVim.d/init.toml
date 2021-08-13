@@ -121,4 +121,8 @@ repo = "dstein64/vim-startuptime.git"
 [[custom_plugins]]
 repo = "airblade/vim-gitgutter"
 
+# kitty syntax
+[[custom_plugins]]
+repo = "fladson/vim-kitty"
+
 # [[disable_plugins]]

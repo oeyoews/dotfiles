@@ -2,7 +2,6 @@
 
 # @deprecated
 # alias cp='cp -r -i'
-# alias wego='curl -s wttr.in | lolcat'
 # alias sl='sl | lolcat'
 # alias ts='trans -b'
 # alias figlet='figlet -W -f slant'
@@ -79,7 +78,15 @@ alias vi="vim"
 
 
 ## kitty
-# not recomment use tmux in local
+# Ctrl Shift F6: show kitty config
+# not recomment use `tmux in local
 alias ssh="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
 # kitty list-fonts
+# PYTHONMALLOC=malloc valgrind --tool=massif kitty
+# massif-visualizer massif.out.*
+
+## wego
+# alias wego='curl -s wttr.in | lolcat'
+alias wego='curl -s wttr.in'
+
