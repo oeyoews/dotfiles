@@ -124,6 +124,7 @@ done
 # unset config_file
 
 # Load the theme
+# ?
 if [ ! "$ZSH_THEME" = ""  ]; then
   # if [ -f "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme" ]; then
   # source "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme"
@@ -134,4 +135,4 @@ if [ ! "$ZSH_THEME" = ""  ]; then
   # fi
 fi
 
-source $ZSH/p10k/powerlevel10k.zsh-theme
+source $ZSH/themes/p10k/powerlevel10k.zsh-theme

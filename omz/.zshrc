@@ -14,7 +14,7 @@ export ZSH_DISABLE_COMPFIX="true"
 # omz
 export ZSH=~/.omz
 plugins=(zsh-autosuggestions zsh-syntax-highlighting extract)
-source $ZSH/oh-my-zsh.sh
+[[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.omz/p10k-rainbow.zsh.
