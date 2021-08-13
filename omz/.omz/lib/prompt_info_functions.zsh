@@ -41,3 +41,17 @@ ZSH_THEME_RVM_PROMPT_OPTIONS="i v g"
 function ruby_prompt_info() {
   echo $(rvm_prompt_info || rbenv_prompt_info || chruby_prompt_info)
 }
+
+
+# C-z to toggle current process (background/foreground)
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    BUFFER="fg"
+    zle accept-line
+  else
+    zle push-input
+    zle clear-screen
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z

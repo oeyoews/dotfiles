@@ -1,30 +1,15 @@
-# some personal alias
-
-# @deprecated
-# alias cp='cp -r -i'
-# alias sl='sl | lolcat'
-# alias ts='trans -b'
-# alias figlet='figlet -W -f slant'
-# alias worms='wormhole send'
-# alias wormr='wormhole receive'
-# alias glogout="gnome-session-quit"
-# alias py='python'
-# alias "pacman-mirrors"='sudo pacman-mirrors -m rank -c China -i'
-# alias update='sudo pacman -Syu'
-
-# @vim
+# vim
 # vim --startuptime /tmp/vim-startuptime.log xxx.py
 alias vito='vim ~/todo.org'
 alias viz='vim $HOME/.zshrc'
 
-
-# @path
+# path
 alias cdd="cd ~/dotfiles/"
 alias cdn='cd $NOTE/linux'
 alias cdt="cd $HOME/temp"
 alias soz='source $HOME/.zshrc && exec zsh'
 
-# @system
+# system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 alias his='history 100'
 alias fast='fastfetch'
@@ -36,26 +21,24 @@ alias yayy="yay -Yc"
 alias cp="cp -r"
 alias yayr='yay -Rscn'
 
-# @on
+# on
 alias 'onkvm'='sudo virt-manager'
 alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.service'
 alias 'onbluetooth'="sudo systemctl start bluetooth.service"
 
-# @software
+# software
 alias ra='ranger'
 alias dust="dust -r"
 alias rm='trash'
 alias ms='musicbox'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
-#
+
 # Chinese to English
 # arguments: -p -u
 alias tse='crow -t en'
 # English to Chinese
 alias ts='crow -b'
-#
-alias btop='bpytop'
 
 # @internet
 alias cip='curl cip.cc'
@@ -107,3 +90,16 @@ alias ts='crow -b'
 alias ports='netstat -tulanp'
 alias jc="journalctl -xe"
 alias sc="systemctl"
+alias zprof="zprof > /tmp/zprof.log"
+alias btop='bpytop'
+
+# export
+export NOTE=~/src/note
+export PATH=$PATH:~/.emacs.d/bin
+export EDITOR=vim
+
+# doom emacs
+# time emacs -q -e kill-emacs
+# time emacs -e kill-emacs
+alias eg="emacs"
+alias et="emacs -nw"

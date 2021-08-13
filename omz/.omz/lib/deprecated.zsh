@@ -44,3 +44,16 @@
 # echo $XDG_SESSION_TYPE
 # show all linkfile : ls -al | grep -- \-\>
 
+# alias doom="~/.emacs.d/bin/doom"
+#
+# @deprecated
+# alias cp='cp -r -i'
+# alias sl='sl | lolcat'
+# alias ts='trans -b'
+# alias figlet='figlet -W -f slant'
+# alias worms='wormhole send'
+# alias wormr='wormhole receive'
+# alias glogout="gnome-session-quit"
+# alias py='python'
+# alias "pacman-mirrors"='sudo pacman-mirrors -m rank -c China -i'
+# alias update='sudo pacman -Syu'
