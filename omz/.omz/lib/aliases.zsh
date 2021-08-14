@@ -101,6 +101,8 @@ export PATH=$PATH:~/.emacs.d/bin
 export EDITOR=vim
 
 # doom emacs
+# emacs -nw -Q 
+# emacs -Q <--color=no>
 # time emacs -q -e kill-emacs
 # time emacs -e kill-emacs
 alias eg="emacs"

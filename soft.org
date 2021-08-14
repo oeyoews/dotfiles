@@ -1,7 +1,8 @@
-* Software
+# if use kimpanel, not use this skin
+# fcitx5-material-color      # input skin
 flameshot
-cmake
-cloc # like wc
+# cmake
+# cloc # like wc
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 gnome-keyring              # for vscode synchronize
@@ -18,15 +19,15 @@ netease-cloud-music        # music
 manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
 # python-pip
-tmux
+# tmux
 # konsole(取消重拍)
 xunlei-bin                 # xunlei
 # (xtreme download manager)
-xdm
-powertop # 耗电分析
+# xdm
+# powertop # 耗电分析
 # mysql tool
-mycli
-typora
+# mycli
+# typora
 foliate                    # book read
 obs                        # record video
 # system clipboard link
@@ -37,11 +38,11 @@ ranger
 
 # secure rm
 trash-cli
-google-chrome
-firefox
+# google-chrome
+# firefox
 # neofetch deprecate
 fastfetch
-lolcat
+# lolcat
 # ls -al | xclip
 # 防火墙
 # gufw
@@ -57,8 +58,8 @@ fzf
 tree
 shellcheck                 # check error language
 ventoy
-#
-#========= fcitx5
+
+# Fcitx5
 # pacman (auto install fcitx-im)
 manjaro-asian-input-support-fcitx5
 # 词库 pacman
@@ -69,42 +70,35 @@ fcitx5-pinyin-moegirl
 # C-` 调整为简化字
 fcitx5-rime
 #========
-#
+
 nvm                        # node 版本管理
 # virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
-wechat-uos                 # wechat
+# wechat-uos                 # wechat
 # wudao-dict-git             # wudao directory
 jdk8-openjdk               # jdk
-fgit                       # hub.fastgit.org
-deskreen                   # 投屏软件
+# fgit                       # hub.fastgit.org
+# deskreen                   # 投屏软件
 # idea
-intellij-idea-ultimate-edition
-filezilla # file transfer
-# auto add .pam_env  like
+# intellij-idea-ultimate-edition
+# filezilla # file transfer
 # npm fast open repo
 git-open
-# (F3 extra pane)
 # yay
-# if use kimpanel, not use this skin
-fcitx5-material-color      # input skin
-pip install magic-wormhole
+# pip install magic-wormhole
 sudo pacman -S python-pip
 # pip
 magic-wormhole netease-musicbox
 
 # gnome-extensions list
-trayIconsReloaded@selfmade.pl
+trayIconsReloaded
 lock
-transparent-shell@siroj42.github.io
-caffeine@patapon.info
-GPaste@gnome-shell-extensions.gnome.org
-# unite@hardpixel.eu
-windowsNavigator@gnome-shell-extensions.gcampax.github.com
-kimpanel@kde.org
+GPaste
+kimpanel
 
 # start: mocp
 moc
+
 # translate
 crow-translate
 
@@ -114,10 +108,15 @@ asciinema
 
 # kate
 
+# modern terminal
 kitty
+
+# analyse memory
 valgrind
 massif-visualizer
+
 # markdown to cat
 mdcat
 
+# picture show
 inkscape

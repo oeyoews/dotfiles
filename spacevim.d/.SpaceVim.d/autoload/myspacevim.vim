@@ -3,67 +3,46 @@
 " 而函数 bootstrap_after 将在 VimEnter autocmd 之后执行。
 " https://yianwillis.github.io/vimcdoc/doc/autocmd.html
 
-" ==
-" before function
-" ==
 function! myspacevim#before() abort
   let g:mapleader = ','
   set nu
-  "  better read
-  set showbreak=->
+  " set sbr=->
+  set noswf
   set so=3
-
-  " shell title
-  autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
-  function  AddTitleForShell()
-    call append(0,"# CreatTime: ".strftime("%Y-%m-%d %H:%M"))
-    call append(1,"#!/bin/bash")
-  endfunction
-
- " c shell
-  autocmd BufNewFile *.c exec ":call AddTitleForC()"
-  function  AddTitleForC()
-    call append(0,"// CreatTime: ".strftime("%Y-%m-%d %H:%M"))
-    call append(1,"#include <stdio.h>")
-  endfunction
-
-  let s:NOTIFY = SpaceVim#api#import('notify')
-  " call s:NOTIFY.notify('This is a simple notification!')
-
 endfunction
 
-" ==
-" after function
-" ==
 function! myspacevim#after() abort
-
-  " @deprecated
-  " better cursor 
-  " if has("autocmd")
-    " au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-    " au InsertEnter,InsertChange *
-          " \ if v:insertmode == 'i' |
-          " \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-          " \ elseif v:insertmode == 'r' |
-          " \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-          " \ endif
-    " au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-  " endif
-
-  " insert format time 
+  " fix after
+  set ss=1
+  " insert time 
   iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
-
   "  share system clipboard
   set clipboard^=unnamed 
-
-  set wrap
-
-  " org-mode 
-  packloadall
-  silent! helptags ALL
-
+  " fix after wrap
+  set nowrap
+  " gui font
   set guifont=Droid\ Sans\ Mono\ 14
+endfunction
 
-  " message
-  " echom "Enjoy vim! >^.^<"
+" auto add head title
+function! myspacevim#before() abort
+  " todo 
+  " sh
+  autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
+  function  AddTitleForShell()
+    call append(0,"#!/bin/bash")
+    call append(1,"# CreatTime: ".strftime("%Y-%m-%d %H:%M"))
+    normal G 
+    normal o
+  endfunction
+
+  " c
+  autocmd BufNewFile *.c exec ":call AddTitleForC()"
+  function  AddTitleForC()
+    call append(0,"#include <stdio.h>")
+    call append(1,"// CreatTime: ".strftime("%Y-%m-%d %H:%M"))
+    normal G 
+    normal o
+  endfunction
+
 endfunction

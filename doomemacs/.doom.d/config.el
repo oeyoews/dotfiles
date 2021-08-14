@@ -25,7 +25,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "Droid Sans Mono" :size 16 :weight 'semi-light)
+(setq doom-font (font-spec :family "Droid Sans Mono" :size 26 :weight 'semi-light))
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 ;; (setq doom-font (font-spec :family "Droid Sans Mono" :size 20))
 ;; doom-variable-pitch-font (font-spec :family "sans" :size 16))

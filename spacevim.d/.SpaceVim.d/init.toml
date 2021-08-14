@@ -1,5 +1,7 @@
 # vimscript tutorial: 
 # https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
+# https://learnvimscriptthehardway.stevelosh.com/
+# https://vimjc.com/
 
 # Check log: SPC h L 
 # for neovim: python-neovim(pacman)
@@ -114,8 +116,8 @@ repo = 'jceb/vim-orgmode'
 # merged = true
 
 
-[[custom_plugins]]
-repo = "dstein64/vim-startuptime.git"
+# [[custom_plugins]]
+# repo = "dstein64/vim-startuptime.git"
 # merged = true
 
 # just for git files is effect

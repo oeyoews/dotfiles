@@ -31,7 +31,13 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
+    time                  # current time
     os_icon                 # os identifier
+    # todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
+    # taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
+    background_jobs         # presence of background jobs
+    status                  # exit code of the last command
+    proxy                 # system-wide http/https/ftp proxy
     dir                     # current directory
     vcs                     # git status
     # =========================[ Line #2 ]=========================
@@ -45,9 +51,7 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     # =========================[ Line #1 ]=========================
-    status                  # exit code of the last command
     # command_execution_time  # duration of the last command
-    background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
@@ -95,16 +99,12 @@
     # disk_usage            # disk usage
     # ram                   # free RAM
     # swap                  # used swap
-    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
-    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
-    # time                  # current time
+    # timewarrior             # timewarrior tracking status (https://timewarrior.net/)
     # =========================[ Line #2 ]=========================
     # not use newline to avoid resizing window become mess
     # newline
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
-    proxy                 # system-wide http/https/ftp proxy
     # battery               # internal battery
     # wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
