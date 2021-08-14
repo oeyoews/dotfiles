@@ -13,6 +13,7 @@ endfunction
 function! myspacevim#after() abort
   " fix after
   set ss=1
+  set nobackup
   " no swapfile
   set noswf
   " insert time 

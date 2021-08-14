@@ -2,6 +2,7 @@
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Zle-Builtins
 # http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Standard-Widgets
 # https://zsh.sourceforge.io/Intro/intro_toc.html
+# bindkey > /tmp/bindkey.md
 
 # Make sure that the terminal is in application mode when zle is active, since
 # only then values from $terminfo are valid
@@ -163,8 +164,8 @@ bindkey ',' autosuggest-accept
 # autoload -Uz edit-command-line; zle -N edit-command-line
 bindkey '^ ' edit-command-line
 
-# bindkey -M viins '^n' history-substring-search-down
-# bindkey -M viins '^p' history-substring-search-up
+bindkey -M viins '^p' history-search-backward
+bindkey -M viins '^n' history-search-forward
 bindkey -M viins '^s' history-incremental-pattern-search-backward
 bindkey -M viins '^u' backward-kill-line
 bindkey -M viins '^w' backward-kill-word

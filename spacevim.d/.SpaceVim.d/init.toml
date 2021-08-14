@@ -28,10 +28,11 @@ bootstrap_before = "myspacevim#before"
 bootstrap_after  = "myspacevim#after"
 
 # option: vimfiler nerdtree defx
-filemanager = "vimfiler"
+filemanager = "nerdtree"
 
 # option: onedark gruvbox
 colorscheme = "palenight"
+# colorscheme_bg = "dark"
 
 # font
 guifont = "Droid Sans Mono:h11"
@@ -127,5 +128,11 @@ repo = "airblade/vim-gitgutter"
 # kitty syntax
 [[custom_plugins]]
 repo = "fladson/vim-kitty"
+
+[[custom_plugins]]
+repo = "ryanoasis/vim-devicons"
+
+[[custom_plugins]]
+repo = "dracula/vim"
 
 # [[disable_plugins]]

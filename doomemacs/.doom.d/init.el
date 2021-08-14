@@ -118,7 +118,6 @@
        ;;agda              ; types of types of types of types...
        ;;beancount         ; mind the GAAP
        ;; cc                ; C > C++ == 1
-       ;;(cc +lsp)
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -156,8 +155,7 @@
        ;; org              ; organize your plain life in plain text
        (org +pretty
             +present
-            +roam2
-            )
+            +roam2)
        php                 ; perl's insecure younger brother
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
@@ -178,8 +176,7 @@
        ;;terra             ; Earth and Moon in alignment for performance.
        ;;web               ; the tubes
        yaml              ; JSON, but readable
-       ;; need install zig use pacman
-       zig                 ; C, but simpler
+       zig                 ; C, but simpler;; need install zig use pacman
 
        :email
        ;;(mu4e +org +gmail)

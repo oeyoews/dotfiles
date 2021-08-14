@@ -110,6 +110,7 @@ asciinema
 
 # modern terminal
 kitty
+alacritty
 
 # analyse memory
 valgrind
@@ -120,3 +121,8 @@ mdcat
 
 # picture show
 inkscape
+
+# fast find config
+# sudo updatedb
+# comannd: locate [file-name]
+mlocate

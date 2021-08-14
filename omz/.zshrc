@@ -29,6 +29,8 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+export HISCONTROL=ignoreboth
+
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.omz/themes/p10k/p10k-rainbow.zsh.
 [[ ! -f $ZSH/themes/p10k/powerlevel10k.zsh-theme ]] || source $ZSH/themes/p10k/powerlevel10k.zsh-theme
