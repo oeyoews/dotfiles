@@ -69,6 +69,9 @@ alias ssh="kitty +kitten ssh"
 # kitty list-fonts
 # PYTHONMALLOC=malloc valgrind --tool=massif kitty
 # massif-visualizer massif.out.*
+alias kcat="kitty +kitten icat"
+alias kdiff="kitty +kitten diff"
+alias kemoj="kitty +kitten unicode_input"
 
 ## wego
 # alias wego='curl -s wttr.in | lolcat'

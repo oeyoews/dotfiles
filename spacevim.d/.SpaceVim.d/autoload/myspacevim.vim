@@ -7,13 +7,14 @@ function! myspacevim#before() abort
   let g:mapleader = ','
   set nu
   " set sbr=->
-  set noswf
   set so=3
 endfunction
 
 function! myspacevim#after() abort
   " fix after
   set ss=1
+  " no swapfile
+  set noswf
   " insert time 
   iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
   "  share system clipboard
