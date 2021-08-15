@@ -181,3 +181,17 @@ bindkey -M vicmd '^k' kill-line
 # like man in vi-mode visual
 bindkey -M vicmd 'H'  run-help
 
+
+# C-z to toggle current process (background/foreground)
+# need in zshrc is effect
+# fancy-ctrl-z () {
+  # if [[ $#BUFFER -eq 0 ]]; then
+    # BUFFER="fg"
+    # zle accept-line
+  # else
+    # zle push-input
+    # zle clear-screen
+  # fi
+# }
+# zle -N fancy-ctrl-z
+# bindkey '^Z' fancy-ctrl-z

@@ -157,4 +157,4 @@
 ;; ispell tips error
 (setq company-ispell-dictionary ispell-dictionary)
 
-;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
+(setq ispell-alternate-dictionary ispell-alternate-dictionary)

@@ -11,12 +11,10 @@ alias soz='source $HOME/.zshrc && exec zsh'
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
-alias his='history 100'
-alias fast='fastfetch'
+alias neo='fastfetch'
 alias open='xdg-open'
 alias c='clear'
-alias sctl='systemctl'
-alias pacmans='sudo pacman -S'
+alias pas='sudo pacman -S'
 alias yayy="yay -Yc"
 # yay -Qi ssmtp # show info about ssmtp 
 alias cp="cp -r"

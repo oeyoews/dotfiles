@@ -20,6 +20,7 @@
        ;;layout            ; auie,ctsrnm is the superior home row
 
        :completion
+       yasnippets
        company          ; the ultimate code completion backend
        ;; (company +childframe)
        ;;helm              ; the *other* search engine for love and life
@@ -74,7 +75,7 @@
        (dired +icons)            ; making dired pretty [functional]
        electric          ; smarter, keyword-based electric-indent
        (ibuffer +icons)        ; interactive buffer management
-       undo              ; persistent, smarter undo for your inevitable mistakes
+       (undo  +tree)            ; persistent, smarter undo for your inevitable mistakes
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -148,7 +149,7 @@
        ;;lean              ; for folks with too much to prove
        ;;ledger            ; be audit you can be
        ;;lua               ; one-based indices? one-based indices
-       markdown            ; writing docs for people to ignore
+       (markdown  +grip)          ; writing docs for people to ignore
        ;;nim               ; python + lisp at the speed of c
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
@@ -175,8 +176,8 @@
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        ;;web               ; the tubes
-       yaml              ; JSON, but readable
-       zig                 ; C, but simpler;; need install zig use pacman
+       (yaml +lsp)             ; JSON, but readable
+       (zig  +lsp)               ; C, but simpler;; need install zig use pacman and zls-bin for lsp
 
        :email
        ;;(mu4e +org +gmail)

@@ -126,3 +126,8 @@ inkscape
 # sudo updatedb
 # comannd: locate [file-name]
 mlocate
+
+htim(instead htop)
+
+# reading
+calibre
