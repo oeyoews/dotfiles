@@ -15,14 +15,15 @@ export ZSH_DISABLE_COMPFIX="true"
 export ZSH=~/.omz
 plugins=(zsh-autosuggestions  extract zsh-syntax-highlighting)
 ZSH_THEME="p10k/powerlevel10k"
+# ZSH_THEME="archcraft"
+DISABLE_AUTO_UPDATE=true
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.omz/themes/p10k/p10k-rainbow.zsh.
-
-# [[ ! -f $ZSH/themes/p10k/powerlevel10k.zsh-theme ]] || source $ZSH/themes/p10k/powerlevel10k.zsh-theme
 [[ ! -f $ZSH/themes/p10k/p10k-rainbow.zsh ]] || source $ZSH/themes/p10k/p10k-rainbow.zsh
 
+# starship
 # need install starship
 # to instead of powerlevel10k
 # eval "$(starship init zsh)"

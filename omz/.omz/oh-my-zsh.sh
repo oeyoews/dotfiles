@@ -3,14 +3,14 @@
 
 # Set ZSH_CACHE_DIR to the path where cache files should be created
 # or else we will use the default cache/
-# if [[ -z "$ZSH_CACHE_DIR" ]]; then
-  # ZSH_CACHE_DIR="$ZSH/cache"
-# fi
+if [[ -z "$ZSH_CACHE_DIR" ]]; then
+  ZSH_CACHE_DIR="$ZSH/cache"
+fi
 
 # Check for updates on initial load...
-# if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
-  # source $ZSH/tools/check_for_upgrade.sh
-# fi
+if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
+  source $ZSH/tools/check_for_upgrade.sh
+fi
 
 # Initializes Oh My Zsh
 

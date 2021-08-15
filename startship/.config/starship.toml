@@ -19,11 +19,11 @@
 
 #Configure the format of the prompt.
 format = """
-[╭─](white) $shell \
+[](white) $shell \
 $directory\
 $username\
 $git_status [](white) ${custom.time} $battery $cmd_duration
-[╰─](white) $character
+[](white) $character
 """
 
 #Timeout for starship to scan files (in milliseconds).
