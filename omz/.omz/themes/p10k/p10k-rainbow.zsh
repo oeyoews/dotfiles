@@ -35,6 +35,14 @@
     proxy                 # system-wide http/https/ftp proxy
     status                  # exit code of the last command
     # os_icon                 # os identifier
+    ranger                  # ranger shell (https://github.com/ranger/ranger)
+    vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
+    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
+    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
+    background_jobs         # presence of background jobs
+    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
+    battery               # internal battery
+    command_execution_time  # duration of the last command
     dir                     # current directory
     vcs                     # git status
     # prompt_char           # prompt symbol
@@ -45,8 +53,6 @@
   # automatically hidden when the input line reaches it. Right prompt above the
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-    command_execution_time  # duration of the last command
-    background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
@@ -82,24 +88,18 @@
     google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     context                 # user@hostname
     nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
-    ranger                  # ranger shell (https://github.com/ranger/ranger)
     nnn                     # nnn shell (https://github.com/jarun/nnn)
     xplr                    # xplr shell (https://github.com/sayanarijit/xplr)
     vim_shell               # vim shell indicator (:sh)
     midnight_commander      # midnight commander shell (https://midnight-commander.org/)
     nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
-    vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
     # vpn_ip                # virtual private network indicator
     # load                  # CPU load
     # disk_usage            # disk usage
     # ram                   # free RAM
     # swap                  # used swap
-    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
-    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
-    # battery               # internal battery
     # wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
   )
