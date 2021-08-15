@@ -41,8 +41,8 @@
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
     background_jobs         # presence of background jobs
     todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    battery               # internal battery
-    command_execution_time  # duration of the last command
+    # battery               # internal battery
+    # command_execution_time  # duration of the last command
     dir                     # current directory
     vcs                     # git status
     # prompt_char           # prompt symbol

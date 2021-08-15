@@ -132,7 +132,7 @@ repo = "fladson/vim-kitty"
 [[custom_plugins]]
 repo = "ryanoasis/vim-devicons"
 
-[[custom_plugins]]
-repo = "dracula/vim"
+# [[custom_plugins]]
+# repo = "dracula/vim"
 
 # [[disable_plugins]]
