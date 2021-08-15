@@ -131,3 +131,8 @@ htim(instead htop)
 
 # reading
 calibre
+
+
+bat
+tokei
+procs
