@@ -18,5 +18,9 @@ plugins=(zsh-autosuggestions  extract zsh-syntax-highlighting)
 
 # p10k
 # To customize prompt, run `p10k configure` or edit ~/.omz/themes/p10k/p10k-rainbow.zsh.
-[[ ! -f $ZSH/themes/p10k/powerlevel10k.zsh-theme ]] || source $ZSH/themes/p10k/powerlevel10k.zsh-theme
-[[ ! -f $ZSH/themes/p10k/p10k-rainbow.zsh ]] || source $ZSH/themes/p10k/p10k-rainbow.zsh
+# [[ ! -f $ZSH/themes/p10k/powerlevel10k.zsh-theme ]] || source $ZSH/themes/p10k/powerlevel10k.zsh-theme
+# [[ ! -f $ZSH/themes/p10k/p10k-rainbow.zsh ]] || source $ZSH/themes/p10k/p10k-rainbow.zsh
+
+# need install starship
+# to instead of powerlevel10k
+eval "$(starship init zsh)"
