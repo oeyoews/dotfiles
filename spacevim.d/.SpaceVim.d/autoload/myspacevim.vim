@@ -7,7 +7,7 @@ function! myspacevim#before() abort
   let g:mapleader = ','
   set nu
   " set sbr=->
-  set so=3
+  " set so=3
 endfunction
 
 function! myspacevim#after() abort

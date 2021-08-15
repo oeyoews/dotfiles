@@ -30,8 +30,8 @@ bootstrap_after  = "myspacevim#after"
 # option: vimfiler nerdtree defx
 filemanager = "nerdtree"
 
-# option: onedark gruvbox
-colorscheme = "palenight"
+# option: onedark gruvbox nord palenight
+colorscheme = "onedark"
 # colorscheme_bg = "dark"
 
 # font

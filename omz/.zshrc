@@ -19,11 +19,13 @@ ZSH_THEME="p10k/powerlevel10k"
 DISABLE_AUTO_UPDATE=true
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 
-# p10k
-# To customize prompt, run `p10k configure` or edit ~/.omz/themes/p10k/p10k-rainbow.zsh.
-[[ ! -f $ZSH/themes/p10k/p10k-rainbow.zsh ]] || source $ZSH/themes/p10k/p10k-rainbow.zsh
-
 # starship
 # need install starship
 # to instead of powerlevel10k
 # eval "$(starship init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.omz/themes/p10k/p10k-rainbow.zsh.
+[[ ! -f ~/.omz/themes/p10k/p10k-rainbow.zsh ]] || source ~/.omz/themes/p10k/p10k-rainbow.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/omz/.omz/themes/p10k/p10k-rainbow.zsh.
+# [[ ! -f ~/dotfiles/omz/.omz/themes/p10k/p10k-rainbow.zsh ]] || source ~/dotfiles/omz/.omz/themes/p10k/p10k-rainbow.zsh
