@@ -2,22 +2,23 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "JetBrains Mono Medium"
+    # JetBrains Mono Medium
+    family: "Droid Sans Mono"
     #style: Regular
 
   # Bold font face
   bold:
-    family: "JetBrains Mono Medium"
+    family: "Droid Sans Mono"
     #style: Bold
 
   # Italic font face
   italic:
-    family: "JetBrains Mono Medium"
+    family: "Droid Sans Mono"
     #style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "JetBrains Mono Medium"
+    family: "Droid Sans Mono"
     #style: Bold Italic
 
   # Point size

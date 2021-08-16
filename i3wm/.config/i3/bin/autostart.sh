@@ -28,7 +28,7 @@ hsetroot -cover ~/.config/i3/wallpapers/default.png
 ~/.config/i3/bin/i3dunst.sh
 
 # qv2ray
-exec --no-startup-id qv2ray
+exec  qv2ray
 
 # fcitx5
 exec --no-startup-id fcitx5
