@@ -40,7 +40,7 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;; doom-one doom-dracula doom-vibrant
-(setq doom-theme 'doom-dracula)
+(setq doom-theme 'doom-solarized-dark)
 
 ;; org
 ;; If you use `org' and don't want your org files in the default location below,
@@ -148,13 +148,13 @@
 ;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 
 ;; rename doom homepage
-(setq doom-fallback-buffer-name "Doom"
-      +doom-dashboard-name "Doom")
+(setq doom-fallback-buffer-name "doom"
+      +doom-dashboard-name "doom")
 
 ;; use yasnipets
 (setq yas-triggers-in-field t)
 
 ;; ispell tips error
-(setq company-ispell-dictionary ispell-dictionary)
+;; (setq company-ispell-dictionary ispell-dictionary)
 
 (setq ispell-alternate-dictionary ispell-alternate-dictionary)

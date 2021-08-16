@@ -15,7 +15,7 @@ enable_guicolors = true
 # top statine
 statusline_iseparator = "arrow"
 # buttom statine
-statusline_separator = "arrow"
+statusline_separator = "slant"
 
 ## Icon type
 
@@ -31,7 +31,7 @@ bootstrap_after  = "myspacevim#after"
 filemanager = "nerdtree"
 
 # option: onedark gruvbox nord palenight
-colorscheme = "onedark"
+colorscheme = "NeoSolarized"
 # colorscheme_bg = "dark"
 
 # font

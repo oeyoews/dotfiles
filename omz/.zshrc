@@ -6,6 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # zmodload zsh/zprof
+# zsh -f (vanilla zsh)
 
 export ZSH_DISABLE_COMPFIX="true"
 
@@ -15,7 +16,7 @@ plugins=(zsh-autosuggestions extract zsh-syntax-highlighting)
 ZSH_THEME="p10k/powerlevel10k"
 
 # ZSH_THEME="random"
-# ZSH_THEME_RANDOM_CANDIDATES=(
+# ZSH_THEME_RANDOM_CNDIDATES=(
   # "p10k/powerlevel10k"
   # "archcraft")
 
