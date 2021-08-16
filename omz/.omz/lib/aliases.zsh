@@ -60,7 +60,10 @@ alias vi="vim"
 
 
 ## kitty
-# Ctrl Shift F6: show kitty config
+# mod F6: show kitty config
+# mod backspace
+# mode q
+# mode t
 # not recomment use `tmux in local
 alias ssh="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin

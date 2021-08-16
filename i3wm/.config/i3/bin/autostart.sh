@@ -21,10 +21,17 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Restore wallpaper
+# need install `hsetroot
 hsetroot -cover ~/.config/i3/wallpapers/default.png
 
 # Lauch notification daemon
 ~/.config/i3/bin/i3dunst.sh
+
+# qv2ray
+exec --no-startup-id qv2ray
+
+# fcitx5
+exec --no-startup-id fcitx5
 
 # Lauch polybar
 ~/.config/i3/bin/i3bar.sh

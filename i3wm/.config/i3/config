@@ -2,12 +2,14 @@
 ## Created by : Aditya Shakya | <adi1090x>
 
 ##-- Mod Keys ----------------------------
-set $mod Mod4
+# Mod4 is super, use command `xmodmap to check it
+set $mod Mod4  
 set $alt Mod1
 
 ##-- Fonts (Global) ----------------------
 # font pango:JetBrains Mono Medium 10
-font pango:JetBrains Mono Medium 18
+# font pango:JetBrains Mono Medium 18
+font pango:Droid Sans Mono 18
 
 ##-- Gaps --------------------------------
 
@@ -50,9 +52,11 @@ exec_always --no-startup-id ~/.config/i3/bin/autostart.sh
 # -- Apps --
 bindsym $mod+Return exec ~/.config/i3/bin/i3term.sh
 bindsym $mod+Shift+Return exec ~/.config/i3/bin/i3term.sh -f
-bindsym $mod+Shift+f exec thunar
-bindsym $mod+Shift+e exec geany
-bindsym $mod+Shift+w exec firefox
+bindsym $mod+Shift+f exec nemo
+bindsym $mod+Shift+e exec vim
+
+# or use Proxy SwitchOmega
+bindsym $mod+Shift+w exec google-chrome-stable --proxy-server=socks5://127.0.0.1:1089
 
 # -- Rofi --
 bindsym $alt+F1 exec ~/.config/i3/rofi/bin/launcher
@@ -74,7 +78,8 @@ bindsym XF86AudioMute exec --no-startup-id amixer set Master toggle
 # -- i3wm --
 
 # Lockscreen
-bindsym $alt+Control+l exec ~/.config/i3/bin/i3lock.sh
+# bindsym $alt+Control+l exec ~/.config/i3/bin/i3lock.sh
+bindsym $alt+l exec ~/.config/i3/bin/i3lock.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
