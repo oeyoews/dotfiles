@@ -136,3 +136,6 @@ calibre
 bat
 tokei
 procs
+
+seq
+shuffle(command is shuf)
