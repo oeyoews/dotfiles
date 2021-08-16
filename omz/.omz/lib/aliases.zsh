@@ -101,10 +101,13 @@ alias zsh_time="time (repeat 10 zsh -i -c exit)"
 alias vik="vim ~/.config/kitty/kitty.conf"
 alias via="vim ~/.config/alacritty/alacritty.yml"
 
-# export
+# Export
 export NOTE=~/src/note
 export PATH=$PATH:~/.emacs.d/bin
 export EDITOR=vim
+# better man page
+# pkg: bat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # doom emacs
 # emacs -nw -Q 
