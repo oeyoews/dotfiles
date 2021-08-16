@@ -10,22 +10,6 @@ function! myspacevim#before() abort
   " set so=3
 endfunction
 
-function! myspacevim#after() abort
-  " fix after
-  set ss=1
-  set nobackup
-  " no swapfile
-  set noswf
-  " insert time 
-  iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
-  "  share system clipboard
-  set clipboard^=unnamed 
-  " fix after wrap
-  set nowrap
-  " gui font
-  set guifont=Droid\ Sans\ Mono\ 14
-endfunction
-
 " auto add head title
 function! myspacevim#before() abort
   " todo 
@@ -47,4 +31,37 @@ function! myspacevim#before() abort
     normal o
   endfunction
 
+endfunction
+
+" translate keybindings
+function! myspacevim#before() abort
+  """ Configuration example
+  " Echo translation in the cmdline
+  nmap <silent> <Leader>t <Plug>Translate
+  vmap <silent> <Leader>t <Plug>TranslateV
+  " Display translation in a window
+  nmap <silent> <Leader>w <Plug>TranslateW
+  vmap <silent> <Leader>w <Plug>TranslateWV
+  " Replace the text with translation
+  nmap <silent> <Leader>r <Plug>TranslateR
+  vmap <silent> <Leader>r <Plug>TranslateRV
+  " Translate the text in clipboard
+  nmap <silent> <Leader>x <Plug>TranslateX
+endfunction
+
+
+function! myspacevim#after() abort
+  " fix after
+  set ss=1
+  set nobackup
+  " no swapfile
+  set noswf
+  " insert time 
+  iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+  "  share system clipboard
+  set clipboard^=unnamed 
+  " fix after wrap
+  set nowrap
+  " gui font
+  set guifont=Droid\ Sans\ Mono\ 14
 endfunction
