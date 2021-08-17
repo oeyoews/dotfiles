@@ -8,25 +8,20 @@
 " ===============================
 function! myspacevim#before() abort
   set nu
-  " set sbr=-> " set so=3
+  " autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
+  " function  AddTitleForShell()
+    " call append(0,"#!/bin/bash")
+    " call append(1,"# CreatTime: ".strftime("%Y-%m-%d %H:%M"))
+    " normal G
+    " normal o
   " endfunction
-
-  " auto add head title
-  " function! myspacevim#before() abort
-  autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
-  function  AddTitleForShell()
-    call append(0,"#!/bin/bash")
-    call append(1,"# CreatTime: ".strftime("%Y-%m-%d %H:%M"))
-    normal G 
-    normal o
-  endfunction
-  autocmd BufNewFile *.c exec ":call AddTitleForC()"
-  function  AddTitleForC()
-    call append(0,"#include <stdio.h>")
-    call append(1,"// CreatTime: ".strftime("%Y-%m-%d %H:%M"))
-    normal G 
-    normal o
-  endfunction
+  " autocmd BufNewFile *.c exec ":call AddTitleForC()"
+  " function  AddTitleForC()
+    " call append(0,"#include <stdio.h>")
+    " call append(1,"// CreatTime: ".strftime("%Y-%m-%d %H:%M"))
+    " normal G
+    " normal o
+  " endfunction
   " endfunction
 
   " translate keybindings
@@ -65,27 +60,6 @@ function! myspacevim#after() abort
   set clipboard^=unnamed 
   " gui font
   set guifont=Droid\ Sans\ Mono\ 14
-
-  " modidfy this cursor line status
-  " bug it is shine, so deprecated templately.
-  " if has("autocmd")
-    " au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
-    " au InsertEnter,InsertChange *
-          " \ if v:insertmode == 'i' |
-          " \   silent execute '!echo -ne "\e[6 q"' | redraw! |
-          " \ elseif v:insertmode == 'r' |
-          " \   silent execute '!echo -ne "\e[4 q"' | redraw! |
-          " \ endif
-    " au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
-  " endif
-
-
-
 nnoremap <leader>qq :q!<CR>
 nnoremap <leader>w :w<CR>
-
-
-
-  
-
 endfunction
