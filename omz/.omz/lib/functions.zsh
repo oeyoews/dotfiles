@@ -258,16 +258,25 @@ function onvm() {
 }
 
 # @proxy
-function onproxy() {
+function onproxy1() {
    export https_proxy=http://127.0.0.1:8889
    export http_proxy=http://127.0.0.1:8889
    export all_proxy=socks5://127.0.0.1:1089
    # curl cip.cc 代理后 cip.cc 访问会很慢
    # curl ip.sb
  }
-alias offproxy="unset http_proxy https_proxy all_proxy && curl cip.cc"
+alias offproxy1="unset http_proxy https_proxy all_proxy && curl cip.cc"
 
 
+# NOTE: need to `sudo systemctl enable v2raya and start v2raya
+function onproxy2() {
+   export https_proxy=http://127.0.0.1:20172
+   export http_proxy=http://127.0.0.1:20172
+   export all_proxy=socks5://127.0.0.1:20170
+   # curl cip.cc 代理后 cip.cc 访问会很慢
+   # curl ip.sb
+ }
+alias offproxy2="unset http_proxy https_proxy all_proxy && curl cip.cc"
 # @deprecated
 #
 # tmux
