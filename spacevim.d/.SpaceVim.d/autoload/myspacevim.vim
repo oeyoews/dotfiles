@@ -9,10 +9,10 @@
 function! myspacevim#before() abort
   set nu
   " set sbr=-> " set so=3
-" endfunction
+  " endfunction
 
-" auto add head title
-" function! myspacevim#before() abort
+  " auto add head title
+  " function! myspacevim#before() abort
   autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
   function  AddTitleForShell()
     call append(0,"#!/bin/bash")
@@ -27,10 +27,10 @@ function! myspacevim#before() abort
     normal G 
     normal o
   endfunction
-" endfunction
+  " endfunction
 
-" translate keybindings
-" function! myspacevim#before() abort
+  " translate keybindings
+  " function! myspacevim#before() abort
   let g:mapleader = ','
   """ Configuration example
   " Echo translation in the cmdline
@@ -51,6 +51,9 @@ endfunction
 "            after              #
 " ===============================
 function! myspacevim#after() abort
+  " nerdtree 
+  let g:NERDTreeDirArrowExpandable = ''
+  let g:NERDTreeDirArrowCollapsible = '▾'
   " better nowrap scroll
   set ss=1
   set nobackup

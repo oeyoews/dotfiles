@@ -4,7 +4,7 @@
 # https://vimjc.com/
 
 # time vim -u NONE -c exit
-# time vim  -c exit
+# time vim  -c exit(todo -c ?or file)
 # Check log: SPC h L 
 # for neovim: python-neovim(pacman)
 
@@ -17,7 +17,7 @@ enable_guicolors = true
 # top statine
 statusline_iseparator = "arrow"
 # buttom statine
-statusline_separator = "slant"
+statusline_separator = "nil"
 # filetree
 filetree_direction = "left"
 # disable welcome start filetree
@@ -149,6 +149,7 @@ repo = 'voldikss/vim-translator'
 [[custom_plugins]]
 repo = "vimwiki/vimwiki"
 
+repo = 'yianwillis/vimcdoc'
 # [[custom_plugins]]
 # repo = "dracula/vim"
 

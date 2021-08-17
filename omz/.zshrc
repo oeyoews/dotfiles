@@ -5,8 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# zmodload zsh/zprof
 # zsh -f (vanilla zsh)
+zmodload zsh/zprof
 
 export ZSH_DISABLE_COMPFIX="true"
 

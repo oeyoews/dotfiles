@@ -36,6 +36,6 @@ setopt hist_verify            # show command with history expansion to user befo
 setopt share_history          # share command history data
 
 ## History file configuration
-[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.cache/zsh/zsh_history"
 [ "$HISTSIZE" -lt 5000 ] && HISTSIZE=5000
 [ "$SAVEHIST" -lt 1000 ] && SAVEHIST=1000
