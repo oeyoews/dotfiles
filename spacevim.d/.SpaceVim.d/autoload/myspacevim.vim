@@ -65,4 +65,27 @@ function! myspacevim#after() abort
   set clipboard^=unnamed 
   " gui font
   set guifont=Droid\ Sans\ Mono\ 14
+
+  " modidfy this cursor line status
+  " bug it is shine, so deprecated templately.
+  " if has("autocmd")
+    " au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+    " au InsertEnter,InsertChange *
+          " \ if v:insertmode == 'i' |
+          " \   silent execute '!echo -ne "\e[6 q"' | redraw! |
+          " \ elseif v:insertmode == 'r' |
+          " \   silent execute '!echo -ne "\e[4 q"' | redraw! |
+          " \ endif
+    " au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+  " endif
+
+
+
+nnoremap <leader>qq :q!<CR>
+nnoremap <leader>w :w<CR>
+
+
+
+  
+
 endfunction

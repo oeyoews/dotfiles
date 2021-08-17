@@ -72,3 +72,12 @@ fi
 
 # automatically load bash completion functions
 autoload -U +X bashcompinit && bashcompinit
+
+# =================
+# Instead tab autocomplete
+# ================
+# autoload -U cominit
+# zstyle ":completion:*" menu select
+# zmodload zsh/comlist
+# cominit
+# _comp_options+=(globdots)
