@@ -53,7 +53,7 @@
         ;; +numbers
         ;; destory doom home ui
         )    ; visually switch windows
-       workspaces        ; tab emulation, persistence & separate workspaces
+       ;; workspaces        ; tab emulation, persistence & separate workspaces
        zen               ; distraction-free coding or writing
 
        :editor
@@ -86,7 +86,9 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       ;; (spell +flyspell) ; tasing you for misspelling mispelling
+       ;; (spell
+        ;; +flyspell
+        ;; ) ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make
 
        :tools
@@ -161,6 +163,7 @@
        ;;plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
        python              ; beautiful is better than ugly
+       ;; https://github.com/hlissner/doom-emacs/blob/develop/docs/modules.org
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6

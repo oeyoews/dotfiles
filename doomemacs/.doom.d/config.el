@@ -157,4 +157,15 @@
 ;; ispell tips error
 ;; (setq company-ispell-dictionary ispell-dictionary)
 
-(setq ispell-alternate-dictionary ispell-alternate-dictionary)
+;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
+;; (setq ispell-extra-args '("--lang=en_US"))
+
+ ;; (spell-checking :variables
+ ;;                 ispell-program-name "aspell"
+ ;;                 ispell-dictionary "american"
+ ;;                 spell-checking-enable-by-default nil)
+
+;; fix error prompt
+;; (flyspell-mode-on t)
+(setq-default ispell-program-name "aspell")
+(ispell-change-dictionary "american" t)
