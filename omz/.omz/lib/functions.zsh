@@ -245,6 +245,7 @@ function omz_urldecode {
 
 # =========  self add ================
 
+# alternatively, use `npx serve, but can't speciation direction
 function pym() {
   ip addr | rg inet
   python -m http.server
