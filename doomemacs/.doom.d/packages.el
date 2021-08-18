@@ -48,3 +48,8 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+;; https://www.codeplayer.org/Wiki/Emacs/doom-guide.html
+;;
+;; (package! powerline)
+;; (package! airline-themes)

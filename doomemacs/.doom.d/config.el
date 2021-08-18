@@ -101,7 +101,7 @@
 ;; (scroll-bar-mode 0)
 
 (add-hook! '+doom-dashboard-functions :append
-  (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
+           (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
 
 ;;  home cursor
 ;; ( setq-hook! '+doom-dashboard-mode-hook evil-normal-state-cursor (list nil))
@@ -160,12 +160,49 @@
 ;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
 ;; (setq ispell-extra-args '("--lang=en_US"))
 
- ;; (spell-checking :variables
- ;;                 ispell-program-name "aspell"
- ;;                 ispell-dictionary "american"
- ;;                 spell-checking-enable-by-default nil)
+;; (spell-checking :variables
+;;                 ispell-program-name "aspell"
+;;                 ispell-dictionary "american"
+;;                 spell-checking-enable-by-default nil)
 
 ;; fix error prompt
 ;; (flyspell-mode-on t)
-(setq-default ispell-program-name "aspell")
-(ispell-change-dictionary "american" t)
+; (setq-default ispell-program-name "aspell")
+; (ispell-change-dictionary "american" t)
+
+
+;; ispell tips error
+;; (setq company-ispell-dictionary ispell-dictionary)
+
+;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
+;; (setq ispell-extra-args '("--lang=en_US"))
+
+;; (spell-checking :variables
+;;                 ispell-program-name "aspell"
+;;                 ispell-dictionary "american"
+;;                 spell-checking-enable-by-default nil)
+
+;; fix error prompt
+;; (flyspell-mode-on t)
+;; (setq-default ispell-program-name "aspell")
+;; (ispell-change-dictionary "american" t)
+
+
+;; (setq-hook! powerline-default-theme)
+
+;; (use-package-hook! airline-themes
+;;   :pre-init
+;;   (load-theme 'airline-light t)
+;;   t)
+
+(setq fancy-splash-image (concat doom-private-dir "splash.png"))
+
+; (after! persp-mode
+        ; (defun display-workspaces-in-minibuffer ()
+          ; (with-current-buffer " *Minibuf-0*"
+                               ; (erase-buffer)
+                               ; (insert (+workspace--tabline))))
+        ; (run-with-idle-timer 1 t #'display-workspaces-in-minibuffer)
+        ; (+workspace/display))
+
+(setq confirm-kill-emacs nil)
