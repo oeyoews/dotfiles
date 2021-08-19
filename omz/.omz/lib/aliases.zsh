@@ -92,7 +92,7 @@ alias tse='crow -t en'
 alias ts='crow -b'
 
 # Misc
-alias ports='netstat -tulanp'
+alias ports='netstat -tulanp'  # need install `net-tools
 alias jc="journalctl -xe"
 alias sc="systemctl"
 alias zprof="zprof > /tmp/zprof.log"

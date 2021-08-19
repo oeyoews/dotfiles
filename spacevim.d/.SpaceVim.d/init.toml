@@ -3,6 +3,7 @@
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
 
+# pkg: need install clang for lsp
 # time vim -u NONE -c exit
 # time vim  -c exit(todo -c ?or file)
 # Check log: SPC h L 

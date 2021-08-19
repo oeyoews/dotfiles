@@ -53,7 +53,7 @@
 (setq org-startup-folded t)
 (setq org-startup-indented t)
 ;; ▼
-(setq org-ellipsis ":")
+(setq org-ellipsis "▼")
 
 ;; line numbers
 ;; This determines the style of line numbers in effect. If set to `nil', line
@@ -63,7 +63,7 @@
 
 ;; scrolling better
 (setq scroll-conservatively 1000
-      scroll-margin 2)
+      scroll-margin 5)
 
 ;; change emacs repo's source
 ;; (setq configuration-layer-elpa-archives
@@ -178,11 +178,12 @@
 ;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
 ;; (setq ispell-extra-args '("--lang=en_US"))
 
-;; (setq fancy-splash-image (concat doom-private-dir "splash.png"))
 
 ;; fast quit emacs
 (setq confirm-kill-emacs nil)
 
+;; (setq fancy-splash-image (concat doom-private-dir "splash.png"))
+;;
 ;; "Welcome to                                 "
 ;; "███████╗███╗   ███╗ █████╗  ██████╗███████╗"
 ;; "██╔════╝████╗ ████║██╔══██╗██╔════╝██╔════╝"
