@@ -33,7 +33,7 @@
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     time                  # current time
     proxy                 # system-wide http/https/ftp proxy
-    status                  # exit code of the last command
+    # status                  # exit code of the last command
     # os_icon                 # os identifier
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
@@ -44,7 +44,7 @@
     # command_execution_time  # duration of the last command
     dir                     # current directory
     vcs                     # git status
-    prompt_char           # prompt symbol
+    # prompt_char           # prompt symbol
   )
 
   # The list of segments shown on the right. Fill it with less important segments.

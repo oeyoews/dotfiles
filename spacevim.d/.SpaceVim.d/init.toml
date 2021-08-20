@@ -75,6 +75,7 @@ name = "colorscheme"
 name = "incsearch"
 
 # NOTE: spc w c : read mode (only one)
+# bookmark: mm mn mp ma mi mc
 [[layers]]
 name = "tools"
 
