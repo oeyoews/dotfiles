@@ -8,29 +8,28 @@
 # time vim  -c exit(todo -c ?or file)
 # Check log: SPC h L 
 # for neovim: python-neovim(pacman)
+# spell_check: z= or C-x&s
+# gf: go file
+# C-i C-o
 
 ## Options
+
 
 # All SpaceVim option below [option] section
 [options]
 # terminal ture color
 enable_guicolors = true
 # top statine
-statusline_iseparator = "arrow"
+statusline_iseparator = "nil"
 # buttom statine
 statusline_separator = "nil"
 # filetree
 filetree_direction = "left"
 # disable welcome start filetree
 enable_vimfiler_welcome = 0
-
 # no wrap
 wrap_line=0
-
-# guifont="Droid\ Sans\ Mono:h16"
-
 ## Icon type
-
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
 enable_statusline_mode = true
@@ -41,9 +40,10 @@ bootstrap_after  = "myspacevim#after"
 
 # option: vimfiler nerdtree defx
 filemanager = "nerdtree"
+# enable_vimfiler_filetypeicon = true
 
-# option: onedark gruvbox nord palenight
-colorscheme = "NeoSolarized"
+# option: onedark gruvbox nord palenight NeoSolarized
+colorscheme = "onedark"
 # colorscheme_bg = "dark"
 
 # font
@@ -152,6 +152,9 @@ repo = 'voldikss/vim-translator'
 repo = "vimwiki/vimwiki"
 
 repo = 'yianwillis/vimcdoc'
+
+repo = "ap/vim-css-color"
+repo = "jszakmeister/vim-togglecursor"
 # [[custom_plugins]]
 # repo = "dracula/vim"
 

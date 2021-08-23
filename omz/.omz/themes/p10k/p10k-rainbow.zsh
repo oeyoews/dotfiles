@@ -31,7 +31,7 @@
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    time                  # current time
+    # time                  # current time
     proxy                 # system-wide http/https/ftp proxy
     # status                  # exit code of the last command
     # os_icon                 # os identifier

@@ -39,8 +39,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-;; doom-one doom-dracula doom-vibrant
-(setq doom-theme 'doom-solarized-dark)
+;; doom-one doom-dracula doom-vibrant 'doom-solarized-dark
+(setq doom-theme 'doom-one)
 
 ;; org
 ;; If you use `org' and don't want your org files in the default location below,

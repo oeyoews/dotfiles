@@ -58,13 +58,14 @@ exec_always --no-startup-id ~/.config/i3/bin/autostart.sh
 bindsym $mod+Return exec ~/.config/i3/bin/i3term.sh
 bindsym $mod+Shift+Return exec ~/.config/i3/bin/i3term.sh -f
 # pkg: nemo
-bindsym $mod+Shift+f exec nemo
+bindsym $mod+Shift+f exec nautilus
 # pkg: gvim
 bindsym $mod+Shift+e exec vim
 
 # google-chrome-stable or use firefox directly
 # or use Proxy SwitchOmega
-bindsym $mod+Shift+w exec google-chrome-stable --proxy-server=socks5://127.0.0.1:1089
+# --proxy-server=socks5://127.0.0.1:1089
+bindsym $mod+Shift+w exec google-chrome-stable 
 
 # -- Rofi --
 bindsym $alt+F1 exec ~/.config/i3/rofi/bin/launcher
