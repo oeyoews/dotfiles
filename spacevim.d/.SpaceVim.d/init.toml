@@ -151,9 +151,13 @@ repo = 'voldikss/vim-translator'
 [[custom_plugins]]
 repo = "vimwiki/vimwiki"
 
+[[custom_plugins]]
 repo = 'yianwillis/vimcdoc'
 
+[[custom_plugins]]
 repo = "ap/vim-css-color"
+
+[[custom_plugins]]
 repo = "jszakmeister/vim-togglecursor"
 # [[custom_plugins]]
 # repo = "dracula/vim"
