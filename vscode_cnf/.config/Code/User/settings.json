@@ -75,8 +75,8 @@
     "editor.insertSpaces": false,
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "on",
-    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.linux": "bash",
     "editor.fontFamily": "'Droid Sans Mono'",
     "terminal.integrated.fontFamily": "Droid Sans Mono",
-    //  'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "grunt.autoDetect": "on",
 }

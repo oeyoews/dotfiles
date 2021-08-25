@@ -3,7 +3,7 @@
 " small vimrc
 " ====================================================
 set so=5 
-set wrap
+" set wrap
 inoremap jk <ESC>
 set nu
 set rnu
