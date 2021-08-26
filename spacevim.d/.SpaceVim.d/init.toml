@@ -55,6 +55,9 @@ name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
 
+[[layers]]
+  name = "lang#go"
+
 # shortkeys: ctrl p and  spc f f (parent dir)
 # multi cursor: spc s e
 # spc f r : open recent files

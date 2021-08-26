@@ -5,8 +5,9 @@ alias viz='vim $HOME/.zshrc'
 
 # path
 alias cdd="cd ~/dotfiles/"
-alias cdn='cd $NOTE/linux'
-alias cdt="cd $HOME/temp"
+alias cdn='cd ~/src/note/linux'
+alias cdr="cd ~/repo"
+alias cdt="cd ~/temp"
 alias soz='source $HOME/.zshrc && exec zsh'
 
 # system
@@ -102,7 +103,6 @@ alias vik="vim ~/.config/kitty/kitty.conf"
 alias via="vim ~/.config/alacritty/alacritty.yml"
 
 # Export
-export NOTE=~/src/note
 export PATH=$PATH:~/.emacs.d/bin
 export EDITOR=vim
 # better man page

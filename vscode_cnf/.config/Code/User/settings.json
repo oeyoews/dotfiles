@@ -8,7 +8,7 @@
 
     "debug.console.fontSize": 18,
     "debug.onTaskErrors": "showErrors",
-    "debug.console.fontFamily": "Source Code Variable",
+    "debug.console.fontFamily": "Droid Sans Mono",
     "[c]": {
         "editor.defaultFormatter": "xaver.clang-format"
     },

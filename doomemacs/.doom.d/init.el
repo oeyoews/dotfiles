@@ -86,8 +86,8 @@
 
        :checkers
        syntax              ; tasing you for every semicolon you forget
-       ;; (spell
-        ;; +flyspell
+       (spell
+        +flyspell)
         ;; ) ; tasing you for misspelling mispelling
        grammar           ; tasing grammar mistake every you make
 
@@ -138,7 +138,7 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       ;;(go +lsp)         ; the hipster dialect
+       (go +lsp)         ; the hipster dialect
        ;;(haskell +dante)  ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
