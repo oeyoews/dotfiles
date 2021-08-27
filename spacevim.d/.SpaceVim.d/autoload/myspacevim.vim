@@ -10,24 +10,6 @@ function! myspacevim#before() abort
   set nu
   set so=5
   hi Normal guibg=NONE ctermbg=NONE
-  " autocmd BufNewFile *.sh exec ":call AddTitleForShell()"
-  " function  AddTitleForShell()
-  " call append(0,"#!/bin/bash")
-  " call append(1,"# CreatTime: ".strftime("%Y-%m-%d %H:%M"))
-  " normal G
-  " normal o
-  " endfunction
-  " autocmd BufNewFile *.c exec ":call AddTitleForC()"
-  " function  AddTitleForC()
-  " call append(0,"#include <stdio.h>")
-  " call append(1,"// CreatTime: ".strftime("%Y-%m-%d %H:%M"))
-  " normal G
-  " normal o
-  " endfunction
-  " endfunction
-
-  " translate keybindings
-  " function! myspacevim#before() abort
   let g:mapleader = ','
   """ Configuration example
   " Echo translation in the cmdline
@@ -75,8 +57,6 @@ function! myspacevim#after() abort
   set nobackup
   " no swapfile
   set noswf
-  " insert time 
-  iab xtime <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
   "  share system clipboard
   set clipboard^=unnamed 
   " gui font

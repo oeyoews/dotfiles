@@ -1,50 +1,80 @@
 {
-    "editor.mouseWheelZoom": true,
-    "editor.minimap.enabled": false,
-    "editor.suggestSelection": "first",
+    // ***** font *****
+    "editor.fontFamily": "'Droid Sans Mono'",
+    "terminal.integrated.fontFamily": "Droid Sans Mono",
     "editor.fontSize": 22,
     "editor.fontLigatures": true,
-    "editor.lineNumbers": "on",
-
-    "debug.console.fontSize": 18,
-    "debug.onTaskErrors": "showErrors",
     "debug.console.fontFamily": "Droid Sans Mono",
-    "[c]": {
-        "editor.defaultFormatter": "xaver.clang-format"
-    },
-
+    // ***** vim *****
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "$HOME/.ideavimrc",
+    "vim.vimrc.path": "~/.ideavimrc",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "vim.sneak": true,
     "vim.sneakReplacesF": true,
     "vim.useSystemClipboard": true,
-    "vim.insertModeKeyBindings": [
-    {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
-    }
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
     ],
-    
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        },
+        {
+            "before": [
+                ","
+            ],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        }
+    ],
+    // ***** workbench *****
     "workbench.colorTheme": "One Dark Pro",
     "workbench.startupEditor": "none",
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#1a1d1db0",
+        "statusBar.background": "#282c34",
         "statusBar.noFolderBackground": "#0c0d0fa6",
         "statusBar.debuggingBackground": "#16091b6b",
-        "statusBar.foreground": "#fcfdfbfa"
+        "statusBar.foreground": "#8a968afa"
     },
-
+    // *** misc ***
     "[jsonc]": {
         "editor.quickSuggestions": {
             "strings": true
         },
         "editor.suggest.insertMode": "replace"
     },
-
     "window.dialogStyle": "custom",
     "http.proxySupport": "off",
     "git.enabled": false,
@@ -52,13 +82,9 @@
     "files.autoSave": "afterDelay",
     "window.titleBarStyle": "custom",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "update.mode": "none",
+    "update.mode": "manual",
     "update.showReleaseNotes": false,
     "terminal.integrated.fontSize": 18,
-    "cSpell.userWords": [
-        "oeyoews"
-    ],
-    
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -68,15 +94,19 @@
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "json.trace.server": "verbose",
-    "editor.defaultFormatter": "xaver.clang-format",
-    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
     "editor.tabSize": 4,
     "editor.cursorStyle": "line",
     "editor.insertSpaces": false,
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "off",
     "terminal.integrated.defaultProfile.linux": "bash",
-    "editor.fontFamily": "'Droid Sans Mono'",
-    "terminal.integrated.fontFamily": "Droid Sans Mono",
     "grunt.autoDetect": "on",
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "editor.lineNumbers": "relative",
+    "debug.console.fontSize": 18,
+    "debug.onTaskErrors": "showErrors",
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "none",
 }
