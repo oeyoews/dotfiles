@@ -13,7 +13,7 @@ function! myspacevim#before() abort
   " let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
   set nu
-  set so=5
+  set so=0
   let g:mapleader = ','
 
   " translation 

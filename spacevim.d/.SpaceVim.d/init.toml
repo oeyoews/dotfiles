@@ -15,8 +15,8 @@
 # All SpaceVim option below [option] section
 [options]
 enable_guicolors = true
-statusline_iseparator = "nil"
-statusline_separator = "nil"
+statusline_iseparator = "sharp"
+statusline_separator = "sharp"
 filetree_direction = "right"
 enable_vimfiler_welcome = 0
 wrap_line=0
@@ -33,7 +33,7 @@ filemanager = "nerdtree"
 
 # onedark gruvbox nord palenight NeoSolarized
 # colorscheme_bg = "dark"
-colorscheme = "onedark"
+colorscheme = "SpaceVim"
 
 [[layers]]
 name = 'autocomplete'
@@ -126,8 +126,8 @@ repo = "ap/vim-css-color"
 [[custom_plugins]]
 repo = "jszakmeister/vim-togglecursor"
 
-[[custom_plugins]]
-repo = "https://hub.fastgit.org/codota/tabnine-vim"
+# [[custom_plugins]]
+# repo = "https://hub.fastgit.org/codota/tabnine-vim"
 
 [[custom_plugins]]
 repo = "justinmk/vim-syntax-extra"
