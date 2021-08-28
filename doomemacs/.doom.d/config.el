@@ -42,39 +42,19 @@
 ;; doom-one doom-dracula doom-vibrant 'doom-solarized-dark
 (setq doom-theme 'doom-one)
 
-;; org
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
-;; (setq org-roam-directory "~/org/")
-
-;; "◉"
 (setq org-superstar-headline-bullets-list '("☰" "☷" "☭" ))
 (setq org-startup-folded t)
 (setq org-startup-indented t)
-;; ▼
 (setq org-ellipsis "▼")
 
-;; line numbers
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type `relative)
 
-
-;; scrolling better
 (setq scroll-conservatively 1000
       scroll-margin 5)
 
-;; change emacs repo's source
-;; (setq configuration-layer-elpa-archives
-;;       '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-;;         ("nongnu"       . "https://elpa.nongnu.org/nongnu/")
-;;         ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
-
-;; no backup fill
 (setq make-backup-files nil)
 (setq company-idle-delay 0.1)
-
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -99,10 +79,6 @@
 (add-hook 'window-setup-hook #'toggle-frame-fullscreen)
 ;; (setq frame-resize-pixelwise t)
 
-;; (tool-bar-mode 0)
-;; (menu-bar-mode 0)
-;; (scroll-bar-mode 0)
-
 ;; (add-hook! '+doom-dashboard-functions :append
 ;;   (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Powered by Emacs!")))
 
@@ -115,19 +91,10 @@
       :prefix "j"
       :desc "avy-goto-char-timer" "j" #'avy-goto-char-timer)
 
-;; word count
-;; (setq doom-modeline-enable-word-count t)
+(setq doom-modeline-enable-word-count t)
 
-;; @oeyoews
-;; When I bring up Doom's scratch buffer with SPC x, it's often to play with
-;; elisp or note something down (that isn't worth an entry in my org files). I
-;; can do both in `lisp-interaction-mode'.
-;; (setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
+(setq doom-scratch-initial-major-mode 'lisp-interaction-mode)
 
-;; IMO, modern editors have trained a bad habit into us all: a burning need for
-;; completion all the time -- as we type, as we breathe, as we pray to the
-;; ancient ones -- but how often do you *really* need that information? I say
-;; rarely. So opt for manual completion:
 (setq company-idle-delay 0.1)
 
 ;; Disable invasive lsp-mode features
@@ -140,9 +107,8 @@
       +lsp-prompt-to-install-server 'quiet)
 
 ;; Prevents some cases of Emacs flickering
-;; (add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
+(add-to-list 'default-frame-alist '(inhibit-double-buffering . t))
 
-;;; :editor evil
 ;; Focus new window after splitting
 (setq evil-split-window-below t
       evil-vsplit-window-right t)
@@ -151,33 +117,20 @@
 ;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 
 ;; rename doom homepage
-(setq doom-fallback-buffer-name "doom"
-      +doom-dashboard-name "doom")
+(setq doom-fallback-buffer-name "Home"
+      +doom-dashboard-name "Home")
 
 ;; use yasnipets
 (setq yas-triggers-in-field t)
 
-;; ispell tips error
-;; (setq company-ispell-dictionary ispell-dictionary)
-
-;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
-;; (setq ispell-extra-args '("--lang=en_US"))
-
-;; (spell-checking :variables
+; (spell-checking :variables
 ;;                 ispell-program-name "aspell"
 ;;                 ispell-dictionary "american"
-                ;; spell-checking-enable-by-default nil
-                ;; )
+;; spell-checking-enable-by-default nil
+;; )
 
-                                        ; (setq-default ispell-program-name "aspell")
-                                        ; (ispell-change-dictionary "american" t)
-
-
-;; (setq company-ispell-dictionary ispell-dictionary)
-
-;; (setq ispell-alternate-dictionary ispell-alternate-dictionary)
-;; (setq ispell-extra-args '("--lang=en_US"))
-
+(setq-default ispell-program-name "aspell")
+(ispell-change-dictionary "american" t)
 
 ;; fast quit emacs
 (setq confirm-kill-emacs nil)

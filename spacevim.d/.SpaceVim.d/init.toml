@@ -12,51 +12,36 @@
 # gf: go file
 # C-i C-o
 
-## Options
-
-
 # All SpaceVim option below [option] section
 [options]
-# terminal ture color
 enable_guicolors = true
-# top statine
 statusline_iseparator = "nil"
-# buttom statine
 statusline_separator = "nil"
-# filetree
 filetree_direction = "right"
-# disable welcome start filetree
 enable_vimfiler_welcome = 0
-# no wrap
 wrap_line=0
-## Icon type
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
 enable_statusline_mode = true
-
-# bootstrap function
 bootstrap_before = "myspacevim#before"
 bootstrap_after  = "myspacevim#after"
-
-# option: vimfiler nerdtree defx
-filemanager = "nerdtree"
-# enable_vimfiler_filetypeicon = true
-
-# option: onedark gruvbox nord palenight NeoSolarized
-colorscheme = "onedark"
-# colorscheme_bg = "dark"
-
-# font
 guifont = "Droid Sans Mono:h11"
 
-# Layer
+# option: vimfiler nerdtree defx
+# enable_vimfiler_filetypeicon = true
+filemanager = "nerdtree"
+
+# onedark gruvbox nord palenight NeoSolarized
+# colorscheme_bg = "dark"
+colorscheme = "onedark"
+
 [[layers]]
 name = 'autocomplete'
 auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-  name = "lang#go"
+name = "lang#go"
 
 # shortkeys: ctrl p and  spc f f (parent dir)
 # multi cursor: spc s e
@@ -77,8 +62,8 @@ name = "colorscheme"
 [[layers]]
 name = "incsearch"
 
-# NOTE: spc w c : read mode (only one)
-# bookmark: mm mn mp ma mi mc
+# spc w c 
+# mm mn mp ma mi mc
 [[layers]]
 name = "tools"
 
@@ -86,19 +71,10 @@ name = "tools"
 name = "lang#toml"
 
 [[layers]]
-name = "sudo"
-enable =false
-
-[[layers]]
-name = "tmux"
-enable =false
-
-[[layers]]
 name = "lang#vim"
 
 [[layers]]
 name = "lang#python"
-enable = false
 
 [[layers]]
 name = "lang#c"
@@ -108,7 +84,7 @@ enable_clang_syntax_highlight = true
 name = "lsp"
 filetypes = [
   "c",
-# "cpp"
+  "cpp"
 ]
 [layers.override_cmd]
 c = ["clangd"]
@@ -118,26 +94,13 @@ name = "format"
 
 [[layers]]
 name = "debug"
-enable = false
-
-## Plugins
-# when in vim and nvim convert, this plugins need 
-# use this command `SPUdate
 
 [[custom_plugins]]
 repo = 'machakann/vim-highlightedyank'
-# merged = true
 
 [[custom_plugins]]
 repo = 'jceb/vim-orgmode'
-# merged = true
 
-
-# [[custom_plugins]]
-# repo = "dstein64/vim-startuptime.git"
-# merged = true
-
-# just for git files is effect
 [[custom_plugins]]
 repo = "airblade/vim-gitgutter"
 
@@ -162,7 +125,9 @@ repo = "ap/vim-css-color"
 
 [[custom_plugins]]
 repo = "jszakmeister/vim-togglecursor"
-# [[custom_plugins]]
-# repo = "dracula/vim"
 
-# [[disable_plugins]]
+[[custom_plugins]]
+repo = "https://hub.fastgit.org/codota/tabnine-vim"
+
+[[custom_plugins]]
+repo = "justinmk/vim-syntax-extra"
