@@ -24,7 +24,7 @@ statusline_iseparator = "nil"
 # buttom statine
 statusline_separator = "nil"
 # filetree
-filetree_direction = "left"
+filetree_direction = "right"
 # disable welcome start filetree
 enable_vimfiler_welcome = 0
 # no wrap

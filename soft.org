@@ -68,7 +68,8 @@ fcitx5-pinyin-zhwiki
 fcitx5-pinyin-moegirl
 # fcitx input method
 # C-` 调整为简化字
-fcitx5-rime
+# fcitx5-rime
+fcitx5-chinese-addons
 #========
 
 nvm                        # node 版本管理
