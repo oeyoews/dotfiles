@@ -10,7 +10,10 @@
 # for neovim: python-neovim(pacman)
 # spell_check: z= or C-x&s
 # gf: go file
-# C-i C-o
+# file jump: C-i C-o
+# split: `sg  `sv `st
+# `, q r' == q
+# whitespace:  spc t w 
 
 # All SpaceVim option below [option] section
 [options]
@@ -26,19 +29,46 @@ enable_statusline_mode = true
 bootstrap_before = "myspacevim#before"
 bootstrap_after  = "myspacevim#after"
 guifont = "Droid Sans Mono:h11"
+# autocomplete_method = 'coc'
+debug_level = 0
+statusline_unicode_symbols = true
+enable_os_fileformat_icon = true
+default_indent = 4
+commandline_prompt = '>'
 
 # option: vimfiler nerdtree defx
 # enable_vimfiler_filetypeicon = true
 filemanager = "nerdtree"
 
 # onedark gruvbox nord palenight NeoSolarized
-# colorscheme_bg = "dark"
+colorscheme_bg = "dark"
 colorscheme = "SpaceVim"
 
 [[layers]]
+name = 'core'
+
+[[layers]]
+name = 'ui'
+enable_scrollbar = false
+enable_indentline = false
+filetree_show_hidden = true
+cursorword_delay = 200
+cursorword_exclude_filetype = ['markdown']
+
+[[layers]]
+name = 'lang#markdown'
+enableWcwidth = 1
+listItemIndent = 1
+enabled_formater = ['prettier']
+
+[[layers]]
 name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "smart"
+auto-completion-delay = 10
+# `complete
+auto-completion-return-key-behavior = "smart"
+[[layers]]
+name = 'lang#sh'
 
 [[layers]]
 name = "lang#go"
@@ -53,7 +83,7 @@ name = "leaderf"
 
 [[layers]]
 name = 'shell'
-default_position = 'top'
+default_position = 'float'
 default_height = 50
 
 [[layers]]
@@ -61,6 +91,11 @@ name = "colorscheme"
 
 [[layers]]
 name = "incsearch"
+enable = true
+
+[[layers]]
+name = 'chinese'
+enable = true
 
 # spc w c 
 # mm mn mp ma mi mc
@@ -77,14 +112,17 @@ name = "lang#vim"
 name = "lang#python"
 
 [[layers]]
+name = "git"
+
+[[layers]]
 name = "lang#c"
 enable_clang_syntax_highlight = true
 
 [[layers]]
 name = "lsp"
 filetypes = [
-  "c",
-  "cpp"
+    "c",
+    "cpp"
 ]
 [layers.override_cmd]
 c = ["clangd"]
@@ -115,9 +153,6 @@ repo = "ryanoasis/vim-devicons"
 repo = 'voldikss/vim-translator'
 
 [[custom_plugins]]
-repo = "vimwiki/vimwiki"
-
-[[custom_plugins]]
 repo = 'yianwillis/vimcdoc'
 
 [[custom_plugins]]
@@ -125,9 +160,6 @@ repo = "ap/vim-css-color"
 
 [[custom_plugins]]
 repo = "jszakmeister/vim-togglecursor"
-
-# [[custom_plugins]]
-# repo = "https://hub.fastgit.org/codota/tabnine-vim"
 
 [[custom_plugins]]
 repo = "justinmk/vim-syntax-extra"

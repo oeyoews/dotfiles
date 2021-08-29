@@ -18,9 +18,9 @@ alias open='xdg-open'
 alias c='clear'
 alias pas='sudo pacman -S'
 alias yayy="yay -Yc"
-# yay -Qi ssmtp # show info about ssmtp 
-alias cp="cp -r"
+alias yayyy="yes | yay -Scc"
 alias yayr='yay -Rscn'
+alias cp="cp -r"
 
 # on
 alias 'onkvm'='sudo virt-manager'
@@ -54,6 +54,7 @@ alias gits='git status'
 alias gitc="git checkout ."
 alias gitr="git rm --cache ."
 alias gitu='git add . && git commit && git push'
+alias gituu='git add . && git commit -m "this is a fast push." && git push'
 
 
 # 防止在某些情况输入过快
@@ -99,6 +100,7 @@ alias jc="journalctl -xe"
 alias sc="systemctl"
 alias zprof="zprof > /tmp/zprof.log"
 alias btop='bpytop'
+# `zsh -f' (vanilla for zsh)
 alias zsh_time="time (repeat 10 zsh -i -c exit)"
 alias vik="vim ~/.config/kitty/kitty.conf"
 alias via="vim ~/.config/alacritty/alacritty.yml"
@@ -117,3 +119,4 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # time emacs -e kill-emacs
 alias eg="emacs"
 alias et="emacs -nw"
+# alias vim="nvim"
