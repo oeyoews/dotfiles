@@ -77,7 +77,7 @@
     },
     "window.dialogStyle": "custom",
     "http.proxySupport": "off",
-    "git.enabled": false,
+    "git.enabled": true,
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
     "window.titleBarStyle": "custom",
@@ -124,4 +124,5 @@
         "[x]"
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "git.enableSmartCommit": true,
 }

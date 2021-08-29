@@ -43,7 +43,7 @@
 (setq doom-theme 'doom-one)
 
 (setq org-directory "~/org/")
-(setq org-superstar-headline-bullets-list '("☰" "☷" "☭" ))
+(setq org-superstar-headline-bullets-list '("☰" "☷" "✿" ))
 (setq org-startup-folded t)
 (setq org-startup-indented t)
 (setq org-ellipsis "▼")

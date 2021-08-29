@@ -4,13 +4,9 @@
 " https://yianwillis.github.io/vimcdoc/doc/autocmd.html
 
 " ===============================
-"            before             #
+" #           before            #
 " ===============================
 function! myspacevim#before() abort
-
-  " vimsector
-  " let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'CodeLLDB' ]
-  " let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
   set nu
   set so=0
@@ -32,7 +28,7 @@ function! myspacevim#before() abort
   " GitGutter
   let g:gitgutter_sign_allow_clobber = 0
   let g:gitgutter_map_keys = 0
-  let g:gitgutter_override_sign_column_highlight = 0
+  let g:gitgutter_override_sign_column_highlight = 1
   let g:gitgutter_preview_win_floating = 1
   let g:gitgutter_sign_added = '▎'
   let g:gitgutter_sign_modified = '░'
@@ -53,8 +49,9 @@ endfunction
 function! myspacevim#after() abort
 
   " nerdtree 
-  let g:NERDTreeDirArrowExpandable = ''
-  let g:NERDTreeDirArrowCollapsible = '▾'
+  let g:NERDTreeDirArrowExpandable = '➤'
+  " ▾ ✏️  ➤ ❯
+  let g:NERDTreeDirArrowCollapsible = '✏️'
 
   " better nowrap scroll
   set ss=1

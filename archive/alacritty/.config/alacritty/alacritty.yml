@@ -182,10 +182,10 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-  # '#1d1f21'
+  # '#1d1f21' '#292d3e'
    background: '#292d3e'
-  # '#c5c8c6''0x4d4d4c'
-   foreground: '#dddddd'
+  # '#c5c8c6''0x4d4d4c' '#dddddd'
+   foreground:  "#acb4c2"
 
     # Bright and dim foreground colors
     #
@@ -449,7 +449,7 @@ mouse:
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  hide_when_typing: false
+  hide_when_typing: true
 
 # Regex hints
 #
