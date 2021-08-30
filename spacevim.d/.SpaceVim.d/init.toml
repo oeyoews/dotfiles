@@ -3,11 +3,8 @@
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
 
-# pkg: need install clang for lsp
+# pkg: clang(pacman)
 # time vim -u NONE -c exit
-# time vim  -c exit(todo -c ?or file)
-# Check log: SPC h L 
-# for neovim: python-neovim(pacman)
 # spell_check: z= or C-x&s
 # gf: go file
 # file jump: C-i C-o
@@ -33,14 +30,14 @@ guifont = "Droid Sans Mono:h11"
 debug_level = 0
 statusline_unicode_symbols = true
 enable_os_fileformat_icon = true
-default_indent = 4
+default_indent = 2
 commandline_prompt = '>'
 
 # option: vimfiler nerdtree defx
 # enable_vimfiler_filetypeicon = true
 filemanager = "nerdtree"
 
-# onedark gruvbox nord palenight NeoSolarized
+# option: onedark gruvbox nord palenight NeoSolarized
 colorscheme_bg = "dark"
 colorscheme = "SpaceVim"
 
@@ -65,7 +62,7 @@ enabled_formater = ['prettier']
 name = 'autocomplete'
 auto_completion_tab_key_behavior = "smart"
 auto-completion-delay = 10
-# `complete
+# option: `complete
 auto-completion-return-key-behavior = "smart"
 [[layers]]
 name = 'lang#sh'
@@ -142,7 +139,6 @@ repo = 'jceb/vim-orgmode'
 [[custom_plugins]]
 repo = "airblade/vim-gitgutter"
 
-# kitty syntax
 [[custom_plugins]]
 repo = "fladson/vim-kitty"
 
