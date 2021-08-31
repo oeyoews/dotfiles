@@ -71,9 +71,6 @@ name = "colorscheme"
 [[layers]]
 name = "incsearch"
 
-[[layers]]
-name = 'chinese'
-
 # spc w c 
 # mm mn mp ma mi mc
 [[layers]]
@@ -87,9 +84,6 @@ name = "lang#vim"
 
 [[layers]]
 name = "lang#python"
-
-[[layers]]
-name = "git"
 
 [[layers]]
 name = "lang#c"
@@ -107,20 +101,11 @@ c = ["clangd"]
 [[layers]]
 name = "format"
 
-[[layers]]
-name = "debug"
-
 [[custom_plugins]]
 repo = 'machakann/vim-highlightedyank'
 
-[[custom_plugins]]
-repo = 'jceb/vim-orgmode'
-
-[[custom_plugins]]
-repo = "airblade/vim-gitgutter"
-
-[[custom_plugins]]
-repo = "fladson/vim-kitty"
+# [[custom_plugins]]
+# repo = "airblade/vim-gitgutter"
 
 [[custom_plugins]]
 repo = "ryanoasis/vim-devicons"
@@ -134,10 +119,7 @@ repo = 'yianwillis/vimcdoc'
 [[custom_plugins]]
 repo = "ap/vim-css-color"
 
-[[custom_plugins]]
-repo = "jszakmeister/vim-togglecursor"
-
-[[custom_plugins]]
-repo = "justinmk/vim-syntax-extra"
+# [[custom_plugins]]
+# repo = "justinmk/vim-syntax-extra"
 
 repo =  'neovim/nvim-lspconfig'
