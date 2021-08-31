@@ -139,3 +139,5 @@ repo = "jszakmeister/vim-togglecursor"
 
 [[custom_plugins]]
 repo = "justinmk/vim-syntax-extra"
+
+repo =  'neovim/nvim-lspconfig'

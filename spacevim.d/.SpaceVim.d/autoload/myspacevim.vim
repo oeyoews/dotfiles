@@ -6,9 +6,6 @@
 " === before
 " ===
 function! myspacevim#before() abort
-
-
-
   " eg: set nu?
   set updatetime=100
   set number
