@@ -19,7 +19,6 @@ statusline_iseparator = "sharp"
 statusline_separator = "sharp"
 filetree_direction = "right"
 enable_vimfiler_welcome = 0
-wrap_line=0
 buffer_index_type = 4
 enable_tabline_filetype_icon = true
 enable_statusline_mode = true
@@ -27,17 +26,14 @@ bootstrap_before = "myspacevim#before"
 bootstrap_after  = "myspacevim#after"
 guifont = "Droid Sans Mono:h11"
 # autocomplete_method = 'coc'
-debug_level = 0
 statusline_unicode_symbols = true
 enable_os_fileformat_icon = true
+wrap_line=0
 default_indent = 2
-commandline_prompt = '>'
 
-# option: vimfiler nerdtree defx
-# enable_vimfiler_filetypeicon = true
 filemanager = "nerdtree"
 
-# option: onedark gruvbox nord palenight NeoSolarized
+# option: onedark gruvbox nord palenight NeoSolarized SpaceVim
 colorscheme_bg = "dark"
 colorscheme = "SpaceVim"
 
@@ -45,25 +41,11 @@ colorscheme = "SpaceVim"
 name = 'core'
 
 [[layers]]
-name = 'ui'
-enable_scrollbar = false
-enable_indentline = false
-filetree_show_hidden = true
-cursorword_delay = 200
-cursorword_exclude_filetype = ['markdown']
-
-[[layers]]
-name = 'lang#markdown'
-enableWcwidth = 1
-listItemIndent = 1
-enabled_formater = ['prettier']
-
-[[layers]]
 name = 'autocomplete'
 auto_completion_tab_key_behavior = "smart"
-auto-completion-delay = 10
-# option: `complete
 auto-completion-return-key-behavior = "smart"
+auto-completion-delay = 10
+
 [[layers]]
 name = 'lang#sh'
 
@@ -88,11 +70,9 @@ name = "colorscheme"
 
 [[layers]]
 name = "incsearch"
-enable = true
 
 [[layers]]
 name = 'chinese'
-enable = true
 
 # spc w c 
 # mm mn mp ma mi mc
