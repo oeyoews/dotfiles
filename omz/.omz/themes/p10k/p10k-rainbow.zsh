@@ -32,9 +32,8 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # time                  # current time
-    proxy                 # system-wide http/https/ftp proxy
     # status                  # exit code of the last command
-    # os_icon                 # os identifier
+    os_icon                 # os identifier
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
@@ -53,6 +52,7 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
+    proxy                   # system-wide http/https/ftp proxy
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
@@ -177,9 +177,10 @@
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255
-  # Custom icon.
-  # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=44
+  # Custom icon.⭐
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
@@ -206,7 +207,7 @@
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=31
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=40
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique

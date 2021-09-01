@@ -1,3 +1,6 @@
+set shortmess=atI
+set t_ti= t_te=
+
 noh
 syntax on
 set t_Co=16

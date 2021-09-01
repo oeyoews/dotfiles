@@ -1,4 +1,3 @@
-# vimscript tutorial: 
 # https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
@@ -12,45 +11,35 @@
 # `, q r' == q
 # whitespace:  spc t w 
 
-# All SpaceVim option below [option] section
 [options]
-enable_guicolors = true
-statusline_iseparator = "sharp"
-statusline_separator = "sharp"
-filetree_direction = "right"
-enable_vimfiler_welcome = 0
-buffer_index_type = 4
-enable_tabline_filetype_icon = true
-enable_statusline_mode = true
-bootstrap_before = "myspacevim#before"
-bootstrap_after  = "myspacevim#after"
-guifont = "Droid Sans Mono:h11"
-# autocomplete_method = 'coc'
-statusline_unicode_symbols = true
-enable_os_fileformat_icon = true
-wrap_line=0
-default_indent = 2
-
-filemanager = "nerdtree"
-
-# option: onedark gruvbox nord palenight NeoSolarized SpaceVim
-colorscheme_bg = "dark"
-colorscheme = "SpaceVim"
+    enable_guicolors = true
+    statusline_iseparator = "sharp"
+    statusline_separator = "sharp"
+    filetree_direction = "right"
+    enable_vimfiler_welcome = 0
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    bootstrap_before = "myspacevim#before"
+    bootstrap_after  = "myspacevim#after"
+    guifont = "Droid Sans Mono:h11"
+    statusline_unicode_symbols = true
+    enable_os_fileformat_icon = true
+    wrap_line=0
+    default_indent = 2
+    filemanager = "nerdtree"
+    colorscheme_bg = "dark"
+    colorscheme = "SpaceVim"
+    autocomplete_method="coc"
 
 [[layers]]
-name = 'core'
+    name = 'autocomplete'
+    auto_completion_tab_key_behavior = "smart"
+    auto-completion-return-key-behavior = "smart"
+    auto-completion-delay = 1
 
 [[layers]]
-name = 'autocomplete'
-auto_completion_tab_key_behavior = "smart"
-auto-completion-return-key-behavior = "smart"
-auto-completion-delay = 10
-
-[[layers]]
-name = 'lang#sh'
-
-[[layers]]
-name = "lang#go"
+    name = 'lang#sh'
 
 # shortkeys: ctrl p and  spc f f (parent dir)
 # multi cursor: spc s e
@@ -58,68 +47,73 @@ name = "lang#go"
 # spc f f : search file
 # ctrl+p
 [[layers]]
-name = "leaderf"
+    name = "leaderf"
 
 [[layers]]
-name = 'shell'
-default_position = 'float'
-default_height = 50
+    name = 'shell'
+    default_position = 'float'
+    default_height = 80
 
 [[layers]]
-name = "colorscheme"
+    name = "colorscheme"
 
 [[layers]]
-name = "incsearch"
+    name = "incsearch"
 
 # spc w c 
 # mm mn mp ma mi mc
 [[layers]]
-name = "tools"
+  name = "tools"
 
 [[layers]]
-name = "lang#toml"
+  name = "lang#toml"
 
 [[layers]]
-name = "lang#vim"
+  name = "lang#vim"
 
 [[layers]]
-name = "lang#python"
+  name = "lang#python"
 
 [[layers]]
-name = "lang#c"
-enable_clang_syntax_highlight = true
+  name = "lang#c"
+    enable_clang_syntax_highlight = true
 
 [[layers]]
-name = "lsp"
-filetypes = [
-    "c",
-    "cpp"
-]
+  name = "lsp"
+  filetypes = [
+        "c",
+        "cpp"
+    ]
+
 [layers.override_cmd]
-c = ["clangd"]
+  c = ["clangd"]
 
 [[layers]]
-name = "format"
+  name = "format"
 
 [[custom_plugins]]
-repo = 'machakann/vim-highlightedyank'
-
-# [[custom_plugins]]
-# repo = "airblade/vim-gitgutter"
+  repo = 'machakann/vim-highlightedyank'
 
 [[custom_plugins]]
-repo = "ryanoasis/vim-devicons"
+  repo = "airblade/vim-gitgutter"
 
 [[custom_plugins]]
-repo = 'voldikss/vim-translator'
+  repo = "ryanoasis/vim-devicons"
 
 [[custom_plugins]]
-repo = 'yianwillis/vimcdoc'
+  repo = 'voldikss/vim-translator'
 
 [[custom_plugins]]
-repo = "ap/vim-css-color"
+  repo = 'yianwillis/vimcdoc'
 
-# [[custom_plugins]]
-# repo = "justinmk/vim-syntax-extra"
+[[custom_plugins]]
+  repo = "ap/vim-css-color"
 
-repo =  'neovim/nvim-lspconfig'
+[[custom_plugins]]
+  repo = "justinmk/vim-syntax-extra"
+
+[[custom_plugins]]
+  repo = "jszakmeister/vim-togglecursor"
+
+[[custom_plugins]]
+  repo = 'bronson/vim-trailing-whitespace'

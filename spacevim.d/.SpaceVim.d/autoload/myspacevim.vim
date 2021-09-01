@@ -8,7 +8,14 @@
 function! myspacevim#before() abort
   " eg: set nu?
   set updatetime=100
-  set number
+  set nofoldenable
+  set so=0
+  set list
+  " set expandtab
+  " set noexpandtab
+  " :retab!
+  set number relativenumber
+  set completeopt=longest,menu
   set ignorecase
   " options: `number, `yes
   set signcolumn=yes
