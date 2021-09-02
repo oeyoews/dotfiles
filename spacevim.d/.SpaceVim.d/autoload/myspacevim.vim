@@ -10,19 +10,29 @@ function! myspacevim#before() abort
   set updatetime=100
   set nofoldenable
   set so=0
+  set showcmd
+
+  " show tab symbols
+  " set list! set nolist
   set list
+
+  set confirm
+
   " set expandtab
   " set noexpandtab
   " :retab!
   set number relativenumber
   set completeopt=longest,menu
   set ignorecase
-  " options: `number, `yes
+
+  " options: number yes
   set signcolumn=yes
-  set scroll=2
+
   let g:mapleader = ','
 
-  " GitGutter
+  " ===
+  " === GitGutter
+  " ===
   let g:gitgutter_sign_allow_clobber = 0
   let g:gitgutter_map_keys = 0
   let g:gitgutter_override_sign_column_highlight = 1
@@ -45,7 +55,9 @@ endfunction
 " ===
 function! myspacevim#after() abort
 
-  " nerdtree 
+" ===
+" === nerdtree
+" ===
   " ▾ ✏️  ➤ ❯
   let g:NERDTreeDirArrowExpandable = '➤'
   let g:NERDTreeDirArrowCollapsible = '✏️'
@@ -53,11 +65,13 @@ function! myspacevim#after() abort
   set sidescroll=1
   set nobackup
   set noswapfile
-  set clipboard^=unnamed 
+  set showmode
+  set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14
   nnoremap <leader>qq :q!<CR>
+  nnoremap <leader>w :w<CR>
 
-  map tx :r !figlet 
+  map tx :r !figlet
   map th :%TOhtml
 
 endfunction

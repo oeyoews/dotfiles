@@ -9,7 +9,7 @@
 # file jump: C-i C-o
 # split: `sg  `sv `st
 # `, q r' == q
-# whitespace:  spc t w 
+# whitespace:  spc t w
 
 [options]
     enable_guicolors = true
@@ -60,7 +60,7 @@
 [[layers]]
     name = "incsearch"
 
-# spc w c 
+# spc w c
 # mm mn mp ma mi mc
 [[layers]]
   name = "tools"
