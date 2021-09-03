@@ -77,6 +77,8 @@
 [[layers]]
   name = "lang#c"
     enable_clang_syntax_highlight = true
+  [layer.clang_std]
+    cpp = "c11"
 
 [[layers]]
   name = "lsp"

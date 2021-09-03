@@ -255,7 +255,7 @@ function pym() {
 function onvm() {
   export NVM=/usr/share/nvm
   export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
-  source $NVM/init-nvm.sh 
+  source $NVM/init-nvm.sh
 }
 
 # @proxy
@@ -269,32 +269,6 @@ function onproxy1() {
 alias offproxy1="unset http_proxy https_proxy all_proxy && curl cip.cc"
 
 
-# NOTE: need to `sudo systemctl enable v2raya and start v2raya
-function onproxy2() {
-   export https_proxy=http://127.0.0.1:20172
-   export http_proxy=http://127.0.0.1:20172
-   export all_proxy=socks5://127.0.0.1:20170
-   # curl cip.cc 代理后 cip.cc 访问会很慢
-   # curl ip.sb
- }
-alias offproxy2="unset http_proxy https_proxy all_proxy && curl cip.cc"
-# @deprecated
-#
-# tmux
-# function ontmux() {
-  # if which tmux >/dev/null 2>&1; then
-    # if [ -z "$TMUX" ]; then
-      # tmux attach -t default || tmux new -s default
-    # fi
-  # fi
-# }
-
-# zsh
-# function zsh-time() {
-  # time zsh -i -c exit
-# }
-
-
 # color
 function 256color() {
   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
@@ -306,28 +280,5 @@ function nvm_prompt_info() {
   local nvm_prompt=${$(nvm current)#v}
   echo "${ZSH_THEME_NVM_PROMPT_PREFIX}${nvm_prompt}${ZSH_THEME_NVM_PROMPT_SUFFIX}"
 }
-
-
-# Change cursor shape for different vi modes.
-# function zle-keymap-select {
-  # if [[ ${KEYMAP} == vicmd ]] ||
-     # [[ $1 = 'block' ]]; then
-    # echo -ne '\e[1 q'
-  # elif [[ ${KEYMAP} == main ]] ||
-       # [[ ${KEYMAP} == viins ]] ||
-       # [[ ${KEYMAP} = '' ]] ||
-       # [[ $1 = 'beam' ]]; then
-    # echo -ne '\e[5 q'
-  # fi
-# }
-# zle -N zle-keymap-select
-# zle-line-init() {
-    # zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    # echo -ne "\e[5 q"
-# }
-# zle -N zle-line-init
-# echo -ne '\e[5 q' # Use beam shape cursor on startup.
-# preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
 
 zmodload zsh/zprof

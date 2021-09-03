@@ -10,12 +10,15 @@ function! myspacevim#before() abort
   set updatetime=100
   set nofoldenable
   set so=0
+
+  " show right command
   set showcmd
 
   " show tab symbols
   " set list! set nolist
   set list
 
+  " vanilla quit
   set confirm
 
   " set expandtab
@@ -65,7 +68,6 @@ function! myspacevim#after() abort
   set sidescroll=1
   set nobackup
   set noswapfile
-  set showmode
   set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14
   nnoremap <leader>qq :q!<CR>
