@@ -5,7 +5,7 @@ alias viz='vim $HOME/.zshrc'
 
 # path
 alias cdd="cd ~/dotfiles/"
-alias cdn='cd ~/src/note/linux'
+alias cdn='cd ~/repo/note/linux'
 alias cdr="cd ~/repo"
 alias cdc="cd ~/repo/cCode"
 alias cdt="cd ~/temp"
