@@ -14,8 +14,9 @@ function! myspacevim#before() abort
   " show right command
   set showcmd
 
-  " show tab symbols
   " set list! set nolist
+  " 
+  " show tab symbols
   set list
 
   " vanilla quit

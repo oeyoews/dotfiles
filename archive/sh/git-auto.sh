@@ -5,16 +5,16 @@
 # if exit status is nil, exit: set -e
 
 function repo() {
-    git add . 
-    git commit -m "This is a auto push." 
-    git push 
+    git add .
+    git commit -m "This is a auto push."
+    git push
     echo '===End==='
 }
 
 function main() {
   cd ~/dotfiles || exit
   repo
-  cd ~/src/note || exit
+  cd ~/repo/note || exit
   repo
   echo $SECONDS
 }
