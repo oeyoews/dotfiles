@@ -17,7 +17,7 @@ function! myspacevim#before() abort
   " set list! set nolist
   " 
   " show tab symbols
-  set list
+  " set list
 
   " vanilla quit
   set confirm
