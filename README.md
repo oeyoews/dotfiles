@@ -22,10 +22,11 @@
 <!-- ### if [ -d ] todo 判断文件是否存在，如果文件存在，则备份文件为 .._bk -->
 
 ## Installation
-* git clone --depth=1 --branch=mani https://gitlab.com/oeyoews/dotfiles.git
+* git clone --depth=1 --branch=main https://gitlab.com/oeyoews/dotfiles.git
 ### Second <stow> <!-- * 2021-07-20 12:48:25  -->
-* need install stow
+* need install pkg: stow
 * git clone --depth 1 https://gitlab.com/oeyoews/dotfiles.git ~
 * cd dotfiles/bootstrap && sh bootstrap.sh
 
 - note: sddm use stow --target=/ sddm
+😄

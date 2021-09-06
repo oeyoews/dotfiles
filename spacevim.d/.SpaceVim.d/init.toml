@@ -41,6 +41,9 @@
 [[layers]]
     name = 'lang#sh'
 
+# [[layers]]
+  # name = 'lang#markdown'
+
 # shortkeys: ctrl p and  spc f f (parent dir)
 # multi cursor: spc s e
 # spc f r : open recent files
@@ -48,6 +51,9 @@
 # ctrl+p
 [[layers]]
     name = "leaderf"
+
+[[layers]]
+  name = 'ui'
 
 [[layers]]
     name = 'shell'
@@ -98,6 +104,7 @@
 
 [[custom_plugins]]
   repo = "airblade/vim-gitgutter"
+  # hook_add = ''' '''
 
 [[custom_plugins]]
   repo = "ryanoasis/vim-devicons"
@@ -119,3 +126,9 @@
 
 [[custom_plugins]]
   repo = 'bronson/vim-trailing-whitespace'
+
+# pkg: [sudo] npm -g install instant-markdown-d
+# cd .cache/vimfiles/repos/github.com/instant-markdown/vim-instant-markdown/ && yarn install
+# if it doesn't work, please use :SPReinstall
+[[custom_plugins]]
+repo = 'instant-markdown/vim-instant-markdown'

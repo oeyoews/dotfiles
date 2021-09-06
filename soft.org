@@ -146,3 +146,5 @@ xournal
 
 # download youtube video
 you-get
+
+awesome-terminal-fonts

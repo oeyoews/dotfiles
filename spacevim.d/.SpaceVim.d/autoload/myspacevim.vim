@@ -6,6 +6,13 @@
 " === before
 " ===
 function! myspacevim#before() abort
+
+
+  " 开启保存 undo 历史功能
+  set undofile
+  " undo 历史保存路径
+  " need mkdir it by hand
+  set undodir=~/.undo_history/
   " eg: set nu?
   set updatetime=100
   set nofoldenable
@@ -15,7 +22,7 @@ function! myspacevim#before() abort
   set showcmd
 
   " set list! set nolist
-  " 
+  "
   " show tab symbols
   " set list
 
@@ -37,6 +44,7 @@ function! myspacevim#before() abort
   " ===
   " === GitGutter
   " ===
+  " fix in before
   let g:gitgutter_sign_allow_clobber = 0
   let g:gitgutter_map_keys = 0
   let g:gitgutter_override_sign_column_highlight = 1
@@ -51,6 +59,7 @@ function! myspacevim#before() abort
   nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
   nnoremap <LEADER>g= :GitGutterNextHunk<CR>
 
+
 endfunction
 
 
@@ -59,9 +68,9 @@ endfunction
 " ===
 function! myspacevim#after() abort
 
-" ===
-" === nerdtree
-" ===
+  " ===
+  " === nerdtree
+  " ===
   " ▾ ✏️  ➤ ❯
   let g:NERDTreeDirArrowExpandable = '➤'
   let g:NERDTreeDirArrowCollapsible = '✏️'
@@ -74,6 +83,8 @@ function! myspacevim#after() abort
   nnoremap <leader>qq :q!<CR>
   nnoremap <leader>w :w<CR>
 
+  " must in after
+  set wrap
   map tx :r !figlet
   map th :%TOhtml
 
