@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 
-create_dir_dir() {
+create_dir() {
   cd ~/HOME || return
-  mkdir repo doc pdf temp vscode
+  mkdir repo doc pdf md org temp vscode wechat
 }
 
 main() {
-  create_dir_dir;
-  echo "successfully creat some dir == repo doc temp vscode == ."
+  create_dir;
+  echo "Creat some dir for your system successfully."
 }
 
 main

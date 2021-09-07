@@ -7,6 +7,7 @@
 " ===
 function! myspacevim#before() abort
 
+  set cindent
 
   " 开启保存 undo 历史功能
   set undofile
@@ -44,7 +45,7 @@ function! myspacevim#before() abort
   " ===
   " === GitGutter
   " ===
-  " fix in before
+  " fix in before for GitGutter
   let g:gitgutter_sign_allow_clobber = 0
   let g:gitgutter_map_keys = 0
   let g:gitgutter_override_sign_column_highlight = 1
@@ -59,7 +60,6 @@ function! myspacevim#before() abort
   nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
   nnoremap <LEADER>g= :GitGutterNextHunk<CR>
 
-
 endfunction
 
 
@@ -71,7 +71,6 @@ function! myspacevim#after() abort
   " ===
   " === nerdtree
   " ===
-  " ▾ ✏️  ➤ ❯
   let g:NERDTreeDirArrowExpandable = '➤'
   let g:NERDTreeDirArrowCollapsible = '✏️'
 
@@ -85,7 +84,40 @@ function! myspacevim#after() abort
 
   " must in after
   set wrap
-  map tx :r !figlet
-  map th :%TOhtml
+
+  " vim-surround: https://gist.github.com/oeyoews/4c8eb99f9df1c4c756a413c3d8a09a6c
+
+  " ===
+  " === CocSettings
+  " ===
+  nnoremap <silent> <space>ce :<C-u>CocList --normal extensions<CR>
+  nnoremap <silent> <space>cm :<C-u>CocList --normal marketplace<CR>
+  nnoremap <silent> <space>cc :<C-u>CocConfig<CR>
+  nnoremap <silent><nowait> <space>cd  :<C-u>CocList diagnostics<cr>
+  nmap <space>crn <Plug>(coc-rename)
+  nmap <silent> gr <Plug>(coc-references)
+  nmap <silent> [g <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]g <Plug>(coc-diagnostic-next)
+  nmap <space>cqf  <Plug>(coc-fix-current)
+  " print variable: echo coc_global_extensions
+  " coc-git
+  let g:coc_global_extensions = ['coc-prettier', 'coc-browser', 'coc-json',
+        \ 'coc-css', 'coc-emoji', 'coc-html', 'coc-highlight',
+        \ 'coc-snippets', 'coc-vimlsp', 'coc-marketplace', 'coc-yaml',
+        \ 'coc-diagnostic', 'coc-lists']
+
+  " tab just switch item and <cr> to completion"
+  inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+  " :map  show all bindingskey
+  noremap <space>; :
+  noremap <space>/ /
+  noremap tx :r !figlet
+  noremap th :%TOhtml
+
 
 endfunction

@@ -30,6 +30,8 @@
     filemanager = "nerdtree"
     colorscheme_bg = "dark"
     colorscheme = "SpaceVim"
+
+# dependencies: yarn or npm and node
     autocomplete_method="coc"
 
 [[layers]]
@@ -104,7 +106,6 @@
 
 [[custom_plugins]]
   repo = "airblade/vim-gitgutter"
-  # hook_add = ''' '''
 
 [[custom_plugins]]
   repo = "ryanoasis/vim-devicons"
