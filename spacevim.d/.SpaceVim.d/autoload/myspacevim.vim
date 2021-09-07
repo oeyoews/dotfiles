@@ -8,6 +8,16 @@
 function! myspacevim#before() abort
 
   " ===
+  " === tmp settings
+  " ===
+  " vim-surround: https://gist.github.com/oeyoews/4c8eb99f9df1c4c756a413c3d8a09a6c
+  " noremap tx :r !figlet
+  " noremap th :%TOhtml
+  " noremap <space>; :
+  " noremap <space>/ /
+  " nnoremap <leader>w :w<CR>
+
+  " ===
   " === vim_instant_markdown
   " ===
   let g:instant_markdown_autoscroll = 1
@@ -19,8 +29,6 @@ function! myspacevim#before() abort
   " === rainbow
   " ===
   let g:rainbow_active = 1
-
-  set cindent
 
   " 开启保存 undo 历史功能
   set undofile
@@ -77,7 +85,7 @@ endfunction
 
 
 " ===
-" === after
+" === After
 " ===
 function! myspacevim#after() abort
 
@@ -87,18 +95,16 @@ function! myspacevim#after() abort
   let g:NERDTreeDirArrowExpandable = '➤'
   let g:NERDTreeDirArrowCollapsible = '✏️'
 
+  " ===
+  " === misc settings
+  " ===
   set sidescroll=1
   set nobackup
   set noswapfile
   set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14
   nnoremap <leader>qq :q!<CR>
-  nnoremap <leader>w :w<CR>
-
-  " must in after
-  set wrap
-
-  " vim-surround: https://gist.github.com/oeyoews/4c8eb99f9df1c4c756a413c3d8a09a6c
+  set wrap  " must in after
 
   " ===
   " === coc.nvim
@@ -109,41 +115,85 @@ function! myspacevim#after() abort
   nnoremap <silent><nowait> <space>cd  :<C-u>CocList diagnostics<cr>
   nmap <space>crn <Plug>(coc-rename)
   nmap <silent> gr <Plug>(coc-references)
+  " default is enable for gd  nmap <silent> gd <Plug>(coc-definition)
   nmap <silent> [g <Plug>(coc-diagnostic-prev)
   nmap <silent> ]g <Plug>(coc-diagnostic-next)
   nmap <space>cqf  <Plug>(coc-fix-current)
   " print variable: echo coc_global_extensions
   " coc-git
+  "https://github.com/neoclide/coc-sources#readme
   let g:coc_global_extensions = [
         \ 'coc-prettier',
         \ 'coc-browser',
+        \ 'coc-yank',
         \ 'coc-pyright',
         \ 'coc-json',
         \ 'coc-css',
         \ 'coc-emoji',
         \ 'coc-html',
         \ 'coc-highlight',
+        \ 'coc-tabnine',
+        \ 'coc-gitignore',
         \ 'coc-snippets',
         \ 'coc-vimlsp',
         \ 'coc-marketplace',
         \ 'coc-yaml',
         \ 'coc-syntax',
         \ 'coc-diagnostic',
+        \ 'coc-translator',
         \ 'coc-lists']
-
   " tab just switch item and <cr> to completion"
   " inoremap <silent><expr> <TAB>
-      " \ pumvisible() ? "\<C-n>" :
-      " \ <SID>check_back ? "\<TAB>" :
-      " \ coc#refresh()
-  " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+        " \ pumvisible() ? "\<C-n>" :
+        " \ <SID>check_back_space() ? "\<TAB>" :
+        " \ coc#refresh()
+  " tab and shift + tab
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+  " Use K to show documentation in preview window.
+  nnoremap <silent> <leader>h :call <SID>show_documentation()<CR>
+  function! s:show_documentation()
+    if (index(['vim','help'], &filetype) >= 0)
+      execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+      call CocActionAsync('doHover')
+    else
+      execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
+  endfunction
+  inoremap <silent><expr> <c-@> coc#refresh()
 
-  " :map  show all bindingskey
-  noremap <space>; :
-  noremap <space>/ /
+  " ===
+  " === coc-translator
+  " ===
+  " popup
+  nmap <Leader>tw <Plug>(coc-translator-p)
+  vmap <Leader>tw <Plug>(coc-translator-pv)
+  " echo
+  nmap <Leader>e <Plug>(coc-translator-e)
+  " replace
+  nmap <Leader>r <Plug>(coc-translator-r)
 
-  " noremap tx :r !figlet
-  " noremap th :%TOhtml
+  " ===
+  " === vim-illuminate
+  " ===
+  let g:Illuminate_delay = 150
+  hi illuminatedWord cterm=underline gui=underline
+  " hi link illuminatedWord Visual
+  let g:Illuminate_ftblacklist = ['nerdtree']
+
+  " ===
+  " === coc-explorer
+  " ===
+  nnoremap <space>cfe :CocCommand explorer<CR>
+
+  " ===
+  " === markdown-preview.nvim
+  " ===
+  nnoremap <space>fm :MarkdownPreviewToggle<CR>
 
 
 endfunction

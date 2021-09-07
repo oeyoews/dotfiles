@@ -18,6 +18,7 @@
 	"suggest.snippetIndicator": "",
 	"suggest.triggerCompletionWait": 100,
 	"suggest.echodocSupport": true,
+	"snippets.ultisnips.directories": ["UltiSnips", "$HOME/.SpaceVim.d/UltiSnips"],
 	"suggest.completionItemKindLabels": {
 		"class": "\uf0e8",
 		"color": "\ue22b",
@@ -56,8 +57,6 @@
 	"diagnostic.virtualText": false,
 	"codeLens.enable": true,
 	"list.previewHighlightGroup": "Statement",
-	"list.nextKeymap": "<C-e>",
-	"list.previousKeymap": "<C-u>",
 	"coc.preferences.formatOnSaveFiletypes": [
 		"javascript",
 		"typescript",
@@ -92,8 +91,8 @@
 	"explorer.keyMappingMode": "none",
 	"explorer.buffer.showHiddenBuffers": false,
 	"explorer.keyMappings.global": {
-		"u": "nodePrev",
-		"e": "nodeNext",
+		"k": "nodePrev",
+		"j": "nodeNext",
 		"h": "toggleSelection",
 		"<tab>": "actionMenu",
 		"gl": "expandRecursive",
@@ -112,7 +111,6 @@
 		"pp": "pasteFile",
 		"dD": "deleteForever",
 		"a": "addFile",
-		"k": "addFile",
 		"M": "addDirectory",
 		"cw": "rename",
 		".": "toggleHidden",
@@ -163,37 +161,5 @@
 	"diagnostic-languageserver.formatFiletypes": {
 		"elixir": "mix_format",
 		"eelixir": "mix_format"
-	},
-	"languageserver": {
-		"lua": {
-			"command": "lua-lsp",
-			"filetypes": ["lua"]
-		},
-		"golang": {
-			"command": "gopls",
-			"rootPatterns": ["go.mod"],
-			"filetypes": ["go"],
-			"initializationOptions": {
-				"gocodeCompletionEnabled": true,
-				"diagnosticsEnabled": true,
-				"lintTool": "golint"
-			}
-		},
-		"bash": {
-			"command": "bash-language-server",
-			"args": ["start"],
-			"filetypes": ["sh"],
-			"ignoredRootPaths": []
-		},
-		"ccls": {
-			"command": "ccls",
-			"filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
-			"rootPatterns": [".ccls", ".ccls-root", "compile_commands.json", ".git/", ".hg/"],
-			"initializationOptions": {
-				"cache": {
-					"directory": "/tmp/ccls"
-				}
-			}
-		}
 	}
 }

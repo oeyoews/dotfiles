@@ -13,10 +13,10 @@
 
 [options]
     enable_guicolors = true
-    statusline_iseparator = "sharp"
-    statusline_separator = "sharp"
+    statusline_iseparator = "nil" # for nerdtree like
+    statusline_separator = "nil"  # for statusline
     filetree_direction = "right"
-    enable_vimfiler_welcome = 0
+    enable_vimfiler_welcome = 0  # show nerdtree
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true
@@ -101,17 +101,14 @@
 [[layers]]
   name = "format"
 
-[[custom_plugins]]
-  repo = 'machakann/vim-highlightedyank'
+# [[custom_plugins]]
+  # repo = 'machakann/vim-highlightedyank'
 
 [[custom_plugins]]
   repo = "airblade/vim-gitgutter"
 
 [[custom_plugins]]
   repo = "ryanoasis/vim-devicons"
-
-[[custom_plugins]]
-  repo = 'voldikss/vim-translator'
 
 [[custom_plugins]]
   repo = 'yianwillis/vimcdoc'
@@ -125,6 +122,7 @@
 [[custom_plugins]]
   repo = "jszakmeister/vim-togglecursor"
 
+#  use <leader> + whitespace"
 [[custom_plugins]]
   repo = 'bronson/vim-trailing-whitespace'
 
@@ -135,10 +133,13 @@
 # cd .cache/vimfiles/repos/github.com/instant-markdown/vim-instant-markdown/ && yarn install
 # if it doesn't work, please use :SPReinstall
 [[custom_plugins]]
-repo = 'instant-markdown/vim-instant-markdown'
+  # repo = 'instant-markdown/vim-instant-markdown'
+  repo = 'iamcco/markdown-preview.nvim' # need cd .cache/vimfiles/.cache/vimrc/.deni/app && yarn
 
 # Ctrl+L (insert) to toggle capslock
 # :h capslock
 [[custom_plugins]]
   repo = 'tpope/vim-capslock'
 
+[[custom_plugins]]
+  repo = 'RRethy/vim-illuminate'
