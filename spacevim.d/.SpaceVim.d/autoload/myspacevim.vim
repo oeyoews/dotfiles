@@ -7,6 +7,19 @@
 " ===
 function! myspacevim#before() abort
 
+  " ===
+  " === vim_instant_markdown
+  " ===
+  let g:instant_markdown_autoscroll = 1
+  let g:instant_markdown_slow = 0
+  let g:instant_markdown_autostart = 1
+  "let g:instant_markdown_port = 8888
+
+  " ===
+  " === rainbow
+  " ===
+  let g:rainbow_active = 1
+
   set cindent
 
   " 开启保存 undo 历史功能
@@ -88,7 +101,7 @@ function! myspacevim#after() abort
   " vim-surround: https://gist.github.com/oeyoews/4c8eb99f9df1c4c756a413c3d8a09a6c
 
   " ===
-  " === CocSettings
+  " === coc.nvim
   " ===
   nnoremap <silent> <space>ce :<C-u>CocList --normal extensions<CR>
   nnoremap <silent> <space>cm :<C-u>CocList --normal marketplace<CR>
@@ -101,23 +114,36 @@ function! myspacevim#after() abort
   nmap <space>cqf  <Plug>(coc-fix-current)
   " print variable: echo coc_global_extensions
   " coc-git
-  let g:coc_global_extensions = ['coc-prettier', 'coc-browser', 'coc-json',
-        \ 'coc-css', 'coc-emoji', 'coc-html', 'coc-highlight',
-        \ 'coc-snippets', 'coc-vimlsp', 'coc-marketplace', 'coc-yaml',
-        \ 'coc-diagnostic', 'coc-lists']
+  let g:coc_global_extensions = [
+        \ 'coc-prettier',
+        \ 'coc-browser',
+        \ 'coc-pyright',
+        \ 'coc-json',
+        \ 'coc-css',
+        \ 'coc-emoji',
+        \ 'coc-html',
+        \ 'coc-highlight',
+        \ 'coc-snippets',
+        \ 'coc-vimlsp',
+        \ 'coc-marketplace',
+        \ 'coc-yaml',
+        \ 'coc-syntax',
+        \ 'coc-diagnostic',
+        \ 'coc-lists']
 
   " tab just switch item and <cr> to completion"
-  inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+  " inoremap <silent><expr> <TAB>
+      " \ pumvisible() ? "\<C-n>" :
+      " \ <SID>check_back ? "\<TAB>" :
+      " \ coc#refresh()
+  " inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
   " :map  show all bindingskey
   noremap <space>; :
   noremap <space>/ /
-  noremap tx :r !figlet
-  noremap th :%TOhtml
+
+  " noremap tx :r !figlet
+  " noremap th :%TOhtml
 
 
 endfunction

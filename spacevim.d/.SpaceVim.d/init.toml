@@ -128,8 +128,17 @@
 [[custom_plugins]]
   repo = 'bronson/vim-trailing-whitespace'
 
+[[custom_plugins]]
+  repo = 'luochen1990/rainbow'
+
 # pkg: [sudo] npm -g install instant-markdown-d
 # cd .cache/vimfiles/repos/github.com/instant-markdown/vim-instant-markdown/ && yarn install
 # if it doesn't work, please use :SPReinstall
 [[custom_plugins]]
 repo = 'instant-markdown/vim-instant-markdown'
+
+# Ctrl+L (insert) to toggle capslock
+# :h capslock
+[[custom_plugins]]
+  repo = 'tpope/vim-capslock'
+
