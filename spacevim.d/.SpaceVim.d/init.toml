@@ -30,9 +30,7 @@
     filemanager = "nerdtree"
     colorscheme_bg = "dark"
     colorscheme = "SpaceVim"
-
-# dependencies: yarn or npm and node
-    autocomplete_method="coc"
+    autocomplete_method="coc" # dependencies: yarn or npm and node
 
 [[layers]]
     name = 'autocomplete'
@@ -88,21 +86,21 @@
   [layer.clang_std]
     cpp = "c11"
 
-[[layers]]
-  name = "lsp"
-  filetypes = [
-        "c",
-        "cpp"
-    ]
-
-[layers.override_cmd]
-  c = ["clangd"]
+# ===
+# === comment lsp layer for coc
+# ===
+# [[layers]]
+  # name = "lsp"
+  # filetypes = [
+        # "c",
+        # "cpp"
+    # ]
+#
+# [layers.override_cmd]
+  # c = ["clangd"]
 
 [[layers]]
   name = "format"
-
-# [[custom_plugins]]
-  # repo = 'machakann/vim-highlightedyank'
 
 [[custom_plugins]]
   repo = "airblade/vim-gitgutter"
