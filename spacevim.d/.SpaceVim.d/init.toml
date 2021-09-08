@@ -2,21 +2,18 @@
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
 
-# pkg: clang(pacman)
-# time vim -u NONE -c exit
-# spell_check: z= or C-x&s
+# vanilla: vim -u NONE
+# spell_check: z=
 # gf: go file
 # file jump: C-i C-o
 # split: `sg  `sv `st
-# `, q r' == q
-# whitespace:  spc t w
+# ', q r' == 'q'
 
 [options]
     enable_guicolors = true
-    statusline_iseparator = "nil" # for nerdtree like
+    statusline_iseparator = "nil"  # for nerdtree like
     statusline_separator = "nil"  # for statusline
-    filetree_direction = "right"
-    enable_vimfiler_welcome = 0  # show nerdtree
+    enable_vimfiler_welcome = 0  # show nerdtree automatically in welcome
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_mode = true
@@ -24,11 +21,11 @@
     bootstrap_after  = "myspacevim#after"
     guifont = "Droid Sans Mono:h11"
     statusline_unicode_symbols = true
-    enable_os_fileformat_icon = true
-    wrap_line=0
+    wrap_line=0  # enable wrapline: 1
     checkinstall = 1
     default_indent = 2
-    filemanager = "nerdtree"
+    filetree_direction = "right"
+    filemanager = ""  # if nil, disable filemanager
     colorscheme_bg = "dark"
     colorscheme = "SpaceVim"
     autocomplete_method="coc" # dependencies: yarn or npm and node
@@ -42,13 +39,6 @@
 [[layers]]
     name = 'lang#sh'
 
-# [[layers]]
-  # name = 'lang#markdown'
-
-# shortkeys: ctrl p and  spc f f (parent dir)
-# multi cursor: spc s e
-# spc f r : open recent files
-# spc f f : search file
 # ctrl+p
 [[layers]]
     name = "leaderf"
@@ -58,7 +48,7 @@
 
 [[layers]]
     name = 'shell'
-    default_position = 'float'
+    default_position = 'float'  # float feature just support nvim
     default_height = 80
 
 [[layers]]
@@ -67,7 +57,8 @@
 [[layers]]
     name = "incsearch"
 
-# spc w c and mm
+# reading mode: spc w c
+# ann bookmarks: mm
 [[layers]]
   name = "tools"
 
@@ -77,18 +68,11 @@
 [[layers]]
   name = "lang#vim"
 
+# dependencies: clang(pacman)
 [[layers]]
   name = "lang#c"
   [layer.clang_std]
     cpp = "c11"
-
-# [[layers]]
-  # name = "lsp"
-  # filetypes = [
-    # "c"
-  # ]
-# [layers.override_cmd]
-    # c = ["clangd"]
 
 [[layers]]
   name = "format"
@@ -99,6 +83,7 @@
 [[custom_plugins]]
   repo = "ryanoasis/vim-devicons"
 
+# chinese vim doc
 [[custom_plugins]]
   repo = 'yianwillis/vimcdoc'
 
@@ -112,23 +97,22 @@
   repo = "jszakmeister/vim-togglecursor"
 
 #  use <leader> + whitespace"
+# highlight whitespace:  spc t w
 [[custom_plugins]]
   repo = 'bronson/vim-trailing-whitespace'
 
 [[custom_plugins]]
   repo = 'luochen1990/rainbow'
 
-# pkg: [sudo] npm -g install instant-markdown-d
-# cd .cache/vimfiles/repos/github.com/instant-markdown/vim-instant-markdown/ && yarn install
-# if it doesn't work, please use :SPReinstall
+# spc f m
 [[custom_plugins]]
-  # repo = 'instant-markdown/vim-instant-markdown'
-  repo = 'iamcco/markdown-preview.nvim' # need cd .cache/vimfiles/.cache/vimrc/.deni/app && yarn
+  repo = 'iamcco/markdown-preview.nvim' # need cd .cache/vimfiles/.cache/vimrc/.deni/app && yarn or rm -rf .cache/vimfiles/repo/github/iamcoo and reinstall this plugin
 
 # Ctrl+L (insert) to toggle capslock
 # :h capslock
 [[custom_plugins]]
   repo = 'tpope/vim-capslock'
 
+# highlight currentcursorword
 [[custom_plugins]]
   repo = 'RRethy/vim-illuminate'

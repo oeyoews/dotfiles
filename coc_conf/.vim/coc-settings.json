@@ -16,6 +16,7 @@
 	"suggest.floatEnable": true,
 	"suggest.detailField": "preview",
 	"suggest.snippetIndicator": "",
+	"suggest.defaultSortMethod": "none",
 	"suggest.triggerCompletionWait": 100,
 	"suggest.echodocSupport": true,
 	"snippets.ultisnips.directories": ["UltiSnips", "$HOME/.SpaceVim.d/UltiSnips"],
@@ -46,6 +47,7 @@
 		"value": "\uf89f",
 		"variable": "\ue71b"
 	},
+	"clangd.enabled": true,
 	"diagnostic.errorSign": "\uf467",
 	"diagnostic.warningSign": "\uf071",
 	"diagnostic.infoSign": "\uf129",
@@ -57,19 +59,7 @@
 	"diagnostic.virtualText": false,
 	"codeLens.enable": true,
 	"list.previewHighlightGroup": "Statement",
-	"coc.preferences.formatOnSaveFiletypes": [
-		"javascript",
-		"typescript",
-		"html",
-		"css",
-		"json",
-		"java",
-		"python",
-		"vue",
-		"svelte",
-		"c",
-		"prisma"
-	],
+	"coc.preferences.formatOnSaveFiletypes": ["html", "css", "json", "java", "python", "c", "prisma"],
 	"yaml.format.enable": true,
 	"signature.target": "float",
 	"yank.enableCompletion": false,
@@ -143,13 +133,8 @@
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": false,
 	"diagnostic-languageserver.filetypes": {
-		"vim": "vint",
-		"email": "languagetool",
 		"markdown": ["write-good", "markdownlint"],
-		"sh": "shellcheck",
-		"elixir": ["mix_credo", "mix_credo_compile"],
-		"eelixir": ["mix_credo", "mix_credo_compile"],
-		"php": ["phpstan", "psalm"]
+		"sh": "shellcheck"
 	},
 	"diagnostic-languageserver.formatFiletypes": {
 		"elixir": "mix_format",

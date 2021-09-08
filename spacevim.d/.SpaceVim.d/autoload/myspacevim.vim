@@ -17,6 +17,7 @@ function! myspacevim#before() abort
   " noremap <space>/ /
   " nnoremap <leader>w :w<CR>
 
+  let g:spacevim_filetype_icons['toml'] = ''
   " ===
   " === vim_instant_markdown
   " ===
@@ -104,12 +105,13 @@ function! myspacevim#after() abort
   set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14
   nnoremap <leader>qq :q!<CR>
-  set wrap  " must in after
+  set nowrap  " must in after
 
   " ===
   " === coc.nvim
   " ===
   " when use npm tao, not to use proxy
+  " Coclist services
   nnoremap <silent> <space>ce :<C-u>CocList --normal extensions<CR>
   nnoremap <silent> <space>cm :<C-u>CocList --normal marketplace<CR>
   nnoremap <silent> <space>cc :<C-u>CocConfig<CR>
