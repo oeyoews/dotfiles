@@ -22,19 +22,18 @@
     guifont = "Droid Sans Mono:h11"
     statusline_unicode_symbols = true
     wrap_line=0  # enable wrapline: 1
-    checkinstall = 1
+    checkinstall = 1  # enable: 1, autoinstall plugin
     default_indent = 2
     filetree_direction = "right"
     filemanager = "nerdtree"  # if nil, disable filemanager
-    colorscheme_bg = "dark"
     colorscheme = "SpaceVim"
     autocomplete_method="coc" # dependencies: yarn or npm and node
 
-[[layers]]
-    name = 'autocomplete'
-    auto_completion_tab_key_behavior = "smart"
-    auto-completion-return-key-behavior = "smart"
-    auto-completion-delay = 1
+# [[layers]]
+    # name = 'autocomplete'
+    # auto_completion_tab_key_behavior = "smart"
+    # auto-completion-return-key-behavior = "smart"
+    # auto-completion-delay = 1
 
 [[layers]]
     name = 'lang#sh'
@@ -93,9 +92,6 @@
 [[custom_plugins]]
   repo = "justinmk/vim-syntax-extra"
 
-[[custom_plugins]]
-  repo = "jszakmeister/vim-togglecursor"
-
 #  use <leader> + whitespace"
 # highlight whitespace:  spc t w
 [[custom_plugins]]
@@ -112,7 +108,3 @@
 # :h capslock
 [[custom_plugins]]
   repo = 'tpope/vim-capslock'
-
-# highlight currentcursorword
-[[custom_plugins]]
-  repo = 'RRethy/vim-illuminate'

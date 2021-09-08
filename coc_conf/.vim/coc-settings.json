@@ -132,10 +132,6 @@
 	"prettier.useTabs": true,
 	"prettier.trailingComma": "all",
 	"prettier.singleQuote": false,
-	"diagnostic-languageserver.filetypes": {
-		"markdown": ["write-good", "markdownlint"],
-		"sh": "shellcheck"
-	},
 	"diagnostic-languageserver.formatFiletypes": {
 		"elixir": "mix_format",
 		"eelixir": "mix_format"

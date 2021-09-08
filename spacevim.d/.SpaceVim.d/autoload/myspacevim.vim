@@ -17,9 +17,9 @@ function! myspacevim#before() abort
   " noremap <space>/ /
   " nnoremap <leader>w :w<CR>
 
-  let g:spacevim_filetype_icons['toml'] = ''
+  let g:smoothie_enabled=0  " disable vim-smoothie
 
-  " let g:escape_key_binding = 'jk'
+  let g:spacevim_filetype_icons['toml'] = ''
 
   " ===
   " === vim_instant_markdown
@@ -122,56 +122,24 @@ function! myspacevim#after() abort
   nmap <space>crn <Plug>(coc-rename)
   nmap <silent> gr <Plug>(coc-references)
   " default is enable for gd  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> [g <Plug>(coc-diagnostic-prev)
-  nmap <silent> ]g <Plug>(coc-diagnostic-next)
   nmap <space>cqf  <Plug>(coc-fix-current)
   " print variable: echo coc_global_extensions
   " coc-git
   "https://github.com/neoclide/coc-sources#readme
   let g:coc_global_extensions = [
-        \ 'coc-prettier',
-        \ 'coc-browser',
         \ 'coc-yank',
-        \ 'coc-pyright',
         \ 'coc-json',
-        \ 'coc-css',
         \ 'coc-emoji',
-        \ 'coc-html',
         \ 'coc-highlight',
-        \ 'coc-tabnine',
-        \ 'coc-gitignore',
         \ 'coc-snippets',
         \ 'coc-vimlsp',
-        \ 'coc-marketplace',
         \ 'coc-yaml',
         \ 'coc-syntax',
-        \ 'coc-diagnostic',
         \ 'coc-translator',
-        \ 'coc-explorer',
         \ 'coc-clangd',
         \ 'coc-lists']
-  " tab just switch item and <cr> to completion"
-  " inoremap <silent><expr> <TAB>
-        " \ pumvisible() ? "\<C-n>" :
-        " \ <SID>check_back_space() ? "\<TAB>" :
-        " \ coc#refresh()
   " tab and shift + tab
   inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-  function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-  endfunction
-  " Use K to show documentation in preview window.
-  nnoremap <silent> <leader>h :call <SID>show_documentation()<CR>
-  function! s:show_documentation()
-    if (index(['vim','help'], &filetype) >= 0)
-      execute 'h '.expand('<cword>')
-    elseif (coc#rpc#ready())
-      call CocActionAsync('doHover')
-    else
-      execute '!' . &keywordprg . " " . expand('<cword>')
-    endif
-  endfunction
   inoremap <silent><expr> <c-@> coc#refresh()
 
   " ===
@@ -179,24 +147,8 @@ function! myspacevim#after() abort
   " ===
   " popup
   nmap <Leader>tw <Plug>(coc-translator-p)
-  vmap <Leader>tw <Plug>(coc-translator-pv)
-  " echo
+  " in minbuffer
   nmap <Leader>e <Plug>(coc-translator-e)
-  " replace
-  nmap <Leader>r <Plug>(coc-translator-r)
-
-  " ===
-  " === vim-illuminate
-  " ===
-  let g:Illuminate_delay = 150
-  hi illuminatedWord cterm=underline gui=underline
-  " hi link illuminatedWord Visual
-  let g:Illuminate_ftblacklist = ['nerdtree']
-
-  " ===
-  " === coc-explorer
-  " ===
-  nnoremap <space>cfe :CocCommand explorer<CR>
 
   " ===
   " === markdown-preview.nvim
