@@ -85,9 +85,6 @@
   name = "format"
 
 [[custom_plugins]]
-  repo = "airblade/vim-gitgutter"
-
-[[custom_plugins]]
   repo = "ryanoasis/vim-devicons"
 
 # chinese vim doc
@@ -116,3 +113,6 @@
 # :h capslock
 [[custom_plugins]]
   repo = 'tpope/vim-capslock'
+
+[[custom_plugins]]
+  repo = "machakann/vim-highlightedyank"
