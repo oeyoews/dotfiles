@@ -109,6 +109,7 @@ function! myspacevim#after() abort
   " ===
   " === coc.nvim
   " ===
+  " when use npm tao, not to use proxy
   nnoremap <silent> <space>ce :<C-u>CocList --normal extensions<CR>
   nnoremap <silent> <space>cm :<C-u>CocList --normal marketplace<CR>
   nnoremap <silent> <space>cc :<C-u>CocConfig<CR>
@@ -141,6 +142,8 @@ function! myspacevim#after() abort
         \ 'coc-syntax',
         \ 'coc-diagnostic',
         \ 'coc-translator',
+        \ 'coc-explorer',
+        \ 'coc-clangd',
         \ 'coc-lists']
   " tab just switch item and <cr> to completion"
   " inoremap <silent><expr> <TAB>
