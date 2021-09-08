@@ -27,13 +27,12 @@
     filetree_direction = "right"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
-    autocomplete_method="coc" # dependencies: yarn or npm and node
 
-# [[layers]]
-    # name = 'autocomplete'
-    # auto_completion_tab_key_behavior = "smart"
-    # auto-completion-return-key-behavior = "smart"
-    # auto-completion-delay = 1
+[[layers]]
+    name = 'autocomplete'
+    auto_completion_tab_key_behavior = "smart"
+    auto-completion-return-key-behavior = "smart"
+    auto-completion-delay = 1
 
 [[layers]]
     name = 'lang#sh'
@@ -70,8 +69,17 @@
 # dependencies: clang(pacman)
 [[layers]]
   name = "lang#c"
+  enable_clang_syntax_highlight = true
   [layer.clang_std]
     cpp = "c11"
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "c",
+  ]
+  [layers.override_cmd]
+    c = ["clangd"]
 
 [[layers]]
   name = "format"

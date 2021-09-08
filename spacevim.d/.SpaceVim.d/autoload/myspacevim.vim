@@ -7,27 +7,9 @@
 " ===
 function! myspacevim#before() abort
 
-  " ===
-  " === tmp settings
-  " ===
-  " vim-surround: https://gist.github.com/oeyoews/4c8eb99f9df1c4c756a413c3d8a09a6c
-  " noremap tx :r !figlet
-  " noremap th :%TOhtml
-  " noremap <space>; :
-  " noremap <space>/ /
-  " nnoremap <leader>w :w<CR>
-
   let g:smoothie_enabled=0  " disable vim-smoothie
 
   let g:spacevim_filetype_icons['toml'] = ''
-
-  " ===
-  " === vim_instant_markdown
-  " ===
-  let g:instant_markdown_autoscroll = 1
-  let g:instant_markdown_slow = 0
-  let g:instant_markdown_autostart = 1
-  "let g:instant_markdown_port = 8888
 
   " ===
   " === rainbow
@@ -109,46 +91,6 @@ function! myspacevim#after() abort
   set guifont=Droid\ Sans\ Mono\ 14
   nnoremap <leader>qq :q!<CR>
   set nowrap  " must in after
-
-  " ===
-  " === coc.nvim
-  " ===
-  " when use npm tao, not to use proxy
-  " Coclist services
-  nnoremap <silent> <space>ce :<C-u>CocList --normal extensions<CR>
-  nnoremap <silent> <space>cm :<C-u>CocList --normal marketplace<CR>
-  nnoremap <silent> <space>cc :<C-u>CocConfig<CR>
-  nnoremap <silent><nowait> <space>cd  :<C-u>CocList diagnostics<cr>
-  nmap <space>crn <Plug>(coc-rename)
-  nmap <silent> gr <Plug>(coc-references)
-  " default is enable for gd  nmap <silent> gd <Plug>(coc-definition)
-  nmap <space>cqf  <Plug>(coc-fix-current)
-  " print variable: echo coc_global_extensions
-  " coc-git
-  "https://github.com/neoclide/coc-sources#readme
-  let g:coc_global_extensions = [
-        \ 'coc-yank',
-        \ 'coc-json',
-        \ 'coc-emoji',
-        \ 'coc-highlight',
-        \ 'coc-snippets',
-        \ 'coc-vimlsp',
-        \ 'coc-yaml',
-        \ 'coc-syntax',
-        \ 'coc-translator',
-        \ 'coc-clangd',
-        \ 'coc-lists']
-  " tab and shift + tab
-  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-  inoremap <silent><expr> <c-@> coc#refresh()
-
-  " ===
-  " === coc-translator
-  " ===
-  " popup
-  nmap <Leader>tw <Plug>(coc-translator-p)
-  " in minbuffer
-  nmap <Leader>e <Plug>(coc-translator-e)
 
   " ===
   " === markdown-preview.nvim
