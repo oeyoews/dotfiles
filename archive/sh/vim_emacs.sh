@@ -16,7 +16,7 @@ function install_emacs() {
 }
 
 function main() {
-   install_vim
+   # install_vim
  # install_emacs
   echo "Just enjoy it!"
 }
