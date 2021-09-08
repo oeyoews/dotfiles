@@ -4,6 +4,7 @@
 # https://zsh.sourceforge.io/Intro/intro_toc.html
 # bindkey > /tmp/bindkey.md
 
+# showkey -a  # show all keys
 # Make sure that the terminal is in application mode when zle is active, since
 # only then values from $terminfo are valid
 if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
@@ -16,9 +17,6 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-init
   zle -N zle-line-finish
 fi
-
-# Use emacs key bindings
-# bindkey -e
 
 # [PageUp] - Up a line of history
 if [[ -n "${terminfo[kpp]}" ]]; then
@@ -181,21 +179,6 @@ bindkey -M viins '^d' push-line-or-edit
 bindkey -M vicmd '^k' kill-line
 # like man in vi-mode visual
 bindkey -M vicmd 'H'  run-help
-
-
-# C-z to toggle current process (background/foreground)
-# need in zshrc is effect
-# fancy-ctrl-z () {
-  # if [[ $#BUFFER -eq 0 ]]; then
-    # BUFFER="fg"
-    # zle accept-line
-  # else
-    # zle push-input
-    # zle clear-screen
-  # fi
-# }
-# zle -N fancy-ctrl-z
-# bindkey '^Z' fancy-ctrl-z
 
 # in auto-menu, use  hjkl to move menu
 bindkey -M menuselect 'h' vi-backward-char

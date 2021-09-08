@@ -148,3 +148,6 @@ xournal
 you-get
 
 awesome-terminal-fonts
+
+# mysql toolsk
+dbeaver

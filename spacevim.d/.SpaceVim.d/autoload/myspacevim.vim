@@ -18,6 +18,9 @@ function! myspacevim#before() abort
   " nnoremap <leader>w :w<CR>
 
   let g:spacevim_filetype_icons['toml'] = ''
+
+  " let g:escape_key_binding = 'jk'
+
   " ===
   " === vim_instant_markdown
   " ===
@@ -199,6 +202,5 @@ function! myspacevim#after() abort
   " === markdown-preview.nvim
   " ===
   nnoremap <space>fm :MarkdownPreviewToggle<CR>
-
 
 endfunction
