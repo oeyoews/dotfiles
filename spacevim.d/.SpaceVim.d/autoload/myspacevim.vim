@@ -10,24 +10,15 @@ function! myspacevim#before() abort
   let g:smoothie_enabled=0  " disable vim-smoothie
 
   let g:spacevim_filetype_icons['toml'] = ''
-
   " ===
   " === rainbow
   " ===
+  " must in before
   let g:rainbow_active = 1
 
-  " 开启保存 undo 历史功能
-  set undofile
-  " undo 历史保存路径
-  " need mkdir it by hand
-  set undodir=~/.undo_history/
-  " eg: set nu?
   set updatetime=100
   set nofoldenable
   set so=0
-
-  " show right command
-  set showcmd
 
   " set list! set nolist
   "
@@ -75,5 +66,6 @@ function! myspacevim#after() abort
   " === markdown-preview.nvim
   " ===
   nnoremap <space>fm :MarkdownPreviewToggle<CR>
+
 
 endfunction
