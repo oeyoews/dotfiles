@@ -25,7 +25,7 @@
     checkinstall = 0
     default_indent = 2
     filetree_direction = "right"
-    filemanager = ""  # if nil, disable filemanager
+    filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme_bg = "dark"
     colorscheme = "SpaceVim"
     autocomplete_method="coc" # dependencies: yarn or npm and node
