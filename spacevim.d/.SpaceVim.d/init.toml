@@ -3,7 +3,6 @@
 # https://vimjc.com/
 
 # vanilla: vim -u NONE
-# spell_check: z=
 # gf: go file
 # file jump: C-i C-o
 # split: `sg  `sv `st
@@ -27,15 +26,25 @@
     filetree_direction = "right"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
+    disabled_plugins = ['grubox.vim']
+
+# spc f w
+[[layers]]
+  name = "sudo"
+
+# <leader> y or p  from sys
+[[layers]]
+  name = "default"
 
 [[layers]]
     name = 'autocomplete'
-    auto_completion_tab_key_behavior = "smart"
+    auto_completion_tab_key_behavior = "cycle"
     auto-completion-return-key-behavior = "smart"
-    auto-completion-delay = 1
+    auto-completion-delay = 50
 
 [[layers]]
     name = 'lang#sh'
+    ebable = true
 
 # ctrl+p
 [[layers]]
@@ -43,6 +52,16 @@
 
 [[layers]]
   name = 'ui'
+  enable_sidebar = true
+  enable_scrollbar = true
+  enable_indentline = true
+  enable_cursorword = true
+  indentline_char = '|'
+  conceallevel = 0
+  concealcursor = ''
+  cursorword_delay = 100
+  cursorword_exclude_filetype = ['markdown']
+  indentline_exclude_filetyps = []
 
 [[layers]]
     name = 'shell'
@@ -55,8 +74,8 @@
 [[layers]]
     name = "incsearch"
 
-# reading mode: spc w c
-# ann bookmarks: mm
+# reading mode: spc w c for goyo.vim
+# add bookmarks: mm
 [[layers]]
   name = "tools"
 
@@ -66,13 +85,14 @@
 [[layers]]
   name = "lang#vim"
 
-# dependencies: clang(pacman)
+# dependencies: clang
 [[layers]]
   name = "lang#c"
   enable_clang_syntax_highlight = true
   [layer.clang_std]
     cpp = "c11"
 
+# rename symbols: spc l e
 [[layers]]
   name = "lsp"
   filetypes = [
@@ -83,11 +103,12 @@
 
 [[layers]]
   name = "format"
+  format_on_save = true
 
 [[custom_plugins]]
   repo = "ryanoasis/vim-devicons"
 
-# chinese vim doc
+# zh_cn vimhelp
 [[custom_plugins]]
   repo = 'yianwillis/vimcdoc'
 
@@ -97,8 +118,7 @@
 [[custom_plugins]]
   repo = "justinmk/vim-syntax-extra"
 
-#  use <leader> + whitespace"
-# highlight whitespace:  spc t w
+#  <leader> + spc"
 [[custom_plugins]]
   repo = 'bronson/vim-trailing-whitespace'
 
@@ -109,8 +129,7 @@
 [[custom_plugins]]
   repo = 'iamcco/markdown-preview.nvim' # need cd .cache/vimfiles/.cache/vimrc/.deni/app && yarn or rm -rf .cache/vimfiles/repo/github/iamcoo and reinstall this plugin
 
-# Ctrl+L (insert) to toggle capslock
-# :h capslock
+# Ctrl+L or use  :h capslock
 [[custom_plugins]]
   repo = 'tpope/vim-capslock'
 

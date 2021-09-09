@@ -7,9 +7,12 @@
 " ===
 function! myspacevim#before() abort
 
+  noremap <space>u :SPUpdate<CR>
+
   let g:smoothie_enabled=0  " disable vim-smoothie
 
   let g:spacevim_filetype_icons['toml'] = ''
+
   " ===
   " === rainbow
   " ===
@@ -20,21 +23,17 @@ function! myspacevim#before() abort
   set nofoldenable
   set so=0
 
-  " set list! set nolist
-  "
-  " show tab symbols
-  " set list
-
-  " vanilla quit
+  " better quit
   set confirm
 
   set number relativenumber
-  set completeopt=longest,menu
+  " set completeopt=longest,menu
   set ignorecase
 
   " options: number yes
-  set signcolumn=yes
+  set signcolumn=number
 
+  " set leader
   let g:mapleader = ','
 
 endfunction

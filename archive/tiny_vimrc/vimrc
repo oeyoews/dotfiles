@@ -1,10 +1,8 @@
-set shortmess=atI
+set shortmess=atI  " disable show welcome
 set t_ti= t_te=
 
 noh
-syntax on
-set t_Co=16
-set nocompatible
+syntax on set t_Co=16 set nocompatible
 set showmode
 set showcmd
 set ruler
@@ -35,7 +33,6 @@ set statusline+=%=\
 set statusline+=%3*\ %l\ of\ %L\ %2*\ line\ 
 set scrolloff=8
 inoremap  jk <ESC>
-nmap <C-S> :w<CR>
 nmap <C-_> :noh<CR>
 nmap <S-Left> v<Left>
 nmap <S-Right> v<Right>
@@ -84,3 +81,12 @@ hi user4 ctermbg=NONE ctermfg=NONE
 hi group1 ctermbg=NONE ctermfg=0
 autocmd colorscheme * hi clear cursorline
 match group1 /\t/
+
+nmap <C-S> :w<CR>
+noremap <space>fs :w<CR>
+noremap <space>q :q<CR>
+set confirm
+
+
+
+
