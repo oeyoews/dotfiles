@@ -60,7 +60,7 @@
   conceallevel = 0
   concealcursor = ''
   cursorword_delay = 100
-  cursorword_exclude_filetype = ['markdown']
+  cursorword_exclude_filetype = ['markdown', 'toml']
   indentline_exclude_filetyps = []
 
 [[layers]]
@@ -74,7 +74,7 @@
 [[layers]]
     name = "incsearch"
 
-# reading mode: spc w c for goyo.vim
+# reading mode: spc w c goyo.vim
 # add bookmarks: mm
 [[layers]]
   name = "tools"
