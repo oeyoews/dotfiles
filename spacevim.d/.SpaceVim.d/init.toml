@@ -2,7 +2,7 @@
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
 
-# vanilla vim: vim -u NONE
+# vanilla: vim -u NONE
 # split: st
 # , q r == q
 
