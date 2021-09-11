@@ -2,11 +2,9 @@
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
 
-# vanilla: vim -u NONE
-# gf: go file
-# file jump: C-i C-o
-# split: `sg  `sv `st
-# ', q r' == 'q'
+# vanilla vim: vim -u NONE
+# split: st
+# , q r == q
 
 [options]
     enable_guicolors = true
@@ -26,7 +24,6 @@
     filetree_direction = "right"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
-    disabled_plugins = ['grubox.vim']
 
 # spc f w
 [[layers]]
@@ -55,13 +52,14 @@
   enable_sidebar = true
   enable_scrollbar = true
   enable_indentline = true
-  enable_cursorword = true
+  enable_cursorword = false
   indentline_char = '|'
   conceallevel = 0
   concealcursor = ''
   cursorword_delay = 100
-  cursorword_exclude_filetype = ['markdown', 'toml']
+  cursorword_exclude_filetype = ['markdown', 'toml', 'org']
   indentline_exclude_filetyps = []
+  enable = true
 
 [[layers]]
     name = 'shell'

@@ -158,3 +158,6 @@ D) [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-tut
 * TODO second [0/2]
 ** TODO matlab Qt
 ** TODO jk for spacevim doesn't work
+
+* add a directory
+* learn jump next cursor word

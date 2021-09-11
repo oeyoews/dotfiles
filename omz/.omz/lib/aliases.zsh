@@ -46,9 +46,9 @@ alias cip='curl cip.cc'
 alias ping="ping -c 5"
 alias ipr='ip addr | rg 192'
 
-# @git 
+# @git
 # git -C ~/.emacs.d/ pull, more info about git ,
-# use tldr(rust) git 
+# use tldr(rust) git
 alias gopen='git-open'
 alias gits='git status'
 alias gitc="git checkout ."
@@ -108,12 +108,11 @@ alias via="vim ~/.config/alacritty/alacritty.yml"
 # Export
 export PATH=$PATH:~/.emacs.d/bin
 export EDITOR=vim
-# better man page
-# pkg: bat
+# better man page dependcies: bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # doom emacs
-# emacs -nw -Q 
+# emacs -nw -Q
 # emacs -Q <--color=no>
 # time emacs -q -e kill-emacs
 # time emacs -e kill-emacs
