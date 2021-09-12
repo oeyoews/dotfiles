@@ -1,10 +1,10 @@
 {
     // ***** font *****
     "editor.fontFamily": "'Droid Sans Mono'",
-    "terminal.integrated.fontFamily": "Droid Sans Mono",
-    "editor.fontSize": 22,
+    "terminal.integrated.fontFamily": "Source Code Pro",
+    "editor.fontSize": 19,
     "editor.fontLigatures": true,
-    "debug.console.fontFamily": "Droid Sans Mono",
+    "debug.console.fontFamily": "'Droid Sans Mono'",
     // ***** vim *****
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.ideavimrc",
@@ -85,6 +85,7 @@
     "update.mode": "manual",
     "update.showReleaseNotes": false,
     "terminal.integrated.fontSize": 18,
+    "terminal.integrated.defaultProfile.linux": "zsh",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -99,21 +100,17 @@
     "editor.insertSpaces": false,
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
-    "terminal.integrated.defaultProfile.linux": "bash",
     "grunt.autoDetect": "on",
     "editor.mouseWheelZoom": true,
-    "editor.minimap.enabled":true,
+    "editor.minimap.enabled": true,
     "editor.suggestSelection": "first",
     "editor.lineNumbers": "relative",
     "debug.console.fontSize": 18,
     "debug.onTaskErrors": "showErrors",
-    "window.zoomLevel": 1,
     "editor.renderWhitespace": "none",
-    "workbench.sideBar.location": "right",
+    "workbench.sideBar.location": "left",
     "C_Cpp.intelliSenseEngine": "Default",
     "files.trimTrailingWhitespace": true,
-    "tabnine.experimentalAutoImports": true,
-    "dashboard.projectData": null,
     "todo-tree.general.tags": [
         "BUG",
         "HACK",
@@ -125,4 +122,17 @@
     ],
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "git.enableSmartCommit": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "http.proxyAuthorization": null,
+    "files.associations": {
+        "*.ipynb": "juliamarkdown"
+    },
+    "window.menuBarVisibility": "compact",
+    "terminal.external.linuxExec": "kitty",
+    "window.zoomLevel": 0.5,
+    "debug.terminal.clearBeforeReusing": true,
+    "terminal.integrated.copyOnSelection": true,
 }

@@ -21,13 +21,19 @@
     wrap_line=0  # enable wrapline: 1
     checkinstall = 1  # enable: 1, autoinstall plugin
     default_indent = 2
-    filetree_direction = "right"
+    filetree_direction = "left"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
+    vim_help_language = "cn"
 
 # spc f w
 [[layers]]
   name = "sudo"
+
+
+[[layers]]
+  name = 'git'
+  git_plugin = 'git'
 
 # <leader> y or p  from sys
 [[layers]]
@@ -102,34 +108,3 @@
 [[layers]]
   name = "format"
   format_on_save = true
-
-[[custom_plugins]]
-  repo = "ryanoasis/vim-devicons"
-
-# zh_cn vimhelp
-[[custom_plugins]]
-  repo = 'yianwillis/vimcdoc'
-
-[[custom_plugins]]
-  repo = "ap/vim-css-color"
-
-[[custom_plugins]]
-  repo = "justinmk/vim-syntax-extra"
-
-#  <leader> + spc"
-[[custom_plugins]]
-  repo = 'bronson/vim-trailing-whitespace'
-
-[[custom_plugins]]
-  repo = 'luochen1990/rainbow'
-
-# spc f m
-[[custom_plugins]]
-  repo = 'iamcco/markdown-preview.nvim' # need cd .cache/vimfiles/.cache/vimrc/.deni/app && yarn or rm -rf .cache/vimfiles/repo/github/iamcoo and reinstall this plugin
-
-# Ctrl+L or use  :h capslock
-[[custom_plugins]]
-  repo = 'tpope/vim-capslock'
-
-[[custom_plugins]]
-  repo = "machakann/vim-highlightedyank"
