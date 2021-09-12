@@ -1,5 +1,4 @@
 " ====================================================
-" 2021年 06月 18日 星期五 19:37:25 CST
 " small vimrc
 " ====================================================
 set so=5
@@ -9,3 +8,4 @@ set nu rnu
 set incsearch
 set cc=80
 syntax on
+set foldmethod=marker

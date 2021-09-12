@@ -151,3 +151,7 @@ awesome-terminal-fonts
 
 # mysql toolsk
 dbeaver
+
+# jupyter notebook
+jupyter
+

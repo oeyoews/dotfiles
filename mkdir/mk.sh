@@ -3,7 +3,7 @@
 
 create_dir() {
   cd ~/HOME || return
-  mkdir repo doc pdf md org temp vscode wechat
+  mkdir jupyter repo doc pdf md org temp vscode wechat
 }
 
 main() {

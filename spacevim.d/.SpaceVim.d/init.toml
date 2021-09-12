@@ -1,11 +1,17 @@
+# Tutorial --- {{{
 # https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
+# }}}
 
+# Tips --- {{{
 # vanilla: vim -u NONE
 # split: st
 # , q r == q
+# }}}
 
+# === Options --- {{{
+# ===
 [options]
     enable_guicolors = true
     statusline_iseparator = "nil"  # for nerdtree like
@@ -29,8 +35,10 @@
     enable_debug = 1
     project_rooter_automatically = 0
     update_retry_cnt = 1
+# }}}
 
-
+# === Layer --- {{{
+# ===
 # spc f w
 [[layers]]
   name = "sudo"
@@ -112,3 +120,4 @@
 [[layers]]
   name = "format"
   format_on_save = true
+# }}}

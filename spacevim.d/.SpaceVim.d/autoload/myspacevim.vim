@@ -1,9 +1,12 @@
 " bootstrap_before 将在读取用户配置后执行
 " bootstrap_after 将在 VimEnter autocmd 之后执行
+"
+" tutorial --- {{{
 " https://yianwillis.github.io/vimcdoc/doc/autocmd.html
+" https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49335
+" }}}
 
-" ===
-" === before
+" === Before --- {{{
 " ===
 function! myspacevim#before() abort
 
@@ -64,10 +67,9 @@ function! myspacevim#before() abort
   nnoremap <silent>  <space>tr :RainbowToggle<CR>
 
 endfunction
+" }}}
 
-
-" ===
-" === After
+" === After -- {{{
 " ===
 function! myspacevim#after() abort
 
@@ -98,31 +100,41 @@ function! myspacevim#after() abort
   set noswapfile
   set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14
-  set nowrap  " must in after
+  " set nowrap  " must in after
+  let &wrap = 0
   set mouse=a
   noremap <space>hh :h<space>
-  nnoremap <leader>qq :q!<CR>
+  nnoremap <silent> <leader>qq :q!<CR>
   noremap <space>su :SPUpdate<CR>
   set smartcase
-  set so=0
+  set scrolloff=0
   set confirm " better quit
   set signcolumn=yes " options: number yes
   set ignorecase
   let g:smoothie_enabled=0  " disable vim-smoothie
   let g:spacevim_filetype_icons['toml'] = ''
   set updatetime=100
-  set nofoldenable
+  set foldmethod=marker
+  set nofoldenable " disable automatical fold code, you can fold code by hand
   inoremap <C-D> <ESC>ddi
   inoremap <C-U> <ESC>gUaw
   inoremap <C-J> <ESC>ji
   inoremap <C-K> <ESC>ki
   let $_MYVIMRC .= "~/.SpaceVim.d/autoload/myspacevim.vim"
-  nnoremap <SPACE>fvp :tabnew$_MYVIMRC<CR> 
+  nnoremap  <silent> <SPACE>fvp :tabnew $_MYVIMRC<CR>
+  nnoremap  <SPACE>fvP :source $_MYVIMRC<CR>:echom "Refresh finished!"<ESC> 
+  augroup _myautocmd
+    autocmd!
+    autocmd FileType c :iabbrev <buffer> inc #include <stdio.h><ESC><CR><left>
+    autocmd BufWritePre,BufRead *. :normal ==$
+    " autocmd BufWritePost $_MYVIMRC source $_MYVIMRC
+  augroup END
+  noremap L $
 
   " ===
   " === markdown-preview.nvim
   " ===
-  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR> 
+  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR>:echom " markdownpreview toggled"<CR> 
 
   " ===
   " === calendar.vim
@@ -137,3 +149,4 @@ function! myspacevim#after() abort
   let g:strip_whitespace_on_save=1
 
 endfunction
+" }}}
