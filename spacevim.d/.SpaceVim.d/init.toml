@@ -24,12 +24,16 @@
     filetree_direction = "left"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
+    lint_engine = 'ale' # ale neomake
     vim_help_language = "cn"
+    enable_debug = 1
+    project_rooter_automatically = 0
+    update_retry_cnt = 1
+
 
 # spc f w
 [[layers]]
   name = "sudo"
-
 
 [[layers]]
   name = 'git'
@@ -78,7 +82,7 @@
 [[layers]]
     name = "incsearch"
 
-# reading mode: spc w c goyo.vim
+# reading mode: spc w c 
 # add bookmarks: mm
 [[layers]]
   name = "tools"

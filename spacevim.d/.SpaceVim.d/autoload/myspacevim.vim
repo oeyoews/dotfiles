@@ -7,28 +7,39 @@
 " ===
 function! myspacevim#before() abort
 
+  " ===
+  " === some tips
+  " ===
+  " redraw minbuffer: Ctrl l
+  " show filename: Ctrl g
+
+  " ===
+  " === misc settings
+  " ===
+  " NOTE: must in before
+  let g:mapleader = ','
+  set number relativenumber " must before startify
+
+  " ===
+  " === plugins
+  " ===
   let g:spacevim_custom_plugins = [
-  \ ['luochen1990/rainbow'],
-  \ ['justinmk/vim-syntax-extra'],
-  \ ['yianwillis/vimcdoc'],
-  \ ['ap/vim-css-color'],
-  \ ['ntpeters/vim-better-whitespace'],
-  \ ['iamcco/markdown-preview.nvim'],
-  \ ['tpope/vim-capslock'],
-  \ ['machakann/vim-highlightedyank'],
-  \ ['tiagofumo/vim-nerdtree-syntax-highlight'],
-  \ ['ryanoasis/vim-devicons'],
-  \ ]
-
-  noremap <space>su :SPUpdate<CR>
-
-  let g:smoothie_enabled=0  " disable vim-smoothie
-  let g:spacevim_filetype_icons['toml'] = ''
+        \ ['luochen1990/rainbow'],
+        \ ['justinmk/vim-syntax-extra'],
+        \ ['yianwillis/vimcdoc'],
+        \ ['ap/vim-css-color'],
+        \ ['ntpeters/vim-better-whitespace'],
+        \ ['iamcco/markdown-preview.nvim'],
+        \ ['tpope/vim-capslock'],
+        \ ['machakann/vim-highlightedyank'],
+        \ ['tiagofumo/vim-nerdtree-syntax-highlight'],
+        \ ['ryanoasis/vim-devicons'],
+        \ ]
 
   " ==
   " == GitGutter
   " ==
-  " must in before
+  " NOTE: must in before
   " let g:gitgutter_signs = 0
   let g:gitgutter_sign_allow_clobber = 0
   let g:gitgutter_map_keys = 0
@@ -48,26 +59,9 @@ function! myspacevim#before() abort
   " ===
   " === rainbow
   " ===
-  " must in before
+  " NOTE: must in before
   let g:rainbow_active = 0 " if set 1, it's conflicts to nerdtree
   nnoremap <silent>  <space>tr :RainbowToggle<CR>
-
-  set updatetime=100
-  set nofoldenable
-  set so=0
-
-  " better quit
-  set confirm
-
-  set number relativenumber
-  " set completeopt=longest,menu
-  set ignorecase
-
-  " options: number yes
-  set signcolumn=yes
-
-  " set leader
-  let g:mapleader = ','
 
 endfunction
 
@@ -78,13 +72,11 @@ endfunction
 function! myspacevim#after() abort
 
   " ===
-  " === nerdtree
+  " === all nerdtree
   " ===
-  let g:NERDTreeDirArrowExpandable = '➤'
-  "  ➤ 
+  let g:NERDTreeDirArrowExpandable = '➤' "  ➤ 
   let g:NERDTreeDirArrowCollapsible = ''
-  " let g:NERDTreeMapCustomOpen = '<TAB>' " doesn't work
-  let g:NERDTreeShowHidden=0
+  let g:NERDTreeShowHidden=0 " let g:NERDTreeMapCustomOpen = '<TAB>' " doesn't work
   autocmd FileType nerdtree nmap <Tab> <CR>
   let g:NERDTreeFileExtensionHighlightFullName = 1
   let g:NERDTreeExactMatchHighlightFullName = 1
@@ -93,7 +85,6 @@ function! myspacevim#after() abort
   let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
   let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
   let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
-  " If you have vim-devicons you can customize your icons for each file type.
   let g:NERDTreeExtensionHighlightColor = {} "this line is needed to avoid error
   let g:NERDTreeExtensionHighlightColor['yml'] = '' "assigning it to an empty string will skip highlight
   let g:NERDTreeLimitedSyntax = 1
@@ -107,10 +98,20 @@ function! myspacevim#after() abort
   set noswapfile
   set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14
-  nnoremap <leader>qq :q!<CR>
   set nowrap  " must in after
   set mouse=a
   noremap <space>hh :h<space>
+  nnoremap <leader>qq :q!<CR>
+  noremap <space>su :SPUpdate<CR>
+  set smartcase
+  set so=0
+  set confirm " better quit
+  set signcolumn=yes " options: number yes
+  set ignorecase
+  let g:smoothie_enabled=0  " disable vim-smoothie
+  let g:spacevim_filetype_icons['toml'] = ''
+  set updatetime=100
+  set nofoldenable
 
   " ===
   " === markdown-preview.nvim
@@ -120,8 +121,8 @@ function! myspacevim#after() abort
   " ===
   " === calendar.vim
   " ===
-  nnoremap <space>aCy :Calendar -view=year -split=horizontal -position=below -height=12<CR>
-  nnoremap <space>aCl :Calendar -view=clock<CR>
+  " nnoremap <space>aCy :Calendar -view=year -split=horizontal -position=below -height=12<CR>
+  nnoremap <space>aC :<C-U>Calendar -view=clock<CR>
 
   " ===
   " === vim-better_whitespace.vim
