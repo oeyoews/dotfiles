@@ -112,11 +112,17 @@ function! myspacevim#after() abort
   let g:spacevim_filetype_icons['toml'] = ''
   set updatetime=100
   set nofoldenable
+  inoremap <C-D> <ESC>ddi
+  inoremap <C-U> <ESC>gUaw
+  inoremap <C-J> <ESC>ji
+  inoremap <C-K> <ESC>ki
+  let $_MYVIMRC .= "~/.SpaceVim.d/autoload/myspacevim.vim"
+  nnoremap <SPACE>fvp :tabnew$_MYVIMRC<CR> 
 
   " ===
   " === markdown-preview.nvim
   " ===
-  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR>
+  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR> 
 
   " ===
   " === calendar.vim
