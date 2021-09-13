@@ -157,3 +157,8 @@ dbeaver
 jupyter
 
 icdiff
+
+<!-- sys {{{ -->
+go
+nodejs-lts-erbium # 12.xxx
+<!-- {{{ -->

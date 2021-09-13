@@ -4,6 +4,7 @@
 " tutorial --- {{{
 " https://yianwillis.github.io/vimcdoc/doc/autocmd.html
 " https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49335
+" https://harttle.land/2017/01/30/variables-in-vim.html
 " }}}
 
 " === Before --- {{{
@@ -16,6 +17,10 @@ function! myspacevim#before() abort
   " redraw minbuffer: Ctrl l
   " show filename: Ctrl g
   " vim -u *.vim
+  " :smile
+  " ex mode: Q
+  " -D debug
+  "  :Tagbar :TagbarOpen
 
   " ===
   " === misc settings
