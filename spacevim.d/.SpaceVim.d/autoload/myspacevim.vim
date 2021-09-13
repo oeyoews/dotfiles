@@ -15,6 +15,7 @@ function! myspacevim#before() abort
   " ===
   " redraw minbuffer: Ctrl l
   " show filename: Ctrl g
+  " vim -u *.vim
 
   " ===
   " === misc settings
@@ -116,25 +117,31 @@ function! myspacevim#after() abort
   set updatetime=100
   set foldmethod=marker
   set nofoldenable " disable automatical fold code, you can fold code by hand
-  inoremap <C-D> <ESC>ddi
-  inoremap <C-U> <ESC>gUaw
-  inoremap <C-J> <ESC>ji
-  inoremap <C-K> <ESC>ki
+  " inoremap <C-D> <ESC>ddi
+  " inoremap <C-U> <ESC>gUaw
+  " inoremap <C-J> <ESC>ji
+  " inoremap <C-K> <ESC>ki
   let $_MYVIMRC .= "~/.SpaceVim.d/autoload/myspacevim.vim"
-  nnoremap  <silent> <SPACE>fvp :tabnew $_MYVIMRC<CR>
-  nnoremap  <SPACE>fvP :source $_MYVIMRC<CR>:echom "Refresh finished!"<ESC> 
+  nnoremap <silent> <SPACE>fvp :tabnew $_MYVIMRC<CR>
+  nnoremap <SPACE>fvP :source $_MYVIMRC<CR>:echom "Refresh finished!"<ESC> 
+  nnoremap <silent> <SPACE>ff :Leaderf file --popup<CR>
+  "
   augroup _myautocmd
     autocmd!
     autocmd FileType c :iabbrev <buffer> inc #include <stdio.h><ESC><CR><left>
-    autocmd BufWritePre,BufRead *. :normal ==$
-    " autocmd BufWritePost $_MYVIMRC source $_MYVIMRC
+    " NOTE: can't have whitespace in regrep express
+    " autocmd BufWritePre,BufRead *.vim,*.c,*.h  :normal ==$ " in save file, " it something wrong
+    " autocmd BufWritePost $_MYVIMRC source $_MYVIMRC " doesn't work
   augroup END
+ "
   noremap L $
+  " must comment next line, because of doouble quote error
+  " let @a = "hello!"  # "ap for register, or echo @a @" == unnamed register
 
   " ===
   " === markdown-preview.nvim
   " ===
-  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR>:echom " markdownpreview toggled"<CR> 
+  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR> :echom " markdownpreview toggled"<CR>
 
   " ===
   " === calendar.vim

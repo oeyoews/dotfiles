@@ -7,9 +7,9 @@ fi
 export ZSH_DISABLE_COMPFIX="true"
 export DISABLE_AUTO_UPDATE=true
 
-# ===========
-# =   OMZ   =
-# ===========
+# ===
+# === zsh
+# ===
 export ZSH=~/.omz
 plugins=(zsh-autosuggestions extract zsh-syntax-highlighting)
 ZSH_THEME="p10k/powerlevel10k"

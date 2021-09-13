@@ -33,7 +33,7 @@
     lint_engine = 'ale' # ale neomake
     vim_help_language = "cn"
     enable_debug = 1
-    project_rooter_automatically = 0
+    project_rooter_automatically = 0  # disable jump rooter folder
     update_retry_cnt = 1
 # }}}
 
@@ -68,7 +68,7 @@
 [[layers]]
   name = 'ui'
   enable_sidebar = true
-  enable_scrollbar = true
+  enable_scrollbar = true  # just for nvim
   enable_indentline = true
   enable_cursorword = false
   indentline_char = '|'
