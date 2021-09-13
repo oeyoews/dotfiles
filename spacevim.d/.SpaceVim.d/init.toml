@@ -8,6 +8,7 @@
 # vanilla: vim -u NONE
 # split: st
 # , q r == q
+# :h spacevim
 # }}}
 
 # === Options --- {{{
@@ -30,7 +31,8 @@
     filetree_direction = "left"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
-    lint_engine = 'ale' # ale neomake
+    autocomplete_method = 'coc'
+    # lint_engine = 'ale' # ale neomake or comment this option; it have some bug;
     vim_help_language = "cn"
     enable_debug = 1
     project_rooter_automatically = 0  # disable jump rooter folder
