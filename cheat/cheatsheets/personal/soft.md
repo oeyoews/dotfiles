@@ -162,3 +162,5 @@ icdiff
 go
 nodejs-lts-erbium # 12.xxx
 <!-- {{{ -->
+
+  ncdu 
