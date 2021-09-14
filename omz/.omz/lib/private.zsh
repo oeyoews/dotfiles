@@ -3,6 +3,8 @@
 alias vito='vim ~/todo.org'
 alias viz='vim $HOME/.zshrc'
 alias vic='vim ~/dotfiles/cheat/conf.yml'
+alias vip='vim ~/.omz/lib/private.zsh'
+
 
 # path
 alias cdd="cd ~/dotfiles/"
@@ -77,6 +79,7 @@ alias ssh="kitty +kitten ssh"
 alias kcat="kitty +kitten icat"
 alias kdiff="kitty +kitten diff"
 alias kemoj="kitty +kitten unicode_input"
+alias diffk="kitty +kitten diff"
 
 ## wego
 # alias wego='curl -s wttr.in | lolcat'
@@ -96,6 +99,8 @@ alias tse='crow -t en'
 alias ts='crow -b'
 
 # Misc
+alias cheate="cheat -e"
+alias cheatl="cheat -l"
 alias ports='netstat -tulanp'  # need install `net-tools
 alias jc="journalctl -xe"
 alias sc="systemctl"

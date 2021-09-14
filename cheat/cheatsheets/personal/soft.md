@@ -164,3 +164,4 @@ nodejs-lts-erbium # 12.xxx
 <!-- {{{ -->
 
   ncdu 
+  scrapy

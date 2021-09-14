@@ -2,6 +2,7 @@
 # https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
 # https://learnvimscriptthehardway.stevelosh.com/
 # https://vimjc.com/
+# https://www.w3xue.com/soft/vim/vim-links.html
 # }}}
 
 # Tips --- {{{
@@ -14,6 +15,8 @@
 # === Options --- {{{
 # ===
 [options]
+# :echo g:spacevim_<options>
+    enable_filetree_gitstatus = false
     enable_guicolors = true
     statusline_iseparator = "nil"  # for nerdtree like
     statusline_separator = "nil"  # for statusline
@@ -31,12 +34,12 @@
     filetree_direction = "left"
     filemanager = "nerdtree"  # if nil, disable filemanager
     colorscheme = "SpaceVim"
-    autocomplete_method = 'coc'
-    # lint_engine = 'ale' # ale neomake or comment this option; it have some bug;
+    autocomplete_method = 'coc'  # need crear dir ~/.config/coc
+    lint_engine = 'ale' # ale neomake or comment this option; it have some bug;
     vim_help_language = "cn"
     enable_debug = 1
     project_rooter_automatically = 0  # disable jump rooter folder
-    update_retry_cnt = 1
+    update_retry_cnt = 1  # retry times for plugin install
 # }}}
 
 # === Layer --- {{{
@@ -61,6 +64,10 @@
 
 [[layers]]
     name = 'lang#sh'
+    ebable = true
+
+[[layers]]
+    name = 'lang#python'
     ebable = true
 
 # ctrl+p

@@ -21,6 +21,8 @@ function! myspacevim#before() abort
   " ex mode: Q
   " -D debug
   "  :Tagbar :TagbarOpen
+  "  :Explore R
+  "  nerdtree m
 
   " ===
   " === misc settings
@@ -159,6 +161,12 @@ function! myspacevim#after() abort
   " ===
   let g:better_whitespace_enabled=1
   let g:strip_whitespace_on_save=1
+
+  " ===
+  " === coc.nvim
+  " ===
+  nnoremap <leader>qf  <Plug>(coc-fix-current)
+
 
 endfunction
 " }}}
