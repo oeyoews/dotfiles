@@ -1,4 +1,5 @@
 [options]
+search_tools = ["rg", "pt", "ack", "grep", "findstr"]
 statusline_iseparator = "nil"  # for nerdtree like
 statusline_separator = "nil"  # for statusline
 enable_vimfiler_welcome = 0  # show nerdtree automatically in welcome
@@ -27,6 +28,9 @@ enable_filetree_gitstatus = false
 # spc f w
 [[layers]]
 name = "sudo"
+
+[[layers]]
+name = 'cscope'
 
 [[layers]]
 name = 'git'
@@ -61,7 +65,7 @@ enable_scrollbar = true  # just for nvim
 enable_indentline = true
 enable_cursorword = false
 indentline_char = '|'
-conceallevel = 0
+conceallevel = 2  # hiden some symbols like markdown level: 2
 concealcursor = ''
 cursorword_delay = 100
 cursorword_exclude_filetype = ['markdown', 'toml', 'org']
@@ -83,6 +87,16 @@ name = "incsearch"
 # add bookmarks: mm
 [[layers]]
 name = "tools"
+
+[[layers]]
+    name = 'gtags'
+    enable = true
+
+[[layers]]
+    name = 'lang#markdown'
+    enableWcwidth = 1
+    listItemIndent = 1
+    enabled_formater = ['prettier']
 
 [[layers]]
 name = "lang#toml"

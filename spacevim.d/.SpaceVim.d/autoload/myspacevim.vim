@@ -11,7 +11,6 @@
 "   https://blog.csdn.net/smstong/article/details/20775695
 " }}}
 
-
 " === Before --- {{{
 " ===
 function! myspacevim#before() abort
@@ -41,34 +40,16 @@ function! myspacevim#before() abort
   " :comclear  # clear all user-commands
   " ~/.vim/autoload/SpaceVim/custom.vim to config extra dir as default config
   " like vimrc
-  "
-
-  " ===
-  " === api
-  " ===
+  " let mapleader or echo mapleader # show leader 
 
   " ===
   " === misc settings
   " ===
   " NOTE: must in before
   let g:mapleader = ','
+  " let g:maplocalleader ='\'
   set number relativenumber " must before startify
-
-  " ===
-  " === plugins
-  " ===
-  let g:spacevim_custom_plugins = [
-        \ ['luochen1990/rainbow'],
-        \ ['justinmk/vim-syntax-extra'],
-        \ ['yianwillis/vimcdoc'],
-        \ ['ap/vim-css-color'],
-        \ ['ntpeters/vim-better-whitespace'],
-        \ ['iamcco/markdown-preview.nvim'],
-        \ ['tpope/vim-capslock'],
-        \ ['machakann/vim-highlightedyank'],
-        \ ['tiagofumo/vim-nerdtree-syntax-highlight'],
-        \ ['ryanoasis/vim-devicons'],
-        \ ]
+  set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 
   " ==
   " == GitGutter
@@ -95,7 +76,25 @@ function! myspacevim#before() abort
   " ===
   " NOTE: must in before
   let g:rainbow_active = 0 " if set 1, it's conflicts to nerdtree
-  nnoremap <silent>  <space>tr :RainbowToggle<CR>
+  nnoremap <space>tr :RainbowToggle<CR>:echom "enable rainbow_bract!"<CR>
+
+  " ===
+  " === plugins
+  " ===
+  " muset in before
+  let g:spacevim_custom_plugins = [
+        \ ['luochen1990/rainbow'],
+        \ ['plasticboy/vim-markdown'],
+        \ ['justinmk/vim-syntax-extra'],
+        \ ['yianwillis/vimcdoc'],
+        \ ['ap/vim-css-color'],
+        \ ['ntpeters/vim-better-whitespace'],
+        \ ['iamcco/markdown-preview.nvim'],
+        \ ['tpope/vim-capslock'],
+        \ ['machakann/vim-highlightedyank'],
+        \ ['tiagofumo/vim-nerdtree-syntax-highlight'],
+        \ ['ryanoasis/vim-devicons'],
+        \ ]
 
 endfunction
 " }}}
@@ -146,15 +145,13 @@ function! myspacevim#after() abort
   let g:spacevim_filetype_icons['toml'] = ''
   set updatetime=100
   set foldmethod=marker
-  set nofoldenable " disable automatical fold code, you can fold code by hand
   let $_MYVIMRC .= "~/.SpaceVim.d/autoload/myspacevim.vim"
   noremap L $
-  " TODO huixian 1sec
-  " how to exe c-l
   nnoremap <SPACE>fvp :tabnew $_MYVIMRC<CR>:echom "Open _MYVIMRC!"<CR> 
   nnoremap <SPACE>fvP :source $_MYVIMRC<CR>:echom "Refresh finished!"<ESC> 
   nnoremap <silent> <SPACE>ff :Leaderf file --popup<CR>
-  nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a comma in the end!"<CR>
+  nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
+  nnoremap <silent> <SPACE>a, mqA,<ESC>`q :echom "Add a comma in the end!"<CR>
   nnoremap <SPACE>vd :echo<SPACE>
   " augroup
   augroup _myautocmd
@@ -167,16 +164,23 @@ function! myspacevim#after() abort
   "
   " must comment next line, because of double quote error
   " let @a = "hello!"  # "ap for register, or echo @a @" == unnamed register
+  " print absolute path for filename
+  command! Pwd :echom expand('%:p')
 
   " ===
   " === markdown-preview.nvim
   " ===
-  nnoremap <silent> <space>fm :MarkdownPreviewToggle<CR> :echom " markdownpreview toggled"<CR>
+  nnoremap <space>fmm :MarkdownPreviewToggle<CR> 
+
+  " ===
+  " === vim-markdown-toc
+  " ===
+  nnoremap <space>fmt :GenTocGFM<CR>
 
   " ===
   " === calendar.vim
   " ===
-  nnoremap <space>aC :<C-U>Calendar -view=clock<CR>
+  nnoremap <space>ac :<C-U>Calendar -view=clock<CR>
 
   " ===
   " === vim-better_whitespace.vim
@@ -192,9 +196,19 @@ function! myspacevim#after() abort
   " trigger completion.
   inoremap <silent><expr> <c-@> coc#refresh()
 
+  " ===
+  " === vim-markdown
+  " ===
+  let g:vim_markdown_folding_disabled = 1
+  let g:vim_markdown_toc_autofit = 1
+  let g:vim_markdown_conceal_code_blocks = 1  " disable hiden code-blocks
+  " let g:vim_markdown_fenced_languages = ['c=cpp', , 'bash=sh']
+  let g:vim_markdown_frontmatter = 1
+  let g:vim_markdown_strikethrough = 1
+  let g:vim_markdown_new_list_item_indent = 0
+  let g:vim_markdown_no_extensions_in_markdown = 1
+  let g:vim_markdown_auto_insert_bullets = 0
 
-  " print absolute path for filename
-  command! Pwd :echom expand('%:p')
 
 endfunction
 " }}}

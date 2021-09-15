@@ -7,6 +7,7 @@
 3. Q: markdown-preview can't open in brower?
    A: cd ~/.cache/vimfiles/.cache/vimrc/.dein/app && yarn NOTE: can't use SPClean.
    and instead it , wecan use cd ~/.cache/vimfiles/repos/github.com/iamcco/markdown-preview.nvim/app/ && yarn
+   - between nvim and vim, if it can't work, need reinstall and build it.
 
 4. Q: can't set lang to en_US..... for vim?
    A: sudo:   vim /etc/locale.gen and comment en_us... and  locale-gen NOTE: not write en_US.UTF-8, this will destory system language
