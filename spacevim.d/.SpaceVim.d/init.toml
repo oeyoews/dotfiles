@@ -1,132 +1,111 @@
-# Tutorial --- {{{
-# https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
-# https://learnvimscriptthehardway.stevelosh.com/
-# https://vimjc.com/
-# https://www.w3xue.com/soft/vim/vim-links.html
-# }}}
-
-# Tips --- {{{
-# vanilla: vim -u NONE
-# split: st
-# , q r == q
-# :h spacevim
-# }}}
-
-# === Options --- {{{
-# ===
 [options]
-# :echo g:spacevim_<options>
-    enable_filetree_gitstatus = false
-    enable_guicolors = true
-    statusline_iseparator = "nil"  # for nerdtree like
-    statusline_separator = "nil"  # for statusline
-    enable_vimfiler_welcome = 0  # show nerdtree automatically in welcome
-    buffer_index_type = 4
-    enable_tabline_filetype_icon = true
-    enable_statusline_mode = true
-    bootstrap_before = "myspacevim#before"
-    bootstrap_after  = "myspacevim#after"
-    guifont = "Droid Sans Mono:h11"
-    statusline_unicode_symbols = true
-    wrap_line=0  # enable wrapline: 1
-    checkinstall = 1  # enable: 1, autoinstall plugin
-    default_indent = 2
-    filetree_direction = "left"
-    filemanager = "nerdtree"  # if nil, disable filemanager
-    colorscheme = "SpaceVim"
-    autocomplete_method = 'coc'  # need crear dir ~/.config/coc
-    lint_engine = 'ale' # ale neomake or comment this option; it have some bug;
-    vim_help_language = "cn"
-    enable_debug = 1
-    project_rooter_automatically = 0  # disable jump rooter folder
-    update_retry_cnt = 1  # retry times for plugin install
-# }}}
+statusline_iseparator = "nil"  # for nerdtree like
+statusline_separator = "nil"  # for statusline
+enable_vimfiler_welcome = 0  # show nerdtree automatically in welcome
+buffer_index_type = 4
+enable_tabline_filetype_icon = true
+enable_statusline_mode = true
+bootstrap_before = "myspacevim#before"
+bootstrap_after  = "myspacevim#after"
+guifont = "Droid Sans Mono:h11"
+statusline_unicode_symbols = true
+wrap_line=0  # enable wrapline: 1
+checkinstall = 1  # enable: 1, autoinstall plugin
+default_indent = 2
+filetree_direction = "left"
+filemanager = "nerdtree"  # if nil, disable filemanager
+colorscheme = "SpaceVim"
+autocomplete_method = 'coc'  # need crear dir ~/.config/coc
+# lint_engine = 'ale' # ale neomake or comment this option; it have some bug; coc and ale just select one.
+enable_guicolors = true
+vim_help_language = "cn"
+enable_debug = 1
+project_rooter_automatically = 1  # jump rooter folder
+update_retry_cnt = 1  # retry times for plugin install
+enable_filetree_gitstatus = false
 
-# === Layer --- {{{
-# ===
 # spc f w
 [[layers]]
-  name = "sudo"
+name = "sudo"
 
 [[layers]]
-  name = 'git'
-  git_plugin = 'git'
+name = 'git'
+git_plugin = 'git'
 
 # <leader> y or p  from sys
 [[layers]]
-  name = "default"
+name = "default"
 
 [[layers]]
-    name = 'autocomplete'
-    auto_completion_tab_key_behavior = "smart"  # "cycle"
-    auto-completion-return-key-behavior = "smart"
-    auto-completion-delay = 50
+name = 'autocomplete'
+auto_completion_tab_key_behavior = "smart"  # "cycle"
+auto-completion-return-key-behavior = "smart"
+auto-completion-delay = 50
 
 [[layers]]
-    name = 'lang#sh'
-    ebable = true
+name = 'lang#sh'
+ebable = true
 
 [[layers]]
-    name = 'lang#python'
-    ebable = true
+name = 'lang#python'
+ebable = true
 
 # ctrl+p
 [[layers]]
-    name = "leaderf"
+name = "leaderf"
 
 [[layers]]
-  name = 'ui'
-  enable_sidebar = true
-  enable_scrollbar = true  # just for nvim
-  enable_indentline = true
-  enable_cursorword = false
-  indentline_char = '|'
-  conceallevel = 0
-  concealcursor = ''
-  cursorword_delay = 100
-  cursorword_exclude_filetype = ['markdown', 'toml', 'org']
-  indentline_exclude_filetyps = []
-  enable = true
+name = 'ui'
+enable_sidebar = true
+enable_scrollbar = true  # just for nvim
+enable_indentline = true
+enable_cursorword = false
+indentline_char = '|'
+conceallevel = 0
+concealcursor = ''
+cursorword_delay = 100
+cursorword_exclude_filetype = ['markdown', 'toml', 'org']
+indentline_exclude_filetyps = []
+enable = true
 
 [[layers]]
-    name = 'shell'
-    default_position = 'float'  # float feature just support nvim
-    default_height = 80
+name = 'shell'
+default_position = 'float'  # float feature just support nvim
+default_height = 80
 
 [[layers]]
-    name = "colorscheme"
+name = "colorscheme"
 
 [[layers]]
-    name = "incsearch"
+name = "incsearch"
 
 # reading mode: spc w c 
 # add bookmarks: mm
 [[layers]]
-  name = "tools"
+name = "tools"
 
 [[layers]]
-  name = "lang#toml"
+name = "lang#toml"
 
 [[layers]]
-  name = "lang#vim"
+name = "lang#vim"
 
 # dependencies: clang
 [[layers]]
-  name = "lang#c"
-  enable_clang_syntax_highlight = true
-  [layer.clang_std]
-    cpp = "c11"
+name = "lang#c"
+enable_clang_syntax_highlight = true
+[layer.clang_std]
+cpp = "c11"
 
 # rename symbols: spc l e
 [[layers]]
-  name = "lsp"
-  filetypes = [
-    "c",
-  ]
-  [layers.override_cmd]
-    c = ["clangd"]
+name = "lsp"
+filetypes = [
+  "c",
+]
+[layers.override_cmd]
+c = ["clangd"]
 
 [[layers]]
-  name = "format"
-  format_on_save = true
-# }}}
+name = "format"
+format_on_save = true

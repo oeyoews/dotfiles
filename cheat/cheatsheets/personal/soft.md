@@ -6,6 +6,7 @@ flameshot
 # cloc # like wc
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
+gnome: dash-to-dock
 gnome-keyring              # for vscode synchronize
 # gnome-shell-extension-unite
 gpaste
@@ -165,3 +166,5 @@ nodejs-lts-erbium # 12.xxx
 
   ncdu 
   scrapy
+
+  cheat-bin or cheat

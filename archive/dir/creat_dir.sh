@@ -5,7 +5,7 @@ set -e
 create_dir() {
   cd "$HOME"|| exit 0
   mkdir .config/coc \
-        jupyter repo doc pdf md org temp vscode wechat iso matlab
+        Jupyter repo doc pdf md org temp Vscode wechat iso matlab Xournal Vim
 }
 
 main() {

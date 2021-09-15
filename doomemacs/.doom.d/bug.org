@@ -1,0 +1,1 @@
+- pdf: need M-x pdf-tools-install
