@@ -38,6 +38,11 @@ git clone --depth=1  https://gitlab.com/oeyoews/dotfiles.git ~
 git clone --depth=1  https://github.com/oeyoews/dotfiles.git ~
 ```
 
+```zsh
+# or use gitee(mirror from gitlab)
+git clone --depth=1  https://gitee.com/oeyoews/dotfiles.git ~
+```
+
 NOTE
 ---
 
