@@ -134,7 +134,7 @@ D) [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-tut
 
 
 
-* DONE [13/13]
+* DONE [13/15]
 1. [X] ox-hugo for emacs org-mode
 2. [X] doom emacs layer 添加包 vim-powerline
 3. [X] use php to do ppt in brower
@@ -149,7 +149,6 @@ D) [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-tut
 12. [X] 如何处理 timer
 13. [X] 使用电脑发送邮件
 
-
 * DONE vim [2/2] [100%]
 ** [X] use deni to use command, like  yarn instll like on_cmd
 ** [X] use github and gitlab auto :demo:
@@ -159,5 +158,5 @@ D) [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-tut
 ** TODO matlab Qt
 ** TODO jk for spacevim doesn't work
 
-* add a directory
-* learn jump next cursor word
+* TODO add a directory
+* TODO learn jump next cursor word

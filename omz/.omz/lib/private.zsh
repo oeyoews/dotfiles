@@ -115,7 +115,7 @@ alias via="vim ~/.config/alacritty/alacritty.yml"
 export PATH=$PATH:~/.emacs.d/bin
 export EDITOR=vim
 export CHEATCOLORS=true
-export CHEAT_CONFIG_PATH="~/dotfiles/cheat/conf.yml"
+export CHEAT_CONFIG_PATH="~/dotfiles/archive/cheat/conf.yml"
 export CHEAT_USE_FZF=true
 
 # better man page dependcies: bat

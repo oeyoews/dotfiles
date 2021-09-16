@@ -33,6 +33,7 @@ function! myspacevim#before() abort
   " , q r == q
   " :h spacevim
   " :echo g:spacevim_<options>
+  " :echo spacevim_<options>
   " C-w C-o or :only maxwindow
   " :hide
   " :runtimepath
@@ -153,6 +154,10 @@ function! myspacevim#after() abort
   nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
   nnoremap <silent> <SPACE>a, mqA,<ESC>`q :echom "Add a comma in the end!"<CR>
   nnoremap <SPACE>vd :echo<SPACE>
+  " insert markdown code
+  nnoremap <SPACE>imc i```<ESC>yypO<ESC>kA
+  " blod NOTE: the cursor must in word
+  nnoremap <SPACE>imb bi**<ESC>wwa**<ESC>
   " augroup
   augroup _myautocmd
     autocmd!
@@ -175,7 +180,7 @@ function! myspacevim#after() abort
   " ===
   " === vim-markdown-toc
   " ===
-  nnoremap <space>fmt :GenTocGFM<CR>
+  nnoremap <space>fmt :GenTocMarked<CR>
 
   " ===
   " === calendar.vim
