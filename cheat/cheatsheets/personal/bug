@@ -1,2 +1,0 @@
-- user@120.service is failed?
-  A: grep ":120" /etc/group;  and uninstall manjaro-gdm-tweak.
