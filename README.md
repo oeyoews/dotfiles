@@ -1,6 +1,5 @@
 <!-- vim-markdown-toc Marked -->
 
-- [Environment](#environment)
 - [Dependencies](#dependencies)
 - [Installation](#installation)
 - [NOTE](#note)
@@ -11,9 +10,7 @@
 
 ![example](./archive/img/example.png)
 
-Environment
----
-
+<details>Environment<details>
 
 - **Terminal**: kitty(extra: alacritty, tmux) 
 - **Shell** : zsh
