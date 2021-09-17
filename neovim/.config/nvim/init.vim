@@ -5,6 +5,7 @@ filetype on
 filetype plugin on
 " TODO: dashboard which-key gitgutter(nvim), airline(or), undotree(plus),
 " code-runner
+" sharp icon
 " TODO: 记住光标位置
 " TODO: 标签
 " TODO: bell format
@@ -14,6 +15,8 @@ syntax on
 set ruler
 set smartcase
 " TODO
+set noshowcmd
+set noshowmode
 set showmatch
 set clipboard^=unnamed
 set shortmess=atI  " disable show welcome
@@ -49,7 +52,7 @@ set ignorecase
 set signcolumn=yes " options: number yes
 
 " 按键延迟检测
-set updatetime=500
+set updatetime=400
 set foldmethod=marker
 let $MYVIMRC = "$HOME/.config/nvim/init.vim"
 nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
@@ -91,6 +94,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'folke/which-key.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 
@@ -147,8 +151,20 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 " ===
 " tokyonight
 " TODO: some options need config
+set laststatus=2
 colorscheme tokyonight
-let g:lightline = {'colorscheme': 'tokyonight'}
+" TODO bug
+" let g:lightline = {'colorscheme': 'wombat'}
+let g:lightline = {
+			\ 'colorscheme': 'wombat',
+			\ 'active': {
+				\   'left': [ [ 'mode', 'paste' ],
+				\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+				\ },
+				\ 'component_function': {
+					\   'gitbranch': 'FugitiveHead'
+					\ },
+					\ }
 
 " ===
 " === which-key.vim
@@ -175,3 +191,9 @@ let g:vim_markdown_follow_anchor = 1  " jump: ge
 " gx like gopen for [demo](http)
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_edit_url_in = 'tab'
+
+
+" ===
+" === all nerdtree
+" ===
+autocmd FileType nerdtree nmap <Tab> <CR>
