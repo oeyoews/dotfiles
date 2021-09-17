@@ -68,7 +68,6 @@ function! myspacevim#before() abort
   " muset in before
   let g:spacevim_custom_plugins = [
         \ ['luochen1990/rainbow'],
-        \ ['rhysd/accelerated-jk'],
         \ ['plasticboy/vim-markdown'],
         \ ['justinmk/vim-syntax-extra'],
         \ ['yianwillis/vimcdoc'],
@@ -139,7 +138,7 @@ function! myspacevim#after() abort
   let g:spacevim_filetype_icons['toml'] = ''
   set updatetime=100
   set foldmethod=marker
-  let $_MYVIMRC .= "~/.SpaceVim.d/autoload/myspacevim.vim"
+  let $_MYVIMRC = "~/.SpaceVim.d/autoload/myspacevim.vim"
   nnoremap <SPACE>fvp :tabnew $_MYVIMRC<CR>:echom "Open _MYVIMRC!"<CR> 
   nnoremap <SPACE>fvP :source $_MYVIMRC<CR>:echom "Refresh finished!"<ESC> 
   nnoremap <silent> <SPACE>ff :Leaderf file --popup<CR>
@@ -149,24 +148,24 @@ function! myspacevim#after() abort
   " ===
   " === markdown maps
   " ===
-  " insert markdown code
+  " insert markdown code TODO: snippets
   autocmd FileType markdown nnoremap <SPACE>imc i```<ESC>yypO<ESC>kA
   " blod NOTE: the cursor must in word
   autocmd FileType markdown nnoremap <SPACE>imb bi**<ESC>wwa**<ESC>
 
   " augroup
-  augroup _myautocmd
-    autocmd!
-    autocmd FileType c :iabbrev <buffer> inc #include <stdio.h><ESC><CR><left>
+  " augroup _myautocmd
+    " autocmd!
+    " autocmd FileType c :iabbrev <buffer> inc #include <stdio.h><ESC><CR><left>
     " NOTE: can't have whitespace in regrep express
     " autocmd BufWritePre,BufRead *.vim,*.c,*.h  :normal ==$ " in save file, " it something wrong
     " autocmd BufWritePost $_MYVIMRC source $_MYVIMRC " doesn't work
-  augroup END
+  " augroup END
   "
   " must comment next line, because of double quote error
   " let @a = "hello!"  # "ap for register, or echo @a @" == unnamed register
   " print absolute path for filename
-  command! Pwd :echom expand('%:p')
+  " command! Pwd echom expand('%:p')
 
   " ===
   " === markdown-preview.nvim
@@ -174,23 +173,9 @@ function! myspacevim#after() abort
   " autocmd FileType markdown if open it directly, can't use this command TODO
   nnoremap <space>fmm :MarkdownPreviewToggle<CR> 
   let g:mkdp_echo_preview_url = 1
-  " let g:mkdp_browser = '' doesn't work
   let g:mkdp_open_to_the_world = 0
   " let g:mkdp_command_for_global = 0 " some bug
   " let g:mkdp_filetypes  = ['md'] " some bug
-  " let g:mkdp_preview_options = {
-        \ 'mkit': {},
-        \ 'katex': {},
-        \ 'uml': {},
-        \ 'maid': {},
-        \ 'disable_sync_scroll': 0,
-        \ 'sync_scroll_type': 'relative',
-        \ 'hide_yaml_meta': 1,
-        \ 'sequence_diagrams': {},
-        \ 'flowchart_diagrams': {},
-        \ 'content_editable': v:false,
-        \ 'disable_filename': 0
-        \ }
 
   " ===
   " === vim-markdown-toc
@@ -240,13 +225,6 @@ let g:vim_markdown_follow_anchor = 1  " jump: ge
 " gx like gopen for [demo](http)
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_edit_url_in = 'tab'
-
-" ===
-" === accelerated-jk
-" ===
-" must recursion
-nmap j <Plug>(accelerated_jk_gj)
-nmap k <Plug>(accelerated_jk_gk)
 
 " ===
 " === open-browser.vim

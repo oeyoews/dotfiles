@@ -1,3 +1,4 @@
 - [todo] https://github.com/maaslalani/slides/blob/main/README.md
   - 搞清这种写法
 - markdown snippets doesn't work
+- tidy vim(calendar todo)
