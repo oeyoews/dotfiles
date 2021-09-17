@@ -1,7 +1,7 @@
 " bootstrap_before 将在读取用户配置后执行
 " bootstrap_after 将在 VimEnter autocmd 之后执行
 "
-" tutorial --- {{{
+" tutorial 
 "   https://yianwillis.github.io/vimcdoc/doc/autocmd.html
 "   https://harttle.land/2017/01/30/variables-in-vim.html
 "   https://www.kancloud.cn/kancloud/learn-vimscript-the-hard-way/49323
@@ -9,9 +9,8 @@
 "   https://vimjc.com/
 "   https://www.w3xue.com/soft/vim/vim-links.html
 "   https://blog.csdn.net/smstong/article/details/20775695
-" }}}
 
-" === Before --- {{{
+" === Before
 " ===
 function! myspacevim#before() abort
 
@@ -56,26 +55,6 @@ function! myspacevim#before() abort
   set nofoldenable " disable automatical fold code, you can fold code by hand must in before
   nnoremap <C-A> ggVG
 
-  " ==
-  " == GitGutter
-  " ==
-  " NOTE: must in before
-  " let g:gitgutter_signs = 0
-  let g:gitgutter_sign_allow_clobber = 0
-  let g:gitgutter_map_keys = 0
-  let g:gitgutter_override_sign_column_highlight = 0
-  let g:gitgutter_preview_win_floating = 1
-  let g:gitgutter_sign_added = '▎'
-  let g:gitgutter_sign_modified = '░'
-  let g:gitgutter_sign_removed = '▏'
-  let g:gitgutter_sign_removed_first_line = '▔'
-  let g:gitgutter_sign_modified_removed = '▒'
-  " autocmd BufWritePost * GitGutter
-  nnoremap <LEADER>gf :GitGutterFold<CR>
-  nnoremap H :GitGutterPreviewHunk<CR>
-  nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
-  nnoremap <LEADER>g= :GitGutterNextHunk<CR>
-
   " ===
   " === rainbow
   " ===
@@ -97,7 +76,6 @@ function! myspacevim#before() abort
         \ ['ntpeters/vim-better-whitespace'],
         \ ['iamcco/markdown-preview.nvim'],
         \ ['tpope/vim-capslock'],
-        \ ['machakann/vim-highlightedyank'],
         \ ['tiagofumo/vim-nerdtree-syntax-highlight'],
         \ ['ryanoasis/vim-devicons'],
         \ ]
@@ -105,7 +83,7 @@ function! myspacevim#before() abort
 endfunction
 " }}}
 
-" === After -- {{{
+" === After 
 " ===
 function! myspacevim#after() abort
 
@@ -140,7 +118,6 @@ function! myspacevim#after() abort
   " === misc settings
   " ===
   "
-  set belloff
   set sidescroll=1
   set nobackup
   set noswapfile
@@ -240,15 +217,11 @@ function! myspacevim#after() abort
   " trigger completion.
   inoremap <silent><expr> <c-@> coc#refresh()
   nnoremap <silent> <SPACE>cc :CocConfig<CR>
-  " coc-browser
-  " TODO: translator
-  "\ 'https://github.com/rodrigore/coc-tailwind-intellisense']
   let g:coc_global_extensions = [
         \ 'coc-emoji',
-        \ 'coc-lists',
         \ 'coc-json',
-        \ 'coc-diagnostic',
-        \ 'coc-translator',
+        \ 'coc-yank',
+        \ 'coc-clangd',
         \ 'coc-snippets',
         \ 'coc-browser']
 
@@ -258,7 +231,6 @@ function! myspacevim#after() abort
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_conceal_code_blocks = 1  " disable hiden code-blocks
-" let g:vim_markdown_fenced_languages = ['c=cpp', , 'bash=sh']
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_new_list_item_indent = 0
@@ -276,7 +248,6 @@ let g:vim_markdown_edit_url_in = 'tab'
 nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
-
 " ===
 " === open-browser.vim
 " ===
@@ -284,21 +255,16 @@ nnoremap <SPACE>bou :OpenBrowser<SPACE>https://
 nnoremap <SPACE>bos :OpenBrowserSmartSearch<SPACE>
 
 " ===
-" === coc-translator
-" ===
-nmap <Leader>ct <Plug>(coc-translator-p)
-nnoremap <Leader>ctc :CocCommand translator.popup<SPACE>
-
-" ===
 " === coc-snippets
 " ===
-" TODO
-imap <C-k> <Plug>(coc-snippets-expand)
+" like space to complete 
+imap <C-k> <Plug>(coc-snippets-expand) 
 
 " <CR> to completion
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" tab is cycle
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -310,10 +276,9 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-" placeholder
+" placeholder switch
 vmap <C-j> <Plug>(coc-snippets-select)
 let g:coc_snippet_next = '<c-j>'
 let g:coc_snippet_prev = '<c-k>'
 
 endfunction
-" }}}

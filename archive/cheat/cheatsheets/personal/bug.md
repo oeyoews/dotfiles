@@ -6,3 +6,6 @@ Bug
 
 - S: gitlab mirror to github failed?
   A: because delete github's email, need reagin add email.(TODO)
+
+
+NOTE: not upgrade emacs
