@@ -1,4 +1,5 @@
 [options]
+enable_googlesuggest = true
 search_tools = ["rg", "pt", "ack", "grep", "findstr"]
 statusline_iseparator = "nil"  # for nerdtree like
 statusline_separator = "nil"  # for statusline
@@ -12,7 +13,7 @@ guifont = "Droid Sans Mono:h11"
 statusline_unicode_symbols = true
 wrap_line=0  # enable wrapline: 1
 checkinstall = 1  # enable: 1, autoinstall plugin
-default_indent = 0
+default_indent = 2
 filetree_direction = "left"
 filemanager = "nerdtree"  # if nil, disable filemanager
 colorscheme = "SpaceVim"
@@ -43,7 +44,7 @@ name = "default"
 [[layers]]
 name = 'autocomplete'
 auto_completion_tab_key_behavior = "smart"  # "cycle"
-auto-completion-return-key-behavior = "smart"
+auto-completion-return-key-behavior = "complete"
 auto-completion-delay = 50
 
 [[layers]]
@@ -89,14 +90,14 @@ name = "incsearch"
 name = "tools"
 
 [[layers]]
-    name = 'gtags'
-    enable = true
+name = 'gtags'
+enable = true
 
 [[layers]]
-    name = 'lang#markdown'
-    enableWcwidth = 1
-    listItemIndent = 1
-    enabled_formater = ['prettier']
+name = 'lang#markdown'
+enableWcwidth = 1
+listItemIndent = 1
+enabled_formater = ['prettier']
 
 [[layers]]
 name = "lang#toml"

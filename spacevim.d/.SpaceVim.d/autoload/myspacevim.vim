@@ -18,6 +18,9 @@ function! myspacevim#before() abort
   " ===
   " === some tips
   " ===
+  " set filetype?
+  " set filetype=....
+  " au BufNewFile,BufRead *.pn set filetype=potion
   " m{a-z} mark `{a-zA-Z} jump mark
   " redraw minbuffer: Ctrl l
   " show filename: Ctrl g
@@ -85,6 +88,7 @@ function! myspacevim#before() abort
   " muset in before
   let g:spacevim_custom_plugins = [
         \ ['luochen1990/rainbow'],
+        \ ['rhysd/accelerated-jk'],
         \ ['plasticboy/vim-markdown'],
         \ ['justinmk/vim-syntax-extra'],
         \ ['yianwillis/vimcdoc'],
@@ -124,6 +128,14 @@ function! myspacevim#after() abort
   let g:NERDTreeHighlightCursorline = 0
 
   " ===
+  " === command mode
+  " ===
+  " space h space == :h spacevim and use tab to switch next item
+  noremap <space>hh :h<space>
+  noremap <space>hc :
+  nnoremap <SPACE>he :echo<SPACE>
+
+  " ===
   " === misc settings
   " ===
   set sidescroll=1
@@ -132,11 +144,12 @@ function! myspacevim#after() abort
   set clipboard^=unnamed
   set guifont=Droid\ Sans\ Mono\ 14 " echo &guifont
   let &wrap = 0 " set nowrap   must in after
-  set mouse=a
-  noremap <space>hh :h<space>
-  noremap <space>hc :
+  set mouse+=a
+  set shortmess+=a
+
   nnoremap <silent> <leader>qq :q!<CR>
   noremap <space>su :SPUpdate<CR>
+  noremap L $
   set smartcase
   set scrolloff=0
   set confirm " better quit
@@ -147,17 +160,20 @@ function! myspacevim#after() abort
   set updatetime=100
   set foldmethod=marker
   let $_MYVIMRC .= "~/.SpaceVim.d/autoload/myspacevim.vim"
-  noremap L $
   nnoremap <SPACE>fvp :tabnew $_MYVIMRC<CR>:echom "Open _MYVIMRC!"<CR> 
   nnoremap <SPACE>fvP :source $_MYVIMRC<CR>:echom "Refresh finished!"<ESC> 
   nnoremap <silent> <SPACE>ff :Leaderf file --popup<CR>
   nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
   nnoremap <silent> <SPACE>a, mqA,<ESC>`q :echom "Add a comma in the end!"<CR>
-  nnoremap <SPACE>vd :echo<SPACE>
+
+  " ===
+  " === markdown maps
+  " ===
   " insert markdown code
-  nnoremap <SPACE>imc i```<ESC>yypO<ESC>kA
+  autocmd FileType markdown nnoremap <SPACE>imc i```<ESC>yypO<ESC>kA
   " blod NOTE: the cursor must in word
-  nnoremap <SPACE>imb bi**<ESC>wwa**<ESC>
+  autocmd FileType markdown nnoremap <SPACE>imb bi**<ESC>wwa**<ESC>
+
   " augroup
   augroup _myautocmd
     autocmd!
@@ -175,17 +191,36 @@ function! myspacevim#after() abort
   " ===
   " === markdown-preview.nvim
   " ===
+  " autocmd FileType markdown if open it directly, can't use this command TODO
   nnoremap <space>fmm :MarkdownPreviewToggle<CR> 
+  let g:mkdp_echo_preview_url = 1
+  " let g:mkdp_browser = '' doesn't work
+  let g:mkdp_open_to_the_world = 0
+  " let g:mkdp_command_for_global = 0 " some bug
+  " let g:mkdp_filetypes  = ['md'] " some bug
+  " let g:mkdp_preview_options = {
+        \ 'mkit': {},
+        \ 'katex': {},
+        \ 'uml': {},
+        \ 'maid': {},
+        \ 'disable_sync_scroll': 0,
+        \ 'sync_scroll_type': 'relative',
+        \ 'hide_yaml_meta': 1,
+        \ 'sequence_diagrams': {},
+        \ 'flowchart_diagrams': {},
+        \ 'content_editable': v:false,
+        \ 'disable_filename': 0
+        \ }
 
   " ===
   " === vim-markdown-toc
   " ===
-  nnoremap <space>fmt :GenTocMarked<CR>
+  autocmd FileType markdown nnoremap <space>imt :GenTocMarked<CR>
 
   " ===
   " === calendar.vim
   " ===
-  nnoremap <space>ac :<C-U>Calendar -view=clock<CR>
+  nnoremap <silent> <space>at :<C-U>Calendar -view=clock<CR>
 
   " ===
   " === vim-better_whitespace.vim
@@ -198,25 +233,62 @@ function! myspacevim#after() abort
   " ===
   " quickly fix error
   nnoremap <leader>qf  <Plug>(coc-fix-current) 
+  nnoremap <silent> <SPACE>ce :CocList extensions<CR> 
   " trigger completion.
   inoremap <silent><expr> <c-@> coc#refresh()
+  nnoremap <silent> <SPACE>cc :CocConfig<CR>
+  " coc-browser
+  " TODO: translator
+  "\ 'https://github.com/rodrigore/coc-tailwind-intellisense']
+  let g:coc_global_extensions = [
+        \ 'coc-emoji',
+        \ 'coc-lists',
+        \ 'coc-json',
+        \ 'coc-diagnostic',
+        \ 'coc-translator',
+        \ 'coc-snippets',
+        \ 'coc-browser']
 
-  " ===
-  " === vim-markdown
-  " ===
-  let g:vim_markdown_folding_disabled = 1
-  let g:vim_markdown_toc_autofit = 1
-  let g:vim_markdown_conceal_code_blocks = 1  " disable hiden code-blocks
-  " let g:vim_markdown_fenced_languages = ['c=cpp', , 'bash=sh']
-  let g:vim_markdown_frontmatter = 1
-  let g:vim_markdown_strikethrough = 1
-  let g:vim_markdown_new_list_item_indent = 0
-  let g:vim_markdown_no_extensions_in_markdown = 1
-  let g:vim_markdown_auto_insert_bullets = 0
-  let g:vim_markdown_follow_anchor = 1  " jump: ge
-  " gx like gopen for [demo](http)
-  let g:vim_markdown_no_extensions_in_markdown = 1
-  let g:vim_markdown_edit_url_in = 'tab'
+" ===
+" === vim-markdown
+" ===
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_toc_autofit = 1
+let g:vim_markdown_conceal_code_blocks = 1  " disable hiden code-blocks
+" let g:vim_markdown_fenced_languages = ['c=cpp', , 'bash=sh']
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_strikethrough = 1
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_follow_anchor = 1  " jump: ge
+" gx like gopen for [demo](http)
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_edit_url_in = 'tab'
 
+" ===
+" === accelerated-jk
+" ===
+" must recursion
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+
+" ===
+" === open-browser.vim
+" ===
+nnoremap <SPACE>bou :OpenBrowser<SPACE>https://
+nnoremap <SPACE>bos :OpenBrowserSmartSearch<SPACE>
+
+" ===
+" === coc-translator
+" ===
+nmap <Leader>ct <Plug>(coc-translator-p)
+nnoremap <Leader>ctc :CocCommand translator.popup<SPACE>
+
+" ===
+" === coc-snippets
+" ===
+imap <C-l> <Plug>(coc-snippets-expand)
 endfunction
 " }}}
