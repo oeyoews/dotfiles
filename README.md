@@ -12,6 +12,8 @@
 Environment
 ---
 
+![example](./archive/img/example.png)
+
 - **Terminal**: kitty(extra: alacritty, tmux) 
 - **Shell** : zsh
 - **Editor**: vscode, vim(:SpaceVim), emacs(Doomemacs, Spacemacs), typora
@@ -54,12 +56,12 @@ Configuration
 ### examples
 ```zsh
   # omz(improve version for oh-my-zsh)
-  1. cd ~/dotfiles
-  2. stow omz
+  cd ~/dotfiles
+  stow omz
 ```
 
 ```zsh 
 # other configure in ~/dotfiles/archive
-  1. cd ~/dotfiles/archive
-  2. stow -t ~ ideavimrc
+  cd ~/dotfiles/archive
+  stow -t ~ ideavimrc
 ```
