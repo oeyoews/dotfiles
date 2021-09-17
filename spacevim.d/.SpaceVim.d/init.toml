@@ -16,6 +16,7 @@ checkinstall = 1  # enable: 1, autoinstall plugin
 default_indent = 2
 filetree_direction = "left"
 filemanager = "nerdtree"  # if nil, disable filemanager
+# "SpaceVim"
 colorscheme = "SpaceVim"
 autocomplete_method = 'coc'  # need crear dir ~/.config/coc
 # lint_engine = 'ale' # ale neomake or comment this option; it have some bug; coc and ale just select one.

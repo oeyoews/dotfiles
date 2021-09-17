@@ -54,6 +54,7 @@ function! myspacevim#before() abort
   " let g:maplocalleader ='\'
   set number relativenumber " must before startify
   set nofoldenable " disable automatical fold code, you can fold code by hand must in before
+  nnoremap <C-A> ggVG
 
   " ==
   " == GitGutter
@@ -83,7 +84,7 @@ function! myspacevim#before() abort
   nnoremap <space>tr :RainbowToggle<CR>:echom "enable rainbow_bract!"<CR>
 
   " ===
-  " === plugins
+  " === custom plugins
   " ===
   " muset in before
   let g:spacevim_custom_plugins = [
@@ -138,6 +139,8 @@ function! myspacevim#after() abort
   " ===
   " === misc settings
   " ===
+  "
+  set belloff
   set sidescroll=1
   set nobackup
   set noswapfile
@@ -289,6 +292,28 @@ nnoremap <Leader>ctc :CocCommand translator.popup<SPACE>
 " ===
 " === coc-snippets
 " ===
-imap <C-l> <Plug>(coc-snippets-expand)
+" TODO
+imap <C-k> <Plug>(coc-snippets-expand)
+
+" <CR> to completion
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" placeholder
+vmap <C-j> <Plug>(coc-snippets-select)
+let g:coc_snippet_next = '<c-j>'
+let g:coc_snippet_prev = '<c-k>'
+
 endfunction
 " }}}

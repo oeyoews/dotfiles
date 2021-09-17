@@ -1,3 +1,73 @@
+
+<!-- vim-markdown-toc Marked -->
+
+- [if use kimpanel, not use this skin](#if-use-kimpanel,-not-use-this-skin)
+- [fcitx5-material-color      # input skin](#fcitx5-material-color-#-input-skin)
+- [cmake](#cmake)
+- [cloc # like wc](#cloc-#-like-wc)
+- [(note: if turn on input method panel , all fcitx skin will don't work)](#(note:-if-turn-on-input-method-panel-,-all-fcitx-skin-will-don't-work))
+- [gnome-shell-extension-unite](#gnome-shell-extension-unite)
+- [like ps painting](#like-ps-painting)
+- [python-pip](#python-pip)
+- [tmux](#tmux)
+- [(xtreme download manager)](#(xtreme-download-manager))
+- [xdm](#xdm)
+- [powertop # 耗电分析](#powertop-#-耗电分析)
+- [mysql tool](#mysql-tool)
+- [mycli](#mycli)
+- [typora](#typora)
+- [system clipboard link](#system-clipboard-link)
+- [https://wiki.archlinux.org/title/Ranger_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)](#https://wiki.archlinux.org/title/ranger_(%e7%ae%80%e4%bd%93%e4%b8%ad%e6%96%87))
+- [secure rm](#secure-rm)
+- [google-chrome](#google-chrome)
+- [firefox](#firefox)
+- [neofetch deprecate](#neofetch-deprecate)
+- [lolcat](#lolcat)
+- [ls -al | xclip](#ls--al-|-xclip)
+- [防火墙](#防火墙)
+- [gufw](#gufw)
+- [xclip](#xclip)
+- [pacman](#pacman)
+- [grep enhanced, like grep](#grep-enhanced,-like-grep)
+- [like du -sh](#like-du--sh)
+- [Fcitx5](#fcitx5)
+- [pacman (auto install fcitx-im)](#pacman-(auto-install-fcitx-im))
+- [词库 pacman](#词库-pacman)
+- [archlinuxcn](#archlinuxcn)
+- [fcitx input method](#fcitx-input-method)
+- [========](#========)
+- [virtual-desktop            # plasma widget](#virtual-desktop-#-plasma-widget)
+- [wechat-uos                 # wechat](#wechat-uos-#-wechat)
+- [wudao-dict-git             # wudao directory](#wudao-dict-git-#-wudao-directory)
+- [fgit                       # hub.fastgit.org](#fgit-#-hub.fastgit.org)
+- [deskreen                   # 投屏软件](#deskreen-#-投屏软件)
+- [idea](#idea)
+- [intellij-idea-ultimate-edition](#intellij-idea-ultimate-edition)
+- [filezilla # file transfer](#filezilla-#-file-transfer)
+- [npm fast open repo](#npm-fast-open-repo)
+- [yay](#yay)
+- [pip install magic-wormhole](#pip-install-magic-wormhole)
+- [pip](#pip)
+- [gnome-extensions list](#gnome-extensions-list)
+- [start: mocp](#start:-mocp)
+- [translate](#translate)
+- [https://www.cnblogs.com/kevingrace/p/10188283.html](#https://www.cnblogs.com/kevingrace/p/10188283.html)
+- [terminal session recorder](#terminal-session-recorder)
+- [kate](#kate)
+- [modern terminal](#modern-terminal)
+- [analyse memory](#analyse-memory)
+- [markdown to cat](#markdown-to-cat)
+- [picture show](#picture-show)
+- [fast find config](#fast-find-config)
+- [sudo updatedb](#sudo-updatedb)
+- [comannd: locate [file-name]](#comannd:-locate-[file-name])
+- [reading](#reading)
+- [better pdf](#better-pdf)
+- [download youtube video](#download-youtube-video)
+- [mysql toolsk](#mysql-toolsk)
+- [jupyter notebook](#jupyter-notebook)
+
+<!-- vim-markdown-toc -->
 base-devel
 # if use kimpanel, not use this skin
 # fcitx5-material-color      # input skin
@@ -166,3 +236,8 @@ nodejs-lts-erbium # 12.xxx
   scrapy
 
   cheat-bin or cheat
+
+  <!-- markdown -->
+  mdp
+  slides
+  ttyd

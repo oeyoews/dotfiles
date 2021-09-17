@@ -99,8 +99,8 @@ alias tse='crow -t en'
 alias ts='crow -b'
 
 # Misc
-alias cheate="cheat -e"
-alias cheatl="cheat -l"
+alias che="cheat -e"
+alias chl="cheat -l"
 alias ports='netstat -tulanp'  # need install `net-tools
 alias jc="journalctl -xe"
 alias sc="systemctl"

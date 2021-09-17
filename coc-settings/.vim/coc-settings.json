@@ -1,0 +1,6 @@
+{
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "$HOME/.SpaceVim.d/UltiSnips/"
+  ]
+}
