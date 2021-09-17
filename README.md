@@ -9,10 +9,11 @@
 
 <!-- vim-markdown-toc -->
 
+![example](./archive/img/example.png)
+
 Environment
 ---
 
-![example](./archive/img/example.png)
 
 - **Terminal**: kitty(extra: alacritty, tmux) 
 - **Shell** : zsh
