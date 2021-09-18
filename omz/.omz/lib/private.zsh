@@ -128,4 +128,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # time emacs -e kill-emacs
 alias eg="emacs"
 alias et="emacs -nw"
+# it's recursive
+alias vim='nvim'
 # alias vim="nvim"
+alias ext=exit

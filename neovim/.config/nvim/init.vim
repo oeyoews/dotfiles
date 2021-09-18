@@ -1,41 +1,66 @@
+" autocmd! BufWritePost $MYVIMRC source %
+" | echom "Refreshed!"
+" $MYVIMRC
+let &wrap = 0 " set nowrap
+"dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda
+" ===
+" === Mappings
+" ===
+nnoremap <SPACE>sw :set wrap!<CR>
+nnoremap guw gUaw
+" gv to learn(optional)
+
+" demo
+inoremap <C-V> <ESC>p
+nnoremap <C-A> ggVG
+nnoremap <C-S> :wa<CR> :echo "All files saved!"
+
+inoremap jk <ESC>
+nnoremap <silent><SPACE>qq :q<CR>
+nnoremap <silent><SPACE>qa :qa!<CR>
+nnoremap <silent><SPACE>fe :tabnew $MYVIMRC<CR>
+nnoremap <silent><SPACE>wm :only<CR>
+" window
+noremap s <nop>
+noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap sl :set splitright<CR>:vsplit<CR>
+
+" ===
+" === Set settings
+" ===
 set number relativenumber
 set exrc
 set autoread
 set secure
 set mouse=a
+set nospell
 set incsearch
 set hlsearch
 set linebreak " better wrap
 " NOTE: jk or other map is not work for timeoutlen=0
 " set timeoutlen=0
-" TODO: dashboard which-key gitgutter(nvim), airline(or), undotree(plus needd
-" TODO tab to cycle
-" bookmarks
-" TODO: moudles for init.vim
-" spell check
+" TODO: which-key
+" calendar is very smilay
+" TODO: tab to cycle
+"				tree disable to open new file
+"				try close tab (close not really close tab)
+" TODO: moudles for init.vim(optional)
 " TODO space f o
 " TODO: 解决按键问题
-" to setting),
 " code-runner
-" sharp icon
 " NOTE: not add filetype on like, if configcit for lightline
-" TODO: 记住光标位置
 " TODO: 如何设置启动log
-" TODO: sometimes, lighline is bug
-" TODO: lang(viml, c) 
+" TODO: sometimes, lighline is bug for source
 " TODO: modify color for tokyonight
-" TODO: 内置终端优化 float
 " TODO: clear highlight
 " TODO: buffer switch
 " TODO: 数字选择标签窗口
-" TODO: 标签
-" TODO: bell format
-" TODO: canlendar 写的位置, configure it
-" TODO: 按键延迟
 syntax on
 set wildmenu " enhance ?
 set hidden  " ?
-" set autoindent
+set autoindent
 set ruler  " show line number and column number in status
 set cursorline  " highlight current line
 set smartcase
@@ -45,39 +70,25 @@ set noshowmode " right status
 set showmatch
 set clipboard^=unnamed
 set shortmess+=atIc  " disable show welcome
-
 set noexpandtab  " disable expand tab to whitespace
 set tabstop=2 " tab == 2 column, like 单位
 set shiftwidth=2  " default indent distance for >> <<
 set softtabstop=2 " tab == 2 column truly
 " set list " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
-
 " set splitright
 " set splitbelow
 " set inccommand=split
-"
 set completeopt=longest,noinsert,menuone,noselect,preview
 " set ttyfast "should make scrolling faster
 set lazyredraw "same as above
-
 " TODO
 set vb t_vb= " no sound, no shine
-set visualbell
-
-" ===
-" === misc settings
-" ===
-noremap <SPACE>sw :set wrap!<CR>
+set novisualbell
+set noerrorbells
 set textwidth=120
-"
 " NOTE: in noremap, not use comment
 " Disable the default s key
-noremap s <nop>
-noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap sj :set splitbelow<CR>:split<CR>
-noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap sl :set splitright<CR>:vsplit<CR>
 
 " auto crear dir
 silent !mkdir -p $HOME/.config/nvim/tmp/backup
@@ -89,12 +100,8 @@ if has('persistent_undo')
 	set undodir=$HOME/.config/nvim/tmp/undo,.
 endif
 
-inoremap jk <ESC>
 " some bug
-nnoremap <SPACE>fs :w<CR>
-" set guifont=Droid\ Sans\ Mono\ 14 " for gvim
-nnoremap <silent> <SPACE>q :q<CR>
-" demos demos ;
+nnoremap <silent><SPACE>fs :w<CR> :echom "File Saved!"<CR>
 
 " ===
 " === command mode
@@ -107,13 +114,11 @@ nnoremap <SPACE>he :echo<SPACE>
 set sidescroll=1
 set nobackup
 set noswapfile
-let &wrap = 0 " set nowrap
 
 let g:mapleader = ','
 
 set foldmethod=marker
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
-nnoremap <C-A> ggVG
 set confirm
 nnoremap <silent> <leader>qq :q!<CR>
 set scrolloff=1
@@ -123,37 +128,41 @@ set signcolumn=yes " options: number yes
 " 按键延迟检测
 set updatetime=500
 set foldmethod=marker
-noremap <SPACE>fe :tabnew $HOME/.config/nvim/init.vim<CR>
 " let $MYVIMRC = "$HOME/.config/nvim/init.vim"
 " eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
-" autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
 nnoremap <silent> <SPACE>bm :messages<CR>
 " nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
 noremap L $
-nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
-nnoremap <SPACE>tc :source<SPACE>%<CR> :PlugClean<CR>
+" nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
+nnoremap <SPACE>ti :PlugInstall<CR>
+nnoremap <SPACE>tc :PlugClean<CR>
 " TODO: tabnext and tabNext
 " smart quit
-nnoremap <silent> <SPACE>sn :tabnext<CR>
-nnoremap <silent> <SPACE>bp :tabprevious<CR>
+" nnoremap <silent> <SPACE>sn :tabnext<CR>
+" nnoremap <silent> <SPACE>sp :tabprevious<CR>
 " tabedit TODO
 nnoremap <silent> <SPACE>cn :tabnew<CR>
-nnoremap <SPACE>wm :only<CR>
 " TODO: space bd
 
-
-noremap <SPACE>' :set splitbelow<CR>:split<CR>:res +10<CR>:term<CR>
 " ===
-" === Plugins
+" === Ps
 " ===
 call plug#begin('$HOME/.config/nvim/plugged')
+
+" bookmarks
+" Plug 'tom-anders/telescope-vim-bookmarks.nvim'
+Plug 'MattesGroeger/vim-bookmarks'
+
+" lsp_ui
+Plug 'glepnir/lspsaga.nvim'
 
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 
 " complete and error tips
+" TODO :checkhealth snippets error
 Plug 'nvim-lua/completion-nvim'
 
 " search
@@ -198,19 +207,20 @@ Plug 'dkarter/bullets.vim'
 Plug 'jiangmiao/auto-pairs'
 
 " format
-Plug 'google/vim-maktaba'
-Plug 'google/vim-codefmt'
+" Plug 'google/vim-maktaba'
+" Plug 'google/vim-codefmt'
+Plug 'Chiel92/vim-autoformat'
 
-" configcit dashboard 
-" Plug 'Yggdroot/indentLine' 
+" configcit dashboard
+" Plug 'Yggdroot/indentLine'
 
 Plug 'junegunn/goyo.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'makerj/vim-pdf'
 Plug 'airblade/vim-gitgutter'
 
-" Plug 'glepnir/dashboard-nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'glepnir/dashboard-nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 
@@ -221,7 +231,6 @@ call plug#end()
 autocmd FileType markdown nnoremap <space>fmm :MarkdownPreviewToggle<CR>
 let g:mkdp_echo_preview_url = 1
 let g:mkdp_open_to_the_world = 0
-
 
 " ===
 " === vim-markdown-toc
@@ -234,7 +243,6 @@ autocmd FileType markdown nnoremap <space>fmt :GenTocMarked<CR>
 " TODO need test shortkey
 let g:rainbow_active = 1 " if set 1, it's conflicts to nerdtree
 nnoremap <space>tr :RainbowToggle<CR>:echom "enable rainbow_bract!"<CR>
-
 
 " ===
 " === vim-better_whitespace.vim
@@ -374,15 +382,15 @@ let g:nvim_tree_update_cwd = 1 "0 by default, will update the tree cwd when chan
 let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
 let g:nvim_tree_refresh_wait = 500 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
 let g:nvim_tree_window_picker_exclude = {
-    \   'filetype': [
-    \     'notify',
-    \     'packer',
-    \     'qf'
-    \   ],
-    \   'buftype': [
-    \     'terminal'
-    \   ]
-    \ }
+			\   'filetype': [
+				\     'notify',
+				\     'packer',
+				\     'qf'
+				\   ],
+				\   'buftype': [
+					\     'terminal'
+					\   ]
+					\ }
 " Dictionary of buffer option names mapped to a list of option values that
 " indicates to the window picker that the buffer's window should not be
 " selectable.
@@ -402,34 +410,34 @@ let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 }
 " default will show icon by default if no icon is provided
 " default shows no icon by default
 let g:nvim_tree_icons = {
-    \ 'default': '',
-    \ 'symlink': '',
-    \ 'git': {
-    \   'unstaged': "✗",
-    \   'staged': "✓",
-    \   'unmerged': "",
-    \   'renamed': "➜",
-    \   'untracked': "★",
-    \   'deleted': "",
-    \   'ignored': "◌"
-    \   },
-    \ 'folder': {
-    \   'arrow_open': "",
-    \   'arrow_closed': "",
-    \   'default': "",
-    \   'open': "",
-    \   'empty': "",
-    \   'empty_open': "",
-    \   'symlink': "",
-    \   'symlink_open': "",
-    \   },
-    \   'lsp': {
-    \     'hint': "",
-    \     'info': "",
-    \     'warning': "",
-    \     'error': "",
-    \   }
-    \ }
+			\ 'default': '',
+			\ 'symlink': '',
+			\ 'git': {
+				\   'unstaged': "✗",
+				\   'staged': "✓",
+				\   'unmerged': "",
+				\   'renamed': "➜",
+				\   'untracked': "★",
+				\   'deleted': "",
+				\   'ignored': "◌"
+				\   },
+				\ 'folder': {
+					\   'arrow_open': "",
+					\   'arrow_closed': "",
+					\   'default': "",
+					\   'open': "",
+					\   'empty': "",
+					\   'empty_open': "",
+					\   'symlink': "",
+					\   'symlink_open': "",
+					\   },
+					\   'lsp': {
+						\     'hint': "",
+						\     'info': "",
+						\     'warning': "",
+						\     'error': "",
+						\   }
+						\ }
 
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
@@ -450,14 +458,14 @@ highlight NvimTreeFolderIcon guibg=blue
 let g:dashboard_default_executive ='fzf'
 " eg : "SPC mean the leaderkey
 let g:dashboard_custom_shortcut={
-\ 'last_session'       : 'SPC s l',
-\ 'find_history'       : 'SPC f h',
-\ 'find_file'          : 'SPC f f',
-\ 'new_file'           : 'SPC c n',
-\ 'change_colorscheme' : 'SPC t c',
-\ 'find_word'          : 'SPC f a',
-\ 'book_marks'         : 'SPC f b',
-\ }
+			\ 'last_session'       : 'SPC s l',
+			\ 'find_history'       : 'SPC f h',
+			\ 'find_file'          : 'SPC f f',
+			\ 'new_file'           : 'SPC c n',
+			\ 'change_colorscheme' : 'SPC t c',
+			\ 'find_word'          : 'SPC f a',
+			\ 'book_marks'         : 'SPC f b',
+			\ }
 
 " let g:dashboard_custom_shortcut_icon['last_session'] = ' '
 " let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
@@ -504,21 +512,21 @@ noremap <silent> <SPACE>ac :Calendar -position=here<CR>
 " let g:calendar_google_calendar = 1
 " let g:calendar_google_task = 1
 " augroup calendar-mappings
-" 	autocmd!
-" 	" diamond cursor
-" 	autocmd FileType calendar nmap <buffer> u <Plug>(calendar_up)
-" 	autocmd FileType calendar nmap <buffer> n <Plug>(calendar_left)
-" 	autocmd FileType calendar nmap <buffer> e <Plug>(calendar_down)
-" 	autocmd FileType calendar nmap <buffer> i <Plug>(calendar_right)
-" 	autocmd FileType calendar nmap <buffer> <c-u> <Plug>(calendar_move_up)
-" 	autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
-" 	autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
-" 	autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
-" 	autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
-" 	autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
-" 	" unmap <C-n>, <C-p> for other plugins
-" 	autocmd FileType calendar nunmap <buffer> <C-n>
-" 	autocmd FileType calendar nunmap <buffer> <C-p>
+"		autocmd!
+"		" diamond cursor
+"		autocmd FileType calendar nmap <buffer> u <Plug>(calendar_up)
+"		autocmd FileType calendar nmap <buffer> n <Plug>(calendar_left)
+"		autocmd FileType calendar nmap <buffer> e <Plug>(calendar_down)
+"		autocmd FileType calendar nmap <buffer> i <Plug>(calendar_right)
+"		autocmd FileType calendar nmap <buffer> <c-u> <Plug>(calendar_move_up)
+"		autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
+"		autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
+"		autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
+"		autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
+"		autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
+"		" unmap <C-n>, <C-p> for other plugins
+"		autocmd FileType calendar nunmap <buffer> <C-n>
+"		autocmd FileType calendar nunmap <buffer> <C-p>
 " augroup END
 
 " ===
@@ -560,27 +568,27 @@ lua <<EOF
 -- require('lualine').setup()
 options = {theme = 'onedark'}
 require('lualine').setup {
-  options = {
-    -- ... your lualine config
-    theme = 'tokyonight'
-    -- ... your lualine config
-  }
-}
+	options = {
+		-- ... your lualine config
+		theme = 'tokyonight'
+		-- ... your lualine config
+		}
+	}
 EOF
 
 " ===
-" === indentline
+" === blankkindentline
 " ===
 lua <<EOF
-vim.opt.listchars = {
-    space = "⋅",
-    eol = "↴",
-}
-
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-}
+-- vim.opt.listchars = {
+--     space = "⋅",
+--     eol = "↴",
+-- }
+--
+-- require("indent_blankline").setup {
+--     space_char_blankline = " ",
+--     show_current_context = true,
+-- }
 EOF
 
 
@@ -620,17 +628,26 @@ nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 " ===
-" lang#
+" === completion.nvim and nvim-lspconfig
+" ===
 " TODO https://github.com/nvim-lua/completion-nvim
+"https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#vimls
+" :LSPInfo
 lua <<EOF
+-- lang#vim (memory is a little big, disable it templately)
+-- require'lspconfig'.vimls.setup{on_attach=require'completion'.on_attach}
+-- lang#c
 require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
+vim.lsp.set_log_level("debug")
 EOF
 autocmd BufEnter * lua require'completion'.on_attach()
 
 " formatter
 "https://github.com/mhartington/formatter.nvim
 
-" snippets
+" ===
+" === UltSnips
+" ===
 " https://github.com/hrsh7th/vim-vsnip
 " let g:UltiSnipsExpandTrigger="<CR>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -638,4 +655,65 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.config/nvim/Ultisnips/',
 			\ $HOME.'/.config/nvim/plugged/vim-snippets/UltiSnips/']
-" si
+
+" ===
+" === lspsaga.nvim(lsp_ui)
+" ===
+lua << EOF
+local saga = require 'lspsaga'
+saga.init_lsp_saga()
+EOF
+" quick fix like vscode
+nnoremap <silent><space>qf :Lspsaga code_action<CR>
+" NOTE: horver close error
+nnoremap <silent>K :Lspsaga hover_doc<CR>
+nnoremap <silent>gs :Lspsaga signature_help<CR>
+nnoremap <silent>gr :Lspsaga rename<CR>
+nnoremap <silent>gD :Lspsaga preview_definition<CR>
+" A is <alt>
+nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
+tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
+
+" ===
+" === term better
+" ===
+" ALT + =: toggle terminal below.
+" ALT + SHIFT + h: move to the window on the left.
+" ALT + SHIFT + l: move to the window on the right.
+" ALT + SHIFT + j: move to the window below.
+" ALT + SHIFT + k: move to the window above.
+" ALT + SHIFT + n: move to the previous window.
+" ALT + -: paste register 0 to terminal.
+" ALT + q: switch to terminal normal mode.
+
+" ===
+" === vim-bookmarks.nvim
+" ===
+" TODO: config(optional)
+" links: https://github.com/MattesGroeger/vim-bookmarks
+lua <<EOF
+-- require('telescope').load_extension('vim_bookmarks')
+EOF
+" shortkeys
+" Add/remove bookmark at current line	mm	:BookmarkToggle
+" Add/edit/remove annotation at current line	mi	:BookmarkAnnotate <TEXT>
+" Jump to next bookmark in buffer	mn	:BookmarkNext
+" Jump to previous bookmark in buffer	mp	:BookmarkPrev
+" Show all bookmarks (toggle)	ma	:BookmarkShowAll
+" Clear bookmarks in current buffer only	mc	:BookmarkClear
+" Clear bookmarks in all buffers	mx	:BookmarkClearAll
+" Move up bookmark at current line	[count]mkk	:BookmarkMoveUp [<COUNT>]
+" Move down bookmark at current line	[count]mjj	:BookmarkMoveDown [<COUNT>]
+" Move bookmark at current line to another line	[count]mg	:BookmarkMoveToLine <LINE>
+" Save all bookmarks to a file		:BookmarkSave <FILE_PATH>
+" Load bookmarks from a file		:BookmarkLoad <FILE_PATH>
+
+" Uncomment the following to have Vim jump to the last position when" reopening a file
+if has("autocmd")
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" ===
+" === vim-autoformat
+" ===
+autocmd! BufWrite *.[c] :Autoformat

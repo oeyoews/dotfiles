@@ -1,20 +1,20 @@
+
 <!-- vim-markdown-toc Marked -->
 
-  - [Environment](#environment)
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [NOTE](#note)
-- [Configuration](#configuration)
-  - [examples](#examples)
+	* [Environment](#environment)
+* [Dependencies](#dependencies)
+* [Installation](#installation)
+* [NOTE](#note)
+* [Configuration](#configuration)
+	* [examples](#examples)
 
 <!-- vim-markdown-toc -->
-
 ![example](./archive/img/example.png)
 
 ### Environment
 - **Terminal**: kitty(extra: alacritty, tmux) 
 - **Shell** : zsh
-- **Editor**: vscode, vim(:SpaceVim), emacs(Doomemacs, Spacemacs), typora
+- **Editor**: vscode, nvim, emacs(Doomemacs), typora
 - **Font:** Droid Sans Mono, DejaVu Sans Mono
 - **Input:** fcitx5
 - **Linux:**  mangaro gdm gnome40
@@ -49,7 +49,7 @@ NOTE
 - this last reposonity location in your directory  must be like this : ~/dotfiles
 
 Configuration
--
+---
 
 ### examples
 ```zsh

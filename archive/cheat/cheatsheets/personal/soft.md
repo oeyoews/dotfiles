@@ -102,7 +102,8 @@ xunlei-bin                 # xunlei
 foliate                    # book read
 obs                        # record video
 # system clipboard link
-gvim
+<!-- gvim -->
+neovim(python-pynvim)
 
 <!-- ranger {{{ -->
 # https://wiki.archlinux.org/title/Ranger_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)

@@ -2,3 +2,4 @@
   - 搞清这种写法
 - markdown snippets doesn't work
 - tidy vim(calendar todo)
+- vim language server

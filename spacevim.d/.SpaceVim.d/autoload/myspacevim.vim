@@ -89,6 +89,7 @@ function! myspacevim#after() abort
   " ===
   " === all nerdtree
   " ===
+  "
   let g:NERDTreeDirArrowExpandable = '➤' 
   let g:NERDTreeDirArrowCollapsible = ''
   let g:NERDTreeShowHidden=0 " let g:NERDTreeMapCustomOpen = '<TAB>' " doesn't work
