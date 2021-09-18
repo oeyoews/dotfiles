@@ -8,4 +8,11 @@ Bug
   A: because delete github's email, need reagin add email.(TODO)
 
 
-NOTE: not upgrade emacs
+- NOTE: not upgrade emacs
+
+TODO_BUG
+---
+
+[x] In fullscreen, google-chrome is very slowl for scrool pages.
+
+
