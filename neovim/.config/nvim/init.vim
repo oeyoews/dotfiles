@@ -1,30 +1,90 @@
 set number relativenumber
+set exrc
+set autoread
+set secure
+set incsearch
+set hlsearch
+set linebreak " better wrap
 " NOTE: jk or other map is not work for timeoutlen=0
 " set timeoutlen=0
-filetype on
-filetype plugin on
-" TODO: dashboard which-key gitgutter(nvim), airline(or), undotree(plus),
+" TODO: dashboard which-key gitgutter(nvim), airline(or), undotree(plus needd
+" to setting),
 " code-runner
 " sharp icon
+" NOTE: not add filetype on like, if configcit for lightline
 " TODO: 记住光标位置
+" TODO: 如何设置启动log
+" TODO: sometimes, lighline is bug
+" TODO: modify color for tokyonight
+" TODO: 内置终端优化
+" TODO: clear highlight
+" TODO: buffer switch
+" TODO: 数字选择标签窗口
 " TODO: 标签
 " TODO: bell format
 " TODO: canlendar 写的位置, configure it
 " TODO: 按键延迟
 syntax on
-set ruler
+set wildmenu " enhance ?
+set hidden  " ?
+" set autoindent
+set ruler  " show line number and column number in status
+set cursorline  " highlight current line
 set smartcase
 " TODO
-set noshowcmd
-set noshowmode
+set noshowcmd  " left status
+set noshowmode " right status
 set showmatch
 set clipboard^=unnamed
-set shortmess=atI  " disable show welcome
+set shortmess+=atIc  " disable show welcome
+
+set noexpandtab  " disable expand tab to whitespace
+set tabstop=2 " tab == 2 column, like 单位
+set shiftwidth=2  " default indent distance for >> <<
+set softtabstop=2 " tab == 2 column truly
+" set list " show return it configcit for link
+set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
+
+" set splitright
+" set splitbelow
+" set inccommand=split
+"
+set completeopt=longest,noinsert,menuone,noselect,preview
+" set ttyfast "should make scrolling faster
+set lazyredraw "same as above
+
+" TODO
+set vb t_vb= " no sound, no shine
+set visualbell
+
+" ===
+" === misc settings
+" ===
+noremap <SPACE>sw :set wrap<CR>
+set textwidth=120
+"
+" NOTE: in noremap, not use comment
+" Disable the default s key
+noremap s <nop>
+noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap sl :set splitright<CR>:vsplit<CR>
+
+" auto crear dir
+silent !mkdir -p $HOME/.config/nvim/tmp/backup
+silent !mkdir -p $HOME/.config/nvim/tmp/undo
+set backupdir=$HOME/.config/nvim/tmp/backup,.
+set directory=$HOME/.config/nvim/tmp/backup,.
+if has('persistent_undo')
+	set undofile
+	set undodir=$HOME/.config/nvim/tmp/undo,.
+endif
+
 inoremap jk <ESC>
 " some bug
 nnoremap <SPACE>fs :w<CR>
-set shortmess+=a
-set guifont=Droid\ Sans\ Mono\ 14
+" set guifont=Droid\ Sans\ Mono\ 14 " for gvim
 nnoremap <silent> <SPACE>q :q<CR>
 " demos demos ;
 
@@ -39,10 +99,11 @@ nnoremap <SPACE>he :echo<SPACE>
 set sidescroll=1
 set nobackup
 set noswapfile
-let &wrap = 0 " set nowrap   must in after
+let &wrap = 1 " set nowrap
 
 let g:mapleader = ','
 
+set foldmethod=marker
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 nnoremap <C-A> ggVG
 set confirm
@@ -54,27 +115,32 @@ set signcolumn=yes " options: number yes
 " 按键延迟检测
 set updatetime=400
 set foldmethod=marker
-let $MYVIMRC = "$HOME/.config/nvim/init.vim"
-nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+noremap <SPACE>fe :tabnew $HOME/.config/nvim/init.vim<CR>
+" let $MYVIMRC = "$HOME/.config/nvim/init.vim"
+" eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
+" autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
 nnoremap <silent> <SPACE>bm :messages<CR>
 " nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
 noremap L $
-nnoremap <SPACE>ti :source<SPACE>%<CR>:PlugInstall<CR>
-nnoremap <SPACE>tc :source<SPACE>%<CR>:PlugClean<CR>
+nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
+nnoremap <SPACE>tc :source<SPACE>%<CR> :PlugClean<CR>
 " TODO: tabnext and tabNext
 " smart quit
 nnoremap <silent> <SPACE>bn :tabnext<CR>
 nnoremap <silent> <SPACE>bp :tabprevious<CR>
-nnoremap <silent> <SPACE>bN :tabnew<CR>
+" tabedit TODO
+nnoremap <silent> <SPACE>cn :tabnew<CR>
 nnoremap <SPACE>wm :only<CR>
 " TODO: space bd
 
+
+noremap <SPACE>' :set splitbelow<CR>:split<CR>:res +10<CR>:term<CR>
 " ===
-" === vim-plug
+" === Plugins
 " ===
 call plug#begin('$HOME/.config/nvim/plugged')
+Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'itchyny/calendar.vim'
@@ -82,19 +148,42 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'luochen1990/rainbow'
 Plug 'yianwillis/vimcdoc'
 Plug 'ap/vim-css-color'
-Plug 'ntpeters/vim-better-whitespace'
+" Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'scrooloose/nerdtree'
 Plug 'plasticboy/vim-markdown'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'folke/which-key.nvim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 Plug 'itchyny/lightline.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/playground'
+Plug 'oeyoews/vim-snippets'
+Plug 'neovim/nvim-lspconfig'
+Plug 'mbbill/undotree'
+Plug 'dkarter/bullets.vim'
+Plug 'jiangmiao/auto-pairs'
+
+" format
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+
+" configcit dashboard 
+" Plug 'Yggdroot/indentLine' 
+
+Plug 'junegunn/goyo.vim'
+Plug 'lambdalisue/suda.vim'
+Plug 'makerj/vim-pdf'
+Plug 'airblade/vim-gitgutter'
+Plug 'kyazdani42/nvim-tree.lua'
+
+Plug 'glepnir/dashboard-nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 
@@ -102,7 +191,7 @@ call plug#end()
 " === markdown-preview.nvim
 " ===
 " autocmd FileType markdown if open it directly, can't use this command TODO
-autocmd FileType markdown nnoremap <space>tm :MarkdownPreviewToggle<CR>
+autocmd FileType markdown nnoremap <space>fmm :MarkdownPreviewToggle<CR>
 let g:mkdp_echo_preview_url = 1
 let g:mkdp_open_to_the_world = 0
 
@@ -110,13 +199,13 @@ let g:mkdp_open_to_the_world = 0
 " ===
 " === vim-markdown-toc
 " ===
-autocmd FileType markdown nnoremap <space>tt :GenTocMarked<CR>
+autocmd FileType markdown nnoremap <space>fmt :GenTocMarked<CR>
 
 " ===
 " === rainbow
 " ===
 " TODO need test shortkey
-let g:rainbow_active = 0 " if set 1, it's conflicts to nerdtree
+let g:rainbow_active = 1 " if set 1, it's conflicts to nerdtree
 nnoremap <space>tr :RainbowToggle<CR>:echom "enable rainbow_bract!"<CR>
 
 
@@ -148,15 +237,14 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 " TODO: nerdtree
 
 " ===
+" === tokyonight and lighline TODO
 " ===
-" tokyonight
 " TODO: some options need config
 set laststatus=2
 colorscheme tokyonight
 " TODO bug
-" let g:lightline = {'colorscheme': 'wombat'}
 let g:lightline = {
-			\ 'colorscheme': 'wombat',
+			\ 'colorscheme': 'tokyonight',
 			\ 'active': {
 				\   'left': [ [ 'mode', 'paste' ],
 				\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -179,8 +267,9 @@ let g:lightline = {
 " === vim-markdown
 " ===
 " NOTE: reagin config for nvim
-let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_folding_disabled = 1 " just disable folding for markdown
 let g:vim_markdown_toc_autofit = 1
+set conceallevel=2
 let g:vim_markdown_conceal_code_blocks = 1  " disable hiden code-blocks
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
@@ -197,3 +286,235 @@ let g:vim_markdown_edit_url_in = 'tab'
 " === all nerdtree
 " ===
 autocmd FileType nerdtree nmap <Tab> <CR>
+
+" ==
+" == GitGutter
+" ==
+" let g:gitgutter_signs = 0
+let g:gitgutter_sign_allow_clobber = 0
+let g:gitgutter_map_keys = 0
+let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_preview_win_floating = 1
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '░'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▒'
+" autocmd BufWritePost * GitGutter
+nnoremap <LEADER>gf :GitGutterFold<CR>
+nnoremap H :GitGutterPreviewHunk<CR>
+nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
+nnoremap <LEADER>g= :GitGutterNextHunk<CR>
+
+" ===
+" === nvim-tree
+" ===
+" let g:nvim_tree_side = 'right' "left by default
+" let g:nvim_tree_width = 40 "30 by default, can be width_in_columns or 'width_in_percent%'
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
+let g:nvim_tree_gitignore = 1 "0 by default
+let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
+let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
+let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, don't auto open tree on specific filetypes.
+let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
+let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
+let g:nvim_tree_follow_update_path = 1 "0 by default, will update the path of the current dir if the file is not inside the tree.
+" Default is 0
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
+let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
+let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
+let g:nvim_tree_auto_resize = 0 "1 by default, will resize the tree to its saved width when opening a file
+let g:nvim_tree_disable_netrw = 0 "1 by default, disables netrw
+let g:nvim_tree_hijack_netrw = 0 "1 by default, prevents netrw from automatically opening when opening directories (but lets you keep its other utilities)
+let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_lsp_diagnostics = 1 "0 by default, will show lsp diagnostics in the signcolumn. See :help nvim_tree_lsp_diagnostics
+let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.
+let g:nvim_tree_hijack_cursor = 0 "1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
+let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
+let g:nvim_tree_update_cwd = 1 "0 by default, will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
+let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+let g:nvim_tree_refresh_wait = 500 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
+let g:nvim_tree_window_picker_exclude = {
+    \   'filetype': [
+    \     'notify',
+    \     'packer',
+    \     'qf'
+    \   ],
+    \   'buftype': [
+    \     'terminal'
+    \   ]
+    \ }
+" Dictionary of buffer option names mapped to a list of option values that
+" indicates to the window picker that the buffer's window should not be
+" selectable.
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+" let g:nvim_tree_show_icons = {
+"     \ 'git': 1,
+"     \ 'folders': 1,
+"     \ 'files': 0,
+"     \ 'folder_arrows': 1,
+"     \ }
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath.
+"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
+"but this will not work when you set indent_markers (because of UI conflict)
+
+" default will show icon by default if no icon is provided
+" default shows no icon by default
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   },
+    \   'lsp': {
+    \     'hint': "",
+    \     'info': "",
+    \     'warning': "",
+    \     'error': "",
+    \   }
+    \ }
+
+nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+" NvimTreeOpen, NvimTreeClose and NvimTreeFocus are also available if you need them
+
+set termguicolors " this variable must be enabled for colors to be applied properly
+
+" a list of groups can be found at `:help nvim_tree_highlight`
+highlight NvimTreeFolderIcon guibg=blue
+" https://github.com/kyazdani42/nvim-tree.lua
+"
+" ===
+" === dashboard.nvim
+" ===
+" TODO config
+"https://github.com/glepnir/dashboard-nvim
+let g:dashboard_default_executive ='fzf'
+" eg : "SPC mean the leaderkey
+let g:dashboard_custom_shortcut={
+\ 'last_session'       : 'SPC s l',
+\ 'find_history'       : 'SPC f h',
+\ 'find_file'          : 'SPC f f',
+\ 'new_file'           : 'SPC c n',
+\ 'change_colorscheme' : 'SPC t c',
+\ 'find_word'          : 'SPC f a',
+\ 'book_marks'         : 'SPC f b',
+\ }
+
+" let g:dashboard_custom_shortcut_icon['last_session'] = ' '
+" let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
+" let g:dashboard_custom_shortcut_icon['find_file'] = ' '
+" let g:dashboard_custom_shortcut_icon['new_file'] = ' '
+" let g:dashboard_custom_shortcut_icon['change_colorscheme'] = ' '
+" let g:dashboard_custom_shortcut_icon['find_word'] = ' '
+" let g:dashboard_custom_shortcut_icon['book_marks'] = ' '
+
+" ===
+" === Undotree
+" ===
+noremap <F5> :UndotreeToggle<CR>
+let g:undotree_DiffAutoOpen = 1
+let g:undotree_SetFocusWhenToggle = 1
+let g:undotree_ShortIndicators = 1
+let g:undotree_WindowLayout = 2
+let g:undotree_DiffpanelHeight = 8
+let g:undotree_SplitWidth = 24
+function g:Undotree_CustomMap()
+	nmap <buffer> u <plug>UndotreeNextState
+	nmap <buffer> e <plug>UndotreePreviousState
+	nmap <buffer> U 5<plug>UndotreeNextState
+	nmap <buffer> E 5<plug>UndotreePreviousState
+endfunc
+
+
+" ===
+" === Bullets.vim
+" ===
+" let g:bullets_set_mappings = 0
+let g:bullets_enabled_file_types = [
+			\ 'markdown',
+			\ 'text',
+			\ 'gitcommit',
+			\ 'scratch'
+			\]
+
+" ===
+" === vim-calendar
+" ===
+"noremap \c :Calendar -position=here<CR>
+" noremap \\ :Calendar -view=clock -position=here<CR>
+" let g:calendar_google_calendar = 1
+" let g:calendar_google_task = 1
+" augroup calendar-mappings
+" 	autocmd!
+" 	" diamond cursor
+" 	autocmd FileType calendar nmap <buffer> u <Plug>(calendar_up)
+" 	autocmd FileType calendar nmap <buffer> n <Plug>(calendar_left)
+" 	autocmd FileType calendar nmap <buffer> e <Plug>(calendar_down)
+" 	autocmd FileType calendar nmap <buffer> i <Plug>(calendar_right)
+" 	autocmd FileType calendar nmap <buffer> <c-u> <Plug>(calendar_move_up)
+" 	autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
+" 	autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
+" 	autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
+" 	autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
+" 	autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
+" 	" unmap <C-n>, <C-p> for other plugins
+" 	autocmd FileType calendar nunmap <buffer> <C-n>
+" 	autocmd FileType calendar nunmap <buffer> <C-p>
+" augroup END
+
+" ===
+" === AutoFormat
+" ===
+augroup autoformat_settings
+	" autocmd FileType bzl AutoFormatBuffer buildifier
+	" autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
+	" autocmd FileType dart AutoFormatBuffer dartfmt
+	" autocmd FileType go AutoFormatBuffer gofmt
+	" autocmd FileType gn AutoFormatBuffer gn
+	" autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+	autocmd FileType java AutoFormatBuffer google-java-format
+	" autocmd FileType python AutoFormatBuffer yapf
+	" Alternative: autocmd FileType python AutoFormatBuffer autopep8
+	" autocmd FileType rust AutoFormatBuffer rustfmt
+	" autocmd FileType vue AutoFormatBuffer prettier
+augroup END
+
+" ===
+" === goyo
+" ===
+nnoremap <SPACE>wc :Goyo<CR>
+
+" ===
+" === suda.vim
+" ===
+
+" ===
+" === nvim-treesitter
+" ===
+
+" au exec \"nohlsearch"
