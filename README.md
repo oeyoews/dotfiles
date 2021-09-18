@@ -1,22 +1,23 @@
 
 <!-- vim-markdown-toc Marked -->
 
-	* [Environment](#environment)
+* [Environment](#environment)
 * [Dependencies](#dependencies)
 * [Installation](#installation)
 * [NOTE](#note)
 * [Configuration](#configuration)
-	* [examples](#examples)
 
 <!-- vim-markdown-toc -->
-![example](./archive/img/example.png)
+![example2](./archive/img/example2.png)
 
-### Environment
-- **Terminal**: kitty(extra: alacritty, tmux) 
+Environment
+---
+
+- **Terminal**: kitty
 - **Shell** : zsh
-- **Editor**: vscode, nvim, emacs(Doomemacs), typora
+- **Editor**: nvim, emacs(Doomemacs), typora, vscode
 - **Font:** Droid Sans Mono, DejaVu Sans Mono
-- **Input:** fcitx5
+- **Input_method:** fcitx5
 - **Linux:**  mangaro gdm gnome40
 - **Networktools:** qv2ray, v2raya(kernel: v2ray)
 - **Misc:** cheat, crontab
@@ -28,6 +29,7 @@ Dependencies
 
 Installation
 ---
+
 ```zsh
 # gitlab
 git clone --depth=1  https://gitlab.com/oeyoews/dotfiles.git ~
@@ -51,7 +53,6 @@ NOTE
 Configuration
 ---
 
-### examples
 ```zsh
   # omz(improve version for oh-my-zsh)
   cd ~/dotfiles
