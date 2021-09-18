@@ -1,0 +1,46 @@
+{
+	"Printf": {
+		"prefix": "pr",
+		"body": [
+			"printf('$1');",
+			"$2"
+		],
+		"description": "printf()"
+	},
+	"Printf2": {
+		"prefix": "pri",
+		"body": [
+			"printf(\"%${format}\\n\", ${Variable});"
+		],
+		"description": "custom printf"
+	},
+	"Header": {
+		"prefix": "in",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"$1"
+		],
+		"description": "header"
+	},
+	"Header2": {
+		"prefix": "inc",
+		"body": [
+			"#include \"${stdio}.h\"",
+			"",
+			"${default}"
+		]
+	},
+	"Hello": {
+		"prefix": "hello",
+		"body": [
+			"#include <stdio.h>",
+			"",
+			"int main(void) {",
+			"   $1",
+			"   printf(\"Hello, Linux!\");",
+			"   return 0;",
+			"}"
+		]
+	}
+}
