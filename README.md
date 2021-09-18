@@ -1,4 +1,4 @@
-
+![example2](./archive/img/example2.png)
 <!-- vim-markdown-toc Marked -->
 
 * [Environment](#environment)
@@ -8,19 +8,17 @@
 * [Configuration](#configuration)
 
 <!-- vim-markdown-toc -->
-![example2](./archive/img/example2.png)
 
 Environment
 ---
 
+- **Linux:**  mangaro gdm gnome40
 - **Terminal**: kitty
 - **Shell** : zsh
-- **Editor**: nvim, vscode
 - **Font:** Droid Sans Mono, DejaVu Sans Mono
+- **Editor**: nvim, vscode
 - **Input_method:** fcitx5
-- **Linux:**  mangaro gdm gnome40
-- **Networktools:** qv2ray, v2raya(kernel: v2ray)
-- **Misc:** cheat, crontab
+- **Tools**: qv2ray, v2raya, v2ray, cheat, crontab
 
 Dependencies
 ---
@@ -62,5 +60,5 @@ Configuration
 ```zsh 
 # other configure in ~/dotfiles/archive
   cd ~/dotfiles/archive
-  stow -t ~ ideavimrc
+  stow -t ~ tiny_vimrcccccc
 ```
