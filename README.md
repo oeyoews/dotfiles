@@ -15,7 +15,7 @@ Environment
 
 - **Terminal**: kitty
 - **Shell** : zsh
-- **Editor**: nvim, emacs(Doomemacs), typora, vscode
+- **Editor**: nvim, vscode
 - **Font:** Droid Sans Mono, DejaVu Sans Mono
 - **Input_method:** fcitx5
 - **Linux:**  mangaro gdm gnome40
