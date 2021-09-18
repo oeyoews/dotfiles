@@ -132,3 +132,5 @@ alias et="emacs -nw"
 alias vim='nvim'
 # alias vim="nvim"
 alias ext=exit
+
+alias grepd="l | grep '>'"
