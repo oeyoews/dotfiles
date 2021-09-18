@@ -2,12 +2,19 @@ set number relativenumber
 set exrc
 set autoread
 set secure
+set mouse=a
 set incsearch
 set hlsearch
 set linebreak " better wrap
 " NOTE: jk or other map is not work for timeoutlen=0
 " set timeoutlen=0
 " TODO: dashboard which-key gitgutter(nvim), airline(or), undotree(plus needd
+" TODO tab to cycle
+" bookmarks
+" TODO: moudles for init.vim
+" spell check
+" TODO space f o
+" TODO: 解决按键问题
 " to setting),
 " code-runner
 " sharp icon
@@ -15,8 +22,9 @@ set linebreak " better wrap
 " TODO: 记住光标位置
 " TODO: 如何设置启动log
 " TODO: sometimes, lighline is bug
+" TODO: lang(viml, c) 
 " TODO: modify color for tokyonight
-" TODO: 内置终端优化
+" TODO: 内置终端优化 float
 " TODO: clear highlight
 " TODO: buffer switch
 " TODO: 数字选择标签窗口
@@ -60,7 +68,7 @@ set visualbell
 " ===
 " === misc settings
 " ===
-noremap <SPACE>sw :set wrap<CR>
+noremap <SPACE>sw :set wrap!<CR>
 set textwidth=120
 "
 " NOTE: in noremap, not use comment
@@ -99,7 +107,7 @@ nnoremap <SPACE>he :echo<SPACE>
 set sidescroll=1
 set nobackup
 set noswapfile
-let &wrap = 1 " set nowrap
+let &wrap = 0 " set nowrap
 
 let g:mapleader = ','
 
@@ -113,7 +121,7 @@ set ignorecase
 set signcolumn=yes " options: number yes
 
 " 按键延迟检测
-set updatetime=400
+set updatetime=500
 set foldmethod=marker
 noremap <SPACE>fe :tabnew $HOME/.config/nvim/init.vim<CR>
 " let $MYVIMRC = "$HOME/.config/nvim/init.vim"
@@ -127,7 +135,7 @@ nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
 nnoremap <SPACE>tc :source<SPACE>%<CR> :PlugClean<CR>
 " TODO: tabnext and tabNext
 " smart quit
-nnoremap <silent> <SPACE>bn :tabnext<CR>
+nnoremap <silent> <SPACE>sn :tabnext<CR>
 nnoremap <silent> <SPACE>bp :tabprevious<CR>
 " tabedit TODO
 nnoremap <silent> <SPACE>cn :tabnew<CR>
@@ -140,6 +148,23 @@ noremap <SPACE>' :set splitbelow<CR>:split<CR>:res +10<CR>:term<CR>
 " === Plugins
 " ===
 call plug#begin('$HOME/.config/nvim/plugged')
+
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'oeyoews/vim-snippets'
+
+" complete and error tips
+Plug 'nvim-lua/completion-nvim'
+
+" search
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'skywind3000/vim-terminal-help'
+Plug 'akinsho/bufferline.nvim'
+" Plug 'romgrk/barbar.nvim'
+Plug 'hoob3rt/lualine.nvim'
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
@@ -147,7 +172,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'luochen1990/rainbow'
 Plug 'yianwillis/vimcdoc'
-Plug 'ap/vim-css-color'
+" Plug 'ap/vim-css-color'
 " Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
@@ -160,11 +185,14 @@ Plug 'folke/which-key.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
-Plug 'nvim-treesitter/playground'
-Plug 'oeyoews/vim-snippets'
+" Plug 'nvim-treesitter/playground'
+
+" lang#
 Plug 'neovim/nvim-lspconfig'
+Plug 'kyazdani42/nvim-tree.lua'
+
 Plug 'mbbill/undotree'
 Plug 'dkarter/bullets.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -180,10 +208,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'lambdalisue/suda.vim'
 Plug 'makerj/vim-pdf'
 Plug 'airblade/vim-gitgutter'
-Plug 'kyazdani42/nvim-tree.lua'
 
-Plug 'glepnir/dashboard-nvim'
-" Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'glepnir/dashboard-nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 
@@ -235,13 +262,20 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 "https://github.com/folke/tokyonight.nvim
 
 " TODO: nerdtree
+"
 
+" ===
+" === tokyonight
+" ===
+" TODO
+"https://github.com/folke/tokyonight.nvim
+colorscheme tokyonight
+" let g:lightline = {'colorscheme': 'tokyonight'}
 " ===
 " === tokyonight and lighline TODO
 " ===
 " TODO: some options need config
-set laststatus=2
-colorscheme tokyonight
+" set laststatus=2
 " TODO bug
 let g:lightline = {
 			\ 'colorscheme': 'tokyonight',
@@ -465,7 +499,7 @@ let g:bullets_enabled_file_types = [
 " ===
 " === vim-calendar
 " ===
-"noremap \c :Calendar -position=here<CR>
+noremap <silent> <SPACE>ac :Calendar -position=here<CR>
 " noremap \\ :Calendar -view=clock -position=here<CR>
 " let g:calendar_google_calendar = 1
 " let g:calendar_google_task = 1
@@ -517,4 +551,91 @@ nnoremap <SPACE>wc :Goyo<CR>
 " === nvim-treesitter
 " ===
 
-" au exec \"nohlsearch"
+"
+" ===
+" === lualine.nvim
+" ===
+" TODO rainbow sometimes, it's disappear
+lua <<EOF
+-- require('lualine').setup()
+options = {theme = 'onedark'}
+require('lualine').setup {
+  options = {
+    -- ... your lualine config
+    theme = 'tokyonight'
+    -- ... your lualine config
+  }
+}
+EOF
+
+" ===
+" === indentline
+" ===
+lua <<EOF
+vim.opt.listchars = {
+    space = "⋅",
+    eol = "↴",
+}
+
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+}
+EOF
+
+
+" ===
+" === barbar
+" ===
+
+" ===
+" === ya-bar
+" ===
+" TODO config it
+lua << EOF
+require("bufferline").setup{}
+EOF
+
+
+" ===
+" === term-help
+" ===
+" https://github.com/skywind3000/vim-terminal-help
+
+" ===
+" === css-highlight
+" ===
+lua <<EOF
+require'colorizer'.setup()
+EOF
+
+" ===
+" === search
+" ===
+" TODO
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+" ===
+" lang#
+" TODO https://github.com/nvim-lua/completion-nvim
+lua <<EOF
+require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
+EOF
+autocmd BufEnter * lua require'completion'.on_attach()
+
+" formatter
+"https://github.com/mhartington/formatter.nvim
+
+" snippets
+" https://github.com/hrsh7th/vim-vsnip
+" let g:UltiSnipsExpandTrigger="<CR>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetDirectories = [
+			\ $HOME.'/.config/nvim/Ultisnips/',
+			\ $HOME.'/.config/nvim/plugged/vim-snippets/UltiSnips/']
+" si
