@@ -12,8 +12,8 @@ function repo() {
 }
 
 function main() {
-  cd ~/dotfiles || exit
-  repo
+#   cd ~/dotfiles || exit
+#   repo
   cd ~/repo/note || exit
   repo
   echo $SECONDS
