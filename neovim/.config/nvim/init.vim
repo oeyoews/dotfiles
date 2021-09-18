@@ -3,11 +3,12 @@
 " $MYVIMRC
 let &wrap = 0 " set nowrap
 " learn ga
+"
 " ===
 " === Mappings
 " ===
 nnoremap <SPACE>sw :set wrap!<CR>
-nnoremap guw gUaw
+nnoremap guw gUawe
 " TODO: learn vmap
 " vnoremap : '<,'>normal<SPACE>
 " gv to learn(optional)
@@ -23,8 +24,9 @@ inoremap jk <ESC>
 nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><leader>qq :q!<CR>
 
-nnoremap <silent><SPACE>fe :tabnew $MYVIMRC<CR>
+nnoremap <silent><SPACE>fe :edit $MYVIMRC<CR>
 nnoremap <silent><SPACE>wm :only<CR>
+
 " window
 noremap s <nop>
 noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
@@ -47,8 +49,10 @@ set linebreak " better wrap
 " NOTE: jk or other map is not work for timeoutlen=0
 " set timeoutlen=0
 " TODO: which-key
+" TODO: :h close
 " calendar is very smilay
 " TODO: tab to cycle
+" TODO: 学习正则表达,匹配多种文件的类型
 "				tree disable to open new file
 "				try close tab (close not really close tab)
 " TODO: moudles for init.vim(optional)
@@ -139,9 +143,6 @@ noremap L $
 nnoremap <SPACE>ti :PlugInstall<CR>
 nnoremap <SPACE>tc :PlugClean<CR>
 " TODO: tabnext and tabNext
-" smart quit
-" nnoremap <silent> <SPACE>sn :tabnext<CR>
-" nnoremap <silent> <SPACE>sp :tabprevious<CR>
 " tabedit TODO
 nnoremap <silent> <SPACE>cn :tabnew<CR>
 " TODO: space bd
@@ -232,6 +233,7 @@ call plug#end()
 autocmd FileType markdown nnoremap <space>fmm :MarkdownPreviewToggle<CR>
 let g:mkdp_echo_preview_url = 1
 let g:mkdp_open_to_the_world = 0
+nnoremap <SPACE>fmb bi**<ESC>ea**<ESC>
 
 " ===
 " === vim-markdown-toc
