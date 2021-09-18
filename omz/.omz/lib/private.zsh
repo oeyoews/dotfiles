@@ -1,10 +1,10 @@
 # vim
 # vim --startuptime /tmp/vim-startuptime.log xxx.py
-alias vito='vim ~/todo.org'
+alias vito='vim ~/dotfiles/archive/todo/todo.org'
 alias viz='vim $HOME/.zshrc'
 alias vic='vim ~/dotfiles/cheat/conf.yml'
 alias vip='vim ~/.omz/lib/private.zsh'
-
+alias vig='vim .gitignore'
 
 # path
 alias cdd="cd ~/dotfiles/"
@@ -113,7 +113,7 @@ alias via="vim ~/.config/alacritty/alacritty.yml"
 
 # Export
 export PATH=$PATH:~/.emacs.d/bin
-export EDITOR=vim
+export EDITOR=nvim
 export CHEATCOLORS=true
 export CHEAT_CONFIG_PATH="~/dotfiles/archive/cheat/conf.yml"
 export CHEAT_USE_FZF=true
