@@ -2,22 +2,27 @@
 " | echom "Refreshed!"
 " $MYVIMRC
 let &wrap = 0 " set nowrap
-"dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda dmeoa demoadjfiaf demoda
+" learn ga
 " ===
 " === Mappings
 " ===
 nnoremap <SPACE>sw :set wrap!<CR>
 nnoremap guw gUaw
+" TODO: learn vmap
+" vnoremap : '<,'>normal<SPACE>
 " gv to learn(optional)
 
-" demo
 inoremap <C-V> <ESC>p
 nnoremap <C-A> ggVG
-nnoremap <C-S> :wa<CR> :echo "All files saved!"
+nnoremap <silent><SPACE>fs :w<CR>:echom "File Saved!"<CR>
+nnoremap <silent><C-S> :wa<CR>:echo "All files saved!"
 
 inoremap jk <ESC>
+
+" quit
 nnoremap <silent><SPACE>qq :q<CR>
-nnoremap <silent><SPACE>qa :qa!<CR>
+nnoremap <silent><leader>qq :q!<CR>
+
 nnoremap <silent><SPACE>fe :tabnew $MYVIMRC<CR>
 nnoremap <silent><SPACE>wm :only<CR>
 " window
@@ -51,7 +56,6 @@ set linebreak " better wrap
 " TODO: 解决按键问题
 " code-runner
 " NOTE: not add filetype on like, if configcit for lightline
-" TODO: 如何设置启动log
 " TODO: sometimes, lighline is bug for source
 " TODO: modify color for tokyonight
 " TODO: clear highlight
@@ -60,7 +64,7 @@ set linebreak " better wrap
 syntax on
 set wildmenu " enhance ?
 set hidden  " ?
-set autoindent
+" set autoindent
 set ruler  " show line number and column number in status
 set cursorline  " highlight current line
 set smartcase
@@ -100,8 +104,6 @@ if has('persistent_undo')
 	set undodir=$HOME/.config/nvim/tmp/undo,.
 endif
 
-" some bug
-nnoremap <silent><SPACE>fs :w<CR> :echom "File Saved!"<CR>
 
 " ===
 " === command mode
@@ -120,7 +122,6 @@ let g:mapleader = ','
 set foldmethod=marker
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
-nnoremap <silent> <leader>qq :q!<CR>
 set scrolloff=1
 set ignorecase
 set signcolumn=yes " options: number yes
@@ -652,8 +653,10 @@ autocmd BufEnter * lua require'completion'.on_attach()
 " let g:UltiSnipsExpandTrigger="<CR>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsListSnippets="<C-e>"
 let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.config/nvim/Ultisnips/',
+			\ "UltiSnips",
 			\ $HOME.'/.config/nvim/plugged/vim-snippets/UltiSnips/']
 
 " ===
