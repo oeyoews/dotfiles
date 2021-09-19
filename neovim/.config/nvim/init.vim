@@ -4,6 +4,8 @@
 let &wrap = 0 " set nowrap
 " learn ga
 " gv to learn(optional)
+" TODO: vim-rooter
+" TODO: buffer jump and close
 "
 " ===
 " === Mappings
@@ -34,8 +36,10 @@ nnoremap guw gUawe
 
 inoremap <C-V> <ESC>p
 nnoremap <C-A> ggVG
-nnoremap <silent><C-S> :wa<CR>:echo "All files saved!"
-nnoremap <silent><SPACE>fs :w<CR>:echom "File Saved!"<CR>
+
+" save file
+nnoremap <silent><C-S> :wa<CR> :echom "All files saved!"<CR>
+nnoremap <silent><SPACE>fs :w<CR> :echom "File Saved!"<CR>
 
 " quit insert mode
 inoremap jk <ESC>
@@ -63,10 +67,11 @@ noremap sl :set splitright<CR>:vsplit<CR>
 " ===
 set number relativenumber
 set exrc
+" set cmdheight=1
 set autoread
 set secure
 set mouse=a  " support mouse
-" set nospell
+set nospell
 set incsearch
 set hlsearch
 set linebreak " better wrap
@@ -77,7 +82,8 @@ set smartcase " fast search
 set ignorecase  " better search"
 set noshowcmd  " left: mode statusline
 set noshowmode " right location statusline
-set clipboard^=unnamed  " share register unnammed " with system
+" share register unnammed " with system
+" set clipboard^=unnamed  
 set shortmess+=atIc  " clear advertise
 set noexpandtab  " disable expand tab to whitespace
 " set timeoutlen=0
@@ -92,9 +98,6 @@ set noexpandtab  " disable expand tab to whitespace
 " TODO space f o(filetree location)
 " TODO: 解决按键问题
 " code-runner
-" NOTE: not add filetype on like, if configcit for lightline
-" TODO: sometimes, lighline is bug for source
-" TODO: modify color for tokyonight
 " TODO: clear highlight
 " TODO: buffer switch
 " TODO: 数字选择标签窗口
@@ -163,6 +166,11 @@ set foldmethod=marker  " set foldmethod
 " ===
 " === Ps
 " ===
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('$HOME/.config/nvim/plugged')
 
 " bookmarks
@@ -188,7 +196,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'skywind3000/vim-terminal-help'
 Plug 'akinsho/bufferline.nvim'
 " Plug 'romgrk/barbar.nvim'
-Plug 'hoob3rt/lualine.nvim'
+
+" statusline
+" Plug 'hoob3rt/lualine.nvim'
+" Plug 'shadmansaleh/lualine.nvim'
+
 Plug 'junegunn/fzf.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
@@ -209,7 +221,7 @@ Plug 'folke/which-key.nvim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
-" Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'nvim-treesitter/nvim-treesitter'
 " Plug 'nvim-treesitter/playground'
 
@@ -280,36 +292,35 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 " TODO
 " https://github.com/preservim/nerdcommenter/blob/master/README.md
 "
-" ===
-" ===
-" TODO
-"https://github.com/folke/tokyonight.nvim
+" TODO: how to open link in vim
 
 " TODO: nerdtree
-"
 
 " ===
-" === tokyonight
+" === tokyonight and lightline
 " ===
-" TODO
-"https://github.com/folke/tokyonight.nvim
+" link: https://github.com/folke/tokyonight.nvim
 colorscheme tokyonight
-" let g:lightline = {'colorscheme': 'tokyonight'}
-" ===
-" === tokyonight and lighline TODO
-" ===
-" TODO: some options need config
-" set laststatus=2
-" TODO bug
+set laststatus=2
 let g:lightline = {
+			\ 'mode_map': {
+				\ 'n' : 'N',
+        \ 'i' : 'I',
+        \ 'R' : 'R',
+        \ 'v' : 'V',
+        \ 'V' : 'VL',
+        \ "\<C-v>": 'VB',
+        \ 'c' : 'C',
+        \ 's' : 'S',
+        \ 'S' : 'SL',
+        \ "\<C-s>": 'SB',
+        \ 't': 'T',
+        \ },
 			\ 'colorscheme': 'tokyonight',
 			\ 'active': {
 				\   'left': [ [ 'mode', 'paste' ],
-				\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+				\             [ 'readonly', 'filename', 'modified' ] ]
 				\ },
-				\ 'component_function': {
-					\   'gitbranch': 'FugitiveHead'
-					\ },
 					\ }
 
 " ===
@@ -581,15 +592,12 @@ nnoremap <SPACE>wc :Goyo<CR>
 " ===
 " TODO rainbow sometimes, it's disappear
 lua <<EOF
--- require('lualine').setup()
-options = {theme = 'onedark'}
-require('lualine').setup {
-	options = {
-		-- ... your lualine config
-		theme = 'tokyonight'
-		-- ... your lualine config
-		}
-	}
+-- require('lualine').setup {
+-- 	options = {
+		-- theme = 'palenight'
+	-- 	theme = 'evil' -- lualinenotice
+		-- }
+	-- }
 EOF
 
 " ===
@@ -738,4 +746,3 @@ endif
 " === vim-autoformat
 " ===
 autocmd! BufWrite *.[c] :Autoformat
-
