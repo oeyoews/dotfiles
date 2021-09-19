@@ -16,6 +16,9 @@ noremap L $
 nnoremap <silent><SPACE>bm :messages<CR>
 map <ESC> <ESC><C-L>
 
+" system copy
+nnoremap Y "*p
+
 " set leader
 let g:mapleader = ','
 
@@ -70,7 +73,7 @@ set exrc
 " set cmdheight=1
 set autoread
 set secure
-set mouse=a  " support mouse
+set mouse+=a  " support mouse
 set nospell
 set incsearch
 set hlsearch
@@ -195,8 +198,10 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'skywind3000/vim-terminal-help'
-Plug 'akinsho/bufferline.nvim'
-" Plug 'romgrk/barbar.nvim'
+
+" buffer manager tab icons
+"Plug 'akinsho/bufferline.nvim'
+Plug 'romgrk/barbar.nvim'
 
 " statusline
 " Plug 'hoob3rt/lualine.nvim'
@@ -239,7 +244,6 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'google/vim-codefmt'
 Plug 'Chiel92/vim-autoformat'
 
-" configcit dashboard
 " Plug 'Yggdroot/indentLine'
 
 Plug 'junegunn/goyo.vim'
@@ -247,10 +251,34 @@ Plug 'lambdalisue/suda.vim'
 Plug 'makerj/vim-pdf'
 Plug 'airblade/vim-gitgutter'
 
-Plug 'glepnir/dashboard-nvim'
+" Plug 'glepnir/dashboard-nvim'
 " Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
+
+" ===
+" === dashboard.nvim
+" ===
+" TODO config
+"https://github.com/glepnir/dashboard-nvim
+let g:dashboard_default_executive ='fzf'
+" eg : "SPC mean the leaderkey
+let g:dashboard_custom_shortcut={
+			\ 'last_session'       : 'SPC s l',
+			\ 'find_history'       : 'SPC f h',
+			\ 'find_file'          : 'SPC f f',
+			\ 'new_file'           : 'SPC c n',
+			\ 'change_colorscheme' : 'SPC t c',
+			\ 'find_word'          : 'SPC f a',
+			\ 'book_marks'         : 'SPC f b',
+			\ }
+" let g:dashboard_custom_shortcut_icon['last_session'] = ' '
+" let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
+" let g:dashboard_custom_shortcut_icon['find_file'] = ' '
+" let g:dashboard_custom_shortcut_icon['new_file'] = ' '
+" let g:dashboard_custom_shortcut_icon['change_colorscheme'] = ' '
+" let g:dashboard_custom_shortcut_icon['find_word'] = ' '
+" let g:dashboard_custom_shortcut_icon['book_marks'] = ' '
 
 " ===
 " === markdown-preview.nvim
@@ -477,31 +505,7 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 " https://github.com/kyazdani42/nvim-tree.lua
-"
-" ===
-" === dashboard.nvim
-" ===
-" TODO config
-"https://github.com/glepnir/dashboard-nvim
-let g:dashboard_default_executive ='fzf'
-" eg : "SPC mean the leaderkey
-let g:dashboard_custom_shortcut={
-			\ 'last_session'       : 'SPC s l',
-			\ 'find_history'       : 'SPC f h',
-			\ 'find_file'          : 'SPC f f',
-			\ 'new_file'           : 'SPC c n',
-			\ 'change_colorscheme' : 'SPC t c',
-			\ 'find_word'          : 'SPC f a',
-			\ 'book_marks'         : 'SPC f b',
-			\ }
 
-" let g:dashboard_custom_shortcut_icon['last_session'] = ' '
-" let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
-" let g:dashboard_custom_shortcut_icon['find_file'] = ' '
-" let g:dashboard_custom_shortcut_icon['new_file'] = ' '
-" let g:dashboard_custom_shortcut_icon['change_colorscheme'] = ' '
-" let g:dashboard_custom_shortcut_icon['find_word'] = ' '
-" let g:dashboard_custom_shortcut_icon['book_marks'] = ' '
 
 " ===
 " === Undotree
@@ -620,13 +624,32 @@ EOF
 " ===
 " === barbar
 " ===
+nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+nnoremap <silent>    <A-9> :BufferLast<CR>
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+nnoremap <silent>    <A-c> :BufferClose<CR>
 
+let bufferline = get(g:, 'bufferline', {})
+let bufferline.add_in_buffer_number_order = v:true
+let bufferline.animation = v:false
+let bufferline.tabpages = v:false
+let bufferline.auto_hide = v:true
+let bufferline.maximum_length =  10
+let bufferline.maximum_padding =  1 
 " ===
-" === ya-bar
+" === bufferline
 " ===
 " TODO config it
 lua << EOF
-require("bufferline").setup{}
+-- require("bufferline").setup{}
 EOF
 
 
