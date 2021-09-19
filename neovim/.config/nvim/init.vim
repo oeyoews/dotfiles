@@ -126,7 +126,6 @@ set smartindent
 " set clipboard^=unnamed
 " set list " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
-set completeopt=longest,noinsert,menuone,noselect,preview
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
 set novisualbell
@@ -316,7 +315,7 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 " ===
 " link: https://github.com/preservim/nerdcommenter/blob/master/README.md
 " Create default mappings
-let g:NERDCreateDefaultMappings = 0
+let g:NERDCreateDefaultMappings = 1
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 " Use compact syntax for prettified multi-line comments
@@ -333,8 +332,8 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
-nnoremap <SPACE>cc <plug>NERDCommenterComment
-nnoremap <SPACE>c<SPACE> <plug>NNERDCommenterToggle
+" nnoremap <SPACE>cc <plug>NERDCommenterComment
+" nnoremap <SPACE>c<SPACE> <plug>NNERDCommenterToggle
 
 " ===
 " === tokyonight and lightline
@@ -684,20 +683,19 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 " ===
 " === completion.nvim
 " ===
-" TODO https://github.com/nvim-lua/completion-nvim
-"https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#vimls
-" :LSPInfo
 lua <<EOF
--- lang#vim (memory is a little big, disable it templately)
--- require'lspconfig'.vimls.setup{on_attach=require'completion'.on_attach}
--- lang#c
 require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
---vim.lsp.set_log_level("debug")
 EOF
-" autocmd BufEnter * lua require'completion'.on_attach()
-
-" formatter
-"https://github.com/mhartington/formatter.nvim
+autocmd BufEnter * lua require'completion'.on_attach()
+" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+imap <tab> <Plug>(completion_smart_tab)
+imap <s-tab> <Plug>(completion_smart_s_tab)
+" Set completeopt to have a better completion experience
+set completeopt=menuone,noinsert,noselect
+" possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
+let g:completion_enable_snippet = 'UltiSnips'
+let g:completion_confirm_key = "\<CR>"
 
 " ===
 " === nvim-lspconfig
@@ -710,7 +708,8 @@ EOF
 " === UltSnips
 " ===
 " link: https://github.com/hrsh7th/vim-vsnip
-" let g:UltiSnipsExpandTrigger="<CR>"
+" disable tab to complete
+let g:UltiSnipsExpandTrigger="<>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<C-e>"
@@ -809,32 +808,3 @@ EOF
 lua << EOF
 -- require("notify")("My super important message")
 EOF
-
-" ===
-" === tab
-" ===
-" inoremap <silent><expr> <TAB>
-" 			\ pumvisible() ? "\<C-n>" :
-" 			\ search('\%#[]>)};''"`]', 'n') ? '<Right>' :
-" 			\ "\<TAB>"
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-" 
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" 
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-
-" ===
-" === plenary.nvim
-" ===
-lua << EOF
-local async = require "plenary.async"
-EOF
-
-
