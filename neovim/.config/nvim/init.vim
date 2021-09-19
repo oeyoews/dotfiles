@@ -1,6 +1,9 @@
 " ===
 " === TODO
 " ===
+"  $1 $0
+"  have a file , source will error
+"  visual secection for snips
 "		vim-rooter(optional)
 "		learn plugin or ftplugin' function
 "	  learn ga
@@ -122,7 +125,7 @@ set tabstop=2 " tab == 2 column, like 单位
 set noshowmatch  " call quote in visual
 set shiftwidth=4  " default indent distance for >> <<
 set softtabstop=2 " tab == 2 column truly
-set smartindent
+" set smartindent
 " set clipboard^=unnamed
 " set list " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
@@ -159,7 +162,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " let g:plug_url_format = 'git@github.com:%s.git'
 
 " notify
-" Plug 'rcarriga/nvim-notify'
+Plug 'rcarriga/nvim-notify'
 
 " bookmarks
 Plug 'MattesGroeger/vim-bookmarks'
@@ -167,6 +170,8 @@ Plug 'MattesGroeger/vim-bookmarks'
 
 " lsp_ui
 Plug 'glepnir/lspsaga.nvim'
+
+Plug 'ray-x/lsp_signature.nvim'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -381,10 +386,10 @@ layout = {
 	align = "center"  -- align columns left, center or right
 	},
 window = {
-	border = "double", -- none, single, double, shadow
+	border = "single", -- none, single, double, shadow
 	position = "bottom", -- bottom, top
 	margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-	padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+	padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
 	},
 icons = {
 	breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
@@ -696,12 +701,24 @@ set completeopt=menuone,noinsert,noselect
 " possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
 let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_confirm_key = "\<CR>"
+let g:completion_matching_strategy_list = ['exact', 'substring']
+let g:completion_matching_ignore_case = 1
+let g:completion_trigger_character = ['.', '::']
+let g:completion_trigger_keyword_length = 2 " default = 1
+let g:completion_trigger_on_delete = 1
+let g:completion_timer_cycle = 200 "default value is 80
 
 " ===
-" === nvim-lspconfig
+" === singature
 " ===
 lua << EOF
--- require'lspconfig'.clangd.setup{}
+-- require "lsp_signature".setup({
+--     bind = true, -- This is mandatory, otherwise border config won't get registered.
+-- 		verbose = false,
+--     handler_opts = {
+--       border = "single"
+--     }
+--   })
 EOF
 
 " ===
@@ -806,5 +823,7 @@ EOF
 " === nvim-notify
 " ===
 lua << EOF
--- require("notify")("My super important message")
+-- require("notify")("Finished!")
+-- vim.notify = require("notify")
+-- vim.notify("This is an error message", "error")
 EOF
