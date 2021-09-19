@@ -111,16 +111,6 @@
     "workbench.sideBar.location": "left",
     "C_Cpp.intelliSenseEngine": "Default",
     "files.trimTrailingWhitespace": true,
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "[ ]",
-        "[x]"
-    ],
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "git.enableSmartCommit": true,
     "notebook.cellToolbarLocation": {
         "default": "right",
@@ -135,4 +125,5 @@
     "window.zoomLevel": 0.5,
     "debug.terminal.clearBeforeReusing": true,
     "terminal.integrated.copyOnSelection": true,
+    "editor.snippetSuggestions": "top",
 }

@@ -1,16 +1,47 @@
-" autocmd! BufWritePost $MYVIMRC source %
-" | echom "Refreshed!"
-" $MYVIMRC
-let &wrap = 0 " set nowrap
-" learn ga
-" gv to learn(optional)
-" TODO: vim-rooter(optional)
-" TODO: learn trouble nvim
-" TODO: after only, how to return last buffer
-" TODO: learn <Plug> interface
+" ===
+" === TODO
+" ===
+"		vim-rooter(optional)
+"		learn plugin or ftplugin' function
+"	  learn ga
+"		moudles for init.vim(optional)
+"		gv to learn(optional)
+"		learn trouble nvim
+"				M char is dis appear
+"		vnoremap : '<,'>normal<SPACE>
+" learn vmap
+" how to open link in vim
+" tab and space smart switch
+" find file in vim
+" after only, how to return last buffer
+" learn <Plug> interface
+"				how to indent continue
+"			 code-runner
+"				try close tab (close not really close tab)
+" space f o(filetree location)
+" clear highlight
+" 数字选择标签窗口
+"  whitespace config
+
+" ===
+" === deprecated
+" ===
+" autocmd! BufWritePost $MYVIMRC source $MYVIMRC
+" let $MYVIMRC = "$HOME/.config/nvim/init.vim"
+" eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
+" eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
+" nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
+" nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
+
 " ===
 " === Mappings
 " ===
+
+" command mode
+noremap <space>hh :h<space>
+noremap <space>hc :
+nnoremap <SPACE>he :echo<SPACE>
+nnoremap <SPACE>ss /
 
 " open init.vim
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
@@ -43,12 +74,8 @@ nnoremap <SPACE>sc :set<SPACE>hlsearch!<CR>
 " toggle Upercase
 nnoremap guw gUawe
 
-" vnoremap : '<,'>normal<SPACE>
-" TODO: learn vmap
-"
-
 inoremap <C-V> <ESC>p
-nnoremap <C-A> ggVG
+nnoremap <C-a> ggVG
 
 " save file
 nnoremap <silent><C-S> :wa<CR>
@@ -65,7 +92,6 @@ nnoremap <silent><leader>qq :q!<CR>
 nnoremap <silent><SPACE>wm :only<CR>
 
 " window split
-" Disable the default s key
 noremap s <nop>
 noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 noremap sj :set splitbelow<CR>:split<CR>
@@ -76,6 +102,7 @@ noremap sl :set splitright<CR>:vsplit<CR>
 " === Set settings
 " ===
 set number relativenumber
+set nowrap
 set exrc
 set autoread
 set secure
@@ -84,95 +111,51 @@ set linebreak " better wrap
 set hidden  " not must be save current buffer
 set ruler  " show line number and column number in status
 set cursorline  " highlight current line
-" set smartcase " fast search
 set ignorecase  " better search"
 set noshowcmd  " left: mode statusline
 set noshowmode " right location statusline
-" share register unnammed " with system
-" set clipboard^=unnamed  
 set shortmess+=atIc  " clear advertise
 set noexpandtab  " disable expand tab to whitespace
-set timeoutlen=500
-" TODO: :h close
-" TODO: 学习正则表达,匹配多种文件的类型
-"				tree disable to open new file
-"				try close tab (close not really close tab)
-" TODO moudles for init.vim(optional)
-" TODO space f o(filetree location)
-"			 code-runner
-" TODO clear highlight
-" TODO 数字选择标签窗口
-set wildmenu " enhance for complete
+set timeoutlen=800
 set textwidth=120  " after 120 char, wrap automatically
 set tabstop=2 " tab == 2 column, like 单位
 set noshowmatch  " call quote in visual
-set shiftwidth=2  " default indent distance for >> <<
+set shiftwidth=4  " default indent distance for >> <<
 set softtabstop=2 " tab == 2 column truly
+set smartindent
+" set clipboard^=unnamed
 " set list " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
-" set splitright
-" set splitbelow
-" set inccommand=split
 set completeopt=longest,noinsert,menuone,noselect,preview
-" set ttyfast "should make scrolling faster
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
 set novisualbell
 set noerrorbells
-" auto crear dir
-silent !mkdir -p $HOME/.config/nvim/tmp/backup
-silent !mkdir -p $HOME/.config/nvim/tmp/undo
-
-" undodir 
-set backupdir=$HOME/.config/nvim/tmp/backup,.
-set directory=$HOME/.config/nvim/tmp/backup,.
-if has('persistent_undo')
-	set undofile
-	set undodir=$HOME/.config/nvim/tmp/undo,.
-endif
-
-" ===
-" === command mode
-" ===
-noremap <space>hh :h<space>
-noremap <space>hc :
-nnoremap <SPACE>he :echo<SPACE>
-nnoremap <SPACE>ss /
-
 set sidescroll=1  " for nowrap lines, scroll them smoothly
 set nobackup  " no backfile
 set noswapfile  " no swapfile
-
 set foldmethod=marker
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
 set scrolloff=1
-set signcolumn=yes " left gutter
-set updatetime=500	" ??
+set signcolumn=yes  " left gutter
+set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
-" let $MYVIMRC = "$HOME/.config/nvim/init.vim"
-" eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
-" eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
-" nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
-" nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
-" TODO: tabnext and tabNext
-" tabedit TODO
 
 " ===
 " === Ps
 " ===
 " automatical checkinstall vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	" silent 
-	execute '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs  https://gitee.com/oeyoews/vim-plug/raw/master/plug.vim'
+	" silent
+	execute '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+				\ https://gitee.com/oeyoews/vim-plug/raw/master/plug.vim'
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
 " checkinstall
 " autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-" 			\| PlugInstall --sync | source $MYVIMRC
-" 			\| endif
-" 
+"				\| PlugInstall --sync | source $MYVIMRC
+"				\| endif
 call plug#begin('$HOME/.config/nvim/plugged')
 " let g:plug_url_format = 'git@github.com:%s.git'
 
@@ -192,18 +175,21 @@ Plug 'oeyoews/vim-snippets'
 
 " complete and error tips
 " bugs :checkhealth snippets error(optional)
-" Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/completion-nvim'
 
 " search
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" css-color
+" Plug 'ap/vim-css-color'
 Plug 'norcalli/nvim-colorizer.lua'
+
+" terminal
 Plug 'skywind3000/vim-terminal-help'
 
 " buffer manager tab icons
-" some bugs like mapping will be deprecated
-" Plug 'akinsho/bufferline.nvim'
+" Plug 'akinsho/bufferline.nvim' " some bugs like mapping will be deprecated
 Plug 'romgrk/barbar.nvim'
 
 " statusline
@@ -211,24 +197,32 @@ Plug 'romgrk/barbar.nvim'
 " Plug 'shadmansaleh/lualine.nvim'
 
 Plug 'junegunn/fzf.vim'
+
+" markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
+Plug 'plasticboy/vim-markdown'
+Plug 'dkarter/bullets.vim'
+
 Plug 'itchyny/calendar.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'luochen1990/rainbow'
 Plug 'yianwillis/vimcdoc'
-" Plug 'ap/vim-css-color'
+
+" file manager
+" Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+
 " Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
-" Plug 'scrooloose/nerdtree'
-Plug 'plasticboy/vim-markdown'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'folke/which-key.nvim'
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
@@ -236,10 +230,8 @@ Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 
 " lang#
 Plug 'neovim/nvim-lspconfig'
-Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'mbbill/undotree'
-Plug 'dkarter/bullets.vim'
 Plug 'jiangmiao/auto-pairs'
 
 " format
@@ -247,7 +239,9 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'google/vim-codefmt'
 Plug 'Chiel92/vim-autoformat'
 
+" indentline
 " Plug 'Yggdroot/indentLine'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'junegunn/goyo.vim'
 Plug 'lambdalisue/suda.vim'
@@ -255,7 +249,6 @@ Plug 'makerj/vim-pdf'
 Plug 'airblade/vim-gitgutter'
 
 " Plug 'glepnir/dashboard-nvim'
-" Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 
@@ -264,17 +257,17 @@ call plug#end()
 " ===
 " TODO config
 "https://github.com/glepnir/dashboard-nvim
-let g:dashboard_default_executive ='fzf'
 " eg : "SPC mean the leaderkey
-let g:dashboard_custom_shortcut={
-			\ 'last_session'       : 'SPC s l',
-			\ 'find_history'       : 'SPC f h',
-			\ 'find_file'          : 'SPC f f',
-			\ 'new_file'           : 'SPC c n',
-			\ 'change_colorscheme' : 'SPC t c',
-			\ 'find_word'          : 'SPC f a',
-			\ 'book_marks'         : 'SPC f b',
-			\ }
+" let g:dashboard_default_executive ='fzf'
+" let g:dashboard_custom_shortcut={
+" 			\ 'last_session'       : 'SPC s l',
+" 			\ 'find_history'       : 'SPC f h',
+" 			\ 'find_file'          : 'SPC f f',
+" 			\ 'new_file'           : 'SPC c n',
+" 			\ 'change_colorscheme' : 'SPC t c',
+" 			\ 'find_word'          : 'SPC f a',
+" 			\ 'book_marks'         : 'SPC f b',
+" 			\ }
 " let g:dashboard_custom_shortcut_icon['last_session'] = ' '
 " let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
 " let g:dashboard_custom_shortcut_icon['find_file'] = ' '
@@ -302,7 +295,7 @@ autocmd FileType markdown nnoremap <space>fmt :GenTocMarked<CR>
 " ===
 " TODO need test shortkey
 let g:rainbow_active = 1 " if set 1, it's conflicts to nerdtree
-nnoremap <space>tr :RainbowToggle<CR>:echom "enable rainbow_bract!"<CR>
+" nnoremap <space>tr :RainbowToggle<CR>
 
 " ===
 " === vim-better_whitespace.vim
@@ -338,12 +331,10 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
-" Enable NERDCommenterToggle to check all selected lines is commented or not 
+" Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
-nnoremap <SPACE>cc <Plug>NERDCommenterComment
-nnoremap <SPACE>c<SPACE> <Plug>NNERDCommenterToggle
-
-" TODO: how to open link in vim
+nnoremap <SPACE>cc <plug>NERDCommenterComment
+nnoremap <SPACE>c<SPACE> <plug>NNERDCommenterToggle
 
 " ===
 " === tokyonight and lightline
@@ -381,46 +372,46 @@ lua << EOF
 require("which-key").setup {
 	operators = { gc = "Comments" },
 	spelling = {
-      enabled = true, -- in normal, enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 10, -- how many suggestions should be shown in the list?
-    },
-	layout = {
-		height = { min = 4, max = 25 }, -- min and max height of the columns
-    width = { min = 20, max = 50 }, -- min and max width of the columns
-    spacing = 3, -- spacing between columns
-		align = "center"  -- align columns left, center or right
-		},
-	window = {
-		border = "double", -- none, single, double, shadow
-		position = "bottom", -- bottom, top
-		margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
-		padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
-		},
-	icons = {
-		breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-		separator = "➜", -- symbol used between a key and it's label
-		group = "+", -- symbol prepended to a group
-		},
-	presets = {
-		operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
-		motions = true, -- adds help for motions
-		text_objects = true, -- help for text objects triggered after entering an operator
-		windows = true, -- default bindings on <c-w>
-		nav = true, -- misc bindings to work with windows
-		z = true, -- bindings for folds, spelling and others prefixed with z
-		g = true, -- bindings for prefixed with g
-		},
-	opts = {
-		mode = "n", -- NORMAL mode
-		-- prefix: use "<leader>f" for example for mapping everything related to finding files
-		-- the prefix is prepended to every mapping part of `mappings`
-		prefix = "b", 
-		buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-		silent = true, -- use `silent` when creating keymaps
-		noremap = true, -- use `noremap` when creating keymaps
-		nowait = false, -- use `nowait` when creating keymaps
-		}
+	enabled = true, -- in normal, enabling this will show WhichKey when pressing z= to select spelling suggestions
+	suggestions = 10, -- how many suggestions should be shown in the list?
+	},
+layout = {
+	height = { min = 4, max = 25 }, -- min and max height of the columns
+	width = { min = 20, max = 50 }, -- min and max width of the columns
+	spacing = 3, -- spacing between columns
+	align = "center"  -- align columns left, center or right
+	},
+window = {
+	border = "double", -- none, single, double, shadow
+	position = "bottom", -- bottom, top
+	margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
+	padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
+	},
+icons = {
+	breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
+	separator = "➜", -- symbol used between a key and it's label
+	group = "+", -- symbol prepended to a group
+	},
+presets = {
+	operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
+	motions = true, -- adds help for motions
+	text_objects = true, -- help for text objects triggered after entering an operator
+	windows = true, -- default bindings on <c-w>
+	nav = true, -- misc bindings to work with windows
+	z = true, -- bindings for folds, spelling and others prefixed with z
+	g = true, -- bindings for prefixed with g
+	},
+opts = {
+	mode = "n", -- NORMAL mode
+	-- prefix: use "<leader>f" for example for mapping everything related to finding files
+	-- the prefix is prepended to every mapping part of `mappings`
+	prefix = "b",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = false, -- use `nowait` when creating keymaps
 	}
+}
 EOF
 
 " TODO
@@ -446,11 +437,6 @@ let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_edit_url_in = 'tab'
 
 
-" ===
-" === nerdtree
-" ===
-autocmd FileType nerdtree nmap <Tab> <CR>
-
 " ==
 " == GitGutter
 " ==
@@ -473,6 +459,7 @@ nnoremap <LEADER>g= :GitGutterNextHunk<CR>
 " ===
 " === nvim-tree
 " ===
+" link: https://github.com/kyazdani42/nvim-tree.lua
 let g:nvim_tree_side = 'left' "left by default
 let g:nvim_tree_width = 30 "30 by default, can be width_in_columns or 'width_in_percent%'
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
@@ -483,7 +470,6 @@ let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, 
 let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
 let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
 let g:nvim_tree_follow_update_path = 1 "0 by default, will update the path of the current dir if the file is not inside the tree.
-" Default is 0
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
@@ -528,7 +514,6 @@ let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 }
 "if nvim-web-devicons is installed and on your runtimepath.
 "if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
 "but this will not work when you set indent_markers (because of UI conflict)
-
 " default will show icon by default if no icon is provided
 " default shows no icon by default
 let g:nvim_tree_icons = {
@@ -560,22 +545,27 @@ let g:nvim_tree_icons = {
 						\     'error': "",
 						\   }
 						\ }
-
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
+" nnoremap <leader>r :NvimTreeRefresh<CR>
+" nnoremap <leader>n :NvimTreeFindFile<CR>
 " NvimTreeOpen, NvimTreeClose and NvimTreeFocus are also available if you need them
-
-set termguicolors " this variable must be enabled for colors to be applied properly
+" set termguicolors " this variable must be enabled for colors to be applied properly
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
-" https://github.com/kyazdani42/nvim-tree.lua
 
 
 " ===
 " === Undotree
 " ===
+set backupdir=$HOME/.config/nvim/tmp/backup,.
+set directory=$HOME/.config/nvim/tmp/backup,.
+if has('persistent_undo')
+	set undofile
+	set undodir=$HOME/.config/nvim/tmp/undo,.
+endif
+silent !mkdir -p $HOME/.config/nvim/tmp/backup
+silent !mkdir -p $HOME/.config/nvim/tmp/undo
 noremap <F5> :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
@@ -590,7 +580,6 @@ function g:Undotree_CustomMap()
 	nmap <buffer> E 5<plug>UndotreePreviousState
 endfunc
 
-
 " ===
 " === Bullets.vim
 " ===
@@ -598,7 +587,6 @@ endfunc
 let g:bullets_enabled_file_types = [
 			\ 'markdown',
 			\ 'text',
-			\ 'gitcommit',
 			\ 'scratch'
 			\]
 
@@ -628,23 +616,6 @@ noremap <silent> <SPACE>ac :Calendar -position=here<CR>
 " augroup END
 
 " ===
-" === AutoFormat
-" ===
-augroup autoformat_settings
-	" autocmd FileType bzl AutoFormatBuffer buildifier
-	" autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
-	" autocmd FileType dart AutoFormatBuffer dartfmt
-	" autocmd FileType go AutoFormatBuffer gofmt
-	" autocmd FileType gn AutoFormatBuffer gn
-	" autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
-	autocmd FileType java AutoFormatBuffer google-java-format
-	" autocmd FileType python AutoFormatBuffer yapf
-	" Alternative: autocmd FileType python AutoFormatBuffer autopep8
-	" autocmd FileType rust AutoFormatBuffer rustfmt
-	" autocmd FileType vue AutoFormatBuffer prettier
-augroup END
-
-" ===
 " === goyo
 " ===
 nnoremap <SPACE>wc :Goyo<CR>
@@ -659,28 +630,12 @@ nnoremap <SPACE>wc :Goyo<CR>
 " TODO rainbow sometimes, it's disappear
 lua <<EOF
 -- require('lualine').setup {
--- 	options = {
+--	options = {
 -- theme = 'palenight'
--- 	theme = 'evil' -- lualinenotice
+--	theme = 'evil' -- lualinenotice
 -- }
 -- }
 EOF
-
-" ===
-" === blankkindentline
-" ===
-lua <<EOF
--- vim.opt.listchars = {
---     space = "⋅",
---     eol = "↴",
--- }
---
--- require("indent_blankline").setup {
---     space_char_blankline = " ",
---     show_current_context = true,
--- }
-EOF
-
 
 " ===
 " === barbar
@@ -697,21 +652,13 @@ nnoremap <silent>    <A-9> :BufferLast<CR>
 nnoremap <silent>    <A-,> :BufferPrevious<CR>
 nnoremap <silent>    <A-.> :BufferNext<CR>
 nnoremap <silent>    <A-c> :BufferClose<CR>
-
 let bufferline = get(g:, 'bufferline', {})
 let bufferline.add_in_buffer_number_order = v:true
 let bufferline.animation = v:false
 let bufferline.tabpages = v:false
-" let bufferline.auto_hide = v:true
-let bufferline.maximum_length =  10
-let bufferline.maximum_padding =  1 
-" ===
-" === bufferline
-" ===
-" TODO config it
-lua << EOF
--- require("bufferline").setup{}
-EOF
+let bufferline.auto_hide = v:false
+let bufferline.maximum_length =  15
+let bufferline.maximum_padding =  5
 
 " ===
 " === term-help
@@ -744,7 +691,7 @@ lua <<EOF
 -- lang#vim (memory is a little big, disable it templately)
 -- require'lspconfig'.vimls.setup{on_attach=require'completion'.on_attach}
 -- lang#c
---require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
 --vim.lsp.set_log_level("debug")
 EOF
 " autocmd BufEnter * lua require'completion'.on_attach()
@@ -756,7 +703,7 @@ EOF
 " === nvim-lspconfig
 " ===
 lua << EOF
-require'lspconfig'.clangd.setup{}
+-- require'lspconfig'.clangd.setup{}
 EOF
 
 " ===
@@ -803,28 +750,6 @@ tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
 " ALT + q: switch to terminal normal mode.
 
 " ===
-" === vim-bookmarks.nvim
-" ===
-" TODO: config(optional)
-" links: https://github.com/MattesGroeger/vim-bookmarks
-lua <<EOF
--- require('telescope').load_extension('vim_bookmarks')
-EOF
-" shortkeys
-" Add/remove bookmark at current line	mm	:BookmarkToggle
-" Add/edit/remove annotation at current line	mi	:BookmarkAnnotate <TEXT>
-" Jump to next bookmark in buffer	mn	:BookmarkNext
-" Jump to previous bookmark in buffer	mp	:BookmarkPrev
-" Show all bookmarks (toggle)	ma	:BookmarkShowAll
-" Clear bookmarks in current buffer only	mc	:BookmarkClear
-" Clear bookmarks in all buffers	mx	:BookmarkClearAll
-" Move up bookmark at current line	[count]mkk	:BookmarkMoveUp [<COUNT>]
-" Move down bookmark at current line	[count]mjj	:BookmarkMoveDown [<COUNT>]
-" Move bookmark at current line to another line	[count]mg	:BookmarkMoveToLine <LINE>
-" Save all bookmarks to a file		:BookmarkSave <FILE_PATH>
-" Load bookmarks from a file		:BookmarkLoad <FILE_PATH>
-
-" ===
 " === follow cursor
 " ===
 " Uncomment the following to have Vim jump to the last position when" reopening a file
@@ -835,7 +760,7 @@ endif
 " ===
 " === vim-autoformat
 " ===
-autocmd! BufWrite *.[c] :Autoformat
+autocmd! BufWrite *.c,*.h :Autoformat
 
 " ===
 " === playground
@@ -868,7 +793,7 @@ EOF
 " ===
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
-ensure_installed = { 
+ensure_installed = {
 			\ "html", "lua", "c", "json", "yaml",
 			\ "vim", "bash", "toml", "css", "cmake",
 			\ "python", },
@@ -884,3 +809,32 @@ EOF
 lua << EOF
 -- require("notify")("My super important message")
 EOF
+
+" ===
+" === tab
+" ===
+" inoremap <silent><expr> <TAB>
+" 			\ pumvisible() ? "\<C-n>" :
+" 			\ search('\%#[]>)};''"`]', 'n') ? '<Right>' :
+" 			\ "\<TAB>"
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+" 
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" 
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+
+" ===
+" === plenary.nvim
+" ===
+lua << EOF
+local async = require "plenary.async"
+EOF
+
+

@@ -13,6 +13,7 @@ alias cdr="cd ~/repo"
 alias cdc="cd ~/repo/cCode"
 alias cdt="cd ~/temp"
 alias soz='source $HOME/.zshrc && exec zsh'
+alias cdu="cd ~/.config/nvim/Ultisnips"
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
@@ -33,7 +34,7 @@ alias 'onbluetooth'="sudo systemctl start bluetooth.service"
 # software
 alias ra='ranger'
 alias dust="dust -r"
-alias rm='trash'
+alias rmm='trash'
 alias ms='musicbox'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'

@@ -1,11 +1,10 @@
-snippet if "if ()"
-if (${1:${VISUAL:default}}){
-	// this is a demo
-	${2:${VISUAL:zero}}
+snippet iff "if ()" b 
+if (${1:true}){
+	$2
 }
 endsnippet 
 
-snippet in "include"
+snippet inc "include" 
 #include <stdio.h>
 
 ${0:${VISUAL:default}}

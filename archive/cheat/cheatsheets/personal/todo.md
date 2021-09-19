@@ -3,3 +3,7 @@
 - markdown snippets doesn't work
 - tidy vim(calendar todo)
 - vim language server
+- modify ranger's default editor
+- learn to design flowchart use markdown
+- xournal: 旋转吸附？绘制圆角句型
+- 流程图的画法

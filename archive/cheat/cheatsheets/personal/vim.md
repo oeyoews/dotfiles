@@ -1,0 +1,2 @@
+- [vim-plug-tips](https://github.com/junegunn/vim-plug/wiki/tips)
+- [vimtutor](https://dxsm.github.io/books/vimL/z/20181219_3.html)
