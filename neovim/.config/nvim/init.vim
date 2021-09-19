@@ -175,6 +175,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+			\| PlugInstall --sync | source $MYVIMRC
+			\| endif
+
 call plug#begin('$HOME/.config/nvim/plugged')
 
 " bookmarks
@@ -200,7 +204,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'skywind3000/vim-terminal-help'
 
 " buffer manager tab icons
-"Plug 'akinsho/bufferline.nvim'
+" some bugs like mapping will be deprecated
+" Plug 'akinsho/bufferline.nvim'
 Plug 'romgrk/barbar.nvim'
 
 " statusline
