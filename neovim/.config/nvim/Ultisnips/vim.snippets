@@ -2,11 +2,19 @@ snippet sec "Comment Section"
 " ===
 " === ${1:New Section}
 " ===
-${0:${VISUAL:default}}
+${2:comment}
 endsnippet
 
 snippet lua "lua << EOF"
 lua << EOF
-${1:$VISUAL:default}
+${1:lua}
 EOF
+endsnippet
+
+snippet nno "nnoremap"
+nnoremap $1
+endsnippet
+
+snippet spa "SPACE"
+<SPACE>$1
 endsnippet

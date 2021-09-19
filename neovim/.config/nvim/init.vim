@@ -3,31 +3,55 @@
 " $MYVIMRC
 let &wrap = 0 " set nowrap
 " learn ga
+" gv to learn(optional)
 "
 " ===
 " === Mappings
 " ===
+
+" nnoremap <silent><SPACE>cn :tabnew<CR>
+noremap L $
+nnoremap <silent><SPACE>bm :messages<CR>
+map <ESC> <ESC><C-L>
+
+" set leader
+let g:mapleader = ','
+
+" vim-plug
+nnoremap <SPACE>ti :PlugInstall<CR>
+nnoremap <SPACE>tc :PlugClean<CR>
+nnoremap <SPACE>tu :PlugUpdate<CR>
+nnoremap <SPACE>tU :PlugUpgrade<CR>
+
+" toggle wrap status
 nnoremap <SPACE>sw :set wrap!<CR>
+
+" toggle Upercase
 nnoremap guw gUawe
+
 " TODO: learn vmap
 " vnoremap : '<,'>normal<SPACE>
-" gv to learn(optional)
 
 inoremap <C-V> <ESC>p
 nnoremap <C-A> ggVG
-nnoremap <silent><SPACE>fs :w<CR>:echom "File Saved!"<CR>
 nnoremap <silent><C-S> :wa<CR>:echo "All files saved!"
+nnoremap <silent><SPACE>fs :w<CR>:echom "File Saved!"<CR>
 
+" quit insert mode
 inoremap jk <ESC>
 
-" quit
+" quit window
 nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><leader>qq :q!<CR>
 
+" open init.vim
 nnoremap <silent><SPACE>fe :edit $MYVIMRC<CR>
+
+" maxiam current window
 nnoremap <silent><SPACE>wm :only<CR>
 
-" window
+" window split
+" Disable the default s key
 noremap s <nop>
 noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
 noremap sj :set splitbelow<CR>:split<CR>
@@ -41,12 +65,21 @@ set number relativenumber
 set exrc
 set autoread
 set secure
-set mouse=a
-set nospell
+set mouse=a  " support mouse
+" set nospell
 set incsearch
 set hlsearch
 set linebreak " better wrap
-" NOTE: jk or other map is not work for timeoutlen=0
+set hidden  " not must be save current buffer
+set ruler  " show line number and column number in status
+set cursorline  " highlight current line
+set smartcase " fast search
+set ignorecase  " better search"
+set noshowcmd  " left: mode statusline
+set noshowmode " right location statusline
+set clipboard^=unnamed  " share register unnammed " with system
+set shortmess+=atIc  " clear advertise
+set noexpandtab  " disable expand tab to whitespace
 " set timeoutlen=0
 " TODO: which-key
 " TODO: :h close
@@ -56,7 +89,7 @@ set linebreak " better wrap
 "				tree disable to open new file
 "				try close tab (close not really close tab)
 " TODO: moudles for init.vim(optional)
-" TODO space f o
+" TODO space f o(filetree location)
 " TODO: 解决按键问题
 " code-runner
 " NOTE: not add filetype on like, if configcit for lightline
@@ -66,20 +99,11 @@ set linebreak " better wrap
 " TODO: buffer switch
 " TODO: 数字选择标签窗口
 syntax on
-set wildmenu " enhance ?
-set hidden  " ?
-" set autoindent
-set ruler  " show line number and column number in status
-set cursorline  " highlight current line
-set smartcase
-" TODO
-set noshowcmd  " left status
-set noshowmode " right status
-set showmatch
-set clipboard^=unnamed
-set shortmess+=atIc  " disable show welcome
-set noexpandtab  " disable expand tab to whitespace
+set wildmenu " enhance for complete
+set autoindent  " copy current line indent format to next line
+set textwidth=120  " after 120 char, wrap automatically
 set tabstop=2 " tab == 2 column, like 单位
+set noshowmatch  " call quote in visual
 set shiftwidth=2  " default indent distance for >> <<
 set softtabstop=2 " tab == 2 column truly
 " set list " show return it configcit for link
@@ -94,13 +118,13 @@ set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
 set novisualbell
 set noerrorbells
-set textwidth=120
-" NOTE: in noremap, not use comment
-" Disable the default s key
+" NOTE: in noremap, not use double quote
 
 " auto crear dir
 silent !mkdir -p $HOME/.config/nvim/tmp/backup
 silent !mkdir -p $HOME/.config/nvim/tmp/undo
+
+" undodir 
 set backupdir=$HOME/.config/nvim/tmp/backup,.
 set directory=$HOME/.config/nvim/tmp/backup,.
 if has('persistent_undo')
@@ -108,44 +132,33 @@ if has('persistent_undo')
 	set undodir=$HOME/.config/nvim/tmp/undo,.
 endif
 
-
 " ===
 " === command mode
 " ===
-" space h space == :h spacevim and use tab to switch next item
 noremap <space>hh :h<space>
 noremap <space>hc :
 nnoremap <SPACE>he :echo<SPACE>
+nnoremap <SPACE>ss /
 
-set sidescroll=1
-set nobackup
-set noswapfile
-
-let g:mapleader = ','
+set sidescroll=1  " for nowrap lines, scroll them smoothly
+set nobackup  " no backfile
+set noswapfile  " no swapfile
 
 set foldmethod=marker
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
 set scrolloff=1
-set ignorecase
-set signcolumn=yes " options: number yes
-
-" 按键延迟检测
-set updatetime=500
-set foldmethod=marker
+set signcolumn=yes " left gutter
+set updatetime=500	" ??
+set foldmethod=marker  " set foldmethod
 " let $MYVIMRC = "$HOME/.config/nvim/init.vim"
 " eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
 " eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
-nnoremap <silent> <SPACE>bm :messages<CR>
 " nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
-noremap L $
 " nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
-nnoremap <SPACE>ti :PlugInstall<CR>
-nnoremap <SPACE>tc :PlugClean<CR>
 " TODO: tabnext and tabNext
 " tabedit TODO
-nnoremap <silent> <SPACE>cn :tabnew<CR>
-" TODO: space bd
+" TODO: space bd(close)
 
 " ===
 " === Ps
@@ -153,8 +166,8 @@ nnoremap <silent> <SPACE>cn :tabnew<CR>
 call plug#begin('$HOME/.config/nvim/plugged')
 
 " bookmarks
-" Plug 'tom-anders/telescope-vim-bookmarks.nvim'
 Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'tom-anders/telescope-vim-bookmarks.nvim'
 
 " lsp_ui
 Plug 'glepnir/lspsaga.nvim'
@@ -651,7 +664,7 @@ autocmd BufEnter * lua require'completion'.on_attach()
 " ===
 " === UltSnips
 " ===
-" https://github.com/hrsh7th/vim-vsnip
+" link: https://github.com/hrsh7th/vim-vsnip
 " let g:UltiSnipsExpandTrigger="<CR>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
@@ -713,6 +726,9 @@ EOF
 " Save all bookmarks to a file		:BookmarkSave <FILE_PATH>
 " Load bookmarks from a file		:BookmarkLoad <FILE_PATH>
 
+" ===
+" === follow cursor
+" ===
 " Uncomment the following to have Vim jump to the last position when" reopening a file
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -722,3 +738,4 @@ endif
 " === vim-autoformat
 " ===
 autocmd! BufWrite *.[c] :Autoformat
+
