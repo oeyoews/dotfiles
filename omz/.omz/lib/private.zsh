@@ -85,7 +85,7 @@ alias diffk="kitty +kitten diff"
 
 ## wego
 # alias wego='curl -s wttr.in | lolcat'
-alias wego='curl -s wttr.in'
+# alias wego='curl -s wttr.in'
 
 
 # translate use crow
