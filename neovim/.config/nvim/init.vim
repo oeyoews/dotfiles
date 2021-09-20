@@ -17,6 +17,10 @@
 "	 TODO:	 code-runner
 "	 TODO: for bd , how to silent(buffer)
 "	 TODO: configure gitgutter and setting 优先级 for gutter
+"	 learn config bullets.vim
+"	 find recent file
+"	 config color for complete
+"	 make tablet tools for md
 
 "  HACK: how to bindings to require for https://github.com/folke/trouble.nvim (API)
 "	 HACK: learn ga gv
@@ -25,12 +29,12 @@
 "  HACK: 数字选择标签窗口
 "  HACK: whitespace config
 
-" FIXED: space f o 
-" FIXED: find file in vim
-"	FIXED: how to indent continue
-"	FIXED: try close tab (close not really close tab)
-" FIXED: space f o(filetree location)
-" FIXED: clear highlight
+"	 FIX: space f o 
+"	 FIX: find file in vim
+"	 FIX: how to indent continue
+"	 FIX: try close tab (close not really close tab)
+"	 FIX: space f o(filetree location)
+"	 FIX: clear highlight
 
 " ===
 " === deprecated snips
@@ -204,6 +208,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 " TODO:
 " let g:plug_url_format = 'git@github.com:%s.git'
 
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'skywind3000/asyncrun.vim'
 " Plug 'prabirshrestha/vim-lsp'
@@ -637,6 +642,7 @@ endfunc
 " ===
 " === Bullets.vim
 " ===
+" command: <Leader>x togglecheckbox
 " let g:bullets_set_mappings = 0
 let g:bullets_enabled_file_types = [
 			\ 'markdown',
@@ -969,51 +975,49 @@ EOF
 " ===
 let g:AutoPairsFlyMode = 1
 
-
-
-noremap <SPACE>r :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-	exec "w"
-	if &filetype == 'c'
-		exec "!g++ % -o %<"
-		exec "\n!time ./%<"
-	elseif &filetype == 'cpp'
-		set splitbelow
-		exec "!g++ -std=c++11 % -Wall -o %<"
-		:sp
-		:res -15
-		:term ./%<
-	elseif &filetype == 'java'
-		set splitbelow
-		:sp
-		:res -5
-		term javac % && time java %<
-	elseif &filetype == 'sh'
-		:!time bash %
-	elseif &filetype == 'python'
-		set splitbelow
-		:sp
-		:term python3 %
-	elseif &filetype == 'html'
-		silent! exec "!".g:mkdp_browser." % &"
-	elseif &filetype == 'markdown'
-		exec "InstantMarkdownPreview"
-	elseif &filetype == 'tex'
-		silent! exec "VimtexStop"
-		silent! exec "VimtexCompile"
-	elseif &filetype == 'dart'
-		exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
-		silent! exec "CocCommand flutter.dev.openDevLog"
-	elseif &filetype == 'javascript'
-		set splitbelow
-		:sp
-		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
-	elseif &filetype == 'go'
-		set splitbelow
-		:sp
-		:term go run .
-	endif
-endfunc
+" noremap <SPACE>r :call CompileRunGcc()<CR>
+" func! CompileRunGcc()
+	" exec "w"
+	" if &filetype == 'c'
+		" exec "!g++ % -o %<"
+		" exec "\n!time ./%<"
+	" elseif &filetype == 'cpp'
+		" set splitbelow
+		" exec "!g++ -std=c++11 % -Wall -o %<"
+		" :sp
+		" :res -15
+		" :term ./%<
+	" elseif &filetype == 'java'
+		" set splitbelow
+		" :sp
+		" :res -5
+		" term javac % && time java %<
+	" elseif &filetype == 'sh'
+		" :!time bash %
+	" elseif &filetype == 'python'
+		" set splitbelow
+		" :sp
+		" :term python3 %
+	" elseif &filetype == 'html'
+		" silent! exec "!".g:mkdp_browser." % &"
+	" elseif &filetype == 'markdown'
+		" exec "InstantMarkdownPreview"
+	" elseif &filetype == 'tex'
+		" silent! exec "VimtexStop"
+		" silent! exec "VimtexCompile"
+	" elseif &filetype == 'dart'
+		" exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
+		" silent! exec "CocCommand flutter.dev.openDevLog"
+	" elseif &filetype == 'javascript'
+		" set splitbelow
+		" :sp
+		" :term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+	" elseif &filetype == 'go'
+		" set splitbelow
+		" :sp
+		" :term go run .
+	" endif
+" endfunc
 
 " ===
 " === asynrun
@@ -1021,3 +1025,8 @@ endfunc
 let g:asyncrun_open = 6
 let g:asyncrun_bell = 1
 nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
+
+" ===
+" === vim-table-mode
+" ===
+" command: <Leader>tm enable this plugin
