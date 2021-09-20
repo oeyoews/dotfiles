@@ -1,41 +1,43 @@
-" === 🇻 🇻 🇻
-" === TODO: 📁
-" todo
-" === 🇻 🇻 🇻
-" how to bindings to require for https://github.com/folke/trouble.nvim (API)
-"  have a file , source will error
-"  messages need touch space or enter
-"  to test auto pairs
-"  use new window to manage this command print result
-"  exit的逻辑
-"  visual secection for snips
-"  test recursion: map and nomap
-"		learn plugin or ftplugin' function
-"		space f o 
-"	  learn ga
-"		moudles for init.vim(optional)
-"		gv to learn(optional)
-"				M char is dis appear
-"		vnoremap : '<,'>normal<SPACE>
-" learn vmap
-" how to open link in vim
-" ultisnippets: # is repeated
-" tab and space smart switch
-" find file in vim
-" after only, how to return last buffer
-" learn <Plug> interface
-"				how to indent continue
-"			 code-runner
-"				try close tab (close not really close tab)
-" space f o(filetree location)
-" clear highlight
-" 数字选择标签窗口
-"  whitespace config
+" === 
+" === TODO 📁
+" === 
+
+"  BUG: visual secection for snips
+"  BUG: have a file , source will error
+"  BUG:	M char is dis appear
+"
+
+"  TODO: messages need touch space or enter use new window to manage this command print result
+"  TODO: test recursion: map and nomap
+"	 TODO: learn plugin or ftplugin' function
+"  TODO: vnoremap : '<,'>normal<SPACE>
+"  TODO: use ls to list all buffer, how to jump special buffer in maxium window
+"  TODO: learn todo keyword for this plugin in the single gutter
+"  TODO: learn <Plug> interface
+"	 TODO:	 code-runner
+"	 TODO: for bd , how to silent(buffer)
+"	 TODO: configure gitgutter and setting 优先级 for gutter
+
+"  HACK: how to bindings to require for https://github.com/folke/trouble.nvim (API)
+"	 HACK: learn ga gv
+"	 HACK: moudles for init.vim(optional)
+"  HACK: how to open link in vim
+"  HACK: 数字选择标签窗口
+"  HACK: whitespace config
+
+" FIXED: space f o 
+" FIXED: find file in vim
+"	FIXED: how to indent continue
+"	FIXED: try close tab (close not really close tab)
+" FIXED: space f o(filetree location)
+" FIXED: clear highlight
 
 " ===
 " === deprecated snips
 " ===
 " autocmd! BufWritePost $MYVIMRC source $MYVIMRC
+" :ls show all buffers
+" :tabs show all tabs
 " vim -u NORC
 " set runtimepath?
 " :h config
@@ -48,6 +50,10 @@
 " ===
 " === Mappings
 " ===
+
+" better indent
+noremap > >gv
+noremap < <gv
 
 nnoremap <SPACE>sl :set nolist<CR>
 
@@ -65,13 +71,17 @@ nnoremap <SPACE>ss /
 
 " open init.vim
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR> :echom "Finisned!"<CR>
+nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR>
 
-" buffer tab: tabnew tabonly
-" nnoremap <silent><SPACE>cn :tabnew<CR>
+" buffer
+nnoremap <silent> <SPACE>bn :bn<CR>
+" uninstall buffer
+nnoremap <silent> <SPACE>bd :bd<CR><C-L>
+nnoremap <silent> <SPACE>bh :vnew<CR>
+nnoremap <silent> <SPACE>bj :new<CR>
+nnoremap <silent><SPACE>bm :messages<CR>
 
 noremap L $
-nnoremap <silent><SPACE>bm :messages<CR>
 
 " system copy
 nnoremap Y "*p
@@ -107,9 +117,6 @@ inoremap jk <ESC>
 nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><leader>qq :q!<CR>
 
-" maxiam current window
-nnoremap <silent><SPACE>wm :only<CR>
-
 " window split
 noremap s <nop>
 noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
@@ -117,21 +124,30 @@ noremap sj :set splitbelow<CR>:split<CR>
 noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
 noremap sl :set splitright<CR>:vsplit<CR>
 
+nnoremap <SPACE>ww <C-w>w
+nnoremap <SPACE>wh <C-w>h
+nnoremap <SPACE>wj <C-w>j
+nnoremap <SPACE>wk <C-w>k
+nnoremap <SPACE>wl <C-w>l
+nnoremap <SPACE>wm <C-w>o
+
 " ===
-" === Set settings
+" ===  Editor Options
 " ===
 set selectmode=""
+set matchtime=2
 set splitbelow          " Horizontal split below current for new window
-set splitright          " Vertical split to right of current. ???
+set virtualedit=block
 set number relativenumber
 set autochdir  " simply minbuffer messages
-" let $LANG = 'en_US.utf8'
+set autoindent
 language messages en_US.utf8
 set nowrap
+set smartcase
 set exrc
 set autoread
 set secure
-set mouse+=a  " support mouse
+set mouse=nv " support mouse
 set linebreak " better wrap
 set hidden  " not must be save current buffer
 set ruler  " show line number and column number in status
@@ -146,13 +162,14 @@ set noexpandtab  " disable expand tab to whitespace
 set timeoutlen=1000
 set textwidth=120  " after 120 char, wrap automatically
 set showmatch  " call quote in visual
-set shiftwidth=4  " default indent distance for >> <<
-set tabstop=4 " tab == 2 column, like 单位
+set shiftwidth=2  " default indent distance for >> <<
+set tabstop=2 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
 " set smartindent
 " set clipboard^=unnamed
 set list " show return it configcit for link
+" →
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
@@ -167,9 +184,10 @@ set scrolloff=1
 set signcolumn=yes  " left gutter
 set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
+set viewoptions=cursor,folds,slash,unix
 
 " ===
-" === Ps
+" === PLUGINS
 " ===
 " automatical checkinstall vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -183,8 +201,11 @@ endif
 "				\| PlugInstall --sync | source $MYVIMRC
 "				\| endif
 call plug#begin('$HOME/.config/nvim/plugged')
+" TODO:
 " let g:plug_url_format = 'git@github.com:%s.git'
 
+Plug 'justinmk/vim-syntax-extra'
+Plug 'skywind3000/asyncrun.vim'
 " Plug 'prabirshrestha/vim-lsp'
 
 Plug 'folke/twilight.nvim'
@@ -480,18 +501,14 @@ let g:vim_markdown_edit_url_in = 'tab'
 " let g:gitgutter_signs = 0
 let g:gitgutter_sign_allow_clobber = 0
 let g:gitgutter_map_keys = 0
-let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_override_sign_column_highlight = 1
 let g:gitgutter_preview_win_floating = 1
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '░'
-let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_added = ' '
+let g:gitgutter_sign_modified = 'ﱅ'
+let g:gitgutter_sign_removed = '﯊'
 let g:gitgutter_sign_removed_first_line = '▔'
 let g:gitgutter_sign_modified_removed = '▒'
-" autocmd BufWritePost * GitGutter
-nnoremap <LEADER>gf :GitGutterFold<CR>
 nnoremap H :GitGutterPreviewHunk<CR>
-nnoremap <LEADER>g- :GitGutterPrevHunk<CR>
-nnoremap <LEADER>g= :GitGutterNextHunk<CR>
 
 " ===
 " === nvim-tree
@@ -946,3 +963,61 @@ nnoremap <SPACE>wz :Twilight<CR>
 lua << EOF
   require("twilight").setup {}
 EOF
+
+" ===
+" === auto-pairs
+" ===
+let g:AutoPairsFlyMode = 1
+
+
+
+noremap <SPACE>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+	exec "w"
+	if &filetype == 'c'
+		exec "!g++ % -o %<"
+		exec "\n!time ./%<"
+	elseif &filetype == 'cpp'
+		set splitbelow
+		exec "!g++ -std=c++11 % -Wall -o %<"
+		:sp
+		:res -15
+		:term ./%<
+	elseif &filetype == 'java'
+		set splitbelow
+		:sp
+		:res -5
+		term javac % && time java %<
+	elseif &filetype == 'sh'
+		:!time bash %
+	elseif &filetype == 'python'
+		set splitbelow
+		:sp
+		:term python3 %
+	elseif &filetype == 'html'
+		silent! exec "!".g:mkdp_browser." % &"
+	elseif &filetype == 'markdown'
+		exec "InstantMarkdownPreview"
+	elseif &filetype == 'tex'
+		silent! exec "VimtexStop"
+		silent! exec "VimtexCompile"
+	elseif &filetype == 'dart'
+		exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
+		silent! exec "CocCommand flutter.dev.openDevLog"
+	elseif &filetype == 'javascript'
+		set splitbelow
+		:sp
+		:term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
+	elseif &filetype == 'go'
+		set splitbelow
+		:sp
+		:term go run .
+	endif
+endfunc
+
+" ===
+" === asynrun
+" ===
+let g:asyncrun_open = 6
+let g:asyncrun_bell = 1
+nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
