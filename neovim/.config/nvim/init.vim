@@ -17,7 +17,8 @@
 "	 TODO:	 code-runner
 "	 TODO: for bd , how to silent(buffer)
 "	 TODO: configure gitgutter and setting 优先级 for gutter
-"	 learn config bullets.vim
+"	 learn config bullets.vim and table-mode md config
+"	 how to complete direction in current text
 "	 find recent file
 "	 config color for complete
 "	 make tablet tools for md
@@ -59,7 +60,7 @@
 noremap > >gv
 noremap < <gv
 
-nnoremap <SPACE>sl :set nolist<CR>
+nnoremap <SPACE>sl :set list<CR>
 
 inoremap <C-b> <ESC>hi
 inoremap <C-f> <ESC>la
@@ -100,9 +101,9 @@ nnoremap <SPACE>tu :PlugUpdate<CR>
 nnoremap <SPACE>tU :PlugUpgrade<CR>
 
 " toggle wrap status
-nnoremap <SPACE>sw :set wrap!<CR>
-nnoremap <SPACE>sp :set spell!<CR>
-nnoremap <SPACE>sc :set<SPACE>hlsearch!<CR>
+nnoremap <silent> <SPACE>sw :set wrap!<CR>
+nnoremap <silent> <SPACE>sp :set spell!<CR>
+nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 
 " toggle Upercase
 nnoremap guw gUawe
@@ -136,7 +137,7 @@ nnoremap <SPACE>wl <C-w>l
 nnoremap <SPACE>wm <C-w>o
 
 " ===
-" ===  Editor Options
+" ===  Options
 " ===
 set selectmode=""
 set matchtime=2
@@ -155,7 +156,7 @@ set mouse=nv " support mouse
 set linebreak " better wrap
 set hidden  " not must be save current buffer
 set ruler  " show line number and column number in status
-set cursorline  " highlight current line
+set nocursorline  " highlight current line
 set ignorecase  " better search"
 " right: mode statusline
 set showcmd  
@@ -172,7 +173,7 @@ set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
 " set smartindent
 " set clipboard^=unnamed
-set list " show return it configcit for link
+set nolist " show return it configcit for link
 " →
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
@@ -252,10 +253,6 @@ Plug 'skywind3000/vim-terminal-help'
 " Plug 'akinsho/bufferline.nvim' " some bugs like mapping will be deprecated
 Plug 'romgrk/barbar.nvim'
 
-" statusline
-" Plug 'hoob3rt/lualine.nvim'
-" Plug 'shadmansaleh/lualine.nvim'
-
 Plug 'junegunn/fzf.vim'
 
 " markdown
@@ -284,13 +281,20 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'folke/which-key.nvim'
 Plug 'folke/trouble.nvim'
-Plug 'itchyny/lightline.vim'
+
+" statusline
+" Plug 'itchyny/lightline.vim'
+" Plug 'hoob3rt/lualine.nvim'
+" Plug 'shadmansaleh/lualine.nvim'
+Plug 'windwp/windline.nvim'
+
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 " Plug 'nvim-treesitter/playground'
 
-" lang#
+" lsp
 Plug 'neovim/nvim-lspconfig'
 
+" misc tools
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 
@@ -396,10 +400,35 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 
 " ===
-" === tokyonight and lightline
+" === tokyonight
 " ===
 " link: https://github.com/folke/tokyonight.nvim
 colorscheme tokyonight
+
+" ===
+" === windline.nvim
+" ===
+lua << EOF
+-- require('wlsample.bubble')
+require('wlsample.evil_line')
+EOF
+
+" ===
+" === lualine
+" ===
+lua << END
+-- local custom_gruvbox = require'lualine.themes.gruvbox'
+--[[
+require'lualine'.setup{
+options = { theme  = custom_gruvbox },
+}
+--]]
+-- require'lualine'.setup()
+END
+
+" ===
+" === lightline(deprecated)
+" ===
 set laststatus=2
 let g:lightline = {
 			\ 'mode_map': {
@@ -464,7 +493,7 @@ opts = {
 	mode = "n", -- NORMAL mode
 	-- prefix: use "<leader>f" for example for mapping everything related to finding files
 	-- the prefix is prepended to every mapping part of `mappings`
-	prefix = "b",
+	prefix = "nil",
 	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
 	silent = true, -- use `silent` when creating keymaps
 	noremap = true, -- use `noremap` when creating keymaps
@@ -480,6 +509,7 @@ EOF
 lua << EOF
 require("trouble").setup {}
 EOF
+nnoremap <silent> <SPACE>td :TroubleToggle<CR>
 
 " ===
 " === vim-markdown
@@ -974,50 +1004,6 @@ EOF
 " === auto-pairs
 " ===
 let g:AutoPairsFlyMode = 1
-
-" noremap <SPACE>r :call CompileRunGcc()<CR>
-" func! CompileRunGcc()
-	" exec "w"
-	" if &filetype == 'c'
-		" exec "!g++ % -o %<"
-		" exec "\n!time ./%<"
-	" elseif &filetype == 'cpp'
-		" set splitbelow
-		" exec "!g++ -std=c++11 % -Wall -o %<"
-		" :sp
-		" :res -15
-		" :term ./%<
-	" elseif &filetype == 'java'
-		" set splitbelow
-		" :sp
-		" :res -5
-		" term javac % && time java %<
-	" elseif &filetype == 'sh'
-		" :!time bash %
-	" elseif &filetype == 'python'
-		" set splitbelow
-		" :sp
-		" :term python3 %
-	" elseif &filetype == 'html'
-		" silent! exec "!".g:mkdp_browser." % &"
-	" elseif &filetype == 'markdown'
-		" exec "InstantMarkdownPreview"
-	" elseif &filetype == 'tex'
-		" silent! exec "VimtexStop"
-		" silent! exec "VimtexCompile"
-	" elseif &filetype == 'dart'
-		" exec "CocCommand flutter.run -d ".g:flutter_default_device." ".g:flutter_run_args
-		" silent! exec "CocCommand flutter.dev.openDevLog"
-	" elseif &filetype == 'javascript'
-		" set splitbelow
-		" :sp
-		" :term export DEBUG="INFO,ERROR,WARNING"; node --trace-warnings .
-	" elseif &filetype == 'go'
-		" set splitbelow
-		" :sp
-		" :term go run .
-	" endif
-" endfunc
 
 " ===
 " === asynrun
