@@ -3,8 +3,6 @@
 " todo
 " === 🇻 🇻 🇻
 " how to bindings to require for https://github.com/folke/trouble.nvim (API)
-"  $1 $0
-"  how to comment 9 lines
 "  have a file , source will error
 "  messages need touch space or enter
 "  to test auto pairs
@@ -21,6 +19,7 @@
 "		vnoremap : '<,'>normal<SPACE>
 " learn vmap
 " how to open link in vim
+" ultisnippets: # is repeated
 " tab and space smart switch
 " find file in vim
 " after only, how to return last buffer
@@ -50,7 +49,12 @@
 " === Mappings
 " ===
 
-" nnoremap <C-g> <ESC> :echom "Interrupted!"<CR>
+nnoremap <SPACE>sl :set nolist<CR>
+
+inoremap <C-b> <ESC>hi
+inoremap <C-f> <ESC>la
+
+" cnoremap <C-b> 
 noremap <ESC> <ESC><C-L>
 
 " command mode
@@ -116,6 +120,7 @@ noremap sl :set splitright<CR>:vsplit<CR>
 " ===
 " === Set settings
 " ===
+set selectmode=""
 set splitbelow          " Horizontal split below current for new window
 set splitright          " Vertical split to right of current. ???
 set number relativenumber
@@ -138,7 +143,7 @@ set showcmd
 set noshowmode 
 set shortmess+=aIc  " atI clear advertise
 set noexpandtab  " disable expand tab to whitespace
-set timeoutlen=800
+set timeoutlen=1000
 set textwidth=120  " after 120 char, wrap automatically
 set showmatch  " call quote in visual
 set shiftwidth=4  " default indent distance for >> <<
@@ -180,6 +185,7 @@ endif
 call plug#begin('$HOME/.config/nvim/plugged')
 " let g:plug_url_format = 'git@github.com:%s.git'
 
+" Plug 'prabirshrestha/vim-lsp'
 
 Plug 'folke/twilight.nvim'
 
@@ -342,6 +348,7 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 " ===
 " === nerdcommenter.vim
 " ===
+" command: <leader>ci
 " link: https://github.com/preservim/nerdcommenter/blob/master/README.md
 " Create default mappings
 let g:NERDCreateDefaultMappings = 1
@@ -361,8 +368,6 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
-" nnoremap <SPACE>cc <plug>NERDCommenterComment
-" nnoremap <SPACE>c<SPACE> <plug>NNERDCommenterToggle
 
 " ===
 " === tokyonight and lightline
@@ -401,7 +406,7 @@ require("which-key").setup {
 	operators = { gc = "Comments" },
 	spelling = {
 	enabled = true, -- in normal, enabling this will show WhichKey when pressing z= to select spelling suggestions
-	suggestions = 10, -- how many suggestions should be shown in the list?
+	suggestions = 10, --how many suggestions should be shown in the list?
 	},
 layout = {
 	height = { min = 4, max = 25 }, -- min and max height of the columns
@@ -690,8 +695,8 @@ let bufferline.add_in_buffer_number_order = v:true
 let bufferline.animation = v:false
 let bufferline.tabpages = v:false
 let bufferline.auto_hide = v:false
-let bufferline.maximum_length =  15
-let bufferline.maximum_padding =  3
+let bufferline.maximum_length =  30
+let bufferline.maximum_padding =  4
 
 " ===
 " === term-help
@@ -756,6 +761,7 @@ EOF
 " === UltSnips
 " ===
 " link: https://github.com/hrsh7th/vim-vsnip
+nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>
 " disable tab to complete
 let g:UltiSnipsExpandTrigger="<>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -763,9 +769,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsListSnippets="<C-e>"
 let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.config/nvim/Ultisnips/',
-			\ "UltiSnips",
-			\ $HOME.'/.config/nvim/plugged/vim-snippets/UltiSnips/']
+			\ $HOME.'/.config/nvim/plugged/vim-snippets/UltiSnips/',]
 
+			 "UltiSnips",]
 " ===
 " === lspsaga.nvim(lsp_ui)
 " ===
@@ -935,7 +941,8 @@ EOF
 " ===
 " === zen-mode
 " ===
-" command: twilight
+" command: Twilight
+nnoremap <SPACE>wz :Twilight<CR>
 lua << EOF
   require("twilight").setup {}
 EOF
