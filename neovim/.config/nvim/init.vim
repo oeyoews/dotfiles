@@ -1,12 +1,19 @@
 " === 🇻 🇻 🇻
 " === TODO: 📁
+" todo
 " === 🇻 🇻 🇻
 " how to bindings to require for https://github.com/folke/trouble.nvim (API)
 "  $1 $0
+"  how to comment 9 lines
 "  have a file , source will error
-"  推出的逻辑
+"  messages need touch space or enter
+"  to test auto pairs
+"  use new window to manage this command print result
+"  exit的逻辑
 "  visual secection for snips
+"  test recursion: map and nomap
 "		learn plugin or ftplugin' function
+"		space f o 
 "	  learn ga
 "		moudles for init.vim(optional)
 "		gv to learn(optional)
@@ -43,6 +50,9 @@
 " === Mappings
 " ===
 
+" nnoremap <C-g> <ESC> :echom "Interrupted!"<CR>
+noremap <ESC> <ESC><C-L>
+
 " command mode
 noremap <space>hh :h<space>
 noremap <space>hc :
@@ -51,14 +61,13 @@ nnoremap <SPACE>ss /
 
 " open init.vim
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <SPACE>hrr :source $MYVIMRC<CR> :echom "Refresh finisned!"<CR>
+nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR> :echom "Finisned!"<CR>
 
-" buffer
-nnoremap <silent><SPACE>cn :tabnew<CR>
+" buffer tab: tabnew tabonly
+" nnoremap <silent><SPACE>cn :tabnew<CR>
 
 noremap L $
 nnoremap <silent><SPACE>bm :messages<CR>
-map <ESC> <ESC><C-L>
 
 " system copy
 nnoremap Y "*p
@@ -107,9 +116,12 @@ noremap sl :set splitright<CR>:vsplit<CR>
 " ===
 " === Set settings
 " ===
+set splitbelow          " Horizontal split below current for new window
+set splitright          " Vertical split to right of current. ???
 set number relativenumber
 set autochdir  " simply minbuffer messages
 " let $LANG = 'en_US.utf8'
+language messages en_US.utf8
 set nowrap
 set exrc
 set autoread
@@ -120,15 +132,17 @@ set hidden  " not must be save current buffer
 set ruler  " show line number and column number in status
 set cursorline  " highlight current line
 set ignorecase  " better search"
-set noshowcmd  " left: mode statusline
-set noshowmode " right location statusline
-set shortmess+=atsIc  " atI clear advertise
+" right: mode statusline
+set showcmd  
+" left: location statusline
+set noshowmode 
+set shortmess+=aIc  " atI clear advertise
 set noexpandtab  " disable expand tab to whitespace
 set timeoutlen=800
 set textwidth=120  " after 120 char, wrap automatically
-set tabstop=2 " tab == 2 column, like 单位
-set noshowmatch  " call quote in visual
+set showmatch  " call quote in visual
 set shiftwidth=4  " default indent distance for >> <<
+set tabstop=4 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
 " set smartindent
@@ -138,7 +152,7 @@ set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
 set novisualbell
-set noerrorbells
+set noerrorbells  " no beeps
 set sidescroll=1  " for nowrap lines, scroll them smoothly
 set nobackup  " no backfile
 set noswapfile  " no swapfile
@@ -645,14 +659,15 @@ nnoremap <SPACE>wc :Goyo<CR>
 " ===
 " === lualine.nvim
 " ===
-" TODO rainbow sometimes, it's disappear
 lua <<EOF
+-- [[
 -- require('lualine').setup {
 --	options = {
 -- theme = 'palenight'
 --	theme = 'evil' -- lualinenotice
 -- }
 -- }
+--]]
 EOF
 
 " ===
@@ -726,6 +741,7 @@ let g:completion_timer_cycle = 200 "default value is 80
 " === singature
 " ===
 lua << EOF
+--[[
 -- require "lsp_signature".setup({
 --     bind = true, -- This is mandatory, otherwise border config won't get registered.
 -- 		verbose = false,
@@ -733,6 +749,7 @@ lua << EOF
 --       border = "single"
 --     }
 --   })
+--]]
 EOF
 
 " ===
@@ -803,6 +820,7 @@ autocmd! BufWrite *.c,*.h :Autoformat
 " === playground
 " ===
 lua << EOF
+--[[
 require "nvim-treesitter.configs".setup {
 	playground = {
 	enable = true,
@@ -823,6 +841,7 @@ require "nvim-treesitter.configs".setup {
 		},
 	}
 }
+--]]
 EOF
 
 " ===
@@ -844,10 +863,13 @@ EOF
 " === nvim-notify
 " ===
 lua << EOF
--- require("notify")("Finished!")
--- vim.notify = require("notify")
--- vim.notify("This is an error message", "error")
+--[[
+require("notify")("Finished!")
+vim.notify = require("notify")
+vim.notify("This is an error message", "error")
+ --]]
 EOF
+" let VimNotify = luaeval('vim.notify')
 
 " ===
 " === todo-hlight
@@ -915,12 +937,5 @@ EOF
 " ===
 " command: twilight
 lua << EOF
-  require("twilight").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+  require("twilight").setup {}
 EOF
-
-
-

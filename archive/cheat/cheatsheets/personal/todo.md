@@ -7,3 +7,7 @@
 - learn to design flowchart use markdown
 - xournal: 旋转吸附？绘制圆角句型
 - 流程图的画法
+- gitter 使用markdown
+- from 'github520', learn github actions [github520](https://github.com/521xueweihan/GitHub520/commit/e2ac158c951f68a285dd754d704427ba8f281f1e)
+  - how to init commit?
+- learn use vim's api
