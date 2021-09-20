@@ -34,7 +34,8 @@ alias 'onbluetooth'="sudo systemctl start bluetooth.service"
 # software
 alias ra='ranger'
 alias dust="dust -r"
-alias rmm='trash'
+alias rm='trash'
+alias rmm='rm'
 alias ms='musicbox'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
