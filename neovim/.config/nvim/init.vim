@@ -1,15 +1,15 @@
-" ===
-" === TODO
-" ===
+" === 🇻 🇻 🇻
+" === TODO: 📁
+" === 🇻 🇻 🇻
+" how to bindings to require for https://github.com/folke/trouble.nvim (API)
 "  $1 $0
 "  have a file , source will error
+"  推出的逻辑
 "  visual secection for snips
-"		vim-rooter(optional)
 "		learn plugin or ftplugin' function
 "	  learn ga
 "		moudles for init.vim(optional)
 "		gv to learn(optional)
-"		learn trouble nvim
 "				M char is dis appear
 "		vnoremap : '<,'>normal<SPACE>
 " learn vmap
@@ -27,9 +27,12 @@
 "  whitespace config
 
 " ===
-" === deprecated
+" === deprecated snips
 " ===
 " autocmd! BufWritePost $MYVIMRC source $MYVIMRC
+" vim -u NORC
+" set runtimepath?
+" :h config
 " let $MYVIMRC = "$HOME/.config/nvim/init.vim"
 " eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
 " eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
@@ -105,6 +108,8 @@ noremap sl :set splitright<CR>:vsplit<CR>
 " === Set settings
 " ===
 set number relativenumber
+set autochdir  " simply minbuffer messages
+" let $LANG = 'en_US.utf8'
 set nowrap
 set exrc
 set autoread
@@ -117,7 +122,7 @@ set cursorline  " highlight current line
 set ignorecase  " better search"
 set noshowcmd  " left: mode statusline
 set noshowmode " right location statusline
-set shortmess+=atIc  " clear advertise
+set shortmess+=atsIc  " atI clear advertise
 set noexpandtab  " disable expand tab to whitespace
 set timeoutlen=800
 set textwidth=120  " after 120 char, wrap automatically
@@ -125,9 +130,10 @@ set tabstop=2 " tab == 2 column, like 单位
 set noshowmatch  " call quote in visual
 set shiftwidth=4  " default indent distance for >> <<
 set softtabstop=2 " tab == 2 column truly
+set guifont=Droid\ Sans\ Mono
 " set smartindent
 " set clipboard^=unnamed
-" set list " show return it configcit for link
+set list " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
@@ -136,7 +142,6 @@ set noerrorbells
 set sidescroll=1  " for nowrap lines, scroll them smoothly
 set nobackup  " no backfile
 set noswapfile  " no swapfile
-set foldmethod=marker
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
 set scrolloff=1
@@ -160,6 +165,11 @@ endif
 "				\| endif
 call plug#begin('$HOME/.config/nvim/plugged')
 " let g:plug_url_format = 'git@github.com:%s.git'
+
+
+Plug 'folke/twilight.nvim'
+
+Plug 'folke/todo-comments.nvim'
 
 " notify
 Plug 'rcarriga/nvim-notify'
@@ -418,9 +428,13 @@ opts = {
 }
 EOF
 
-" TODO
-"https://github.com/folke/trouble.nvim
-
+" ===
+" === trouble.nvim
+" ===
+" linka: https://github.com/folke/trouble.nvim
+lua << EOF
+require("trouble").setup {}
+EOF
 
 " ===
 " === vim-markdown
@@ -662,7 +676,7 @@ let bufferline.animation = v:false
 let bufferline.tabpages = v:false
 let bufferline.auto_hide = v:false
 let bufferline.maximum_length =  15
-let bufferline.maximum_padding =  5
+let bufferline.maximum_padding =  3
 
 " ===
 " === term-help
@@ -774,6 +788,13 @@ if has("autocmd")
 endif
 
 " ===
+" === different_color_cursor
+" ===
+hi Cursor guifg=green guibg=green
+hi Cursor2 guifg=red guibg=red
+set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
+
+" ===
 " === vim-autoformat
 " ===
 autocmd! BufWrite *.c,*.h :Autoformat
@@ -827,3 +848,79 @@ lua << EOF
 -- vim.notify = require("notify")
 -- vim.notify("This is an error message", "error")
 EOF
+
+" ===
+" === todo-hlight
+" ===
+lua << EOF
+require("todo-comments").setup {
+  signs = true, -- show icons in the signs column
+  sign_priority = 8, -- sign priority
+  -- keywords recognized as todo comments
+  keywords = {
+    FIX = {
+      icon = " ", -- icon used for the sign, and in search results
+      color = "error", -- can be a hex color, or a named color (see below)
+      alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
+      -- signs = false, -- configure signs for some keywords individually
+    },
+    TODO = { icon = " ", color = "info" },
+    HACK = { icon = " ", color = "warning" },
+    WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+  },
+  merge_keywords = true, -- when true, custom keywords will be merged with the defaults
+  -- highlighting of the line containing the todo comment
+  -- * before: highlights before the keyword (typically comment characters)
+  -- * keyword: highlights of the keyword
+  -- * after: highlights after the keyword (todo text)
+  highlight = {
+    before = "", -- "fg" or "bg" or empty
+    keyword = "wide", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
+    after = "fg", -- "fg" or "bg" or empty
+    pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlightng (vim regex)
+    comments_only = true, -- uses treesitter to match keywords in comments only
+    max_line_len = 400, -- ignore lines longer than this
+    exclude = {}, -- list of file types to exclude highlighting
+  },
+  -- list of named colors where we try to extract the guifg from the
+  -- list of hilight groups or use the hex color if hl not found as a fallback
+  colors = {
+    error = { "LspDiagnosticsDefaultError", "ErrorMsg", "#DC2626" },
+    warning = { "LspDiagnosticsDefaultWarning", "WarningMsg", "#FBBF24" },
+    info = { "LspDiagnosticsDefaultInformation", "#2563EB" },
+    hint = { "LspDiagnosticsDefaultHint", "#10B981" },
+    default = { "Identifier", "#7C3AED" },
+  },
+  search = {
+    command = "rg",
+    args = {
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+    },
+    -- regex that will be used to match keywords.
+    -- don't replace the (KEYWORDS) placeholder
+    pattern = [[\b(KEYWORDS):]], -- ripgrep regex
+    -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
+  },
+}
+EOF
+
+" ===
+" === zen-mode
+" ===
+" command: twilight
+lua << EOF
+  require("twilight").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
+
+
+
