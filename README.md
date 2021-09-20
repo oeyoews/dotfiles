@@ -2,8 +2,7 @@
 <!-- vim-markdown-toc Marked -->
 
 * [Environment](#environment)
-* [Dependencies](#dependencies)
-* [Installation](#installation)
+* [Install](#install)
 * [NOTE](#note)
 * [Configuration](#configuration)
 
@@ -12,20 +11,11 @@
 Environment
 ---
 
-- **Linux:**  mangaro gdm gnome40
-- **Terminal**: kitty
-- **Shell** : zsh
-- **Font:** Droid Sans Mono, DejaVu Sans Mono
-- **Editor**: nvim, vscode
-- **Input_method:** fcitx5
-- **Tools**: qv2ray, v2raya, v2ray, cheat, crontab
+| Linux   | Terminal | Shell | Font  | Editor |
+|---------|----------|-------|-------|--------|
+| gnome40 | kitty    | zsh   | Droid | neovim |
 
-Dependencies
----
-
-- stow: my all dotfiles directory is fit for stow
-
-Installation
+Install
 ---
 
 ```zsh
@@ -46,7 +36,11 @@ git clone --depth=1  https://gitee.com/oeyoews/dotfiles.git ~
 NOTE
 ---
 
-- this last reposonity location in your directory  must be like this : ~/dotfiles
+```text
+1. Stow: my all dotfiles directory is fit for stow
+
+2. this last reposonity location in your directory  must be like this : ~/dotfiles
+```
 
 Configuration
 ---
@@ -60,5 +54,7 @@ Configuration
 ```zsh 
 # other configure in ~/dotfiles/archive
   cd ~/dotfiles/archive
-  stow -t ~ tiny_vimrcccccc
+  stow -t ~ tiny_vimrc
 ```
+
+- [X] demo
