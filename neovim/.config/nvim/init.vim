@@ -56,11 +56,18 @@
 " === Mappings
 " ===
 
-" better indent
+nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
+nnoremap <silent> <SPACE>tg :set signcolumn=yes<CR>
+nnoremap <silent> <SPACE>tw :set wrap!<CR>
+nnoremap <silent> <SPACE>tp :set spell!<CR>
+nnoremap <silent> <SPACE>tl :set list<CR>
+
+nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
+
+" better continue indent
 noremap > >gv
 noremap < <gv
 
-nnoremap <SPACE>sl :set list<CR>
 
 inoremap <C-b> <ESC>hi
 inoremap <C-f> <ESC>la
@@ -95,15 +102,10 @@ nnoremap Y "*p
 let g:mapleader = ','
 
 " vim-plug
-nnoremap <SPACE>ti :PlugInstall<CR>
-nnoremap <SPACE>tc :PlugClean<CR>
-nnoremap <SPACE>tu :PlugUpdate<CR>
-nnoremap <SPACE>tU :PlugUpgrade<CR>
-
-" toggle wrap status
-nnoremap <silent> <SPACE>sw :set wrap!<CR>
-nnoremap <silent> <SPACE>sp :set spell!<CR>
-nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
+nnoremap <SPACE>pi :PlugInstall<CR>
+nnoremap <SPACE>pc :PlugClean<CR>
+nnoremap <SPACE>pu :PlugUpdate<CR>
+nnoremap <SPACE>pU :PlugUpgrade<CR>
 
 " toggle Upercase
 nnoremap guw gUawe
@@ -186,7 +188,7 @@ set noswapfile  " no swapfile
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
 set scrolloff=1
-set signcolumn=yes  " left gutter
+set signcolumn=no  " left gutter
 set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
 set viewoptions=cursor,folds,slash,unix
@@ -235,7 +237,6 @@ Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 
 " complete and error tips
-" bugs :checkhealth snippets error(optional)
 Plug 'nvim-lua/completion-nvim'
 
 " search
@@ -250,8 +251,8 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'skywind3000/vim-terminal-help'
 
 " buffer manager tab icons
-" Plug 'akinsho/bufferline.nvim' " some bugs like mapping will be deprecated
-Plug 'romgrk/barbar.nvim'
+Plug 'akinsho/bufferline.nvim' " some bugs like mapping will be deprecated
+" Plug 'romgrk/barbar.nvim'
 
 Plug 'junegunn/fzf.vim'
 
@@ -273,6 +274,8 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 
 " Plug 'ntpeters/vim-better-whitespace'
+" Plug 'windwp/nvim-autospace'
+
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
 Plug 'preservim/nerdcommenter'
@@ -708,7 +711,8 @@ noremap <silent> <SPACE>ac :Calendar -position=here<CR>
 " ===
 " === goyo
 " ===
-nnoremap <SPACE>wc :Goyo<CR>
+" Goyo like GoyoToggle
+nnoremap <SPACE>tr :Goyo<CR>
 
 " ===
 " === suda.vim
@@ -726,6 +730,13 @@ lua <<EOF
 -- }
 -- }
 --]]
+EOF
+
+" ===
+" === bufferline.nvim
+" ===
+lua << EOF
+require("bufferline").setup{}
 EOF
 
 " ===
@@ -994,8 +1005,8 @@ EOF
 " ===
 " === zen-mode
 " ===
-" command: Twilight
-nnoremap <SPACE>wz :Twilight<CR>
+" Twilight = TwilghtToggle
+nnoremap <SPACE>tz :Twilight<CR>
 lua << EOF
   require("twilight").setup {}
 EOF
