@@ -6,50 +6,35 @@
 "  BUG: have a file , source will error(optional!)
 "  BUG:	M char is dis appear(optional!)
 "	 BUG: config color for complete(optional)
-"	 HACK: moudles for init.vim(optional)
+"  BUG: moudles for init.vim(optional)
+"  BUG: messages need touch space or enter use new window to manage this command print result
 
-"  TODO: messages need touch space or enter use new window to manage this command print result
 "  TODO: test recursion: map and nomap
-"	 TODO: learn plugin or ftplugin' function
 "  TODO: vnoremap : '<,'>normal<SPACE>
 "  TODO: use ls to list all buffer, how to jump special buffer in maxium window
-"  TODO: learn todo keyword for this plugin in the single gutter
-"	 TODO:	 code-runner
-"	 TODO: for bd , how to silent(buffer)
+"	 TODO: code-runner
 "	 TODO: configure gitgutter and setting 优先级 for gutter
-"	 how to del some bookmarks
-"	 TODO: have some bug
-"	 help in file
-"	 undotree how to preview
-"	 learn register && 如何将vim的文字同步到system
-"	 how to smart quit window?
-"	 learn config bullets.vim and table-mode md config
-"	 how to complete direction in current text
-
-"  HACK: how to bindings to require for https://github.com/folke/trouble.nvim (API)
+"	 TODO: how to del some bookmarks
+"	 TODO: undotree how to preview
+"	 TODO: learn register && 如何将vim的文字同步到system
+"	 TODO: learn config bullets.vim and table-mode md config
 
 " ===
 " === deprecated snips
 " ===
 " autocmd! BufWritePost $MYVIMRC source $MYVIMRC
-" :ls show all buffers
-" :tabs show all tabs
 " vim -u NORC
 " set runtimepath?
 " :h config
-" let $MYVIMRC = "$HOME/.config/nvim/init.vim"
-" eg: nnoremap <SPACE>tp :tabnew $MYVIMRC<CR>:echom "Open MYVIMRC!"<CR>
-" eg: noremap <SPACE>tP <CR>:source<SPACE>$MYVIMRC<CR>:echom "Refresh finished!"<ESC>
-" nnoremap <silent> <SPACE>a; mqA;<ESC>`q :echom "Add a Comma in the end!"<CR>
-" nnoremap <SPACE>ti :source<SPACE>%<CR> :PlugInstall<CR>
 
 " ===
 " === Mappings
 " ===
 
+" copy path to clipboard
 nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> :echo "Copy path finished!"<CR>
 
-" switch
+" switch options
 nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
 nnoremap <silent> <SPACE>ts :set signcolumn=yes<CR>
 nnoremap <silent> <SPACE>tS :set signcolumn=no<CR>
@@ -70,6 +55,8 @@ nnoremap <SPACE>ss /
 
 " buffer
 nnoremap <silent> <SPACE>bn :bn<CR>
+nnoremap <silent> <SPACE>bb :ls<CR>
+nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bh :vnew<CR>
 nnoremap <silent> <SPACE>bx :tabnew<CR>
@@ -112,7 +99,7 @@ noremap <ESC> <ESC><C-L>
 " ===
 " ===  Options
 " ===
-set selectmode=""
+" set selectmode=""
 set matchtime=2
 set virtualedit=block
 set number relativenumber
@@ -124,7 +111,7 @@ set smartcase
 set exrc
 set autoread
 set secure
-set mouse=nv " support mouse
+set mouse+=a " support mouse
 set linebreak " better wrap
 set hidden  " not must be save current buffer
 set ruler  " show line number and column number in status
@@ -663,7 +650,7 @@ let g:bullets_enabled_file_types = [
 " ===
 " === vim-calendar
 " ===
-noremap <silent> <SPACE>ac :Calendar -position=here<CR>
+noremap <silent> <SPACE>at :Calendar -position=here<CR>
 " noremap \\ :Calendar -view=clock -position=here<CR>
 " let g:calendar_google_calendar = 1
 " let g:calendar_google_task = 1
