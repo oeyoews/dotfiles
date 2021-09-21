@@ -1,4 +1,3 @@
-![example2](./archive/img/example2.png)
 <!-- vim-markdown-toc Marked -->
 
 * [Environment](#environment)
@@ -7,16 +6,13 @@
 * [Configuration](#configuration)
 
 <!-- vim-markdown-toc -->
-
-Environment
----
+## Environment
 
 | Linux   | Terminal | Shell | Font  | Editor |
 |---------|----------|-------|-------|--------|
 | gnome40 | kitty    | zsh   | Droid | neovim |
 
-Install
----
+## Install
 
 ```zsh
 # gitlab
@@ -33,8 +29,7 @@ git clone --depth=1  https://github.com/oeyoews/dotfiles.git ~
 git clone --depth=1  https://gitee.com/oeyoews/dotfiles.git ~
 ```
 
-NOTE
----
+## NOTE
 
 ```text
 1. Stow: my all dotfiles directory is fit for stow
@@ -42,8 +37,7 @@ NOTE
 2. this last reposonity location in your directory  must be like this : ~/dotfiles
 ```
 
-Configuration
----
+## Configuration
 
 ```zsh
   # omz(improve version for oh-my-zsh)
@@ -56,5 +50,3 @@ Configuration
   cd ~/dotfiles/archive
   stow -t ~ tiny_vimrc
 ```
-
-- [X] demo
