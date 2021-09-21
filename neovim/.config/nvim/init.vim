@@ -2,22 +2,13 @@
 " === TODO 📁
 " === 
 
-"  BUG: visual secection for snips(optional!)
-"  BUG: have a file , source will error(optional!)
-"  BUG:	M char is dis appear(optional!)
-"	 BUG: config color for complete(optional)
-"  BUG: moudles for init.vim(optional)
-"  BUG: messages need touch space or enter use new window to manage this command print result
-
 "  TODO: test recursion: map and nomap
 "  TODO: vnoremap : '<,'>normal<SPACE>
 "  TODO: use ls to list all buffer, how to jump special buffer in maxium window
+"  completion can just use ultisnippets
 "	 TODO: code-runner
-"	 TODO: configure gitgutter and setting 优先级 for gutter
 "	 TODO: how to del some bookmarks
-"	 TODO: undotree how to preview
 "	 TODO: learn register && 如何将vim的文字同步到system
-"	 TODO: learn config bullets.vim and table-mode md config
 
 " ===
 " === deprecated snips
@@ -168,6 +159,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
 " let g:plug_url_format = 'git@github.com:%s.git'
 
+" Plug 'Shougo/neocomplete.vim'
+Plug 'nvim-neorg/neorg' 
+" Plug 'liuchengxu/vista.vim'
 Plug 't9md/vim-choosewin'
 " Plug 'Shougo/vimshell.vim'
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -201,6 +195,7 @@ Plug 'folke/trouble.nvim'
 " lsp_ui
 Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-treesitter/completion-treesitter'
+Plug 'onsails/lspkind-nvim'
 
 " search
 Plug 'nvim-lua/plenary.nvim'
@@ -398,7 +393,7 @@ END
 " ===
 set laststatus=2
 let g:lightline = {
-			\ 'mode_map': {
+			  \ 'mode_map': {
 				\ 'n' : 'N',
 				\ 'i' : 'I',
 				\ 'R' : 'R',
@@ -413,10 +408,10 @@ let g:lightline = {
 				\ },
 				\ 'colorscheme': 'tokyonight',
 				\ 'active': {
-					\   'left': [ [ 'mode', 'paste' ],
-					\             [ 'readonly', 'filename', 'modified' ] ]
-					\ },
-					\ }
+				\   'left': [ [ 'mode', 'paste' ],
+				\             [ 'readonly', 'filename', 'modified', ] ]
+				\ },
+				\ }
 
 " ===
 " === which-key.vim
@@ -955,3 +950,81 @@ nnoremap <SPACE>bH :Startify<CR>
 " ===
 nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
+
+" ===
+" === lspkind.nvim
+" ===
+lua << EOF
+require('lspkind').init({
+    -- enables text annotations
+    --
+    -- default: true
+    with_text = true,
+
+    -- default symbol map
+    -- can be either 'default' (requires nerd-fonts font) or
+    -- 'codicons' for codicon preset (requires vscode-codicons font)
+    --
+    -- default: 'default'
+    preset = 'codicons',
+
+    -- override preset symbols
+    --
+    -- default: {}
+    symbol_map = {
+      Text = "",
+      Method = "",
+      Function = "",
+      Constructor = "",
+      Field = "ﰠ",
+      Variable = "",
+      Class = "ﴯ",
+      Interface = "",
+      Module = "",
+      Property = "ﰠ",
+      Unit = "塞",
+      Value = "",
+      Enum = "",
+      Keyword = "",
+      Snippet = "",
+      Color = "",
+      File = "",
+      Reference = "",
+      Folder = "",
+      EnumMember = "",
+      Constant = "",
+      Struct = "פּ",
+      Event = "",
+      Operator = "",
+      TypeParameter = ""
+    },
+})
+EOF
+
+" ===
+" === vista.nvim
+" ===
+nnoremap <SPACE>fv :Vista!!<CR>
+
+let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+
+" ===
+" === neorg
+" ===
+lua << EOF
+    require('neorg').setup {
+        -- Tell Neorg what modules to load
+        load = {
+            ["core.defaults"] = {}, -- Load all the default modules
+            ["core.norg.concealer"] = {}, -- Allows for use of icons
+            ["core.norg.dirman"] = { -- Manage your directories with Neorg
+                config = {
+                    workspaces = {
+                        my_workspace = "~/neorg"
+                    }
+                }
+            }
+        },
+    }
+EOF
+
