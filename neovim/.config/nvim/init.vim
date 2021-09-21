@@ -2,10 +2,11 @@
 " === TODO 📁
 " === 
 
-"  BUG: visual secection for snips
-"  BUG: have a file , source will error
-"  BUG:	M char is dis appear
-"
+"  BUG: visual secection for snips(optional!)
+"  BUG: have a file , source will error(optional!)
+"  BUG:	M char is dis appear(optional!)
+"	 BUG: config color for complete(optional)
+"	 HACK: moudles for init.vim(optional)
 
 "  TODO: messages need touch space or enter use new window to manage this command print result
 "  TODO: test recursion: map and nomap
@@ -13,29 +14,19 @@
 "  TODO: vnoremap : '<,'>normal<SPACE>
 "  TODO: use ls to list all buffer, how to jump special buffer in maxium window
 "  TODO: learn todo keyword for this plugin in the single gutter
-"  TODO: learn <Plug> interface
 "	 TODO:	 code-runner
 "	 TODO: for bd , how to silent(buffer)
 "	 TODO: configure gitgutter and setting 优先级 for gutter
+"	 how to del some bookmarks
+"	 TODO: have some bug
+"	 help in file
+"	 undotree how to preview
+"	 learn register && 如何将vim的文字同步到system
+"	 how to smart quit window?
 "	 learn config bullets.vim and table-mode md config
 "	 how to complete direction in current text
-"	 find recent file
-"	 config color for complete
-"	 make tablet tools for md
 
 "  HACK: how to bindings to require for https://github.com/folke/trouble.nvim (API)
-"	 HACK: learn ga gv
-"	 HACK: moudles for init.vim(optional)
-"  HACK: how to open link in vim
-"  HACK: 数字选择标签窗口
-"  HACK: whitespace config
-
-"	 FIX: space f o 
-"	 FIX: find file in vim
-"	 FIX: how to indent continue
-"	 FIX: try close tab (close not really close tab)
-"	 FIX: space f o(filetree location)
-"	 FIX: clear highlight
 
 " ===
 " === deprecated snips
@@ -56,24 +47,20 @@
 " === Mappings
 " ===
 
+nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> :echo "Copy path finished!"<CR>
+
+" switch
 nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
-nnoremap <silent> <SPACE>tg :set signcolumn=yes<CR>
+nnoremap <silent> <SPACE>ts :set signcolumn=yes<CR>
+nnoremap <silent> <SPACE>tS :set signcolumn=no<CR>
 nnoremap <silent> <SPACE>tw :set wrap!<CR>
 nnoremap <silent> <SPACE>tp :set spell!<CR>
 nnoremap <silent> <SPACE>tl :set list<CR>
+nnoremap <silent> <SPACE>tL :set nolist<CR>
 
-nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
-
-" better continue indent
+" continue indent
 noremap > >gv
 noremap < <gv
-
-
-inoremap <C-b> <ESC>hi
-inoremap <C-f> <ESC>la
-
-" cnoremap <C-b> 
-noremap <ESC> <ESC><C-L>
 
 " command mode
 noremap <space>hh :h<space>
@@ -81,25 +68,27 @@ noremap <space>hc :
 nnoremap <SPACE>he :echo<SPACE>
 nnoremap <SPACE>ss /
 
-" open init.vim
-nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR>
-
 " buffer
 nnoremap <silent> <SPACE>bn :bn<CR>
-" uninstall buffer
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bh :vnew<CR>
-nnoremap <silent> <SPACE>bj :new<CR>
+nnoremap <silent> <SPACE>bx :tabnew<CR>
 nnoremap <silent><SPACE>bm :messages<CR>
 
-noremap L $
+" quit window
+nnoremap <silent><SPACE>qq :q<CR>
+nnoremap <silent><SPACE>qQ :q!<CR>
 
-" system copy
-nnoremap Y "*p
-
-" set leader
-let g:mapleader = ','
+" window split
+noremap s <nop>
+nnoremap <SPACE>w- :split<CR>
+nnoremap <SPACE>w/ :vsplit<CR>
+nnoremap <SPACE>wh <C-w>h
+nnoremap <SPACE>wj <C-w>j
+nnoremap <SPACE>wk <C-w>k
+nnoremap <SPACE>wl <C-w>l
+nnoremap <SPACE>ww <C-w>w
+nnoremap <SPACE>wm <C-w>o
 
 " vim-plug
 nnoremap <SPACE>pi :PlugInstall<CR>
@@ -107,43 +96,24 @@ nnoremap <SPACE>pc :PlugClean<CR>
 nnoremap <SPACE>pu :PlugUpdate<CR>
 nnoremap <SPACE>pU :PlugUpgrade<CR>
 
-" toggle Upercase
-nnoremap guw gUawe
-
-inoremap <C-V> <ESC>p
+" misc
+noremap L $
+nnoremap Y "*p
 nnoremap <C-a> ggVG
-
-" save file
-nnoremap <silent><C-S> :wa<CR>
-nnoremap <silent><SPACE>fs :w<CR>
-
-" quit insert mode
+nnoremap guw gUawe
+let g:mapleader = ','
 inoremap jk <ESC>
-
-" quit window
-nnoremap <silent><SPACE>qq :q<CR>
-nnoremap <silent><leader>qq :q!<CR>
-
-" window split
-noremap s <nop>
-noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
-noremap sj :set splitbelow<CR>:split<CR>
-noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
-noremap sl :set splitright<CR>:vsplit<CR>
-
-nnoremap <SPACE>ww <C-w>w
-nnoremap <SPACE>wh <C-w>h
-nnoremap <SPACE>wj <C-w>j
-nnoremap <SPACE>wk <C-w>k
-nnoremap <SPACE>wl <C-w>l
-nnoremap <SPACE>wm <C-w>o
+nnoremap <silent><SPACE>fs :w<CR>
+nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
+nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
+nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR>
+noremap <ESC> <ESC><C-L>
 
 " ===
 " ===  Options
 " ===
 set selectmode=""
 set matchtime=2
-set splitbelow          " Horizontal split below current for new window
 set virtualedit=block
 set number relativenumber
 set autochdir  " simply minbuffer messages
@@ -173,10 +143,9 @@ set shiftwidth=2  " default indent distance for >> <<
 set tabstop=2 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
-" set smartindent
-" set clipboard^=unnamed
+set smartindent
+set clipboard^=unnamed
 set nolist " show return it configcit for link
-" →
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
@@ -187,7 +156,7 @@ set nobackup  " no backfile
 set noswapfile  " no swapfile
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
-set scrolloff=1
+set scrolloff=3
 set signcolumn=no  " left gutter
 set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
@@ -207,37 +176,44 @@ endif
 " autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 "				\| PlugInstall --sync | source $MYVIMRC
 "				\| endif
+
 call plug#begin('$HOME/.config/nvim/plugged')
-" TODO:
+
 " let g:plug_url_format = 'git@github.com:%s.git'
 
-Plug 'dhruvasagar/vim-table-mode'
+Plug 't9md/vim-choosewin'
+" Plug 'Shougo/vimshell.vim'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+
+" Plug 'wellle/context.vim'
+Plug 'mhinz/vim-startify'
+" Plug 'tweekmonster/exception.vim'
+" Plug 'Shougo/echodoc.vim'
+"
 Plug 'justinmk/vim-syntax-extra'
 Plug 'skywind3000/asyncrun.vim'
 " Plug 'prabirshrestha/vim-lsp'
 
-Plug 'folke/twilight.nvim'
-
-Plug 'folke/todo-comments.nvim'
+" Plug 'folke/todo-comments.nvim'
 
 " notify
 Plug 'rcarriga/nvim-notify'
-
-" bookmarks
-Plug 'MattesGroeger/vim-bookmarks'
-" Plug 'tom-anders/telescope-vim-bookmarks.nvim'
-
-" lsp_ui
-Plug 'glepnir/lspsaga.nvim'
 
 Plug 'ray-x/lsp_signature.nvim'
 
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
-
 " complete and error tips
 Plug 'nvim-lua/completion-nvim'
+" Plug 'steelsojka/completion-buffers'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
+" Plug 'nvim-treesitter/playground'
+Plug 'folke/trouble.nvim'
+" lsp_ui
+Plug 'glepnir/lspsaga.nvim'
+Plug 'nvim-treesitter/completion-treesitter'
 
 " search
 Plug 'nvim-lua/plenary.nvim'
@@ -248,24 +224,34 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 
 " terminal
-Plug 'skywind3000/vim-terminal-help'
+" Plug 'skywind3000/vim-terminal-help'
 
 " buffer manager tab icons
 Plug 'akinsho/bufferline.nvim' " some bugs like mapping will be deprecated
 " Plug 'romgrk/barbar.nvim'
-
-Plug 'junegunn/fzf.vim'
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
 Plug 'plasticboy/vim-markdown'
 Plug 'dkarter/bullets.vim'
+Plug 'dhruvasagar/vim-table-mode'
 
 Plug 'itchyny/calendar.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'luochen1990/rainbow'
 Plug 'yianwillis/vimcdoc'
+Plug 'folke/twilight.nvim'
+Plug 'junegunn/fzf.vim'
+" bookmarks
+Plug 'MattesGroeger/vim-bookmarks'
+" Plug 'tom-anders/telescope-vim-bookmarks.nvim'
+Plug 'tpope/vim-capslock'
+Plug 'tyru/open-browser.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'lambdalisue/suda.vim'
+Plug 'makerj/vim-pdf'
+Plug 'airblade/vim-gitgutter'
 
 " file manager
 " Plug 'scrooloose/nerdtree'
@@ -276,26 +262,17 @@ Plug 'kyazdani42/nvim-tree.lua'
 " Plug 'ntpeters/vim-better-whitespace'
 " Plug 'windwp/nvim-autospace'
 
-Plug 'tpope/vim-capslock'
-Plug 'tyru/open-browser.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'folke/which-key.nvim'
-Plug 'folke/trouble.nvim'
 
 " statusline
 " Plug 'itchyny/lightline.vim'
 " Plug 'hoob3rt/lualine.nvim'
 " Plug 'shadmansaleh/lualine.nvim'
 Plug 'windwp/windline.nvim'
-
-Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
-" Plug 'nvim-treesitter/playground'
-
-" lsp
-Plug 'neovim/nvim-lspconfig'
 
 " misc tools
 Plug 'mbbill/undotree'
@@ -309,11 +286,6 @@ Plug 'Chiel92/vim-autoformat'
 " indentline
 " Plug 'Yggdroot/indentLine'
 " Plug 'lukas-reineke/indent-blankline.nvim'
-
-Plug 'junegunn/goyo.vim'
-Plug 'lambdalisue/suda.vim'
-Plug 'makerj/vim-pdf'
-Plug 'airblade/vim-gitgutter'
 
 " Plug 'glepnir/dashboard-nvim'
 call plug#end()
@@ -347,7 +319,7 @@ call plug#end()
 " === markdown-preview.nvim
 " ===
 " autocmd FileType markdown if open it directly, can't use this command TODO
-autocmd FileType markdown nnoremap <space>fmm :MarkdownPreviewToggle<CR>
+autocmd FileType markdown nnoremap <space>fmp :MarkdownPreviewToggle<CR>
 let g:mkdp_echo_preview_url = 1
 let g:mkdp_open_to_the_world = 0
 nnoremap <SPACE>fmb bi**<ESC>ea**<ESC>
@@ -355,7 +327,7 @@ nnoremap <SPACE>fmb bi**<ESC>ea**<ESC>
 " ===
 " === vim-markdown-toc
 " ===
-autocmd FileType markdown nnoremap <space>fmt :GenTocMarked<CR>
+autocmd FileType markdown nnoremap <space>fmit :GenTocMarked<CR>
 
 " ===
 " === rainbow
@@ -406,14 +378,19 @@ let g:NERDToggleCheckAllLines = 1
 " === tokyonight
 " ===
 " link: https://github.com/folke/tokyonight.nvim
+" before options: day storm(default) night
+" let g:tokyonight_style = "day"
+" after
 colorscheme tokyonight
 
 " ===
 " === windline.nvim
 " ===
+nnoremap <SPACE>sn :lua require('wlsample.evil_line')<CR>
+			\ :echom "Switch lsp_statusline!"<CR>
 lua << EOF
--- require('wlsample.bubble')
-require('wlsample.evil_line')
+require('wlsample.bubble')
+-- require('wlsample.evil_line')
 EOF
 
 " ===
@@ -665,12 +642,12 @@ let g:undotree_ShortIndicators = 1
 let g:undotree_WindowLayout = 2
 let g:undotree_DiffpanelHeight = 8
 let g:undotree_SplitWidth = 24
-function g:Undotree_CustomMap()
-	nmap <buffer> u <plug>UndotreeNextState
-	nmap <buffer> e <plug>UndotreePreviousState
-	nmap <buffer> U 5<plug>UndotreeNextState
-	nmap <buffer> E 5<plug>UndotreePreviousState
-endfunc
+" function g:Undotree_CustomMap()
+	" nmap <buffer> u <plug>UndotreeNextState
+	" nmap <buffer> e <plug>UndotreePreviousState
+	" nmap <buffer> U 5<plug>UndotreeNextState
+	" nmap <buffer> E 5<plug>UndotreePreviousState
+" endfunc
 
 " ===
 " === Bullets.vim
@@ -717,6 +694,8 @@ nnoremap <SPACE>tr :Goyo<CR>
 " ===
 " === suda.vim
 " ===
+nnoremap <SPACE>fE :SudaRead<CR>
+nnoremap <SPACE>fw :SudaWrite<CR>
 
 " ===
 " === lualine.nvim
@@ -735,37 +714,45 @@ EOF
 " ===
 " === bufferline.nvim
 " ===
+nnoremap <silent><SPACE>ws :BufferLinePick<CR>
+nnoremap <silent><SPACE>1 <Cmd>BufferLineGoToBuffer 1<CR>
+nnoremap <silent><SPACE>2 <Cmd>BufferLineGoToBuffer 2<CR>
+nnoremap <silent><SPACE>3 <Cmd>BufferLineGoToBuffer 3<CR>
+nnoremap <silent><SPACE>4 <Cmd>BufferLineGoToBuffer 4<CR>
+nnoremap <silent><SPACE>5 <Cmd>BufferLineGoToBuffer 5<CR>
 lua << EOF
-require("bufferline").setup{}
+require('bufferline').setup {
+	options = {
+		numbers = "ordinal",
+		left_mouse_command = "buffer %d",
+		separator_style = "thin",
+offsets = {{filetype = "NvimTree", text = "File Explorer" }},
+		}
+	}
 EOF
 
 " ===
 " === barbar
 " ===
-nnoremap <silent>    <A-1> :BufferGoto 1<CR>
-nnoremap <silent>    <A-2> :BufferGoto 2<CR>
-nnoremap <silent>    <A-3> :BufferGoto 3<CR>
-nnoremap <silent>    <A-4> :BufferGoto 4<CR>
-nnoremap <silent>    <A-5> :BufferGoto 5<CR>
-nnoremap <silent>    <A-6> :BufferGoto 6<CR>
-nnoremap <silent>    <A-7> :BufferGoto 7<CR>
-nnoremap <silent>    <A-8> :BufferGoto 8<CR>
-nnoremap <silent>    <A-9> :BufferLast<CR>
-nnoremap <silent>    <A-,> :BufferPrevious<CR>
-nnoremap <silent>    <A-.> :BufferNext<CR>
-nnoremap <silent>    <A-c> :BufferClose<CR>
-let bufferline = get(g:, 'bufferline', {})
-let bufferline.add_in_buffer_number_order = v:true
-let bufferline.animation = v:false
-let bufferline.tabpages = v:false
-let bufferline.auto_hide = v:false
-let bufferline.maximum_length =  30
-let bufferline.maximum_padding =  4
-
-" ===
-" === term-help
-" ===
-" https://github.com/skywind3000/vim-terminal-help
+" nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+" nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+" nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+" nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+" nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+" nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+" nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+" nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+" nnoremap <silent>    <A-9> :BufferLast<CR>
+" nnoremap <silent>    <A-,> :BufferPrevious<CR>
+" nnoremap <silent>    <A-.> :BufferNext<CR>
+" nnoremap <silent>    <A-c> :BufferClose<CR>
+" let bufferline = get(g:, 'bufferline', {})
+" let bufferline.add_in_buffer_number_order = v:true
+" let bufferline.animation = v:false
+" let bufferline.tabpages = v:false
+" let bufferline.auto_hide = v:false
+" let bufferline.maximum_length =  30
+" let bufferline.maximum_padding =  4
 
 " ===
 " === css-highlight
@@ -796,11 +783,11 @@ imap <tab> <Plug>(completion_smart_tab)
 imap <s-tab> <Plug>(completion_smart_s_tab)
 " Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
-" possible value: 'UltiSnips', 'Neosnippet', 'vim-vsnip', 'snippets.nvim'
 let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_confirm_key = "\<CR>"
 let g:completion_matching_strategy_list = ['exact', 'substring']
-let g:completion_matching_ignore_case = 1
+let g:completion_matching_ignore_case = 0
+let g:completion_matching_smart_case = 1
 let g:completion_trigger_character = ['.', '::']
 let g:completion_trigger_keyword_length = 2 " default = 1
 let g:completion_trigger_on_delete = 1
@@ -822,20 +809,25 @@ lua << EOF
 EOF
 
 " ===
+" === completetion-buffer
+" ===
+let g:completion_chain_complete_list = [
+    \{'complete_items': ['lsp', 'snippet']},
+    \{'mode': '<c-p>'},
+    \{'mode': '<c-n>'}
+\]
+" ===
 " === UltSnips
 " ===
 " link: https://github.com/hrsh7th/vim-vsnip
 nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>
-" disable tab to complete
-let g:UltiSnipsExpandTrigger="<>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsListSnippets="<C-e>"
+let g:UltiSnipsExpandTrigger="\<CR>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
+let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.config/nvim/Ultisnips/',
 			\ $HOME.'/.config/nvim/plugged/vim-snippets/UltiSnips/',]
 
-			 "UltiSnips",]
 " ===
 " === lspsaga.nvim(lsp_ui)
 " ===
@@ -851,20 +843,9 @@ nnoremap <silent>gs :Lspsaga signature_help<CR>
 nnoremap <silent>gr :Lspsaga rename<CR>
 nnoremap <silent>gD :Lspsaga preview_definition<CR>
 " A is <alt>
-nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
+" some bug for this terminal
+" nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
 tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
-
-" ===
-" === term better
-" ===
-" ALT + =: toggle terminal below.
-" ALT + SHIFT + h: move to the window on the left.
-" ALT + SHIFT + l: move to the window on the right.
-" ALT + SHIFT + j: move to the window below.
-" ALT + SHIFT + k: move to the window above.
-" ALT + SHIFT + n: move to the previous window.
-" ALT + -: paste register 0 to terminal.
-" ALT + q: switch to terminal normal mode.
 
 " ===
 " === follow cursor
@@ -944,63 +925,6 @@ EOF
 " ===
 " === todo-hlight
 " ===
-lua << EOF
-require("todo-comments").setup {
-  signs = true, -- show icons in the signs column
-  sign_priority = 8, -- sign priority
-  -- keywords recognized as todo comments
-  keywords = {
-    FIX = {
-      icon = " ", -- icon used for the sign, and in search results
-      color = "error", -- can be a hex color, or a named color (see below)
-      alt = { "FIXME", "BUG", "FIXIT", "ISSUE" }, -- a set of other keywords that all map to this FIX keywords
-      -- signs = false, -- configure signs for some keywords individually
-    },
-    TODO = { icon = " ", color = "info" },
-    HACK = { icon = " ", color = "warning" },
-    WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
-    PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-    NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
-  },
-  merge_keywords = true, -- when true, custom keywords will be merged with the defaults
-  -- highlighting of the line containing the todo comment
-  -- * before: highlights before the keyword (typically comment characters)
-  -- * keyword: highlights of the keyword
-  -- * after: highlights after the keyword (todo text)
-  highlight = {
-    before = "", -- "fg" or "bg" or empty
-    keyword = "wide", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
-    after = "fg", -- "fg" or "bg" or empty
-    pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlightng (vim regex)
-    comments_only = true, -- uses treesitter to match keywords in comments only
-    max_line_len = 400, -- ignore lines longer than this
-    exclude = {}, -- list of file types to exclude highlighting
-  },
-  -- list of named colors where we try to extract the guifg from the
-  -- list of hilight groups or use the hex color if hl not found as a fallback
-  colors = {
-    error = { "LspDiagnosticsDefaultError", "ErrorMsg", "#DC2626" },
-    warning = { "LspDiagnosticsDefaultWarning", "WarningMsg", "#FBBF24" },
-    info = { "LspDiagnosticsDefaultInformation", "#2563EB" },
-    hint = { "LspDiagnosticsDefaultHint", "#10B981" },
-    default = { "Identifier", "#7C3AED" },
-  },
-  search = {
-    command = "rg",
-    args = {
-      "--color=never",
-      "--no-heading",
-      "--with-filename",
-      "--line-number",
-      "--column",
-    },
-    -- regex that will be used to match keywords.
-    -- don't replace the (KEYWORDS) placeholder
-    pattern = [[\b(KEYWORDS):]], -- ripgrep regex
-    -- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
-  },
-}
-EOF
 
 " ===
 " === zen-mode
@@ -1026,4 +950,21 @@ nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 " ===
 " === vim-table-mode
 " ===
-" command: <Leader>tm enable this plugin
+" link: https://github.com/dhruvasagar/vim-table-mode
+nnoremap <SPACE>fmt :TableModeToggle<CR>
+
+" ===
+" === echodoc
+" ===
+let g:echodoc_enable_at_startup = 1
+
+" ===
+" === vim-startify
+" ===
+nnoremap <SPACE>bH :Startify<CR>
+
+" ===
+" === vim-choosewin
+" ===
+nmap  -  <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
