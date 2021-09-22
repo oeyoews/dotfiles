@@ -1,19 +1,17 @@
+" {{{  TODO
+" ===
 " === 
-" === TODO 📁
-" === 
-
 "  TODO: test recursion: map and nomap
 "  TODO: vnoremap : '<,'>normal<SPACE>
-"  TODO: use ls to list all buffer, how to jump special buffer in maxium window
-"  completion can just use ultisnippets
-"  learn ttimeoutlen and timeoutlen
-"	 TODO: code-runner
+"	 TODO: code-runner  :asyncrun
+"	 echom in minibuffer
 "	 TODO: how to del some bookmarks
-"	 TODO: learn register && 如何将vim的文字同步到system
+" }}}
 
+" {{{ Mappings
 " ===
-" === Mappings
 " ===
+vnoremap : :'<,'>normal<SPACE>
 
 " copy path to clipboard
 nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> :echo "Copy path finished!"<CR>
@@ -40,7 +38,7 @@ nnoremap <SPACE>ss /
 " buffer
 " tips: :b[uffer] <number> or <buffername>
 nnoremap <silent> <SPACE>bn :bn<CR>
-nnoremap <silent> <SPACE>bb :!ls<CR>
+nnoremap <silent> <SPACE>bb :ls<CR>
 nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bh :vnew<CR>
@@ -82,13 +80,13 @@ inoremap jk <ESC>
 nnoremap <silent><SPACE>fs :w<CR>
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR>
+nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR> :echom "Refreshed!"<CR>
 noremap <ESC> <ESC><C-L>
+" }}}
 
+" {{{ set Options 
 " ===
-" ===  Options
-" ===
-" set selectmode=""
+" === 
 set matchtime=2
 set signcolumn=no
 set virtualedit=block
@@ -98,7 +96,6 @@ language messages en_US.utf8
 set nowrap
 set smartcase
 set exrc
-set autoread
 set secure
 set mouse+=a " support mouse
 set linebreak " better wrap
@@ -133,9 +130,10 @@ set confirm
 set scrolloff=3
 set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
+" }}}
 
+" {{{ Plugins
 " ===
-" === PLUGINS
 " ===
 " automatical checkinstall vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -153,21 +151,23 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
 " let g:plug_url_format = 'git@github.com:%s.git'
 
+Plug 'rhysd/clever-f.vim'
+
+" Plug 'Shougo/vimshell.vim'
 " Plug 'Shougo/neocomplete.vim'
+" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'nvim-neorg/neorg' 
 Plug 'liuchengxu/vista.vim'
 Plug 't9md/vim-choosewin'
-" Plug 'Shougo/vimshell.vim'
-" Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 
 " Plug 'wellle/context.vim'
-Plug 'mhinz/vim-startify'
 " Plug 'tweekmonster/exception.vim'
 " Plug 'Shougo/echodoc.vim'
-"
+Plug 'mhinz/vim-startify'
+
+" Plug 'prabirshrestha/vim-lsp'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'skywind3000/asyncrun.vim'
-" Plug 'prabirshrestha/vim-lsp'
 
 " Plug 'folke/todo-comments.nvim'
 
@@ -181,7 +181,7 @@ Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 " complete and error tips
 Plug 'nvim-lua/completion-nvim'
-" Plug 'steelsojka/completion-buffers'
+Plug 'steelsojka/completion-buffers'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 " Plug 'nvim-treesitter/playground'
@@ -265,10 +265,10 @@ Plug 'Chiel92/vim-autoformat'
 
 " Plug 'glepnir/dashboard-nvim'
 call plug#end()
+" }}}
 
-
-" ===
 " === markdown-preview.nvim
+" ===
 " ===
 " autocmd FileType markdown if open it directly, can't use this command TODO
 autocmd FileType markdown nnoremap <space>fmp :MarkdownPreviewToggle<CR>
@@ -442,21 +442,21 @@ nnoremap H :GitGutterPreviewHunk<CR>
 " === nvim-tree
 " ===
 " link: https://github.com/kyazdani42/nvim-tree.lua
-let g:nvim_tree_side = 'left' "left by default
-let g:nvim_tree_width = 30 "30 by default, can be width_in_columns or 'width_in_percent%'
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default ???
-let g:nvim_tree_gitignore = 1 "0 by default
-let g:nvim_tree_auto_open = 0 "0 
-let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
+let g:nvim_tree_side = 'left' 
+let g:nvim_tree_width = 30 
+let g:nvim_tree_ignore = [ 'node_modules', '.cache' ]
+let g:nvim_tree_gitignore = 1
+let g:nvim_tree_auto_open = 0
+let g:nvim_tree_auto_close = 1
 let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, don't auto open tree on specific filetypes.
-let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a file
-let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
-let g:nvim_tree_follow_update_path = 1 "0 by default, will update the path of the current dir if the file is not inside the tree.
-let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
-let g:nvim_tree_hide_dotfiles = 1 "0 by default, this option hides files and folders starting with a dot `.`
-let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
-let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
-let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_quit_on_open = 0
+let g:nvim_tree_follow = 1
+let g:nvim_tree_follow_update_path = 1
+let g:nvim_tree_indent_markers = 1
+let g:nvim_tree_hide_dotfiles = 1
+let g:nvim_tree_git_hl = 1
+let g:nvim_tree_highlight_opened_files = 1
+let g:nvim_tree_root_folder_modifier = ':~'
 let g:nvim_tree_tab_open = 1 "0 by default, will open the tree when entering a new tab and the tree was previously open
 let g:nvim_tree_auto_resize = 0 "1 by default, will resize the tree to its saved width when opening a file
 let g:nvim_tree_disable_netrw = 0 "1 by default, disables netrw
@@ -541,7 +541,6 @@ let g:undotree_SplitWidth = 24
 	" nmap <buffer> U 5<plug>UndotreeNextState
 	" nmap <buffer> E 5<plug>UndotreePreviousState
 " endfunc 
-" ???
 
 " ===
 " === Bullets.vim
@@ -728,7 +727,7 @@ EOF
 " ===
 " === auto-pairs
 " ===
-let g:AutoPairsFlyMode = 1
+let g:AutoPairsFlyMode = 0
 
 " ===
 " === asynrun
@@ -764,47 +763,47 @@ let g:choosewin_overlay_enable = 1
 " ===
 lua << EOF
 require('lspkind').init({
-    -- enables text annotations
-    --
-    -- default: true
-    with_text = true,
+-- enables text annotations
+--
+-- default: true
+with_text = true,
 
-    -- default symbol map
-    -- can be either 'default' (requires nerd-fonts font) or
-    -- 'codicons' for codicon preset (requires vscode-codicons font)
-    --
-    -- default: 'default'
-    preset = 'codicons',
-    -- override preset symbols
-    --
-    -- default: {}
-    symbol_map = {
-      Text = "",
-      Method = "",
-      Function = "",
-      Constructor = "",
-      Field = "ﰠ",
-      Variable = "",
-      Class = "ﴯ",
-      Interface = "",
-      Module = "",
-      Property = "ﰠ",
-      Unit = "塞",
-      Value = "",
-      Enum = "",
-      Keyword = "",
-      Snippet = "",
-      Color = "",
-      File = "",
-      Reference = "",
-      Folder = "",
-      EnumMember = "",
-      Constant = "",
-      Struct = "פּ",
-      Event = "",
-      Operator = "",
-      TypeParameter = ""
-    },
+-- default symbol map
+-- can be either 'default' (requires nerd-fonts font) or
+-- 'codicons' for codicon preset (requires vscode-codicons font)
+--
+-- default: 'default'
+preset = 'codicons',
+-- override preset symbols
+--
+-- default: {}
+symbol_map = {
+	Text = "",
+	Method = "",
+	Function = "",
+	Constructor = "",
+	Field = "ﰠ",
+	Variable = "",
+	Class = "ﴯ",
+	Interface = "",
+	Module = "",
+	Property = "ﰠ",
+	Unit = "塞",
+	Value = "",
+	Enum = "",
+	Keyword = "",
+	Snippet = "",
+	Color = "",
+	File = "",
+	Reference = "",
+	Folder = "",
+	EnumMember = "",
+	Constant = "",
+	Struct = "פּ",
+	Event = "",
+	Operator = "",
+	TypeParameter = ""
+	},
 })
 EOF
 
@@ -817,18 +816,20 @@ nnoremap <SPACE>fv :Vista!!<CR>
 " === neorg
 " ===
 lua << EOF
-    require('neorg').setup {
-        -- Tell Neorg what modules to load
-        load = {
-            ["core.defaults"] = {}, -- Load all the default modules
-            ["core.norg.concealer"] = {}, -- Allows for use of icons
-            ["core.norg.dirman"] = { -- Manage your directories with Neorg
-                config = {
-                    workspaces = {
-                        my_workspace = "~/neorg"
-                    }
-                }
-            }
-        },
-    }
+require('neorg').setup {
+	-- Tell Neorg what modules to load
+	load = {
+		["core.defaults"] = {}, -- Load all the default modules
+		["core.norg.concealer"] = {}, -- Allows for use of icons
+		["core.norg.dirman"] = { -- Manage your directories with Neorg
+		config = {
+			workspaces = {
+				my_workspace = "~/neorg"
+				}
+			}
+		}
+	},
+}
 EOF
+
+" vim:fdm=marker:fen
