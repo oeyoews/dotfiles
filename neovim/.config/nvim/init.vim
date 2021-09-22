@@ -6,17 +6,10 @@
 "  TODO: vnoremap : '<,'>normal<SPACE>
 "  TODO: use ls to list all buffer, how to jump special buffer in maxium window
 "  completion can just use ultisnippets
+"  learn ttimeoutlen and timeoutlen
 "	 TODO: code-runner
 "	 TODO: how to del some bookmarks
 "	 TODO: learn register && 如何将vim的文字同步到system
-
-" ===
-" === deprecated snips
-" ===
-" autocmd! BufWritePost $MYVIMRC source $MYVIMRC
-" vim -u NORC
-" set runtimepath?
-" :h config
 
 " ===
 " === Mappings
@@ -45,8 +38,9 @@ nnoremap <SPACE>he :echo<SPACE>
 nnoremap <SPACE>ss /
 
 " buffer
+" tips: :b[uffer] <number> or <buffername>
 nnoremap <silent> <SPACE>bn :bn<CR>
-nnoremap <silent> <SPACE>bb :ls<CR>
+nnoremap <silent> <SPACE>bb :!ls<CR>
 nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bh :vnew<CR>
@@ -76,7 +70,11 @@ nnoremap <SPACE>pU :PlugUpgrade<CR>
 
 " misc
 noremap L $
-nnoremap Y "*p
+
+" copy and yank
+noremap <SPACE>yy "*y
+noremap <SPACE>pp "*p
+
 nnoremap <C-a> ggVG
 nnoremap guw gUawe
 let g:mapleader = ','
@@ -92,10 +90,10 @@ noremap <ESC> <ESC><C-L>
 " ===
 " set selectmode=""
 set matchtime=2
+set signcolumn=no
 set virtualedit=block
 set number relativenumber
 set autochdir  " simply minbuffer messages
-set autoindent
 language messages en_US.utf8
 set nowrap
 set smartcase
@@ -105,7 +103,6 @@ set secure
 set mouse+=a " support mouse
 set linebreak " better wrap
 set hidden  " not must be save current buffer
-set ruler  " show line number and column number in status
 set nocursorline  " highlight current line
 set ignorecase  " better search"
 " right: mode statusline
@@ -122,23 +119,20 @@ set tabstop=2 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
 set smartindent
-set clipboard^=unnamed
+" set clipboard^=unnamed
 set nolist " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine
 set novisualbell
 set noerrorbells  " no beeps
-set sidescroll=1  " for nowrap lines, scroll them smoothly
 set nobackup  " no backfile
 set noswapfile  " no swapfile
 set nofoldenable " disable automatical fold code, you can fold code by hand must in before
 set confirm
 set scrolloff=3
-set signcolumn=no  " left gutter
 set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
-set viewoptions=cursor,folds,slash,unix
 
 " ===
 " === PLUGINS
@@ -161,7 +155,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
 " Plug 'Shougo/neocomplete.vim'
 Plug 'nvim-neorg/neorg' 
-" Plug 'liuchengxu/vista.vim'
+Plug 'liuchengxu/vista.vim'
 Plug 't9md/vim-choosewin'
 " Plug 'Shougo/vimshell.vim'
 " Plug 'Shougo/vimproc.vim', {'do' : 'make'}
@@ -274,30 +268,6 @@ call plug#end()
 
 
 " ===
-" === dashboard.nvim
-" ===
-" TODO config
-"https://github.com/glepnir/dashboard-nvim
-" eg : "SPC mean the leaderkey
-" let g:dashboard_default_executive ='fzf'
-" let g:dashboard_custom_shortcut={
-" 			\ 'last_session'       : 'SPC s l',
-" 			\ 'find_history'       : 'SPC f h',
-" 			\ 'find_file'          : 'SPC f f',
-" 			\ 'new_file'           : 'SPC c n',
-" 			\ 'change_colorscheme' : 'SPC t c',
-" 			\ 'find_word'          : 'SPC f a',
-" 			\ 'book_marks'         : 'SPC f b',
-" 			\ }
-" let g:dashboard_custom_shortcut_icon['last_session'] = ' '
-" let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
-" let g:dashboard_custom_shortcut_icon['find_file'] = ' '
-" let g:dashboard_custom_shortcut_icon['new_file'] = ' '
-" let g:dashboard_custom_shortcut_icon['change_colorscheme'] = ' '
-" let g:dashboard_custom_shortcut_icon['find_word'] = ' '
-" let g:dashboard_custom_shortcut_icon['book_marks'] = ' '
-
-" ===
 " === markdown-preview.nvim
 " ===
 " autocmd FileType markdown if open it directly, can't use this command TODO
@@ -376,48 +346,9 @@ require('wlsample.bubble')
 EOF
 
 " ===
-" === lualine
-" ===
-lua << END
--- local custom_gruvbox = require'lualine.themes.gruvbox'
---[[
-require'lualine'.setup{
-options = { theme  = custom_gruvbox },
-}
---]]
--- require'lualine'.setup()
-END
-
-" ===
-" === lightline(deprecated)
-" ===
-set laststatus=2
-let g:lightline = {
-			  \ 'mode_map': {
-				\ 'n' : 'N',
-				\ 'i' : 'I',
-				\ 'R' : 'R',
-				\ 'v' : 'V',
-				\ 'V' : 'VL',
-				\ "\<C-v>": 'VB',
-				\ 'c' : 'C',
-				\ 's' : 'S',
-				\ 'S' : 'SL',
-				\ "\<C-s>": 'SB',
-				\ 't': 'T',
-				\ },
-				\ 'colorscheme': 'tokyonight',
-				\ 'active': {
-				\   'left': [ [ 'mode', 'paste' ],
-				\             [ 'readonly', 'filename', 'modified', ] ]
-				\ },
-				\ }
-
-" ===
 " === which-key.vim
 " ===
 " link: https://github.com/folke/which-key.nvim
-"
 lua << EOF
 require("which-key").setup {
 	operators = { gc = "Comments" },
@@ -513,12 +444,12 @@ nnoremap H :GitGutterPreviewHunk<CR>
 " link: https://github.com/kyazdani42/nvim-tree.lua
 let g:nvim_tree_side = 'left' "left by default
 let g:nvim_tree_width = 30 "30 by default, can be width_in_columns or 'width_in_percent%'
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default ???
 let g:nvim_tree_gitignore = 1 "0 by default
-let g:nvim_tree_auto_open = 0 "0 by default, opens the tree when typing `vim $DIR` or `vim`
+let g:nvim_tree_auto_open = 0 "0 
 let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
 let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, don't auto open tree on specific filetypes.
-let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
+let g:nvim_tree_quit_on_open = 0 "0 by default, closes the tree when you open a file
 let g:nvim_tree_follow = 1 "0 by default, this option allows the cursor to be updated when entering a buffer
 let g:nvim_tree_follow_update_path = 1 "0 by default, will update the path of the current dir if the file is not inside the tree.
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
@@ -554,19 +485,6 @@ let g:nvim_tree_window_picker_exclude = {
 " indicates to the window picker that the buffer's window should not be
 " selectable.
 let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
-" let g:nvim_tree_show_icons = {
-"     \ 'git': 1,
-"     \ 'folders': 1,
-"     \ 'files': 0,
-"     \ 'folder_arrows': 1,
-"     \ }
-"If 0, do not show the icons for one of 'git' 'folder' and 'files'
-"1 by default, notice that if 'files' is 1, it will only display
-"if nvim-web-devicons is installed and on your runtimepath.
-"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
-"but this will not work when you set indent_markers (because of UI conflict)
-" default will show icon by default if no icon is provided
-" default shows no icon by default
 let g:nvim_tree_icons = {
 			\ 'default': '',
 			\ 'symlink': '',
@@ -597,21 +515,14 @@ let g:nvim_tree_icons = {
 						\   }
 						\ }
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
-" nnoremap <leader>r :NvimTreeRefresh<CR>
-" nnoremap <leader>n :NvimTreeFindFile<CR>
-" NvimTreeOpen, NvimTreeClose and NvimTreeFocus are also available if you need them
-" set termguicolors " this variable must be enabled for colors to be applied properly
-
-" a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
-
 
 " ===
 " === Undotree
 " ===
 set backupdir=$HOME/.config/nvim/tmp/backup,.
 set directory=$HOME/.config/nvim/tmp/backup,.
-if has('persistent_undo')
+if has('persistent_undo') " ???
 	set undofile
 	set undodir=$HOME/.config/nvim/tmp/undo,.
 endif
@@ -629,7 +540,8 @@ let g:undotree_SplitWidth = 24
 	" nmap <buffer> e <plug>UndotreePreviousState
 	" nmap <buffer> U 5<plug>UndotreeNextState
 	" nmap <buffer> E 5<plug>UndotreePreviousState
-" endfunc
+" endfunc 
+" ???
 
 " ===
 " === Bullets.vim
@@ -646,31 +558,10 @@ let g:bullets_enabled_file_types = [
 " === vim-calendar
 " ===
 noremap <silent> <SPACE>at :Calendar -position=here<CR>
-" noremap \\ :Calendar -view=clock -position=here<CR>
-" let g:calendar_google_calendar = 1
-" let g:calendar_google_task = 1
-" augroup calendar-mappings
-"		autocmd!
-"		" diamond cursor
-"		autocmd FileType calendar nmap <buffer> u <Plug>(calendar_up)
-"		autocmd FileType calendar nmap <buffer> n <Plug>(calendar_left)
-"		autocmd FileType calendar nmap <buffer> e <Plug>(calendar_down)
-"		autocmd FileType calendar nmap <buffer> i <Plug>(calendar_right)
-"		autocmd FileType calendar nmap <buffer> <c-u> <Plug>(calendar_move_up)
-"		autocmd FileType calendar nmap <buffer> <c-n> <Plug>(calendar_move_left)
-"		autocmd FileType calendar nmap <buffer> <c-e> <Plug>(calendar_move_down)
-"		autocmd FileType calendar nmap <buffer> <c-i> <Plug>(calendar_move_right)
-"		autocmd FileType calendar nmap <buffer> k <Plug>(calendar_start_insert)
-"		autocmd FileType calendar nmap <buffer> K <Plug>(calendar_start_insert_head)
-"		" unmap <C-n>, <C-p> for other plugins
-"		autocmd FileType calendar nunmap <buffer> <C-n>
-"		autocmd FileType calendar nunmap <buffer> <C-p>
-" augroup END
 
 " ===
 " === goyo
 " ===
-" Goyo like GoyoToggle
 nnoremap <SPACE>tr :Goyo<CR>
 
 " ===
@@ -678,20 +569,6 @@ nnoremap <SPACE>tr :Goyo<CR>
 " ===
 nnoremap <SPACE>fE :SudaRead<CR>
 nnoremap <SPACE>fw :SudaWrite<CR>
-
-" ===
-" === lualine.nvim
-" ===
-lua <<EOF
--- [[
--- require('lualine').setup {
---	options = {
--- theme = 'palenight'
---	theme = 'evil' -- lualinenotice
--- }
--- }
---]]
-EOF
 
 " ===
 " === bufferline.nvim
@@ -712,29 +589,6 @@ offsets = {{filetype = "NvimTree", text = "File Explorer" }},
 		}
 	}
 EOF
-
-" ===
-" === barbar
-" ===
-" nnoremap <silent>    <A-1> :BufferGoto 1<CR>
-" nnoremap <silent>    <A-2> :BufferGoto 2<CR>
-" nnoremap <silent>    <A-3> :BufferGoto 3<CR>
-" nnoremap <silent>    <A-4> :BufferGoto 4<CR>
-" nnoremap <silent>    <A-5> :BufferGoto 5<CR>
-" nnoremap <silent>    <A-6> :BufferGoto 6<CR>
-" nnoremap <silent>    <A-7> :BufferGoto 7<CR>
-" nnoremap <silent>    <A-8> :BufferGoto 8<CR>
-" nnoremap <silent>    <A-9> :BufferLast<CR>
-" nnoremap <silent>    <A-,> :BufferPrevious<CR>
-" nnoremap <silent>    <A-.> :BufferNext<CR>
-" nnoremap <silent>    <A-c> :BufferClose<CR>
-" let bufferline = get(g:, 'bufferline', {})
-" let bufferline.add_in_buffer_number_order = v:true
-" let bufferline.animation = v:false
-" let bufferline.tabpages = v:false
-" let bufferline.auto_hide = v:false
-" let bufferline.maximum_length =  30
-" let bufferline.maximum_padding =  4
 
 " ===
 " === css-highlight
@@ -776,21 +630,6 @@ let g:completion_trigger_on_delete = 1
 let g:completion_timer_cycle = 200 "default value is 80
 
 " ===
-" === singature
-" ===
-lua << EOF
---[[
--- require "lsp_signature".setup({
---     bind = true, -- This is mandatory, otherwise border config won't get registered.
--- 		verbose = false,
---     handler_opts = {
---       border = "single"
---     }
---   })
---]]
-EOF
-
-" ===
 " === completetion-buffer
 " ===
 let g:completion_chain_complete_list = [
@@ -798,6 +637,7 @@ let g:completion_chain_complete_list = [
     \{'mode': '<c-p>'},
     \{'mode': '<c-n>'}
 \]
+
 " ===
 " === UltSnips
 " ===
@@ -850,34 +690,6 @@ set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor
 autocmd! BufWrite *.c,*.h :Autoformat
 
 " ===
-" === playground
-" ===
-lua << EOF
---[[
-require "nvim-treesitter.configs".setup {
-	playground = {
-	enable = true,
-	disable = {},
-	updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-	persist_queries = false, -- Whether the query persists across vim sessions
-	keybindings = {
-		toggle_query_editor = 'o',
-		toggle_hl_groups = 'i',
-		toggle_injected_languages = 't',
-		toggle_anonymous_nodes = 'a',
-		toggle_language_display = 'I',
-		focus_language = 'f',
-		unfocus_language = 'F',
-		update = 'R',
-		goto_node = '<cr>',
-		show_help = '?',
-		},
-	}
-}
---]]
-EOF
-
-" ===
 " === nvim-treesitter
 " ===
 lua <<EOF
@@ -903,10 +715,6 @@ vim.notify("This is an error message", "error")
  --]]
 EOF
 " let VimNotify = luaeval('vim.notify')
-
-" ===
-" === todo-hlight
-" ===
 
 " ===
 " === zen-mode
@@ -967,7 +775,6 @@ require('lspkind').init({
     --
     -- default: 'default'
     preset = 'codicons',
-
     -- override preset symbols
     --
     -- default: {}
@@ -1006,8 +813,6 @@ EOF
 " ===
 nnoremap <SPACE>fv :Vista!!<CR>
 
-let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
-
 " ===
 " === neorg
 " ===
@@ -1027,4 +832,3 @@ lua << EOF
         },
     }
 EOF
-
