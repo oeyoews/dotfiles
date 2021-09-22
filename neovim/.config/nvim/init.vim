@@ -1,5 +1,3 @@
-" tips: use gf to jump config file or folder
-"
 " import options.vim
 runtime ./options.vim
 
