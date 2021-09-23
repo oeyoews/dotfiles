@@ -13,10 +13,9 @@ Plug 'glepnir/lspsaga.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/completion-nvim'
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
-Plug 'nvim-lua/completion-nvim'
-Plug 'folke/trouble.nvim'
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }

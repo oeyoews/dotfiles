@@ -15,7 +15,7 @@ noremap > >gv
 noremap < <gv
 
 " command mode
-noremap <space>hh :h<space>
+" noremap <space>hh :h<space>
 noremap <space>hc :
 nnoremap <SPACE>he :echo<SPACE>
 nnoremap <SPACE>ss /
@@ -23,7 +23,7 @@ nnoremap <SPACE>ss /
 " buffer
 " tips: :b[uffer] <number> or <buffername>
 nnoremap <silent> <SPACE>bn :bn<CR>
-nnoremap <silent> <SPACE>bb :ls<CR>
+" nnoremap <silent> <SPACE>bb :ls<CR>
 nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bh :vnew<CR>

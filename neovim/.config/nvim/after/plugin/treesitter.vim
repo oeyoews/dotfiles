@@ -1,3 +1,9 @@
+if !exists('g:loaded_nvim_treesitter')
+  echom "Not loaded treesitter"
+  finish
+endif
+
+lua << EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "html",
@@ -17,3 +23,4 @@ require'nvim-treesitter.configs'.setup {
     disable = { "vim", "md"}
   },
 }
+EOF
