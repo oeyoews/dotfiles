@@ -15,9 +15,7 @@ noremap > >gv
 noremap < <gv
 
 " command mode
-" noremap <space>hh :h<space>
-noremap <space>hc :
-nnoremap <SPACE>he :echo<SPACE>
+noremap <SPACE>hh :
 nnoremap <SPACE>ss /
 
 " buffer
@@ -26,7 +24,6 @@ nnoremap <silent> <SPACE>bn :bn<CR>
 " nnoremap <silent> <SPACE>bb :ls<CR>
 nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
-nnoremap <silent> <SPACE>bh :vnew<CR>
 nnoremap <silent> <SPACE>bx :tabnew<CR>
 nnoremap <silent><SPACE>bm :messages<CR>
 
@@ -45,28 +42,27 @@ nnoremap <SPACE>wl <C-w>l
 nnoremap <SPACE>ww <C-w>w
 nnoremap <SPACE>wm <C-w>o
 
-" vim-plug
-nnoremap <SPACE>pi :PlugInstall<CR>
-nnoremap <SPACE>pc :PlugClean<CR>
-nnoremap <SPACE>pu :PlugUpdate<CR>
-nnoremap <SPACE>pU :PlugUpgrade<CR>
-
-" misc
+" jump line end
 noremap L $
-
-" copy and yank
+" copy and yank with system
 noremap <SPACE>yy "*y
 noremap <SPACE>pp "*p
 
 nnoremap <C-a> ggVG
 nnoremap guw gUawe
 let g:mapleader = ','
-inoremap jk <ESC>
-nnoremap <silent><SPACE>fs :w<CR>
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR> :echom "Refreshed!"<CR>
+nnoremap <SPACE>fr :source $MYVIMRC<CR>
 noremap <ESC> <ESC><C-L>
 
+" quit insert mode fastly
+inoremap jk <ESC>
+" save file
+nnoremap <silent><SPACE>fs :w<CR>
+" save all files
 nnoremap <SPACE>fS :wa<CR>
+
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
+
+autocmd FileType help,qf nnoremap <silent> q :q<CR>

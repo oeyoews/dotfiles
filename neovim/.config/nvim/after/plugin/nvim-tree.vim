@@ -1,11 +1,15 @@
-let g:nvim_tree_side = 'left' 
+" nvim-tree locaton in right
+let g:nvim_tree_side = 'right' 
+" open new file, close nvim-tree or not
+let g:nvim_tree_quit_on_open = 1
+" nvim-tree's width is 30
 let g:nvim_tree_width = 30 
+
 let g:nvim_tree_ignore = [ 'node_modules', '.cache' ]
 let g:nvim_tree_gitignore = 1
-let g:nvim_tree_auto_open = 0
+let g:nvim_tree_auto_open = 1
 let g:nvim_tree_auto_close = 1
-let g:nvim_tree_auto_ignore_ft = [ 'startify', 'dashboard' ] "empty by default, don't auto open tree on specific filetypes.
-let g:nvim_tree_quit_on_open = 1
+let g:nvim_tree_auto_ignore_ft = []
 let g:nvim_tree_follow = 1
 let g:nvim_tree_follow_update_path = 1
 let g:nvim_tree_indent_markers = 1
@@ -70,5 +74,8 @@ let g:nvim_tree_icons = {
 						\     'error': "",
 						\   }
 						\ }
+
+" Mappings
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
+" highlight folder
 highlight NvimTreeFolderIcon guibg=blue

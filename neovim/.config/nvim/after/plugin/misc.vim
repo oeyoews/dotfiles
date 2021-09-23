@@ -1,3 +1,8 @@
+" vim-plug
+nnoremap <SPACE>pi :PlugInstall<CR>
+nnoremap <SPACE>pc :PlugClean<CR>
+nnoremap <SPACE>pu :PlugUpdate<CR>
+
 " auto-pairs.vim
 let g:AutoPairsFlyMode = 0
 
@@ -10,7 +15,7 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 
 
 " calendar.vim
-noremap <silent> <SPACE>at :Calendar -position=here<CR>
+noremap <silent> <SPACE>at <cmd>Calendar -position=here<CR>
 
 " choosewin.vim
 nmap  -  <Plug>(choosewin)
@@ -36,14 +41,20 @@ EOF
 
 " bullets.vim
 let g:bullets_enabled_file_types = [
-			\ 'markdown', 'text', 'scratch']
+			\ 'markdown',
+      \ 'text',
+      \ 'scratch'
+      \ ]
 
 " markdown-preview.vim
 nnoremap <space>fmp :MarkdownPreviewToggle<CR>
 let g:mkdp_echo_preview_url = 1
 let g:mkdp_open_to_the_world = 0
-let g:mkdp_filetypes = [ 'markdown', 'html', 'css' ]
-nnoremap <SPACE>fmb bi**<ESC>ea**<ESC>
+let g:mkdp_filetypes = [
+      \ 'markdown',
+      \ 'html',
+      \ 'css'
+      \ ]
 
 " cursor.vim
 if has("autocmd")
@@ -52,3 +63,14 @@ endif
 hi Cursor guifg=green guibg=green
 hi Cursor2 guifg=red guibg=red
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
+
+" vim-rooter
+" silent for vim-rooter
+let g:rooter_silent_chdir = 1
+let g:rooter_resolve_links = 1
+let g:rooter_patterns = [
+      \ 'Makefile',
+      \ '.git', 
+      \ '^dotfiles',
+      \ '>cheat',
+      \ ]
