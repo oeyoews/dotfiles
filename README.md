@@ -6,6 +6,9 @@
 * [Configuration](#configuration)
 
 <!-- vim-markdown-toc -->
+
+![img](./archive/img/example2.png)
+
 ## Environment
 
 | Linux   | Terminal | Shell | Font  | Editor |
