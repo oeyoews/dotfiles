@@ -6,11 +6,11 @@ nnoremap <silent><SPACE>4 <Cmd>BufferLineGoToBuffer 4<CR>
 nnoremap <silent><SPACE>5 <Cmd>BufferLineGoToBuffer 5<CR>
 lua << EOF
 require('bufferline').setup {
-	options = {
-		numbers = "ordinal",
-		left_mouse_command = "buffer %d",
-		separator_style = "thin",
-offsets = {{filetype = "NvimTree", text = "File Explorer" }},
-		}
-	}
+  options = {
+    numbers = "ordinal",
+    left_mouse_command = "buffer %d",
+    separator_style = "thin",
+    offsets = {{filetype = "NvimTree", text = "File Explorer" }},
+    }
+  }
 EOF

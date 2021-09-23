@@ -21,7 +21,7 @@ set shortmess+=aIc  " atI clear advertise
 set expandtab  " disable expand tab to whitespace
 set timeoutlen=1000
 set textwidth=120  " after 120 char, wrap automatically
-set showmatch  " call quote in visual
+" set showmatch  " call quote in visual
 set shiftwidth=2  " default indent distance for >> <<
 set tabstop=2 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
@@ -41,3 +41,4 @@ set confirm
 set scrolloff=3
 set updatetime=200	" ??
 set foldmethod=marker  " set foldmethod
+set shell=zsh

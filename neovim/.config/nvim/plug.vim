@@ -10,8 +10,9 @@ endif
 "				\| PlugInstall --sync | source $MYVIMRC
 "				\| endif
 " let g:plug_url_format = 'git@github.com:%s.git'
-call plug#begin('$HOME/.config/nvim/plug')
+call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'airblade/vim-rooter'
 Plug 'rhysd/clever-f.vim'
 
 Plug 'nvim-neorg/neorg' 
@@ -20,12 +21,7 @@ Plug 't9md/vim-choosewin'
 
 Plug 'mhinz/vim-startify'
 
-Plug 'justinmk/vim-syntax-extra'
 Plug 'skywind3000/asyncrun.vim'
-
-Plug 'rcarriga/nvim-notify'
-
-Plug 'ray-x/lsp_signature.nvim'
 
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
@@ -43,7 +39,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'norcalli/nvim-colorizer.lua'
 
-Plug 'akinsho/bufferline.nvim' " some bugs like mapping will be deprecated
+Plug 'akinsho/bufferline.nvim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'mzlogin/vim-markdown-toc'
@@ -55,7 +51,6 @@ Plug 'itchyny/calendar.vim'
 Plug 'machakann/vim-highlightedyank'
 Plug 'luochen1990/rainbow'
 Plug 'yianwillis/vimcdoc'
-Plug 'junegunn/fzf.vim'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
