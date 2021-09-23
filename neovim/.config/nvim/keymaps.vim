@@ -3,12 +3,8 @@ vnoremap : :normal<SPACE>
 " copy path to clipboard
 nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> :echo "Copy path finished!"<CR>
 
-" TODO add C-s to save all files
-"
 " switch options
 nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
-nnoremap <silent> <SPACE>ts :set signcolumn=yes<CR>
-nnoremap <silent> <SPACE>tS :set signcolumn=no<CR>
 nnoremap <silent> <SPACE>tw :set wrap!<CR>
 nnoremap <silent> <SPACE>tp :set spell!<CR>
 nnoremap <silent> <SPACE>tl :set list<CR>
@@ -73,4 +69,4 @@ nnoremap <silent> <SPACE>hrr :source $MYVIMRC<CR> :echom "Refreshed!"<CR>
 noremap <ESC> <ESC><C-L>
 
 nnoremap <SPACE>fS :wa<CR>
-nnoremap <silent> <SPACE>fmT :tabnew ~/.config/nvim/todo.md<CR>
+nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>

@@ -1,15 +1,19 @@
+if !exists('g:loaded_lspsaga') | finish | endif
+
 lua << EOF
 local saga = require 'lspsaga'
-saga.init_lsp_saga()
+
+saga.init_lsp_saga {
+  error_sign = '',
+  warn_sign = '',
+  hint_sign = '',
+  infor_sign = '',
+  border_style = "round",
+}
+
 EOF
-" quick fix like vscode
-nnoremap <silent><space>qf :Lspsaga code_action<CR>
-" NOTE: horver close error
-nnoremap <silent>K :Lspsaga hover_doc<CR>
-nnoremap <silent>gs :Lspsaga signature_help<CR>
-nnoremap <silent>gr :Lspsaga rename<CR>
-nnoremap <silent>gD :Lspsaga preview_definition<CR>
-" A is <alt>
-" some bug for this terminal
-" nnoremap <silent> <A-d> :Lspsaga open_floaterm<CR>
-tnoremap <silent> <A-d> <C-\><C-n>:Lspsaga close_floaterm<CR>
+
+nnoremap <silent> <C-j> <Cmd>Lspsaga diagnostic_jump_next<CR>
+nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
+inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
+nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>

@@ -1,6 +1,7 @@
 set cursorline
 set matchtime=2
-set signcolumn=no
+set undofile
+set signcolumn=yes
 set virtualedit=block
 set number relativenumber
 set autochdir  " simply minbuffer messages

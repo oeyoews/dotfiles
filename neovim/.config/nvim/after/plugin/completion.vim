@@ -4,6 +4,7 @@ require'lspconfig'.clangd.setup{on_attach=require'completion'.on_attach}
 -- lang#vim: npm install -g vim-language-server
 require'lspconfig'.vimls.setup{on_attach=require'completion'.on_attach}
 EOF
+
 autocmd BufEnter * lua require'completion'.on_attach()
 " inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
