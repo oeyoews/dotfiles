@@ -1,4 +1,4 @@
-set virtualedit=all
+set virtualedit=onemore
 set cursorline
 set matchtime=2
 set undofile

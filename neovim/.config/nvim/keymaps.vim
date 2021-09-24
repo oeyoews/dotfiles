@@ -1,5 +1,3 @@
-vnoremap : :normal<SPACE>
-
 " copy path to clipboard
 nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> :echo "Copy path finished!"<CR>
 
@@ -65,4 +63,7 @@ nnoremap <SPACE>fS :wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 
-autocmd FileType help,qf nnoremap <silent> q :q<CR>
+autocmd! FileType help,qf nnoremap <silent> q :q<CR>
+
+autocmd! FileType lua nnoremap <silent> <SPACE>so <Cmd>so %<CR>
+

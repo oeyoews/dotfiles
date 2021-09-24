@@ -2,16 +2,19 @@ if !exists('g:loaded_completion') | finish | endif
 
 set completeopt=menuone,noinsert,noselect
 
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
+ " Use completion-nvim in every buffer
+autocmd BufEnter * lua require'completion'.on_attach()
 
 lua <<EOF
--- lang#c:
+-- lang#c: yay clang
 require'lspconfig'.clangd.setup{
-  on_attach=require'completion'.on_attach }
+on_attach=require'completion'.on_attach }
 -- lang#vim: npm install -g vim-language-server
 require'lspconfig'.vimls.setup{
-  on_attach=require'completion'.on_attach }
+on_attach=require'completion'.on_attach }
+-- lang#python: yay pyright
+require'lspconfig'.pyright.setup{
+on_attach=require'completion'.on_attach }
 EOF
 
 let g:completion_enable_snippet = 'UltiSnips'
@@ -32,3 +35,7 @@ let g:completion_chain_complete_list = {
           \   'comment': []
           \ }
           \}
+
+" mappings
+imap <tab> <Plug>(completion_smart_tab)
+imap <s-tab> <Plug>(completion_smart_s_tab)
