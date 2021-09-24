@@ -21,9 +21,6 @@ noremap <silent> <SPACE>at <cmd>Calendar -position=here<CR>
 nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
-" rainbow.brace.vim
-let g:rainbow_active = 1
-
 " suda.vim
 nnoremap <SPACE>fE :SudaRead<CR>
 nnoremap <SPACE>fw :SudaWrite<CR>
@@ -74,3 +71,9 @@ let g:rooter_patterns = [
       \ '^dotfiles',
       \ '>cheat',
       \ ]
+
+" quickrun
+nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR>
+
+" toggleterm
+nnoremap <SPACE>' <Cmd>ToggleTerm<CR>

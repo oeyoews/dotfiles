@@ -18,6 +18,6 @@ EOF
 nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 nnoremap <silent>K :Lspsaga hover_doc<CR>
 nnoremap <silent> <SPACE>qf :Lspsaga code_action<CR>
-nnoremap <silent> <SPACE>lr :Lspsaga rename<CR>
+nnoremap <silent> <F2> :Lspsaga rename<CR>
 " nnoremap <silent> gd :Lspsaga preview_definition<CR>
 nnoremap <silent> gs :Lspsaga signature_help<CR>

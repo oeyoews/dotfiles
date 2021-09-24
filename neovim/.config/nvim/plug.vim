@@ -6,6 +6,12 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'steelsojka/completion-buffers'
+
+" run
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
+Plug 'thinca/vim-quickrun'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -26,6 +32,9 @@ Plug 'dkarter/bullets.vim'
 Plug 'dhruvasagar/vim-table-mode'
 
 " tools
+Plug 'dstein64/vim-startuptime'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 Plug 'mhinz/vim-startify'
 Plug 't9md/vim-choosewin'
 Plug 'rhysd/clever-f.vim'
@@ -33,7 +42,6 @@ Plug 'airblade/vim-rooter'
 Plug 'itchyny/calendar.vim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'machakann/vim-highlightedyank'
-Plug 'luochen1990/rainbow'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'tpope/vim-capslock'

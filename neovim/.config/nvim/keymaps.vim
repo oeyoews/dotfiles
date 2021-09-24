@@ -1,5 +1,5 @@
 " copy path to clipboard
-nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> :echo "Copy path finished!"<CR>
+nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> <Cmd>echo "Copy path finished!"<CR>
 
 " switch options
 nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
@@ -51,7 +51,6 @@ nnoremap guw gUawe
 let g:mapleader = ','
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <SPACE>fr :source $MYVIMRC<CR>:echom "Refreshed!"<CR>
 noremap <ESC> <ESC><C-L>
 
 " quit insert mode fastly
@@ -63,7 +62,6 @@ nnoremap <SPACE>fS :wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 
-autocmd! FileType help,qf nnoremap <silent> q :q<CR>
+autocmd! FileType help,qf,startuptime nnoremap <silent> q <Cmd>q<CR>
 
-autocmd! FileType lua nnoremap <silent> <SPACE>so <Cmd>so %<CR>
-
+nnoremap <silent> <SPACE>so <Cmd>so %<CR><Cmd>echom "Refreshed!"<CR>

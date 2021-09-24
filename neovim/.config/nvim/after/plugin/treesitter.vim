@@ -15,12 +15,13 @@ require'nvim-treesitter.configs'.setup {
     "bash",
     "toml",
     "css",
+    "comment",
     "cmake",
     "python",
   },
   highlight = {
     enable = true,
-    disable = { "vim", "md"}
-  },
+    disable = { }
+    },
 }
 EOF
