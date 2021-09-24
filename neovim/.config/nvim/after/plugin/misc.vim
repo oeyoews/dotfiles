@@ -77,3 +77,5 @@ nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR>
 
 " toggleterm
 nnoremap <SPACE>' <Cmd>ToggleTerm<CR>
+
+" sniprun 

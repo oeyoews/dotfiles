@@ -23,14 +23,16 @@ nnoremap <silent> <SPACE>bn :bn<CR>
 nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bx :tabnew<CR>
-nnoremap <silent><SPACE>bm :messages<CR>
+nnoremap <silent> <SPACE>bm :messages<CR>
 
 " quit window
 nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><SPACE>qQ :q!<CR>
 
+" smart quit for some filetype
+autocmd! FileType help,qf,startuptime nnoremap <silent> q <Cmd>q<CR>
+
 " window split
-noremap s <nop>
 nnoremap <SPACE>w- :split<CR>
 nnoremap <SPACE>w/ :vsplit<CR>
 nnoremap <SPACE>wh <C-w>h
@@ -62,6 +64,8 @@ nnoremap <SPACE>fS :wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 
-autocmd! FileType help,qf,startuptime nnoremap <silent> q <Cmd>q<CR>
-
 nnoremap <silent> <SPACE>so <Cmd>so %<CR><Cmd>echom "Refreshed!"<CR>
+
+" sniprun
+noremap <SPACE>ll <Cmd>SnipRun<CR>
+noremap <SPACE>lc <Cmd>SnipClose<CR>

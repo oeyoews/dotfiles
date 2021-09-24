@@ -22,7 +22,7 @@ EOF
 
 let g:completion_enable_snippet = 'UltiSnips'
 let g:completion_confirm_key = "\<CR>"
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy',]
 let g:completion_matching_ignore_case = 0
 let g:completion_sorting = "length"
 let g:completion_matching_smart_case = 1
