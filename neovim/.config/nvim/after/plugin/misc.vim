@@ -29,7 +29,7 @@ nnoremap <SPACE>fE :SudaRead<CR>
 nnoremap <SPACE>fw :SudaWrite<CR>
 
 " startify.vim
-nnoremap <SPACE>bH :Startify<CR>
+nnoremap <silent> <SPACE>bh :Startify<CR>
 
 " markdown-toc.vim
 nnoremap <space>fmit :GenTocMarked<CR>

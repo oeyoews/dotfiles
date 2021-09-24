@@ -1,8 +1,8 @@
+set virtualedit=all
 set cursorline
 set matchtime=2
 set undofile
 set signcolumn=yes
-set virtualedit=block
 set number relativenumber
 set autochdir  " simply minbuffer messages
 language messages en_US.utf8
