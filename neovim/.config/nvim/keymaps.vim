@@ -53,7 +53,7 @@ nnoremap guw gUawe
 let g:mapleader = ','
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-nnoremap <SPACE>fr :source $MYVIMRC<CR>
+nnoremap <SPACE>fr :source $MYVIMRC<CR>:echom "Refreshed!"<CR>
 noremap <ESC> <ESC><C-L>
 
 " quit insert mode fastly
