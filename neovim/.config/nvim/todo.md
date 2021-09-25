@@ -6,3 +6,5 @@
 
 ## bug
 - [ ] some syntax is not fit for vim, try to learn it like markdown, or lua
+- [ ] generate range file name in tmp folders
+- [ ] learn ho to test

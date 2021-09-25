@@ -27,7 +27,7 @@ nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><SPACE>qQ :q!<CR>
 
 " smart quit for some filetype
-autocmd! FileType help,qf,startuptime nnoremap <silent> q <Cmd>q<CR>
+autocmd! FileType help,qf,startuptime,quickrun nnoremap <silent> q <Cmd>q<CR>
 
 " window split
 nnoremap <SPACE>w- :split<CR>
@@ -63,3 +63,11 @@ nnoremap <SPACE>fS :wa<CR>
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 
 nnoremap <silent> <SPACE>so <Cmd>so %<CR><Cmd>echom "Refreshed!"<CR>
+
+" history window
+nnoremap <silent> <SPACE>; q:
+nnoremap <silent> <SPACE>/ q/
+
+" show scriptnames in new buffer
+" command Sc redir @">|silent scriptnames|redir END|enew|put
+command Sc enew|pu=execute('scriptnames') 
