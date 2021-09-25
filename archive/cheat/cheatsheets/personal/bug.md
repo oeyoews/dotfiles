@@ -16,6 +16,8 @@ Bug
 
 - Q: install folke's dot config, have dashboard always, even uninstall it? 
 	A: rm -rf ~/.local/share/nvim/
+- mooc's video can't watch, 
+- just restart your computer
 
 - NOTE: not upgrade emacs
 
@@ -24,3 +26,4 @@ TODO_BUG
 
 - [x] In fullscreen, google-chrome is very slowl for scrool pages.
 - [x] npm install need sudo 
+- [ ] nvim 0.60 is confict for lspsaga now

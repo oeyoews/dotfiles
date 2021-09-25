@@ -1,5 +1,4 @@
-- [todo] https://github.com/maaslalani/slides/blob/main/README.md
-  - 搞清这种写法
+- [todo] https://github.com/maaslalani/slides/blob/main/README.md 搞清这种写法
 - [ ] learn use html in markdown
 
 - markdown snippets doesn't work
@@ -13,8 +12,9 @@
 - from 'github520', learn github actions [github520](https://github.com/521xueweihan/GitHub520/commit/e2ac158c951f68a285dd754d704427ba8f281f1e)
   - how to init commit?
 - learn use vim's api
-- [ ] 四六级报名考试
+- [X] 四六级报名考试
 - [ ] 观看matlab入门视频
 - [ ] learn vscode-neovim
 - [ ] 超星问题
-- [ ]  图像作业 3
+- [ ] 图像作业 3
+- [ ] learn bullers for neovim

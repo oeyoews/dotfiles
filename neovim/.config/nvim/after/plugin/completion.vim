@@ -2,24 +2,18 @@ if !exists('g:loaded_completion') | finish | endif
 
 set completeopt=menu,menuone,noinsert,noselect
 
-" autocmd BufEnter * lua require'completion'.on_attach()
+autocmd BufEnter * lua require'completion'.on_attach()
 
 lua <<EOF
 
 -- lang#c: yay clang
-require'lspconfig'.clangd.setup{
-on_attach=require'completion'.on_attach }
+require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
 
 -- lang#vim: npm install -g vim-language-server
-require'lspconfig'.vimls.setup{
-on_attach=require'completion'.on_attach }
+require'lspconfig'.vimls.setup{ on_attach=require'completion'.on_attach }
 
 -- lang#python: yay pyright
-require'lspconfig'.pyright.setup{
-on_attach=require'completion'.on_attach }
-
-require'lspconfig'.sumneko_lua.setup{
-on_attach=require'completion'.on_attach }
+require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach }
 
 EOF
 
