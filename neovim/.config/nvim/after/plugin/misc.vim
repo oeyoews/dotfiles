@@ -13,7 +13,6 @@ autocmd! BufWrite *.c,*.h :Autoformat
 nnoremap <SPACE>bu :OpenBrowser<SPACE>https://
 nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 
-
 " calendar.vim
 noremap <silent> <SPACE>at <cmd>Calendar -position=here<CR>
 
@@ -44,7 +43,7 @@ let g:bullets_enabled_file_types = [
       \ ]
 
 " markdown-preview.vim
-nnoremap <space>fmp :MarkdownPreviewToggle<CR>
+nnoremap <space>fmm :MarkdownPreviewToggle<CR>
 let g:mkdp_echo_preview_url = 1
 let g:mkdp_open_to_the_world = 0
 let g:mkdp_filetypes = [
@@ -76,8 +75,9 @@ let g:rooter_patterns = [
 nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR>
 
 " toggleterm
-nnoremap <SPACE>' <Cmd>ToggleTerm<CR>
+nnoremap <SPACE>tt <Cmd>ToggleTerm<CR>
 
 " sniprun
 noremap <SPACE>ll <Cmd>SnipRun<CR>
 noremap <SPACE>lc <Cmd>SnipClose<CR>
+
