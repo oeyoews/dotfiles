@@ -1,7 +1,7 @@
 " vim-plug
-nnoremap <SPACE>pi :PlugInstall<CR>
-nnoremap <SPACE>pc :PlugClean<CR>
-nnoremap <SPACE>pu :PlugUpdate<CR>
+nnoremap <SPACE>vi <Cmd>PlugInstall<CR>
+nnoremap <SPACE>vc <Cmd>PlugClean<CR>
+nnoremap <SPACE>vu <Cmd>PlugUpdate<CR>
 
 " auto-pairs.vim
 let g:AutoPairsFlyMode = 0
@@ -78,4 +78,6 @@ nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR>
 " toggleterm
 nnoremap <SPACE>' <Cmd>ToggleTerm<CR>
 
-" sniprun 
+" sniprun
+noremap <SPACE>ll <Cmd>SnipRun<CR>
+noremap <SPACE>lc <Cmd>SnipClose<CR>

@@ -17,10 +17,7 @@ noremap <SPACE>hh :
 nnoremap <SPACE>ss /
 
 " buffer
-" tips: :b[uffer] <number> or <buffername>
 nnoremap <silent> <SPACE>bn :bn<CR>
-" nnoremap <silent> <SPACE>bb :ls<CR>
-nnoremap <silent> <SPACE>tt :tabs<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bx :tabnew<CR>
 nnoremap <silent> <SPACE>bm :messages<CR>
@@ -57,6 +54,7 @@ noremap <ESC> <ESC><C-L>
 
 " quit insert mode fastly
 inoremap jk <ESC>
+
 " save file
 nnoremap <silent><SPACE>fs :w<CR>
 " save all files
@@ -65,7 +63,3 @@ nnoremap <SPACE>fS :wa<CR>
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 
 nnoremap <silent> <SPACE>so <Cmd>so %<CR><Cmd>echom "Refreshed!"<CR>
-
-" sniprun
-noremap <SPACE>ll <Cmd>SnipRun<CR>
-noremap <SPACE>lc <Cmd>SnipClose<CR>

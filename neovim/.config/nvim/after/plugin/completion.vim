@@ -18,6 +18,9 @@ on_attach=require'completion'.on_attach }
 require'lspconfig'.pyright.setup{
 on_attach=require'completion'.on_attach }
 
+require'lspconfig'.sumneko_lua.setup{
+on_attach=require'completion'.on_attach }
+
 EOF
 
 let g:completion_enable_snippet = 'UltiSnips'
