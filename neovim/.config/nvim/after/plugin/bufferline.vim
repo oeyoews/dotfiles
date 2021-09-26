@@ -1,9 +1,3 @@
-nnoremap <silent><SPACE>ws :BufferLinePick<CR>
-nnoremap <silent><SPACE>1 <Cmd>BufferLineGoToBuffer 1<CR>
-nnoremap <silent><SPACE>2 <Cmd>BufferLineGoToBuffer 2<CR>
-nnoremap <silent><SPACE>3 <Cmd>BufferLineGoToBuffer 3<CR>
-nnoremap <silent><SPACE>4 <Cmd>BufferLineGoToBuffer 4<CR>
-nnoremap <silent><SPACE>5 <Cmd>BufferLineGoToBuffer 5<CR>
 lua << EOF
 require('bufferline').setup {
   options = {
@@ -14,3 +8,15 @@ require('bufferline').setup {
     }
   }
 EOF
+
+" mappings
+command! -nargs=1 Goto BufferLineGoToBuffer <args>
+command! Pick BufferLinePick
+
+nnoremap <silent><SPACE>ws <cmd>Pick<CR>
+nnoremap <silent><SPACE>1 <Cmd>Goto 1<CR>
+nnoremap <silent><SPACE>2 <Cmd>Goto 2<CR>
+nnoremap <silent><SPACE>3 <Cmd>Goto 3<CR>
+nnoremap <silent><SPACE>4 <Cmd>Goto 4<CR>
+nnoremap <silent><SPACE>5 <Cmd>Goto 5<CR>
+"

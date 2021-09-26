@@ -19,14 +19,13 @@ noremap > >gv
 noremap < <gv
 
 " command mode
-noremap <SPACE>hh :
+nnoremap <SPACE>hh :
 nnoremap <SPACE>ss /
 
 " buffer
-nnoremap <silent> <SPACE>bn :bn<CR>
+nnoremap <silent> <SPACE><tab> :bn<CR>
 nnoremap <silent> <SPACE>bp :bp<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
-nnoremap <silent> <SPACE>bx :tabnew<CR>
 nnoremap <silent> <SPACE>bm :messages<CR>
 
 " quit window

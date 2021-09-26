@@ -8,7 +8,6 @@ call plug#begin('$HOME/.cache/nvim/plug')
 
 Plug 'onsails/lspkind-nvim'
 Plug 'phaazon/hop.nvim'
-" Plug 'liuchengxu/vista.vim'
 
 Plug 'steelsojka/completion-buffers'
 
@@ -36,11 +35,11 @@ Plug 'dkarter/bullets.vim'
 Plug 'dhruvasagar/vim-table-mode'
 
 " tools
-Plug 'dstein64/vim-startuptime'
+" Plug 'dstein64/vim-startuptime'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mhinz/vim-startify'
-Plug 't9md/vim-choosewin'
+" Plug 't9md/vim-choosewin'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
 Plug 'itchyny/calendar.vim'

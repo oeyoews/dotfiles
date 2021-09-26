@@ -35,7 +35,7 @@ let g:completion_trigger_character = ['.', '::']
 " fuzzy, all
 let g:completion_matching_strategy_list = ['exact', 'substring']
 let g:completion_enable_auto_signature = 1
-let g:completion_trigger_keyword_length = 3
+let g:completion_trigger_keyword_length = 2
 let g:completion_timer_cycle = 100
 let g:completion_chain_complete_list = {
       \ 'default' : {
