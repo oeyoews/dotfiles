@@ -1,10 +1,10 @@
 ## TODO
 
-- [ ] trouble.vim
-- [ ] add some tips for startify, such as i and e
-- [ ] in other filetypes, this completeion not popup for ultsnips
+- [X] trouble.vim
+- [X] add some tips for startify, such as i and e
+- [X] in other filetypes, this completeion not popup for ultsnips
 
 ## bug
-- [ ] some syntax is not fit for vim, try to learn it like markdown, or lua
-- [ ] generate range file name in tmp folders
-- [ ] learn ho to test
+- [X] some syntax is not fit for vim, try to learn it like markdown, or lua
+- [X] generate range file name in tmp folders
+- [X] learn ho to test

@@ -1,3 +1,9 @@
+" noremap q <nop>
+noremap q <ESC><C-L>
+
+" quit insert mode fastly
+inoremap jk <ESC>
+
 " copy path to clipboard
 nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> <Cmd>echo "Copy path finished!"<CR>
 
@@ -18,6 +24,7 @@ nnoremap <SPACE>ss /
 
 " buffer
 nnoremap <silent> <SPACE>bn :bn<CR>
+nnoremap <silent> <SPACE>bp :bp<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bx :tabnew<CR>
 nnoremap <silent> <SPACE>bm :messages<CR>
@@ -50,15 +57,11 @@ nnoremap guw gUawe
 let g:mapleader = ','
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
-noremap <ESC> <ESC><C-L>
-
-" quit insert mode fastly
-inoremap jk <ESC>
 
 " save file
 nnoremap <silent><SPACE>fs :w<CR>
 " save all files
-nnoremap <SPACE>fS :wa<CR>
+nnoremap <silent> <SPACE>fS <Cmd>wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 

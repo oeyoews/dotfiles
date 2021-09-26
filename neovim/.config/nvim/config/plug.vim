@@ -6,6 +6,10 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'onsails/lspkind-nvim'
+Plug 'phaazon/hop.nvim'
+" Plug 'liuchengxu/vista.vim'
+
 Plug 'steelsojka/completion-buffers'
 
 " run
@@ -41,7 +45,6 @@ Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
 Plug 'itchyny/calendar.vim'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'machakann/vim-highlightedyank'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'tpope/vim-capslock'

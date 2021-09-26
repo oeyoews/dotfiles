@@ -15,6 +15,9 @@ require'lspconfig'.vimls.setup{ on_attach=require'completion'.on_attach }
 -- lang#python: yay pyright
 require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach }
 
+-- lang#lua
+ require'lspconfig'.sumneko_lua.setup{ on_attach=require'completion'.on_attach }
+
 EOF
 
 " auto popup
@@ -25,11 +28,14 @@ let g:completion_enable_auto_hover = 1
 let g:completion_enable_snippet = 'UltiSnips'
 " enter is completion
 let g:completion_confirm_key = "\<CR>"
-" disable ignore smart case
-let g:completion_matching_ignore_case = 0
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-let g:completion_enable_auto_signature = 0
-let g:completion_trigger_keyword_length = 2
+" smart case
+let g:completion_matching_smart_case = 1
+" trigger character
+let g:completion_trigger_character = ['.', '::']
+" fuzzy, all
+let g:completion_matching_strategy_list = ['exact', 'substring']
+let g:completion_enable_auto_signature = 1
+let g:completion_trigger_keyword_length = 3
 let g:completion_timer_cycle = 100
 let g:completion_chain_complete_list = {
       \ 'default' : {

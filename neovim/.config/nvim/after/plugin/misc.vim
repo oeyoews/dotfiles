@@ -24,9 +24,6 @@ let g:choosewin_overlay_enable = 1
 nnoremap <SPACE>fE :SudaRead<CR>
 nnoremap <SPACE>fw :SudaWrite<CR>
 
-" startify.vim
-nnoremap <silent> <SPACE>bh :Startify<CR>
-
 " markdown-toc.vim
 nnoremap <space>fmit :GenTocMarked<CR>
 
@@ -52,7 +49,7 @@ let g:mkdp_filetypes = [
       \ 'css'
       \ ]
 
-" cursor.vim
+" cursor
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
@@ -63,7 +60,8 @@ set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor
 " vim-rooter
 " silent for vim-rooter
 let g:rooter_silent_chdir = 1
-let g:rooter_resolve_links = 1
+" disable resolve links
+let g:rooter_resolve_links = 0
 let g:rooter_patterns = [
       \ 'Makefile',
       \ '.git', 
@@ -81,3 +79,14 @@ nnoremap <SPACE>tt <Cmd>ToggleTerm<CR>
 noremap <SPACE>ll <Cmd>SnipRun<CR>
 noremap <SPACE>lc <Cmd>SnipClose<CR>
 
+" hop.nvim
+lua << EOF
+require'hop'.setup()
+EOF
+" mappings
+nnoremap <SPACE>jj <Cmd>HopWord<CR>
+nnoremap <SPACE>jl <Cmd>HopLine<CR>
+
+" highlight yank
+autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch",
+      \ timeout=150, on_visual=true}

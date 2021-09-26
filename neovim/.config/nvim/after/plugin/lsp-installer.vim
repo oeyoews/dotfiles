@@ -6,4 +6,5 @@ local opts = {}
 
 server:setup(opts)
 end)
+
 EOF
