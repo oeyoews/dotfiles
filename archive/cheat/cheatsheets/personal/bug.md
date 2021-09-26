@@ -1,6 +1,7 @@
+<!-- 九月 26, 2021 -->
+
 Bug
 ---
-
 - Q: user@120.service is failed?
   A: grep ":120" /etc/group;  and uninstall manjaro-gdm-tweak.
 
@@ -21,9 +22,7 @@ Bug
 
 - NOTE: not upgrade emacs
 
+
 TODO_BUG
 ---
 
-- [x] In fullscreen, google-chrome is very slowl for scrool pages.
-- [x] npm install need sudo 
-- [ ] nvim 0.60 is confict for lspsaga now
