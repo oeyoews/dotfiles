@@ -32,7 +32,7 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # time                  # current time
-    # status                  # exit code of the last command
+    status                  # exit code of the last command
     os_icon                 # os identifier
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)

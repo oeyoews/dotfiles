@@ -35,7 +35,8 @@ alias 'onbluetooth'="sudo systemctl start bluetooth.service"
 alias ra='ranger'
 alias dust="dust -r"
 alias rm='trash'
-alias rmm='rm'
+# use vanilla rm, don't use rmm=rm, it's receive
+alias rmm='\rm -rf'
 alias ms='musicbox'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
@@ -136,3 +137,4 @@ alias vim='nvim'
 alias ext=exit
 
 alias grepd="l | grep '>'"
+alias wego='curl wttr.in'
