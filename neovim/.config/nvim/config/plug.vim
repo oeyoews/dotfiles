@@ -8,14 +8,8 @@ endif
 call plug#begin('$HOME/.cache/nvim/plug')
 
 
-" Plug 'onsails/lspkind-nvim'
+" easymotion
 Plug 'phaazon/hop.nvim'
-
-Plug 'steelsojka/completion-buffers'
-
-" run
-Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
-Plug 'thinca/vim-quickrun'
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
@@ -26,8 +20,13 @@ Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-lua/completion-nvim'
+Plug 'steelsojka/completion-buffers'
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
+
+" run
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
+Plug 'thinca/vim-quickrun'
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -37,7 +36,7 @@ Plug 'dkarter/bullets.vim'
 Plug 'dhruvasagar/vim-table-mode'
 
 " tools
-" Plug 'dstein64/vim-startuptime'
+Plug 'dstein64/vim-startuptime'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mhinz/vim-startify'

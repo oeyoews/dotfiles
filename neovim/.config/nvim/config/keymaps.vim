@@ -1,5 +1,5 @@
 nnoremap q <nop>
-
+nnoremap <ESC> <ESC><C-L><CR>
 " quit insert mode fastly
 inoremap jk <ESC>
 
