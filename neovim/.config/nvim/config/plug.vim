@@ -7,8 +7,8 @@ endif
 " dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
-Plug 'vim-scripts/ZoomWin'
-Plug 'onsails/lspkind-nvim'
+
+" Plug 'onsails/lspkind-nvim'
 Plug 'phaazon/hop.nvim'
 
 Plug 'steelsojka/completion-buffers'
