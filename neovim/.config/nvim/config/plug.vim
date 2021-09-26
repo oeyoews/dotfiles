@@ -4,8 +4,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'vim-scripts/ZoomWin'
 Plug 'onsails/lspkind-nvim'
 Plug 'phaazon/hop.nvim'
 

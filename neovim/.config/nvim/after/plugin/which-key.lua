@@ -12,7 +12,7 @@ require("which-key").setup {
   },
 
   window = {
-    border = "single", -- none, single, double, shadow
+    border = "none", -- none, single, double, shadow
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 1, 1, 1, 1 }, -- extra window padding [top, right, bottom, left]
@@ -25,12 +25,12 @@ require("which-key").setup {
   },
 
   presets = {
-    operators = true, -- adds help for operators like d, y, ... and registers them for motion / text object completion
-    motions = true,  -- adds help for motions
-    text_objects = true, -- help for text objects triggered after entering an operator
+    operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
+    motions = false,  -- adds help for motions
+    text_objects = false, -- help for text objects triggered after entering an operator
     windows = true, -- default bindings on <c-w>
     nav = true, -- misc bindings to work with windows
-    z = true, -- bindings for folds, spelling and others prefixed with z
+    z = false, -- bindings for folds, spelling and others prefixed with z
     g = true, -- bindings for prefixed with g
   },
 
@@ -40,16 +40,16 @@ require("which-key").setup {
     ["<tab>"] = "TAB",
   },
 
-  opts = {
-    mode = "n", -- NORMAL mode
-    -- prefix: use "<leader>f" for example for mapping everything related to finding files
-    -- the prefix is prepended to every mapping part of `mappings`
-    -- prefix = "<space>f",
-    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-    silent = true, -- use `silent` when creating keymaps
-    noremap = true, -- use `noremap` when creating keymaps
-    nowait = true, -- use `nowait` when creating keymaps
-  },
+  -- opts = {
+  --   mode = "n", -- NORMAL mode
+  --   -- prefix: use "<leader>f" for example for mapping everything related to finding files
+  --   -- the prefix is prepended to every mapping part of `mappings`
+  --   -- prefix = "<space>f",
+  --   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  --   silent = true, -- use `silent` when creating keymaps
+  --   noremap = true, -- use `noremap` when creating keymaps
+  --   nowait = true, -- use `nowait` when creating keymaps
+  -- },
 
   show_help = false, -- more silent in minimal buffer
   ignore_missing = false, -- not modify it 
@@ -68,7 +68,7 @@ require("which-key").register({
   b = { name = "+buffer" },
   bn = { "<cmd>enew<cr>", "New File" },
   bh = { "<cmd>Startify<cr>", "Home" },
-  bb = { "<cmd>buffer<cr>", "buffers" },
+  bb = { "<cmd>Telescope buffers<cr>", "Buffers" },
 
   w = { name = "+winnow" },
 
@@ -76,5 +76,6 @@ require("which-key").register({
 
   l = { name = "+toggle" },
 
+  -- ["<space>"] = { ":h<space>", "help" },
 }, { prefix = "<space>" })
 

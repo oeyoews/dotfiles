@@ -1,6 +1,3 @@
-" noremap q <nop>
-noremap q <ESC><C-L>
-
 " quit insert mode fastly
 inoremap jk <ESC>
 
@@ -15,8 +12,8 @@ nnoremap <silent> <SPACE>tl :set list<CR>
 nnoremap <silent> <SPACE>tL :set nolist<CR>
 
 " continue indent
-noremap > >gv
-noremap < <gv
+vnoremap > >gv
+vnoremap < <gv
 
 " command mode
 nnoremap <SPACE>hh :
@@ -31,19 +28,20 @@ nnoremap <silent> <SPACE>bm :messages<CR>
 " quit window
 nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><SPACE>qQ :q!<CR>
+nnoremap <silent><SPACE>qa :qa<CR>
 
 " smart quit for some filetype
-autocmd! FileType help,qf,startuptime,quickrun nnoremap <silent> q <Cmd>q<CR>
+autocmd! FileType help,qf,startuptime,quickrun,snippets nnoremap <silent> q <Cmd>q<CR>
 
 " window split
+nnoremap <SPACE>wm <C-w>o
+nnoremap <SPACE>ww <C-w>w
 nnoremap <SPACE>w- :split<CR>
 nnoremap <SPACE>w/ :vsplit<CR>
 nnoremap <SPACE>wh <C-w>h
 nnoremap <SPACE>wj <C-w>j
 nnoremap <SPACE>wk <C-w>k
 nnoremap <SPACE>wl <C-w>l
-nnoremap <SPACE>ww <C-w>w
-nnoremap <SPACE>wm <C-w>o
 
 " jump line end
 noremap L $
@@ -59,16 +57,13 @@ nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
 
 " save file
 nnoremap <silent><SPACE>fs :w<CR>
+
 " save all files
 nnoremap <silent> <SPACE>fS <Cmd>wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
 
 nnoremap <silent> <SPACE>so <Cmd>so %<CR><Cmd>echom "Refreshed!"<CR>
-
-" history window
-nnoremap <silent> <SPACE>; q:
-nnoremap <silent> <SPACE>/ q/
 
 " show scriptnames in new buffer
 " command Sc redir @">|silent scriptnames|redir END|enew|put

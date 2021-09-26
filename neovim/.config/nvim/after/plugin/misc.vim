@@ -1,4 +1,4 @@
-" vim-plug
+" vim-pug
 nnoremap <SPACE>vi <Cmd>PlugInstall<CR>
 nnoremap <SPACE>vc <Cmd>PlugClean<CR>
 nnoremap <SPACE>vu <Cmd>PlugUpdate<CR>

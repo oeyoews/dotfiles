@@ -20,7 +20,7 @@ set showcmd
 set noshowmode 
 set shortmess+=aIc  " atI clear advertise
 set expandtab  " disable expand tab to whitespace
-set timeoutlen=1000
+set timeoutlen=500
 set textwidth=120  " after 120 char, wrap automatically
 " set showmatch  " call quote in visual
 set shiftwidth=2  " default indent distance for >> <<
