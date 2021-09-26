@@ -3,6 +3,7 @@
 - [X] trouble.vim
 - [X] add some tips for startify, such as i and e
 - [X] in other filetypes, this completeion not popup for ultsnips
+- [ ] learn use lua or vim api for notify
 
 ## bug
 - [X] some syntax is not fit for vim, try to learn it like markdown, or lua
