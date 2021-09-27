@@ -43,21 +43,21 @@ Plug 'dkarter/bullets.vim'
 Plug 'dhruvasagar/vim-table-mode'
 
 " tools
-Plug 'dstein64/vim-startuptime', {'on':'StartupTime'}
+Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mhinz/vim-startify'
 " Plug 't9md/vim-choosewin'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
-Plug 'itchyny/calendar.vim'
+Plug 'itchyny/calendar.vim', {'on': 'Calendar'}
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
 Plug 'lambdalisue/suda.vim'
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-tree.lua', {'on': 'NvimTreeOpen'}
 Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'
 Plug 'jiangmiao/auto-pairs'
