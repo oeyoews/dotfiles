@@ -1,5 +1,9 @@
+" disable macro for q
 nnoremap q <nop>
+
+" clean minimal buffer
 nnoremap <ESC> <ESC><C-L><CR>
+
 " quit insert mode fastly
 inoremap jk <ESC>
 
@@ -18,7 +22,7 @@ vnoremap > >gv
 vnoremap < <gv
 
 " command mode
-nnoremap <SPACE>hh :
+noremap <SPACE>hh :
 nnoremap <SPACE>ss /
 
 " buffer

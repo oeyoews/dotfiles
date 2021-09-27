@@ -1,8 +1,9 @@
 " " Mappings
+" NOTE: this plugin must enable termguicolor
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
 
 " show hidden files
-let g:nvim_tree_hide_dotfiles = 1
+let g:nvim_tree_hide_dotfiles = 0
 " jump empty files
 let g:nvim_tree_group_empty = 1
 let g:nvim_tree_git_hl = 1
@@ -32,7 +33,7 @@ require'nvim-tree'.setup {
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
   update_focused_file = {
     -- enables the feature
-    enable      = false,
+    enable      = true,
     -- update the root directory of the tree to the one of the folder containing the file if the file is not under the current root directory
     -- only relevant when `update_focused_file.enable` is true
     update_cwd  = true,
@@ -54,7 +55,7 @@ require'nvim-tree'.setup {
     -- side of the tree, can be one of 'left' | 'right' | 'top' | 'bottom'
     side = 'right',
     -- if true the tree will resize itself after opening a file
-    auto_resize = false,
+    auto_resize = true,
     mappings = {
       -- custom only false will merge the list with the default mappings
       -- if true, it will only use your list to set the mappings

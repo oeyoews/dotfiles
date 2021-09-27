@@ -7,7 +7,12 @@ endif
 " dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
-
+Plug 'nvim-treesitter/playground'
+Plug 'p00f/nvim-ts-rainbow'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/completion-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'blackcauldron7/surround.nvim'
 " easymotion
 Plug 'phaazon/hop.nvim'
 
@@ -36,7 +41,7 @@ Plug 'dkarter/bullets.vim'
 Plug 'dhruvasagar/vim-table-mode'
 
 " tools
-Plug 'dstein64/vim-startuptime'
+Plug 'dstein64/vim-startuptime', {'on':'StartupTime'}
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mhinz/vim-startify'

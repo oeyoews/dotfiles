@@ -91,3 +91,9 @@ nnoremap <SPACE>jl <Cmd>HopLine<CR>
 autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch",
       \ timeout=150, on_visual=true}
 let g:rainbow_active = 1
+
+
+" surround.nvim
+lua << EOF
+require"surround".setup{}
+EOF
