@@ -67,6 +67,7 @@ let g:rooter_patterns = [
       \ '.git', 
       \ '^dotfiles',
       \ '>cheat',
+      \ '>nvim',
       \ ]
 
 " quickrun

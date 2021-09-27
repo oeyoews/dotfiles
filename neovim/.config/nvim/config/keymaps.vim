@@ -1,3 +1,7 @@
+" NOTE: must use double quote for down symbols, it't single quotes 
+let g:mapleader = "\<Space>"
+" let g:mapleader = ','
+
 " disable macro for q
 nnoremap q <nop>
 
@@ -6,6 +10,7 @@ nnoremap <ESC> <ESC><C-L><CR>
 
 " quit insert mode fastly
 inoremap jk <ESC>
+inoremap kj <ESC>
 
 " copy path to clipboard
 nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> <Cmd>echo "Copy path finished!"<CR>
@@ -57,9 +62,9 @@ noremap <SPACE>pp "*p
 
 nnoremap <C-a> ggVG
 nnoremap guw gUawe
-let g:mapleader = ','
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
+nnoremap <silent> <SPACE>fv <cmd>edit ~/.config/nvim/config/plug.vim<cr>
 
 " save file
 nnoremap <silent><SPACE>fs :w<CR>
