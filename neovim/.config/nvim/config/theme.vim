@@ -1,1 +1,2 @@
-colorscheme tokyonight
+" colorscheme tokyonight
+colorscheme zephyr
