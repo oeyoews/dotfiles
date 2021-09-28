@@ -61,7 +61,6 @@ noremap <SPACE>yy "*y
 noremap <SPACE>pp "*p
 
 nnoremap <C-a> ggVG
-nnoremap guw gUawe
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
 nnoremap <silent> <SPACE>fv <cmd>edit ~/.config/nvim/config/plug.vim<cr>

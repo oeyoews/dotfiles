@@ -17,3 +17,7 @@
 ## Lua
 - [X] what is `ipairs`
 - [X] learn pairs and ipairs in manual lua
+- [ ] lspsaga to fix
+- [ ] in plug config ,plus if logo Variable
+- [ ] modify some rainbow color
+- [ ] config nvimtree

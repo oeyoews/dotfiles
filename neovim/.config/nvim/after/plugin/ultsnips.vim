@@ -7,4 +7,6 @@ let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.cache/nvim/plug/vim-snippets/UltiSnips/',
       \ ]
 let g:UltiSnipsEditSplit="vertical"
+" TODO: select mode
+let g:UltiSnipsRemoveSelectModeMappings = 1
 
