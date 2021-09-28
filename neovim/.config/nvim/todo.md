@@ -3,11 +3,11 @@
 - [X] trouble.vim
 - [X] add some tips for startify, such as i and e
 - [X] in other filetypes, this completeion not popup for ultsnips
-- [ ] learn use lua or vim **api** for notify
+- [X] learn use lua or vim **api** for notify
 - [X] lua manual
-- [ ] help in file for keyword
-- [ ] download e-book for lua documention in lua.org
-- [ ] how to add no bindkeys for which-key
+- [X] help in file for keyword
+- [X] download e-book for lua documention in lua.org
+- [X] how to add no bindkeys for which-key
 
 ## bug
 - [X] some syntax is not fit for vim, try to learn it like markdown, or lua
@@ -18,6 +18,6 @@
 - [X] what is `ipairs`
 - [X] learn pairs and ipairs in manual lua
 - [X] lspsaga to fix
-- [ ] in plug config ,plus if logo Variable
-- [ ] modify some rainbow color
+- [X] in plug config ,plus if logo Variable
+- [X] modify some rainbow color
 - [X] config nvimtree
