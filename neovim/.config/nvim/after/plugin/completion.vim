@@ -11,7 +11,7 @@ require'lspconfig'.vimls.setup{ on_attach=require'completion'.on_attach }
 -- lang#python: yay pyright
 require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach }
 
--- lang#lua
+-- lang#lua lua-dev
  require'lspconfig'.sumneko_lua.setup{ on_attach=require'completion'.on_attach }
 
 EOF

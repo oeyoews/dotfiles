@@ -24,11 +24,17 @@ endsnippet
 
 snippet md "template"
 <!-- `date` -->
-${1:Title head}
-=
+# ${1:Title head}
 
-${2:Title level 2}
--
+## ${2:Title level 2}
 
 - ${3:content}
 endsnippet
+
+snippet __ "em"
+__${1:Text}__ $2
+endsnippet
+
+# snippet ~~ "del"
+# ~~${1:Text}~~ $2
+# endsnippet

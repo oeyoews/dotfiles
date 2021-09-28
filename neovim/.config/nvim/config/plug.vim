@@ -8,6 +8,9 @@ endif
 " dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'folke/lua-dev.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 " easymotion
 Plug 'blackcauldron7/surround.nvim'
 Plug 'phaazon/hop.nvim'

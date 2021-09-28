@@ -4,7 +4,7 @@
 - [X] add some tips for startify, such as i and e
 - [X] in other filetypes, this completeion not popup for ultsnips
 - [ ] learn use lua or vim **api** for notify
-- [ ] lua manual
+- [X] lua manual
 - [ ] help in file for keyword
 - [ ] download e-book for lua documention in lua.org
 - [ ] how to add no bindkeys for which-key
@@ -17,7 +17,7 @@
 ## Lua
 - [X] what is `ipairs`
 - [X] learn pairs and ipairs in manual lua
-- [ ] lspsaga to fix
+- [X] lspsaga to fix
 - [ ] in plug config ,plus if logo Variable
 - [ ] modify some rainbow color
-- [ ] config nvimtree
+- [X] config nvimtree

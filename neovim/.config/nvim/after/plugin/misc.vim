@@ -98,3 +98,12 @@ let g:rainbow_active = 1
 lua << EOF
 require"surround".setup{}
 EOF
+
+" indent line
+lua << EOF
+require("indent_blankline").setup {
+    char = "|",
+    buftype_exclude = {"terminal"}
+}
+EOF
+let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree']
