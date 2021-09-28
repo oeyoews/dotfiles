@@ -140,3 +140,8 @@ require('telescope').setup{
   }
 }
 EOF
+
+" 24. trouble.vim
+lua << EOF
+  require("trouble").setup {}
+EOF

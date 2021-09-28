@@ -8,7 +8,7 @@
 
 <!-- vim-markdown-toc -->
 
-![img](./archive/img/example2.png)
+![img](./archive/img/example3.png)
 
 ## Env
 
@@ -21,24 +21,24 @@
 
 ## Installation
 
-```zsh
+```sh
 # gitlab
 git clone --depth=1  https://gitlab.com/oeyoews/dotfiles.git ~
 ```
 
-```zsh
+```sh
 # or use github(mirror from gitlab)
 git clone --depth=1  https://github.com/oeyoews/dotfiles.git ~
 ```
 
-```zsh
+```sh
 # or use gitee(mirror from gitlab)
 git clone --depth=1  https://gitee.com/oeyoews/dotfiles.git ~
 ```
 
 ## Caveats
 
-```text
+```sh
 1. Stow: my all dotfiles directory is fit for stow
 
 2. this last reposonity location in your directory  must be like this : ~/dotfiles
@@ -46,13 +46,13 @@ git clone --depth=1  https://gitee.com/oeyoews/dotfiles.git ~
 
 ## Configuration
 
-```zsh
+```sh
   # omz(improve version for oh-my-zsh)
   cd ~/dotfiles
   stow omz
 ```
 
-```zsh 
+```sh 
 # other configure in ~/dotfiles/archive
   cd ~/dotfiles/archive
   stow -t ~ tiny_vimrc
