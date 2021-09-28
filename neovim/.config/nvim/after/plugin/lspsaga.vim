@@ -7,9 +7,9 @@ lua << EOF
    -- todo
    error_sign = "✗",
    warn_sign = "⚠",
-   --hint_sign = '',
-   --infor_sign = '',
-   --border_style = "round",
+   hint_sign = '',
+   infor_sign = '',
+   border_style = "round",
    }
 
 EOF

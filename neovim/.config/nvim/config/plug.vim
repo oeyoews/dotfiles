@@ -8,6 +8,7 @@ endif
 " dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'onsails/lspkind-nvim'
 Plug 'rcarriga/nvim-notify'
 
 Plug 'folke/trouble.nvim'
