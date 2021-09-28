@@ -1,21 +1,25 @@
 <!-- vim-markdown-toc Marked -->
 
-* [Environment](#environment)
-* [Install](#install)
-* [NOTE](#note)
+* [Env](#env)
+* [Features](#features)
+* [Installation](#installation)
+* [Caveats](#caveats)
 * [Configuration](#configuration)
 
 <!-- vim-markdown-toc -->
 
 ![img](./archive/img/example2.png)
 
-## Environment
+## Env
 
 | Linux   | Terminal | Shell | Font  | Editor |
 |---------|----------|-------|-------|--------|
 | gnome40 | kitty    | zsh   | Droid | neovim |
 
-## Install
+## Features 
+- [ ] todo
+
+## Installation
 
 ```zsh
 # gitlab
@@ -32,7 +36,7 @@ git clone --depth=1  https://github.com/oeyoews/dotfiles.git ~
 git clone --depth=1  https://gitee.com/oeyoews/dotfiles.git ~
 ```
 
-## NOTE
+## Caveats
 
 ```text
 1. Stow: my all dotfiles directory is fit for stow

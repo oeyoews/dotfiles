@@ -1,11 +1,9 @@
 {
-    // ***** font *****
     "editor.fontFamily": "'Droid Sans Mono'",
     "terminal.integrated.fontFamily": "Source Code Pro",
     "editor.fontSize": 19,
     "editor.fontLigatures": true,
     "debug.console.fontFamily": "'Droid Sans Mono'",
-    // ***** vim *****
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.ideavimrc",
     "vim.camelCaseMotion.enable": true,
