@@ -4,7 +4,22 @@ if !exists('g:loaded_nvim_treesitter')
 endif
 
 lua << EOF
+
 require'nvim-treesitter.configs'.setup {
+  refactor = {
+    highlight_current_scope = { enable =false},
+    },
+
+  refactor = {
+    highlight_definitions = { enable = true },
+    },
+
+  rainbow = {
+  enable = true,
+  extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
+  max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
+  },
+
   ensure_installed = {
     "html",
     "lua",
@@ -19,32 +34,12 @@ require'nvim-treesitter.configs'.setup {
     "comment",
     "cmake",
     "python",
-  },
-  highlight = {
-    enable = true,
-    disable = { }
     },
-}
 
-require'nvim-treesitter.configs'.setup {
-  refactor = {
-    highlight_definitions = { enable = true },
+  highlight = {
+  enable = true, disable = { }
   },
 }
 
-require'nvim-treesitter.configs'.setup {
-  refactor = {
-    highlight_current_scope = { enable =false},
-  },
-}
-
--- rainbow color
-require'nvim-treesitter.configs'.setup {
-	rainbow = {
-		enable = true,
-		extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
-		max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
-	}
-}
 
 EOF

@@ -24,6 +24,7 @@ let g:startify_custom_footer =
       \ ['', "   Vim is charityware. Please read ':help uganda'.", '']
 
 let g:startify_center = 40
+command! Time StartupTime
 
 " let g:startify_custom_header_quotes = [
 "       \[ '你以为的林荫小道，其实早已车水马龙',' ——莎士比亚'],

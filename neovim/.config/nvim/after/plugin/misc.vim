@@ -145,3 +145,11 @@ EOF
 lua << EOF
   require("trouble").setup {}
 EOF
+
+
+" notify
+lua << EOF
+vim.notify = require("notify")
+EOF
+nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
+      \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config', 'timeout': 500})<cr>
