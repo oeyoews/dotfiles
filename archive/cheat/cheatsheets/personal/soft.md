@@ -60,7 +60,7 @@ duf
 dust
 fzf
 tree
-shellcheck                 # check error language
+<!-- shellcheck                 # check error language -->
 ventoy
 
 # Fcitx5

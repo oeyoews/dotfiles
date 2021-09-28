@@ -25,4 +25,4 @@ Bug
 
 TODO_BUG
 ---
-
+- [ ] in xynu.wifi, terminal is doesn't work
