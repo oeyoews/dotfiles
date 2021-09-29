@@ -21,4 +21,4 @@
 - [X] in plug config ,plus if logo Variable
 - [X] modify some rainbow color
 - [X] config nvimtree
-- [ ] icon for lspkind or lspconfig doesn't wor
+- [ ] icon for lspkind or lspconfig doesn't work

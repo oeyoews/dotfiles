@@ -76,6 +76,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 " theme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'glepnir/zephyr-nvim'
+Plug 'Mofiqul/vscode.nvim'
 Plug 'windwp/windline.nvim'
 
 call plug#end()

@@ -71,7 +71,8 @@ let g:rooter_patterns = [
       \ ]
 
 " 14. quickrun
-nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR>
+" TODO: have some limit for windows
+nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR><C-w><C-w>G
 
 " 15. toggleterm
 nnoremap <SPACE>tt <Cmd>ToggleTerm<CR>
