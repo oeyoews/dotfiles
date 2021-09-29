@@ -1,9 +1,5 @@
 require("which-key").setup {
 
-  -- operators = { gc = "Comments" },
-
-  -- spelling = { enabled = true, },
-
   layout = {
     height = { min = 4, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
@@ -28,33 +24,20 @@ require("which-key").setup {
     operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
     motions = false,  -- adds help for motions
     text_objects = false, -- help for text objects triggered after entering an operator
-    windows = true, -- default bindings on <c-w>
+    windows = false, -- default bindings on <c-w>
     nav = false, -- misc bindings to work with windows
     z = false, -- bindings for folds, spelling and others prefixed with z
     g = false, -- bindings for prefixed with g
   },
 
   key_labels = {
-    ["<space>"] = "SPC", 
+    ["<space>"] = "SPC",
     ["<cr>"] = "RET",
     ["<tab>"] = "TAB",
   },
 
-  -- opts = {
-  --   mode = "n", -- NORMAL mode
-  --   -- prefix: use "<leader>f" for example for mapping everything related to finding files
-  --   -- the prefix is prepended to every mapping part of `mappings`
-  --   -- prefix = "<space>f",
-  --   buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  --   silent = true, -- use `silent` when creating keymaps
-  --   noremap = true, -- use `noremap` when creating keymaps
-  --   nowait = true, -- use `nowait` when creating keymaps
-  -- },
-
   show_help = false, -- more silent in minimal buffer
-  ignore_missing = false, -- not modify it 
-
-
+  ignore_missing = false, -- not modify it
 }
 
 -- TODO
@@ -63,7 +46,6 @@ require("which-key").register({
   f = { name = "+file" },
   ff = { "<cmd>Telescope find_files<cr>", "Find File" },
   fr = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-  -- fs = { name = "save file" },
 
   b = { name = "+buffer" },
   bn = { "<cmd>enew<cr>", "New File" },
@@ -74,8 +56,7 @@ require("which-key").register({
 
   l = { name = "+lang" },
 
-  l = { name = "+toggle" },
+  t = { name = "+toggle" },
 
   -- ["<space>"] = { ":h<space>", "help" },
 }, { prefix = "<space>" })
-

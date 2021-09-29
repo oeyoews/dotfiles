@@ -1,4 +1,5 @@
-## TODO
+TODO
+-
 
 - [X] trouble.vim
 - [X] add some tips for startify, such as i and e
@@ -9,12 +10,14 @@
 - [X] download e-book for lua documention in lua.org
 - [X] how to add no bindkeys for which-key
 
-## bug
+bug
+-
 - [X] some syntax is not fit for vim, try to learn it like markdown, or lua
 - [X] generate range file name in tmp folders
 - [X] learn ho to test
 
-## Lua
+Lua
+-
 - [X] what is `ipairs`
 - [X] learn pairs and ipairs in manual lua
 - [X] lspsaga to fix

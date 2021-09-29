@@ -8,16 +8,9 @@ endif
 " dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
-Plug 'onsails/lspkind-nvim'
-Plug 'rcarriga/nvim-notify'
-
+" Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim'
 Plug 'folke/lua-dev.nvim'
-Plug 'lukas-reineke/indent-blankline.nvim'
-
-" easymotion
-Plug 'blackcauldron7/surround.nvim'
-Plug 'phaazon/hop.nvim'
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
@@ -36,10 +29,10 @@ Plug 'p00f/nvim-ts-rainbow'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/completion-treesitter'
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
-
 " run
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'thinca/vim-quickrun'
+
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -68,6 +61,12 @@ Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Chiel92/vim-autoformat'
+Plug 'rcarriga/nvim-notify'
+Plug 'lukas-reineke/indent-blankline.nvim'
+" easymotion
+Plug 'blackcauldron7/surround.nvim'
+Plug 'phaazon/hop.nvim'
+
 
 " icons
 Plug 'ryanoasis/vim-devicons'
