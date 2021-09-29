@@ -11,13 +11,13 @@ require'nvim-treesitter.configs'.setup {
     },
 
   refactor = {
-    highlight_definitions = { enable = true },
+    highlight_definitions = { enable = false},
     },
 
   rainbow = {
-  enable = true,
+  enable = false,
   extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
-  max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
+  max_file_lines = 1000,
   },
 
   ensure_installed = {
@@ -37,9 +37,19 @@ require'nvim-treesitter.configs'.setup {
     },
 
   highlight = {
-  enable = true, disable = { }
+  enable = true,
+  disable = {}
+  },
+
+ incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
   },
 }
-
 
 EOF

@@ -1,4 +1,3 @@
-" 2021-09-27 21:11
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent execute '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
         \ https://gitee.com/oeyoews/vim-plug/raw/master/plug.vim'
@@ -8,7 +7,6 @@ endif
 " dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
-" Plug 'onsails/lspkind-nvim'
 Plug 'folke/trouble.nvim'
 Plug 'folke/lua-dev.nvim'
 
@@ -25,10 +23,10 @@ Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 " Plug 'tamago324/nlsp-settings.nvim'
 Plug 'nvim-treesitter/playground'
-Plug 'p00f/nvim-ts-rainbow'
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'p00f/nvim-ts-rainbow'
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'nvim-treesitter/completion-treesitter'
-Plug 'nvim-treesitter/nvim-treesitter-refactor'
+" Plug 'nvim-treesitter/nvim-treesitter-refactor'
 " run
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'thinca/vim-quickrun'
