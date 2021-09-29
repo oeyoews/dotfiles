@@ -12,7 +12,10 @@ require'lspconfig'.vimls.setup{ on_attach=require'completion'.on_attach }
 require'lspconfig'.pyright.setup{ on_attach=require'completion'.on_attach }
 
 -- lang#lua lua-dev
- require'lspconfig'.sumneko_lua.setup{ on_attach=require'completion'.on_attach }
+require'lspconfig'.sumneko_lua.setup{ on_attach=require'completion'.on_attach }
+
+-- lang#sh npm bash-languag-server
+require'lspconfig'.bashls.setup{ on_attach=require'completion'.on_attach }
 
 EOF
 

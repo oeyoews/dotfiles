@@ -22,3 +22,5 @@
 - [X] modify some rainbow color
 - [X] config nvimtree
 - [ ] icon for lspkind or lspconfig doesn't work
+- [ ] use latex for vim
+- [ ] matlab: exam use usb

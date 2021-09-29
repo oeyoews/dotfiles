@@ -157,7 +157,7 @@ require("notify").setup({
   stages = "slide",
 
   -- Default timeout for notifications
-  timeout = 100,
+  timeout = 1000,
 
   -- For stages that change opacity this is treated as the highlight behind the window
   background_colour = "Normal",
@@ -173,4 +173,4 @@ require("notify").setup({
 })
 EOF
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
-      \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config', 'timeout': 100, 'stages': 'slide'})<cr>
+      \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config', 'timeout': 1000, 'stages': 'slide'})<cr>
