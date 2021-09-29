@@ -26,3 +26,5 @@ require "nvim-treesitter.configs".setup {
 		lint_events = {"BufWrite", "CursorHold"},
 	},
 }
+
+-- TODO: add mappings for switch window <29-09-21, yourname> --
