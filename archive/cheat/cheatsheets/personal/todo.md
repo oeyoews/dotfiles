@@ -8,3 +8,4 @@
   - how to init commit?
 - [ ] 观看matlab入门视频
 - [ ] 图像作业 3
+- [ ] rhi homewor

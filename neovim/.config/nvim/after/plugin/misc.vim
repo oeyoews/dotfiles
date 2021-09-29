@@ -150,6 +150,26 @@ EOF
 " notify
 lua << EOF
 vim.notify = require("notify")
+
+require("notify").setup({
+  -- Animation style (see below for details)
+  stages = "slide",
+
+  -- Default timeout for notifications
+  timeout = 100,
+
+  -- For stages that change opacity this is treated as the highlight behind the window
+  background_colour = "Normal",
+
+  -- Icons for the different levels
+  icons = {
+    ERROR = "",
+    WARN = "",
+    INFO = "",
+    DEBUG = "",
+    TRACE = "✎",
+  },
+})
 EOF
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
-      \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config', 'timeout': 500})<cr>
+      \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', {'title': 'nvim-config', 'timeout': 100, 'stages': 'slide'})<cr>

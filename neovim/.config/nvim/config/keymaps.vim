@@ -1,5 +1,6 @@
 " NOTE: must use double quote for down symbols, it't single quotes 
 let g:mapleader = "\<Space>"
+"  or usr space like it: let g:mapleader = ' '
 " let g:mapleader = ','
 
 " disable macro for q
@@ -54,26 +55,28 @@ nnoremap <SPACE>wj <C-w>j
 nnoremap <SPACE>wk <C-w>k
 nnoremap <SPACE>wl <C-w>l
 
-" jump line end
+" better jump
 noremap L $
+noremap H ^
+
 " copy and yank with system
 noremap <SPACE>yy "*y
 noremap <SPACE>pp "*p
 
+" select all
 nnoremap <C-a> ggVG
+" clear all hlight words
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
+
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
 nnoremap <silent> <SPACE>fv <cmd>edit ~/.config/nvim/config/plug.vim<cr>
 
 " save file
 nnoremap <silent><SPACE>fs :w<CR>
-
 " save all files
 nnoremap <silent> <SPACE>fS <Cmd>wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
-
-" nnoremap <silent> <SPACE>so <Cmd>so %<CR><Cmd>echom "Refreshed!"<CR>
 
 " show scriptnames in new buffer
 " command Sc redir @">|silent scriptnames|redir END|enew|put

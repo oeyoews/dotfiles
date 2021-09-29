@@ -11,7 +11,7 @@ alias cdd="cd ~/dotfiles/"
 alias cdn='cd ~/repo/note/linux'
 alias cdr="cd ~/repo"
 alias cdc="cd ~/repo/cCode"
-alias cdt="cd ~/temp"
+alias cdt="cd /tmp"
 alias soz='source $HOME/.zshrc && exec zsh'
 alias cdu="cd ~/.config/nvim/Ultisnips"
 
