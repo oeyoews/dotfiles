@@ -11,7 +11,13 @@ export DISABLE_AUTO_UPDATE=true
 # === zsh
 # ===
 export ZSH=~/.omz
-plugins=(zsh-autosuggestions extract zsh-syntax-highlighting)
+
+# extract
+plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
 ZSH_THEME="p10k/powerlevel10k"
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.omz/themes/p10k/p10k-rainbow.zsh ]] || source ~/.omz/themes/p10k/p10k-rainbow.zsh

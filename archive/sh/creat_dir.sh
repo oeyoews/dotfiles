@@ -4,7 +4,7 @@ set -e
 
 create_dir() {
   cd "$HOME"|| exit 0
-	mkdir repo doc pdf temp wechat iso 
+	mkdir repo doc pdf zip temp 
 }
 
 main() {
