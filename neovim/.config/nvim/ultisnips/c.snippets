@@ -34,7 +34,7 @@ printf("${1:%s}\n"${1/([^%]|%%)*(%.)?.*/(?2:, :\);)/}$2${1/([^%]|%%)*(%.)?.*/(?2
 endsnippet
 
 snippet prr "printf(%d)"
-printf("%${1:d}", $2);
+printf("%${1:d}\n", $2);
 endsnippet
 
 
