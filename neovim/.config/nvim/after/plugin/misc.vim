@@ -110,7 +110,7 @@ EOF
 let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree']
 
 " 21. tabmodetoggle
-autocmd FileType markdown TableModeToggle
+" autocmd FileType markdown TableModeToggle
 
 " 22. lua-dev
 lua << EOF
