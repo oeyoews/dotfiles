@@ -4,7 +4,9 @@ set -e
 
 create_dir() {
   cd "$HOME"|| exit 0
-	mkdir repo doc pdf zip temp 
+	mkdir repo/
+  cd repo
+  mkdir doc pdf zip tmp image video text ppt project
 }
 
 main() {
