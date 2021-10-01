@@ -11,7 +11,7 @@ alias cdv="cd ~/.config/nvim"
 alias cdn='cd ~/Repo/note/linux'
 alias cdr="cd ~/Repo"
 alias cdt="cd /tmp"
-alias cdu="cd ~/.config/nvim/Ultisnips"
+alias cdu="cd ~/.config/nvim/ultisnips"
 alias soz='source $HOME/.zshrc && exec zsh'
 
 # system

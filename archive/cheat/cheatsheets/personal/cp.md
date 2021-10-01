@@ -1,3 +1,3 @@
 cp
 -
-- cp -r 
+- cp --parents .. ..  # copy all path and folder
