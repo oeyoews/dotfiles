@@ -1,0 +1,184 @@
+* Grub
+- cd /etc/default/grub
+- 在 GRUB_CMDLINE_LINUX_DEFAULT 的引号内添加 i8042.dumbkbd ,具体搜索联想小新安装 manjaro 键盘失灵的问题
+- GRUB_TIMEOUT_STYLE=hidden # show menu
+- sudo update-grub          # regenerate
+- sudo vim /etc/default/grub  `quiet` 删除后，在开机的时候会去除很多的打印信息
+
+
+* kvm
+# packages
+- qemu iptables ebtables virt-manager libguestfs(分区)
+- openbsd-netcat (ssh link)
+- bridge-utils( 桥接)
+- libvirt(提供管理虚拟机、存储、网络的功能)
+- dnsmasq 用于 default NAT 网络
+# 启动 default NAT 网络
+sudo virsh net-start default
+# start kvm
+- sudo start/enable  libvirtd.service
+
+
+* Direction
+# modify chinese-dir for system
+- vim ~/.config/user-dirs.dirs
+
+
+* add user
+- userlist
+- userdel -r username
+- passwd <username>
+- useradd -m <username>
+- su == switch user
+- sudo visudo # add <username> ALL .....
+- sudo usermod new_usermod old_usermod # 只能修改用户名，不能修改主目录， 不要修改主目录的名称
+
+
+* fonts
+- /usr/share/fonts/winfonts/   # 建立软链接 可以使用$PWD
+- path: $HOME/.config/libreoffice/4/fonts/  # 将 C:\Windows\Fonts 的字体拷贝到此文件加下. libreoffice 使用的 font 来自 /usr/share/fonts
+
+
+* journalctl
+- * journalctl --disk-usage
+- * sudo vim /etc/systemd/journald.conf
+- * SystemMaxUse=512M
+- * systemctl restart systemd-journald.service
+- * systemctl enable fstrim.timer
+- * systemctl list-timers --all
+- * journalctl --vacuum-size=256M
+- * jctl -u tlp.service
+-
+- # new archwikich for mariadb
+- * sudo mysql_secure_installation # interactive config
+- * SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password');
+- * SELECT user,authentication_string,plugin,host FROM mysql.user;
+- set password for root@localhost =password('123');
+- - mysqladmin -u root password 'newpassword' # use sudo su;
+- - mysqladmin -uroot -p123 password 2956            # easy
+- - updtae user set password=password('123') where user='root';
+- flush privileges;                               #  关键  mysql
+- - mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql # initalize this mysql
+- * mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+- - systemctl start mysql https://wiki.archlinux.org/title/MariaDB
+- - softwart: dbeaver.
+- mycli -uroot -p 123
+- * set password for root@localhost=password('2956');
+- * flush privileges; (optional)
+- * mysqladmin -uroot -p 123 password 2956
+- * vim /etc/mysql/my.cnf # 修改/etc/my.cnf，在 [mysqld] 小节下添加一行：skip-grant-tables=1 这一行配置让 mysqld 启动时不对密码进行验证...https://blog.csdn.net/qq_31854907/article/details/81235991
+-
+
+
+* Cronie(crontab)
+- sudo crontab -e -u root (shutdown -now)
+- crontab file
+
+
+* Jetbrain
+- add https://plugins.zhile.io and install IDE Eval Reset
+- systemctl enable fstrim.timer
+
+- ###
+- * inxi -G # show
+- * mhwd -li
+- ### downgrade
+- * yay -Syyuu
+-
+- ### Date-synchronize
+- * date -S <time> # manual modify system time
+- * `tzselect`  command
+- * `timedatectl`
+- * timedatectl set-local-rtc 1
+- * yay ntp && sudo ntpdate -u  ntp5.aliyun.com
+- * sudo vim /etc/systemd/timesyncd.conf add `NTP=ntp1.aliyun.com ntp2.aliyun.com`
+- * timedatectl status
+-
+- ### Auto login
+- - gdm https://help.gnome.org/admin/gdm/stable/configuration.html.zh_CN#xsessionscript
+- * comment /etc/sddm.conf `relogin` (for sddm)
+-
+- ### fast shutdown
+- * sudo vim /etc/systemd/system.conf( timeout stop )
+-
+- ### Logout
+- * sudo pkill -u username # relogin
+- * killall -9 name
+- * systemctl set-default multi-user.target # auto to cli
+- * systemctl set-default graphical.target
+-
+- ### Terminal background-color
+- * #2F3341
+- * #292d3e
+-
+- ### Redirect
+- * man stow | cat >> <filename>
+-
+- ### Stow
+- * stow -t target_dir object_dir # target_dit default is current's paresent
+-
+- ###  键盘背光灯
+- * fn+space 开启 或者调节亮度 #  manjaro linux default
+-
+- # pacman error
+- - https://www.archlinuxcn.org/gnupg-2-1-and-the-pacman-keyring/
+-
+- ### Gnome
+- - gnome-session-quit # logout linux desktop
+- - C-alt delete # shutdown
+- - C-alt 2 # rerurn desktop
+- - C-r in shell
+-
+- # Tim dpi
+- env WINEPREFIX="$HOME/.deepinwine/Deepin-TIM" winecfg # 弹窗 下载 点击取消  需要提前退出 qq
+- env WINEPREFIX="$HOME/.deepinwine/Deepin-WeChat" /usr/bin/deepin-wine winecfg # deepin-wine
+- env WINEPREFIX="$HOME/.deepinwine/Deepin-WeChat" winecfg
+-
+- ### livecd grubk mount
+- - lsblk
+- - sudo mount /dev/nvme0 /mnt/
+- - https://www.w3cschool.cn/working_on_gnu_linux/working_on_gnu_linux-v8s527ok.html ### ascii
+- showkey -a
+- xkeymaps # gui
+- * systemd
+- systemctl --failed
+- systemctl restart xxx.service
+- systemctl status xxx.service
+
+- python sit-packages 报错，删除相关的包
+
+- Virtual error fix
+ -第二次 安装 iso 时，需要重新挂载 iso， 使用 stat 引导
+
+
+* lang
+  - [[https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#LANGUAGE%EF%BC%9A%E5%90%8E%E5%A4%87%E5%8C%BA%E5%9F%9F%E8%AE%BE%E7%BD%AE][locale]]
+  - /etc/locale.gen
+  - zh_CN.UTF-8 UTF-8
+  - en_US.UTF .....
+  - locale-gen
+    ( will have some warning like language  use export LC_ALL="en_US.UTF-8" to /etc/profile and relogin)
+
+
+* font
+- setfont ter0-132n
+
+
+* uefi
+- efivar -l
+
+
+free -h
+swapon --show
+
+pacman -Syu iwd
+
+https://starrycat.me/archlinux-install-gnome-desktop.html
+https://zhuanlan.zhihu.com/p/157260502
+
+* Bug
+1. Q: netease-cloud-music font is too small in high-resoluation?
+   A: 找到 Exec=这行，替换如下代码 netease-cloud-music --force-device-scale-factor=1.5 %U
+
+   2. Q: can't open exist ipynb file?
+      A: must open in folder, like code jupyter.
