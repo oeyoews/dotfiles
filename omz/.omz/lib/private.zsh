@@ -1,5 +1,4 @@
 # vim
-# vim --startuptime /tmp/vim-startuptime.log xxx.py
 alias vito='vim ~/dotfiles/archive/todo/todo.org'
 alias viz='vim $HOME/.zshrc'
 alias vic='vim ~/dotfiles/cheat/conf.yml'
@@ -9,12 +8,11 @@ alias vig='vim .gitignore'
 # path
 alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim"
-alias cdn='cd ~/repo/note/linux'
-alias cdr="cd ~/repo"
-alias cdc="cd ~/repo/cCode"
+alias cdn='cd ~/Repo/note/linux'
+alias cdr="cd ~/Repo"
 alias cdt="cd /tmp"
-alias soz='source $HOME/.zshrc && exec zsh'
 alias cdu="cd ~/.config/nvim/Ultisnips"
+alias soz='source $HOME/.zshrc && exec zsh'
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'

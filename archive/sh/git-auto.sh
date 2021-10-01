@@ -19,4 +19,4 @@ function main() {
   echo $SECONDS
 }
 
-main
+# main
