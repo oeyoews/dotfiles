@@ -8,7 +8,7 @@ alias vig='vim .gitignore'
 # path
 alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim"
-alias cdr="cd ~/Repo"
+alias cdr="cd ~/Repos"
 alias cdt="cd /tmp"
 alias cdu="cd ~/.config/nvim/ultisnips"
 alias soz='source $HOME/.zshrc && exec zsh'
