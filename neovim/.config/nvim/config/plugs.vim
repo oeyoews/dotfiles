@@ -4,7 +4,6 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" dont modify it easyle, it related to UltiSnips's path
 call plug#begin('$HOME/.cache/nvim/plug')
 
 Plug 'lervag/vimtex'
@@ -42,17 +41,16 @@ Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'mhinz/vim-startify'
-" Plug 't9md/vim-choosewin'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
-Plug 'itchyny/calendar.vim', {'on': 'Calendar'}
+Plug 'itchyny/calendar.vim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
 Plug 'lambdalisue/suda.vim'
-Plug 'kyazdani42/nvim-tree.lua', {'on': 'NvimTreeOpen'}
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'
 Plug 'jiangmiao/auto-pairs'
