@@ -8,6 +8,7 @@ alias vig='vim .gitignore'
 
 # path
 alias cdd="cd ~/dotfiles/"
+alias cdv="cd ~/.config/nvim"
 alias cdn='cd ~/repo/note/linux'
 alias cdr="cd ~/repo"
 alias cdc="cd ~/repo/cCode"

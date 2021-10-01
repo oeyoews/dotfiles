@@ -20,9 +20,13 @@ Bug
 - mooc's video can't watch, 
 - just restart your computer
 
-- NOTE: not upgrade emacs
+<!-- - NOTE: not upgrade emacs -->
+
+-  treesitter has a vim highlight error? 
+-  need use :Tsupdate
 
 
 TODO_BUG
 ---
 - [ ] in xynu.wifi, terminal is doesn't work
+- [ ] in gitee , use ssh , permission is denied?

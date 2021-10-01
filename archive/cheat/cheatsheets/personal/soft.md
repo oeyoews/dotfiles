@@ -175,3 +175,5 @@ drawio
 
 <!-- markdown  -->
 glow
+
+bash-completion
