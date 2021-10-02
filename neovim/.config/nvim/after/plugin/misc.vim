@@ -17,8 +17,8 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 noremap <silent> <SPACE>at <cmd>Calendar -position=here<CR>
 
 " 6. choosewin.vim
-nmap  -  <Plug>(choosewin)
-let g:choosewin_overlay_enable = 1
+" nmap  -  <Plug>(choosewin)
+" let g:choosewin_overlay_enable = 1
 
 " 7. suda.vim
 nnoremap <SPACE>fE :SudaRead<CR>
@@ -28,9 +28,6 @@ nnoremap <SPACE>fw :SudaWrite<CR>
 nnoremap <space>fmit :GenTocMarked<CR>
 
 " 9. css.vim
-lua << EOF
-require'colorizer'.setup()
-EOF
 
 " 10. bullets.vim
 let g:bullets_enabled_file_types = [
@@ -50,12 +47,6 @@ let g:mkdp_filetypes = [
       \ ]
 
 " 12. cursor
-if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-hi Cursor guifg=green guibg=green
-hi Cursor2 guifg=red guibg=red
-set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
 
 " 13. vim-rooter
 " silent for vim-rooter
@@ -104,6 +95,7 @@ EOF
 lua << EOF
 require("indent_blankline").setup {
     char = "|",
+    -- char = "_",
     buftype_exclude = {"terminal"}
 }
 EOF
@@ -170,6 +162,8 @@ require("notify").setup({
   },
 })
 EOF
+
+" TODO:  write a function for notify and learn this noremap method 
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
       \ {'title': 'nvim-config', 'timeout': 1000, 'stages': 'slide'})<cr>

@@ -8,12 +8,12 @@ set number relativenumber
 set autochdir  " simply minbuffer messages
 language messages en_US.utf8
 set nowrap
-set smartcase
 set exrc
 set secure
 set mouse+=a " support mouse
 set linebreak " better wrap
 set hidden  " not must be save current buffer
+" set smartcase
 set ignorecase  " better search"
 " right: mode statusline
 set showcmd  

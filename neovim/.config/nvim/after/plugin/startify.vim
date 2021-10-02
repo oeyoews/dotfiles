@@ -1,6 +1,6 @@
 let g:startify_padding_left = 3
 let g:startify_enable_special = 1
-let g:startify_custom_indices = [ 'f' ]
+let g:startify_custom_indices = [ 'f', 'e']
 let g:startify_lists = [
       \ { 'type': 'files',     'header': ['       Recent Files:']            },
       \ { 'type': 'dir',       'header': ['       Recent Projects: '. getcwd()] },
@@ -24,6 +24,7 @@ let g:startify_custom_footer =
       \ ['', "   Vim is charityware. Please read ':help uganda'.", '']
 
 let g:startify_center = 40
+
 command! Time StartupTime
 
 let g:startify_custom_header_quotes = [

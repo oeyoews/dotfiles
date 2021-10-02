@@ -6,6 +6,10 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
+
+Plug 'nvim-neorg/neorg'
+
+Plug 'hrsh7th/cmp-look'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
 
@@ -45,7 +49,7 @@ Plug 'mhinz/vim-startify'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
 Plug 'itchyny/calendar.vim'
-Plug 'norcalli/nvim-colorizer.lua'
+" Plug 'norcalli/nvim-colorizer.lua'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'tpope/vim-capslock'
@@ -70,7 +74,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 " theme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'glepnir/zephyr-nvim'
-Plug 'Mofiqul/vscode.nvim'
 Plug 'windwp/windline.nvim'
 
 call plug#end()

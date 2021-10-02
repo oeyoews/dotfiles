@@ -14,7 +14,11 @@ inoremap jk <ESC>
 " inoremap kj <ESC>
 
 " copy path to clipboard
-nnoremap  <SPACE>fpy :let @+=expand('%:p')<CR> <Cmd>echo "Copy path finished!"<CR>
+" nnoremap <silent> <SPACE>fyp <cmd>let @+=expand('%:p')<CR> \ <Cmd>echo "Copy path finished!"<CR>
+nnoremap <silent> <leader>fyp :<C-U>silent update  <bar> let @+=expand('%:p') <bar>
+      \ call v:lua.vim.notify("Copy file path finished", 'info', 
+      \ {'title': 'nvim-config', 'timeout': 1000, 'stages': 'slide'})<cr>
+
 
 " switch options
 nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
@@ -75,4 +79,4 @@ nnoremap <silent><SPACE>fs :w<CR>
 " save all files
 nnoremap <silent> <SPACE>fS <Cmd>wa<CR>
 
-nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.md<CR>
+nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.norg<CR>

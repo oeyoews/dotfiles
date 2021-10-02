@@ -5,6 +5,17 @@ endif
 
 lua << EOF
 
+
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_configs.norg = {
+    install_info = {
+        url = "https://github.com/nvim-neorg/tree-sitter-norg",
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main"
+    },
+}
+
 require'nvim-treesitter.configs'.setup {
   refactor = {
     highlight_current_scope = { enable =false},
@@ -22,6 +33,7 @@ require'nvim-treesitter.configs'.setup {
 
   ensure_installed = {
     "html",
+    "norg", -- must in local after
     "lua",
     "c",
     "json",
@@ -52,5 +64,6 @@ require'nvim-treesitter.configs'.setup {
     },
   },
 }
+
 
 EOF

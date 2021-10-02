@@ -1,3 +1,12 @@
+@document.meta
+	title: todo
+	description: 
+	author: oeyoews
+	categories: 
+	created: 2021-10-02
+	version: 0.1
+@end
+
 NVIM_TODO
 ===
 
@@ -18,11 +27,12 @@ bug
 
 Lua
 -
-- [X] what is `ipairs`
-- [X] learn pairs and ipairs in manual lua
-- [X] lspsaga to fix
-- [X] in plug config ,plus if logo Variable
-- [X] modify some rainbow color
-- [X] config nvimtree
-- [X] treesitter query highlight is error
-- [X] icon for lspkind or lspconfig doesn't work
+- [ ]  what is `ipairs`
+- [ ]  learn pairs and ipairs in manual lua
+- [] lspsaga to fix
+- [] in plug config ,plus if logo Variable
+- [] modify some rainbow color
+- [] config nvimtree
+- [] treesitter query highlight is error
+- [ ]  icon for lspkind or lspconfig doesn't work
+- [ ] learn notify
