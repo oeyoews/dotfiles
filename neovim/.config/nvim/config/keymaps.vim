@@ -58,7 +58,7 @@ noremap H ^
 
 " demo
 " copy and yank with system
-noremap <SPACE>yy "*y
+noremap <SPACE>yy "*yy
 noremap <SPACE>pp "*p
 noremap <SPACE>pP "*P
 

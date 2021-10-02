@@ -6,6 +6,7 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
 
 " completion

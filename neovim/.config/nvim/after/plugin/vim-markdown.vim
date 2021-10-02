@@ -1,6 +1,6 @@
 let g:vim_markdown_folding_disabled = 1 " just disable folding for markdown
 let g:vim_markdown_toc_autofit = 1
-set conceallevel=2
+" set conceallevel=2
 let g:vim_markdown_conceal_code_blocks = 1  " disable hiden code-blocks
 let g:vim_markdown_frontmatter = 1
 let g:vim_markdown_strikethrough = 1
