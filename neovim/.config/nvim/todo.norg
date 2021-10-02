@@ -36,3 +36,4 @@ Lua
 - [] treesitter query highlight is error
 - [ ]  icon for lspkind or lspconfig doesn't work
 - [ ] learn notify
+- [ ] try to config vimtex again for multily files and preview instance

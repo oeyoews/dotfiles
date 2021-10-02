@@ -7,6 +7,7 @@ endif
 call plug#begin('$HOME/.cache/nvim/plug')
 
 
+Plug 'MattesGroeger/vim-bookmarks'
 Plug 'nvim-neorg/neorg'
 
 Plug 'hrsh7th/cmp-look'

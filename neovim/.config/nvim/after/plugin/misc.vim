@@ -38,7 +38,11 @@ let g:mkdp_filetypes = [
       \ 'css'
       \ ]
 
-" 12. cursor
+" 12. bookmark
+"highlight BookmarkSign ctermbg=NONE ctermfg=160
+let g:bookmark_sign = '📖'
+let g:bookmark_highlight_lines = 1
+let g:bookmark_auto_save_file = $HOME.'/.cache/vim_bookmarks'
 
 " 13. vim-rooter
 " silent for vim-rooter
@@ -83,11 +87,10 @@ EOF
 lua << EOF
 require("indent_blankline").setup {
     char = "|",
-    -- char = "_",
     buftype_exclude = {"terminal"}
 }
 EOF
-let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree']
+let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree', 'calendar']
 
 " 21. tabmodetoggle
 " autocmd FileType markdown TableModeToggle
