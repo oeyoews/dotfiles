@@ -183,3 +183,4 @@ set conceallevel=2
 
 " latex preview
 let g:livepreview_previewer = 'okular'
+autocmd FileType tex nnoremap  <leader>ltp <cmd>LLPStartPreview<cr>

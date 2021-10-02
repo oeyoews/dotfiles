@@ -7,7 +7,7 @@ let g:mapleader = "\<Space>"
 nnoremap q <nop>
 
 " clean minimal buffer
-nnoremap <ESC> <ESC><C-L><CR>
+nnoremap <ESC> <ESC><C-L>
 
 " quit insert mode fastly
 inoremap jk <ESC>
@@ -24,8 +24,8 @@ nnoremap <silent> <SPACE>tl :set list<CR>
 nnoremap <silent> <SPACE>tL :set nolist<CR>
 
 " continue indent
-vnoremap > >gv
-vnoremap < <gv
+vnoremap >> >gv
+vnoremap << <gv
 
 " command mode
 noremap <SPACE>hh :
@@ -67,7 +67,7 @@ nnoremap <C-a> ggVG
 " clear all hlight words
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 
-nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
+nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR><cmd>NvimTreeToggle<cr>
 nnoremap <silent> <SPACE>fv <cmd>edit ~/.config/nvim/config/plugs.vim<cr>
 
 " save file
