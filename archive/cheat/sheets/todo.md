@@ -20,3 +20,5 @@ I
 - [X] compumter mooc test
 - [ ] digital图像作业 3(fspecial)
 - [ ] rhi homework(matlab gui)
+- [X] process window focus's problem
+- [X] check vimtex document
