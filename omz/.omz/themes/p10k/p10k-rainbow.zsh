@@ -32,7 +32,6 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # time                  # current time
-    status                  # exit code of the last command
     os_icon                 # os identifier
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
@@ -52,6 +51,7 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
+    status                  # exit code of the last command
     proxy                   # system-wide http/https/ftp proxy
     direnv                  # direnv status (https://direnv.net/)
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
