@@ -1,3 +1,3 @@
 lua << EOF
-require('wlsample.bubble')
+local nvim_line = require('wlsample.evil_line')
 EOF

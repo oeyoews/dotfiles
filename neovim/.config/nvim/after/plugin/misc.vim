@@ -16,10 +16,6 @@ nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
 " 5. calendar.vim
 noremap <silent> <SPACE>at <cmd>Calendar -position=here<CR>
 
-" 6. choosewin.vim
-" nmap  -  <Plug>(choosewin)
-" let g:choosewin_overlay_enable = 1
-
 " 7. suda.vim
 nnoremap <SPACE>fE :SudaRead<CR>
 nnoremap <SPACE>fw :SudaWrite<CR>
@@ -27,13 +23,9 @@ nnoremap <SPACE>fw :SudaWrite<CR>
 " 8. markdown-toc.vim
 nnoremap <space>fmit :GenTocMarked<CR>
 
-" 9. css.vim
-
 " 10. bullets.vim
 let g:bullets_enabled_file_types = [
 			\ 'markdown',
-      \ 'text',
-      \ 'scratch'
       \ ]
 
 " 11. markdown-preview.vim
@@ -81,10 +73,6 @@ nnoremap <SPACE>jj <Cmd>HopWord<CR>
 nnoremap <SPACE>jl <Cmd>HopLine<CR>
 
 " 18. highlight yank
-autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch",
-      \ timeout=150, on_visual=true}
-let g:rainbow_active = 1
-
 
 " 19. surround.nvim
 lua << EOF
@@ -118,29 +106,6 @@ lspconfig.sumneko_lua.setup(luadev)
 
 EOF
 
-" 23. telescope
-" it doesn't work for theme and layout
-if !exists('g:loaded_telescope') | finish | endif
-
-lua << EOF
-local actions = require('telescope.actions')
-require('telescope').setup{
-defaults = {
-  mappings = {
-    n = { ["q"] = actions.close },
-    },
-  layout_config = {
-    vertical = { width = 0.5 } -- other layout configuration here
-  },
- pickers = {
-    find_files = {
-      theme = "dropdown",
-    }
-  },
-}
-}
-EOF
-
 " 24. trouble.vim
 lua << EOF
   require("trouble").setup {}
@@ -149,7 +114,7 @@ EOF
 " 25. notify
 lua << EOF
 vim.notify = require("notify")
-require("notify").setup({
+vim.notify.setup({
   stages = "slide",
   timeout = 1000,
   background_colour = "Normal",
@@ -167,14 +132,3 @@ EOF
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
       \ {'title': 'nvim-config', 'timeout': 1000, 'stages': 'slide'})<cr>
-
-" 26. vimtex
-autocmd FileType tex nnoremap <leader>ltt <cmd>VimtexCompile<cr>
-autocmd FileType tex nnoremap <leader>ltc <cmd>VimtexClean<cr>
-autocmd FileType tex nnoremap <leader>ltv <cmd>VimtexView<cr>
-let g:tex_conceal='abdmg'
-set conceallevel=2
-
-" latex preview
-let g:livepreview_previewer = 'okular'
-autocmd FileType tex nnoremap  <leader>ltp <cmd>LLPStartPreview<cr>
