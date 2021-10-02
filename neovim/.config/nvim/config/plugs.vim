@@ -6,7 +6,8 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
-
+Plug 'rafcamlet/nvim-luapad'
+Plug 'yuki-uthman/nvim-vimpad'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'nvim-neorg/neorg'
 
