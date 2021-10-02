@@ -1,3 +1,6 @@
+/* vim:set et sw=2 ts=2 tw=120 fen: */
+/* {{{  part 1*/
+
 * ORG-MODE [[https://orgmode.org/manual/Headlines.html#Headlines][org_link]]
 1. spc t p
 2. spc t z
@@ -160,3 +163,5 @@ D) [[http://www.fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-tut
 
 * TODO add a directory
 * TODO learn jump next cursor word
+
+  /* }}} */

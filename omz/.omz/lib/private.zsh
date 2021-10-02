@@ -118,6 +118,7 @@ export EDITOR=nvim
 export CHEATCOLORS=true
 export CHEAT_CONFIG_PATH="~/dotfiles/archive/cheat/conf.yml"
 export CHEAT_USE_FZF=true
+export COLORTERM=truecolor
 
 # better man page dependcies: bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
