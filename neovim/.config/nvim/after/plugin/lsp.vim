@@ -63,9 +63,13 @@ end,
     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     }
 
-  nvim_lsp.sumneko_lua.setup {
-    capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
+--   nvim_lsp.diagnosticls.setup {
+--     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+--     }
+
+  -- nvim_lsp.sumneko_lua.setup {
+    --capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    -- }
 
   nvim_lsp.vimls.setup {
     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())

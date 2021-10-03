@@ -89,18 +89,7 @@ EOF
 " autocmd FileType markdown TableModeToggle
 
 " 22. lua-dev
-lua << EOF
 
-local luadev = require("lua-dev").setup({
-  lspconfig = {
-    cmd = {"lua-language-server"}
-  },
-})
-
-local lspconfig = require('lspconfig')
-lspconfig.sumneko_lua.setup(luadev)
-
-EOF
 
 " 24. trouble.vim
 lua << EOF

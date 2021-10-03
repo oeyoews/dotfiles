@@ -28,7 +28,7 @@ Plug 'kdheepak/cmp-latex-symbols', { 'for': 'tex' }
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 Plug 'folke/trouble.nvim'
-Plug 'folke/lua-dev.nvim', {'for': 'lua'}
+" Plug 'folke/lua-dev.nvim', {'for': 'lua'}
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'oeyoews/lspsaga.nvim'
 
