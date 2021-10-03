@@ -8,4 +8,5 @@ require("indent_blankline").setup {
     buftype_exclude = {"terminal"}
 }
 EOF
-let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree', 'calendar']
+
+let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree', 'calendar', 'tsplayground']

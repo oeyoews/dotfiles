@@ -1,4 +1,3 @@
-" it doesn't work for theme and layout
 if !exists('g:loaded_telescope') | finish | endif
 
 lua << EOF

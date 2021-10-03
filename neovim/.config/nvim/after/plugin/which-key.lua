@@ -1,4 +1,6 @@
-require("which-key").setup {
+local which_configs = require("which-key")
+
+which_configs.setup {
 
   plugins = {
     marks = false, -- shows a list of your marks on ' and `
@@ -48,7 +50,7 @@ require("which-key").setup {
   ignore_missing = false, -- not modify it
 }
 
--- TODO
+-- TODO for Telescope
 require("which-key").register({
 
   f = { name = "+file" },
@@ -66,5 +68,4 @@ require("which-key").register({
 
   t = { name = "+toggle" },
 
-  -- ["<space>"] = { ":h<space>", "help" },
 }, { prefix = "<space>" })

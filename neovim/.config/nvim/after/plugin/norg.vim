@@ -1,5 +1,4 @@
 lua << EOF
-
 require('neorg').setup {
   -- Tell Neorg what modules to load
   load = {
@@ -10,7 +9,7 @@ require('neorg').setup {
       engine =  "nvim-cmp"
       } 
     },
-    ["core.norg.dirman"] = { -- Manage your directories with Neorg
+    ["core.norg.dirman"] = {
       config = {
       workspaces = {
       my_workspace = "~/.neorg"
@@ -19,7 +18,6 @@ require('neorg').setup {
   }
 },
 }
-
 EOF
 
 " mappings

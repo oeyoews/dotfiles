@@ -39,7 +39,6 @@ let g:mkdp_filetypes = [
       \ ]
 
 " 12. bookmark
-"highlight BookmarkSign ctermbg=NONE ctermfg=160
 let g:bookmark_sign = '📖'
 let g:bookmark_highlight_lines = 1
 let g:bookmark_auto_save_file = $HOME.'/.cache/vim_bookmarks'
@@ -76,20 +75,10 @@ EOF
 nnoremap <SPACE>jj <Cmd>HopWord<CR>
 nnoremap <SPACE>jl <Cmd>HopLine<CR>
 
-" 18. highlight yank
-
 " 19. surround.nvim
 lua << EOF
 require"surround".setup{}
 EOF
-
-" 20. indent line
-
-" 21. tabmodetoggle
-" autocmd FileType markdown TableModeToggle
-
-" 22. lua-dev
-
 
 " 24. trouble.vim
 lua << EOF

@@ -7,12 +7,9 @@ local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
 
-cmp.register_source('look', require('cmp_look').new())
-
 cmp.setup({
 snippet = {
   expand = function(args)
-  -- For `ultisnips` user.
   vim.fn["UltiSnips#Anon"](args.body)
 end,
 },
@@ -28,11 +25,9 @@ formatting = {
 
   vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
 
-  -- set a name for each source
   vim_item.menu = ({
   buffer = "[Buffer]",
   nvim_lsp = "[LSP]",
-  -- luasnip = "[LuaSnip]",
   nvim_lua = "[Lua]",
   latex_symbols = "[Latex]",
   })[entry.source.name]
@@ -43,7 +38,6 @@ end,
     sources = {
       { name = 'nvim_lsp' },
       { name = 'path' },
-      { name = 'look' },
       { name = 'emoji' },
       { name = 'buffer' },
       { name = 'ultisnips' },
@@ -63,14 +57,6 @@ end,
     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     }
 
---   nvim_lsp.diagnosticls.setup {
---     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
---     }
-
-  -- nvim_lsp.sumneko_lua.setup {
-    --capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    -- }
-
   nvim_lsp.vimls.setup {
     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     }
@@ -85,19 +71,14 @@ end,
     }
   )
 
-
 EOF
 
 autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }
 
-" " Use <Tab> and <S-Tab> to navigate through popup menu
-" " must in this file
-" inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" mappings
+" ultisnips
 nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>G
 nnoremap <silent> <SPACE>ea :UltiSnipsEdit all<CR>
+
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 let g:UltiSnipsSnippetDirectories = [
