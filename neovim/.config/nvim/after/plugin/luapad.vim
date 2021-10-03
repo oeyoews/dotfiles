@@ -1,3 +1,5 @@
+if !exists('g:luapad_loaded') | finish | endif
+
 lua << EOF
 require('luapad').setup{
   count_limit = 150000,

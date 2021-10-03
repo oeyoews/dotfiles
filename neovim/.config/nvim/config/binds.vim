@@ -1,7 +1,13 @@
 " NOTE: must use double quote for down symbols, it't single quotes 
+" this order is also important, should in first line
 let g:mapleader = "\<Space>"
 "  or usr space like it: let g:mapleader = ' '
 " let g:mapleader = ','
+
+nnoremap <silent> <leader>] :set paste<cr>o<esc>:set nopaste<cr>
+nnoremap <silent> <leader>[ :set paste<cr>O<esc>:set nopaste<cr>
+
+nnoremap <leader>sO <cmd>so %<cr>
 
 " disable macro for q
 nnoremap q <nop>
@@ -23,7 +29,7 @@ nnoremap <silent> <leader>fyp :<C-U>silent update  <bar> let @+=expand('%:p') <b
 " switch options
 nnoremap <silent> <SPACE>tn :set number! relativenumber!<CR>
 nnoremap <silent> <SPACE>tw :set wrap!<CR>
-nnoremap <silent> <SPACE>tp :set spell!<CR>
+nnoremap <silent> <SPACE>ts :set spell!<CR>
 nnoremap <silent> <SPACE>tl :set list<CR>
 nnoremap <silent> <SPACE>tL :set nolist<CR>
 

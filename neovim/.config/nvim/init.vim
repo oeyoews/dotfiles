@@ -1,2 +1,2 @@
-" 2021-09-27 21:11
+" vim: set ro:
 runtime! ./config/*.vim

@@ -34,6 +34,11 @@ Lua
 - [] modify some rainbow color
 - [] config nvimtree
 - [] treesitter query highlight is error
-- [ ]  icon for lspkind or lspconfig doesn't work
+- [x]  icon for lspkind or lspconfig doesn't work
 - [ ] learn notify
 - [ ] try to config vimtex again for multily files and preview instance
+- [ ] learn how to disable generate comment automatically 
+- [x]  learn if statment
+- [ ] timeout error (like which-key)
+- [x]  learn how to use norg's todo
+- [ ]  how to use nvim tree to add a folder

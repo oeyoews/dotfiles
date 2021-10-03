@@ -84,13 +84,6 @@ require"surround".setup{}
 EOF
 
 " 20. indent line
-lua << EOF
-require("indent_blankline").setup {
-    char = "|",
-    buftype_exclude = {"terminal"}
-}
-EOF
-let g:indent_blankline_filetype_exclude = ['help', 'startify', 'NvimTree', 'calendar']
 
 " 21. tabmodetoggle
 " autocmd FileType markdown TableModeToggle

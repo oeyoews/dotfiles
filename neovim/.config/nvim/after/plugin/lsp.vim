@@ -7,8 +7,6 @@ local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
 
--- cmp.register_source('look', require('cmp_look').new())
-
 cmp.setup({
 snippet = {
   expand = function(args)
@@ -18,9 +16,9 @@ end,
 },
 
 mapping = {
-  ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
-  ['<CR>'] = cmp.mapping.confirm({ select = true }),
-  ['<C-e>'] = cmp.mapping.close(), -- close this complete and return vanilla status
+  ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }), -- next item
+  ['<CR>'] = cmp.mapping.confirm({ select = true }),  -- confirm complete
+  ['<C-e>'] = cmp.mapping.close(), -- close complete
   },
 
 formatting = {
@@ -32,7 +30,7 @@ formatting = {
   vim_item.menu = ({
   buffer = "[Buffer]",
   nvim_lsp = "[LSP]",
-  luasnip = "[LuaSnip]",
+  -- luasnip = "[LuaSnip]",
   nvim_lua = "[Lua]",
   latex_symbols = "[Latex]",
   })[entry.source.name]

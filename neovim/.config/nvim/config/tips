@@ -1,0 +1,3 @@
+vim --noplugin
+vim -u NORC
+:highlight

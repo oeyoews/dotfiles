@@ -1,4 +1,6 @@
-set completeopt=menuone,noinsert,noselect,menu
+" it's something bug for this order, it modified by /usr/.....
+" set formatoptions-=cro  " help fo-table 
+set completeopt=menu,menuone,noinsert,noselect
 set virtualedit=onemore
 set cursorline
 set matchtime=2
@@ -28,7 +30,7 @@ set shiftwidth=2  " default indent distance for >> <<
 set tabstop=2 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
-set smartindent
+" set smartindent
 " set clipboard^=unnamed
 set nolist " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶

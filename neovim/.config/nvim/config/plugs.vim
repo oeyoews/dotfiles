@@ -6,42 +6,46 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
-Plug 'rafcamlet/nvim-luapad'
-Plug 'yuki-uthman/nvim-vimpad'
+
+" Plug 'rafcamlet/nvim-whid'
+" Plug '~/.cache/nvim/plu/demos'
+Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
+Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'nvim-neorg/neorg'
 
-Plug 'hrsh7th/cmp-look'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " completion
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-look'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'kdheepak/cmp-latex-symbols'
+Plug 'kdheepak/cmp-latex-symbols', { 'for': 'tex' }
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 Plug 'folke/trouble.nvim'
-Plug 'folke/lua-dev.nvim'
+Plug 'folke/lua-dev.nvim', {'for': 'lua'}
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'oeyoews/lspsaga.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
 Plug 'nvim-treesitter/playground'
 Plug 'onsails/lspkind-nvim'
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'mzlogin/vim-markdown-toc'
-Plug 'plasticboy/vim-markdown'
+Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'dkarter/bullets.vim'
-Plug 'dhruvasagar/vim-table-mode'
+Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' } 
 
 " tools
 Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
