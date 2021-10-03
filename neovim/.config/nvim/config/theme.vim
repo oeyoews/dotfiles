@@ -5,12 +5,15 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " transparent bg" order is very important for it
 " Example config in VimScript
 " day night storm
-let g:tokyonight_style = "storm"  
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
+" let g:tokyonight_style = "storm"
+" let g:tokyonight_italic_functions = 1
+" let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 " colorscheme tokyonight
-colorscheme zephyr
+
+" colorscheme zephyr
+" colorscheme solarized
+colorscheme deus
 
 " let g:onedark_style = 'darker'
 " colorscheme onedark
