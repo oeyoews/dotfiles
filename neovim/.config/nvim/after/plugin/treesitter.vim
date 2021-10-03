@@ -9,12 +9,19 @@ lua << EOF
 local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
 
 parser_configs.norg = {
-    install_info = {
-        url = "https://github.com/nvim-neorg/tree-sitter-norg",
-        files = { "src/parser.c", "src/scanner.cc" },
-        branch = "main"
+  install_info = {
+    url = "https://github.com/nvim-neorg/tree-sitter-norg",
+    files = { "src/parser.c", "src/scanner.cc" },
+    branch = "main"
     },
-}
+  }
+
+parser_configs.markdown = {
+  install_info = {
+    url = "https://github.com/ikatyang/tree-sitter-markdown",
+    files = {"src/parser.c", "src/scanner.cc"},
+    },
+  }
 
 require'nvim-treesitter.configs'.setup {
   refactor = {
@@ -22,11 +29,12 @@ require'nvim-treesitter.configs'.setup {
     },
 
   refactor = {
-    highlight_definitions = { enable = false},
+    highlight_definitions = { enable = true},
     },
 
+  -- rainbow brackets
   rainbow = {
-  enable = false,
+  enable = true,
   extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
   max_file_lines = 1000,
   },
@@ -34,6 +42,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "html",
     "norg", -- must in local after
+    "markdown",
     "lua",
     "c",
     "json",

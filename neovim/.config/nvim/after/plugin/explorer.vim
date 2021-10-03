@@ -3,7 +3,7 @@
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
 
 " show hidden files
-let g:nvim_tree_hide_dotfiles = 1
+let g:nvim_tree_hide_dotfiles = 0
 " jump empty files
 let g:nvim_tree_group_empty = 1
 let g:nvim_tree_git_hl = 1

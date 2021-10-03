@@ -6,9 +6,6 @@ endif
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
-
-" Plug 'rafcamlet/nvim-whid'
-" Plug '~/.cache/nvim/plu/demos'
 Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'MattesGroeger/vim-bookmarks'
@@ -34,10 +31,15 @@ Plug 'folke/trouble.nvim'
 Plug 'folke/lua-dev.nvim', {'for': 'lua'}
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'oeyoews/lspsaga.nvim'
+
+" all nvim-treesitter
+Plug 'p00f/nvim-ts-rainbow'
+Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
+
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
-Plug 'nvim-treesitter/playground'
 Plug 'onsails/lspkind-nvim'
 
 " markdown
@@ -80,5 +82,11 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'glepnir/zephyr-nvim'
 Plug 'windwp/windline.nvim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'projekt0n/github-nvim-theme'
+" Plug 'navarasu/onedark.nvim'
+" Plug 'EdenEast/nightfox.nvim'
 
+" Plug 'rafcamlet/nvim-whid'
+" Plug '~/.cache/nvim/plu/demos'
 call plug#end()

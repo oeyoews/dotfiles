@@ -7,6 +7,8 @@ local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
 
+cmp.register_source('look', require('cmp_look').new())
+
 cmp.setup({
 snippet = {
   expand = function(args)
@@ -39,15 +41,14 @@ end,
 },
 
     sources = {
-
       { name = 'nvim_lsp' },
       { name = 'path' },
+      { name = 'look' },
       { name = 'emoji' },
       { name = 'buffer' },
       { name = 'ultisnips' },
       { name = "latex_symbols" },
       { name = 'neorg' }
-
       }
 
     })
