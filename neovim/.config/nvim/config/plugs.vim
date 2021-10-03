@@ -24,6 +24,7 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'oeyoews/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/lua-dev.nvim'
 
 " treesitter
 Plug 'p00f/nvim-ts-rainbow'
