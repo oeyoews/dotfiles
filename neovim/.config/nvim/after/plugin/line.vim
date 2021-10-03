@@ -38,9 +38,9 @@ EOF
 "   let modified = &modified ? ' +' : ''
 "   return filename . modified
 " endfunction
-"
+
 " ===
 " === spaceline
 " ===
-let g:spaceline_colorscheme = 'dracula'
-let g:spaceline_seperate_style = 'slant-cons'
+" let g:spaceline_colorscheme = 'dracula'
+" let g:spaceline_seperate_style = 'slant-cons'

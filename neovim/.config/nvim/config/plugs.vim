@@ -90,5 +90,6 @@ Plug 'windwp/windline.nvim'
 " Plug 'liuchengxu/eleline.vim'
 " Plug 'glepnir/spaceline.vim'
 Plug 'oeyoews/nvim-deus'
+" Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
 call plug#end()
