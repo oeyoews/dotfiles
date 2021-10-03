@@ -14,9 +14,19 @@ snippet = {
 end,
 },
 
+completion = {
+  completeopt = 'menu,menuone,noinsert',
+  },
+
 mapping = {
-  ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }), -- next item
-  ['<CR>'] = cmp.mapping.confirm({ select = true }),  -- confirm complete
+  ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+  ['<C-f>'] = cmp.mapping.scroll_docs(4),
+  ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }), -- switch item
+  -- todo
+  ['<CR>'] = cmp.mapping.confirm({
+  behavior = cmp.ConfirmBehavior.Replace,
+  select = true,
+  }),  -- confirm complete
   ['<C-e>'] = cmp.mapping.close(), -- close complete
   },
 
@@ -26,29 +36,28 @@ formatting = {
   vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
 
   vim_item.menu = ({
-  buffer = "[Buffer]",
   nvim_lsp = "[LSP]",
-  nvim_lua = "[Lua]",
-  latex_symbols = "[Latex]",
+  ultisnips = "[Usnip]",
+  buffer = "[Buf]",
+  neorg = "[Neorg]",
   })[entry.source.name]
 return vim_item
 end,
 },
 
-    sources = {
-      { name = 'nvim_lsp' },
-      { name = 'path' },
-      { name = 'emoji' },
-      { name = 'buffer' },
-      { name = 'ultisnips' },
-      { name = "latex_symbols" },
-      { name = 'neorg' }
-      }
+sources = {
+  { name = 'nvim_lsp' },
+  { name = 'ultisnips' },
+  { name = 'buffer' },
+  { name = 'emoji' },
+  { name = "latex_symbols" },
+  { name = 'path' },
+  { name = 'neorg' }
+  }
 
     })
 
   -- Setup lspconfig.
-  -- todo
   nvim_lsp.clangd.setup {
     capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
     }
@@ -73,13 +82,14 @@ end,
 
 EOF
 
+" disable cmp for telescope
 autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }
 
 " ultisnips
 nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>G
 nnoremap <silent> <SPACE>ea :UltiSnipsEdit all<CR>
 
-let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-J>"
 let g:UltiSnipsJumpBackwardTrigger="<C-K>"
 let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.config/nvim/Ultisnips/',
