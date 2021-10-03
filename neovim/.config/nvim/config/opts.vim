@@ -1,6 +1,6 @@
 " it's something bug for this order, it modified by /usr/.....
 " set formatoptions-=cro  " help fo-table 
-" set completeopt=menu,menuone,noinsert,noselect
+set completeopt=menu,menuone,noinsert,noselect
 set virtualedit=onemore
 set cursorline
 set matchtime=2

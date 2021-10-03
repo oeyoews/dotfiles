@@ -11,6 +11,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-path'
+Plug 'octaltree/cmp-look'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
@@ -72,6 +73,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
+Plug 'junegunn/goyo.vim'
 
 " icons
 Plug 'ryanoasis/vim-devicons'

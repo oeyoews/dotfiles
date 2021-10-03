@@ -7,6 +7,8 @@ local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
 
+cmp.register_source('look', require('cmp_look').new())
+
 cmp.setup({
 snippet = {
   expand = function(args)
@@ -15,19 +17,18 @@ end,
 },
 
 completion = {
-  completeopt = 'menu,menuone,noinsert',
+  completeopt = 'menu,menuone,noinsert,noselect',
   },
 
 mapping = {
   ['<C-d>'] = cmp.mapping.scroll_docs(-4),
   ['<C-f>'] = cmp.mapping.scroll_docs(4),
+  ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 's' }), -- switch item
   ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }), -- switch item
-  -- todo
-  ['<CR>'] = cmp.mapping.confirm({
-  behavior = cmp.ConfirmBehavior.Replace,
-  select = true,
-  }),  -- confirm complete
-  ['<C-e>'] = cmp.mapping.close(), -- close complete
+  ['<CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true, }),  -- confirm complete
+  ['<C-e>'] = cmp.mapping.complete(), -- complete
+  ['<C-c>'] = cmp.mapping.close(), -- close complete
+  -- ['<C-c>'] = cmp.mapping.abort(), --abort
   },
 
 formatting = {
@@ -39,6 +40,7 @@ formatting = {
   nvim_lsp = "[LSP]",
   ultisnips = "[Usnip]",
   buffer = "[Buf]",
+  look = "[Dic]",
   neorg = "[Neorg]",
   })[entry.source.name]
 return vim_item
@@ -52,6 +54,7 @@ sources = {
   { name = 'emoji' },
   { name = "latex_symbols" },
   { name = 'path' },
+  { name = 'look' },
   { name = 'neorg' }
   }
 

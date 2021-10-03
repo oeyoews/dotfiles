@@ -42,3 +42,4 @@ Lua
 - [ ] timeout error (like which-key)
 - [x]  learn how to use norg's todo
 - [ ]  how to use nvim tree to add a folder
+- [ ]  cmp-look is not work
