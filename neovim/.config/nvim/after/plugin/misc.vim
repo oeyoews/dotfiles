@@ -105,4 +105,4 @@ EOF
 " TODO:  write a function for notify and learn this noremap method 
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
-      \ {'title': 'nvim-config', 'timeout': 1000, 'stages': 'slide'})<cr>
+      \ {'title': 'nvim-config', 'timeout': 3000, 'stages': 'slide'})<cr>

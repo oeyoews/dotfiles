@@ -2,6 +2,7 @@
 " set formatoptions-=cro  " help fo-table 
 set completeopt=menu,menuone,noinsert,noselect
 set virtualedit=onemore
+set termguicolors
 " set cursorline
 set matchtime=2
 set undofile
