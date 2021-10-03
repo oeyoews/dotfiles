@@ -30,6 +30,7 @@ Plug 'p00f/nvim-ts-rainbow'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
+Plug 'romgrk/nvim-treesitter-context'
 
 " norg
 Plug 'nvim-neorg/neorg'
@@ -76,12 +77,16 @@ Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
 Plug 'junegunn/goyo.vim'
 
 " icons
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " theme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'glepnir/zephyr-nvim'
+" Plug 'itchyny/lightline.vim'
+" Plug 'shadmansaleh/lualine.nvim'
 Plug 'windwp/windline.nvim'
+" Plug 'liuchengxu/eleline.vim'
+" Plug 'glepnir/spaceline.vim'
 
 call plug#end()
