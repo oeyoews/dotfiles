@@ -3,9 +3,12 @@ if !exists('g:lspconfig')
 endif
 
 lua <<EOF
+
 local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+local servers = { 'vimls', 'clangd', 'bashls', 'pyright' }
 
 cmp.register_source('look', require('cmp_look').new())
 
@@ -31,6 +34,7 @@ mapping = {
   -- ['<C-c>'] = cmp.mapping.abort(), --abort
   },
 
+-- config LSP UI menu
 formatting = {
   format = function(entry, vim_item)
 
@@ -47,6 +51,7 @@ return vim_item
 end,
 },
 
+-- add complete sources
 sources = {
   { name = 'nvim_lsp' },
   { name = 'ultisnips' },
@@ -60,23 +65,15 @@ sources = {
 
     })
 
-  -- Setup lspconfig.
-  nvim_lsp.clangd.setup {
-    capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
+  -- automatically connect language server protocol
+  capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+  for _, lsp in ipairs(servers) do
+    nvim_lsp[lsp].setup {
+      capabilities = capabilities,
+      }
+  end
 
-  nvim_lsp.bashls.setup {
-    capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
-
-  nvim_lsp.vimls.setup {
-    capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
-
-  nvim_lsp.pyright.setup {
-    capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
-
+  -- add icon for virtual error
   vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
@@ -93,14 +90,18 @@ EOF
 autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }
 
 " ultisnips
-nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>G
-nnoremap <silent> <SPACE>ea :UltiSnipsEdit all<CR>
-
+" jump in place holder
 let g:UltiSnipsJumpForwardTrigger="<C-J>"
 let g:UltiSnipsJumpBackwardTrigger="<C-K>"
+" add path for snips
 let g:UltiSnipsSnippetDirectories = [
 			\ $HOME.'/.config/nvim/Ultisnips/',
 			\ $HOME.'/.cache/nvim/plug/vim-snippets/UltiSnips/',
       \ ]
+" fast edit self snips
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsRemoveSelectModeMappings = 1
+
+" mappings
+nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>G
+nnoremap <silent> <SPACE>ea :UltiSnipsEdit all<CR>

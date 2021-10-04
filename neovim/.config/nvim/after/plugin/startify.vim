@@ -1,6 +1,6 @@
 let g:startify_padding_left = 3
 let g:startify_enable_special = 1
-let g:startify_custom_indices = [ 'f', 'g', 'v']
+let g:startify_custom_indices = [ 'f', 'g']
 let g:startify_lists = [
       \ { 'type': 'files',     'header': ['       Recent Files:']            },
       \ { 'type': 'dir',       'header': ['       Recent Projects: '. getcwd()] },

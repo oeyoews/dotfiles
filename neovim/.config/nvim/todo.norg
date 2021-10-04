@@ -43,3 +43,5 @@ Lua
 - [x]  learn how to use norg's todo
 - [ ]  how to use nvim tree to add a folder
 - [ ]  cmp-look is not work
+
+color for lspsaga is bug (color)

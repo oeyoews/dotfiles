@@ -78,18 +78,15 @@ Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
 Plug 'junegunn/goyo.vim'
 
 " icons
-" Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " theme
-" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'windwp/windline.nvim'
+Plug 'oeyoews/nvim-deus'
 " Plug 'glepnir/zephyr-nvim'
 " Plug 'itchyny/lightline.vim'
 " Plug 'shadmansaleh/lualine.nvim'
-Plug 'windwp/windline.nvim'
-" Plug 'liuchengxu/eleline.vim'
 " Plug 'glepnir/spaceline.vim'
-Plug 'oeyoews/nvim-deus'
-" Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
 call plug#end()

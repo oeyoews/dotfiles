@@ -24,6 +24,7 @@ Bug
 
 -  treesitter has a vim highlight error? 
 -  need use :Tsupdate
+-  
 -   in newwork, unconnect all link and to add subscript
 
 
