@@ -62,7 +62,6 @@ sources = {
   { name = 'look' },
   { name = 'neorg' }
   }
-
     })
 
   -- automatically connect language server protocol
