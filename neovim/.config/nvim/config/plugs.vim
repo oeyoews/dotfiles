@@ -1,8 +1,4 @@
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent execute '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-        \ https://gitee.com/oeyoews/vim-plug/raw/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
+runtime! ../src/install/*.vim
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
@@ -77,6 +73,7 @@ Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
 Plug 'junegunn/goyo.vim'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " icons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -92,5 +89,7 @@ Plug 'oeyoews/nvim-deus'
 " Plug 'itchyny/lightline.vim'
 " Plug 'shadmansaleh/lualine.nvim'
 " Plug 'glepnir/spaceline.vim'
+" Plug 'ishan9299/nvim-solarized-lua'
+" If you are using Vim-Plug
 
 call plug#end()

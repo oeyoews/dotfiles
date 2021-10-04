@@ -1,4 +1,4 @@
-" " Mappings
+"  Mappings
 " NOTE: this plugin must enable termguicolor
 nnoremap <silent> <SPACE>ft :NvimTreeToggle<CR>
 
