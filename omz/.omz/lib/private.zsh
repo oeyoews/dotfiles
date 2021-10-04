@@ -126,6 +126,7 @@ alias eg="emacs"
 alias et="emacs -nw"
 # it's recursive
 alias vim='nvim'
+alias vi='nvim'
 alias e='nvim'
 alias se='nvim -u NONE'
 alias ext=exit
