@@ -41,6 +41,7 @@ tree_configs.setup {
   max_file_lines = 1000,
   },
 
+  -- install some different parsers automatically 
   ensure_installed = {
     "html",
     "norg", -- must in local after
@@ -94,7 +95,6 @@ tree_configs.setup {
       show_help = '?',
     },
   },
-
 	query_linter = {
 		enable = true,
 		use_virtual_text = true,
@@ -102,4 +102,5 @@ tree_configs.setup {
 	},
 
 }
+
 EOF

@@ -68,22 +68,16 @@ noremap <SPACE>ll <Cmd>SnipRun<CR>
 noremap <SPACE>lc <Cmd>SnipClose<CR>
 
 " 17. hop.nvim
-lua << EOF
-require'hop'.setup()
-EOF
+lua require'hop'.setup()
 " mappings
 nnoremap <SPACE>jj <Cmd>HopWord<CR>
 nnoremap <SPACE>jl <Cmd>HopLine<CR>
 
 " 19. surround.nvim
-lua << EOF
-require"surround".setup{}
-EOF
+lua require"surround".setup{}
 
 " 24. trouble.vim
-lua << EOF
-  require("trouble").setup {}
-EOF
+lua require("trouble").setup {}
 
 " 25. notify
 lua << EOF
@@ -106,3 +100,12 @@ EOF
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
       \ {'title': 'nvim-config', 'timeout': 3000, 'stages': 'slide'})<cr>
+
+" ===
+" === beacon
+" ===
+" for nvimtree, have some bug for second open
+let g:beacon_ignore_filetypes = [
+      \ 'startify',
+      \ 'NvimTree'
+      \]

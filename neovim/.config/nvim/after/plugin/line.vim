@@ -1,9 +1,3 @@
-" windline
-lua << EOF
--- bubble bubble2 evil_line
-local nvim_line = require('wlsample.evil_line')
-EOF
-
 " lualine
 lua << EOF
 --[[

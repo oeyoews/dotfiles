@@ -48,6 +48,7 @@ Plug 'dkarter/bullets.vim'
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' } 
 
 " tools
+Plug 'danilamihailov/beacon.nvim'
 Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
 Plug 'akinsho/toggleterm.nvim'
 Plug 'lewis6991/gitsigns.nvim'
@@ -82,8 +83,9 @@ Plug 'kyazdani42/nvim-web-devicons'
 
 " theme
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-Plug 'windwp/windline.nvim'
+Plug 'oeyoews/windline.nvim'
 Plug 'oeyoews/nvim-deus'
+" Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 " Plug 'glepnir/zephyr-nvim'
 " Plug 'itchyny/lightline.vim'
 " Plug 'shadmansaleh/lualine.nvim'

@@ -3,7 +3,7 @@
 set completeopt=menu,menuone,noinsert,noselect
 set virtualedit=onemore
 set termguicolors
-set cursorline
+" set cursorline
 set matchtime=2
 set undofile
 set signcolumn=yes
