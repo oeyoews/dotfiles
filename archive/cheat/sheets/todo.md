@@ -23,3 +23,4 @@
 - [X] process window focus's problem
 - [X] check vimtex document
 - [X] how to simple kitty window_tilte?
+- [ ] set get function 
