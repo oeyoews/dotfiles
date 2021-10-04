@@ -105,7 +105,16 @@ nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC 
 " === beacon
 " ===
 " for nvimtree, have some bug for second open
+" highlight Beacon guibg=red ctermbg=45
+" let g:beacon_ignore_buffers = [ '*tree' ]
+" let g:beacon_minimal_jump = 10
+" let g:beacon_show_jumps = 0
+let g:beacon_size = 40
 let g:beacon_ignore_filetypes = [
       \ 'startify',
-      \ 'NvimTree'
       \]
+" mappings
+nnoremap n n:Beacon<cr>
+nnoremap N N:Beacon<cr>
+nnoremap * *:Beacon<cr>
+nnoremap # #:Beacon<cr>

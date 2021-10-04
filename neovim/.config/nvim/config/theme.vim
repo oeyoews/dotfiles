@@ -13,7 +13,8 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 
 " colorscheme zephyr
 " colorscheme solarized
-colorscheme deus
+" colorscheme deus
+colorscheme spacevim
 
 " let g:onedark_style = 'darker'
 " colorscheme onedark
