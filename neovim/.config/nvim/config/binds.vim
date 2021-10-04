@@ -77,7 +77,7 @@ nnoremap <C-a> ggVG
 " clear all hlight words
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 
-nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR><cmd>NvimTreeToggle<cr>
+nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
 nnoremap <silent> <SPACE>fv <cmd>edit ~/.config/nvim/config/plugs.vim<cr>
 
 " save file

@@ -21,10 +21,10 @@ Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'kdheepak/cmp-latex-symbols', { 'for': 'tex' }
+Plug 'kdheepak/cmp-latex-symbols', { 'for' : 'tex' }
 
 " treesitter
-Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/playground', { 'on' : 'TSPlaygroundToggle' }
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'romgrk/nvim-treesitter-context'
@@ -38,24 +38,22 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 
 " markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'dkarter/bullets.vim', { 'for': 'markdown' }
-Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' } 
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'plasticboy/vim-markdown'
+Plug 'dkarter/bullets.vim'
+Plug 'dhruvasagar/vim-table-mode'
 
 " tools
 Plug 'danilamihailov/beacon.nvim'
-Plug 'dstein64/vim-startuptime', {'on': 'StartupTime'}
+Plug 'dstein64/vim-startuptime'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
-Plug 'itchyny/calendar.vim'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'tpope/vim-capslock'
 Plug 'tyru/open-browser.vim'
 Plug 'lambdalisue/suda.vim'
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'
 Plug 'jiangmiao/auto-pairs'
@@ -71,6 +69,7 @@ Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " icons
 Plug 'kyazdani42/nvim-web-devicons'
@@ -80,7 +79,6 @@ Plug 'oeyoews/windline.nvim'
 
 " theme
 Plug 'oeyoews/nvim-deus'
-" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Plug 'glepnir/zephyr-nvim'
 
 call plug#end()

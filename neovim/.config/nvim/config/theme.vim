@@ -8,7 +8,7 @@
 " ===
 " === colorscheme
 " ===
-" spacevim deus 
+" spacevim deus gruvbox
 colorscheme deus
 
 " ===

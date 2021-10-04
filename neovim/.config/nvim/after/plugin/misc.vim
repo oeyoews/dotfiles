@@ -122,3 +122,17 @@ nnoremap # #:Beacon<cr>
 " this language-server-protocal site path is ~/.local/share/nvim/lspinstall/...
 
 command! Time StartupTime
+
+" ===
+" === nvimtree
+" ===
+lua <<EOF
+require'nvim-tree'.setup {
+  view = {
+    side = 'right',
+    },
+  }
+EOF
+let g:nvim_tree_group_empty = 1
+
+nnoremap <leader>ft <cmd>NvimTreeToggle<cr> 
