@@ -20,18 +20,18 @@ Plug 'kdheepak/cmp-latex-symbols', { 'for': 'tex' }
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 Plug 'folke/trouble.nvim'
-" Plug 'williamboman/nvim-lsp-installer'
 Plug 'oeyoews/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/lua-dev.nvim'
+" Plug 'williamboman/nvim-lsp-installer'
 
 " treesitter
-" Plug 'p00f/nvim-ts-rainbow'
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-treesitter/nvim-treesitter', { ' do ' : ' :TSUpdate ' }
 Plug 'nvim-treesitter/nvim-treesitter-refactor'
 Plug 'romgrk/nvim-treesitter-context'
+" Plug 'p00f/nvim-ts-rainbow'
 
 " norg
 Plug 'nvim-neorg/neorg'
@@ -81,10 +81,12 @@ Plug 'junegunn/goyo.vim'
 " icons
 Plug 'kyazdani42/nvim-web-devicons'
 
-" theme
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" statusline
 Plug 'oeyoews/windline.nvim'
+
+" theme
 Plug 'oeyoews/nvim-deus'
+" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 " Plug 'glepnir/zephyr-nvim'
 " Plug 'itchyny/lightline.vim'
