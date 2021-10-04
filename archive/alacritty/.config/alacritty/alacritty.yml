@@ -1,5 +1,9 @@
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
+# for nvim statusline, this gitstatus font is chinese
+import:
+  - ./_alacritty.yml
+
 # Import additional configuration files
 #
 # Imports are loaded in order, skipping all missing files, with the importing

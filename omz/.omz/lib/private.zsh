@@ -60,12 +60,6 @@ alias gitr="git rm --cache ."
 alias gitu='git add . && git commit && git push'
 alias gituu='git add . && git commit -m "this is a fast push." && git push'
 
-
-# 防止在某些情况输入过快
-alias vi="vim"
-# alias vim="nvim"
-
-
 ## kitty
 # mod F6: show kitty config
 # mod backspace
@@ -132,7 +126,8 @@ alias eg="emacs"
 alias et="emacs -nw"
 # it's recursive
 alias vim='nvim'
-# alias vim="nvim"
+alias e='nvim'
+alias se='nvim -u NONE'
 alias ext=exit
 
 alias grepd="l | grep '>'"
