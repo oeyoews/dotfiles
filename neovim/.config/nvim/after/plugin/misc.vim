@@ -76,9 +76,6 @@ nnoremap <SPACE>jl <Cmd>HopLine<CR>
 " 19. surround.nvim
 lua require"surround".setup{}
 
-" 24. trouble.vim
-lua require("trouble").setup {}
-
 " 25. notify
 lua << EOF
 vim.notify = require("notify")
@@ -123,3 +120,5 @@ nnoremap # #:Beacon<cr>
 " === nvim-lspinstall
 " ===
 " this language-server-protocal site path is ~/.local/share/nvim/lspinstall/...
+
+command! Time StartupTime

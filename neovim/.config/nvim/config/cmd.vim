@@ -13,4 +13,7 @@ autocmd BufRead,BufNewFile *.tex set filetype=tex
 " doesn't work , still because this order
 " autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
-" command Theme colorscheme
+" ===
+" === colorscheme
+" ===
+command! -nargs=?  -complete=color Theme colorscheme <args>
