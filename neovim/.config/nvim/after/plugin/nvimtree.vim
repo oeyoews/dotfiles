@@ -10,7 +10,7 @@ let g:nvim_tree_git_hl = 1
 " locate open files
 let g:nvim_tree_highlight_opened_files = 1
 let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ] "empty by default
-let g:nvim_tree_indent_markers = 0 
+let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_gitignore = 1 "0 by default
 let g:nvim_tree_respect_buf_cwd = 1
 let g:nvim_tree_quit_on_open = 1 

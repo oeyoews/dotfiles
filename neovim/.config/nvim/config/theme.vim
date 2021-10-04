@@ -11,20 +11,19 @@ autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
 " let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 " colorscheme tokyonight
 
+command! -nargs=?  -complete=color Theme colorscheme <args>
+
 " colorscheme zephyr
 " colorscheme solarized
 " colorscheme deus
 colorscheme spacevim
 
-" let g:onedark_style = 'darker'
-" colorscheme onedark
-
-" colorscheme github_*
-
 " hi Normal ctermfg=252 ctermbg=none
 " set background=dark
 
-" cursor color
+" ===
+" === cursor color
+" ===
 if has("autocmd")
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
@@ -32,7 +31,9 @@ hi Cursor guifg=#86af5d guibg=#86af5d
 hi Cursor2 guifg=red guibg=red
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50
 
-" highlight yank
+" ===
+" === highlight yank
+" ===
 autocmd TextYankPost * lua vim.highlight.on_yank {higroup="IncSearch",
       \ timeout=150, on_visual=true}
 let g:rainbow_active = 1

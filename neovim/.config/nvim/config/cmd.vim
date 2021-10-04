@@ -12,3 +12,5 @@ autocmd BufRead,BufNewFile *.tex set filetype=tex
 " fix formatoptions- order bug
 " doesn't work , still because this order
 " autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
+" command Theme colorscheme

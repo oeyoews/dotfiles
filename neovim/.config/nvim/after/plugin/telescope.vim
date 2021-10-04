@@ -18,3 +18,6 @@ defaults = {
   }
 }
 EOF
+
+" mappings 
+nnoremap <space>tc <cmd>Telescope colorscheme<cr>

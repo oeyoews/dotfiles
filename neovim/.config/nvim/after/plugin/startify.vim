@@ -26,3 +26,4 @@ let g:startify_center = 40
 
 " cmd
 command! Time StartupTime
+

@@ -71,9 +71,11 @@ Plug 'thinca/vim-quickrun'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
-Plug 'nvim-telescope/telescope.nvim', { 'on': 'Telescope' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'junegunn/goyo.vim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'danilamihailov/vim-tips-wiki'
+Plug 'liuchengxu/vista.vim'
 
 " icons
 Plug 'kyazdani42/nvim-web-devicons'

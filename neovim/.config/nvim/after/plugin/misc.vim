@@ -118,3 +118,8 @@ nnoremap n n:Beacon<cr>
 nnoremap N N:Beacon<cr>
 nnoremap * *:Beacon<cr>
 nnoremap # #:Beacon<cr>
+
+" ===
+" === nvim-lspinstall
+" ===
+" this language-server-protocal site path is ~/.local/share/nvim/lspinstall/...

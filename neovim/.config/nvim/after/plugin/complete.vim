@@ -8,7 +8,14 @@ local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-local servers = { 'vimls', 'clangd', 'bashls', 'pyright' }
+
+-- NOTE: for /tmp folder, if your file in this folder, 
+--      it's will be cause failed because of permission(sumneko_lua)
+-- TODO: how to config lua server cmd execute for lspconfig by manual
+local servers = { 'vimls', 'clangd', 'bashls', 'pyright', 'sumneko_lua' }
+
+-- :lua vim.cmd('e'..vim.lsp.get_log_path())
+-- to show lsp.log in your new buffer path: ~/.cache/nvim/lsp.log
 
 cmp.register_source('look', require('cmp_look').new())
 
