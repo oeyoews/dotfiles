@@ -34,13 +34,6 @@ tree_configs.setup {
     highlight_definitions = { enable = true},
     },
 
-  -- rainbow brackets
-  rainbow = {
-  enable = false,
-  extended_mode = true, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
-  max_file_lines = 1000,
-  },
-
   -- install some different parsers automatically 
   ensure_installed = {
     "c",
@@ -100,6 +93,7 @@ tree_configs.setup {
       show_help = '?',
     },
   },
+
 	query_linter = {
 		enable = true,
 		use_virtual_text = true,
@@ -107,5 +101,4 @@ tree_configs.setup {
 	},
 
 }
-
 EOF

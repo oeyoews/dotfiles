@@ -8,7 +8,6 @@
 " ===
 " === colorscheme
 " ===
-" spacevim deus gruvbox  zephyr
 colorscheme zephyr
 
 " ===
