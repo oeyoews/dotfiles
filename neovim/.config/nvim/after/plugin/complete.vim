@@ -112,3 +112,6 @@ let g:UltiSnipsRemoveSelectModeMappings = 1
 " mappings
 nnoremap <silent> <SPACE>ee :UltiSnipsEdit<CR>G
 nnoremap <silent> <SPACE>ea :UltiSnipsEdit all<CR>
+
+nnoremap <leader>lsp <cmd>LspStop<cr> 
+nnoremap <leader>lss <cmd>LspStart<cr> 

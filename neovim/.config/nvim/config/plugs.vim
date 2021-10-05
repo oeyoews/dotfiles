@@ -46,7 +46,7 @@ Plug 'dhruvasagar/vim-table-mode'
 " tools
 Plug 'danilamihailov/beacon.nvim'
 Plug 'dstein64/vim-startuptime'
-Plug 'lewis6991/gitsigns.nvim'
+" Plug 'lewis6991/gitsigns.nvim'
 Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
 Plug 'yianwillis/vimcdoc'
@@ -68,7 +68,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'norcalli/nvim-colorizer.lua'
+Plug 'norcalli/nvim-colorizer.lua', { 'on' : 'ColorizerToggle' }
 Plug 'oeyoews/nvim-tree.lua'
 
 " icons
@@ -79,6 +79,6 @@ Plug 'oeyoews/windline.nvim'
 
 " theme
 Plug 'oeyoews/nvim-deus'
-" Plug 'glepnir/zephyr-nvim'
+Plug 'glepnir/zephyr-nvim'
 
 call plug#end()

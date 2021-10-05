@@ -8,8 +8,8 @@
 " ===
 " === colorscheme
 " ===
-" spacevim deus gruvbox
-colorscheme deus
+" spacevim deus gruvbox  zephyr
+colorscheme zephyr
 
 " ===
 " === cursor color

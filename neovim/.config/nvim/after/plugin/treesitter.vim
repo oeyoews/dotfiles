@@ -43,21 +43,26 @@ tree_configs.setup {
 
   -- install some different parsers automatically 
   ensure_installed = {
+    "c",
+    "python",
+    "go",
     "html",
+    "css",
+    "bash",
     "norg", -- must in local after
+    "toml",
+    "vue",
+    "latex",
+    "json",
     "markdown",
     "lua",
-    "c",
-    "json",
-    "query",
-    "bash",
-    "yaml",
     "vim",
-    "toml",
-    "css",
+    "query",
+    "yaml",
+    "javascript",
+    "typescript",
     "comment",
     "cmake",
-    "python",
     },
 
   highlight = {

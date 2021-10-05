@@ -43,5 +43,6 @@ Lua
 - [x]  learn how to use norg's todo
 - [ ]  how to use nvim tree to add a folder
 - [ ]  cmp-look is not work
+- [ ]  resolve vimtex how to hide symbols
 
 color for lspsaga is bug (color)
