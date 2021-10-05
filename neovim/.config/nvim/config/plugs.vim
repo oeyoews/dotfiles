@@ -4,23 +4,23 @@ call plug#begin('$HOME/.cache/nvim/plug')
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'oeyoews/vim-snippets'
 Plug 'oeyoews/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/lua-dev.nvim'
 
 
 " cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-path'
-Plug 'octaltree/cmp-look'
+Plug 'hrsh7th/cmp-look'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'kdheepak/cmp-latex-symbols', { 'for' : 'tex' }
 
 " treesitter
@@ -69,7 +69,7 @@ Plug 'rafcamlet/nvim-luapad', { 'for': 'lua' }
 Plug 'yuki-uthman/nvim-vimpad', { 'for': 'vim'}
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'oeyoews/nvim-tree.lua'
 
 " icons
 Plug 'kyazdani42/nvim-web-devicons'

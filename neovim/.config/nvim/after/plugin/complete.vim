@@ -61,12 +61,13 @@ end,
 -- add complete sources
 sources = {
   { name = 'nvim_lsp' },
+  { name = 'nvim_lua' },
   { name = 'ultisnips' },
+  { name = 'look' },
   { name = 'buffer' },
   { name = 'emoji' },
   { name = "latex_symbols" },
   { name = 'path' },
-  { name = 'look' },
   { name = 'neorg' }
   }
     })

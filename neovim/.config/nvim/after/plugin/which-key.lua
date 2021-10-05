@@ -55,11 +55,10 @@ require("which-key").register({
 
   f = { name = "+file" },
   ff = { "<cmd>Telescope find_files theme=dropdown prompt_prefix=🔍<cr>", "Find File" },
-  fr = { "<cmd>Telescope oldfiles theme=dropdown <prompt_prefix=🔍<cr>", "Open Recent File" },
+  fr = { "<cmd>Telescope oldfiles theme=dropdown prompt_prefix=🔍<cr>", "Open Recent File" },
 
   b = { name = "+buffer" },
   bn = { "<cmd>enew<cr>", "New File" },
-  bh = { "<cmd>Startify<cr>", "Home" },
   bb = { "<cmd>Telescope buffers theme=dropdown <prompt_prefix=🔍<cr>", "Buffers" },
 
   w = { name = "+winnow" },
