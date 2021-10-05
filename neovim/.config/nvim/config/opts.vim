@@ -31,9 +31,8 @@ set shiftwidth=2  " default indent distance for >> <<
 set tabstop=2 " tab == 2 column, like 单位
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
-" set smartindent
 " set clipboard^=unnamed
-set nolist " show return it configcit for link
+set list " show return it configcit for link
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
 set lazyredraw "same as above
 set vb t_vb= " no sound, no shine

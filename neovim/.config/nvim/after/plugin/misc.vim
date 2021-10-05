@@ -10,13 +10,6 @@ let g:AutoPairsFlyMode = 0
 autocmd! BufWrite *.c,*.h :Autoformat
 nnoremap <leader>bf <cmd>Autoformat<cr>
 
-" 4. openbrower.vim
-nnoremap <SPACE>bu :OpenBrowser<SPACE>https://
-nnoremap <SPACE>bs :OpenBrowserSmartSearch<SPACE>
-
-" 5. calendar.vim
-noremap <silent> <SPACE>at <cmd>Calendar -position=here<CR>
-
 " 7. suda.vim
 nnoremap <SPACE>fE :SudaRead<CR>
 nnoremap <SPACE>fw :SudaWrite<CR>
@@ -98,14 +91,5 @@ EOF
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
       \ {'title': 'nvim-config', 'timeout': 3000, 'stages': 'slide'})<cr>
-
-" ===
-" === beacon
-" ===
-" mappings
-nnoremap n n:Beacon<cr>
-nnoremap N N:Beacon<cr>
-nnoremap * *:Beacon<cr>
-nnoremap # #:Beacon<cr>
 
 command! Time StartupTime

@@ -17,7 +17,6 @@ local servers = { 'vimls', 'clangd', 'bashls', 'pyright', 'sumneko_lua' }
 -- :lua vim.cmd('e'..vim.lsp.get_log_path())
 -- to show lsp.log in your new buffer path: ~/.cache/nvim/lsp.log
 
-cmp.register_source('look', require('cmp_look').new())
 
 cmp.setup({
 snippet = {
@@ -51,7 +50,6 @@ formatting = {
   nvim_lsp = "[LSP]",
   ultisnips = "[Usnip]",
   buffer = "[Buf]",
-  look = "[Dic]",
   neorg = "[Neorg]",
   })[entry.source.name]
 return vim_item
@@ -63,10 +61,8 @@ sources = {
   { name = 'nvim_lsp' },
   { name = 'nvim_lua' },
   { name = 'ultisnips' },
-  { name = 'look' },
   { name = 'buffer' },
   { name = 'emoji' },
-  { name = "latex_symbols" },
   { name = 'path' },
   { name = 'neorg' }
   }
