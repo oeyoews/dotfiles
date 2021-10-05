@@ -11,7 +11,6 @@ Plug 'oeyoews/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/lua-dev.nvim'
 
-
 " cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
@@ -43,7 +42,6 @@ Plug 'rhysd/clever-f.vim'
 Plug 'airblade/vim-rooter'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
-Plug 'tpope/vim-capslock'
 Plug 'lambdalisue/suda.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'

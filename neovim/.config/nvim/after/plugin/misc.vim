@@ -7,7 +7,6 @@ nnoremap <SPACE>vu <Cmd>PlugUpdate<CR>
 let g:AutoPairsFlyMode = 0
 
 " 3. autoformat
-autocmd! BufWrite *.c,*.h :Autoformat
 nnoremap <leader>bf <cmd>Autoformat<cr>
 
 " 7. suda.vim
@@ -29,7 +28,6 @@ let g:mkdp_open_to_the_world = 0
 let g:mkdp_filetypes = [
       \ 'markdown',
       \ 'html',
-      \ 'css'
       \ ]
 
 " 12. bookmark
@@ -53,9 +51,6 @@ let g:rooter_patterns = [
 " 14. quickrun
 " TODO: have some limit for windows
 nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR><C-w><C-w>G
-
-" 15. toggleterm
-nnoremap <SPACE>tt <Cmd>ToggleTerm<CR>
 
 " 16. sniprun
 noremap <SPACE>ll <Cmd>SnipRun<CR>
@@ -90,6 +85,7 @@ EOF
 " TODO:  write a function for notify and learn this noremap method 
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
-      \ {'title': 'nvim-config', 'timeout': 3000, 'stages': 'slide'})<cr>
+      \ {'title': 'nvim-config', 'timeout': 1500, 'stages': 'slide'})<cr>
 
+" StartupTime
 command! Time StartupTime

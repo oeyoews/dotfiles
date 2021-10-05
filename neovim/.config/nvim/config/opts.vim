@@ -19,7 +19,8 @@ set hidden  " not must be save current buffer
 " set smartcase
 set ignorecase  " better search"
 " right: mode statusline
-set showcmd  
+set noshowcmd  
+set textwidth=80
 " left: location statusline
 set noshowmode 
 set shortmess+=aIc  " atI clear advertise

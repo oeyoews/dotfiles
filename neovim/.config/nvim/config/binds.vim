@@ -1,8 +1,6 @@
 " NOTE: must use double quote for down symbols, it't single quotes 
 " this order is also important, should in first line
-let g:mapleader = "\<Space>"
-"  or usr space like it: let g:mapleader = ' '
-" let g:mapleader = ','
+let g:mapleader = " "
 
 nnoremap <silent> <leader>] :set paste<cr>o<esc>:set nopaste<cr>
 nnoremap <silent> <leader>[ :set paste<cr>O<esc>:set nopaste<cr>
@@ -38,7 +36,7 @@ vnoremap >> >gv
 vnoremap << <gv
 
 " command mode
-noremap <SPACE>hh :
+noremap <leader><leader> :
 nnoremap <SPACE>ss /
 
 " buffer
@@ -49,7 +47,6 @@ nnoremap <silent> <SPACE>bm :messages<CR>
 
 " quit window
 nnoremap <silent><SPACE>qq :q<CR>
-nnoremap <silent><SPACE>qQ :q!<CR>
 nnoremap <silent><SPACE>qa :qa<CR>
 
 " window split
@@ -72,17 +69,17 @@ vnoremap <SPACE>yy "*yy
 noremap <SPACE>pp "*p
 noremap <SPACE>pP "*P
 
-" select all
-nnoremap <C-a> ggVG
 " clear all hlight words
 nnoremap <silent> <SPACE>sc :set<SPACE>hlsearch!<CR>
 
+" open config file
 nnoremap <silent> <SPACE>fe :edit $MYVIMRC<CR>
 nnoremap <silent> <SPACE>fv <cmd>edit ~/.config/nvim/config/plugs.vim<cr>
+nnoremap <silent> <SPACE>fo <cmd>edit ~/.config/nvim/config/opts.vim<cr>
+nnoremap <silent> <leader>fb <cmd>edit ~/.config/nvim/config/binds.vim<cr>
+nnoremap <silent> <SPACE>fp <cmd>edit ~/.config/nvim/after/plugin/misc.vim<cr>
 
 " save file
 nnoremap <silent><SPACE>fs :w<CR>
-" save all files
-nnoremap <silent> <SPACE>fS <Cmd>wa<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.norg<CR>
