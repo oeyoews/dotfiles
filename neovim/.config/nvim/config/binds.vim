@@ -6,7 +6,7 @@ nnoremap <silent> <leader>] :set paste<cr>o<esc>:set nopaste<cr>
 nnoremap <silent> <leader>[ :set paste<cr>O<esc>:set nopaste<cr>
 
 " load current file
-nnoremap <leader>sO <cmd>so %<cr>
+nnoremap <leader>so <cmd>so %<cr>
 
 " disable macro for q
 nnoremap q <nop>

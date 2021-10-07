@@ -52,20 +52,10 @@ alias ipr='ip addr | rg 192'
 
 # @git
 # git -C ~/.emacs.d/ pull, more info about git ,
-# use tldr(rust) git
 alias gopen='git-open'
 alias gits='git status'
-alias gitc="git clone --depth 1"
-# alias gitr="git rm --cache ."
 alias gitu='git add . && git commit && git push'
-alias gituu='git add . && git commit -m "this is a fast push." && git push'
 
-## kitty
-# mod F6: show kitty config
-# mod backspace
-# mode q
-# mode t
-# not recomment use `tmux in local
 alias ssh="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
 # kitty list-fonts
@@ -76,12 +66,6 @@ alias kdiff="kitty +kitten diff"
 alias kemoj="kitty +kitten unicode_input"
 alias diffk="kitty +kitten diff"
 
-## wego
-# alias wego='curl -s wttr.in | lolcat'
-# alias wego='curl -s wttr.in'
-
-
-# translate use crow
 
 ## @translate
 # alias crow="crow -b"

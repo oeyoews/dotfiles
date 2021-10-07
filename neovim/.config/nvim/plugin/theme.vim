@@ -1,7 +1,6 @@
 " ===
 " ===  theme
 " ===
-" deus  tokyonight spacevim
 colorscheme spacevim
 
 " ===
