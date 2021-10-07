@@ -1,48 +1,38 @@
-" it's something bug for this order, it modified by /usr/.....
-" set formatoptions-=cro  " help fo-table 
+language messages en_US.utf8
 set completeopt=menu,menuone,noinsert,noselect
 set virtualedit=block
 set termguicolors
-set autochdir
-" set cursorline
 set matchtime=2
 set undofile
 set signcolumn=yes
 set number relativenumber
-set autochdir  " simply minbuffer messages
-language messages en_US.utf8
+set autochdir
 set wrap
 set exrc
 set secure
-set mouse+=a " support mouse
-set linebreak " better wrap
-set hidden  " not must be save current buffer
-" set smartcase
-set ignorecase  " better search"
-" right: mode statusline
+set mouse+=a
+set linebreak
+set hidden
+set ignorecase
 set noshowcmd  
-set textwidth=80
-" left: location statusline
 set noshowmode 
+set textwidth=80
 set shortmess+=aIc  " atI clear advertise
 set expandtab  " disable expand tab to whitespace
 set timeoutlen=1000
-set textwidth=120  " after 120 char, wrap automatically
-" set showmatch  " call quote in visual
-set shiftwidth=2  " default indent distance for >> <<
-set tabstop=2 " tab == 2 column, like 单位
+set shiftwidth=2
+set tabstop=2
 set softtabstop=2 " tab == 2 column truly
 set guifont=Droid\ Sans\ Mono
-" set clipboard^=unnamed
-set list " show return it configcit for link
+set list
 set listchars=tab:→\ ,eol:↵,trail:▫,extends:↷,precedes:↶
-set lazyredraw "same as above
-set vb t_vb= " no sound, no shine
+set lazyredraw
+set vb t_vb=
 set novisualbell
-set noerrorbells  " no beeps
-set nobackup  " no backfile
-set noswapfile  " no swapfile
-set nofoldenable " disable automatical fold code, you can fold code by hand must in before
+set noerrorbells
+set nobackup 
+set noswapfile
+set nofoldenable
 set confirm
 set scrolloff=3
 set updatetime=200	" ??

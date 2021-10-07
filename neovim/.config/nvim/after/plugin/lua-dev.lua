@@ -1,6 +1,4 @@
 local luadev = require("lua-dev").setup({
-  -- add any options here, or leave empty to use the default settings
-  -- note: need install: yay install lua-language-server
   lspconfig = {
     cmd = {"lua-language-server"}
   },

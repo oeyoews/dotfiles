@@ -1,7 +1,5 @@
 " 1. vim-pug
 nnoremap <SPACE>vi <Cmd>PlugInstall<CR>
-nnoremap <SPACE>vc <Cmd>PlugClean<CR>
-nnoremap <SPACE>vu <Cmd>PlugUpdate<CR>
 
 " 2. auto-pairs.vim
 let g:AutoPairsFlyMode = 0
@@ -9,25 +7,16 @@ let g:AutoPairsFlyMode = 0
 " 3. autoformat
 nnoremap <leader>bf <cmd>Autoformat<cr>
 
-" 7. suda.vim
-nnoremap <SPACE>fE :SudaRead<CR>
-nnoremap <SPACE>fw :SudaWrite<CR>
-
-" 8. markdown-toc.vim
-nnoremap <space>fmit :GenTocMarked<CR>
-
 " 10. bullets.vim
-let g:bullets_enabled_file_types = [
-			\ 'markdown',
-      \ ]
+let g:bullets_enabled_file_types = [ 'markdown' ]
 
 " 12. bookmark
 let g:bookmark_sign = '📖'
 let g:bookmark_highlight_lines = 1
 let g:bookmark_auto_save_file = $HOME.'/.cache/vim_bookmarks'
 
+
 " 14. quickrun
-" TODO: have some limit for windows
 nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR><C-w><C-w>G
 
 " 17. hop.nvim
@@ -53,14 +42,10 @@ vim.notify.setup({
 })
 EOF
 
-" TODO:  write a function for notify and learn this noremap method 
-" nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
-"       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info',
-"       \ {'title': 'nvim-config', 'timeout': 2500, 'stages': 'slide'})<cr>
-
 " StartupTime
 command! Time StartupTime
 
-lua << EOF
-require('gitsigns').setup()
-EOF
+" gitsigns
+lua require('gitsigns').setup()
+
+lua require'colorizer'.setup()

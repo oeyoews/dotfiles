@@ -20,4 +20,6 @@ defaults = {
 EOF
 
 " mappings 
-nnoremap <space>tc <cmd>Telescope colorscheme<cr>
+nnoremap <leader>ff <cmd>Telescope find_files theme=dropdown prompt_prefix=🔍<cr>
+nnoremap <leader>fr <cmd>Telescope oldfiles theme=dropdown prompt_prefix=🔍<cr>
+nnoremap <leader>bb <cmd>Telescope buffers theme=dropdown prompt_prefix=🔍<cr> 

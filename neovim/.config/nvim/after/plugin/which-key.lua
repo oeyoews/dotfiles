@@ -3,20 +3,20 @@ local which_configs = require("which-key")
 which_configs.setup {
 
   plugins = {
-    marks = false, -- shows a list of your marks on ' and `
-    registers = false, -- shows your registers on " in NORMAL or <C-r> in INSERT mode
+    marks = false,
+    registers = false,
     spelling = {
-      enabled = false, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
-      suggestions = 20, -- how many suggestions should be shown in the list?
+      enabled = false,
+      suggestions = 20,
     },
     presets = {
-      operators = false, -- adds help for operators like d, y, ... and registers them for motion / text object completion
-      motions = false,  -- adds help for motions
-      text_objects = false, -- help for text objects triggered after entering an operator
-      windows = false, -- default bindings on <c-w>
-      nav = false, -- misc bindings to work with windows
-      z = false, -- bindings for folds, spelling and others prefixed with z
-      g = false, -- bindings for prefixed with g
+      operators = false,
+      motions = false,
+      text_objects = false,
+      windows = false,
+      nav = false,
+      z = false,
+      g = false,
     },
   },
 
@@ -50,21 +50,11 @@ which_configs.setup {
   ignore_missing = false, -- not modify it
 }
 
--- TODO for Telescope
 which_configs.register({
 
   f = { name = "+file" },
-  ff = { "<cmd>Telescope find_files theme=dropdown prompt_prefix=🔍<cr>", "Find File" },
-  fr = { "<cmd>Telescope oldfiles theme=dropdown prompt_prefix=🔍<cr>", "Open Recent File" },
-
   b = { name = "+buffer" },
-  -- bn = { "<cmd>enew<cr>", "New File" },
-  bb = { "<cmd>Telescope buffers theme=dropdown <prompt_prefix=🔍<cr>", "Buffers" },
-
   w = { name = "+winnow" },
-
   l = { name = "+lang" },
-
   t = { name = "+toggle" },
-
 }, { prefix = "<space>" })

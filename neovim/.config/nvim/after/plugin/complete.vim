@@ -5,10 +5,11 @@ endif
 lua <<EOF
 
 local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
-local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+-- LSP settings
+
 local border = {
       {"🭽", "FloatBorder"},
       {"▔", "FloatBorder"},
@@ -20,23 +21,12 @@ local border = {
       {"▏", "FloatBorder"},
 }
 
--- LSP settings
 local on_attach = function(client, bufnr)
   vim.lsp.handlers["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, {border = border})
   vim.lsp.handlers["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, {border = border})
 end
 
--- NOTE: for /tmp folder, if your file in this folder, 
---      it's will be cause failed because of permission(sumneko_lua)
--- TODO: how to config lua server cmd execute for lspconfig by manual
-local servers = { 'vimls', 'clangd', 'bashls', 'pyright', 'sumneko_lua' }
-
--- :lua vim.cmd('e'..vim.lsp.get_log_path())
--- to show lsp.log in your new buffer path: ~/.cache/nvim/lsp.log
-
--- add some icons --
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-
 
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
@@ -47,6 +37,8 @@ end
 buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 -- cmp_lsp
+local cmp = require('cmp')
+
 cmp.setup({
 snippet = {
   expand = function(args)
@@ -94,6 +86,10 @@ sources = {
     })
 
   -- automatically connect language server protocol
+  local servers = { 'vimls', 'clangd', 'bashls', 'pyright', 'sumneko_lua' }
+
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+
   capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
@@ -107,14 +103,18 @@ sources = {
     update_in_insert = true,
     signs = true,
     underline = true,
-    -- 
-    virtual_text = { spacing = 4, prefix = '●' }
+    virtual_text = { spacing = 0, prefix = '' }
     })
+
+  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+  vim.lsp.handlers.signature_help, { border = "single" })
+
+  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+  vim.lsp.handlers.hover, { border = "rounded", focusable = false })
 
   -- highlight border
 vim.cmd [[autocmd ColorScheme * highlight NormalFloat guibg=#1f2335]]
 vim.cmd [[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
-
 
 EOF
 
