@@ -26,6 +26,7 @@ Bug
 -  need use :Tsupdate
 -  
 -   in newwork, unconnect all link and to add subscript
+-   for lua moudle , this parser not find this moudle, may be is this directory's problem
 
 
 TODO_BUG

@@ -3,6 +3,7 @@
 set completeopt=menu,menuone,noinsert,noselect
 set virtualedit=block
 set termguicolors
+set autochdir
 " set cursorline
 set matchtime=2
 set undofile

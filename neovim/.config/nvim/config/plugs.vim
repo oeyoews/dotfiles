@@ -39,7 +39,6 @@ Plug 'dhruvasagar/vim-table-mode'
 " tools
 Plug 'dstein64/vim-startuptime'
 Plug 'rhysd/clever-f.vim'
-Plug 'airblade/vim-rooter'
 Plug 'yianwillis/vimcdoc'
 Plug 'akinsho/bufferline.nvim'
 Plug 'lambdalisue/suda.vim'

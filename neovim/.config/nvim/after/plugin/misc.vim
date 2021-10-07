@@ -26,19 +26,6 @@ let g:bookmark_sign = '📖'
 let g:bookmark_highlight_lines = 1
 let g:bookmark_auto_save_file = $HOME.'/.cache/vim_bookmarks'
 
-" 13. vim-rooter
-" silent for vim-rooter
-let g:rooter_silent_chdir = 1
-" disable resolve links
-let g:rooter_resolve_links = 0
-let g:rooter_patterns = [
-      \ 'Makefile',
-      \ '.git', 
-      \ '^dotfiles',
-      \ '>cheat',
-      \ '>nvim',
-      \ ]
-
 " 14. quickrun
 " TODO: have some limit for windows
 nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR><C-w><C-w>G
