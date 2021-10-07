@@ -62,24 +62,18 @@ mapping = {
   ['<CR>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true, }),  -- confirm complete
   ['<C-e>'] = cmp.mapping.complete(), -- complete
   ['<C-c>'] = cmp.mapping.close(), -- close complete
-  -- ['<C-c>'] = cmp.mapping.abort(), --abort
   },
 
 -- config LSP UI menu
-formatting = {
-  format = function(entry, vim_item)
-
-  vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
-
-  vim_item.menu = ({
-  nvim_lsp = "[LSP]",
-  ultisnips = "[Usnip]",
-  buffer = "[Buf]",
-  neorg = "[Neorg]",
-  })[entry.source.name]
-return vim_item
-end,
-},
+  formatting = {
+    format = require("lspkind").cmp_format({with_text = true, menu = ({
+    buffer = "[Buffer]",
+    nvim_lsp = "[LSP]",
+    nvim_lua = "[Lua]",
+    ultisnips = "[Usnip]",
+    neorg = "[Neorg]",
+    })}),
+  },
 
 -- add complete sources
 sources = {
