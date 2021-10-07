@@ -55,8 +55,8 @@ alias ipr='ip addr | rg 192'
 # use tldr(rust) git
 alias gopen='git-open'
 alias gits='git status'
-alias gitc="git checkout ."
-alias gitr="git rm --cache ."
+alias gitc="git clone --depth 1"
+# alias gitr="git rm --cache ."
 alias gitu='git add . && git commit && git push'
 alias gituu='git add . && git commit -m "this is a fast push." && git push'
 
