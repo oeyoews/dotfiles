@@ -1,5 +1,3 @@
-runtime! ../src/install/*.vim
-
 call plug#begin('$HOME/.cache/nvim/plug')
 
 " lsp
@@ -18,6 +16,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'octaltree/cmp-look'
 
 " treesitter
 Plug 'nvim-treesitter/playground', { 'on' : 'TSPlaygroundToggle' }
@@ -44,7 +43,6 @@ Plug 'lambdalisue/suda.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'folke/which-key.nvim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'Chiel92/vim-autoformat'
 Plug 'rcarriga/nvim-notify'
 Plug 'phaazon/hop.nvim'
 Plug 'thinca/vim-quickrun'

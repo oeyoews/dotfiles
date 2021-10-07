@@ -31,18 +31,12 @@
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    # time                  # current time
     os_icon                 # os identifier
-    ranger                  # ranger shell (https://github.com/ranger/ranger)
-    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
-    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
-    background_jobs         # presence of background jobs
-    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
-    # battery               # internal battery
-    # command_execution_time  # duration of the last command
+    battery               # internal battery
     dir                     # current directory
     vcs                     # git status
-    # prompt_char           # prompt symbol
+    newline
+    prompt_char           # prompt symbol
   )
 
   # The list of segments shown on the right. Fill it with less important segments.
@@ -54,12 +48,19 @@
     status                  # exit code of the last command
     proxy                   # system-wide http/https/ftp proxy
     direnv                  # direnv status (https://direnv.net/)
+    ranger                  # ranger shell (https://github.com/ranger/ranger)
+    taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
+    background_jobs         # presence of background jobs
+    todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
+    timewarrior             # timewarrior tracking status (https://timewarrior.net/)
+    time                  # current time
     asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     anaconda                # conda environment (https://conda.io/)
     pyenv                   # python environment (https://github.com/pyenv/pyenv)
     goenv                   # go environment (https://github.com/syndbg/goenv)
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
+    command_execution_time  # duration of the last command
     nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
     # node_version          # node.js version

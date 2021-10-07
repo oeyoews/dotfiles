@@ -4,9 +4,6 @@ nnoremap <SPACE>vi <Cmd>PlugInstall<CR>
 " 2. auto-pairs.vim
 let g:AutoPairsFlyMode = 0
 
-" 3. autoformat
-nnoremap <leader>bf <cmd>Autoformat<cr>
-
 " 10. bullets.vim
 let g:bullets_enabled_file_types = [ 'markdown' ]
 
