@@ -1,1 +1,2 @@
-runtime! ./config/*.vim
+" vim: set nomodifiable:
+runtime! config/*.vim

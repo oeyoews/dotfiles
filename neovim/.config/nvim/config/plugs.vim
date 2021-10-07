@@ -2,6 +2,7 @@ runtime! ../src/install/*.vim
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
+Plug 'danilamihailov/beacon.nvim'
 " Plug 'theHamsta/nvim-dap-virtual-text'
 " Plug 'rcarriga/nvim-dap-ui'
 " Plug 'mfussenegger/nvim-dap'
@@ -52,7 +53,6 @@ Plug 'folke/which-key.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'Chiel92/vim-autoformat'
 Plug 'rcarriga/nvim-notify'
-Plug 'blackcauldron7/surround.nvim'
 Plug 'phaazon/hop.nvim'
 Plug 'thinca/vim-quickrun'
 Plug 'MattesGroeger/vim-bookmarks'
@@ -64,8 +64,8 @@ Plug 'danilamihailov/vim-tips-wiki'
 " theme
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'oeyoews/windline.nvim'
-Plug 'oeyoews/nvim-deus'
-Plug 'glepnir/zephyr-nvim'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Plug 'oeyoews/nvim-deus'
+" Plug 'glepnir/zephyr-nvim'
+" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()

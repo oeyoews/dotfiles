@@ -49,9 +49,6 @@ lua require'hop'.setup()
 nnoremap <SPACE>jj <Cmd>HopWord<CR>
 nnoremap <SPACE>jl <Cmd>HopLine<CR>
 
-" 19. surround.nvim
-lua require"surround".setup{}
-
 " 25. notify
 lua << EOF
 vim.notify = require("notify")

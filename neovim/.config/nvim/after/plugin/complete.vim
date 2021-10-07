@@ -4,6 +4,7 @@ endif
 
 lua <<EOF
 
+local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 local cmp = require('cmp')
 local nvim_lsp = require('lspconfig')
 local cmp_lsp = require('cmp_nvim_lsp')
@@ -42,6 +43,10 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+-- Enable completion triggered by <c-x><c-o>
+buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
+-- cmp_lsp
 cmp.setup({
 snippet = {
   expand = function(args)
@@ -49,6 +54,7 @@ snippet = {
 end,
 },
 
+-- cmp_menu
 completion = {
   completeopt = 'menu,menuone,noinsert,noselect',
   },
@@ -110,13 +116,14 @@ vim.cmd [[autocmd ColorScheme * highlight NormalFloat guibg=#1f2335]]
 vim.cmd [[autocmd ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
 
-
 EOF
 
 " disable cmp for telescope
 autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }
 
-" ultisnips
+" ===
+" === ultisnips
+" ===
 " jump in place holder
 let g:UltiSnipsJumpForwardTrigger="<C-J>"
 let g:UltiSnipsJumpBackwardTrigger="<C-K>"
@@ -136,6 +143,6 @@ nnoremap <silent> <SPACE>ea :UltiSnipsEdit all<CR>
 nnoremap <leader>lsp <cmd>LspStop<cr> 
 nnoremap <leader>lss <cmd>LspStart<cr> 
 
-" from lspconfig
+" by lspconfig
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
