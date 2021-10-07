@@ -17,3 +17,5 @@ autocmd BufRead,BufNewFile *.tex set filetype=tex
 " === colorscheme
 " ===
 command! -nargs=?  -complete=color Theme colorscheme <args>
+
+command! Hi call demo#demo('neovim!')"

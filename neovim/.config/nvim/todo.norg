@@ -44,5 +44,6 @@ Lua
 - [ ]  how to use nvim tree to add a folder
 - [ ]  cmp-look is not work
 - [ ]  resolve vimtex how to hide symbols
-
-color for lspsaga is bug (color)
+- [ ]  how to debug(minial is can input parameter)?
+- [ ]  for nvimtree, if open a bin, it have some bug
+- [ ]  try config dap-ui for nvim

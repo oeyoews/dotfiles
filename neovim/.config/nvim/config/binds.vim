@@ -40,17 +40,17 @@ noremap <leader><leader> :
 nnoremap <SPACE>ss /
 
 " buffer
-nnoremap <silent> <SPACE><tab> :bn<CR>
-nnoremap <silent> <SPACE>bp :bp<CR>
+nnoremap <silent> <SPACE><tab> :bp<CR>
+nnoremap <silent> <SPACE>bn :bn<CR>
 nnoremap <silent> <SPACE>bd :bd<CR><C-L>
 nnoremap <silent> <SPACE>bm :messages<CR>
+nnoremap <silent> <leader>bx <cmd>enew<cr> 
 
 " quit window
 nnoremap <silent><SPACE>qq :q<CR>
 nnoremap <silent><SPACE>qa :qa<CR>
 
 " window split
-nnoremap <SPACE>wm <C-w>o
 nnoremap <SPACE>ww <C-w>w
 nnoremap <SPACE>w- :split<CR>
 nnoremap <SPACE>w/ :vsplit<CR>
@@ -83,3 +83,5 @@ nnoremap <silent> <SPACE>fp <cmd>edit ~/.config/nvim/after/plugin/misc.vim<cr>
 nnoremap <silent><SPACE>fs :w<CR>
 
 nnoremap <silent> <SPACE>fmt :tabnew ~/.config/nvim/todo.norg<CR>
+
+nnoremap <leader>wm <cmd>MaximizerToggle!<cr> 

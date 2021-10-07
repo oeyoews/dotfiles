@@ -32,3 +32,4 @@ TODO_BUG
 ---
 - [ ] in xynu.wifi, terminal is doesn't work
 - [ ] in gitee , use ssh , permission is denied?
+- [ ] in chinese, enter v fast input mode, and input ctrl space, it will enter vim's tmp file?

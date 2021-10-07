@@ -177,3 +177,6 @@ drawio
 glow
 
 bash-completion
+
+<!-- editor -->
+geany

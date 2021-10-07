@@ -2,6 +2,10 @@ runtime! ../src/install/*.vim
 
 call plug#begin('$HOME/.cache/nvim/plug')
 
+" Plug 'theHamsta/nvim-dap-virtual-text'
+" Plug 'rcarriga/nvim-dap-ui'
+" Plug 'mfussenegger/nvim-dap'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
@@ -16,7 +20,7 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'quangnguyen30192/cmp-nvim-ultisnips'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-emoji'
+Plug 'hrsh7th/cmp-emoji', { 'for' : 'markdown' }
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 
@@ -50,17 +54,18 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'rcarriga/nvim-notify'
 Plug 'blackcauldron7/surround.nvim'
 Plug 'phaazon/hop.nvim'
-Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'thinca/vim-quickrun'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua', { 'on' : 'ColorizerToggle' }
 Plug 'oeyoews/nvim-tree.lua'
+Plug 'danilamihailov/vim-tips-wiki'
 
 " theme
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'oeyoews/windline.nvim'
 Plug 'oeyoews/nvim-deus'
 Plug 'glepnir/zephyr-nvim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 call plug#end()

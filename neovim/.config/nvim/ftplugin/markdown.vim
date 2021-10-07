@@ -1,3 +1,11 @@
+nnoremap <space>fmm :MarkdownPreviewToggle<CR>
+let g:mkdp_echo_preview_url = 1
+let g:mkdp_open_to_the_world = 0
+let g:mkdp_filetypes = [
+      \ 'markdown',
+      \ 'html',
+      \ ]
+
 let g:vim_markdown_folding_disabled = 1 " just disable folding for markdown
 let g:vim_markdown_toc_autofit = 1
 " set conceallevel=2

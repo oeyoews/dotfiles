@@ -21,15 +21,6 @@ let g:bullets_enabled_file_types = [
 			\ 'markdown',
       \ ]
 
-" 11. markdown-preview.vim
-nnoremap <space>fmm :MarkdownPreviewToggle<CR>
-let g:mkdp_echo_preview_url = 1
-let g:mkdp_open_to_the_world = 0
-let g:mkdp_filetypes = [
-      \ 'markdown',
-      \ 'html',
-      \ ]
-
 " 12. bookmark
 let g:bookmark_sign = '📖'
 let g:bookmark_highlight_lines = 1
@@ -52,10 +43,6 @@ let g:rooter_patterns = [
 " TODO: have some limit for windows
 nnoremap <silent> <SPACE>lr <Cmd>QuickRun<CR><C-w><C-w>G
 
-" 16. sniprun
-noremap <SPACE>ll <Cmd>SnipRun<CR>
-noremap <SPACE>lc <Cmd>SnipClose<CR>
-
 " 17. hop.nvim
 lua require'hop'.setup()
 " mappings
@@ -70,7 +57,7 @@ lua << EOF
 vim.notify = require("notify")
 vim.notify.setup({
   stages = "slide",
-  timeout = 1000,
+  timeout = 3000,
   background_colour = "Normal",
   icons = {
     ERROR = "",
@@ -85,7 +72,7 @@ EOF
 " TODO:  write a function for notify and learn this noremap method 
 nnoremap <silent> <leader>so :<C-U>silent update $MYVIMRC <bar> source $MYVIMRC  <bar>
       \ call v:lua.vim.notify("Nvim config successfully reloaded!", 'info', 
-      \ {'title': 'nvim-config', 'timeout': 1500, 'stages': 'slide'})<cr>
+      \ {'title': 'nvim-config', 'timeout': 2500, 'stages': 'slide'})<cr>
 
 " StartupTime
 command! Time StartupTime

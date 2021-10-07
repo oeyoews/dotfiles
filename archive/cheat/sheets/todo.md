@@ -17,10 +17,10 @@
 - [ ] learn latex
 
 ## I
-- [ ] digital图像作业 10-7 (fspecial)
-- [ ] rhi homework(matlab gui)
 - [X] compumter mooc test
 - [X] process window focus's problem
 - [X] check vimtex document
 - [X] how to simple kitty window_tilte?
-- [ ] set get function 
+- [ ] android   to make app 
+- [ ] digital图像作业 10-22 (fspecial) set get function 
+- [ ] rhi homework(matlab gui)

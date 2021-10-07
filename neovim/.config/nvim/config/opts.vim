@@ -10,7 +10,7 @@ set signcolumn=yes
 set number relativenumber
 set autochdir  " simply minbuffer messages
 language messages en_US.utf8
-set nowrap
+set wrap
 set exrc
 set secure
 set mouse+=a " support mouse

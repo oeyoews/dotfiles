@@ -51,14 +51,14 @@ which_configs.setup {
 }
 
 -- TODO for Telescope
-require("which-key").register({
+which_configs.register({
 
   f = { name = "+file" },
   ff = { "<cmd>Telescope find_files theme=dropdown prompt_prefix=🔍<cr>", "Find File" },
   fr = { "<cmd>Telescope oldfiles theme=dropdown prompt_prefix=🔍<cr>", "Open Recent File" },
 
   b = { name = "+buffer" },
-  bn = { "<cmd>enew<cr>", "New File" },
+  -- bn = { "<cmd>enew<cr>", "New File" },
   bb = { "<cmd>Telescope buffers theme=dropdown <prompt_prefix=🔍<cr>", "Buffers" },
 
   w = { name = "+winnow" },
