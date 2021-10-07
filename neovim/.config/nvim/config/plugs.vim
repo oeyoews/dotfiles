@@ -55,6 +55,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'norcalli/nvim-colorizer.lua', { 'on' : 'ColorizerToggle' }
 Plug 'oeyoews/nvim-tree.lua'
 Plug 'danilamihailov/vim-tips-wiki'
+Plug 'lewis6991/gitsigns.nvim'
 
 " theme
 Plug 'kyazdani42/nvim-web-devicons'

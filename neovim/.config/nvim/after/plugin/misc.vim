@@ -73,3 +73,7 @@ EOF
 
 " StartupTime
 command! Time StartupTime
+
+lua << EOF
+require('gitsigns').setup()
+EOF

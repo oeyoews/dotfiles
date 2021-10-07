@@ -73,11 +73,11 @@ mapping = {
 -- config LSP UI menu
   formatting = {
     format = require("lspkind").cmp_format({with_text = true, menu = ({
-    buffer = "[Buffer]",
+    buffer = "[BUF]",
     nvim_lsp = "[LSP]",
-    nvim_lua = "[Lua]",
-    ultisnips = "[Usnip]",
-    neorg = "[Neorg]",
+    nvim_lua = "[LUA]",
+    ultisnips = "[USN]",
+    neorg = "[ORG]",
     })}),
   },
 
