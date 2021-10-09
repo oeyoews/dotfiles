@@ -32,7 +32,6 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     os_icon                 # os identifier
-    battery               # internal battery
     dir                     # current directory
     vcs                     # git status
     newline
@@ -47,6 +46,7 @@
     vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
     status                  # exit code of the last command
     proxy                   # system-wide http/https/ftp proxy
+    battery               # internal battery
     direnv                  # direnv status (https://direnv.net/)
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
