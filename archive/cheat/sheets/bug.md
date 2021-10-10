@@ -27,6 +27,9 @@ Bug
 -  
 -   in newwork, unconnect all link and to add subscript
 -   for lua moudle , this parser not find this moudle, may be is this directory's problem
+-   for markdonw preview vim, window click focus in gnome-tweak, window
+    settings, to setup click-focus
+-  disable 息屏 to resolve this black screen in some time
 
 
 TODO_BUG

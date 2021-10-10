@@ -113,21 +113,12 @@
 (setq evil-split-window-below t
       evil-vsplit-window-right t)
 
-;; Hide the menu for as minimalistic a startup screen as possible.
-;; (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-
 ;; rename doom homepage
 (setq doom-fallback-buffer-name "Home"
       +doom-dashboard-name "Home")
 
 ;; use yasnipets
 (setq yas-triggers-in-field t)
-
-; (spell-checking :variables
-;;                 ispell-program-name "aspell"
-;;                 ispell-dictionary "american"
-;; spell-checking-enable-by-default nil
-;; )
 
 (setq-default ispell-program-name "aspell")
 (ispell-change-dictionary "american" t)

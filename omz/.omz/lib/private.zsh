@@ -83,3 +83,7 @@ alias e='nvim'
 alias se='nvim -u NONE'
 
 alias wego='curl wttr.in'
+
+alias emacs='emacs -nw'
+alias doom='~/.emacs.d/bin/doom'
+alias fmo='~/dotfiles/src/fm6000/bin/fm6000 -r -c blue'

@@ -180,3 +180,12 @@ bash-completion
 
 <!-- editor -->
 geany
+gource
+doge
+
+figlet
+-- cd (which figlet)
+
+bullshit
+asciiquarium
+tty-clock

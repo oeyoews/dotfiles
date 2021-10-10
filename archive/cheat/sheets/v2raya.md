@@ -1,0 +1,1 @@
+- system proxy for telegram need open system network by manual (http 20272)
