@@ -1,5 +1,6 @@
 ## II
 
 ## I
-- [ ] rhi homework(matlab gui)
 - [ ] CNP mooc test
+- [ ] dip 练习题
+

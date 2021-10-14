@@ -124,4 +124,5 @@
     "debug.terminal.clearBeforeReusing": true,
     "terminal.integrated.copyOnSelection": true,
     "editor.snippetSuggestions": "top",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim"
 }

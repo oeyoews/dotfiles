@@ -58,7 +58,7 @@ alias diffk="kitty +kitten diff"
 alias che="cheat -e"
 alias chl="cheat -l"
 alias ports='netstat -tulanp'  # need install `net-tools
-alias jc="journalctl -xe"
+alias jc="journalctl"
 alias sc="systemctl"
 alias zprof="zprof > /tmp/zprof.log"
 alias btop='bpytop'
@@ -87,3 +87,11 @@ alias wego='curl wttr.in'
 alias emacs='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
 alias fmo='~/dotfiles/src/fm6000/bin/fm6000 -r -c blue'
+
+#v2ray
+#journalctl -f -u v2raya.service
+alias v2rayac="sudo systemctl stop v2raya"
+alias v2rayao="sudo systemctl start v2raya"
+
+# nvim
+#nvim --startuptime startup.log -c exit && tail -100 startup.log

@@ -1,0 +1,16 @@
+<!--start-->
+- sudo systemctl start docker.service
+- sudo groupadd docker
+- sudo gpasswd -a $USER docker
+- newgrp docker
+- docker ps
+- docker pull nginx
+- docker run -rm --name mynginx -p 8080:80 -d nginx 
+- docker attach <ID>
+- docker restart <ID>
+- docker rm -f <ID>
+- docker port <ID>
+- docker logs -f <ID>
+- docker run -it archlinux /bin/bash
+- docker info
+- docker run -itd --name mylinux archlinux /bin/bash && docker attach mylinux

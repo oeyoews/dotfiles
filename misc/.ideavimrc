@@ -6,4 +6,5 @@ inoremap jk <ESC>
 set number relativenumber
 set incsearch
 syntax on
-set foldmethod=marker
+nnoremap <Space>bd <Cmd>bd<Cr>
+noremap L $

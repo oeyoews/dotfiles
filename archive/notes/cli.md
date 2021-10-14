@@ -39,6 +39,8 @@ yarn init  # 好像自动将依赖写进此项目
 yarn upgrade-interactive --latest    # 忽略包json ，升级最新版本
 
 ## docker
+docker start (ID)     # start docker’s software
+docker run --name nginx-test -p 8080:80 -d nginx(镜像名称)
 docker search software_name # search  software
 docker rm id  # delete container
 docker rmi id # delete images
@@ -54,9 +56,7 @@ docker ps
 
 docker ps -s     # check 正在运行的容器 不加参数也是一样的
 
-docker start (ID)     # start docker’s software
 
-docker run --name nginx-test -p 8080:80 -d nginx(镜像名称)
 # name 容器名称   -p 端口进行映射，将本地的8080端口映射为容器内部的80端口
 -d 设置容器在后台一直运行
 访问本地的8080 端口的nginx服务    localhost：8080

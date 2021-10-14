@@ -176,6 +176,7 @@ drawio
 <!-- markdown  -->
 glow
 
+<!--for bash-->
 bash-completion
 
 <!-- editor -->

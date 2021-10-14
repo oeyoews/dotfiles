@@ -30,6 +30,8 @@ Bug
 -   for markdonw preview vim, window click focus in gnome-tweak, window
     settings, to setup click-focus
 -  disable 息屏 to resolve this black screen in some time
+- when use a bug branch, note delete it , because is's some configct for your
+  current file in sometimes
 
 
 TODO_BUG
