@@ -15,16 +15,16 @@ Bug
 - vscode snippets can't preview?
 - just clikt it use your mouse
 
-- Q: install folke's dot config, have dashboard always, even uninstall it? 
+- Q: install folke's dot config, have dashboard always, even uninstall it?
 	A: rm -rf ~/.local/share/nvim/
-- mooc's video can't watch, 
+- mooc's video can't watch,
 - just restart your computer
 
 <!-- - NOTE: not upgrade emacs -->
 
--  treesitter has a vim highlight error? 
+-  treesitter has a vim highlight error?
 -  need use :Tsupdate
--  
+-
 -   in newwork, unconnect all link and to add subscript
 -   for lua moudle , this parser not find this moudle, may be is this directory's problem
 -   for markdonw preview vim, window click focus in gnome-tweak, window
@@ -39,3 +39,6 @@ TODO_BUG
 - [ ] in xynu.wifi, terminal is doesn't work
 - [ ] in gitee , use ssh , permission is denied?
 - [ ] in chinese, enter v fast input mode, and input ctrl space, it will enter vim's tmp file?
+
+1. LUA_PATH : what't this ? why just a char?
+<!--2.  how to use nvchad in docker nvim on home-->

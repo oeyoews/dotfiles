@@ -86,7 +86,7 @@ alias wego='curl wttr.in'
 
 alias emacs='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
-alias fmo='~/dotfiles/src/fm6000/bin/fm6000 -r -c blue'
+alias fmo='~/dotfiles/archive/src/fm6000/bin/fm6000 -r -c blue'
 
 #v2ray
 #journalctl -f -u v2raya.service

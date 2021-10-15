@@ -10,3 +10,5 @@ system yay site : /usr/libs/lua....(by pkgbuild)
 ## logical operator
 - and: if has false, return fasle
 - or: if has true (this order is not important), return this true
+
+path: /usr/share/lua/5.1...
