@@ -82,7 +82,7 @@ alias vi='nvim'
 alias e='nvim'
 alias se='nvim -u NONE'
 
-alias wego='curl wttr.in'
+#alias wego='curl wttr.in'
 
 alias emacs='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
@@ -95,3 +95,5 @@ alias v2rayao="sudo systemctl start v2raya"
 
 # nvim
 #nvim --startuptime startup.log -c exit && tail -100 startup.log
+
+# journalctl -rb -1

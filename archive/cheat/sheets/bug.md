@@ -39,6 +39,7 @@ TODO_BUG
 - [ ] in xynu.wifi, terminal is doesn't work
 - [ ] in gitee , use ssh , permission is denied?
 - [ ] in chinese, enter v fast input mode, and input ctrl space, it will enter vim's tmp file?
+- tmux can't show ranger picture
 
 1. LUA_PATH : what't this ? why just a char?
 <!--2.  how to use nvchad in docker nvim on home-->

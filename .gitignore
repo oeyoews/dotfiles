@@ -1,5 +1,5 @@
 *.zwc
-log
+*.log
 cache
 .spacemacs.env
 eaf/
