@@ -22,3 +22,4 @@
 - docker system df
 - docker image rm <ID>
 - docker images -a
+- docker logs <ID> or <ALIDAS>

@@ -42,6 +42,7 @@ alias ipr='ip addr | rg 192'
 alias gopen='git-open'
 alias gits='git status'
 alias gitu='git add . && git commit && git push'
+alias gite='git config -e'
 
 alias ssh="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
@@ -82,7 +83,7 @@ alias vi='nvim'
 alias e='nvim'
 alias se='nvim -u NONE'
 
-#alias wego='curl wttr.in'
+alias wego='curl wttr.in'
 
 alias emacs='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
