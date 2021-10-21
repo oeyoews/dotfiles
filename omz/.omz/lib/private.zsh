@@ -4,6 +4,7 @@ alias vip='vim ~/.omz/lib/private.zsh'
 
 # path
 alias cdd="cd ~/dotfiles/"
+alias cdv="cd ~/.config/nvim/"
 alias soz='source $HOME/.zshrc && exec zsh'
 
 # system
@@ -13,7 +14,8 @@ alias open='xdg-open'
 alias c='clear'
 alias pas='sudo pacman -S'
 alias yayy="yay -Yc"
-alias yayr='yay -Rscn'
+#alias yayr='yay -Rscn'
+alias yayr='yay -R'
 alias cp="cp -r"
 
 # on

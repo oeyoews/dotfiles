@@ -107,7 +107,7 @@ crow-translate
 
 # https://www.cnblogs.com/kevingrace/p/10188283.html
 # terminal session recorder
-asciinema 
+asciinema
 
 # kate
 
@@ -162,7 +162,7 @@ icdiff
 go
 nodejs-lts-erbium # 12.xxx
 
-ncdu 
+ncdu
 scrapy
 
 cheat-bin or cheat
@@ -190,3 +190,7 @@ figlet
 bullshit
 asciiquarium
 tty-clock
+
+<!--diff tools-->
+delta
+meld

@@ -7,7 +7,7 @@
 
 
 # Digtal Image Process
-<!--🦌 1. __EX3__ coding-->
+1. handin ex03
 
 # Computer Internet Princel
 1. _MOOC test_

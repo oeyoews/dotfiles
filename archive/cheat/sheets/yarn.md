@@ -1,0 +1,2 @@
+- yarn global add xxx
+- yarn global list

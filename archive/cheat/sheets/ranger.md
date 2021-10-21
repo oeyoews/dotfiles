@@ -17,13 +17,13 @@ always look for github_wikis.
 
 tsz -i file_name.
 
-cw # rename 
+cw # rename
 
 S   //进入指定的文件夹，进入一个新的终端，退出当前的终端，会再次回到ranger中
 
-/ #search 
+/ #search
 
-gg G # same vim 
+gg G # same vim
 
 yy dd pp # 复制剪切 粘贴
 
@@ -45,11 +45,11 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
 
   zp   # 预览代码
 
-  zP # 打开目录预览 
+  zP # 打开目录预览
 
-  cat file_name | tsz 
+  cat file_name | tsz
 
-  cd ~/.config/ranger/rifle.conf    
+  cd ~/.config/ranger/rifle.conf
   export RANGER_LOAD_DEFAULT_RC=FALSE
   sudo pacman -S  --noconfirm libcaca highlight atool lynx w3m elinks  mediainfo   # install  depencies
 
@@ -61,3 +61,6 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
 
   - ranger --copy-config=all  # configure some files
   - [ranger_tutor](https://blog.csdn.net/lxyoucan/article/details/115671189)
+
+- can't start because of version?
+- rm -rf .local/share/ranger/*
