@@ -96,5 +96,6 @@ alias v2rayao="sudo systemctl start v2raya"
 
 # nvim
 #nvim --startuptime startup.log -c exit && tail -100 startup.log
+# nvim -c PlugInstall
 
 # journalctl -rb -1

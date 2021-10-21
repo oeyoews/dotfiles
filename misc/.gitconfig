@@ -7,10 +7,9 @@
 	defaultBranch = main
 [color]
 	ui = 1
-[core]
-	editor = nvim
+;[core]
+	;editor = nvim
 
-; git difftool id
 [diff]
     tool = kitty
     guitool = kitty.gui
@@ -21,3 +20,8 @@
     cmd = kitty +kitten diff $LOCAL $REMOTE
 [difftool "kitty.gui"]
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+[alias]
+	ci = commit
+	amend = ci
+[help]
+	autocorrect = 1

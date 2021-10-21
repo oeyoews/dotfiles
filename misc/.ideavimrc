@@ -3,8 +3,11 @@
 " ====================================================
 set so=5
 inoremap jk <ESC>
-set number relativenumber
+set nu rnu
 set incsearch
 syntax on
 nnoremap <Space>bd <Cmd>bd<Cr>
+nnoremap <space>qq :q<cr>
+nnoremap <space>ss /
+nnoremap <space>fs :w<cr>
 noremap L $

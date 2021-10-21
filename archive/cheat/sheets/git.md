@@ -1,2 +1,4 @@
 - git branch -a
-- git branch 
+- git branch
+- git push <URL>
+- git branch -m dev lua
