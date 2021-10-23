@@ -70,7 +70,7 @@ alias vik="vim ~/.config/kitty/kitty.conf"
 alias via="vim ~/.config/alacritty/alacritty.yml"
 
 # Export
-export PATH=$PATH:~/.emacs.d/bin
+#export PATH=$PATH:~/.emacs.d/bin
 export EDITOR=nvim
 export CHEATCOLORS=true
 export CHEAT_CONFIG_PATH="~/dotfiles/archive/cheat/conf.yml"
@@ -88,7 +88,8 @@ alias wego='curl wttr.in'
 
 alias emacs='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
-alias fmo='~/dotfiles/archive/src/fm6000/bin/fm6000 -r -c blue'
+alias fmo='~/.omz/src/fm6000 -r -c blue'
+alias cheat='~/.omz/src/cheat'
 
 #v2ray
 #journalctl -f -u v2raya.service

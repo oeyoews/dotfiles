@@ -14,3 +14,10 @@
 
 # Android
 🌽 - make music player
+
+# Tmp
+
+ING: c cpp java python shell(bash) elisp lua html(css) vimscript markdown git
+cmake org
+
+TODO: ruby go perl ts js php toml yaml xml json haskell

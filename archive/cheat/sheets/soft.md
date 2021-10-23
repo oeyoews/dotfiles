@@ -194,3 +194,6 @@ tty-clock
 <!--diff tools-->
 delta
 meld
+
+<!--latex editor-->
+lyx
