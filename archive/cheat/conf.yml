@@ -53,7 +53,7 @@ cheatpaths:
 
   # If you have personalized cheatsheets, list them last. They will take
   # precedence over the more global cheatsheets.
-  - name: personal
+  - name: note
     path: ~/dotfiles/archive/cheat/sheets/
     tags: [ personal ]
     readonly: false
