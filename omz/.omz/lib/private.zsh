@@ -5,6 +5,7 @@ alias vip='vim ~/.omz/lib/private.zsh'
 # path
 alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim/"
+# note this will cause $path load twice extra
 alias soz='source $HOME/.zshrc && exec zsh'
 
 # system
@@ -33,7 +34,7 @@ alias tlpb='sudo tlp-stat -b'
 # arguments: -p -u
 alias tse='crow -t en'
 # English to Chinese
-alias ts='crow -b'
+alias tsc='crow -b -t zh-CN'
 
 alias cip='curl cip.cc'
 alias ipr='ip addr | rg 192'
@@ -72,7 +73,8 @@ alias via="vim ~/.config/alacritty/alacritty.yml"
 # Export
 # export $PATH
 # export PATH=$PATH:~/.emacs.d/bin
-export PATH=$PATH:~/.omz/src
+# todo
+export PATH=~/.omz/src:$PATH
 export EDITOR=nvim
 export CHEATCOLORS=true
 export CHEAT_CONFIG_PATH="~/dotfiles/archive/cheat/conf.yml"
@@ -102,3 +104,5 @@ alias v2rayao="sudo systemctl start v2raya"
 # nvim -c PlugInstall
 
 # journalctl -rb -1
+
+alias watch="watch -n 1 -d"

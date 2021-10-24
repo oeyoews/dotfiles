@@ -13,11 +13,12 @@ export DISABLE_AUTO_UPDATE=true
 export ZSH=~/.omz
 
 # extract
-plugins=(
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
+plugins=( zsh-autosuggestions zsh-syntax-highlighting )
 
 ZSH_THEME="p10k/powerlevel10k"
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.omz/themes/p10k/p10k-rainbow.zsh ]] || source ~/.omz/themes/p10k/p10k-rainbow.zsh
+
+# tmp
+# can't expand this home symbol(for lua)
+#export LUA_PATH="/home/oeyoews/tmp/?.lua;;"

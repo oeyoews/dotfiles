@@ -292,3 +292,16 @@ if which tmux >/dev/null 2>&1; then
     test -z "$TMUX" && { tmux attach || tmux new-session; }
 fi
 }
+
+# how to better these cd (all in one)
+function cdt() {
+  _TMP=~/tmp
+  [[ ! -d "$_TMP" ]] && { mkdir "$_TMP"; echo "creat $_TMP dir"}
+  cd ${_TMP}
+}
+
+function cdr() {
+  _TMP=~/REPOS
+  [[ ! -d "$_TMP" ]] && { mkdir "$_TMP"; echo "creat $_TMP dir"}
+  cd ${_TMP}
+}
