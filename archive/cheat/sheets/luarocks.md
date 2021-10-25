@@ -1,2 +1,3 @@
 - luarocks
 - luarocks search vanilla --verbose
+- luarocks install md5

@@ -197,3 +197,6 @@ meld
 
 <!--latex editor-->
 lyx
+
+<!--love 2d games-->
+sudo pacman -S love
