@@ -25,4 +25,5 @@ TODO: ruby go perl ts js php toml yaml xml json haskell
 # lua
 1. 云风 lua Gc
 2. programming in lua
-3. lua 程序设计与实现
+3. lua程序设计与实现
+4. learn how to use luarocks to add modules

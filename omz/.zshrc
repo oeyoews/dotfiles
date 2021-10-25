@@ -19,6 +19,8 @@ ZSH_THEME="p10k/powerlevel10k"
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.omz/themes/p10k/p10k-pure.zsh ]] || source ~/.omz/themes/p10k/p10k-pure.zsh
 
-# tmp
-# can't expand this home symbol(for lua)
-#export LUA_PATH="/home/oeyoews/tmp/?.lua;;"
+# LUA
+# can't expand this Tilde symbol( why?(replaced? != ==> ~=) )
+#export LUA_PATH="/home/$USER/tmp/test/?.lua;;"
+#export LUA_PATH="~/tmp/test/?.lua;;"
+export LUA_PATH="$HOME/tmp/test/?.lua;;"

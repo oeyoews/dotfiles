@@ -1,0 +1,2 @@
+- luarocks
+- luarocks search vanilla --verbose
