@@ -1,9 +1,10 @@
-## Software Dev Desigh
+# Software Dev Design
 
 # Linux exeperice
-<!--1. linux ex3-->
+
 
 # Human Interface
+- ❔ edge for function: __imcrop__
 
 
 # Digtal Image Process
@@ -16,14 +17,13 @@
 🌽 - make music player
 
 # Tmp
+learn Lyx
 
-ING: c cpp java python shell(bash) elisp lua html(css) vimscript markdown git
+ING: c cpp java __python__ shell(bash) elisp __lua__ html(css) vimscript markdown git
 cmake org
 
 TODO: ruby go perl ts js php toml yaml xml json haskell
 
 # lua
-1. 云风 lua Gc
 2. programming in lua
 3. lua程序设计与实现
-<!--4. learn how to use luarocks to add modules-->

@@ -14,7 +14,7 @@ alias neo='fastfetch'
 alias open='xdg-open'
 alias c='clear'
 alias pas='sudo pacman -S'
-alias yayy="yay -Yc"
+#alias yayy="yay -Yc"
 #alias yayr='yay -Rscn'
 alias yayr='yay -R'
 alias cp="cp -r"
@@ -73,7 +73,7 @@ alias via="vim ~/.config/alacritty/alacritty.yml"
 # Export
 # export $PATH
 # export PATH=$PATH:~/.emacs.d/bin
-# todo
+# TODO
 export PATH=~/.omz/src:$PATH
 export EDITOR=nvim
 export CHEATCOLORS=true
@@ -96,8 +96,9 @@ alias fmo='fm6000 -r -c blue'
 
 #v2ray
 #journalctl -f -u v2raya.service
-alias v2rayac="sudo systemctl stop v2raya"
-alias v2rayao="sudo systemctl start v2raya"
+# TODO
+#alias v2rayac="sudo systemctl stop v2raya"
+#alias v2rayao="sudo systemctl start v2raya"
 
 # nvim
 #nvim --startuptime startup.log -c exit && tail -100 startup.log
@@ -105,4 +106,5 @@ alias v2rayao="sudo systemctl start v2raya"
 
 # journalctl -rb -1
 
+# watch ls <dir>
 alias watch="watch -n 1 -d"

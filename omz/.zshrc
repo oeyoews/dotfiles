@@ -18,11 +18,3 @@ plugins=( zsh-autosuggestions zsh-syntax-highlighting )
 ZSH_THEME="p10k/powerlevel10k"
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.omz/themes/p10k/p10k-pure.zsh ]] || source ~/.omz/themes/p10k/p10k-pure.zsh
-
-# LUA
-# in dofile("$HOME/..."), This HOME can't expand,
-# but you can use os.getenv("HOME") to replace it
-# can't expand this Tilde symbol( why?(replaced? != ==> ~=) )
-#export LUA_PATH="/home/$USER/tmp/test/?.lua;;"
-#export LUA_PATH="~/tmp/test/?.lua;;"
-#export LUA_PATH="$HOME/tmp/test/?.lua;;"
