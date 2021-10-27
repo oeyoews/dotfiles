@@ -4,7 +4,7 @@
 #
 # LUA
 # in dofile("$HOME/..."), This HOME can't expand,
-# but you can use os.getenv("HOME") to replace it
+# NOTE: but you can use os.getenv("HOME") to replace it
 # can't expand this Tilde symbol( why?(replaced? != ==> ~=) )
 #export LUA_PATH="/home/$USER/tmp/test/?.lua;;"
 #export LUA_PATH="~/tmp/test/?.lua;;"
