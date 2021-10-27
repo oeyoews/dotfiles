@@ -22,6 +22,6 @@
     cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [alias]
 	ci = commit
-	amend = ci
+	;amend = ci
 [help]
 	autocorrect = 1

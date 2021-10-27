@@ -22,7 +22,7 @@ learn Lyx
 ING: c cpp java __python__ shell(bash) elisp __lua__ html(css) vimscript markdown git
 cmake org
 
-TODO: ruby go perl ts js php toml yaml xml json haskell
+TODO: ruby rust go perl ts js php toml yaml xml json haskell
 
 # lua
 2. programming in lua

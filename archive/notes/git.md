@@ -86,7 +86,7 @@
 版本回退 但是会抹去远程库的提交信息 首先进行本地的版本回退，由于进行里本地的版本回滚，版本将落后于远程分支，因此必须要使用强制推送进行版本覆盖，然后进行向远程仓库强制推送  master 为默认本仓库创建的第一个分支， 而 origin为默认是指向这一个仓库，相当于别名
 
 ### Commit
-* git commit -am ' '
+* git commit -am ' '  // commit file message already added
 
 ### Merge
 * git branch --merged    # 显示已经合并到当前分支的分支列表  --no-merged
@@ -146,5 +146,5 @@ hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，com
 ### git pull
 - git pull origin --depth 1 develop:main
 
-### commit 
+### commit
 - git commit -m " empty commit " --allow-empty
