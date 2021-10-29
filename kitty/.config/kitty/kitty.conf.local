@@ -1,7 +1,7 @@
 # /usr/share/doc/kitty
 # this first should be exist, to highlight comment
 #
-background #1a1b26
+background #24283b
 foreground #979eab
 cursor     #7cac4a
 background_opacity 1.0
