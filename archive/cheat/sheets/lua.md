@@ -14,3 +14,8 @@ system yay site : /usr/libs/lua....(by pkgbuild)
 path: /usr/share/lua/5.1...
 
 print(package.path)
+
+# Type
+- number string
+- nil boolean function
+- table userdata thread
