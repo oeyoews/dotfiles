@@ -79,6 +79,8 @@ export EDITOR=nvim
 export CHEATCOLORS=true
 export CHEAT_CONFIG_PATH="~/dotfiles/archive/cheat/conf.yml"
 export CHEAT_USE_FZF=true
+#export JDTLS_PATH="$HOME/.local/share/nvim/lsp_servers/jdtls/"
+#export JAR="$JDTLS_PATH/plugins/org.eclipse.equinox.launcher_*.jar"
 
 # better man page dependcies: bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -97,8 +99,8 @@ alias fmo='fm6000 -r -c blue'
 #v2ray
 #journalctl -f -u v2raya.service
 # TODO
-#alias v2rayac="sudo systemctl stop v2raya"
-#alias v2rayao="sudo systemctl start v2raya"
+alias v2rayac="sudo systemctl stop v2raya"
+alias v2rayao="sudo systemctl start v2raya"
 
 # nvim
 #nvim --startuptime startup.log -c exit && tail -100 startup.log

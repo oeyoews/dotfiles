@@ -17,7 +17,7 @@
 🌽 - make music player
 
 # Tmp
-learn Lyx(what you see is what you mean)WYSIWYM
+<!--learn Lyx(what you see is what you mean)WYSIWYM-->
 
 ING: c cpp java __python__ shell(bash) elisp __lua__ html(css) vimscript markdown git
 cmake org

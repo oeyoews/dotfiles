@@ -11,3 +11,4 @@ nnoremap <space>qq :q<cr>
 nnoremap <space>ss /
 nnoremap <space>fs :w<cr>
 noremap L $
+nnoremap <space>bd <cmd>bd<cr>
