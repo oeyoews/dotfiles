@@ -2,13 +2,12 @@
 
 # Linux exeperice
 
-
 # Human Interface
-- ❔ edge for function: __imcrop__
+<!--- ❔ edge for function: __imcrop__-->
 
 
 # Digtal Image Process
-1. handin ex03
+<!--1. handin ex03-->
 
 # Computer Internet Princel
 1. _MOOC test_
@@ -25,8 +24,8 @@ cmake org
 TODO: ruby rust go perl ts js php toml yaml xml json haskell
 
 # lua
-2. programming in lua
-3. lua程序设计与实现
+<!--2. programming in lua-->
+<!--3. lua程序设计与实现-->
 
 # vim
-- learn tiny vimrc's statusline
+<!--- learn tiny vimrc's statusline-->

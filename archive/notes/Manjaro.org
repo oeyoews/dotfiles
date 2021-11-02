@@ -156,7 +156,7 @@ sudo virsh net-start default
   - /etc/locale.gen
   - zh_CN.UTF-8 UTF-8
   - en_US.UTF .....
-  - locale-gen
+  - sudo locale-gen
     ( will have some warning like language  use export LC_ALL="en_US.UTF-8" to /etc/profile and relogin)
 
 

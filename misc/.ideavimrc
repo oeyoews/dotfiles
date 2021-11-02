@@ -1,14 +1,31 @@
-" ====================================================
-" ideavimrc
-" ====================================================
+let mapleader=" "
+" == opts
+set nu
 set so=5
-inoremap jk <ESC>
-set nu rnu
-set incsearch
+set signcolumn=yes
+set ve=block
+set cursorline
+set incsearch " always highlight search keywords
+
+" == misc
 syntax on
-nnoremap <Space>bd <Cmd>bd<Cr>
+
+" == mappings
+inoremap jk <ESC>
+nnoremap <leader>w <C-W>
+nnoremap <leader><leader> :
 nnoremap <space>qq :q<cr>
 nnoremap <space>ss /
 nnoremap <space>fs :w<cr>
-noremap L $
 nnoremap <space>bd <cmd>bd<cr>
+noremap L $
+
+nnoremap <leader>ll <cmd><S><F10><cr>
+set highlightedyank
+set surround
+map <leader>ld <Action>(Debug)
+map <leader>ll <Action>(Run)
+map <leader>lr <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>lb <Action>(ToggleLineBreakpoint)
