@@ -20,7 +20,9 @@ nnoremap <space>fs :w<cr>
 nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 
+set NERDTree
 nnoremap <leader>ll <cmd><S><F10><cr>
+nnoremap <leader>ft :NERDTreeFocus<cr>
 set highlightedyank
 set surround
 map <leader>ld <Action>(Debug)
@@ -29,3 +31,6 @@ map <leader>lr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>lb <Action>(ToggleLineBreakpoint)
+
+map <leader><Tab> <cmd>bp<cr>
+map <leader>bn <cmd>bn<cr>

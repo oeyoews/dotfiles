@@ -200,3 +200,9 @@ lyx
 
 <!--love 2d games-->
 sudo pacman -S love
+
+<!--like ping -->
+<!--tracert(maybe is window)-->
+traceroute(linux)
+
+microsoft-edge-beta-bin
