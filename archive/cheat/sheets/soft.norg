@@ -1,3 +1,13 @@
+@document.meta
+  title: soft
+  description:
+  author: oeyoews
+  categories: soft
+  created: 2021-11-06
+  version: 0.1
+@end
+
+* soft
 base-devel
 # if use kimpanel, not use this skin
 # fcitx5-material-color      # input skin
@@ -33,7 +43,7 @@ foliate                    # book read
 obs                        # record video
 # system clipboard link
 <!-- gvim -->
-neovim(python-pynvim)
+- [x] neovim(python-pynvim)
 <!-- npm i -g neovim -->
 
 <!-- ranger {{{ -->
@@ -167,42 +177,46 @@ scrapy
 
 cheat-bin or cheat
 
-mdp
-slides
-ttyd
-drawio
+- mdp
+- slides
+- ttyd
+- drawio
 
 
 <!-- markdown  -->
-glow
+- glow
 
 <!--for bash-->
-bash-completion
+- bash-completion
 
 <!-- editor -->
-geany
-gource
-doge
+- geany
+- gource
+- doge
 
 figlet
--- cd (which figlet)
+- cd (which figlet)
 
-bullshit
-asciiquarium
-tty-clock
+- bullshit
+- asciiquarium
+- tty-clock
 
-<!--diff tools-->
+-<!--diff tools-->-
 delta
 meld
 
 <!--latex editor-->
-lyx
+- lyx
 
-<!--love 2d games-->
-sudo pacman -S love
+-<!--love 2d games-->-
+-sudo pacman -S love--
 
 <!--like ping -->
 <!--tracert(maybe is window)-->
 traceroute(linux)
 
-microsoft-edge-beta-bin
+- microsoft-edge-beta-bin
+
+-<!--editor-->-
+- kakoune
+____
