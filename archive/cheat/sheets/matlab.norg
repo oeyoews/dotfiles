@@ -1,0 +1,14 @@
+@document.meta
+  title: matlab
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-08
+  version: 0.1
+@end
+
+@code matlab
+%{
+  This is a paragraphy.
+%}
+@end

@@ -99,8 +99,8 @@ alias fmo='fm6000 -r -c blue'
 #v2ray
 #journalctl -f -u v2raya.service
 # TODO
-alias v2rayac="sudo systemctl stop v2raya"
-alias v2rayao="sudo systemctl start v2raya"
+alias pc="sudo systemctl stop v2raya"
+alias po="sudo systemctl start v2raya"
 
 # nvim
 #nvim --startuptime startup.log -c exit && tail -100 startup.log
