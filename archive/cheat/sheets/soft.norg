@@ -27,7 +27,10 @@ gtk-theme-macos-sierra-archers-git
 krita
 clang                      # spacevim need
 libreoffice-fresh          # office
+
+#contents
 netease-cloud-music        # music
+
 manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
 # python-pip
@@ -175,7 +178,7 @@ cheat-bin or cheat
 - mdp
 - slides
 - ttyd
-- drawio
+- drawio(brower)
 
 
 <!-- markdown  -->

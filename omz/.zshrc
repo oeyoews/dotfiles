@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 export ZSH_DISABLE_COMPFIX="true"
-export DISABLE_AUTO_UPDATE=true
+#export DISABLE_AUTO_UPDATE=true
 
 # ===
 # === zsh

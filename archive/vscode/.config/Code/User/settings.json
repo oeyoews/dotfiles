@@ -11,50 +11,6 @@
     "vim.sneak": true,
     "vim.sneakReplacesF": true,
     "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<space>"
-            ],
-            "commands": [
-                "vspacecode.space"
-            ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        }
-    ],
     // ***** workbench *****
     "workbench.colorTheme": "One Dark Pro",
     "workbench.startupEditor": "none",
@@ -79,17 +35,10 @@
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
     "window.titleBarStyle": "custom",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "update.mode": "manual",
     "update.showReleaseNotes": false,
     "terminal.integrated.fontSize": 18,
     "terminal.integrated.defaultProfile.linux": "zsh",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "json.trace.server": "verbose",
@@ -102,7 +51,7 @@
     "editor.mouseWheelZoom": true,
     "editor.minimap.enabled": true,
     "editor.suggestSelection": "first",
-    "editor.lineNumbers": "relative",
+    "editor.lineNumbers": "on",
     "debug.console.fontSize": 18,
     "debug.onTaskErrors": "showErrors",
     "editor.renderWhitespace": "none",
@@ -110,10 +59,6 @@
     "C_Cpp.intelliSenseEngine": "Default",
     "files.trimTrailingWhitespace": true,
     "git.enableSmartCommit": true,
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
     "http.proxyAuthorization": null,
     "files.associations": {
         "*.ipynb": "juliamarkdown"
@@ -124,6 +69,5 @@
     "debug.terminal.clearBeforeReusing": true,
     "terminal.integrated.copyOnSelection": true,
     "editor.snippetSuggestions": "top",
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "editor.inlineSuggest.enabled": true
 }

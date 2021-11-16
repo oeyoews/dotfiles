@@ -10,6 +10,7 @@ alias soz='source $HOME/.zshrc && exec zsh'
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
+#alias date='date +%S'
 alias neo='fastfetch'
 alias open='xdg-open'
 alias c='clear'
@@ -110,3 +111,4 @@ alias po="sudo systemctl start v2raya"
 
 # watch ls <dir>
 alias watch="watch -n 1 -d"
+alias vu="nvim -c PlugUpdate"

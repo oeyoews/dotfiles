@@ -1,0 +1,11 @@
+@document.meta
+  title: idea
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-12
+  version: 0.1
+@end
+
+* keymap for idea
+ - move all config for c-n/p, just save one
