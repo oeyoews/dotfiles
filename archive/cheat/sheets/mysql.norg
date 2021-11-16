@@ -1,0 +1,19 @@
+@document.meta
+  title: mysql
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-16
+  version: 0.1
+@end
+
+- sudo vim /etc/my.cnf
+- add
+@code
+[mysqld]
+skip-grant-tables=1
+@end
+- sudo mysql
+- set password for root@localhost=password('2956');
+- ...
+

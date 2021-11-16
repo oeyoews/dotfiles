@@ -28,7 +28,7 @@ alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.ser
 alias ra='ranger'
 alias dust="dust -r"
 alias rm='trash'
-alias ms='musicbox'
+#alias ms='musicbox'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 
