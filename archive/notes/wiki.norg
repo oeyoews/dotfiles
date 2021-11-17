@@ -1,3 +1,12 @@
+@document.meta
+  title: wiki
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-17
+  version: 0.1
+@end
+
 * Grub
 - cd /etc/default/grub
 - 在 GRUB_CMDLINE_LINUX_DEFAULT 的引号内添加 i8042.dumbkbd ,具体搜索联想小新安装 manjaro 键盘失灵的问题
@@ -6,8 +15,7 @@
 - sudo vim /etc/default/grub  `quiet` 删除后，在开机的时候会去除很多的打印信息
 
 
-* kvm
-# packages
+* KVM
 - qemu iptables ebtables virt-manager libguestfs(分区)
 - openbsd-netcat (ssh link)
 - bridge-utils( 桥接)

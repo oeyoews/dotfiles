@@ -94,6 +94,7 @@ alias se='nvim -u NONE'
 alias wego='curl wttr.in'
 
 alias emacs='emacs -nw'
+alias ee='\emacs'
 alias doom='~/.emacs.d/bin/doom'
 alias fmo='fm6000 -r -c blue'
 

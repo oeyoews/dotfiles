@@ -16,4 +16,5 @@ skip-grant-tables=1
 - sudo mysql
 - set password for root@localhost=password('2956');
 - ...
+- [mysql](https://blog.51cto.com/lxsym/477027)
 

@@ -38,3 +38,5 @@ prefix nu # 切换窗口
 
 # tips
 - pgrep tmux
+- prefix z  // zoom panel
+- prefix m // toggle mouse mode

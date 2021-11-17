@@ -1,0 +1,10 @@
+@document.meta
+  title: kvm
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-17
+  version: 0.1
+@end
+
+- for network, you must restart libvirtd.service.(reason ???)

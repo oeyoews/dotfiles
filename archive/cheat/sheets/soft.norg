@@ -221,3 +221,5 @@ traceroute(linux)
 uml
 - staruml
 
+--< dotfiles manager >--
+stow
