@@ -21,8 +21,7 @@ nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 
 map <leader>ld <Action>(Debug)
-" map <leader>ll <Action>(Run)
-nnoremap <space>ll <C-S-F10>
+map <leader>ll <Action>(Run)
 map <leader>lr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)

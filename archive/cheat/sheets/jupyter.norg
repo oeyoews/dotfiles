@@ -1,0 +1,10 @@
+@document.meta
+  title: jupyter
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-18
+  version: 0.1
+@end
+
+- if can't uninstall jupyter, you can use yay -Rns jupyter
