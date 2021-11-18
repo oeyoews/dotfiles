@@ -1,0 +1,10 @@
+@document.meta
+  title: keyboard
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-19
+  version: 0.1
+@end
+
+- install xunfei input method for termux

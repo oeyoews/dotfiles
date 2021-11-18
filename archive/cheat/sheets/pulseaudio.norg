@@ -11,3 +11,7 @@
 - https://bbs.archlinuxcn.org/viewtopic.php?id=10479
 - sudo pacman -S sof-firmware
 - reboot and toggle soundcards in settings
+
+- speaker-test
+- aplay -l
+- arecord -l
