@@ -20,13 +20,9 @@ nnoremap <space>fs :w<cr>
 nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 
-set NERDTree
-nnoremap <leader>ll <cmd><S><F10><cr>
-nnoremap <leader>ft :NERDTreeFocus<cr>
-set highlightedyank
-set surround
 map <leader>ld <Action>(Debug)
-map <leader>ll <Action>(Run)
+" map <leader>ll <Action>(Run)
+nnoremap <space>ll <C-S-F10>
 map <leader>lr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
@@ -55,3 +51,21 @@ sethandler <C-H> a:ide
 sethandler <C-I> a:ide
 sethandler <C-K> a:vim
 sethandler <C-T> a:vim
+
+" Plugins
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'nerdtree'
+Plug 'vim-commentary'
+Plug 'vim-surround'
+Plug 'vim-easymotion'
+nnoremap <leader>ft :NERDTreeFocus<cr>
+set highlightedyank
+let g:highlightedyank_highlight_duration = "50"
+set easymotion
+set NERDTree
+set surround
+set commentary
+nnoremap <space>ei :edit ~/.ideavimrc<cr>
+map <space>f <Plug>(easymotion-s)
+nnoremap <space>so :source ~/.ideavimrc<cr>
