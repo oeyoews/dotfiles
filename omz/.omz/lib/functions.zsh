@@ -12,6 +12,7 @@ function open_command() {
   local open_cmd
 
   # define the open command
+  # ???
   case "$OSTYPE" in
     darwin*)  open_cmd='open' ;;
     cygwin*)  open_cmd='cygstart' ;;
@@ -301,7 +302,21 @@ function cdt() {
 }
 
 function cdr() {
+  # todo rename
   _TMP=~/REPOS
   [[ ! -d "$_TMP" ]] && { mkdir "$_TMP"; echo "creat $_TMP dir"}
   cd ${_TMP}
 }
+
+## todo fix for multi terminal
+#function ssh() {
+  #(ps auxce | grep kitty) > /dev/null
+  #if [ $(echo $?) -eq 0 ]; then
+    #echo "success"
+    ##alias ssh="kitty +kitten ssh"
+    #ssh
+  #else
+    #echo "vanilla"
+    ##ssh
+  #fi
+#}

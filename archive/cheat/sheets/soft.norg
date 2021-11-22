@@ -138,7 +138,8 @@ inkscape
 # comannd: locate [file-name]
 mlocate
 
-htim(instead htop)
+--htim--
+htop
 
 # reading
 calibre
@@ -228,3 +229,11 @@ qtcreater
 
 -comment--
 gittalk
+
+--chm--
+kchmviewer
+
+--image--
+imagemagick(cmd: display)
+
+lunar-date

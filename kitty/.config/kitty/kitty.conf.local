@@ -27,7 +27,8 @@ tab_title_template "{index}"
 shell zsh
 editor vim
 font_family        DeJaVu Sans Mono
-font_size 18.0
+# NOTE: some icon will be larger, because this font size in kitty
+font_size 16.0
 cursor_shape block
 cursor_beam_thickness 1.5
 cursor_text_color #111111

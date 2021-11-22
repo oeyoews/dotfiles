@@ -47,6 +47,7 @@ alias gits='git status'
 alias gitu='git add . && git commit && git push'
 alias gite='git config -e'
 
+# just for kitty terminal, other terminal please use \ssh temporary
 alias ssh="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
 # kitty list-fonts

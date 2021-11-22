@@ -1,3 +1,6 @@
+# note
+- temporary stop use this file !!!
+
 Bug
 ---
 <!--- Q: user@120.service is failed?-->

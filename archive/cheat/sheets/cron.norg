@@ -1,0 +1,13 @@
+@document.meta
+  title: cr
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-21
+  version: 0.1
+@end
+
+
+- crontab -e
+- crontab -l
+- [crontab](https://www.runoob.com/w3cnote/linux-crontab-tasks.html)
