@@ -20,12 +20,17 @@ nnoremap <space>fs :w<cr>
 nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 
+" :action partern"
 map <leader>ld <Action>(Debug)
 map <leader>ll <Action>(Run)
 map <leader>lr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>lb <Action>(ToggleLineBreakpoint)
+map <leader>qe <Action>(ShowErrorDescription)
+map <leader>ff <Action>(FindInPath)
+map <leader>bf <Action>(ReformatCode)
+map <leader>ld <Action>(Debug)
 
 map <leader><Tab> <cmd>bp<cr>
 map <leader>bn <cmd>bn<cr>
@@ -68,3 +73,7 @@ set commentary
 nnoremap <space>ei :edit ~/.ideavimrc<cr>
 map <space>f <Plug>(easymotion-s)
 nnoremap <space>so :source ~/.ideavimrc<cr>
+
+map <leader>tb <Action>(ToggleLineBreakpoint)
+" format code in visual status
+map Q gq
