@@ -1,0 +1,10 @@
+@document.meta
+  title: yay
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-24
+  version: 0.1
+@end
+
+- when change this branch, please use sudo pacman -Syyu to force update this config file

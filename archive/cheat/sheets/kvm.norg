@@ -8,3 +8,7 @@
 @end
 
 - for network, you must restart libvirtd.service.(reason ???)
+  - libvirt: library virtualization
+  - libvirtd is a daemon
+
+- use 复制主机拓扑地址 (select it)
