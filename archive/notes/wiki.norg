@@ -69,7 +69,6 @@ sudo virsh net-start default
 - - mariadb-install-db --user=mysql --basedir=/usr --datadir=/var/lib/mysql # initalize this mysql
 - * mysqld --initialize --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 - - systemctl start mysql https://wiki.archlinux.org/title/MariaDB
-- - softwart: dbeaver.
 - mycli -uroot -p 123
 - * set password for root@localhost=password('2956');
 - * flush privileges; (optional)

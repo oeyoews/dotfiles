@@ -1,0 +1,11 @@
+@document.meta
+  title: pacman
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-24
+  version: 0.1
+@end
+
+- pacman -Qi [name]
+- pactree -r

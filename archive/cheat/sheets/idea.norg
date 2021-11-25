@@ -10,3 +10,9 @@
 * keymap for idea
  - move all config for c-n/p, just save one
  - C-S-p (parameter info)
+
+* Config
+  - .config/jetbrain....
+* Runtime
+  - dele .config/jet.../*.jdk  to restore default keymap
+  - [links](https://v2ex.com/t/805934)

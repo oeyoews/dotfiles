@@ -69,7 +69,10 @@ duf
 dust
 fzf
 tree
+
+--ISO--
 ventoy
+- etcher [link](https://www.balena.io/etcher/)
 
 # Fcitx5
 # pacman (auto install fcitx-im)
@@ -140,6 +143,7 @@ mlocate
 
 --htim--
 htop
+btop(c++)
 
 # reading
 calibre
@@ -179,6 +183,8 @@ cheat-bin or cheat
 - mdp
 - slides
 - ttyd
+
+> UML
 - drawio(brower)
 
 
@@ -237,3 +243,9 @@ kchmviewer
 imagemagick(cmd: display)
 
 lunar-date
+
+--pdf--
+foxit reader
+
+--window is best--
+- utools

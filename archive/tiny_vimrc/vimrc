@@ -1,4 +1,5 @@
-set shortmess=atI  " disable show welcome
+" have some bug
+set shortmess=atI  " disable show welcome and no clear this ui to quit vim
 set t_ti= t_te=
 
 syntax on
@@ -29,9 +30,9 @@ set backspace=indent,eol,start
 set list
 set listchars=tab:\│\
 set matchpairs+=<:>
-set statusline=%1*\ file\ %3*\ %f\ %4*\
-set statusline+=%=\
-set statusline+=%3*\ %l\ of\ %L\ %2*\ line\
+set statusline=%1*\ file\ %3*\ %f\ %4*
+set statusline+=%=
+set statusline+=%3*\ %l\ of\ %L\ %2*\ line
 set scrolloff=4
 
 inoremap  jk <ESC>
