@@ -1,0 +1,11 @@
+@document.meta
+  title: nvim0.6
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-25
+  version: 0.1
+@end
+
+- mv binary file `nvim` to .local/bin or /usr/local/bin
+- if your want deprecate it, the sample method is rename nvim to nvim_bk etc.

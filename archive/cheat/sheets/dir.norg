@@ -1,0 +1,14 @@
+@document.meta
+  title: dir
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-25
+  version: 0.1
+@end
+
+===
+- /opt
+- .local/bin
+- /usr/local/bin
+- /usr/bin

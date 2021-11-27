@@ -1,0 +1,15 @@
+@document.meta
+  title: gnome
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-26
+  version: 0.1
+@end
+
+* Solve Automatic Screen
+- Start the application "Settings"Choose "Privacy" under the "Personal" heading.
+- Choose "Screen Lock"Toggle "Automatic Screen Lock" from the default "ON" to "OFF"
+- and reboot or relogin
+That's all!
+

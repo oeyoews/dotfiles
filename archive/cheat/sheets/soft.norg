@@ -70,7 +70,7 @@ dust
 fzf
 tree
 
---ISO--
+  *** ISO
 ventoy
 - etcher [link](https://www.balena.io/etcher/)
 
@@ -90,6 +90,8 @@ nvm                        # node 版本管理
 com.qq.tim.spark           # tim
 # wechat-uos                 # wechat
 # wudao-dict-git             # wudao directory
+- dict-cli
+  - [link](https://github.com/FeeiCN/dict)
 jdk8-openjdk               # jdk
 # fgit                       # hub.fastgit.org
 # deskreen                   # 投屏软件
@@ -225,7 +227,7 @@ traceroute(linux)
 -<!--editor-->-
 - kakoune
 
-uml
+  *** uml
 - staruml
 
 --< dotfiles manager >--
@@ -244,8 +246,17 @@ imagemagick(cmd: display)
 
 lunar-date
 
---pdf--
-foxit reader
+pdf
+===
+- foxit reader
+===
 
---window is best--
+window is best
+---
 - utools
+---
+
+shellcheck
+
+wd
+/

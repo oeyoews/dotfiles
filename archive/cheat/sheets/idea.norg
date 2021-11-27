@@ -10,9 +10,16 @@
 * keymap for idea
  - move all config for c-n/p, just save one
  - C-S-p (parameter info)
+ - in keymap, to search basic in box, and remap it to popup it completion by manual
+ - or input sout and type table key, even no popup completion.
 
 * Config
   - .config/jetbrain....
+
 * Runtime
   - dele .config/jet.../*.jdk  to restore default keymap
   - [links](https://v2ex.com/t/805934)
+
+* Doc
+  - just search jetbrain document
+  - [link](https://www.jetbrains.com/help/idea/discover-intellij-idea.html)

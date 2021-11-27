@@ -1,0 +1,10 @@
+@document.meta
+  title: pdf
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-26
+  version: 0.1
+@end
+
+- if pdf file is scan file, you can't select text, need use oct tool
