@@ -7,73 +7,56 @@
   version: 0.1
 @end
 
-* soft
-base-devel
-# if use kimpanel, not use this skin
+
+---
+* Picture
 - flameshot
-# cmake
-# cloc # like wc
+
+---
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 - gnome: dash-to-dock
 - gnome-keyring              # for vscode synchronize
 # gnome-shell-extension-unite
-gpaste
 cdate
 # like ps painting
 yay gtk-theme-mackos-mojave
 gtk-theme-macos-sierra-archers-git
 # fcitx5-material-color      # input skin
 krita
-clang                      # spacevim need
 libreoffice-fresh          # office
-
-#contents
-netease-cloud-music        # music
 
 manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
 # python-pip
-# tmux
-xunlei-bin                 # xunlei
+- xunlei-bin
 # (xtreme download manager)
 # xdm
 # powertop # 耗电分析
 # mysql tool
 # mycli
-# typora
-foliate                    # book read
-obs                        # record video
+- obs                        # record video
 # system clipboard link
 - [x] neovim(python-pynvim)
 
-# https://wiki.archlinux.org/title/Ranger_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
-- ranger
-
-# secure rm
-- trash-cli
-google-chrome
-firefox
-neofetch deprecate
-fastfetch
-# lolcat
+lolcat
 # ls -al | xclip
-# 防火墙
 # gufw
 # xclip
 # pacman
 # grep enhanced, like grep
-ripgrep
+- ripgrep
 duf
 # like du -sh
 dust
 fzf
 tree
 
-  *** ISO
-ventoy
+* Bootools
+- ventoy
 - etcher [link](https://www.balena.io/etcher/)
 
+* Input method
 # Fcitx5
 # pacman (auto install fcitx-im)
 manjaro-asian-input-support-fcitx5
@@ -85,13 +68,10 @@ fcitx5-pinyin-moegirl
 fcitx5-chinese-addons
 #========
 
-nvm                        # node 版本管理
+- nvm                        # node 版本管理
 # virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
 # wechat-uos                 # wechat
-# wudao-dict-git             # wudao directory
-- dict-cli
-  - [link](https://github.com/FeeiCN/dict)
 jdk8-openjdk               # jdk
 # fgit                       # hub.fastgit.org
 # deskreen                   # 投屏软件
@@ -103,8 +83,7 @@ git-open
 # yay
 # pip install magic-wormhole
 sudo pacman -S python-pip
-# pip
-magic-wormhole netease-musicbox
+- magic-wormhole
 
 # gnome-extensions list
 trayIconsReloaded
@@ -112,15 +91,22 @@ lock
 GPaste
 kimpanel
 
-# start: mocp
-moc
+===
+* MusicPlayer
+- mpv (Q save time)
+- moc(cli: mocp)
+- rhythmbox
+- yesplaymusic
+- netease-musicbox
+- lx-music-desktop-bin
+- clementine
 
 # translate
 crow-translate
 
 # https://www.cnblogs.com/kevingrace/p/10188283.html
 # terminal session recorder
-asciinema
+- asciinema
 
 # kate
 
@@ -132,8 +118,6 @@ alacritty
 valgrind
 massif-visualizer
 
-# markdown to cat
-mdcat
 
 # picture show
 inkscape
@@ -143,12 +127,6 @@ inkscape
 # comannd: locate [file-name]
 mlocate
 
---htim--
-htop
-btop(c++)
-
-# reading
-calibre
 
 
 bat
@@ -167,43 +145,38 @@ you-get
 awesome-terminal-fonts
 
 # mysql toolsk
-dbeaver
-
-# jupyter notebook
-jupyter
+- dbeaver
 
 icdiff
 
-go
-nodejs-lts-erbium # 12.xxx
 
-ncdu
-scrapy
+* FileManager
+- ncdu
+- scrapy
+- ranger
+  - [ranger](https://wiki.archlinux.org/title/Ranger_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
-cheat-bin or cheat
+- cheat-bin or cheat
 
+* MarkdownEditor
+- glow
 - mdp
 - slides
 - ttyd
+- marktext
+- typora
+- zettlr
+- obsidian
+- mdcat
 
-> UML
-- drawio(brower)
+---
+* UML
+- staruml
+- drawio
+  - [](url)
 
 
-<!-- markdown  -->
-- glow
-
-<!--for bash-->
-- bash-completion
-
-<!-- editor -->
-- geany
-- gource
-- doge
-
-figlet
-- cd (which figlet)
-
+- figlet
 - bullshit
 - asciiquarium
 - tty-clock
@@ -212,26 +185,15 @@ figlet
 delta
 meld
 
-<!--latex editor-->
-- lyx
-
--<!--love 2d games-->-
--sudo pacman -S love--
-
 <!--like ping -->
 <!--tracert(maybe is window)-->
 traceroute(linux)
 
-- microsoft-edge-beta-bin
-
 -<!--editor-->-
 - kakoune
 
-  *** uml
-- staruml
-
 --< dotfiles manager >--
-stow
+- stow
 
 qtcreater
 
@@ -239,24 +201,55 @@ qtcreater
 gittalk
 
 --chm--
-kchmviewer
 
 --image--
 imagemagick(cmd: display)
 
-lunar-date
-
-pdf
-===
+* Reader
 - foxit reader
+- obular
+- kchmviewer
+- calibre
+- foliate                    # book read
+
 ===
+# git repository play video
+- gource
 
-window is best
+===
+* Image
+- picgo
+- [picgo](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E9%A2%84%E8%A7%88)
+
+* Dictionary
+- wudao-dict-git
+- dict-cli [link](https://github.com/FeeiCN/dict)
+
+* Editor
+- lyx
+- geany
+- doge
+
 ---
-- utools
----
+* System
+- base-devel
+- cmake
+- clang
+- bash-completion
+- trash-cli
+- go
+- nodejs-lts-erbium # 12.xxx
+- tmux
+- lunar-date
+- utools(recomment system: window)
+- shellcheck
+- cloc
+- htop
+- btop(c++)
+- gpaste
 
-shellcheck
-
-wd
-/
+* Brower
+- google-chrome
+- firefox
+- microsoft-edge-beta-bin
+- fastfetch

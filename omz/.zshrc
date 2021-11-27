@@ -18,3 +18,6 @@ plugins=( zsh-autosuggestions zsh-syntax-highlighting )
 ZSH_THEME="p10k/powerlevel10k"
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.omz/themes/p10k/p10k-pure.zsh ]] || source ~/.omz/themes/p10k/p10k-pure.zsh
+
+# temp
+#export JDTLS_HOME=/usr/share/java/jdtls/config_linux/

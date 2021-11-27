@@ -9,3 +9,4 @@
 
 - pacman -Qi [name]
 - pactree -r
+- pacman -U ...(must cd /var/cache/pacman/pkg)

@@ -10,3 +10,5 @@
 - when change this branch, please use sudo pacman -Syyu to force update this config file
 - yay -G [name]
 - sudoedit /etc/pacman.conf, and add orphan package name to ignore to reduce warning in upgrade your system
+- yay -Qi neovim
+- yay slides and yay -S slides

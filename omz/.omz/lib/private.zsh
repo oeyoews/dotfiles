@@ -27,6 +27,7 @@ alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.ser
 # software
 alias ra='ranger'
 alias dust="dust -r"
+# use \rm to delete file forever
 alias rm='trash'
 alias ms='musicbox'
 alias tlpt='sudo tlp-stat -t'
@@ -114,4 +115,4 @@ alias po="sudo systemctl start v2raya"
 # watch ls <dir>
 alias watch="watch -n 1 -d"
 alias vu="nvim -c PlugUpdate"
-alias pip3i='pip3 install --user'
+alias piu='pip3 install --user'
