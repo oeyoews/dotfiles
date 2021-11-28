@@ -226,6 +226,7 @@ imagemagick(cmd: display)
 
 * Dictionary
   - wudao-dict-git
+    - clone this repository to .local/share
   - dict-cli [link](https://github.com/FeeiCN/dict)
   - translate-shell
 
@@ -264,3 +265,5 @@ imagemagick(cmd: display)
   - cheat
   - stow
   - idea-music
+
+  - downgrade

@@ -115,7 +115,13 @@ alias po="sudo systemctl start v2raya"
 # watch ls <dir>
 alias watch="watch -n 1 -d"
 alias vu="nvim -c PlugUpdate"
-alias piu='pip3 install --user'
+alias pipu='pip3 install --user'
 
 alias tt="taskbook"
+alias tti='tt -i'
+alias ttt='tt -t'
+alias ttd='tt -d'
+alias ttb='tt -d'
+alias ttc='tt -d'
+
 

@@ -8,3 +8,4 @@
 @end
 
 - mktemp -d /tmp/jst.XXXXX
+- nslookup oeyoew.top
