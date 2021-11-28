@@ -2,17 +2,17 @@
   title: soft
   description:
   author: oeyoews
-  categories: soft
+  categories: awesome-software
   created: 2021-11-06
-  version: 0.1
+  version: 0.2
 @end
 
 
 ---
 * Picture
-- flameshot
+  - flameshot
 
----
+  ---
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 - gnome: dash-to-dock
@@ -53,11 +53,11 @@ fzf
 tree
 
 * Bootools
-- ventoy
-- etcher [link](https://www.balena.io/etcher/)
+  - ventoy
+  - etcher [link](https://www.balena.io/etcher/)
 
 * Input method
-# Fcitx5
+  # Fcitx5
 # pacman (auto install fcitx-im)
 manjaro-asian-input-support-fcitx5
 # 词库 pacman
@@ -93,15 +93,16 @@ kimpanel
 
 ===
 * MusicPlayer
-- mpv (Q save time)
-- moc(cli: mocp)
-- rhythmbox
-- yesplaymusic
-- netease-musicbox
-- lx-music-desktop-bin
-- clementine
+  - mpv (Q save time)
+  - moc(cli: mocp)
+  - rhythmbox
+  - yesplaymusic
+  - netease-musicbox
+  - lx-music-desktop-bin
+  - clementine
+  - museeks
 
-# translate
+  # translate
 crow-translate
 
 # https://www.cnblogs.com/kevingrace/p/10188283.html
@@ -151,37 +152,41 @@ icdiff
 
 
 * FileManager
-- ncdu
-- scrapy
-- ranger
+  - ncdu
+  - scrapy
+  - ranger
   - [ranger](https://wiki.archlinux.org/title/Ranger_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
-- cheat-bin or cheat
 
 * MarkdownEditor
-- glow
-- mdp
-- slides
-- ttyd
-- marktext
-- typora
-- zettlr
-- obsidian
-- mdcat
 
----
+  - glow
+  - agenta(just for macos)
+  - mdp
+  - joplin(cli desktop)
+  - slides
+  - marktext
+  - typora
+  - zettlr
+  - obsidian
+  - mdcat
+  - zim
+  - mindforger
+  - simplenote
+
+  ---
 * UML
-- staruml
-- drawio
+  - staruml
+  - drawio
   - [](url)
 
 
-- figlet
-- bullshit
-- asciiquarium
-- tty-clock
+  - figlet
+  - bullshit
+  - asciiquarium
+  - tty-clock
 
--<!--diff tools-->-
+  -<!--diff tools-->-
 delta
 meld
 
@@ -192,8 +197,6 @@ traceroute(linux)
 -<!--editor-->-
 - kakoune
 
---< dotfiles manager >--
-- stow
 
 qtcreater
 
@@ -206,50 +209,58 @@ gittalk
 imagemagick(cmd: display)
 
 * Reader
-- foxit reader
-- obular
-- kchmviewer
-- calibre
-- foliate                    # book read
+  - foxit reader
+  - obular
+  - kchmviewer
+  - calibre
+  - foliate                    # book read
 
-===
+  ===
 # git repository play video
 - gource
 
 ===
 * Image
-- picgo
-- [picgo](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E9%A2%84%E8%A7%88)
+  - picgo
+  - [picgo](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E9%A2%84%E8%A7%88)
 
 * Dictionary
-- wudao-dict-git
-- dict-cli [link](https://github.com/FeeiCN/dict)
+  - wudao-dict-git
+  - dict-cli [link](https://github.com/FeeiCN/dict)
+  - translate-shell
 
 * Editor
-- lyx
-- geany
-- doge
+  - lyx
+  - geany
+  - doge
 
----
+  ---
 * System
-- base-devel
-- cmake
-- clang
-- bash-completion
-- trash-cli
-- go
-- nodejs-lts-erbium # 12.xxx
-- tmux
-- lunar-date
-- utools(recomment system: window)
-- shellcheck
-- cloc
-- htop
-- btop(c++)
-- gpaste
+  - base-devel
+  - cmake
+  - clang
+  - bash-completion
+  - trash-cli
+  - go
+  - nodejs-lts-erbium # 12.xxx
+  - tmux
+  - lunar-date
+  - utools(recomment system: window)
+  - shellcheck
+  - cloc
+  - htop
+  - btop(c++)
+  - gtop
+  - gpaste
 
 * Brower
-- google-chrome
-- firefox
-- microsoft-edge-beta-bin
-- fastfetch
+  - google-chrome
+  - firefox
+  - microsoft-edge-beta-bin
+  - fastfetch
+
+* Tools
+  - ttyd
+  - cheat
+  - stow
+  - idea-music
