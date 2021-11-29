@@ -1,0 +1,12 @@
+@document.meta
+  title: github
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-29
+  version: 0.1
+@end
+
+* Github
+  - click dot to enter github.dev(web vscode)
+  - [github.dev](https://github.dev/github/dev)

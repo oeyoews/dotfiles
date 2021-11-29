@@ -35,6 +35,7 @@ alias tlpb='sudo tlp-stat -b'
 
 # arguments: -p -u
 alias tse='crow -t en'
+alias tsu='crow -u -t en '
 # English to Chinese
 alias tsc='crow -b -t zh-CN'
 
@@ -121,7 +122,12 @@ alias tt="taskbook"
 alias tti='tt -i'
 alias ttt='tt -t'
 alias ttd='tt -d'
-alias ttb='tt -d'
-alias ttc='tt -d'
+alias ttb='tt -b'
+alias ttc='tt -c'
+alias ttp='tt -p'
+alias tth='tt -h'
+alias ttr='tt -r'
+alias tta='tt -a'
+alias tte='tt -e'
 
 

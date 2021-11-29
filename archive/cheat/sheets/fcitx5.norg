@@ -1,0 +1,10 @@
+@document.meta
+  title: fcitx5
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-29
+  version: 0.1
+@end
+
+-the  first input method is not active  in default

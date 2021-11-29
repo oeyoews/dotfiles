@@ -1,18 +1,4 @@
 {
-    "1": {
-        "_id": 1,
-        "_date": "Sun Nov 28 2021",
-        "_timestamp": 1638068990192,
-        "description": "demo",
-        "isStarred": false,
-        "boards": [
-            "TODO by oeyoews"
-        ],
-        "_isTask": true,
-        "isComplete": true,
-        "inProgress": false,
-        "priority": 1
-    },
     "2": {
         "_id": 2,
         "_date": "Sun Nov 28 2021",

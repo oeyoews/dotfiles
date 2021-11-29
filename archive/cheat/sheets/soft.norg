@@ -85,11 +85,11 @@ git-open
 sudo pacman -S python-pip
 - magic-wormhole
 
-# gnome-extensions list
-trayIconsReloaded
-lock
-GPaste
-kimpanel
+* gnome-extensions
+- trayIconsReloaded
+- lock
+- GPaste
+- kimpanel
 
 ===
 * MusicPlayer
