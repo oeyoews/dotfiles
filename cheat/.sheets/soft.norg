@@ -271,3 +271,16 @@ imagemagick(cmd: display)
 * Video
 - obs                        # record video
 - kooha
+
+* Typing
+  - ttyper
+  - typespeed
+  - ktouch
+  - klavaro
+  - tuxtype
+  - wpm(use pip)
+  - ff(self in omz/src)
+    - ff -n [nu]
+    - ff -n 22 -g 4
+    - ff -quotes en
+    - ff -t 30

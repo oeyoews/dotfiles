@@ -78,7 +78,7 @@ alias via="vim ~/.config/alacritty/alacritty.yml"
 # export $PATH
 # export PATH=$PATH:~/.emacs.d/bin
 # TODO
-export PATH=~/.omz/src:$PATH
+export PATH=~/dotfiles/bin:$PATH
 export EDITOR=nvim
 export CHEATCOLORS=true
 export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
@@ -130,5 +130,3 @@ alias tth='tt -h'
 alias ttr='tt -r'
 alias tta='tt -a'
 alias tte='tt -e'
-
-
