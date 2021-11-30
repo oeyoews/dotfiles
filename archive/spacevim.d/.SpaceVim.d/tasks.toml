@@ -1,6 +1,0 @@
-[my_task]
-  command = "echo"
-  args = ['Hello, vim!']
-  # description =
-  # options
-  isBackground = false

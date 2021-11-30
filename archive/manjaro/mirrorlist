@@ -9,5 +9,6 @@
 
 ## Country : China
 # sudo pacman-mirrors -m rank -c China -i
+# sudo pacman-mirrors -c China -m rank -i -aS testing
 # Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/unstable/$repo/$arch
 Server = https://mirrors.sjtug.sjtu.edu.cn/manjaro/stable/$repo/$arch
