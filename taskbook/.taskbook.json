@@ -1,5 +1,5 @@
 {
-    "taskbookDirectory": "~/dotfiles/archive/taskbook",
+    "taskbookDirectory": "~",
     "displayCompleteTasks": true,
     "displayProgressOverview": true
 }

@@ -1,0 +1,25 @@
+@document.meta
+  title: git
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-30
+  version: 0.1
+@end
+
+- git branch -a
+- git branch
+- git push <URL>
+- git branch -m dev lua
+
+* FAQ
+1. if you change your git default branch in your local computer, this push message will not show you, like p10k,
+  need config your git config or readd your git repository
+
+  - git add submodule <URL> [name]
+     like `git clone <url> [name]`
+
+* PRO
+     - git submodule init
+      - git submodule update(or git submodule update --init --recursive)
+      [gitsubmodule](https://www.jianshu.com/p/ca2862e449fa)
