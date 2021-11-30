@@ -20,7 +20,7 @@ active_border_color #50fa7b
 inactive_border_color #bd93f9
 
 # tabs
-tab_bar_min_tabs 1
+tab_bar_min_tabs 2
 tab_title_template "{index}"
 
 # misc
@@ -47,7 +47,7 @@ tab_powerline_style angled
 tab_title_template "{fmt.fg.black}{fmt.bold}  {index}"
 
 active_tab_foreground   #000000
-active_tab_background   #9580ff
+active_tab_background   #ff79c6
 active_tab_font_style   bold
 inactive_tab_foreground #000000
 inactive_tab_background #00afff

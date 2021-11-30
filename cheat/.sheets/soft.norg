@@ -35,7 +35,6 @@ visual-studio-code-bin     # vscode
 # powertop # 耗电分析
 # mysql tool
 # mycli
-- obs                        # record video
 # system clipboard link
 - [x] neovim(python-pynvim)
 
@@ -267,3 +266,8 @@ imagemagick(cmd: display)
   - idea-music
 
   - downgrade
+
+
+* Video
+- obs                        # record video
+- kooha

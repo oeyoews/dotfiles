@@ -89,6 +89,7 @@ export CHEAT_USE_FZF=true
 # better man page dependcies: bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+#alias nvim="~/.local/share/nvim.appimage"
 alias vim='nvim'
 alias vi='nvim'
 alias e='nvim'
