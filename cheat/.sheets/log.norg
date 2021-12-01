@@ -1,0 +1,11 @@
+@document.meta
+  title: log
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-12-01
+  version: 0.1
+@end
+
+* Log
+- vim /var/log/pacman.log

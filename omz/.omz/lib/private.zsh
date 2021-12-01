@@ -130,3 +130,5 @@ alias tth='tt -h'
 alias ttr='tt -r'
 alias tta='tt -a'
 alias tte='tt -e'
+
+alias dt="dict"

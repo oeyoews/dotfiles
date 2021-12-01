@@ -12,3 +12,5 @@
 - sudoedit /etc/pacman.conf, and add orphan package name to ignore to reduce warning in upgrade your system
 - yay -Qi neovim
 - yay slides and yay -S slides
+
+- /var/cache/pacman/pkg

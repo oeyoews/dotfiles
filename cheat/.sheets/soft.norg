@@ -271,6 +271,7 @@ imagemagick(cmd: display)
 * Video
 - obs                        # record video
 - kooha
+- gromit-mpx
 
 * Typing
   - ttyper
@@ -284,3 +285,4 @@ imagemagick(cmd: display)
     - ff -n 22 -g 4
     - ff -quotes en
     - ff -t 30
+
