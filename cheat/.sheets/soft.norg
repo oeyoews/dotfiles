@@ -34,7 +34,6 @@ visual-studio-code-bin     # vscode
 # xdm
 # powertop # 耗电分析
 # mysql tool
-# mycli
 # system clipboard link
 - [x] neovim(python-pynvim)
 
@@ -195,6 +194,7 @@ traceroute(linux)
 
 -<!--editor-->-
 - kakoune
+  - simiki
 
 
 qtcreater
@@ -286,3 +286,9 @@ imagemagick(cmd: display)
     - ff -quotes en
     - ff -t 30
 
+* Font
+  - Fira Code
+
+* Tmp
+  - tig
+  - mycli
