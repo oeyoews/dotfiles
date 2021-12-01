@@ -102,7 +102,7 @@ alias ee='\emacs'
 alias doom='~/.emacs.d/bin/doom'
 alias fmo='fm6000 -r -c blue'
 
-#v2ray
+# v2raya
 #journalctl -f -u v2raya.service
 # TODO
 alias pc="sudo systemctl stop v2raya"
@@ -119,6 +119,7 @@ alias watch="watch -n 1 -d"
 alias vu="nvim -c PlugUpdate"
 alias pipu='pip3 install --user'
 
+# taskbook
 alias tt="taskbook"
 alias tti='tt -i'
 alias ttt='tt -t'
@@ -132,3 +133,5 @@ alias tta='tt -a'
 alias tte='tt -e'
 
 alias dt="dict"
+
+alias cdn="cd ~/.sheets"

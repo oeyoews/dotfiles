@@ -271,16 +271,16 @@ imagemagick(cmd: display)
 * Video
 - obs                        # record video
 - kooha
-- gromit-mpx
+- gromit-mpx(painting)
 
 * Typing
-  - ttyper
+  - ttyper(tty-best)
   - typespeed
   - ktouch
   - klavaro
   - tuxtype
   - wpm(use pip)
-  - ff(self in omz/src)
+  - ff(self in omz/src)(tty_best)
     - ff -n [nu]
     - ff -n 22 -g 4
     - ff -quotes en

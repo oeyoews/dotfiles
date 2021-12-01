@@ -9,3 +9,6 @@
 
 - mktemp -d /tmp/jst.XXXXX
 - nslookup oeyoew.top
+- ctrl-space type some text, and save it
+- systemd-analyze
+- ldd <exec>

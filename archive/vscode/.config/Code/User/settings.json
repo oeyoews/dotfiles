@@ -1,15 +1,15 @@
 {
-    "editor.fontFamily": "'Droid Sans Mono'",
-    "terminal.integrated.fontFamily": "Source Code Pro",
-    "editor.fontSize": 19,
     "editor.fontLigatures": true,
-    "debug.console.fontFamily": "'Droid Sans Mono'",
+    "editor.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "editor.fontSize": 18,
+    "debug.console.fontFamily": "Fira Code",
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.ideavimrc",
     "vim.camelCaseMotion.enable": true,
-    "vim.easymotion": true,
-    "vim.sneak": true,
-    "vim.sneakReplacesF": true,
+    "vim.easymotion": false,
+    "vim.sneak": false,
+    "vim.sneakReplacesF": false,
     "vim.useSystemClipboard": true,
     // ***** workbench *****
     "workbench.colorTheme": "One Dark Pro",
@@ -30,7 +30,6 @@
         "editor.suggest.insertMode": "replace"
     },
     "window.dialogStyle": "custom",
-    "http.proxySupport": "off",
     "git.enabled": true,
     "explorer.confirmDelete": false,
     "files.autoSave": "afterDelay",
@@ -59,10 +58,6 @@
     "C_Cpp.intelliSenseEngine": "Default",
     "files.trimTrailingWhitespace": true,
     "git.enableSmartCommit": true,
-    "http.proxyAuthorization": null,
-    "files.associations": {
-        "*.ipynb": "juliamarkdown"
-    },
     "window.menuBarVisibility": "compact",
     "terminal.external.linuxExec": "kitty",
     "window.zoomLevel": 0.5,

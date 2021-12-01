@@ -1,4 +1,4 @@
-# /usr/share/doc/kitty
+# path: /usr/share/doc/kitty
 # this first should be exist, to highlight comment
 #
 background #24283b
@@ -26,7 +26,17 @@ tab_title_template "{index}"
 # misc
 shell zsh
 editor vim
-font_family        DeJaVu Sans Mono
+
+# 如果字体风格没有检测到， 使用第二条命令, 或者重新刷新字体缓存, fc-cache -vf
+# 部分字体风格检测不到， 使用 pacman -S ttf-fira-code(yay -G ttf-fira-code, and find it install /usr/share/fonts, and
+# beforhand , i install font int .local/share/font, maybe becauseof it, or chmod  )
+# kitty list-fonts
+#kitty + list-fonts --psnames | grep Fira
+#
+# DeJaVu Sans Mono Cascadia Code
+font_family        Fira Code Retina
+
+
 # NOTE: some icon will be larger, because this font size in kitty
 font_size 16.0
 cursor_shape block
@@ -43,7 +53,7 @@ map ctrl+f5 load_config_file
 tab_fade 0 0 0 0
 tab_bar_style powerline
 tab_powerline_style angled
-#active_tab_title_template  
+#active_tab_title_template 
 tab_title_template "{fmt.fg.black}{fmt.bold}  {index}"
 
 active_tab_foreground   #000000
