@@ -14,3 +14,13 @@
 - yay slides and yay -S slides
 
 - /var/cache/pacman/pkg
+
+
+* Pacman
+- pacman -Qi [name]
+- pactree -r
+- pacman -U ...(must cd /var/cache/pacman/pkg)
+- vim /var/log/pacman.log
+<!--show linux kernel-->
+pacman -Q linux
+

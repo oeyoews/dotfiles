@@ -1,2 +1,0 @@
-- [ultsnips-usage](https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt) it's so much 
-- [ultisnips-video](https://www.sirver.net/blog/2012/01/08/second-episode-of-ultisnips-screencast/) 

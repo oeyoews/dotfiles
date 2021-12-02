@@ -19,3 +19,6 @@
 
 * Kvm
 - network problems
+
+* Vim
+- for #123, to use C-a to add this number , this # and number will change locations

@@ -12,3 +12,30 @@
 - ctrl-space type some text, and save it
 - systemd-analyze
 - ldd <exec>
+
+- if can't uninstall jupyter, you can use yay -Rns jupyter
+
+* Version
+- ^ v1.1.2  (v1.x.x) first number
+- ~ v1.1.2  (v1.1.x) second number
+
+
+- unrar e *.rar
+- if pdf file is scan file, you can't select text, need use oct tool
+
+<!--show startup time-->
+systemd-analyse
+
+- mv ./*/*.mp3 /tmp/xxx
+- scrapy  # directly exe this command
+- fc-list
+- yarn global add xxx
+- yarn global list
+- ls [dir] | wc -l
+- the  first input method is not active  in default
+
+- cp --parents .. ..  # copy all path and folder, it's different for -p
+
+ek861: win is doesn't work
+first press fn + w and press fn + win(lock win key)
+🇦 🇧 🇨 🇩 🇪 🇫 🇬 🇭 🇮 🇯 🇰 🇱 🇲 🇳 🇴 🇵 🇶 🇷 🇸 🇹 🇺 🇻 🇼 🇽 🇾 🇿

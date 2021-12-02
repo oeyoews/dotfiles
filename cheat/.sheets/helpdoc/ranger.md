@@ -64,3 +64,5 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
 
 - can't start because of version?
 - rm -rf .local/share/ranger/*
+
+- f (like fzf)

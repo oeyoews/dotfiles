@@ -1,4 +1,0 @@
-- [githubmemory](githubmemory.com)
-- [docusaurus](docusaurus.io)
-- [icon](icon-icons.com)
-- [nerdfont](nerdfonts.com)

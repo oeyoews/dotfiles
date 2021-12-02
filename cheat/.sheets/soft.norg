@@ -286,6 +286,6 @@ imagemagick(cmd: display)
 * Font
   - Fira Code
 
-* Tmp
+- [*] Tmp
   - tig
   - mycli

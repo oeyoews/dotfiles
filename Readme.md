@@ -42,6 +42,9 @@
 - `fastfetch`
 > show your system information
 
+- `ttyper`
+> exercise your typing speed
+
 - `taskbook`
 
 - use to record todo list
