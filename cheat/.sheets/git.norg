@@ -48,3 +48,15 @@
 * Squash
   - git rebase -i, and move some pick to s(quash), note, you must have a parent commit, and then, you will see second
   window
+  - if you meet confilct, must be handle this conflic file, and add file again
+  - git rebase --continue
+
+* Rebase
+  - git add -u
+  - git mergetool
+
+* Confilct
+  - file content confilct(modify same area content, simlar line)
+  - file tree confict
+  - logical confict
+  - [rebase-merge](https://zhuanlan.zhihu.com/p/34197548)
