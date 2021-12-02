@@ -53,8 +53,8 @@ map ctrl+f5 load_config_file
 tab_fade 0 0 0 0
 tab_bar_style powerline
 tab_powerline_style angled
-#active_tab_title_template 
-tab_title_template "{fmt.fg.black}{fmt.bold}  {index}"
+#active_tab_title_template  
+tab_title_template "{fmt.fg.black}{fmt.bold}#  {index}"
 
 active_tab_foreground   #000000
 active_tab_background   #ff79c6

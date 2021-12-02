@@ -30,7 +30,7 @@ alias dust="dust -r"
 
 # @ trash
 alias rm='trash'
-alias rmm='\rm'
+alias rmm='\rm -rf'
 # TODO
 # alias rm="mv ~/.local/share/..."
 

@@ -20,7 +20,7 @@
      like `git clone <url> [name]`
 
 * Submodule
-     - git submodule init
+       git submodule init
       - git submodule update(or git submodule update --init --recursive)
       [gitsubmodule](https://www.jianshu.com/p/ca2862e449fa)
 
@@ -41,6 +41,8 @@
   - delete local tags
 
 * Commit
+  - git commit --amend
+  > nothing commit(to initial)
   - git commit -m <type>[scope]: <descripte>
   - fix, feat(ure), BREAKING CHANGE(!), chore, docs, refactor, test, perf(ormance), build, style, revert, build
   - and we can add scope, such as: fix(vue)
@@ -64,5 +66,13 @@
   - file tree confict
   - logical confict
   - [rebase-merge](https://zhuanlan.zhihu.com/p/34197548)
+  - just deleteequal ssymbols, and these arrow needn't to modify
+
 * Help
   - git help everyday
+
+  - reflog: like log
+
+  - git revert(save all commit, and generate a new commit)
+  - git kj fs
+

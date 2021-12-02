@@ -16,9 +16,10 @@ export ZSH=~/.omz
 plugins=( zsh-autosuggestions zsh-syntax-highlighting )
 
 
+# This order is very important, don't modify it
 ZSH_THEME="p10k/powerlevel10k"
 [[ ! -f $ZSH/oh-my-zsh.sh ]] ||  source $ZSH/oh-my-zsh.sh
-[[ ! -f ~/.omz/themes/p10k/p10k-pure.zsh ]] || source ~/.omz/themes/p10k/p10k-pure.zsh
+[[ ! -f ~/.omz/themes/p10k/p10k-vanilla.zsh ]] || source ~/.omz/themes/p10k/p10k-vanilla.zsh
 
 # temp
 #export JDTLS_HOME=/usr/share/java/jdtls/config_linux/
