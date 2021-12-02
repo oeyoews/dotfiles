@@ -27,9 +27,14 @@ alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.ser
 # software
 alias ra='ranger'
 alias dust="dust -r"
-# use \rm to delete file forever
+
+# @ trash
 alias rm='trash'
-alias ms='musicbox'
+alias rmm='\rm'
+
+# have some bugs
+#alias ms='musicbox'
+#
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 
