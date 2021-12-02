@@ -135,3 +135,5 @@ alias tte='tt -e'
 alias dt="dict"
 
 alias cdn="cd ~/.sheets"
+
+alias pp='slides'

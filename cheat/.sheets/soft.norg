@@ -4,7 +4,7 @@
   author: oeyoews
   categories: awesome-software
   created: 2021-11-06
-  version: 0.2
+  version: 0.3
 @end
 
 
@@ -237,11 +237,7 @@ imagemagick(cmd: display)
   ---
 * System
   - base-devel
-  - cmake
-  - clang
-  - bash-completion
   - trash-cli
-  - go
   - nodejs-lts-erbium # 12.xxx
   - tmux
   - lunar-date
@@ -257,6 +253,8 @@ imagemagick(cmd: display)
   - google-chrome
   - firefox
   - microsoft-edge-beta-bin
+
+
   - fastfetch
 
 * Tools
@@ -264,7 +262,6 @@ imagemagick(cmd: display)
   - cheat
   - stow
   - idea-music
-
   - downgrade
 
 
