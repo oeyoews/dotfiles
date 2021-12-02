@@ -54,9 +54,15 @@
 * Rebase
   - git add -u
   - git mergetool
+  - git diff
+  - git difftool
+  - git rebase --continue
+  - git rebase --abort
 
 * Confilct
   - file content confilct(modify same area content, simlar line)
   - file tree confict
   - logical confict
   - [rebase-merge](https://zhuanlan.zhihu.com/p/34197548)
+* Help
+  - git help everyday

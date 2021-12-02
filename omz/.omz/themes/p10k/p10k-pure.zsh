@@ -14,8 +14,16 @@
   # Zsh >= 5.1 is required.
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
-  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( os_icon dir vcs prompt_char)
-  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( status )
+  typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    os_icon
+    dir
+    vcs
+    prompt_char
+  )
+
+  typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
+    status
+  )
 
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
   typeset -g POWERLEVEL9K_MODE=nerdfont-complete
@@ -90,8 +98,8 @@
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=44
-  # Custom icon. 
-  #typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' '
+  # Custom icon.   
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='# '
   #"\U1F608"
   typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=""
 

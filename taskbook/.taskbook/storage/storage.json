@@ -37,7 +37,7 @@
             "@mooc"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": "3"
     },
@@ -65,7 +65,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -172,6 +172,20 @@
         "_date": "Thu Dec 02 2021",
         "_timestamp": 1638427363153,
         "description": "git conflict files",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": true,
+        "inProgress": false,
+        "priority": 1
+    },
+    "15": {
+        "_id": 15,
+        "_date": "Thu Dec 02 2021",
+        "_timestamp": 1638433964604,
+        "description": "linux and human's paper",
         "isStarred": false,
         "boards": [
             "My Board"

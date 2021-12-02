@@ -31,6 +31,8 @@ alias dust="dust -r"
 # @ trash
 alias rm='trash'
 alias rmm='\rm'
+# TODO
+# alias rm="mv ~/.local/share/..."
 
 # have some bugs
 #alias ms='musicbox'

@@ -69,6 +69,7 @@ fcitx5-chinese-addons
 - nvm                        # node 版本管理
 # virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
+com.qq.wexin.deepin
 # wechat-uos                 # wechat
 jdk8-openjdk               # jdk
 # fgit                       # hub.fastgit.org
@@ -289,3 +290,5 @@ imagemagick(cmd: display)
 - [*] Tmp
   - tig
   - mycli
+- `ranger`
+ncdu

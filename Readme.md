@@ -7,6 +7,9 @@
 
 ## Features Buildin execute program
 
+- `ranger`
+> maybe lack some optional dependcies
+
 - `ff`
 
 - [lemons/tt](https://github.com/lemnos/tt)
@@ -121,6 +124,4 @@
 
 ### File manager
 
-- `ranger`
 
-  > cool
