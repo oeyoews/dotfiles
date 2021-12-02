@@ -18,6 +18,7 @@
 * Version
 - ^ v1.1.2  (v1.x.x) first number
 - ~ v1.1.2  (v1.1.x) second number
+- api, function, patch
 
 
 - unrar e *.rar
@@ -39,3 +40,12 @@ systemd-analyse
 ek861: win is doesn't work
 first press fn + w and press fn + win(lock win key)
 🇦 🇧 🇨 🇩 🇪 🇫 🇬 🇭 🇮 🇯 🇰 🇱 🇲 🇳 🇴 🇵 🇶 🇷 🇸 🇹 🇺 🇻 🇼 🇽 🇾 🇿
+
+* Reset passwd
+  - boot => click `e`, and find linux, add `init=/bin/bash` at the end of sentence, click `ctrl+x` enter single user
+  mode
+  - type `mount -n -o remount,rw /`
+  - passwd .....
+  - reboot -f(important)
+  - [passwd](https://wiki.archlinux.org/title/Reset_lost_root_password_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+

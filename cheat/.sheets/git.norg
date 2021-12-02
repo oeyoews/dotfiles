@@ -39,3 +39,12 @@
 
   `git tag -d <tag_name`
   - delete local tags
+
+* Commit
+  - git commit -m <type>[scope]: <descripte>
+  - fix, feat(ure), BREAKING CHANGE(!), chore, docs, refactor, test, perf(ormance), build, style, revert, build
+  - and we can add scope, such as: fix(vue)
+
+* Squash
+  - git rebase -i, and move some pick to s(quash), note, you must have a parent commit, and then, you will see second
+  window

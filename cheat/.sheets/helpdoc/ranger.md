@@ -17,7 +17,9 @@ always look for github_wikis.
 
 tsz -i file_name.
 
-cw # rename
+## Rename
+- cw
+- a
 
 S   //进入指定的文件夹，进入一个新的终端，退出当前的终端，会再次回到ranger中
 
@@ -66,3 +68,6 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
 - rm -rf .local/share/ranger/*
 
 - f (like fzf)
+
+## Sort
+- o
