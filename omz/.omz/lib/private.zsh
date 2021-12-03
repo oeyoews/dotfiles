@@ -18,6 +18,7 @@ alias pas='sudo pacman -S'
 #alias yayy="yay -Yc"
 #alias yayr='yay -Rscn'
 alias yayr='yay -R'
+alias yayg='yay -G'
 alias cp="cp -r"
 
 # on
