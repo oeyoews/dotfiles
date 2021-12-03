@@ -51,7 +51,7 @@ alias ipr='ip addr | rg 192'
 
 # @git
 # git -C ~/.emacs.d/ pull, more info about git ,
-alias gopen='git-open'
+alias gh='git-open'
 alias gits='git status --short'
 alias gitu='git add . && git commit && git push'
 alias gite='git config -e'
@@ -133,14 +133,22 @@ alias ttt='tt -t'
 alias ttd='tt -d'
 alias ttb='tt -b'
 alias ttc='tt -c'
-alias ttp='tt -p'
+alias ttpp='tt -p'
 alias tth='tt -h'
 alias ttr='tt -r'
 alias tta='tt -a'
 alias tte='tt -e'
+alias ttn='tt -n'
+# like star....
+alias ttp='tt -l pending'
+alias ttf='tt -f'
 
 alias dt="dict"
 
 alias cdn="cd ~/.sheets"
 
 alias pp='slides'
+
+#alias rgf='rg '
+#alias rgf='func() { rg $1 }; func'
+#alias rgf='func() { rg $1 ~/.sheets/ ~/dotfiles/archives/notes }; func'

@@ -7,6 +7,9 @@
 
 ## Features Buildin execute program
 
+- `rg`
+> ripgrep: this binary may be depend gcc ...
+
 - `ranger`
 > maybe lack some optional dependcies
 

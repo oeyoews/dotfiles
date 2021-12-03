@@ -320,3 +320,9 @@ function cdr() {
     ##ssh
   #fi
 #}
+#
+
+# TODO
+function rgf() {
+  rg $1 ~/.sheets/ ~/dotfiles/archives/notes
+}

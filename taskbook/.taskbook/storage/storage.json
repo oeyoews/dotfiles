@@ -219,7 +219,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -233,7 +233,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -247,7 +247,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -261,7 +261,21 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
+        "inProgress": false,
+        "priority": 1
+    },
+    "21": {
+        "_id": 21,
+        "_date": "Fri Dec 03 2021",
+        "_timestamp": 1638510447126,
+        "description": "test cp-git-open",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     }

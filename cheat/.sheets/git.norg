@@ -86,3 +86,14 @@
 
   - git rebase --skip
   - not recommend it, this command will deprecate confilct commit!!!
+
+  - git bisect start [sta] [des]
+  - git biset good
+  - git bisect bad
+  - git biset reset
+
+  - git stash == git stash save
+  - git stash list
+  - git stash drop
+  - git stash show
+  - git stash apply stashId
