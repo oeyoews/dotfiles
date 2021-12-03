@@ -52,7 +52,7 @@ alias ipr='ip addr | rg 192'
 # @git
 # git -C ~/.emacs.d/ pull, more info about git ,
 alias gopen='git-open'
-alias gits='git status'
+alias gits='git status --short'
 alias gitu='git add . && git commit && git push'
 alias gite='git config -e'
 

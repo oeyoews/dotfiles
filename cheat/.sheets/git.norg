@@ -43,6 +43,7 @@
 * Commit
   - git commit --amend
   > nothing commit(to initial)
+  - git commit -am "override last commit"
   - git commit -m <type>[scope]: <descripte>
   - fix, feat(ure), BREAKING CHANGE(!), chore, docs, refactor, test, perf(ormance), build, style, revert, build
   - and we can add scope, such as: fix(vue)
@@ -60,6 +61,7 @@
   - git difftool
   - git rebase --continue
   - git rebase --abort
+  - git merge --abort
 
 * Confilct
   - file content confilct(modify same area content, simlar line)
@@ -67,6 +69,9 @@
   - logical confict
   - [rebase-merge](https://zhuanlan.zhihu.com/p/34197548)
   - just deleteequal ssymbols, and these arrow needn't to modify
+  - for paarent commit files, if you modify simlar areas in the same file, conflict will appear, you need delete some
+  ssymbols, and add again(important)
+  - 修改为file1 or file2 , or new_file3(need add again for this new change)
 
 * Help
   - git help everyday
@@ -76,3 +81,8 @@
   - git revert(save all commit, and generate a new commit)
   - git kj fs
 
+* Gui
+  gitk
+
+  - git rebase --skip
+  - not recommend it, this command will deprecate confilct commit!!!

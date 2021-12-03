@@ -1,8 +1,10 @@
 <!--start-->
-- sudo systemctl start docker.service
 - sudo groupadd docker
 - sudo gpasswd -a $USER docker
 - newgrp docker
+
+- sudo systemctl start docker.service
+
 - docker ps
 - docker images
 - docker run hello-world
