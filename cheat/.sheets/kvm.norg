@@ -12,3 +12,6 @@
   - libvirtd is a daemon
 
 - use 复制主机拓扑地址 (select it)
+
+* Install
+  - 如果第一次进入系统没有安装，再次启动遇到 no boot device, 在设置中， 设置引导选项 和sata path

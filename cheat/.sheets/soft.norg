@@ -165,7 +165,7 @@ icdiff
   - joplin(cli desktop)
   - slides
   - marktext
-  - typora
+  - typora-free
   - zettlr
   - obsidian
   - mdcat
@@ -295,3 +295,5 @@ ncdu
 
 * Nothing
   - glade(ui)
+  - bat
+
