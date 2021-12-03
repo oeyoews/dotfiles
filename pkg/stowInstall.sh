@@ -1,8 +1,4 @@
-# Maintainer: Brett Cornwall <ainola@archlinux.org>
-# Contributor: Sébastien Luttringer
-# Contributor: eric
-# Contributor: Tom Newsom
-# Contributor: Chris Brannon
+#!/usr/bin/env bash
 
 pkgname=stow
 pkgver=2.3.1
@@ -37,3 +33,11 @@ package() {
     cd "$pkgname-$pkgver"
     make DESTDIR="$pkgdir" install
 }
+
+main() {
+  build
+  check
+  package
+}
+
+main
