@@ -14,7 +14,7 @@
 That's all!
 
 * Plugins
-  - Desktop Icons
+  - [tray](https://extensions.gnome.org/extension/615/appindicator-support/)
 
 * WallPaper
   - cd /usr/share/backgrounds
@@ -27,3 +27,5 @@ That's all!
 - 大号文本字体较为清晰
 - 字号缩放为1.5(可以配置快捷键)
 
+* Gesture
+  - win + alt + <directions>

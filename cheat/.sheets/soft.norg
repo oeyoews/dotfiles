@@ -159,13 +159,13 @@ icdiff
 
 * MarkdownEditor
 
+  - typora-free
+  - marktext
+  - mdp
+  - slides
   - glow
   - agenta(just for macos)
-  - mdp
   - joplin(cli desktop)
-  - slides
-  - marktext
-  - typora-free
   - zettlr
   - obsidian
   - mdcat
@@ -298,3 +298,4 @@ ncdu
   - glade(ui)
   - bat
 
+  font-manager

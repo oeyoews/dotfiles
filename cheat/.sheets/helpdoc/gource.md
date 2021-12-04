@@ -1,6 +1,5 @@
-```zsh
-gource --output-custom-log my-project-custom.log
-```
+`gource --output-custom-log my-project-custom.log`
+
 (V)   Toggle camera mode
 (C)   Displays Gource logo
 (K)   Toggle file extension key
@@ -19,3 +18,4 @@ gource --output-custom-log my-project-custom.log
 (F12) Screenshot
 (Alt+Enter) Fullscreen toggle
 (ESC) Quit
+q w
