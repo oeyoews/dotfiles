@@ -7,6 +7,7 @@
 
 ## Features Buildin execute program
 
+### buildin program
 - `rg`
 > ripgrep: this binary may be depend gcc ...
 
@@ -27,6 +28,8 @@
 
 - fast record your notes
 
+- `mdp` && `slides`
+> show your markdown file
 ---
 
 ## Direction Instruction

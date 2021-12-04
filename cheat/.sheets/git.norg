@@ -40,13 +40,28 @@
   `git tag -d <tag_name`
   - delete local tags
 
-* Commit
+* Commit specification
   - git commit --amend
   > nothing commit(to initial)
   - git commit -am "override last commit"
   - git commit -m <type>[scope]: <descripte>
-  - fix, feat(ure), BREAKING CHANGE(!), chore, docs, refactor, test, perf(ormance), build, style, revert, build
-  - and we can add scope, such as: fix(vue)
+  @code git
+    fix, feat(ure), BREAKING CHANGE(!),
+    chore, docs, refactor, test,
+    perf(ormance), build, style, revert, build
+    and we can add scope, such as: fix(vue)
+  @end
+
+  feat - 新功能 feature
+  fix - 修复 bug
+  docs - 文档注释
+  style - 代码格式(不影响代码运行的变动)
+  refactor - 重构、优化(既不增加新功能，也不是修复bug)
+  perf - 性能优化
+  test - 增加测试
+  chore - 构建过程或辅助工具的变动
+  revert - 回退
+  build - 打包
 
 * Squash
   - git rebase -i, and move some pick to s(quash), note, you must have a parent commit, and then, you will see second
