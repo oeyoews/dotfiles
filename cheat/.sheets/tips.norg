@@ -42,7 +42,7 @@ first press fn + w and press fn + win(lock win key)
 🇦 🇧 🇨 🇩 🇪 🇫 🇬 🇭 🇮 🇯 🇰 🇱 🇲 🇳 🇴 🇵 🇶 🇷 🇸 🇹 🇺 🇻 🇼 🇽 🇾 🇿
 
 * Reset passwd
-  - boot => click `e`, and find linux, add `init=/bin/bash` at the end of sentence, click `ctrl+x` enter single user
+  - boot => click `e`, and find linux, add `init=/bin/bash`(may you can add single to replace it) at the end of sentence, click `ctrl+x` enter single user
   mode
   - type `mount -n -o remount,rw /`
   - passwd .....

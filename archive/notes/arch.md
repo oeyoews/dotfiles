@@ -67,6 +67,7 @@ https://teaper.dev/ArchLinux-java-febe1fe5bc764929aaeb02ed933c04f8
 
 
 ** time
+[time](https://sspai.com/post/55983)
 timedatectl set-ntp true
 timedatectl status
 

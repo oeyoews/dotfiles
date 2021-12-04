@@ -20,4 +20,4 @@ for type in Bold Light Medium Regular Retina; do
 done
 
 echo "fc-cache -f"
-fc-cache -f
+fc-cache -f && mkfontscale && mkfontdir
