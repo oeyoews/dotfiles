@@ -101,8 +101,6 @@ sudo pacman -S python-pip
   - clementine
   - museeks
 
-  # translate
-crow-translate
 
 # https://www.cnblogs.com/kevingrace/p/10188283.html
 # terminal session recorder
@@ -163,6 +161,7 @@ icdiff
   - marktext
   - mdp
   - slides
+  - siyuan
   - glow
   - agenta(just for macos)
   - joplin(cli desktop)
@@ -229,6 +228,8 @@ imagemagick(cmd: display)
     - clone this repository to .local/share
   - dict-cli [link](https://github.com/FeeiCN/dict)
   - translate-shell
+  - artha
+  - crow-translate
 
 * Editor
   - lyx
@@ -299,3 +300,8 @@ ncdu
   - bat
 
   font-manager
+
+* Space
+  - celestia
+  - stellarium
+  - musescore

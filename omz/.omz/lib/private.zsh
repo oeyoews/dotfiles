@@ -42,10 +42,14 @@ alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 
 # arguments: -p -u
-alias tse='crow -t en'
-alias tsu='crow -u -t en '
+alias tsu='crow -u -s en '
 # English to Chinese
-alias tsc='crow -b -t zh-CN'
+alias tsc='crow -b -s en -t zh-CN'
+# to English
+alias tse='crow -s zh-CN -t en'
+
+# trans(late-shell)
+# trans --speak demo
 
 alias cip='curl cip.cc'
 alias ipr='ip addr | rg 192'
