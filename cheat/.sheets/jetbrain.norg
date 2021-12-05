@@ -31,5 +31,5 @@
 
 * Fonts
   - menu-font:
-    - appearance => Ui options
+    - appearance => Ui options => fonts
     - if you use atom one dark, can modify it int color theme
