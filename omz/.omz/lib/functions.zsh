@@ -324,5 +324,5 @@ function cdr() {
 
 # TODO
 function rgf() {
-  rg $1 ~/.sheets/ ~/dotfiles/archive/notes/
+  rg $1 ~/.sheets/ ~/dotfiles/archive/notes/ ~/.omz/lib/functions.zsh
 }

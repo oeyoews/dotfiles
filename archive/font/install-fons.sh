@@ -20,4 +20,6 @@ for type in Bold Light Medium Regular Retina; do
 done
 
 echo "fc-cache -f"
-fc-cache -f && mkfontscale && mkfontdir
+#fc-cache -f && mkfontscale && mkfontdir
+# TODO: it will generate some files in current dir
+fc-cache -f

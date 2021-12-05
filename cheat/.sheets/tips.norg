@@ -47,5 +47,5 @@ first press fn + w and press fn + win(lock win key)
   - type `mount -n -o remount,rw /`
   - passwd .....
   - reboot -f(important)
-  - [passwd](https://wiki.archlinux.org/title/Reset_lost_root_password_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+  - [passwd](https://wiki.archlinux.org/title/Reset_lost_root_password_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 

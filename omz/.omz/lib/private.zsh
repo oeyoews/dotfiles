@@ -1,12 +1,16 @@
 # vim
 alias viz='vim $HOME/.zshrc'
 alias vip='vim ~/.omz/lib/private.zsh'
+alias vif='vim ~/.omz/lib/functions.zsh'
 
 # path
 alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim/"
 # note this will cause $path load twice extra
-alias soz='source $HOME/.zshrc && exec zsh'
+# bug: exe it twice
+#alias soz='source $HOME/.zshrc && exec zsh'
+alias soz='exec zsh'
+
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
@@ -48,9 +52,24 @@ alias tsc='crow -b -s en -t zh-CN'
 # to English
 alias tse='crow -s zh-CN -t en'
 
+#https://github.com/soimort/translate-shell
+# https://www.clloz.com/programming/assorted/2019/11/19/translate-shell-usage/
+# bug: translate a text file, ues it will failed again
+# fix: ip close your ladder network! and you can use `trans --debug "hello, translate-shell" to find problem from this debug info
+# your ladder is used by abuntant
 # trans(late-shell)
 # trans --speak demo
-
+# trans -R
+# trans -I/E
+# to chinese
+# trans :zsh demo
+# trans en:ja -p
+# trans -id demo
+# trans :fr url(file:///)
+# trans -browser firefox :fr http://www.w3.org/
+# trans -S
+# trans -M
+#
 alias cip='curl cip.cc'
 alias ipr='ip addr | rg 192'
 
@@ -86,17 +105,27 @@ alias zsh_time="time (repeat 10 zsh -i -c exit)"
 alias vik="vim ~/.config/kitty/kitty.conf.local"
 alias via="vim ~/.config/alacritty/alacritty.yml"
 
+export EDITOR=nvim
 # Export
 # export $PATH
 # export PATH=$PATH:~/.emacs.d/bin
 # TODO
-export PATH=~/dotfiles/bin:$PATH
-export EDITOR=nvim
+# tips: this directory will be exist, so can't ust it to adjust
+#[[ ! -d $HOME/dotfiles/bin ]] || export PATH=~/dotfiles/bin:$PATH
+# when use echo $PATH, it output depend your export order
+export PATH=$PATH:~/dotfiles/bin
+# tips: one it right, but second step either to failed, or to add it again
+#[[ -z $dt ]] && export dt=~/dotfiles
+#export PATH=$PATH:$dt/bin
+# tips: not add this variable to PATH, so, it's not export bin
+#[[ ! -z $DBIN ]] || export DBIN=~/dotfiles/bin
+#[[ ! -z $DBIN ]] || export DBIN=~/dotfiles/bin:PATH
+# cheat
+# TODO: source it, will have some output
+# fix: by modify soz command(because it source .zshrc, ??? why)
 export CHEATCOLORS=true
-export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
 export CHEAT_USE_FZF=true
-#export JDTLS_PATH="$HOME/.local/share/nvim/lsp_servers/jdtls/"
-#export JAR="$JDTLS_PATH/plugins/org.eclipse.equinox.launcher_*.jar"
+[[ ! -f ~/.cheatconf.yml ]] || export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
 
 # better man page dependcies: bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

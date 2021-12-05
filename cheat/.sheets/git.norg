@@ -79,6 +79,7 @@
   - git rebase --continue
   - git rebase --abort
   - git merge --abort
+  - git diff[tool] ID
 
 * Confilct
   - file content confilct(modify same area content, simlar line)
