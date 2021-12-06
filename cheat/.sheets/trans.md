@@ -17,3 +17,4 @@
 # trans -browser firefox :fr http://www.w3.org/
 # trans -S
 # trans -M
+- trans :ja xxx -p -b

@@ -296,7 +296,7 @@ fi
 
 # how to better these cd (all in one)
 function cdt() {
-  _TMP=~/tmp
+  _TMP=~/temp
   [[ ! -d "$_TMP" ]] && { mkdir "$_TMP"; echo "creat $_TMP dir"}
   cd ${_TMP}
 }

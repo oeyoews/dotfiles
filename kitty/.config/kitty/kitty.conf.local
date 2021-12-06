@@ -27,6 +27,8 @@ tab_title_template "{index}"
 shell zsh
 editor vim
 
+# bug: becauseof this network, it's not font, even it's success
+# bug: for termina is not support, but for neovim is support
 # bug: don't install fron yay and your self(twice)
 # and you can install fira Mono, but not support ligature
 # 如果字体风格没有检测到， 使用第二条命令, 或者重新刷新字体缓存, fc-cache -vf

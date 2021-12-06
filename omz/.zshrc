@@ -24,3 +24,12 @@ ZSH_THEME="p10k/powerlevel10k"
 # temp
 #export JDTLS_HOME=/usr/share/java/jdtls/config_linux/
 #eval "$(starship init zsh)"
+#
+
+# gopath
+# TODO:??? why export path is repeat? but for gopath not
+export GOPATH="$HOME/temp/GoTest"
+#export GOPATH=$GOPATH:$HOME/temp/1
+
+# TODO
+#export GOROOT=$GOROOT:$HOME/temp/GoTest

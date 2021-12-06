@@ -50,3 +50,7 @@ first press fn + w and press fn + win(lock win key)
   - [passwd](https://wiki.archlinux.org/title/Reset_lost_root_password_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
   - systemctl is-enabled tlp
+
+* Games for browser
+  - [edge](edge://surf/)
+  - [chrome](chrome://dino/)

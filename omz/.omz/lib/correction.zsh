@@ -1,3 +1,4 @@
+# ??? nocorrect
 if [[ "$ENABLE_CORRECTION" == "true" ]]; then
   alias cp='nocorrect cp'
   alias ebuild='nocorrect ebuild'
