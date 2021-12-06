@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# TODO: 6.1 have some bugs, please downgrade to 5.xxx
+
+main() {
+
 fonts_dir="${HOME}/.local/share/fonts"
 if [ ! -d "${fonts_dir}" ]; then
   echo "mkdir -p $fonts_dir"
@@ -23,3 +27,7 @@ echo "fc-cache -f"
 #fc-cache -f && mkfontscale && mkfontdir
 # TODO: it will generate some files in current dir
 fc-cache -f
+
+}
+
+#main

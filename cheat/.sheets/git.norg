@@ -115,3 +115,13 @@
   - git stash drop
   - git stash show
   - git stash apply stashId
+
+- git clone -b <branch> url ...
+  - this -b position can't put it last
+  - and you can use git pull origin local_dev:dev to pull another branch
+  /*- git switch -c */
+
+  - git fetch origin main
+    - get origin(remote)'s main to local
+  - git log -p FETCH-HEAD
+  - git diff main FETCH-HEAD

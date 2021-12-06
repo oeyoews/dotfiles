@@ -102,7 +102,7 @@ alias zprof="zprof > /tmp/zprof.log"
 #alias btop='bpytop'
 # `zsh -f' (vanilla for zsh)
 alias zsh_time="time (repeat 10 zsh -i -c exit)"
-alias vik="vim ~/.config/kitty/kitty.conf.local"
+alias vik="vim ~/.config/kitty/kitty.local.conf"
 alias via="vim ~/.config/alacritty/alacritty.yml"
 
 export EDITOR=nvim

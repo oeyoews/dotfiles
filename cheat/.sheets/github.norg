@@ -20,3 +20,4 @@ git filter-repo --name-callback 'return name.replace(b"foo", b"ttys3")'
 
 #将所有commit信息的email中包含的 foo@example.com 替换成 my-email@example.com
 git filter-repo --email-callback 'return email.replace(b"foo@example.com", b"my-email@example.com")'
+
