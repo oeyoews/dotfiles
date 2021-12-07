@@ -323,6 +323,28 @@ function cdr() {
 #
 
 # TODO
+# search globally in custom folders,
 function rgf() {
   rg $1 ~/.sheets/ ~/dotfiles/archive/notes/ ~/.omz/lib/functions.zsh
+}
+
+# fastly run go file
+function testgo() {
+    CURRENT_DIR=`pwd`
+    OLD_GO_PATH="$GOPATH"  #例如: /usr/local/go
+    OLD_GO_BIN="$GOBIN"    #例如: /usr/local/go/bin
+
+    export GOPATH="$CURRENT_DIR"
+    export GOBIN="$CURRENT_DIR/bin"
+
+    #指定并整理当前的源码路径
+    # deprecated: format src/* code
+    gofmt -w $1
+
+    #go install test_hello@latest
+    # TODO: why need export
+    go run $1
+
+    export GOPATH="$OLD_GO_PATH"
+    export GOBIN="$OLD_GO_BIN"
 }
