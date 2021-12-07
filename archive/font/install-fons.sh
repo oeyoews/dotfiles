@@ -2,6 +2,8 @@
 
 # TODO: 6.1 have some bugs, please downgrade to 5.xxx
 
+set -x
+
 main() {
 
 fonts_dir="${HOME}/.local/share/fonts"
@@ -12,6 +14,7 @@ else
   echo "Found fonts dir $fonts_dir"
 fi
 
+# TODO??? raw no this folder
 for type in Bold Light Medium Regular Retina; do
   file_path="${HOME}/.local/share/fonts/FiraCode-${type}.ttf"
   file_url="https://github.com/tonsky/FiraCode/blob/master/distr/ttf/FiraCode-${type}.ttf?raw=true"
