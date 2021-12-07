@@ -33,3 +33,16 @@
   - menu-font:
     - appearance => Ui options => fonts
     - if you use atom one dark, can modify it int color theme
+
+* Download
+  [link](https://www.jetbrains.com/zh-cn/go/download/other.html)
+
+* Plugins
+  - ideavim
+  - atom one dark
+  - rainbow bracker
+  - indent ...
+  - idea-reset [link](zhile.io)
+
+* abbr
+  - Editor => live templates => click plus symbols

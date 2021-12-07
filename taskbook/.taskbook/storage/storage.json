@@ -137,7 +137,7 @@
         "_isTask": true,
         "isComplete": false,
         "inProgress": false,
-        "priority": 1
+        "priority": "2"
     },
     "12": {
         "_id": 12,
@@ -348,5 +348,19 @@
         "isComplete": false,
         "inProgress": false,
         "priority": 1
+    },
+    "27": {
+        "_id": 27,
+        "_date": "Tue Dec 07 2021",
+        "_timestamp": 1638865479656,
+        "description": "dip ex007",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "inProgress": false,
+        "priority": "2"
     }
 }

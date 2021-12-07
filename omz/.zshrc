@@ -28,9 +28,9 @@ ZSH_THEME="p10k/powerlevel10k"
 
 # gopath
 # TODO:??? why export path is repeat? but for gopath not
-export GOPATH="$HOME/temp/GoTest"
-export GOPATH=$GOPATH:$HOME/temp/goprojects
-export GOPATH=$GOPATH:$HOME/temp/goprojects/src/examplepackage
+#export GOPATH="$HOME/temp/GoTest"
+#export GOPATH=$GOPATH:$HOME/temp/goprojects
+#export GOPATH=$GOPATH:$HOME/temp/goprojects/src/examplepackage
 
 # TODO
 #export GOROOT=$GOROOT:$HOME/temp/GoTest

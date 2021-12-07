@@ -21,6 +21,7 @@
 - pactree -r
 - pacman -U ...(must cd /var/cache/pacman/pkg)
 - vim /var/log/pacman.log
+
 <!--show linux kernel-->
-pacman -Q linux
+- pacman -Q linux
 
