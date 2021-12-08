@@ -32,9 +32,6 @@ map <leader>ff <Action>(FindInPath)
 map <leader>bf <Action>(ReformatCode)
 map <leader>ld <Action>(Debug)
 
-map <leader><Tab> <cmd>bp<cr>
-map <leader>bn <cmd>bn<cr>
-
 sethandler <C-A> a:ide
 sethandler <C-C> a:ide
 sethandler <C-F> a:ide
@@ -65,13 +62,12 @@ Plug 'vim-surround'
 Plug 'vim-easymotion'
 nnoremap <leader>ft :NERDTreeFocus<cr>
 set highlightedyank
-let g:highlightedyank_highlight_duration = "50"
-set easymotion
+let g:highlightedyank_highlight_duration = "100"
 set NERDTree
 set surround
 set commentary
 nnoremap <space>ei :edit ~/.ideavimrc<cr>
-map <space>f <Plug>(easymotion-s)
+" map <space>f <Plug>(easymotion-s)
 nnoremap <space>so :source ~/.ideavimrc<cr>
 
 map <leader>tb <Action>(ToggleLineBreakpoint)

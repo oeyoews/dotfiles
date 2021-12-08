@@ -1,10 +1,3 @@
-<!------->
-<!--theme: $HOME/tmp/dd.json-->
-<!--author: Gopher-->
-<!--date: January 2, 2006-->
-<!--paging: Slide %d / %d-->
-<!------->
-
 ## Features Buildin execute program
 
 ### buildin program

@@ -25,3 +25,4 @@
 <!--show linux kernel-->
 - pacman -Q linux
 
+- yay -S kb is different yay kb
