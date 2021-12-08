@@ -350,6 +350,7 @@ function testgo() {
 }
 
 # TODO: how to limit one parameter at least
+# how to add one parameter for complete
 # better redirection
 # disable: vim
 # enable: kooha goland

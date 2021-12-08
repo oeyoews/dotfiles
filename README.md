@@ -1,11 +1,12 @@
-## Features Buildin execute program
+## Features Builtin execute program
 
-### buildin program
+## Introd
+### builtin program
 - `rg`
-> ripgrep: this binary may be depend gcc ...
+> ripgrep: this binary may be depend GCC ...
 
 - `ranger`
-> maybe lack some optional dependcies
+> maybe lack some optional dependencies
 
 - `ff`
 
@@ -23,6 +24,7 @@
 
 - `mdp` && `slides`
 > show your markdown file
+
 ---
 
 ## Direction Instruction
@@ -119,6 +121,14 @@
 
 <!--TODO-->
 - [ ] list
+
+## Install
+
+---
+
+## Usage
+
+---
 
 
 ### 鸣谢
