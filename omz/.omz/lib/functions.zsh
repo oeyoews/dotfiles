@@ -348,3 +348,23 @@ function testgo() {
     export GOPATH="$OLD_GO_PATH"
     export GOBIN="$OLD_GO_BIN"
 }
+
+# TODO: how to limit one parameter at least
+# better redirection
+# disable: vim
+# enable: kooha goland
+function start() {
+     #while getopts "-h:--help:" arg
+        #do
+                #case "$arg" in
+                        #-h)
+                                #echo "-a表示all全部。。。参数值为； $OPTARG"
+                                #;;
+                        #?)
+                                #echo "没有找到这条命令。。。。"
+                                #;;
+                #esac
+        #done
+  ${1} >/tmp/${1}.out 2>&1 &
+  echo -e "\033[0;32m${1}\033[0m is runing ..."
+}
