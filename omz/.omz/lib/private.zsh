@@ -52,6 +52,7 @@ alias tsc='crow -b -s en -t zh-CN'
 # to English
 alias tse='crow -s zh-CN -t en'
 
+# TODO: make function and complete for it
 #https://github.com/soimort/translate-shell
 # https://www.clloz.com/programming/assorted/2019/11/19/translate-shell-usage/
 # bug: translate a text file, ues it will failed again
@@ -69,6 +70,8 @@ alias tse='crow -s zh-CN -t en'
 # trans -browser firefox :fr http://www.w3.org/
 # trans -S
 # trans -M
+# translate sentence
+# trans ""
 #
 alias cip='curl cip.cc'
 alias ipr='ip addr | rg 192'

@@ -19,11 +19,6 @@
   - git add submodule <URL> [name]
      like `git clone <url> [name]`
 
-* Submodule
-       git submodule init
-      - git submodule update(or git submodule update --init --recursive)
-      [gitsubmodule](https://www.jianshu.com/p/ca2862e449fa)
-
 * Tag
   `git tag`
   - show all tags
@@ -125,3 +120,41 @@
     - get origin(remote)'s main to local
   - git log -p FETCH-HEAD
   - git diff main FETCH-HEAD
+
+* Submodule
+      - git submodule add --depth 1 <url> <path>
+      - git submodule init
+      - git submodule update(or git submodule update --init --recursive)
+      - [gitsubmodule](https://www.jianshu.com/p/ca2862e449fa)
+      - git submodule status
+      - git submodule update --remote
+
+    * remove submodule
+      - rm .git/moduels
+      - and moify .gitsubmodule .git/config
+
+  *** recommend
+      - git clone --depth 1 --recurse-submodules  <url>
+
+
+* Blob
+  - git init
+  - touch demo.txt
+  - git add . && git commit -m 'add git repository'
+  - tree .git/
+  - git cat-file -t/-p <id>
+
+
+* TIps
+  - git remote -vv
+  - git branch -vv
+  - git push origin -d <branch>
+  - clone just clone one branch, if you use depth
+  - git checkout -t origin/xxx
+  - git fetch origin feature:feature
+
+
+* WOrktree
+  - git worktree add <path>
+  - git worktree list
+  - git worktree remove <path>

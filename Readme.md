@@ -130,5 +130,4 @@
 
 ### 鸣谢
 
-<a href="https://jb.gg/OpenSource"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.svg?_ga=2.263186572.1020213154.1638867200-1024192477.1626502028&_gl=1*10v7lte*_ga*MTAyNDE5MjQ3Ny4xNjI2NTAyMDI4*_ga_V0XZL7QHEB*MTYzODkyMzEwNC4xMC4xLjE2Mzg5MjMxMjQuNDA.
-" alt="JetBrains Logo" width="120px"/></a>感谢 [JetBrains](https://jb.gg/OpenSource) 为本项目提供了免费的开源许可
+<a href="https://jb.gg/OpenSource"><img src="archive/images/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>感谢 [JetBrains](https://jb.gg/OpenSource) 为本项目提供了免费的开源许可
