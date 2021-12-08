@@ -18,7 +18,7 @@ uname -a
 hostname // 查看主机名字
 
 sudo archlinux-java set java-11-openjdk     //设置默认Java版本
-archlinux-java status 
+archlinux-java status
 
 ls  /usr/lib/jvm/   //查看所有的Java版本
 
@@ -111,6 +111,7 @@ env | rg EDI # 对visudo 不起作用
 sudo EDITOR=vim visudo
 - rg \-Q
 - sudo tlp-stat -s # check up warnings.
+- unstable
 - sudo pacman-mirrors -aS testing && sudo pacman -Syyu
 
 echo $? # show return status (0-255)
@@ -130,11 +131,11 @@ exit 126 # this file is not execute
 cat /etc/shells
 
 ### curl
-* curo -o/-O 
+* curo -o/-O
 * who /var/log/wtmp
 
 ### alias
-* alias -L 
+* alias -L
 * unalias <alias_name>
 * passwd -d <user_name>
 passwd -S user_name
@@ -144,7 +145,7 @@ fstrim sctl
 * trans -T
 
 ### termux
-* https://mirrors.tuna.tsinghua.edu.cn/help/termux/ 
+* https://mirrors.tuna.tsinghua.edu.cn/help/termux/
 * termux-change-repo  [x]
 * sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
 sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
@@ -154,4 +155,4 @@ apt update && apt upgrade
 * watch -n 1 -d ls demo/ # watch file change
 
 ### ZSH
-* C-r 
+* C-r

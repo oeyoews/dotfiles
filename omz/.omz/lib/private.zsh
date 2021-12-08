@@ -193,4 +193,4 @@ alias pp='slides'
 # nohup justp for command, not support alias, so add it in alias to support
 # use bg to show some background works, and you can use ctrl+z to put it background_jobs again
 # why 2>&1 is to &0
-alias goland="/opt/GoLand-2021.1.3/bin/goland.sh >/tmp/goland.out 2>&1 &"
+#alias goland="/opt/GoLand-2021.1.3/bin/goland.sh >/tmp/goland.out 2>&1 &"

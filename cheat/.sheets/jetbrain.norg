@@ -46,3 +46,14 @@
 
 * abbr
   - Editor => live templates => click plus symbols
+
+* Register
+  - [link](https://zhuanlan.zhihu.com/p/87370573)
+
+* Config file
+  - unmount .../Go_version/bin/***.profiles: config file and system
+  - and import file from .config/jetbrains/...
+  - and you will see ~/.go_version.../config
+
+* SYnchromize file
+  - File => Manage your settings
