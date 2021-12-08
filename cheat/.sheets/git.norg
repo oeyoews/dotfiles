@@ -119,7 +119,7 @@
 - git clone -b <branch> url ...
   - this -b position can't put it last
   - and you can use git pull origin local_dev:dev to pull another branch
-  /*- git switch -c */
+  - git switch -c : creat and turn to this new branch
 
   - git fetch origin main
     - get origin(remote)'s main to local
