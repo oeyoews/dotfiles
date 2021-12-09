@@ -215,4 +215,5 @@ alias vis="vim ~/.omz/lib/start.zsh"
 
 alias killalli="killall -i"
 alias killallv="killall -v"
+alias viw="vim ~/.config/wezterm/wezterm.lua"
 

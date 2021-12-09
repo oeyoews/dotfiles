@@ -109,9 +109,6 @@ sudo pacman -S python-pip
 
 # kate
 
-# modern terminal
-kitty
-alacritty
 
 # analyse memory
 valgrind
@@ -313,3 +310,7 @@ ncdu
   - switychomega
   - nvui
   - viu
+* terminal
+  - wezterm
+  - kitty
+  - alacritty

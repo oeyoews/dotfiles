@@ -4,7 +4,7 @@
 # functionName
 _start()
 {
-    opts="kooha goland nvui flameshot"
+    opts="kooha goland nvui flameshot wezterm"
     local cur=${COMP_WORDS[COMP_CWORD]}
     COMPREPLY=( $(compgen -W "${opts}" -- $cur) )
 }
