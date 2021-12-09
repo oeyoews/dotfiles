@@ -354,7 +354,7 @@ function testgo() {
 # better redirection
 # disable: vim
 # enable: kooha goland
-function start() {
+function on() {
   #https://www.ruanyifeng.com/blog/2019/12/mktemp.html
   #while getopts "-h:--help:" arg
   #do

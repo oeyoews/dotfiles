@@ -4,10 +4,10 @@
 # functionName
 _start()
 {
-    opts="kooha goland"
+    opts="kooha goland nvui flameshot"
     local cur=${COMP_WORDS[COMP_CWORD]}
     COMPREPLY=( $(compgen -W "${opts}" -- $cur) )
 }
 
 # format functionName commandName
-complete -F _start start
+complete -F _start on

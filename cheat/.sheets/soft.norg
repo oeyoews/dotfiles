@@ -139,7 +139,8 @@ shuffle(command is shuf)
 xournal
 
 # download youtube video
-you-get
+- you-get
+- youtube-dl
 
 awesome-terminal-fonts
 
@@ -308,3 +309,7 @@ ncdu
   - musescore
 
   - tldr(tealdeer)
+  - gg
+  - switychomega
+  - nvui
+  - viu

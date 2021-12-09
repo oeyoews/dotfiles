@@ -123,7 +123,7 @@
         "_isTask": true,
         "isComplete": false,
         "inProgress": false,
-        "priority": 1
+        "priority": "2"
     },
     "11": {
         "_id": 11,

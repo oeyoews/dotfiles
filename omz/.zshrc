@@ -34,3 +34,6 @@ ZSH_THEME="p10k/powerlevel10k"
 
 # TODO
 #export GOROOT=$GOROOT:$HOME/temp/GoTest
+#
+# just support bash
+#export HISTTIMEFORMAT="%F %T `whoami` "
