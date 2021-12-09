@@ -30,7 +30,7 @@ function open_command() {
 }
 
 function takeurl() {
-  # 创建临时文件 ？
+  # 创建临时文件 ？YES
   data=$(mktemp)
   curl -L $1 > $data
   tar xf $data
@@ -355,17 +355,21 @@ function testgo() {
 # disable: vim
 # enable: kooha goland
 function start() {
-     #while getopts "-h:--help:" arg
-        #do
-                #case "$arg" in
-                        #-h)
-                                #echo "-a表示all全部。。。参数值为； $OPTARG"
-                                #;;
-                        #?)
-                                #echo "没有找到这条命令。。。。"
-                                #;;
-                #esac
-        #done
-  ${1} >/tmp/${1}.out 2>&1 &
+  #https://www.ruanyifeng.com/blog/2019/12/mktemp.html
+  #while getopts "-h:--help:" arg
+  #do
+  #case "$arg" in
+  #-h)
+  #echo "-a表示all全部。。。参数值为； $OPTARG"
+  #;;
+#?)
+  #echo "没有找到这条命令。。。。"
+  #;;
+  #esac
+  #done
+  #trap 'rm -rf "$RunName"' EXIT
+  #nohup：when you exit your terminal(need twice quit), this job is still running
+  RunName=$(mktemp -t ${1}.XXXXXX) || exit 1
+  nohup ${1} >${RunName} 2>&1 &
   echo -e "\033[0;32m${1}\033[0m is runing ..."
 }
