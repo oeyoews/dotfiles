@@ -1,7 +1,20 @@
-## Features Builtin execute program
+<!-- vim-markdown-toc GitLab -->
 
+* [Introd](#introd)
+* [Direction Instruction](#direction-instruction)
+* [Tools](#tools)
+  * [Editor](#editor)
+  * [Fonts](#fonts)
+  * [Player](#player)
+  * [Videos](#videos)
+  * [Git tools](#git-tools)
+  * [Browser](#browser)
+* [Install](#install)
+* [Usage](#usage)
+  * [Thanks](#thanks)
+
+<!-- vim-markdown-toc -->
 ## Introd
-### builtin program
 - `rg`
 > ripgrep: this binary may be depend GCC ...
 
@@ -39,9 +52,7 @@
 
 ---
 
-## Recommend software
-
-### Tools
+## Tools
 
 - `fastfetch`
 > show your system information
@@ -120,7 +131,7 @@
 - firefox
 
 <!--TODO-->
-- [ ] list
+<!--- [ ] list-->
 
 ## Install
 
@@ -131,6 +142,6 @@
 ---
 
 
-### 鸣谢
+### Thanks
 
-<a href="https://jb.gg/OpenSource"><img src="archive/images/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>感谢 [JetBrains](https://jb.gg/OpenSource) 为本项目提供了免费的开源许可
+<a href="https://jb.gg/OpenSource"><img src="archive/images/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
