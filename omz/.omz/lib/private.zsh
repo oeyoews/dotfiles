@@ -14,7 +14,8 @@ alias soz='exec zsh'
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
-#alias date='date +%S'
+#alias date='\date +%F'
+#alias date='\date -I'
 alias neo='fastfetch'
 alias open='xdg-open'
 alias c='clear'
@@ -186,7 +187,7 @@ alias ttn='tt -n'
 alias ttp='tt -l pending'
 alias ttf='tt -f'
 
-alias dt="dict"
+#alias dt="dict"
 
 alias cdn="cd ~/.sheets"
 

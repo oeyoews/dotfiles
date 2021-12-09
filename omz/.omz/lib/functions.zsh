@@ -373,3 +373,17 @@ function on() {
   nohup ${1} >${RunName} 2>&1 &
   echo -e "\033[0;32m${1}\033[0m is runing ..."
 }
+
+function dt() {
+  # BUG: wired must use slash to keep original date
+  # dt ==> draft
+  cd ~/.config/nvim/draft || exit 1
+  TODAY=$(\date -I)
+  # NOTE: catn't read environment alias
+  nvim ${TODAY}.md
+}
+
+function dtc() {
+  cd ~/.config/nvim/draft || exit 1
+  nvim $1
+}
