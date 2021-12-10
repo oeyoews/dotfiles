@@ -30,3 +30,10 @@
   - learn use to autogenerate release(打包， 或者着根据制定文件夹打包)
 
 - [x] learn like tldr [link](https://github.com/tldr-pages/tldr)
+
+* Passline
+  - how to build passline
+  - add number
+  - and multip select
+
+  - how to use systemd(systemctl) to enable personal service [link](https://blog.lilydjwg.me/2014/2/2/systemd-user-daemons.42631.html)

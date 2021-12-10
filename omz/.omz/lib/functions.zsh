@@ -325,7 +325,8 @@ function cdr() {
 # TODO
 # search globally in custom folders,
 function rgf() {
-  rg $1 ~/.sheets/ ~/dotfiles/archive/notes/ ~/.omz/lib/functions.zsh
+  searchDir=(~/.sheets/ ~/dotfiles/archive/notes/ ~/.omz/lib/functions.zsh ~/.config/nvim/draft)
+  rg $1 ${searchDir}
 }
 
 # fastly run go file
@@ -386,4 +387,9 @@ function dt() {
 function dtc() {
   cd ~/.config/nvim/draft || exit 1
   nvim $1
+}
+
+function natapps() {
+  #natapp -authtoken=$1
+  natapp -authtoken=ca8def303fc2485c
 }

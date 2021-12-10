@@ -158,3 +158,5 @@
   - git worktree add <path>
   - git worktree list
   - git worktree remove <path>
+
+  /*- git pull to pull all branch?*/

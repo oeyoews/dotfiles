@@ -51,11 +51,11 @@ dust
 fzf
 tree
 
-* Bootools
+* Iso
   - ventoy
   - etcher [link](https://www.balena.io/etcher/)
 
-* Input method
+* IME
   # Fcitx5
 # pacman (auto install fcitx-im)
 manjaro-asian-input-support-fcitx5
@@ -71,8 +71,9 @@ fcitx5-chinese-addons
 # virtual-desktop            # plasma widget
 com.qq.tim.spark           # tim
 com.qq.wexin.deepin
+- qq(electron): icalingua
 # wechat-uos                 # wechat
-jdk8-openjdk               # jdk
+- jdk8-openjdk               # jdk
 # fgit                       # hub.fastgit.org
 # deskreen                   # 投屏软件
 # idea
@@ -314,3 +315,6 @@ ncdu
   - wezterm
   - kitty
   - alacritty
+  - qbitorrent
+* 内网
+  - natapp

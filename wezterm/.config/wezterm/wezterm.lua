@@ -19,7 +19,8 @@ return {
   use_ime = true,
   --font = wezterm.font("Fira Code", {weight="Regular"}),
   font = wezterm.font_with_fallback{ {family="Fira Code", weight="Regular"}, },
-  default_cursor_style = "SteadyBar",
+  --default_cursor_style = "SteadyBar",
+  default_cursor_style = "SteadyBlock",
 
   --[[
   font_size = 16.0,
