@@ -378,15 +378,18 @@ function on() {
 function dt() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
-  cd ~/.config/nvim/draft || exit 1
-  TODAY=$(\date -I)
+  PREFIX=~/.config/nvim/draft/
+  TODAY="${PREFIX}$(\date -I)"
   # NOTE: catn't read environment alias
   nvim ${TODAY}.md
 }
 
+# need a parameter
 function dtc() {
-  cd ~/.config/nvim/draft || exit 1
-  nvim $1
+  #TODO:
+  # fixed: need add last slash
+  PREFIX=~/.config/nvim/draft/
+  nvim "${PREFIX}$1"
 }
 
 function natapps() {
