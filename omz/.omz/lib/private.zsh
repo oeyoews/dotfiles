@@ -224,4 +224,4 @@ alias viss="vim ~/.ssh/config"
 # passline a/g/-p
 
 # apt
-alias apt="sudo apt"
+alias apti="sudo apt install"

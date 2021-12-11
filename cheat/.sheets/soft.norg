@@ -47,7 +47,7 @@ lolcat
 - ripgrep
 duf
 # like du -sh
-dust
+- dust
 fzf
 tree
 

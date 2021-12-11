@@ -325,7 +325,13 @@ function cdr() {
 # TODO
 # search globally in custom folders,
 function rgf() {
-  searchDir=(~/.sheets/ ~/dotfiles/archive/notes/ ~/.omz/lib/functions.zsh ~/.config/nvim/draft)
+  searchDir=(
+    ~/.sheets/
+    ~/dotfiles/archive/notes/
+    ~/.omz/lib/functions.zsh/
+    ~/.config/nvim/draft/
+    ~/.omz/lib/
+  )
   rg $1 ${searchDir}
 }
 

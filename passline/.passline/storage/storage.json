@@ -99,6 +99,17 @@
      "recoveryCodes": []
     }
    ]
+  },
+  {
+   "name": "inkdrop",
+   "credentials": [
+    {
+     "username": "oeyoew",
+     "password": "q-YniolkBadCwn6k282vhdMFoRUEMNF3UiwVBhpRhm1Ldoh4J5EjEzqxJYR2HQSy",
+     "category": "personal",
+     "recoveryCodes": []
+    }
+   ]
   }
  ]
 }
