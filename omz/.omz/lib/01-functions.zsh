@@ -410,11 +410,11 @@ function natapps() {
 #}
 
 # cd fast
-function cdf() {
-  cd $1
-}
+#function cdf() {
+  #cd $1
+#}
 
 # TODO: like fzf to filter and like insearch
-function vif() {
-  $EDITOR $1
-}
+#function vif() {
+  #$EDITOR $1
+#}

@@ -211,17 +211,20 @@ alias killallv="killall -v"
 alias apti="sudo apt install"
 
 # path
-#alias cdd="cd ~/dotfiles/"
-#alias cdv="cd ~/.config/nvim/"
-#alias cdn="cd ~/.sheets"
+# TODO:
+alias cdd="cd ~/dotfiles/"
+alias cdv="cd ~/.config/nvim/"
+alias cdn="cd ~/.sheets"
 
 # vim
-#alias viz='vim $HOME/.zshrc'
-#alias vip='vim ~/.omz/lib/private.zsh'
-#alias vif='vim ~/.omz/lib/01-functions.zsh'
-#alias vik="vim ~/.config/kitty/kitty.local.conf"
-#alias via="vim ~/.config/alacritty/alacritty.yml"
-#alias viw="vim ~/.config/wezterm/wezterm.lua"
-#alias vis="vim ~/.omz/lib/start.zsh"
-#alias viss="vim ~/.ssh/config"
+alias viz='vim $HOME/.zshrc'
+alias vip='vim ~/.omz/lib/private.zsh'
+alias vif='vim ~/.omz/lib/01-functions.zsh'
+alias vik="vim ~/.config/kitty/kitty.local.conf"
+alias via="vim ~/.config/alacritty/alacritty.yml"
+alias viw="vim ~/.config/wezterm/wezterm.lua"
+alias vis="vim ~/.omz/lib/start.zsh"
+alias viss="vim ~/.ssh/config"
 alias vie="vim $(mktemp -t temp.XXXXXX)"
+#cd $(find * -type d | fzf)
+#vim $(fzf)
