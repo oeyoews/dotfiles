@@ -1,0 +1,24 @@
+Host arch
+  HostName 192.168.68.123
+  User admin
+  Port 22
+Host arch-mobile
+  HostName 192.168.68.245
+  User admin
+  Port 22
+Host gitlab.com
+  # HostName <`gitlab.com:domain`>
+  UpdateHostKeys no
+Host debian
+  HostName 101.43.122.185
+  User lighthouse
+  Port 22
+Host Ubuntu20.4
+  HostName 101.43.122.185
+  User lighthouse
+  Port 22
+Host virtualm
+  HostName 192.168.122.17
+  # remote username
+  User manjaro
+  Port 22

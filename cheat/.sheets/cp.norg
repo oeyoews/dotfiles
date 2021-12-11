@@ -8,5 +8,4 @@
 @end
 
 - dir: 1/2/3
-- cp -r 1/ 2
-- like copy 1/*
+- cp -r 1/ 2 like copy 1/*

@@ -219,3 +219,4 @@ alias killallv="killall -v"
 alias viw="vim ~/.config/wezterm/wezterm.lua"
 
 alias vie="vim $(mktemp -t temp.XXXXXX)"
+alias viss="vim ~/.ssh/config"
