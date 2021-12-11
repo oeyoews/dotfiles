@@ -408,3 +408,13 @@ function natapps() {
   #unfunction $1 && autoload -U $1
   #echo "Reload $1 finished!"
 #}
+
+# cd fast
+function cdf() {
+  cd $1
+}
+
+# TODO: like fzf to filter and like insearch
+function vif() {
+  $EDITOR $1
+}

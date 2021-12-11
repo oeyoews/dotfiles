@@ -1,16 +1,7 @@
-# vim
-alias viz='vim $HOME/.zshrc'
-alias vip='vim ~/.omz/lib/private.zsh'
-alias vif='vim ~/.omz/lib/functions.zsh'
-
-# path
-alias cdd="cd ~/dotfiles/"
-alias cdv="cd ~/.config/nvim/"
 # note this will cause $path load twice extra
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
 alias soz='exec zsh'
-
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
@@ -112,8 +103,6 @@ alias zprof="zprof > /tmp/zprof.log"
 #alias btop='bpytop'
 # `zsh -f' (vanilla for zsh)
 alias zsh_time="time (repeat 10 zsh -i -c exit)"
-alias vik="vim ~/.config/kitty/kitty.local.conf"
-alias via="vim ~/.config/alacritty/alacritty.yml"
 
 export EDITOR=nvim
 # Export
@@ -189,7 +178,6 @@ alias ttf='tt -f'
 
 #alias dt="dict"
 
-alias cdn="cd ~/.sheets"
 
 alias pp='slides'
 
@@ -212,16 +200,28 @@ alias ff="ff -theme one-dark"
 
 #fc -li
 alias his="history -i"
-alias vis="vim ~/.omz/lib/start.zsh"
 
 alias killalli="killall -i"
 alias killallv="killall -v"
-alias viw="vim ~/.config/wezterm/wezterm.lua"
 
-alias vie="vim $(mktemp -t temp.XXXXXX)"
-alias viss="vim ~/.ssh/config"
 
 # passline a/g/-p
 
 # apt
 alias apti="sudo apt install"
+
+# path
+#alias cdd="cd ~/dotfiles/"
+#alias cdv="cd ~/.config/nvim/"
+#alias cdn="cd ~/.sheets"
+
+# vim
+#alias viz='vim $HOME/.zshrc'
+#alias vip='vim ~/.omz/lib/private.zsh'
+#alias vif='vim ~/.omz/lib/01-functions.zsh'
+#alias vik="vim ~/.config/kitty/kitty.local.conf"
+#alias via="vim ~/.config/alacritty/alacritty.yml"
+#alias viw="vim ~/.config/wezterm/wezterm.lua"
+#alias vis="vim ~/.omz/lib/start.zsh"
+#alias viss="vim ~/.ssh/config"
+alias vie="vim $(mktemp -t temp.XXXXXX)"
