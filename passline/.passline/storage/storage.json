@@ -88,6 +88,17 @@
      "recoveryCodes": []
     }
    ]
+  },
+  {
+   "name": "micrsoft-login",
+   "credentials": [
+    {
+     "username": "email",
+     "password": "mWtNrjL8-rCEiJHs8_3q4jTZKFt9W9pEqe5ylODjF64=",
+     "category": "default",
+     "recoveryCodes": []
+    }
+   ]
   }
  ]
 }

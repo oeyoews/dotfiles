@@ -396,3 +396,9 @@ function natapps() {
   #natapp -authtoken=$1
   natapp -authtoken=ca8def303fc2485c
 }
+
+#TODO:
+#function reload() {
+  #unfunction $1 && autoload -U $1
+  #echo "Reload $1 finished!"
+#}
