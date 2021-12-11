@@ -100,7 +100,7 @@ sudo pacman -S python-pip
   - yesplaymusic
   - netease-musicbox
   - lx-music-desktop-bin
-  - clementine
+  - clementine(support podcast)
   - museeks
 
 
@@ -318,3 +318,6 @@ ncdu
   - qbitorrent
 * 内网
   - natapp
+  - nload
+  - dstat
+  - iftop

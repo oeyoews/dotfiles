@@ -1,0 +1,2 @@
+- ssh-copy-id <id>
+  - copy your public ssh-id to your server

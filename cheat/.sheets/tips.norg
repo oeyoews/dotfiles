@@ -57,3 +57,4 @@ first press fn + w and press fn + win(lock win key)
   - bash-completion : /etc/bash... and /usr/share/bash-completion
   - sudo pacman-mirrors -c China -m rank -i -aS unstable
   - halt -p
+  - lsb_release -a

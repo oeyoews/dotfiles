@@ -77,6 +77,17 @@
      "recoveryCodes": []
     }
    ]
+  },
+  {
+   "name": "sanfengyun.com",
+   "credentials": [
+    {
+     "username": "oeyoew",
+     "password": "RBIBslYOn3Q7roTGpjIdFciwVK5ArUR1QYqUciRLNrhYhLjdX31XZKjWwI0e7QmF",
+     "category": "default",
+     "recoveryCodes": []
+    }
+   ]
   }
  ]
 }
