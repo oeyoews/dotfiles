@@ -212,8 +212,6 @@ alias killallv="killall -v"
 
 # passline a/g/-p
 
-# apt
-alias apti="sudo apt install"
 
 # path
 # TODO:
