@@ -296,14 +296,14 @@ fi
 
 # how to better these cd (all in one)
 function cdt() {
-  _TMP=~/temp
+  local _TMP=~/temp
   [[ ! -d "$_TMP" ]] && { mkdir "$_TMP"; echo "creat $_TMP dir"}
   cd ${_TMP}
 }
 
 function cdr() {
   # todo rename
-  _TMP=~/REPOS
+  local _TMP=~/REPOS
   [[ ! -d "$_TMP" ]] && { mkdir "$_TMP"; echo "creat $_TMP dir"}
   cd ${_TMP}
 }
@@ -325,12 +325,11 @@ function cdr() {
 # TODO
 # search globally in custom folders,
 function rgf() {
-  searchDir=(
+  local searchDir=(
     ~/.sheets/
     ~/dotfiles/archive/notes/
-    ~/.omz/lib/functions.zsh/
-    ~/.config/nvim/draft/
     ~/.omz/lib/
+    ~/.config/nvim/draft/
   )
   rg $1 ${searchDir}
 }
@@ -384,7 +383,7 @@ function on() {
 function dt() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
-  PREFIX=~/.config/nvim/draft/
+  local PREFIX=~/.config/nvim/draft/
   TODAY="${PREFIX}$(\date -I)"
   # NOTE: catn't read environment alias
   nvim ${TODAY}.md
@@ -394,7 +393,7 @@ function dt() {
 function dtc() {
   #TODO:
   # fixed: need add last slash
-  PREFIX=~/.config/nvim/draft/
+  local PREFIX=~/.config/nvim/draft/
   nvim "${PREFIX}$1"
 }
 

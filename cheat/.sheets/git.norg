@@ -164,3 +164,4 @@
   - git rm <file> 会删除当前分支的工作区和暂存区的文件
   - git rm --cached <file>删除current branch 暂存区的文件
   - 不会影响other branch
+  - git fetch get all remote branches

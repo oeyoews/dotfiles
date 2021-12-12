@@ -24,6 +24,15 @@
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     status
     context
+    #ip
+    vpn_ip
+    background_jobs
+    proxy
+    todo
+    ranger
+    vim_shell
+    #load
+    #public_ip
   )
 
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
