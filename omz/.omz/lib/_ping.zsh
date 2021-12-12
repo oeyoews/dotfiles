@@ -1,6 +1,6 @@
 _ping()
 {
-    COMPREPLY=()
+    #COMPREPLY=()
     opts="bing.com google.com baidu.com oeyoews.top"
     local cur=${COMP_WORDS[COMP_CWORD]}
     COMPREPLY=( $(compgen -W "${opts}" -- $cur) )

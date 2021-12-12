@@ -321,3 +321,4 @@ ncdu
   - nload
   - dstat
   - iftop
+  - diff-so-fancy

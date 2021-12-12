@@ -126,8 +126,13 @@ export CHEATCOLORS=true
 export CHEAT_USE_FZF=true
 [[ ! -f ~/.cheatconf.yml ]] || export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
 
-# better man page dependcies: bat
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# better man page
+# dependcies: bat
+#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+#fzf
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+#export FZF_DEFAULT_COMMAND='fd --type f'
 
 #alias nvim="~/.local/share/nvim.appimage"
 alias vim='nvim'
