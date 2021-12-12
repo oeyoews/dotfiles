@@ -25,10 +25,10 @@
     status
     context
     #ip
-    vpn_ip
+    #vpn_ip
     background_jobs
     proxy
-    todo
+    #todo
     ranger
     vim_shell
     #load

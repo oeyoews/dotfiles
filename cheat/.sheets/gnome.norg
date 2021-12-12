@@ -33,3 +33,5 @@ That's all!
 
 * power
   - wired: power-profile-daemon.service
+
+  - font: 1.50(settings) 大号文本(优化tweaks)

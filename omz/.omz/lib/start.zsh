@@ -8,7 +8,7 @@
 _start()
 {
     COMPREPLY=()
-    opts="kooha goland nvui flameshot wezterm xournalpp"
+    opts="kooha goland nvui flameshot wezterm xournalpp virt-manager"
     local cur=${COMP_WORDS[COMP_CWORD]}
     COMPREPLY=( $(compgen -W "${opts}" -- $cur) )
     return 0

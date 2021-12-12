@@ -24,8 +24,8 @@ alias yayss='yay -S'
 alias cp="cp -r"
 
 # on
-alias 'onkvm'='sudo virt-manager'
-alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.service'
+#alias 'onkvm'='sudo virt-manager'
+#alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.service'
 
 # software
 alias ra='ranger'
@@ -210,7 +210,7 @@ alias killalli="killall -i"
 alias killallv="killall -v"
 
 
-# passline a/g/-p
+# passline a/g/h/d/ -p -c
 
 
 # path

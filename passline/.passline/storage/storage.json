@@ -35,12 +35,12 @@
    ]
   },
   {
-   "name": "demos",
+   "name": "gnome-keyring",
    "credentials": [
     {
-     "username": "demos",
-     "password": "cq2Abd25D-yl7DDb6J7V1vDgY1RmLl-iqHnpQkxegv5smb3vQtuccXyvl8I42QVe",
-     "category": "default",
+     "username": "oeyoews",
+     "password": "-OUhz4W6tSbX1WX-8bUch39DB0iwDEl101LPBjvvR0Y=",
+     "category": "personal",
      "recoveryCodes": []
     }
    ]

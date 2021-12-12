@@ -51,7 +51,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": "3"
     },
@@ -101,21 +101,21 @@
         "_id": 9,
         "_date": "Mon Nov 29 2021",
         "_timestamp": 1638157403431,
-        "description": "CET4",
+        "description": "exam: CET4",
         "isStarred": false,
         "boards": [
             "My Board"
         ],
         "_isTask": true,
         "isComplete": false,
-        "inProgress": false,
-        "priority": "3"
+        "inProgress": true,
+        "priority": "1"
     },
     "10": {
         "_id": 10,
         "_date": "Mon Nov 29 2021",
         "_timestamp": 1638157448328,
-        "description": "learn cip",
+        "description": "course: 计算机网络原理",
         "isStarred": false,
         "boards": [
             "My Board"
@@ -123,13 +123,13 @@
         "_isTask": true,
         "isComplete": false,
         "inProgress": false,
-        "priority": "2"
+        "priority": "1"
     },
     "11": {
         "_id": 11,
         "_date": "Mon Nov 29 2021",
         "_timestamp": 1638173843894,
-        "description": "gui ex006",
+        "description": "work: ex006(gui)",
         "isStarred": false,
         "boards": [
             "My Board"
@@ -137,7 +137,7 @@
         "_isTask": true,
         "isComplete": false,
         "inProgress": false,
-        "priority": "2"
+        "priority": "1"
     },
     "12": {
         "_id": 12,
@@ -185,7 +185,7 @@
         "_id": 15,
         "_date": "Thu Dec 02 2021",
         "_timestamp": 1638433964604,
-        "description": "linux and human's paper",
+        "description": "paper: two papers(12-20)",
         "isStarred": false,
         "boards": [
             "My Board"
@@ -283,7 +283,7 @@
         "_id": 22,
         "_date": "Mon Dec 06 2021",
         "_timestamp": 1638721177014,
-        "description": "android sofware： music player",
+        "description": "work: make software(android)",
         "isStarred": false,
         "boards": [
             "My Board"
@@ -303,7 +303,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -339,7 +339,7 @@
         "_id": 27,
         "_date": "Tue Dec 07 2021",
         "_timestamp": 1638865479656,
-        "description": "dip ex007",
+        "description": "work: ex07(matlab)",
         "isStarred": false,
         "boards": [
             "My Board"
@@ -347,7 +347,7 @@
         "_isTask": true,
         "isComplete": false,
         "inProgress": false,
-        "priority": "2"
+        "priority": "1"
     },
     "28": {
         "_id": 28,
@@ -359,5 +359,19 @@
             "My Board"
         ],
         "_isTask": false
+    },
+    "29": {
+        "_id": 29,
+        "_date": "Mon Dec 13 2021",
+        "_timestamp": 1639324824878,
+        "description": "exam: DIP",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "inProgress": false,
+        "priority": 1
     }
 }

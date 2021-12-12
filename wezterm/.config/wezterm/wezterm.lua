@@ -32,8 +32,8 @@ return {
   enable_wayland = false,
   --]]
 
-  --color_scheme = "Dracula",
-  color_scheme = "DoomOne",
+  color_scheme = "Dracula",
+  --color_scheme = "DoomOne",
   keys = {
     -- This will create a new split and run your default program inside it
     {key="|", mods="CTRL",

@@ -17,7 +17,7 @@
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 - gnome: dash-to-dock
-- gnome-keyring              # for vscode synchronize
+- gnome-keyring              # for vscode synchronize~~, for google-chrome microsoft-edge-beta-bin vscode and etc...
 # gnome-shell-extension-unite
 cdate
 # like ps painting
