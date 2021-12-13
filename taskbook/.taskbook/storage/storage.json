@@ -191,7 +191,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -349,22 +349,25 @@
         "inProgress": false,
         "priority": "1"
     },
-    "28": {
-        "_id": 28,
-        "_date": "Tue Dec 07 2021",
-        "_timestamp": 1638885471132,
-        "description": "go 课程",
-        "isStarred": false,
-        "boards": [
-            "My Board"
-        ],
-        "_isTask": false
-    },
     "29": {
         "_id": 29,
         "_date": "Mon Dec 13 2021",
         "_timestamp": 1639324824878,
         "description": "exam: DIP",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": false,
+        "inProgress": false,
+        "priority": 1
+    },
+    "30": {
+        "_id": 30,
+        "_date": "Mon Dec 13 2021",
+        "_timestamp": 1639358497053,
+        "description": "paper: 人机交互论文",
         "isStarred": false,
         "boards": [
             "My Board"

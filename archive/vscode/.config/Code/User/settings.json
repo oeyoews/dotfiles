@@ -64,5 +64,6 @@
     "debug.terminal.clearBeforeReusing": true,
     "terminal.integrated.copyOnSelection": true,
     "editor.snippetSuggestions": "top",
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "go.gopath": "~/.local/share/go",
 }

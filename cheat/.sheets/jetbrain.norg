@@ -58,3 +58,13 @@
 
 * SYnchromize file
   - File => Manage your settings
+
+* BUG
+  - grade-user-home to set, if your file can't find
+  - grade(plugin) location: ~/.grade/cache or your self defined
+  - https://developer.android.com/studio/releases/gradle-plugin?hl=zh-cn
+ - [*]  generate apk: 确保generate生成 jks file(byhand), if you have second
+  - generate " apk bundle " is successful, but for apk, it will be failed
+
+* Rename
+  - packages ==> cancel (flatten packages and compact packages) and ==> refactor ==> rename packages

@@ -8,3 +8,4 @@
 ## Learn go
 - go run ..
 - go build ...
+- go build -o <path_filename> <original_path_filename>
