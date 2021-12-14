@@ -4,7 +4,7 @@ _dtc()
   COMPREPLY=()
   #DRAFTFILENAME=($(find ~/.config/nvim/draft/*.md))
   #DRAFTFILENAME=($(cd ~/.config/nvim/draft && ls))
-  DRAFTFILENAME=$(cd ~/.config/nvim/draft && ls)
+  DRAFTFILENAME=$(cd ~/dotfiles/draft && ls)
 
   #SHORTNAME=()
   #for i in ${DRAFTFILENAME[i]}

@@ -368,7 +368,7 @@ function on() {
   #-h)
   #echo "-a表示all全部。。。参数值为； $OPTARG"
   #;;
-#?)
+#?)dotfiles
   #echo "没有找到这条命令。。。。"
   #;;
   #esac
@@ -383,7 +383,7 @@ function on() {
 function dt() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
-  local PREFIX=~/.config/nvim/draft/
+  local PREFIX=~/dotfiles/draft/
   TODAY="${PREFIX}$(\date -I)"
   # NOTE: catn't read environment alias
   nvim ${TODAY}.md
@@ -393,7 +393,7 @@ function dt() {
 function dtc() {
   #TODO:
   # fixed: need add last slash
-  local PREFIX=~/.config/nvim/draft/
+  local PREFIX=~/dotfiles/draft/
   nvim "${PREFIX}$1"
 }
 
