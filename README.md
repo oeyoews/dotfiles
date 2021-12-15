@@ -144,4 +144,4 @@
 
 ### Thanks
 
-<a href="https://jb.gg/OpenSource"><img src="archive/images/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
+<a href="https://jb.gg/OpenSource"><img src="archive/screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
