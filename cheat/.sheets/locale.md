@@ -1,2 +1,0 @@
-- localedef --list-archive
-- LC_ALL=en_US.UTF-8 for /etc/locale.conf to resolve ago zh-CN questions

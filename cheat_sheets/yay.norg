@@ -1,0 +1,28 @@
+@document.meta
+  title: yay
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-24
+  version: 0.1
+@end
+
+- when change this branch, please use sudo pacman -Syyu to force update this config file
+- yay -G [name]
+- sudoedit /etc/pacman.conf, and add orphan package name to ignore to reduce warning in upgrade your system
+- yay -Qi neovim
+- yay slides and yay -S slides
+
+- /var/cache/pacman/pkg
+
+
+* Pacman
+- pacman -Qi [name]
+- pactree -r
+- pacman -U ...(must cd /var/cache/pacman/pkg)
+- vim /var/log/pacman.log
+
+<!--show linux kernel-->
+- pacman -Q linux
+
+- yay -S kb is different yay kb

@@ -1,0 +1,17 @@
+@document.meta
+  title: kvm
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-17
+  version: 0.1
+@end
+
+- for network, you must restart libvirtd.service.(reason ???)
+  - libvirt: library virtualization
+  - libvirtd is a daemon
+
+- use 复制主机拓扑地址 (select it)
+
+* Install
+  - 如果第一次进入系统没有安装，再次启动遇到 no boot device, 在设置中， 设置引导选项 和sata path

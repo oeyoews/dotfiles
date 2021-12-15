@@ -1,0 +1,14 @@
+@document.meta
+  title: google
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-28
+  version: 0.1
+@end
+
+- select some text, and click right
+  - [link](https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt#:~:text=4.1.3%20Snippet%20Options%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20*UltiSnips%2Dsnippet%2Doptions*)
+  - have some bug, need put this addredd input url blank directly.
+
+- install app in chrome, and can search it in mylauncher

@@ -1,0 +1,36 @@
+@document.meta
+  title: bug
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-21
+  version: 0.1
+@end
+
+* Norg
+  - creat norg file occured header cant's recronized
+
+  - (like inter @ symbol, it will have soem error tips in minbuffer)
+
+  - like crontab.norg, it will can's recronized
+
+* Java
+  - jframe can't show gui !!!
+
+* Kvm
+  - network problems(no internet), must restart libvird.service
+
+* Vim
+  - for #123, to use C-a to add this number , this # and number will change locations
+
+* Obs
+  -  shortkey can't modifed(toggle record and pause record)
+
+  fcitx5 shring
+  - for stow , if have .gitignore, it no effect
+
+* Git
+  - how can i Delete default branch in local?
+
+* Ranger
+  - can't show images in tmux for ranger

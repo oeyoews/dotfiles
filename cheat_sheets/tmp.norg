@@ -1,0 +1,10 @@
+@document.meta
+  title: tmp
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-30
+  version: 0.1
+@end
+
+- tmp for norg files

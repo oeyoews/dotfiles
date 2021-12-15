@@ -77,7 +77,9 @@ alias ipr='ip addr | rg 192'
 # @git
 # git -C ~/.emacs.d/ pull, more info about git ,
 alias gh='git-open'
-alias gits='git status --short'
+#alias gits='git status --short'
+alias gits='git status'
+
 alias gitu='git add . && git commit && git push'
 alias gite='git config -e'
 
@@ -112,7 +114,13 @@ export EDITOR=nvim
 # tips: this directory will be exist, so can't ust it to adjust
 #[[ ! -d $HOME/dotfiles/bin ]] || export PATH=~/dotfiles/bin:$PATH
 # when use echo $PATH, it output depend your export order
+
 export PATH=$PATH:~/dotfiles/bin
+
+#export Dot=~/dotfiles/bin
+#export PATH=$PATH:$Dot
+#unset Dot
+
 # tips: one it right, but second step either to failed, or to add it again
 #[[ -z $dt ]] && export dt=~/dotfiles
 #export PATH=$PATH:$dt/bin

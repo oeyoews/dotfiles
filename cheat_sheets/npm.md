@@ -1,0 +1,3 @@
+- npm root -g  # show path for packages globally
+- npm list -g  # show all packages globally
+- /usr/lib/node_modules/

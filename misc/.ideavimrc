@@ -72,4 +72,4 @@ nnoremap <space>so :source ~/.ideavimrc<cr>
 
 map <leader>tb <Action>(ToggleLineBreakpoint)
 " format code in visual status
-map Q gq
+map Q gqset ideajoin

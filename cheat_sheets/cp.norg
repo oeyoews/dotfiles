@@ -1,0 +1,11 @@
+@document.meta
+  title: cp
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-12-04
+  version: 0.1
+@end
+
+- dir: 1/2/3
+- cp -r 1/ 2 like copy 1/*
