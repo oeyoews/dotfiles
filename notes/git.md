@@ -138,7 +138,7 @@ hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，com
 ### git_submoudle(子模块)
 - https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97
 - git clone url --recurse-submoudles
-- git submoudle init && git submoudle update
+- git submodule init && git submoudle update
 - git submoudle update --init --recursive
 - git submoudle add url /path/name
 - git submoudle update --remote
