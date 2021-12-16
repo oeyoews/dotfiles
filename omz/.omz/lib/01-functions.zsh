@@ -325,11 +325,12 @@ function cdr() {
 # TODO
 # search globally in custom folders,
 function rgf() {
+  # all notes
   local searchDir=(
-    ~/.sheets/
-    ~/dotfiles/archive/notes/
+  # all notes
+    ~/dotfiles/notes/
+    # omz
     ~/.omz/lib/
-    ~/.config/nvim/draft/
   )
   rg $1 ${searchDir}
 }
@@ -383,8 +384,8 @@ function on() {
 function dt() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
-  local PREFIX=~/dotfiles/draft_notes/
-  TODAY="${PREFIX}$(\date -I)"
+  #local PREFIX=~/dotfiles/notes/draft/
+  TODAY="${Draft}$(\date -I)"
   # NOTE: catn't read environment alias
   nvim ${TODAY}.md
 }
@@ -393,8 +394,8 @@ function dt() {
 function dtc() {
   #TODO:
   # fixed: need add last slash
-  local PREFIX=~/dotfiles/draft_notes/
-  nvim "${PREFIX}${1}"
+  #local PREFIX=~/dotfiles/notes/draft/
+  nvim "${Draft}${1}"
 }
 
 function natapps() {

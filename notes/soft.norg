@@ -161,12 +161,12 @@ icdiff
   - marktext
   - mdp
   - slides
-  - siyuan
   - glow
   - agenta(just for macos)
   - joplin(cli desktop)
   - zettlr
-  - obsidian
+  - siyuan(no recomment)
+  - obsidian(not recomment)
   - mdcat
   - zim
   - mindforger
@@ -207,12 +207,6 @@ gittalk
 --image--
 imagemagick(cmd: display)
 
-* Reader
-  - foxit reader
-  - obular
-  - kchmviewer
-  - calibre
-  - foliate                    # book read
 
   ===
 # git repository play video
@@ -294,6 +288,9 @@ imagemagick(cmd: display)
   - mycli
 - `ranger`
 ncdu
+anbox
+- pamac
+- remmina
 
 * Nothing
   - glade(ui)
@@ -328,3 +325,13 @@ ncdu
   - mypaint
   - krita
   - inscape
+
+* Pdf
+  - vym(view your mind)
+
+* Reader
+  - foxit reader
+  - obular
+  - kchmviewer
+  - calibre
+  - foliate                    # book read

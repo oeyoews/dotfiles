@@ -12,7 +12,8 @@ _dtc()
   #TODO: 补全depend zsh function
   #DRAFTFILENAME=$(ls -t ~/dotfiles/draft | sort -r)
   #DRAFTFILENAME={ ls -t ~/dotfiles/draft; }
-  DRAFTFILENAME=`ls -t1 ~/dotfiles/draft_notes`
+  #DRAFTFILENAME=`ls -t1 ~/dotfiles/notes/draft_notes`
+  DRAFTFILENAME=`ls -t1 ${Draft}`
   #DRAFTFILENAMEs=(${DRAFTFILENAME[*]%.*})
 
   #SHORTNAME=()
