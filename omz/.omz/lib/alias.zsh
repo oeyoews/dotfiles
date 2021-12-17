@@ -113,6 +113,7 @@ alias vi='nvim'
 alias e='nvim'
 alias se='nvim -u NONE'
 
+# get weather to your terminal
 alias wego='curl wttr.in'
 
 alias emacs='emacs -nw'
@@ -156,7 +157,7 @@ alias ttf='tt -f'
 
 #alias dt="dict"
 
-
+# markdown presention
 alias pp='slides'
 
 #alias rgf='rg '
@@ -190,18 +191,22 @@ alias killallv="killall -v"
 # TODO:
 alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim/"
-alias cdn="cd ~/.sheets"
+#alias cdn="cd $Draft"
+alias cdn="cd ~/dotfiles/notes"
 
-# vim
+# zsh config file
 alias viz='vim $HOME/.zshrc'
-alias vip='vim ~/.omz/lib/private.zsh'
+alias via='vim ~/.omz/lib/alias.zsh'
 alias vif='vim ~/.omz/lib/01-functions.zsh'
-alias vik="vim ~/.config/kitty/kitty.local.conf"
-alias via="vim ~/.config/alacritty/alacritty.yml"
-alias viw="vim ~/.config/wezterm/wezterm.lua"
-alias vis="vim ~/.omz/lib/start.zsh"
-alias viss="vim ~/.ssh/config"
-#alias vie="vim $(mktemp -t temp.XXXXXX)"
 alias vie="vim ${ZSH}/lib/export.zsh"
+#alias vis="vim ~/.omz/lib/start.zsh"
+
+# terminal config file
+alias vik="vim ~/.config/kitty/kitty.local.conf"
+alias viw="vim ~/.config/wezterm/wezterm.lua"
+#alias via="vim ~/.config/alacritty/alacritty.yml"
+
+#alias viss="vim ~/.ssh/config"
+#alias vie="vim $(mktemp -t temp.XXXXXX)"
 #cd $(find * -type d | fzf)
 #vim $(fzf)

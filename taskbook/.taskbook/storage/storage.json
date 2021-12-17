@@ -290,7 +290,7 @@
         ],
         "_isTask": true,
         "isComplete": false,
-        "inProgress": false,
+        "inProgress": true,
         "priority": 1
     },
     "24": {
@@ -345,7 +345,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": "1"
     },

@@ -385,7 +385,7 @@ function dt() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
   #local PREFIX=~/dotfiles/notes/draft/
-  TODAY="${Draft}$(\date -I)"
+  TODAY="${Draft}/$(\date -I)"
   # NOTE: catn't read environment alias
   nvim ${TODAY}.md
 }
@@ -395,7 +395,7 @@ function dtc() {
   #TODO:
   # fixed: need add last slash
   #local PREFIX=~/dotfiles/notes/draft/
-  nvim "${Draft}${1}"
+  nvim "${Draft}/${1}"
 }
 
 function natapps() {
