@@ -13,7 +13,7 @@
   - flameshot
   - [link](https://github.com/flameshot-org/flameshot)
 
-  ---
+---
 # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 - gnome: dash-to-dock
@@ -45,11 +45,12 @@ lolcat
 # pacman
 # grep enhanced, like grep
 - ripgrep
-duf
 # like du -sh
 - dust
+- duf
+
 fzf
-tree
++tree+
 
 * Iso
   - ventoy
@@ -126,21 +127,21 @@ mlocate
 
 
 
-bat
-tokei
-procs
+- bat
+- tokei
+- procs
 
 seq
 shuffle(command is shuf)
 
 # better pdf
-xournal
+- xournal
 
 # download youtube video
 - you-get
 - youtube-dl
 
-awesome-terminal-fonts
+- awesome-terminal-fonts
 
 # mysql toolsk
 - dbeaver
@@ -307,12 +308,13 @@ anbox
   - gg
   - switychomega
   - nvui
-  - viu
 * terminal
   - wezterm
   - kitty
   - alacritty
+
   - qbitorrent
+
 * 内网
   - natapp
   - nload
@@ -325,9 +327,14 @@ anbox
   - mypaint
   - krita
   - inscape
+  - nomacs
+  - ristretto
+  - feh
+  - viu
+  - xnviewmp
 
 * Pdf
-  - vym(view your mind)
+  - [_]   vym(view your mind)(deprecated)
 
 * Reader
   - foxit reader

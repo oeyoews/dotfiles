@@ -48,3 +48,11 @@
 
 * learn 画图软件
 - why .git folder in github is disappear
+
+* kitty
+  - 分屏如何保留原来workpath
+
+* Vuepress
+  - [ ] how to adjust vuepress font block for palette(add refrence font support for vuepress)
+
+- [-]  如何对一个文件使用不同格式的配置文件

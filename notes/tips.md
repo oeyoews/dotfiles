@@ -14,3 +14,5 @@
 
   - ctrl + alt + F4 : enter tty
 
+* Howdy
+auth      sufficient   pam_python.so /lib/security/howdy/pam.py

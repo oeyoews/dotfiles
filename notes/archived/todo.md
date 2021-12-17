@@ -1,4 +1,3 @@
-/* vim:set et sw=2 ts=2 tw=120 fen: */
 /* {{{  part 1*/
 
 * ORG-MODE [[https://orgmode.org/manual/Headlines.html#Headlines][org_link]]

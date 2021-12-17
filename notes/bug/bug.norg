@@ -22,6 +22,7 @@
 
 * Vim
   - for #123, to use C-a to add this number , this # and number will change locations
+  - 对于emaoj or icon file, 屏幕的自动绘制有一些问题
 
 * Obs
   -  shortkey can't modifed(toggle record and pause record)
@@ -34,3 +35,8 @@
 
 * Ranger
   - can't show images in tmux for ranger
+
+* networkmanager
+  - 由于链接文件找不到， 网络启动失败
+  - [x] sudo /usr/bin/networkmanager/conf.d/...  --no-daemon
+  - tips: sudo /usr/bin/networkmanager  --no-daemon  it will output some errout
