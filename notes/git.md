@@ -148,3 +148,5 @@ hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，com
 
 ### commit
 - git commit -m " empty commit " --allow-empty
+
+- git remote set-url ... // change remote url

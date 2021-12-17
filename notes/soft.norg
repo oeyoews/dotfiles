@@ -24,8 +24,9 @@ cdate
 yay gtk-theme-mackos-mojave
 gtk-theme-macos-sierra-archers-git
 # fcitx5-material-color      # input skin
-krita
-libreoffice-fresh          # office
+
+- libreoffice-fresh          # office
+- freeoffice
 
 manjaro-settings-manjaro   # kernel manager
 visual-studio-code-bin     # vscode
