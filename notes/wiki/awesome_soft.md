@@ -33,10 +33,10 @@ visual-studio-code-bin     # vscode
 # xclip
 # pacman
 # grep enhanced, like grep
-- ripgrep
+- ripgrep(rg like find)
 # like du -sh
 - dust
-- duf
+- duf(show current directory disk)
 
 fzf
 +tree+
@@ -76,9 +76,9 @@ git-open
 sudo pacman -S python-pip
 - magic-wormhole
 
-* gnome-extensions
+##  gnome-extensions
   - trayIconsReloaded
-  - lock
+  - locks
   - GPaste
   - kimpanel
 
@@ -150,7 +150,7 @@ icdiff
   - typora-free
   - marktext
   - mdp
-  - slides
+  - slides(terminal presentation)
   - glow
   - agenta(just for macos)
   - joplin(cli desktop)
@@ -233,7 +233,7 @@ imagemagick(cmd: display)
   - htop
   - btop(c++)
   - gtop
-  - gotop
+  - gotop(like htop be made by go)
   - gpaste
 
 * Brower
@@ -246,7 +246,7 @@ imagemagick(cmd: display)
 
 * Tools
   - ttyd
-  - cheat
+  - cheat(deprecated)
   - stow
   - idea-music
   - downgrade
@@ -293,7 +293,7 @@ anbox
   - stellarium
   - musescore
 
-  - tldr(tealdeer)
+  - tldr(tealdeer made by go)
   - gg
   - switychomega
   - nvui
@@ -319,7 +319,7 @@ anbox
   - nomacs
   - ristretto
   - feh
-  - viu
+  - viu(in terminal, show your terminal)
   - xnviewmp
 
 * Pdf
@@ -335,3 +335,5 @@ anbox
 * Video
   - kdenlive
   - opentoonz
+
+  * passline(in github)
