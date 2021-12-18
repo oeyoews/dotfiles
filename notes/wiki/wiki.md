@@ -301,6 +301,11 @@ trans(late-shell)
   - deploy ==> release
 
 
+### gitlab 推送失败
+  - kex_exchange_identification:
+  - delete .ssh/konw-host/(about gitlab), git push again
+
+
 ## gnome
   * Solve Automatic Screen
   - Start the application "Settings"Choose "Privacy" under the "Personal" heading.
@@ -937,4 +942,7 @@ auth      sufficient   pam_python.so /lib/security/howdy/pam.py
   - wolai.com
   - notion.com
   - trello
+
+## memory
+  - wps and qq etc need kill by manual
 
