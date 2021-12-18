@@ -385,7 +385,7 @@ function dt() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
   #local PREFIX=~/dotfiles/notes/draft/
-  TODAY="${Draft}/$(\date -I)"
+  local TODAY="${Draft}/$(\date -I)"
   # NOTE: catn't read environment alias
   $EDITOR ${TODAY}.md
 }
@@ -395,7 +395,7 @@ function dtc() {
   #TODO:
   # fixed: need add last slash
   #local PREFIX=~/dotfiles/notes/draft/
-  $EDITOR "${Draft}/${1}"
+  $EDITOR + "${Draft}/${1}"
 }
 
 function natapps() {
@@ -424,3 +424,15 @@ function nn() {
   $EDITOR ~/dotfiles/notes/wiki/$1
 }
 
+
+
+# GTD every day
+function dtt() {
+  local TODAY="${Draft}/todo-daily/$(\date -I)"
+  $EDITOR + ${TODAY}.norg
+}
+
+# need a parameter
+function dttl() {
+  $EDITOR + "${Draft}/todo-daily/${1}"
+}
