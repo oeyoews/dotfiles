@@ -1,20 +1,8 @@
-@document.meta
-  title: soft
-  description:
-  author: oeyoews
-  categories: awesome-software
-  created: 2021-11-06
-  version: 0.3
-@end
-
-
----
 * Picture
   - flameshot
   - [link](https://github.com/flameshot-org/flameshot)
 
----
-# (note: if turn on input method panel , all fcitx skin will don't work)
+  # (note: if turn on input method panel , all fcitx skin will don't work)
 gnome-shell-extension-kimpanel
 - gnome: dash-to-dock
 - gnome-keyring              # for vscode synchronize~~, for google-chrome microsoft-edge-beta-bin vscode and etc...
@@ -37,9 +25,9 @@ visual-studio-code-bin     # vscode
 # powertop # 耗电分析
 # mysql tool
 # system clipboard link
-- [x] neovim(python-pynvim)
+- neovim(python-pynvim)
 
-lolcat
+- lolcat
 # ls -al | xclip
 # gufw
 # xclip
@@ -89,12 +77,12 @@ sudo pacman -S python-pip
 - magic-wormhole
 
 * gnome-extensions
-- trayIconsReloaded
-- lock
-- GPaste
-- kimpanel
+  - trayIconsReloaded
+  - lock
+  - GPaste
+  - kimpanel
 
-===
+  ===
 * MusicPlayer
   - mpv (Q save time)
   - moc(cli: mocp)
@@ -106,7 +94,7 @@ sudo pacman -S python-pip
   - museeks
 
 
-# https://www.cnblogs.com/kevingrace/p/10188283.html
+  # https://www.cnblogs.com/kevingrace/p/10188283.html
 # terminal session recorder
 - asciinema
 
@@ -196,7 +184,7 @@ traceroute(linux)
 
 -<!--editor-->-
 - kakoune
-  - simiki
+- simiki
 
 
 qtcreater
@@ -221,7 +209,7 @@ imagemagick(cmd: display)
 
 * Dictionary
   - wudao-dict-git
-    - clone this repository to .local/share
+  - clone this repository to .local/share
   - dict-cli [link](https://github.com/FeeiCN/dict)
   - translate-shell
   - artha
@@ -265,9 +253,9 @@ imagemagick(cmd: display)
 
 
 * Video
-- obs                        # record video
-- kooha
-- gromit-mpx(painting)
+  - obs                        # record video
+  - kooha
+  - gromit-mpx(painting)
 
 * Typing
   - ttyper(tty-best)
@@ -277,19 +265,19 @@ imagemagick(cmd: display)
   - tuxtype
   - wpm(use pip)
   - ff(self in omz/src)(tty_best)
-    - ff -n [nu]
-    - ff -n 22 -g 4
-    - ff -quotes en
-    - ff -t 30
+  - ff -n [nu]
+  - ff -n 22 -g 4
+  - ff -quotes en
+  - ff -t 30
 
 * Font
   - Fira Code
 
-- [*] Tmp
+  - [*] Tmp
   - tig
   - mycli
-- `ranger`
-ncdu
+  - `ranger`
+  ncdu
 anbox
 - pamac
 - remmina
@@ -317,11 +305,11 @@ anbox
   - qbitorrent
 
 * 内网
-  - natapp
-  - nload
-  - dstat
-  - iftop
-  - diff-so-fancy
+- natapp
+- nload
+- dstat
+- iftop
+- diff-so-fancy
 
 * Image
   - gimp

@@ -54,7 +54,7 @@ cheatpaths:
   # If you have personalized cheatsheets, list them last. They will take
   # precedence over the more global cheatsheets.
   - name: note
-    path: ~/dotfiles/notes/
+    path: ~/dotfiles/notes/cheat_notes
     tags: [ personal ]
     readonly: false
 

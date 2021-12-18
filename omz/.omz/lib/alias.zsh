@@ -95,9 +95,10 @@ alias kemoj="kitty +kitten unicode_input"
 alias diffk="kitty +kitten diff"
 
 
-# Misc
-alias che="cheat -e"
-alias chl="cheat -l"
+# @deprecated
+#alias che="cheat -e"
+#alias chl="cheat -l"
+
 alias ports='netstat -tulanp'  # need install `net-tools
 alias jc="journalctl"
 alias sc="systemctl"

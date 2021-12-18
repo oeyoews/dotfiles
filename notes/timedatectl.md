@@ -1,3 +1,0 @@
-- timedatectl set-ntp true
-- timedatectl status
-- timedatectl set-local-rtc 0

@@ -387,7 +387,7 @@ function dt() {
   #local PREFIX=~/dotfiles/notes/draft/
   TODAY="${Draft}/$(\date -I)"
   # NOTE: catn't read environment alias
-  nvim ${TODAY}.md
+  $EDITOR ${TODAY}.md
 }
 
 # need a parameter
@@ -395,7 +395,7 @@ function dtc() {
   #TODO:
   # fixed: need add last slash
   #local PREFIX=~/dotfiles/notes/draft/
-  nvim "${Draft}/${1}"
+  $EDITOR "${Draft}/${1}"
 }
 
 function natapps() {
@@ -418,3 +418,9 @@ function natapps() {
 #function vif() {
   #$EDITOR $1
 #}
+
+
+function nn() {
+  $EDITOR ~/dotfiles/notes/wiki/$1
+}
+

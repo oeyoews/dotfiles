@@ -1,0 +1,28 @@
+@document.meta
+  title: termux
+  description:
+  author: oeyoews
+  categories:
+  created: 2021-11-19
+  version: 0.1
+@end
+
++
+- termux-change-repo
+- https://mirrors.tuna.tsinghua.edu.cn/help/termux/
+
+--chsh -s /bin/zsh--
+
+- install xunfei input method for termux
++
+
+### termux
+* https://mirrors.tuna.tsinghua.edu.cn/help/termux/
+* termux-change-repo  [x]
+* sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list
+sed -i 's@^\(deb.*games stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list
+sed -i 's@^\(deb.*science stable\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list
+apt update && apt upgrade
+*  vim zsh git
+* watch -n 1 -d ls demo/ # watch file change
+

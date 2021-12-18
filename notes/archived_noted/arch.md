@@ -119,19 +119,3 @@ arch-chroot /mnt
 ** timezone
 1. ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 2. hwclock --systohc
-
-
-** locale
- 1. sudo vim /etc/locale.gen
- 2. locale-gen
- 3. sudo echo 'LANG=en_US.UTF-8'  > /etc/locale.conf
- 4. passwd root
- 5. useradd -m myarch
- 6. passwd myarch
- 7. pacman -S intel-ucode   #Intel
- 8. pacman -S grub efibootmgr
- 9. grub-install /boot/EFI
- 10. grub-mkconfig -o /boot/grub/grub.cfg
- 11. pacman gnome gdm
- 12. systemctl enable gdm
- 13. systemctl enable networkmanager ?
