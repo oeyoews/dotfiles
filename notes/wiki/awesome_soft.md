@@ -35,8 +35,8 @@ visual-studio-code-bin     # vscode
 # grep enhanced, like grep
 - ripgrep(rg like find)
 # like du -sh
-- dust
-- duf(show current directory disk)
+- dust(show curren directory)
+- duf(show disk)
 
 fzf
 +tree+
@@ -307,7 +307,7 @@ anbox
 * 内网
 - natapp
 - nload
-- dstat
+- dstat(network)
 - iftop
 - diff-so-fancy
 
@@ -332,7 +332,7 @@ anbox
   - calibre
   - foliate                    # book read
 
-* Video
+* Video editor
   - kdenlive
   - opentoonz
 
