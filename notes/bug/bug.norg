@@ -40,3 +40,6 @@
   - 由于链接文件找不到， 网络启动失败
   - [x] sudo /usr/bin/networkmanager/conf.d/...  --no-daemon
   - tips: sudo /usr/bin/networkmanager  --no-daemon  it will output some errout
+
+* Kvm
+  - use redirect mode will leat to your virtual matchine no network, use tproxy for v2raya.
