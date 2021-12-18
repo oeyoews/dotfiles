@@ -381,7 +381,7 @@ function on() {
   echo -e "\033[0;32m${1}\033[0m is runing ..."
 }
 
-function dt() {
+function oed() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
   #local PREFIX=~/dotfiles/notes/draft/
@@ -391,7 +391,7 @@ function dt() {
 }
 
 # need a parameter
-function dtc() {
+function oedl() {
   #TODO:
   # fixed: need add last slash
   #local PREFIX=~/dotfiles/notes/draft/
@@ -427,12 +427,12 @@ function nn() {
 
 
 # GTD every day
-function dtt() {
+function oet() {
   local TODAY="${Draft}/todo-daily/$(\date -I)"
   $EDITOR + ${TODAY}.norg
 }
 
 # need a parameter
-function dttl() {
+function oetl() {
   $EDITOR + "${Draft}/todo-daily/${1}"
 }

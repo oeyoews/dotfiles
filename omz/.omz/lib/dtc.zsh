@@ -1,4 +1,4 @@
-# functionName
+# oeyoews edit diary (oed)
 _dtc()
 {
   COMPREPLY=()
@@ -30,4 +30,5 @@ _dtc()
 }
 
 # format functionName commandName
-complete -F _dtc dtc
+#
+#complete -F _dtc oed

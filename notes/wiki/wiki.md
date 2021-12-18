@@ -703,7 +703,7 @@ prefix nu # 切换窗口
 - * systemctl enable fstrim.timer
 - * systemctl list-timers --all
 - * journalctl --vacuum-size=256M
-- * jctl -u tlp.service
+- * jctl -u (-f) tlp.service
 -
 - # new archwikich for mariadb
 - * sudo mysql_secure_installation # interactive config
@@ -898,18 +898,18 @@ first press fn + w and press fn + win(lock win key)
 
 auth      sufficient   pam_python.so /lib/security/howdy/pam.py
 
-* Norg
+##  Norg
   - creat norg file occured header cant's recronized
 
   - (like inter @ symbol, it will have soem error tips in minbuffer)
 
   - like crontab.norg, it will can's recronized
 
-* Java
+##  Java
   - jframe can't show gui !!!
 
 
-* Vim
+##  Vim
   - for #123, to use C-a to add this number , this # and number will change locations
   - 对于emaoj or icon file, 屏幕的自动绘制有一些问题
 
@@ -929,3 +929,12 @@ auth      sufficient   pam_python.so /lib/security/howdy/pam.py
 
    2. Q: can't open exist ipynb file?
       A: must open in folder, like code jupyter.
+
+## wezterm
+     - chinese fonts have some delay
+
+## GTD
+  - wolai.com
+  - notion.com
+  - trello
+

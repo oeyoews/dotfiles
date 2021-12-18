@@ -7,4 +7,4 @@ _cdf()
     return 0
 }
 
-complete -F _cdf cdf
+#complete -F _cdf cdf

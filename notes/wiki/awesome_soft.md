@@ -325,7 +325,7 @@ anbox
 * Pdf
   - [_]   vym(view your mind)(deprecated)
 
-* Reader
+- Reader
   - foxit reader
   - obular
   - kchmviewer

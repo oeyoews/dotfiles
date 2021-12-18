@@ -1,3 +1,4 @@
+# oeyoews edit dirary list
 _dttl()
 {
   COMPREPLY=()
@@ -7,4 +8,4 @@ _dttl()
   return 0
 }
 
-complete -F _dttl dttl
+#complete -F _dttl oedl
