@@ -67,5 +67,5 @@
     "editor.inlineSuggest.enabled": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    "go.gopath": "~/go"
+    // "go.gopath": "~/go"
 }
