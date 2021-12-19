@@ -1,5 +1,5 @@
 @document.meta
-  title: todo
+  title: todo personal
   description:
   author: oeyoews
   categories:
@@ -27,17 +27,14 @@
   - [x] learn like tldr [link](https://github.com/tldr-pages/tldr)
 
 * Passline
-  - [-] how to build passline
-  - add number
-  - and multip select
+  - [_] how to build passline add number and multip select
+
 
   - how to use systemd(systemctl) to enable personal service [link](https://blog.lilydjwg.me/2014/2/2/systemd-user-daemons.42631.html)
 
 * Server
-  - learn 服务器web
-  [link](https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-7wsriqn6&action=DescribeInstanceLoginKeyPair)
-
-  - 使用域名绑定服务器的网站
+  - [x]  learn 服务器web [link](https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-7wsriqn6&action=DescribeInstanceLoginKeyPair)
+  - [-] 使用域名绑定服务器的网站
 
 * 考研
   - [ ] youtube 考研课程
@@ -57,10 +54,9 @@
 
   - [-]  如何对一个文件使用不同格式的配置文件
 
-* Learn
-  - blender
 
 
 * possibile events
 - [ ]  reveal-md how to custom up and down chapter
 - [ ]  use makefile to install dotfiles
+- [ ] blender

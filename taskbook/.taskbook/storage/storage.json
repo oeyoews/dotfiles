@@ -107,8 +107,8 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
-        "inProgress": true,
+        "isComplete": true,
+        "inProgress": false,
         "priority": "1"
     },
     "10": {
@@ -136,7 +136,7 @@
         ],
         "_isTask": true,
         "isComplete": false,
-        "inProgress": false,
+        "inProgress": true,
         "priority": "1"
     },
     "12": {
@@ -374,7 +374,7 @@
         ],
         "_isTask": true,
         "isComplete": false,
-        "inProgress": false,
+        "inProgress": true,
         "priority": 1
     },
     "31": {
