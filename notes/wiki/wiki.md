@@ -1,11 +1,10 @@
 ## Language
-
   - [[https://wiki.archlinux.org/title/Locale_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#LANGUAGE%EF%BC%9A%E5%90%8E%E5%A4%87%E5%8C%BA%E5%9F%9F%E8%AE%BE%E7%BD%AE][locale]]
   - /etc/locale.gen
   - zh_CN.UTF-8 UTF-8
   - en_US.UTF .....
   - sudo locale-gen
-    ( will have some warning like language  use export LC_ALL="en_US.UTF-8" to /etc/profile and relogin)
+      ( will have some warning like language  use export LC_ALL="en_US.UTF-8" to /etc/profile and relogin)
 
 
 1. sudo vim /etc/locale.gen
@@ -28,15 +27,13 @@
 
 
 ## cp
-
 ```shell
 eg: dir: 1/2/3
 cp -r 1/ 2 like copy 1/*
-                         ```
+```
 
 
 ## crontab
-
 ```shell
 - sudo su
 - sudo crontab -u root -e
@@ -55,10 +52,10 @@ shortkey: ctrl + m
 - sudo vim /etc/my.cnf
 - add
 
-```mysql
-[mysqld]
-skip-grant-tables=1
-```
+    ```mysql
+    [mysqld]
+    skip-grant-tables=1
+    ```
 
 - sudo mysql
 - set password for root@localhost=password('2956');
@@ -75,17 +72,17 @@ skip-grant-tables=1
 ###  NOTE:
 - unpack(v5.1)  ==> table.unpack(v5.4)
 
-lspinstaller site: .local/share/lsp-servers/...
+    lspinstaller site: .local/share/lsp-servers/...
 
-system yay site : /usr/libs/lua....(by pkgbuild)
+    system yay site : /usr/libs/lua....(by pkgbuild)
 
 ### logical operator
 - and: if has false, return fasle
 - or: if has true (this order is not important), return this true
 
-path: /usr/share/lua/5.1...
+    path: /usr/share/lua/5.1...
 
-print(package.path)
+    print(package.path)
 
 ### Type
 - number string
@@ -143,7 +140,7 @@ print(package.path)
 
 ## wine
 
-  ```
+```
   - use wine64 *.exe to use huawei idea to install it
   - cd .wine/....
   - wine64 launcher.exe
@@ -180,10 +177,10 @@ sudo virsh net-start default
   - use redirect mode will leat to your virtual matchine no network, use tproxy for v2raya.
 
 ## v2raya
-  <!--link-->
+<!--link-->
 - system proxy for telegram need open system network by manual (http 20272)
 
-  <!--close-->
+    <!--close-->
   - when shutdown varaya.service, if open system proxy, need shut it by manual.
 
   - if use latern, it's have some problems for your computer.
@@ -192,46 +189,46 @@ sudo virsh net-start default
 
 ## translate
 
-  ```shell
+```shell
 * trans -T
-  https://github.com/soimort/translate-shell
+https://github.com/soimort/translate-shell
 https://www.clloz.com/programming/assorted/2019/11/19/translate-shell-usage/
 bug: translate a text file, ues it will failed again
 fix: ip close your ladder network! and you can use `trans --debug "hello, translate-shell" to find problem from this debug info
-  your ladder is used by abuntant
+your ladder is used by abuntant
 trans(late-shell)
-  trans --speak demo
-  trans -R
-  trans -I/E
-  to chinese
-  trans :zsh demo
-  trans en:ja -p
-  trans -id demo
-  trans :fr url(file:///)
-  trans -browser firefox :fr http://www.w3.org/
-  trans -S
-  trans -M
-  trans :ja xxx -p -b
-  ```
+trans --speak demo
+trans -R
+trans -I/E
+to chinese
+trans :zsh demo
+trans en:ja -p
+trans -id demo
+trans :fr url(file:///)
+trans -browser firefox :fr http://www.w3.org/
+trans -S
+trans -M
+trans :ja xxx -p -b
+```
 
 ## markdown
 
-  ```shell
+```shell
 
   * *~~ ~~* # deline
   ```
 
   - demo^demo^
   - demo~demo~
-  <big> demo <big>
-  <small> demo <small>
-  <mark> demo <mark>
+      <big> demo <big>
+      <small> demo <small>
+      <mark> demo <mark>
 
   - [text](url "popup tips")
-  This is [an example][id] reference-style link.
+      This is [an example][id] reference-style link.
 
 
-  [id]: http://example.com/  "Optional Title Here"
+[id]: http://example.com/  "Optional Title Here"
 
 
 ## sound
@@ -258,7 +255,7 @@ trans(late-shell)
 
   - ssh-copy-id <id>
   - copy your public ssh-id to your server, the first time, you need input password
-  ssh-copy-id 将本机的公钥复制到远程机器的authorized_keys文件中，
+      ssh-copy-id 将本机的公钥复制到远程机器的authorized_keys文件中，
   - konw-host: record ip
 
   - ssh-keygen -R <server-id>
@@ -266,7 +263,7 @@ trans(late-shell)
 
 
 ## shellscripts
-  ``` shell
+``` shell
   - $() and ``:  命令替换
   - $(()) : 数学计算，**等运算符号不会被shell解析其他含义
             - $[] : 数学计算， need \*
@@ -296,7 +293,7 @@ trans(late-shell)
 - sudo vim ./app/src/engine/licence.js....(130, false => true, and comment nextline)
   - asar pack app asar.app
 
-## gitlab
+  ## gitlab
 
   - deploy ==> release
 
@@ -316,11 +313,11 @@ trans(late-shell)
   * Plugins
   - [tray](https://extensions.gnome.org/extension/615/appindicator-support/)
 
-  * WallPaper
+  ##  WallPaper
   - cd /usr/share/backgrounds
 
 
-  * Settings
+* Settings
   - win + alt + 8
 - 开启放大镜, 在辅助功能 -> 缩放 ->(should disable)
 
@@ -336,9 +333,9 @@ trans(late-shell)
 
   - font: 1.50(settings) 大号文本(优化tweaks)
 
-## github
+  ## github
   - using ssh:..... to resolve no permission for .github/workflow
- Github
+  Github
   - click dot to enter github.dev(web vscode)
   - [github.dev](https://github.dev/github/dev)
 
@@ -346,7 +343,7 @@ trans(late-shell)
   - commit id add .patch to check it
 
 * git-filter-repo
-  #将所有用户名中包含的foo替换成ttys3 （注意，不支持中文)
+#将所有用户名中包含的foo替换成ttys3 （注意，不支持中文)
 git filter-repo --name-callback 'return name.replace(b"foo", b"ttys3")'
 
 #将所有commit信息的email中包含的 foo@example.com 替换成 my-email@example.com
@@ -364,23 +361,23 @@ man -L en man  # show English-man
  - glxgears
  - glxinfo | grep -i opengl
 
-  ###
-  mkdir 1\ 2     # mkdir (1 2) folder.  space 使用转义实现
-  mkdir -p # rescursion make dir.
-poweroff # shutdown
-halt -p # shutdown
-lsb_release -a    # 查看manjaro的版本号
-uname -a
-hostname // 查看主机名字
+ ###
+ mkdir 1\ 2     # mkdir (1 2) folder.  space 使用转义实现
+ mkdir -p # rescursion make dir.
+ poweroff # shutdown
+ halt -p # shutdown
+ lsb_release -a    # 查看manjaro的版本号
+ uname -a
+ hostname // 查看主机名字
 
-sudo archlinux-java set java-11-openjdk     //设置默认Java版本
-archlinux-java status
+ sudo archlinux-java set java-11-openjdk     //设置默认Java版本
+ archlinux-java status
 
-ls  /usr/lib/jvm/   //查看所有的Java版本
+ ls  /usr/lib/jvm/   //查看所有的Java版本
 
-mkdir dem/die     -p      # 创建递归目录
+ mkdir dem/die     -p      # 创建递归目录
 
-neofetch --ascii_distro arch/centos/fedora.....
+ neofetch --ascii_distro arch/centos/fedora.....
 
 - 由于dos风格的换行使用\r\n，把这样的文件上传到unix，有些版本的vi不能识别\r，所以vi显示时在行尾会出现^M出来，但是有些就能识别\r\n，正常显示回车换行。
 
@@ -407,31 +404,31 @@ Carriage n.马车,火车车厢;运输费用
  -
  - c++语言编程时（windows系统）\r 就是return 回到 本行 行首 这就会把这一行以前的输出 覆盖掉
 
-## PATH
+ ## PATH
 
-export PATH=$PATH:/........
+ export PATH=$PATH:/........
 
-export PATH=/usr/local/bin:$PATH
-// PATH是变量名，这里是指添加到PATH这个环境变量中
-// =后面是要添加的环境变量
-// :$PATH是指把新添加的环境变量与原先的环境变量重新赋值给PATH这个变量，这里可以看出如果有多个环境变量时，应该使用:进行分隔，如
-// export PATH=/usr/local/php/bin:/usr/local/mysql/bin:$PATH
-// 当然$PATH是放在开头还是最后是没有影响的
+ export PATH=/usr/local/bin:$PATH
+ // PATH是变量名，这里是指添加到PATH这个环境变量中
+ // =后面是要添加的环境变量
+ // :$PATH是指把新添加的环境变量与原先的环境变量重新赋值给PATH这个变量，这里可以看出如果有多个环境变量时，应该使用:进行分隔，如
+ // export PATH=/usr/local/php/bin:/usr/local/mysql/bin:$PATH
+ // 当然$PATH是放在开头还是最后是没有影响的
 
-tar xvf ... # tar a file
-tar zcvf back.tar.gz 1.html 2.html  # - can ben ignore  or use backup.tgz
-tar zxvf path/demo.tar.gz # zip demo.tar.gz
-tar ztvf 1.tgz # show files about 1.tgz
-tar zxvf 1.tgz 1.c # unzip some files in 1.tgz ?
-tar zcvf 1.tgz 1.cpp -w # show second confirm
+ tar xvf ... # tar a file
+ tar zcvf back.tar.gz 1.html 2.html  # - can ben ignore  or use backup.tgz
+ tar zxvf path/demo.tar.gz # zip demo.tar.gz
+ tar ztvf 1.tgz # show files about 1.tgz
+ tar zxvf 1.tgz 1.c # unzip some files in 1.tgz ?
+ tar zcvf 1.tgz 1.cpp -w # show second confirm
 
-tat zxvf 1.tgz -C <path> # 将tgz 包解压到制定的目录
+ tat zxvf 1.tgz -C <path> # 将tgz 包解压到制定的目录
 
-z  --- 利用gzip方式进行压缩文件信息
-c  --- creat 创建出一个压缩包
-t  list
-v  --- 显示压缩数据过程
-f  --- 指定压缩包保存路径
+ z  --- 利用gzip方式进行压缩文件信息
+ c  --- creat 创建出一个压缩包
+ t  list
+ v  --- 显示压缩数据过程
+ f  --- 指定压缩包保存路径
 
 
 - ln -sf absolute(path) ~/new-name
@@ -443,7 +440,7 @@ f  --- 指定压缩包保存路径
 - rm -- -g # use '--' or ./-g to delete this special file more information to man rm
 
 - $(RM) * .o \
-    -r # \ newline
+-r # \ newline
 - # we usually to set some settings in .xprofil or .profile
 
 - df -Th # count this system disk
@@ -529,49 +526,49 @@ fstrim sctl
 
 - (bug)filetype is not suit filname.extend
   - can't show images in tmux for ranger
-r # choose open file's tool.
+  r # choose open file's tool.
 
-[ or ] # choose parent folder.
+  [ or ] # choose parent folder.
 
-zh or ctrl h  to show hidden files.
+  zh or ctrl h  to show hidden files.
 
-cw # rename file_name. or use 'a' 'A'
+  cw # rename file_name. or use 'a' 'A'
 
-i  # preview like vim but not vim for work.
+  i  # preview like vim but not vim for work.
 
-v  or space  # select file
+  v  or space  # select file
 
-w # task manager.
+  w # task manager.
 
-always look for github_wikis.
+  always look for github_wikis.
 
-tsz -i file_name.
+  tsz -i file_name.
 
-cw # rename
+  cw # rename
 
-S   //进入指定的文件夹，进入一个新的终端，退出当前的终端，会再次回到ranger中
+  S   //进入指定的文件夹，进入一个新的终端，退出当前的终端，会再次回到ranger中
 
-/ #search
+  / #search
 
-gg G # same vim
+  gg G # same vim
 
-yy dd pp # 复制剪切 粘贴
+  yy dd pp # 复制剪切 粘贴
 
-f # 查找
+  f # 查找
 
-A # 在当前的基础上进行重命名
+  A # 在当前的基础上进行重命名
 
-I  # 同上   same vim
+  I  # 同上   same vim
 
-dD   # 彻底删除
+  dD   # 彻底删除
 
   on/ob   根据文件名进行排序(natural/basename)
   oc      根据改变时间进行排序 (Change Time 文件的权限组别和文件自身数据被修改的时间)
   os      根据文件大小进行排序(Size)
-ot      根据后缀名进行排序 (Type)
+  ot      根据后缀名进行排序 (Type)
 
   oa      根据访问时间进行排序 (Access Time 访问文件自身数据的时间)
-om      根据修改进行排序 (Modify time 文件自身内容被修改的时间)
+  om      根据修改进行排序 (Modify time 文件自身内容被修改的时间)
 
   zp   # 预览代码
 
@@ -583,8 +580,8 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
   export RANGER_LOAD_DEFAULT_RC=FALSE
   sudo pacman -S  --noconfirm libcaca highlight atool lynx w3m elinks  mediainfo   # install  depencies
 
-#找出含有docx的一行，然后将其注释起来：
-#ext docx?, has catdoc,       terminal = catdoc -- "$@" | "$PAGER"
+  #找出含有docx的一行，然后将其注释起来：
+  #ext docx?, has catdoc,       terminal = catdoc -- "$@" | "$PAGER"
   s # enter this shell environment.
   git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
   echo "default_linemode devicons" >> $HOME/.config/ranger/rc.conf   # add devicons
@@ -592,34 +589,34 @@ om      根据修改进行排序 (Modify time 文件自身内容被修改的时�
   - ranger --copy-config=all  # configure some files
   - [ranger_tutor](https://blog.csdn.net/lxyoucan/article/details/115671189)
 
-## Tmux
+  ## Tmux
 
-mod: ctrl + a or ctrl + b
-mod <nu>
-mod ?
-mod -  # vsplit
+  mod: ctrl + a or ctrl + b
+  mod <nu>
+  mod ?
+  mod -  # vsplit
 
-`prefix> C-c`表示您必须先按Ctrl+a或Ctrl+，b再按Ctrl+c
+  `prefix> C-c`表示您必须先按Ctrl+a或Ctrl+，b再按Ctrl+c
 
-prefix C c  # 新建会话  creat
+  prefix C c  # 新建会话  creat
 
-prefix s   # 选择窗口 select    安装x进行关闭窗口
-prefix ?   # show all shortkeys
-prefix x   # 关闭整个tmux
+  prefix s   # 选择窗口 select    安装x进行关闭窗口
+  prefix ?   # show all shortkeys
+  prefix x   # 关闭整个tmux
 
-prefix  d # 临时退出tmux   deattch
+  prefix  d # 临时退出tmux   deattch
 
-tmux  a -t  (nu)  # 连接已经存在的session  panel->window->session
+  tmux  a -t  (nu)  # 连接已经存在的session  panel->window->session
 
-tmux ls   # 列出所有的window
+  tmux ls   # 列出所有的window
 
-prefix t  # show time
+  prefix t  # show time
 
-prefix [   # 进入复制模式    进入可视模式    prefix ] 粘贴
+  prefix [   # 进入复制模式    进入可视模式    prefix ] 粘贴
 
-q # 退出
+  q # 退出
 
-prefix nu # 切换窗口
+  prefix nu # 切换窗口
 
 *  tmux  new -s daily # creat a session called daily.
 *  C-b , # rename this window's name
@@ -808,7 +805,7 @@ prefix nu # 切换窗口
 - python sit-packages 报错，删除相关的包
 
 - Virtual error fix
- -第二次 安装 iso 时，需要重新挂载 iso， 使用 stat 引导
+-第二次 安装 iso 时，需要重新挂载 iso， 使用 stat 引导
 
 
 * font
@@ -862,9 +859,9 @@ https://zhuanlan.zhihu.com/p/157260502
 ek861: win is doesn't work
 first press fn + w and press fn + win(lock win key)
 
-* Reset passwd
+## Reset passwd
   - boot => click `e`, and find linux, add `init=/bin/bash`(may you can add single to replace it) at the end of sentence, click `ctrl+x` enter single user
-  mode
+      mode
   - type `mount -n -o remount,rw /`
   - passwd .....
   - reboot -f(important)
@@ -872,7 +869,7 @@ first press fn + w and press fn + win(lock win key)
 
   - systemctl is-enabled tlp
 
-* Games for browser
+##  Games for browser
 
   - [edge](edge://surf/)
   - [chrome](chrome://dino/)
@@ -919,7 +916,7 @@ auth      sufficient   pam_python.so /lib/security/howdy/pam.py
   - 对于emaoj or icon file, 屏幕的自动绘制有一些问题
 
 
-  fcitx5 shring
+fcitx5 shring
   - for stow , if have .gitignore, it no effect
 
 
@@ -930,10 +927,10 @@ auth      sufficient   pam_python.so /lib/security/howdy/pam.py
 
 ## netease-cloud-music
 1. Q: netease-cloud-music font is too small in high-resoluation?
-   A: 找到 Exec=这行，替换如下代码 netease-cloud-music --force-device-scale-factor=1.5 %U
+A: 找到 Exec=这行，替换如下代码 netease-cloud-music --force-device-scale-factor=1.5 %U
 
-   2. Q: can't open exist ipynb file?
-      A: must open in folder, like code jupyter.
+2. Q: can't open exist ipynb file?
+A: must open in folder, like code jupyter.
 
 ## wezterm
      - chinese fonts have some delay
@@ -941,8 +938,27 @@ auth      sufficient   pam_python.so /lib/security/howdy/pam.py
 ## GTD
   - wolai.com
   - notion.com
-  - trello
+  - trello(@deprecated: network is not well)
 
 ## memory
   - wps and qq etc need kill by manual
+
+## reveal
+  - reveal.md xxx.md -w
+  - f(fullscreen)
+  - (h/l/j/k/n/p)
+  - esc: show all slides
+  - ctrl + mouse click zoom(everywhere)
+  - s(speakview)
+  - b(board)(need install plugin)
+  - b
+  - reveal.md xxx.md --print xx.pdf
+  ### bug
+  - this reveal-md.json staticDir is different to static-dir???
+
+  ## youtube double cc
+  - change youtube language to english, and setup this plugin, reboot again
+
+  ## yarn
+  - yarn init -y
 
