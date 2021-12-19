@@ -7,44 +7,31 @@
   version: 0.1
 @end
 
-- [_] Computer Internet Princel*/
-- [_] MOOC test
-- [ ] self*/ /*- 数据结构*/ /*- jvm*/
-
 * Learn
   - java
   - vue
   - [x] git deepthly
   - learn delete file from all commit [git-filter-repo](https://github.com/vanillaf/git-filter-repo#simple-example-with-comparisons)
-  - learn js so to modify taskbook
-  - learn latex use lyx
-  - [x] learn go
+  +- learn js so to modify taskbook+
   - read some english books
-  - learn 数据结构
 
 * Github
   - [_] learn use to autogenerate release(打包， 或者着根据制定文件夹打包)
   - [x] learn like tldr [link](https://github.com/tldr-pages/tldr)
 
-* Passline
-  - [_] how to build passline add number and multip select
-
-
   - how to use systemd(systemctl) to enable personal service [link](https://blog.lilydjwg.me/2014/2/2/systemd-user-daemons.42631.html)
 
 * Server
   - [x]  learn 服务器web [link](https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-7wsriqn6&action=DescribeInstanceLoginKeyPair)
-  - [-] 使用域名绑定服务器的网站
 
 * 考研
   - [ ] youtube 考研课程
 
-* omz/lib/.zsh have some bug, tip complete can't reconize
++* omz/lib/.zsh have some bug, tip complete can't reconize+
 
 * 服务器安装arch
+  - [_]  use rsync to install arch as a server
 
-* learn 画图软件
-  - why .git folder in github is disappear
 
 * kitty
   - 分屏如何保留原来workpath
@@ -52,11 +39,36 @@
 * Vuepress
   - [ ] how to adjust vuepress font block for palette(add refrence font support for vuepress)
 
-  - [-]  如何对一个文件使用不同格式的配置文件
+
+* libreoffice
+  - 页码插入不连续
+  - 如何插入书签
+
+* Question
+  - [ ]   where is the .git folders
+
+
+* Inbox
+
+
+* Trash
++* Passline+
+  - [_] how to build passline add number and multip select
++* learn 画图软件+
+  - [_] learn go
+- [_] Computer Internet Princel*/
+- [_] MOOC test
++- [ ] self*/ /*- 数据结构*/ /*- jvm*/+
 
 
 
 * possibile events
 - [ ]  reveal-md how to custom up and down chapter
+- [ ]  learn reveal.js
 - [ ]  use makefile to install dotfiles
 - [ ] blender
+- [ ]  如何对一个文件使用不同格式的配置文件
+- [ ] 使用域名绑定服务器的网站
+- [ ] github 可以bind 多个域名吗？
+- [ ]  learn 数据结构
+- [ ]  learn latex use lyx

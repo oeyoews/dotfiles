@@ -150,3 +150,10 @@ hard 表示将工作区 暂存区 版本库记录 恢复到某一定版本，com
 - git commit -m " empty commit " --allow-empty
 
 - git remote set-url ... // change remote url
+
+- git fetch (get all branches ???)
+
+## Note
+- if a new file never recorded by git, even you switch new branch, modify anyaway, it's influencd for all branch
+- and if the file is recorded, if you don't add or Commit to switch another branch, it's will fetch current file jobs to
+  next branch, unless you commit it's job

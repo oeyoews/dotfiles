@@ -953,12 +953,18 @@ A: must open in folder, like code jupyter.
   - b(board)(need install plugin)
   - b
   - reveal.md xxx.md --print xx.pdf
-  ### bug
+### bug
   - this reveal-md.json staticDir is different to static-dir???
 
-  ## youtube double cc
+## youtube double cc
   - change youtube language to english, and setup this plugin, reboot again
 
-  ## yarn
+## yarn
   - yarn init -y
 
+## disk
+  - df -l
+  - lsblk
+  - fdisk -l
+  - df -Th
+  demo

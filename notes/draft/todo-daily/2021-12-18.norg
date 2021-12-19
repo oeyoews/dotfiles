@@ -7,5 +7,5 @@
   version: 0.0.9
 @end
 
-- [ ]  整理实验报告
+- [x]  整理实验报告
 - [x]  gitlab dotfile 22 ports can't use

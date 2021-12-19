@@ -35,7 +35,7 @@
   `git tag -d <tag_name`
   - delete local tags
 
-* Commit specification
+* git Commit specification style
   - git commit --amend
   > nothing commit(to initial)
   - git commit -am "override last commit"
@@ -43,7 +43,7 @@
   @code git
     fix, feat(ure), BREAKING CHANGE(!),
     chore, docs, refactor, test,
-    perf(ormance), build, style, revert, build
+    perf(ormance), style, revert, build
     and we can add scope, such as: fix(vue)
   @end
 

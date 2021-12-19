@@ -12,6 +12,7 @@ npm init # 用来生成一个新的package.json 文件
 npm  uninstall xxx -g # 卸载全局的模块软件
 npm install xxx     # 安装相关的模块到当前目录，即node-moudles的文件面
 npm i  xxx -g    # 全局安装，还不清楚安装位置在哪 可能是全局的mode-moudles 里面
+npm ls
 
 npm i xxx -S   #  安装到当前 的node-moudles 目录里面， 并且写入package.json的dependencies里面
 # -S 或者 --save 参数的意思是将模块的版本信息保存到dependencies中，即package.json的dependencies的字段，不过好像在搭建博客的过程中，好像以来的模块都下载到了nodemoudles中，不需要再次下载
