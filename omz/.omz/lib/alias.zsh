@@ -155,6 +155,7 @@ alias ttn='tt -n'
 # like star....
 alias ttp='tt -l pending'
 alias ttf='tt -f'
+alias ttm='tt -m' # : @idnumber boardname
 
 #alias dt="dict"
 

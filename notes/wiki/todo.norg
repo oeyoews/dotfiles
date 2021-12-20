@@ -1,11 +1,22 @@
 @document.meta
-  title: todo personal
+  title: todo personal inbox
   description:
   author: oeyoews
   categories:
   created: 2021-11-06
   version: 0.1
 @end
+
+* +2021-12-21T00:11:32+
+  - [x]  页码插入不连续 如何插入书签
+  - [_] youtube 考研课程
+  - [_]  reveal-md how to custom up and down chapter
+  - [_]  use makefile to install dotfiles
+  - [_] blender
+  - [_]  如何对一个文件使用不同格式的配置文件
+  - [_] learn delete file from all commit [git-filter-repo](https://github.com/vanillaf/git-filter-repo#simple-example-with-comparisons)
+  - [_] how to use systemd(systemctl) to enable personal service [link](https://blog.lilydjwg.me/2014/2/2/systemd-user-daemons.42631.html)
+  - [x]  tidy wiki
 
 
 * Github
@@ -14,12 +25,10 @@
 
 * Server
   - [x]  learn 服务器web [link](https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-7wsriqn6&action=DescribeInstanceLoginKeyPair)
-
-+* omz/lib/.zsh have some bug, tip complete can't reconize+
+  +* omz/lib/.zsh have some bug, tip complete can't reconize+
 
 * 服务器安装arch
   - [_]  use rsync to install arch as a server
-
 
 * kitty
   - [_] 分屏如何保留原来workpath
@@ -28,36 +37,17 @@
   - [_] how to adjust vuepress font block for palette(add refrence font support for vuepress)
 
 
-
-* Question
-  - [ ]   where is the .git folders
-
-
+* |Question|
   - [_] how to build passline add number and multip select +* learn 画图软件+ +* Passline+
   - [_] learn go
   - [_] Computer Internet Princel*/
   - [_] MOOC test +- [ ] self*/ /*- 数据结构*/ /*- jvm*/+
-
-
-* Possibile
-  - [_]  github 可以绑定多个域名吗？
-- [ ]  learn 数据结构
-- [ ]  learn latex use lyx
-- [ ]  use neorg to jump index(deeply)  neorg can't align
-- [ ]  页码插入不连续
-- [ ] 如何插入书签
-- [ ] youtube 考研课程
-  - [ ]  reveal-md how to custom up and down chapter
-  - [ ]  learn reveal.js
-  - [_] 使用域名绑定服务器的网站
-  - [ ]  use makefile to install dotfiles
-  - [ ] blender
-  - [ ]  如何对一个文件使用不同格式的配置文件
-  - java
-  - vue
-  - [x] git deepthly
-  - [ ] learn delete file from all commit [git-filter-repo](https://github.com/vanillaf/git-filter-repo#simple-example-with-comparisons)
   +- learn js so to modify taskbook+
-  - [ ] read some english books
-  - [ ] how to use systemd(systemctl) to enable personal service [link](https://blog.lilydjwg.me/2014/2/2/systemd-user-daemons.42631.html)
-  - [ ]  tidy wiki
+  - [_]  github 可以绑定多个域名吗？
+  - [_] 使用域名绑定服务器的网站
+  - [_]   where is the |.git| folders
+  - [x] git deepthly
+  - [_]  learn agenta for neorg
+  - [_] read some english books
+  - [_]  learn 数据结构  latex use lyx vue java
+  - [_]  learn reveal.js

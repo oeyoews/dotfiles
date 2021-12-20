@@ -8,177 +8,28 @@
 @end
 
 
+
+
 = TOC
+|demo|demmo|
 
-@code c
-printf("this is a demo.\n");
+@notes
+-> link
 @end
+eg:
+-> +this is a link+
 
-* demo
+* jump file
 [1](1.norg)
 [demo](demo.norg)
-- *de*
+delete line
 -demo-
+variable
 =demo=
-|demo|
--- demo
----- -demo-
 
 * Nests
   - [x] demo
   - [?] demo
   - [-] demo
-  - [-] demo
-  - [x] demo
   - [_] demo
   - [ ] demo
-
-
-
-
-* demo
-> quotes
->> demo
->>> demo
-
-^de^
-
-* bullets
- ** demo
-  *** demo
-   **** dmeo .. demo
-        this
-        - demo
-    ***** demo
-          demo
-      ****** demo
-             dmeo
-
-===
----
-
-@code lua
-local demo = 11;
-local function() {
-
-}
-@end
-
-   **** coment
-#comments
-this is a dcomment
-____
-[link text](#https:://bing.com)
-[linek](demo.norg)
-
-$ defineation
-| marker
-
-$$ double dollar demo
-
-| demo
-- [x]  demo
-| demo | demo |
-
------
-
-  *** Tutorial
-- \=variable\=: =variable=
-- \+inline variable\+: +inline variable+
-- \-delete line\-: -delete line-
-- \`inline code\`: `inline code`
-- \|spoiler\|: |spoiler|
-
-* Tasks
-
-- [x] done
-- [-] undone
-- [-] pending
-
-- [=] on hold
-- [=] demo
-- [_] trash
-
-- [!] important
-- [?] question
-- [+] recurring
-
-
-* Links
-  @code
-  - {| test url}
-  - {| oeyoews.top}[test online url]
-  - {# demo}
-  - {^ test}
-  - {$ defineation}
-  - {file:///home/oeyoews/temp/test.txt}
-  [link]{url}
-  @end
-  - {| test url}
-  - {| oeyoews.top}[test online url]
-  - {# demo}
-  - {^ test}
-  - {$ defineation}
-  - {file:///home/oeyoews/temp/test.txt}  +use gf jump this file+
-
-
-
-  @table
-  | demo | demo |
-  ---------------
-  | demo | demo |
-  ---------------
-  | demo | emo  |
-  @end
-
-- [x]  demo demo
-- [!]  demo
-
- ** demo hello
-    - demo
-    kdemo
-      - demo
-        A. demok
-          a). demo
-          _demo_
-          /slash/
-          +inline+
-          ~~
-
-~~demo
-  ~ demo
-    ~~~ demo
-    ~~ dem
-    ~ demo
-    ~ demo
-    ~ eemo
-
-~ demo
-  ~ demo
-  ~ demo
-  ~ demo
-  ~ demo
-          ~~~~~ demo
-
-- [-] demo
-
----
-
-demo
-
----
-
-===
-===
-@image png
-<base64 >
-@end
-demo
-  *** demo
-* onek
- ** demo
-  *** demo
-   **** demokkk
-        - [+] demo
-        - [ ]
-

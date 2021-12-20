@@ -364,13 +364,11 @@ export PATH=/usr/local/bin:$PATH
 
 
 ##  Grub
-```sh
   - cd /etc/default/grub
   - 在 GRUB_CMDLINE_LINUX_DEFAULT 的引号内添加 i8042.dumbkbd ,具体搜索联想小新安装 manjaro 键盘失灵的问题
   - GRUB_TIMEOUT_STYLE=hidden # show menu
   - sudo update-grub          # regenerate
   - sudo vim /etc/default/grub  `quiet` 删除后，在开机的时候会去除很多的打印信息
-  ```
 
 ##  Direction
 # modify chinese-dir for system
