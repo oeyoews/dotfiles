@@ -40,8 +40,7 @@
 
 
 * Possibile
-  - [_] 使用域名绑定服务器的网站
-- [_] github 可以bind 多个域名吗？
+  - [_]  github 可以绑定多个域名吗？
 - [ ]  learn 数据结构
 - [ ]  learn latex use lyx
 - [ ]  use neorg to jump index(deeply)  neorg can't align
@@ -50,6 +49,7 @@
 - [ ] youtube 考研课程
   - [ ]  reveal-md how to custom up and down chapter
   - [ ]  learn reveal.js
+  - [_] 使用域名绑定服务器的网站
   - [ ]  use makefile to install dotfiles
   - [ ] blender
   - [ ]  如何对一个文件使用不同格式的配置文件
