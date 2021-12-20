@@ -22,10 +22,10 @@
 
 
 * kitty
-  - 分屏如何保留原来workpath
+  - [_] 分屏如何保留原来workpath
 
 * Vuepress
-  - [ ] how to adjust vuepress font block for palette(add refrence font support for vuepress)
+  - [_] how to adjust vuepress font block for palette(add refrence font support for vuepress)
 
 
 
@@ -40,12 +40,11 @@
 
 
 * Possibile
-  - [ ] 使用域名绑定服务器的网站
-- [ ] github 可以bind 多个域名吗？
+  - [_] 使用域名绑定服务器的网站
+- [_] github 可以bind 多个域名吗？
 - [ ]  learn 数据结构
 - [ ]  learn latex use lyx
-- [ ]  use neorg to jump index
-- [ ]  neorg can't align
+- [ ]  use neorg to jump index(deeply)  neorg can't align
 - [ ]  页码插入不连续
 - [ ] 如何插入书签
 - [ ] youtube 考研课程
@@ -61,3 +60,4 @@
   +- learn js so to modify taskbook+
   - [ ] read some english books
   - [ ] how to use systemd(systemctl) to enable personal service [link](https://blog.lilydjwg.me/2014/2/2/systemd-user-daemons.42631.html)
+  - [ ]  tidy wiki
