@@ -135,8 +135,8 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
-        "inProgress": true,
+        "isComplete": true,
+        "inProgress": false,
         "priority": "1"
     },
     "12": {
@@ -289,8 +289,8 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
-        "inProgress": true,
+        "isComplete": true,
+        "inProgress": false,
         "priority": 1
     },
     "24": {
@@ -373,8 +373,8 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
-        "inProgress": true,
+        "isComplete": true,
+        "inProgress": false,
         "priority": 1
     },
     "31": {
@@ -401,7 +401,21 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
+        "inProgress": false,
+        "priority": 1
+    },
+    "33": {
+        "_id": 33,
+        "_date": "Mon Dec 20 2021",
+        "_timestamp": 1639980164196,
+        "description": "gtd: learn gtd and ztd",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     }

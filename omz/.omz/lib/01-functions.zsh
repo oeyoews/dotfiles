@@ -381,28 +381,6 @@ function on() {
   echo -e "\033[0;32m${1}\033[0m is runing ..."
 }
 
-function oed() {
-  # BUG: wired must use slash to keep original date
-  # dt ==> draft
-  #local PREFIX=~/dotfiles/notes/draft/
-  local TODAY="${Draft}/$(\date -I)"
-  # NOTE: catn't read environment alias
-  $EDITOR ${TODAY}.md
-}
-
-# need a parameter
-function oedl() {
-  #TODO:
-  # fixed: need add last slash
-  #local PREFIX=~/dotfiles/notes/draft/
-  $EDITOR + "${Draft}/${1}"
-}
-
-function natapps() {
-  #natapp -authtoken=$1
-  natapp -authtoken=ca8def303fc2485c
-}
-
 #TODO:
 #function reload() {
   #unfunction $1 && autoload -U $1
@@ -419,20 +397,41 @@ function natapps() {
   #$EDITOR $1
 #}
 
+#function natapps() {
+  ##natapp -authtoken=$1
+  #natapp -authtoken=ca8def303fc2485c
+#}
 
+
+### GTD or ZTD
 function nn() {
-  $EDITOR ~/dotfiles/notes/wiki/$1
+  $EDITOR ${NOTES}/wiki/$1
 }
 
+function oed() {
+  # BUG: wired must use slash to keep original date
+  # dt ==> draft
+  #local PREFIX=~/dotfiles/notes/draft/
+  local TODAY="${NOTES}/daily/$(\date -I)"
+  # NOTE: catn't read environment alias
+  $EDITOR ${TODAY}.md
+}
 
+# need a parameter
+#function oedl() {
+  #TODO:
+  # fixed: need add last slash
+  #local PREFIX=~/dotfiles/notes/draft/
+  #$EDITOR + "${Notes}/daily/${1}"
+#}
 
-# GTD every day
 function oet() {
-  local TODAY="${Draft}/todo-daily/$(\date -I)"
+  local TODAY="${NOTES}/todo/$(\date -I)"
   $EDITOR + ${TODAY}.norg
 }
 
 # need a parameter
-function oetl() {
-  $EDITOR + "${Draft}/todo-daily/${1}"
-}
+#function oetl() {
+  #$EDITOR + "${Notes}/todo/${1}"
+#}
+

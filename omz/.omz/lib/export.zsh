@@ -1,7 +1,4 @@
-export Notes=~/dotfiles/notes
-# draft notes
-export Draft=${Notes}/draft
-
+export NOTES=~/dotfiles/notes
 
 export EDITOR=nvim
 # Export
