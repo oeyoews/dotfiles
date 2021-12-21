@@ -404,15 +404,16 @@ function on() {
 
 
 ### GTD or ZTD
-function nn() {
-  $EDITOR ${NOTES}/wiki/$1
+function oew() {
+  $EDITOR ${NOTES}/wiki/wiki.md
 }
 
 function oed() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
   #local PREFIX=~/dotfiles/notes/draft/
-  local TODAY="${NOTES}/daily/$(\date -I)"
+  #local TODAY="${NOTES}/daily/$(\date -I)"
+  local TODAY="${NOTES}/daily/$(\date +"%d-%m%Y")"
   # NOTE: catn't read environment alias
   $EDITOR ${TODAY}.md
 }
