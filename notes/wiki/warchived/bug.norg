@@ -7,6 +7,8 @@
   version: 0.0.9
 @end
 
+* document
+  - doc docx 不能相互转换， 甚至不能另存为， 否则图片的格式会发生改变. 谨慎使用(Google doc replaceed )
 
 +2021-12-21T00:18:17+
 * Gnome
