@@ -7,6 +7,19 @@
   version: 0.0.9
 @end
 
+
++2021-12-21T00:18:17+
+* Gnome
+  - [ ] |gnome keyboard wired|
+
+* reveal-bug
+  - [ ] this |reveal-md.json| staticDir is different to static-dir???
+
+  - [ ]  how to generate norg |tags|
+
+===
+===
+
 * Norgbug
   - [x] (like inter @ symbol, it will have soem error tips in minbuffer)
   - [x]  neorgstart can't jump(auto restore ??? maybe it's too slow)
@@ -46,12 +59,3 @@ A: must open in folder, like code jupyter.
 * gitlab 推送失败
   - [x] kex_exchange_identification:
   - [x] delete .ssh/konw-host/(about gitlab), git push again
-
-+2021-12-21T00:18:17+
-* Gnome
-  - [ ] |gnome keyboard wired|
-
-* reveal-bug
-  - [ ] this |reveal-md.json| staticDir is different to static-dir???
-
-  - [ ]  how to generate norg |tags|

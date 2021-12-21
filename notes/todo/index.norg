@@ -9,22 +9,24 @@
 
 
 
-
-= TOC
+@code
 |demo|demmo|
+@end
+eg: |demo|demmo|
 
 @notes
 -> link
 @end
-eg:
+eg: +just support at beginning+
 -> +this is a link+
 
 * jump file
-[1](1.norg)
-[demo](demo.norg)
-delete line
+[demo](@./index.norg)
+
+* delete line
 -demo-
-variable
+
+* variable
 =demo=
 
 * Nests
@@ -33,3 +35,4 @@ variable
   - [-] demo
   - [_] demo
   - [ ] demo
+  - [=] demo

@@ -1,23 +1,20 @@
-## Picture
-  - flameshot
-  - [link](https://github.com/flameshot-org/flameshot)
-
-  # (note: if turn on input method panel , all fcitx skin will don't work)
+<!-- # (note: if turn on input method panel , all fcitx skin will don't work)-->
 gnome-shell-extension-kimpanel
 - gnome: dash-to-dock
-- gnome-keyring              # for vscode synchronize~~, for google-chrome microsoft-edge-beta-bin vscode and etc...
-# gnome-shell-extension-unite
+- gnome-keyring              # for vscode synchronize, for google-chrome microsoft-edge-beta-bin vscode and etc...
+<!-- # gnome-shell-extension-unite-->
 cdate
 # like ps painting
 yay gtk-theme-mackos-mojave
 gtk-theme-macos-sierra-archers-git
 # fcitx5-material-color      # input skin
 
+## office
 - libreoffice-fresh          # office
 - freeoffice
 
-manjaro-settings-manjaro   # kernel manager
-visual-studio-code-bin     # vscode
+    manjaro-settings-manjaro   # kernel manager
+    visual-studio-code-bin     # vscode
 # python-pip
 - xunlei-bin
 # (xtreme download manager)
@@ -38,43 +35,39 @@ visual-studio-code-bin     # vscode
 - dust(show curren directory)
 - duf(show disk)
 
-fzf
-+tree+
+    <!--fzf-->
+    <!--+tree+-->
 
-* Iso
+* bootiso
   - ventoy
-  - etcher [link](https://www.balena.io/etcher/)
+  - etcher [etcher-link](https://www.balena.io/etcher/)
 
-* IME
-  # Fcitx5
-# pacman (auto install fcitx-im)
-manjaro-asian-input-support-fcitx5
-# 词库 pacman
-fcitx5-pinyin-zhwiki
-# archlinuxcn
+##  IME
+- pacman (auto install fcitx-im)
+ -  manjaro-asian-input-support-fcitx5
+- fcitx5-pinyin-zhwiki
 fcitx5-pinyin-moegirl
-# fcitx input method
 fcitx5-chinese-addons
-#========
 
-- nvm                        # node 版本管理
-# virtual-desktop            # plasma widget
-com.qq.tim.spark           # tim
-com.qq.wexin.deepin
+<!--- nvm                        # node 版本管理-->
+<!-- # virtual-desktop            # plasma widget-->
+- com.qq.tim.spark
+- com.qq.wexin.deepin
 - qq(electron): icalingua
-# wechat-uos                 # wechat
+-  wechat-uos                 # wechat
 - jdk8-openjdk               # jdk
-# fgit                       # hub.fastgit.org
-# deskreen                   # 投屏软件
-# idea
-# intellij-idea-ultimate-edition
-# filezilla # file transfer
-# npm fast open repo
+<!-- # fgit                       # hub.fastgit.org-->
+<!-- # deskreen                   # 投屏软件-->
+<!-- # idea-->
+<!-- # intellij-idea-ultimate-edition-->
+<!-- # filezilla # file transfer-->
+<!-- # npm fast open repo-->
+<!-- # yay-->
+<!-- # pip install magic-wormhole-->
+<!--sudo pacman -S -->
+<!--- magic-wormhole-->
 git-open
-# yay
-# pip install magic-wormhole
-sudo pacman -S python-pip
-- magic-wormhole
+python-pip
 
 ##  gnome-extensions
   - trayIconsReloaded
@@ -82,7 +75,7 @@ sudo pacman -S python-pip
   - GPaste
   - kimpanel
 
-  ===
+      <!--===-->
 * MusicPlayer
   - mpv (Q save time)
   - moc(cli: mocp)
@@ -94,11 +87,11 @@ sudo pacman -S python-pip
   - museeks
 
 
-  # https://www.cnblogs.com/kevingrace/p/10188283.html
-# terminal session recorder
+<!-- # https://www.cnblogs.com/kevingrace/p/10188283.html-->
+<!-- # terminal session recorder-->
 - asciinema
 
-# kate
+-  kate
 
 
 # analyse memory
@@ -120,8 +113,8 @@ mlocate
 - tokei
 - procs
 
-seq
-shuffle(command is shuf)
+    seq
+    shuffle(command is shuf)
 
 # better pdf
 - xournal
@@ -135,7 +128,7 @@ shuffle(command is shuf)
 # mysql toolsk
 - dbeaver
 
-icdiff
+    icdiff
 
 
 * FileManager
@@ -162,27 +155,27 @@ icdiff
   - mindforger
   - simplenote
 
-  ---
+      ---
 * UML
   - staruml
   - drawio
   - [](url)
 
 
-  - figlet
+- figlet
   - bullshit
   - asciiquarium
   - tty-clock
 
-  -<!--diff tools-->-
-delta
-meld
+      -<!--diff tools-->-
+      delta
+      meld
 
-<!--like ping -->
-<!--tracert(maybe is window)-->
-traceroute(linux)
+      <!--like ping -->
+      <!--tracert(maybe is window)-->
+      traceroute(linux)
 
--<!--editor-->-
+      -<!--editor-->-
 - kakoune
 - simiki
 
@@ -198,11 +191,11 @@ gittalk
 imagemagick(cmd: display)
 
 
-  ===
+===
 # git repository play video
 - gource
 
-===
+    ===
 * Image
   - picgo
   - [picgo](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E9%A2%84%E8%A7%88)
@@ -220,7 +213,7 @@ imagemagick(cmd: display)
   - geany
   - doge
 
-  ---
+      ---
 * System
   - base-devel
   - trash-cli
@@ -242,7 +235,7 @@ imagemagick(cmd: display)
   - microsoft-edge-beta-bin
 
 
-  - fastfetch
+- fastfetch
 
 * Tools
   - ttyd
@@ -256,6 +249,7 @@ imagemagick(cmd: display)
   - obs                        # record video
   - kooha
   - gromit-mpx(painting)
+  - flameshot [flameshot-link](https://github.com/flameshot-org/flameshot)
 
 * Typing
   - ttyper(tty-best)
@@ -277,8 +271,8 @@ imagemagick(cmd: display)
   - tig
   - mycli
   - `ranger`
-  ncdu
-anbox
+      ncdu
+      anbox
 - pamac
 - remmina
 
@@ -286,7 +280,7 @@ anbox
   - glade(ui)
   - bat
 
-  font-manager
+      font-manager
 
 * Space
   - celestia
@@ -322,22 +316,21 @@ anbox
   - viu(in terminal, show your terminal)
   - xnviewmp
 
-* Pdf
-  - [_]   vym(view your mind)(deprecated)
+<!--* Pdf-->
+  <!--- [_]   vym(view your mind)(deprecated)-->
 
-- Reader
+## Reader
   - foxit reader
   - obular
   - kchmviewer
   - calibre
   - foliate                    # book read
 
-* Video editor
+##  Video editor
   - kdenlive
   - opentoonz
 
   * passline(in github)
 ## ppt on web
   - reveal-md(by npm)
-  - beamer(todo)
-
+  <!---  beamer(todo)-->
