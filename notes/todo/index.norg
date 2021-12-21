@@ -8,31 +8,39 @@
 @end
 
 
+* |Index|
+  -> [bug](@../wiki/bug.norg)
+  -> [wiki](@../wiki/wiki.md)
+  [soft](@../wiki/soft.md)
+  -[personal-todo](@../wiki/todo.norg)-
 
-@code
-|demo|demmo|
-@end
-eg: |demo|demmo|
-
+* |Examples|
+ ** Link
 @notes
 -> link
 @end
 eg: +just support at beginning+
--> +this is a link+
+->  +this is a link+
 
-* jump file
-[demo](@./index.norg)
+ ** File Jump
+    [demo](@./index.norg)
 
-* delete line
--demo-
+ ** delete line
+    -demo-
 
-* variable
-=demo=
+ ** variable
+    =demo=
 
-* Nests
-  - [x] demo
-  - [?] demo
-  - [-] demo
-  - [_] demo
-  - [ ] demo
-  - [=] demo
+ ** Task Icons
+    - [x] demo
+    - [?] demo
+    - [-] demo
+    - [_] demo
+    - [ ] demo
+    - [=] demo
+ ** sopiler
+    @code
+    |demo|demmo|
+    @end
+    eg: |demo|demmo|
+

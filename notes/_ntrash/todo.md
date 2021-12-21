@@ -22,7 +22,7 @@
 19. _demo_ `_text_`
 20. , i b s # fastly insert code src
 21. =demo= `=text=`
-22. use two tidle ,like ~~
+22. use two tidle ,like
 23. space m t n or , t n(more , t)  : make tables
 24. alt shift return # (include checkbox)
 25. C-c && C-c # modify checkbox

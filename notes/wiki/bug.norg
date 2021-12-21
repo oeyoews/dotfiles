@@ -10,12 +10,12 @@
 
 +2021-12-21T00:18:17+
 * Gnome
-  - [ ] |gnome keyboard wired|
+  - [x] |gnome keyboard wired|
 
 * reveal-bug
-  - [ ] this |reveal-md.json| staticDir is different to static-dir???
+  - [_] this |reveal-md.json| staticDir is different to static-dir???
 
-  - [ ]  how to generate norg |tags|
+  - [_]  how to generate norg |tags|
 
 ===
 ===
