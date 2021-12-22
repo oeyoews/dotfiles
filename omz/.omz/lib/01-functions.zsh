@@ -404,11 +404,11 @@ function on() {
 
 
 ### GTD or ZTD
-function oew() {
+function oeq() {
   $EDITOR ${NOTES}/refrence/question.md
 }
 
-function oed() {
+function oem() {
   # BUG: wired must use slash to keep original date
   # dt ==> draft
   #local PREFIX=~/dotfiles/notes/draft/
@@ -426,7 +426,7 @@ function oed() {
   #$EDITOR + "${Notes}/daily/${1}"
 #}
 
-function oet() {
+function oen() {
   #local TODAY="${NOTES}/norg/$(\date -I)"
   local TODAY="${NOTES}/norg/$(\date +"%d-%m%Y")"
   $EDITOR + ${TODAY}.norg
