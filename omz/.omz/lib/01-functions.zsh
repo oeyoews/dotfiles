@@ -405,7 +405,7 @@ function on() {
 
 ### GTD or ZTD
 function oew() {
-  $EDITOR ${NOTES}/wiki/wiki.md
+  $EDITOR ${NOTES}/refrence/question.md
 }
 
 function oed() {
@@ -413,7 +413,7 @@ function oed() {
   # dt ==> draft
   #local PREFIX=~/dotfiles/notes/draft/
   #local TODAY="${NOTES}/daily/$(\date -I)"
-  local TODAY="${NOTES}/daily/$(\date +"%d-%m%Y")"
+  local TODAY="${NOTES}/markdown/$(\date +"%d-%m%Y")"
   # NOTE: catn't read environment alias
   $EDITOR ${TODAY}.md
 }
@@ -427,7 +427,8 @@ function oed() {
 #}
 
 function oet() {
-  local TODAY="${NOTES}/todo/$(\date -I)"
+  #local TODAY="${NOTES}/norg/$(\date -I)"
+  local TODAY="${NOTES}/norg/$(\date +"%d-%m%Y")"
   $EDITOR + ${TODAY}.norg
 }
 

@@ -1,20 +1,19 @@
 @document.meta
-  title: index
+  title: template
   description:
   authors: oeyoews
   categories:
-  created: 2021-12-16
+  created: 2021-12-22
   version: 0.0.9
 @end
 
-
-* |Index|
+* Index
   -> [bug](@../wiki/bug.norg)
   -> [wiki](@../wiki/wiki.md)
   [soft](@../wiki/soft.md)
   -[personal-todo](@../wiki/todo.norg)-
 
-* |Examples|
+* Examples
  ** Link
 @notes
 -> link
@@ -39,9 +38,8 @@ eg: +just support at beginning+
     - [ ] demo
     - [=] demo
  ** sopiler
-    @code
+@code
     |demo|demmo|
-    @end
+@end
     eg: |demo|demmo|
-
-
++hide some text in normal, if you want see it , just put your cursor on it, and enter insert mode+

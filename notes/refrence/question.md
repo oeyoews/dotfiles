@@ -3,3 +3,11 @@
 
 ## Gnome workspace
   - up and down in dash dock to switch workspace
+
+## Github
+  - [ ] github project's item archived, how to check out?
+
+
+## latex
+  - [ ] how to type arrrange number?
+

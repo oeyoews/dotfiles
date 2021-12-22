@@ -387,7 +387,7 @@
             "My Board"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -429,7 +429,7 @@
             "@daily"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -443,7 +443,7 @@
             "@daily"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     },
@@ -471,7 +471,21 @@
             "@daily"
         ],
         "_isTask": true,
-        "isComplete": false,
+        "isComplete": true,
+        "inProgress": false,
+        "priority": 1
+    },
+    "38": {
+        "_id": 38,
+        "_date": "Wed Dec 22 2021",
+        "_timestamp": 1640143480802,
+        "description": "java: learn basic",
+        "isStarred": false,
+        "boards": [
+            "My Board"
+        ],
+        "_isTask": true,
+        "isComplete": true,
         "inProgress": false,
         "priority": 1
     }
