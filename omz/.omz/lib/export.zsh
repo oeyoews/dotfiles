@@ -29,8 +29,8 @@ export CHEAT_USE_FZF=true
 [[ ! -f ~/.cheatconf.yml ]] || export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
 
 # better man page
-# dependcies: bat
-#export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# TODO: dependcy: cat
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 #fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'

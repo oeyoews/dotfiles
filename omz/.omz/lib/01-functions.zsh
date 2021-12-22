@@ -247,6 +247,7 @@ function omz_urldecode {
 # =========  self add ================
 
 # alternatively, use `npx serve, but can't speciation direction
+# TODO: dependcy: ripgrep
 function pym() {
   # ip is third, input ip:port in your phone's browser
   ip addr | rg inet

@@ -39,7 +39,32 @@ eg: +just support at beginning+
     - [=] demo
  ** sopiler
 @code
-    |demo|demmo|
+    |demo|
 @end
     eg: |demo|demmo|
 +hide some text in normal, if you want see it , just put your cursor on it, and enter insert mode+
+
+@notes
+two list
+@end
+eg:
+
+- one
+-- sec
+-- second
+
+~ one
+~~ sec
+~~ third
+~ sec
+~~ demo
+~~ demos
+~~~ d meo
+~~~ demos
+
+@notes
+symbols
+@end
+eg:
+^sup^
+,sub,

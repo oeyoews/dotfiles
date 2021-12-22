@@ -12,3 +12,5 @@
   - [ ] how to type arrrange number?
 
 
+## wiki
+  - [ ] learn short tiddlywiki
