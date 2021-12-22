@@ -178,7 +178,7 @@ alias _goland="nohup /opt/GoLand-2021.1.3/bin/goland.sh >/tmp/_goland.out 2>&1 &
 
 #alias kooha="/usr/bin/kooha >/tmp/kooha.out 2>&1 &"
 
-alias ff="ff -theme one-dark"
+#alias ff="ff -theme one-dark"
 
 #fc -li
 alias his="history -i"
