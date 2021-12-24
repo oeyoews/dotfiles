@@ -206,7 +206,7 @@ shortkey: ctrl + m
   - asar pack app asar.app
 
 ## gitlab
-  - deploy ==> release
+  - deployments ==> release
 
 ## gnome
   * Solve Automatic Screen
