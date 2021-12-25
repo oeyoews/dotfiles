@@ -1,4 +1,13 @@
+
+<!-- vim-markdown-toc GFM -->
+
+  * [groupadd for docker](#groupadd-for-docker)
+  * [docker](#docker)
+* [name 容器名称   -p 端口进行映射，将本地的8080端口映射为容器内部的80端口](#name-容器名称----p-端口进行映射将本地的8080端口映射为容器内部的80端口)
+
+<!-- vim-markdown-toc -->
 <!--start-->
+## groupadd for docker
 - sudo groupadd docker
 - sudo gpasswd -a $USER docker
 - newgrp docker

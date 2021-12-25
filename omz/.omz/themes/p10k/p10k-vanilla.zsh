@@ -15,6 +15,7 @@
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+    context
     os_icon
     dir
     vcs
@@ -23,7 +24,6 @@
 
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     status
-    context
     #ip
     #vpn_ip
     background_jobs

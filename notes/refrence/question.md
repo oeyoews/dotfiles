@@ -33,3 +33,14 @@
 
 ## gnome another clipboard
     - clipboard indicator
+
+
+## soft
+    - notable
+
+## note
+    - roam research
+    - renotexxx
+    - logseq
+    - zotero
+    - Zettelkasten
