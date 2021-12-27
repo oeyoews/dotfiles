@@ -213,3 +213,4 @@ alias viw="vim ~/.config/wezterm/wezterm.lua"
 #alias vie="vim $(mktemp -t temp.XXXXXX)"
 #cd $(find * -type d | fzf)
 #vim $(fzf)
+

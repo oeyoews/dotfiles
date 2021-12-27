@@ -438,3 +438,9 @@ function oen() {
   #$EDITOR + "${Notes}/todo/${1}"
 #}
 
+
+# tiddlywiki
+function tw() {
+  nohup tiddlywiki ~/REPOS/newtiddly --listen > /tmp/tw.log 2>&1 &
+  disown
+}
