@@ -9,6 +9,7 @@ alias date='date -u'
 #alias date='\date +%F'
 #alias date='\date -I'
 alias neo='fastfetch'
+# TODO: add https::// support
 alias open='xdg-open'
 alias c='clear'
 
@@ -205,7 +206,7 @@ alias vie="vim ${ZSH}/lib/export.zsh"
 #alias vis="vim ~/.omz/lib/start.zsh"
 
 # terminal config file
-alias vik="vim ~/.config/kitty/kitty.local.conf"
+alias vik="vim ~/.config/kitty/kitty.conf"
 alias viw="vim ~/.config/wezterm/wezterm.lua"
 #alias via="vim ~/.config/alacritty/alacritty.yml"
 
@@ -214,3 +215,6 @@ alias viw="vim ~/.config/wezterm/wezterm.lua"
 #cd $(find * -type d | fzf)
 #vim $(fzf)
 
+#tips
+# type ls/open
+alias todo="gnome-todo"

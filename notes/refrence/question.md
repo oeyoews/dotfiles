@@ -44,3 +44,13 @@
     - logseq
     - zotero
     - Zettelkasten
+
+
+## soft
+  - agenda in gnome
+  - gnome-todo
+      - gthumb
+
+
+setsid
+(cmd)

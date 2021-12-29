@@ -1,63 +1,3 @@
-<!-- vim-markdown-toc GFM -->
-
-  * [Language](#language)
-  * [tmp](#tmp)
-  * [lyx](#lyx)
-  * [mysql](#mysql)
-  * [wine](#wine)
-  * [nvim](#nvim)
-  * [kvm](#kvm)
-  * [v2raya](#v2raya)
-  * [sound](#sound)
-  * [timedatectl](#timedatectl)
-  * [ssh](#ssh)
-  * [google-chrome](#google-chrome)
-  * [staruml](#staruml)
-  * [gitlab](#gitlab)
-  * [gnome](#gnome)
-  * [WallPaper](#wallpaper)
-  * [gnome Settings](#gnome-settings)
-  * [github](#github)
-  * [Email](#email)
-  * [PATH](#path)
-  * [IPTABLES](#iptables)
-  * [tomcat](#tomcat)
-  * [curl](#curl)
-  * [alias](#alias)
-  * [yay](#yay)
-  * [Pacman](#pacman)
-  * [jetbrain](#jetbrain)
-  * [obs](#obs)
-  * [mpv](#mpv)
-  * [Grub](#grub)
-  * [Direction](#direction)
-* [modify chinese-dir for system](#modify-chinese-dir-for-system)
-  * [add user](#add-user)
-  * [fonts](#fonts)
-  * [journalctl](#journalctl)
-  * [new archwikich for mariadb](#new-archwikich-for-mariadb)
-  * [Jetbrain](#jetbrain-1)
-  * [Date-synchronize](#date-synchronize)
-  * [Logout](#logout)
-  * [Redirect](#redirect)
-  * [Stow](#stow)
-  * [pacman error](#pacman-error)
-  * [Gnome](#gnome-1)
-  * [Tim dpi](#tim-dpi)
-  * [livecd grubk mount](#livecd-grubk-mount)
-  * [tmp](#tmp-1)
-  * [Version](#version)
-  * [rar](#rar)
-  * [cp](#cp)
-  * [keyboard](#keyboard)
-  * [Reset passwd](#reset-passwd)
-  * [Games for browser](#games-for-browser)
-  * [gnome-keyring](#gnome-keyring)
-  * [reveal](#reveal)
-  * [youtube double cc](#youtube-double-cc)
-  * [disk](#disk)
-
-<!-- vim-markdown-toc -->
 ## Language
 - /etc/locale.gen
 - zh_CN.UTF-8 UTF-8
@@ -92,7 +32,6 @@ shortkey: ctrl + m
 ## mysql
 - sudo vim /etc/my.cnf
 - add
-
     ```mysql
     [mysqld]
     skip-grant-tables=1
@@ -392,7 +331,6 @@ path: $HOME/.config/libreoffice/4/fonts/  # 将 C:\Windows\Fonts 的字体拷贝
   * sudo vim /etc/systemd/journald.conf
   * SystemMaxUse=512M
   * systemctl restart systemd-journald.service
-  * systemctl enable fstrim.timer
   * systemctl list-timers --all
   * journalctl --vacuum-size=256M
   * jctl -u (-f) tlp.service
@@ -421,6 +359,7 @@ path: $HOME/.config/libreoffice/4/fonts/  # 将 C:\Windows\Fonts 的字体拷贝
 
 ##  Jetbrain
   - add https://plugins.zhile.io and install IDE Eval Reset
+
   - systemctl enable fstrim.timer
 
   - * inxi -G # show

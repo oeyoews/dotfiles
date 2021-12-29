@@ -252,6 +252,8 @@ function pym() {
   # ip is third, input ip:port in your phone's browser
   ip addr | rg inet
   python -m http.server
+  #8090
+  # NOTE: is different by npm install
 }
 
 # @nvm
@@ -441,6 +443,7 @@ function oen() {
 
 # tiddlywiki
 function tw() {
-  nohup tiddlywiki ~/REPOS/newtiddly --listen > /tmp/tw.log 2>&1 &
+  #TODO: adjsut folder
+  nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   disown
 }
