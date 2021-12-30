@@ -5,7 +5,7 @@ alias soz='exec zsh'
 
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
-alias date='date -u'
+#alias date='date -u'
 #alias date='\date +%F'
 #alias date='\date -I'
 alias neo='fastfetch'
@@ -45,12 +45,12 @@ alias rmm='\rm -rf'
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
 
-# arguments: -p -u
-alias tsu='crow -u -s en '
-# English to Chinese
-alias tsc='crow -b -s en -t zh-CN'
-# to English
-alias tse='crow -s zh-CN -t en'
+## arguments: -p -u
+#alias tsu='crow -u -s en '
+## English to Chinese
+#alias tsc='crow -b -s en -t zh-CN'
+## to English
+#alias tse='crow -s zh-CN -t en'
 
 # TODO: make function and complete for it
 #https://github.com/soimort/translate-shell
@@ -119,10 +119,10 @@ alias se='nvim -u NONE'
 # get weather to your terminal
 alias wego='curl wttr.in'
 
-alias emacs='emacs -nw'
-alias ee='\emacs'
-alias doom='~/.emacs.d/bin/doom'
-alias fmo='fmo -r -c blue'
+#alias emacs='emacs -nw'
+#alias ee='\emacs'
+#alias doom='~/.emacs.d/bin/doom'
+#alias fmo='fmo -r -c blue'
 
 # v2raya
 #journalctl -f -u v2raya.service
@@ -137,7 +137,7 @@ alias po="sudo systemctl start v2raya"
 # journalctl -rb -1
 
 # watch ls <dir>
-alias watch="watch -n 1 -d"
+#alias watch="watch -n 1 -d"
 alias vu="nvim -c PlugUpdate"
 alias pipu='pip3 install --user'
 
@@ -162,7 +162,7 @@ alias pipu='pip3 install --user'
 #alias dt="dict"
 
 # markdown presention
-alias pp='slides'
+#alias pp='slides'
 
 #alias rgf='rg '
 #alias rgf='func() { rg $1 }; func'
@@ -174,7 +174,7 @@ alias pp='slides'
 # nohup justp for command, not support alias, so add it in alias to support
 # use bg to show some background works, and you can use ctrl+z to put it background_jobs again
 # why 2>&1 is to &0
-alias _goland="nohup /opt/GoLand-2021.1.3/bin/goland.sh >/tmp/_goland.out 2>&1 &"
+#alias _goland="nohup /opt/GoLand-2021.1.3/bin/goland.sh >/tmp/_goland.out 2>&1 &"
 #alias goland="/usr/bin/goland >/tmp/goland.out 2>&1 &"
 
 #alias kooha="/usr/bin/kooha >/tmp/kooha.out 2>&1 &"
@@ -207,7 +207,7 @@ alias vie="vim ${ZSH}/lib/export.zsh"
 
 # terminal config file
 alias vik="vim ~/.config/kitty/kitty.conf"
-alias viw="vim ~/.config/wezterm/wezterm.lua"
+#alias viw="vim ~/.config/wezterm/wezterm.lua"
 #alias via="vim ~/.config/alacritty/alacritty.yml"
 
 #alias viss="vim ~/.ssh/config"
