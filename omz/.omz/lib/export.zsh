@@ -10,6 +10,7 @@ export EDITOR=nvim
 # when use echo $PATH, it output depend your export order
 
 export PATH=$PATH:~/dotfiles/bin
+#export PATH="$PATH:$HOME/.npm/bin"
 
 #export Dot=~/dotfiles/bin
 #export PATH=$PATH:$Dot

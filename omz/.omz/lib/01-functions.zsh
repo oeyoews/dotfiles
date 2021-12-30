@@ -340,7 +340,7 @@ function rgf() {
 
 # fastly run go file
 function testgo() {
-    CURRENT_DIR=`pwd`
+    local CURRENT_DIR=`pwd`
     OLD_GO_PATH="$GOPATH"  #例如: /usr/local/go
     OLD_GO_BIN="$GOBIN"    #例如: /usr/local/go/bin
 
@@ -444,6 +444,22 @@ function oen() {
 # tiddlywiki
 function tw() {
   #TODO: adjsut folder
-  nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
+  #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
+  #(cmd)
+  setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   disown
+}
+
+# pm2 startup
+# pm2 stop xxx
+# TODO: how to in subprocess to resolve this path reduce double path
+function tw5() {
+  local CURRENT_DIR=`pwd`
+  local TARGET_DIR=~/REPOS/TW
+  cd ${TARGET_DIR}
+  #pm2 stop tiddlywiki
+  # NOTE:
+  pm2 delete 0
+  pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
+  cd ${CURRENT_DIR}
 }

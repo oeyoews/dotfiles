@@ -1,19 +1,3 @@
-<!-- vim-markdown-toc GitLab -->
-
-* [Introd](#introd)
-* [Direction Instruction](#direction-instruction)
-* [Tools](#tools)
-  * [Editor](#editor)
-  * [Fonts](#fonts)
-  * [Player](#player)
-  * [Videos](#videos)
-  * [Git tools](#git-tools)
-  * [Browser](#browser)
-* [Install](#install)
-* [Usage](#usage)
-  * [Thanks](#thanks)
-
-<!-- vim-markdown-toc -->
 ## Introd
 - `rg`
 > ripgrep: this binary may be depend GCC ...
@@ -21,21 +5,18 @@
 - `ranger`
 > maybe lack some optional dependencies
 
-- `ff`
-
-- [lemons/tt](https://github.com/lemnos/tt)
-
+- `ff` [lemons/tt](https://github.com/lemnos/tt)
 - like 10fastfinger.com, enhanceup your typing speed
 
-- `fmo`
+<!--- `fmo`-->
 
-- like neofetch, show some information about your system
+<!--- like neofetch, show some information about your system-->
 
-- `cheat`
+<!--- `cheat`-->
 
-- fast record your notes
+<!--- fast record your notes-->
 
-- `mdp` && `slides`
+<!--- `mdp` && `slides`-->
 > show your markdown file
 
 ---

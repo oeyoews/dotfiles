@@ -54,3 +54,9 @@
 
 setsid
 (cmd)
+
+pm2 to generate systemd
+icon-theme papirus
+papirus-folders
+papirus-folders -C breeze --theme Papirus-Dark
+.icons /usr/share/icons
