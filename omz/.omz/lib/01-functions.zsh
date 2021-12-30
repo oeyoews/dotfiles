@@ -327,37 +327,37 @@ function cdr() {
 
 # TODO
 # search globally in custom folders,
-function rgf() {
-  # all notes
-  local searchDir=(
-  # all notes
-    ~/dotfiles/notes/
-    # omz
-    ~/.omz/lib/
-  )
-  rg $1 ${searchDir}
-}
+#function rgf() {
+  ## all notes
+  #local searchDir=(
+  ## all notes
+    #~/dotfiles/notes/
+    ## omz
+    #~/.omz/lib/
+  #)
+  #rg $1 ${searchDir}
+#}
 
 # fastly run go file
-function testgo() {
-    local CURRENT_DIR=`pwd`
-    OLD_GO_PATH="$GOPATH"  #例如: /usr/local/go
-    OLD_GO_BIN="$GOBIN"    #例如: /usr/local/go/bin
+#function testgo() {
+    #local CURRENT_DIR=`pwd`
+    #OLD_GO_PATH="$GOPATH"  #例如: /usr/local/go
+    #OLD_GO_BIN="$GOBIN"    #例如: /usr/local/go/bin
 
-    export GOPATH="$CURRENT_DIR"
-    export GOBIN="$CURRENT_DIR/bin"
+    #export GOPATH="$CURRENT_DIR"
+    #export GOBIN="$CURRENT_DIR/bin"
 
-    #指定并整理当前的源码路径
-    # deprecated: format src/* code
-    gofmt -w $1
+    ##指定并整理当前的源码路径
+    ## deprecated: format src/* code
+    #gofmt -w $1
 
-    #go install test_hello@latest
-    # TODO: why need export
-    go run $1
+    ##go install test_hello@latest
+    ## TODO: why need export
+    #go run $1
 
-    export GOPATH="$OLD_GO_PATH"
-    export GOBIN="$OLD_GO_BIN"
-}
+    #export GOPATH="$OLD_GO_PATH"
+    #export GOBIN="$OLD_GO_BIN"
+#}
 
 # TODO: how to limit one parameter at least
 # how to add one parameter for complete
@@ -407,19 +407,19 @@ function on() {
 
 
 ### GTD or ZTD
-function oeq() {
-  $EDITOR ${NOTES}/refrence/question.md
-}
+#function oeq() {
+  #$EDITOR ${NOTES}/refrence/question.md
+#}
 
-function oem() {
-  # BUG: wired must use slash to keep original date
-  # dt ==> draft
-  #local PREFIX=~/dotfiles/notes/draft/
-  #local TODAY="${NOTES}/daily/$(\date -I)"
-  local TODAY="${NOTES}/markdown/$(\date +"%d-%m%Y")"
-  # NOTE: catn't read environment alias
-  $EDITOR ${TODAY}.md
-}
+#function oem() {
+  ## BUG: wired must use slash to keep original date
+  ## dt ==> draft
+  ##local PREFIX=~/dotfiles/notes/draft/
+  ##local TODAY="${NOTES}/daily/$(\date -I)"
+  #local TODAY="${NOTES}/markdown/$(\date +"%d-%m%Y")"
+  ## NOTE: catn't read environment alias
+  #$EDITOR ${TODAY}.md
+#}
 
 # need a parameter
 #function oedl() {
@@ -429,11 +429,11 @@ function oem() {
   #$EDITOR + "${Notes}/daily/${1}"
 #}
 
-function oen() {
-  #local TODAY="${NOTES}/norg/$(\date -I)"
-  local TODAY="${NOTES}/norg/$(\date +"%d-%m%Y")"
-  $EDITOR + ${TODAY}.norg
-}
+#function oen() {
+  ##local TODAY="${NOTES}/norg/$(\date -I)"
+  #local TODAY="${NOTES}/norg/$(\date +"%d-%m%Y")"
+  #$EDITOR + ${TODAY}.norg
+#}
 
 # need a parameter
 #function oetl() {
@@ -450,8 +450,6 @@ function tw() {
   disown
 }
 
-# pm2 startup
-# pm2 stop xxx
 # TODO: how to in subprocess to resolve this path reduce double path
 function tw5() {
   local CURRENT_DIR=`pwd`

@@ -141,23 +141,23 @@ alias watch="watch -n 1 -d"
 alias vu="nvim -c PlugUpdate"
 alias pipu='pip3 install --user'
 
-# taskbook
-alias tt="taskbook"
-alias tti='tt -i'
-alias ttt='tt -t'
-alias ttd='tt -d'
-alias ttb='tt -b'
-alias ttc='tt -c'
-alias ttpp='tt -p'
-alias tth='tt -h'
-alias ttr='tt -r'
-alias tta='tt -a'
-alias tte='tt -e'
-alias ttn='tt -n'
-# like star....
-alias ttp='tt -l pending'
-alias ttf='tt -f'
-alias ttm='tt -m' # : @idnumber boardname
+# @DEPRECATED taskbook
+#alias tt="taskbook"
+#alias tti='tt -i'
+#alias ttt='tt -t'
+#alias ttd='tt -d'
+#alias ttb='tt -b'
+#alias ttc='tt -c'
+#alias ttpp='tt -p'
+#alias tth='tt -h'
+#alias ttr='tt -r'
+#alias tta='tt -a'
+#alias tte='tt -e'
+#alias ttn='tt -n'
+## like star....
+#alias ttp='tt -l pending'
+#alias ttf='tt -f'
+#alias ttm='tt -m' # : @idnumber boardname
 
 #alias dt="dict"
 
