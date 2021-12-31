@@ -1,48 +1,85 @@
 ## Softwares
-- rg
-- ranger
-- [tt](https://github.com/lemnos/tt)
-- ttyper
+
+### iso
+* etcher
+* ventoy
+
+### translate
+* translate-shell
+
+### browser
+* google-chrome
+
+### editor
+* neovim
+* typora-free
+* marktext
+* visual-studio-code-bin
+* libreoffice
+
+### font
+* FiraCode
+* DeJaVu
+
+### tools
+* obs
+* clementine
+* foxit reader
+* gimp
+* mpv
+* krita
+
+### terminal
+* kitty
+* alacritty
+* wezterm
+
+### gnome
+* downgrade
+* papirus-folders
+* gnome-keyring
+* gnome-todo
+* gnome locks
+* papirus
+* gpaste
+* dash-to-dock
+
+## ime
+* fcitx5-im
+* fcitx5-chinese-addons
+
+
+* nload
+* gotop
+* lyx
+* delta
+* trash-cli
+* tmux
+* cdate
+* cloc
+* rg(ripgrep)
+* ranger
+* [tt](https://github.com/lemnos/tt)
+* ttyper
 * duf
 * dust
 * fastfetch
-- taskbook
-- [slides](https://github.com/maaslalani/slides)
-- [stow](https://www.gnu.org/software/stow/)
-- btop
-- gtop
-- neovim
-- FiraCode
-- DeJaVu
-- clementine
-- mpv
-- obs
-- gromit-mpx
+* taskbook
+* [slides](https://github.com/maaslalani/slides)
+* [stow](https://www.gnu.org/software/stow/)
+* btop
+* gtop
+* gromit-mpx
 * tiddlywiki
 * git-open
 * tig
-* google-chrome
-* papirus
-* papirus-folder
-* libreoffice
 * flameshot
-* fcitx5-im
-* fcitx5-chinese-addons
-* kitty
 * pm2
 * appche2-utils
-* gpaste
-* gnome-todo
 * meld
-* typora
-* marktext
-* etcher
-* ventoy
 * dbeaver
-* krita
 * ventoy
 * startuml
 
 ### Thanks
-
 <a href="https://jb.gg/OpenSource"><img src=".screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
