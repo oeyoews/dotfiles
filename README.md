@@ -1,14 +1,18 @@
+[[toc]]
 ## Softwares
 
 ### iso
 * etcher
 * ventoy
+---
 
 ### translate
 * translate-shell
+---
 
 ### browser
 * google-chrome
+---
 
 ### editor
 * neovim
@@ -16,10 +20,12 @@
 * marktext
 * visual-studio-code-bin
 * libreoffice
+---
 
 ### font
 * FiraCode
 * DeJaVu
+---
 
 ### tools
 * obs
@@ -28,11 +34,13 @@
 * gimp
 * mpv
 * krita
+---
 
 ### terminal
 * kitty
 * alacritty
 * wezterm
+---
 
 ### gnome
 * downgrade
@@ -43,10 +51,12 @@
 * papirus
 * gpaste
 * dash-to-dock
+---
 
-## ime
+### ime
 * fcitx5-im
 * fcitx5-chinese-addons
+---
 
 
 * nload
@@ -81,5 +91,5 @@
 * ventoy
 * startuml
 
-### Thanks
+## Thanks
 <a href="https://jb.gg/OpenSource"><img src=".screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
