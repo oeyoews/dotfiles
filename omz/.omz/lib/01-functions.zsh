@@ -446,8 +446,21 @@ function tw() {
   #TODO: adjsut folder
   #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   #(cmd)
-  setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
-  disown
+  #setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
+  twpid=`/usr/sbin/lsof -i :8081|grep -v "PID" | awk '{print $2}'`
+  if [ "$pIDa" != "" ];
+  then
+    if [[ $# -eq 0 ]]
+    then
+      echo "No parameter input"
+    else
+      setsid tiddlywiki $1 --listen port=8090 > /tmp/tw.log 2>&1 &
+      disown
+      echo "$1 is running"
+    fi
+  else
+    echo "this service(port) has opened!"
+  fi
 }
 
 # TODO: how to in subprocess to resolve this path reduce double path
@@ -457,7 +470,7 @@ function tw5() {
   cd ${TARGET_DIR}
   #pm2 stop tiddlywiki
   # NOTE:
-  pm2 delete 0
+  #pm2 delete tw
   pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
   cd ${CURRENT_DIR}
 }

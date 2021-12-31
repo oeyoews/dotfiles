@@ -74,6 +74,7 @@ alias tlpb='sudo tlp-stat -b'
 # trans ""
 #
 alias cip='curl cip.cc'
+alias cig='curl google.com'
 alias ipr='ip addr | rg 192'
 
 # @git
