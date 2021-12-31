@@ -1,4 +1,20 @@
-[[toc]]
+<!-- vim-markdown-toc GitLab -->
+
+* [Softwares](#softwares)
+  * [idea](#idea)
+  * [iso](#iso)
+  * [translate](#translate)
+  * [browser](#browser)
+  * [editor](#editor)
+  * [font](#font)
+  * [tools](#tools)
+  * [terminal](#terminal)
+  * [gnome](#gnome)
+  * [ime](#ime)
+* [Thanks](#thanks)
+
+<!-- vim-markdown-toc -->
+<!--[[toc]]-->
 ## Softwares
 
 ### idea
@@ -7,32 +23,33 @@
 * indent reinbow
 * rainbow brackets
 
+---
 ### iso
 * etcher
 * ventoy
----
 
+---
 ### translate
 * translate-shell
----
 
+---
 ### browser
 * google-chrome
----
 
+---
 ### editor
 * neovim
 * typora-free
 * marktext
 * visual-studio-code-bin
 * libreoffice
----
 
+---
 ### font
 * FiraCode
 * DeJaVu
----
 
+---
 ### tools
 * obs
 * clementine
@@ -40,14 +57,14 @@
 * gimp
 * mpv
 * krita
----
 
+---
 ### terminal
 * kitty
 * alacritty
 * wezterm
----
 
+---
 ### gnome
 * downgrade
 * papirus-folders
@@ -57,13 +74,13 @@
 * papirus
 * gpaste
 * dash-to-dock
----
 
+---
 ### ime
 * fcitx5-im
 * fcitx5-chinese-addons
----
 
+---
 
 * nload
 * gotop
