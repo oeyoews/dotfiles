@@ -1,4 +1,4 @@
-export NOTES=~/dotfiles/notes
+#export NOTES=~/dotfiles/notes
 
 export EDITOR=nvim
 # Export
@@ -22,12 +22,13 @@ export PATH=$PATH:~/dotfiles/bin
 # tips: not add this variable to PATH, so, it's not export bin
 #[[ ! -z $DBIN ]] || export DBIN=~/dotfiles/bin
 #[[ ! -z $DBIN ]] || export DBIN=~/dotfiles/bin:PATH
-# cheat
-# TODO: source it, will have some output
-# fix: by modify soz command(because it source .zshrc, ??? why)
-export CHEATCOLORS=true
-export CHEAT_USE_FZF=true
-[[ ! -f ~/.cheatconf.yml ]] || export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
+
+## cheat
+## TODO: source it, will have some output
+## fix: by modify soz command(because it source .zshrc, ??? why)
+#export CHEATCOLORS=true
+#export CHEAT_USE_FZF=true
+#[[ ! -f ~/.cheatconf.yml ]] || export CHEAT_CONFIG_PATH="~/.cheatconf.yml"
 
 # better man page
 # TODO: dependcy: cat

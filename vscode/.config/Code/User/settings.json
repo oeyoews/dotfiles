@@ -11,7 +11,6 @@
     "vim.sneak": false,
     "vim.sneakReplacesF": false,
     "vim.useSystemClipboard": true,
-    // ***** workbench *****
     "workbench.colorTheme": "One Dark Pro",
     "workbench.startupEditor": "none",
     "workbench.editor.pinnedTabSizing": "compact",
@@ -22,7 +21,6 @@
         "statusBar.debuggingBackground": "#16091b6b",
         "statusBar.foreground": "#8a968afa"
     },
-    // *** misc ***
     "[jsonc]": {
         "editor.quickSuggestions": {
             "strings": true
@@ -54,7 +52,7 @@
     "debug.console.fontSize": 18,
     "debug.onTaskErrors": "showErrors",
     "editor.renderWhitespace": "none",
-    "workbench.sideBar.location": "left",
+    "workbench.sideBar.location": "right",
     "C_Cpp.intelliSenseEngine": "Default",
     "files.trimTrailingWhitespace": true,
     "git.enableSmartCommit": true,
@@ -67,5 +65,11 @@
     "editor.inlineSuggest.enabled": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
-    // "go.gopath": "~/go"
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+    "workbench.editor.untitled.hint": "hidden",
 }
