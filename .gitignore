@@ -1,6 +1,7 @@
 *.zwc
 *.log
 cache
+.cache
 .spacemacs.env
 eaf/
 .netrwhist
