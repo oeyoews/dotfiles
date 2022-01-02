@@ -442,7 +442,7 @@ function on() {
 
 
 # tiddlywiki
-function tw() {
+function two() {
   #TODO: adjsut folder
   #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   #(cmd)
@@ -473,4 +473,15 @@ function tw5() {
   #pm2 delete tw
   pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
   cd ${CURRENT_DIR}
+}
+
+function twc() {
+  #NOTE: must have comma to disable show error in zsh startup
+  if [[ $# -eq 0  ]];
+  then
+    echo "ERROR: No parameter input!!!"
+  else
+    tiddlywiki $1 --init server
+    nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1&
+  fi
 }

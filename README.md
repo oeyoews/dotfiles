@@ -87,6 +87,8 @@
 * lyx
 * delta
 * trash-cli
+* exa
+* colorls
 * tmux
 * cdate
 * cloc

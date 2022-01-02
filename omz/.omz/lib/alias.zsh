@@ -2,7 +2,10 @@
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
 alias soz='exec zsh'
-
+alias tw='tiddlywiki'
+alias lss='colorls'
+alias exai='exa --icons'
+alias colortree='colorls --tree=2'
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 #alias date='date -u'
