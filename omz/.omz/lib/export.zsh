@@ -8,7 +8,8 @@ export EDITOR=nvim
 # tips: this directory will be exist, so can't ust it to adjust
 #[[ ! -d $HOME/dotfiles/bin ]] || export PATH=~/dotfiles/bin:$PATH
 # when use echo $PATH, it output depend your export order
-
+#
+[[ -d ~/.npm ]] && export PATH="$PATH:$HOME/.npm/bin"
 export PATH=$PATH:~/dotfiles/bin
 #export PATH="$PATH:$HOME/.npm/bin"
 

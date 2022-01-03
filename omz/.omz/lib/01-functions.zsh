@@ -447,6 +447,8 @@ function two() {
   #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   #(cmd)
   #setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
+  # NOTE: this port is node and chrome, when this node process is closed, but this browser need refresh by hand if it's
+  # opened, because this port will show is assiging
   twpid=`/usr/sbin/lsof -i :8090|grep -v "PID" | awk '{print $2}'`
   if [ "$twpid" = "" ];
   then
