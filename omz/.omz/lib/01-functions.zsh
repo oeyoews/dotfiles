@@ -447,8 +447,8 @@ function two() {
   #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   #(cmd)
   #setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
-  twpid=`/usr/sbin/lsof -i :8081|grep -v "PID" | awk '{print $2}'`
-  if [ "$pIDa" != "" ];
+  twpid=`/usr/sbin/lsof -i :8090|grep -v "PID" | awk '{print $2}'`
+  if [ "$twpid" = "" ];
   then
     if [[ $# -eq 0 ]]
     then
