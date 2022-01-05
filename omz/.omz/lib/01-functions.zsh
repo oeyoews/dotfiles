@@ -469,11 +469,12 @@ function two() {
 function tw5() {
   local CURRENT_DIR=`pwd`
   local TARGET_DIR=~/REPOS/TW
-  cd ${TARGET_DIR}
+  cd ${TARGET_DIR} && make
   #pm2 stop tiddlywiki
   # NOTE:
   #pm2 delete tw
-  pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
+  #pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
+  make
   cd ${CURRENT_DIR}
 }
 
