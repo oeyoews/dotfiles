@@ -94,6 +94,7 @@
 * cloc
 * rg(ripgrep)
 * ranger
+> NOTE: preview img just support kitty terminal
 * [tt](https://github.com/lemnos/tt)
 * ttyper
 * duf
@@ -115,6 +116,7 @@
 * dbeaver
 * ventoy
 * startuml
+* aria2
 
 
 ## Thanks

@@ -1,6 +1,7 @@
 # note this will cause $path load twice extra
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
+alias cdrt="cd ~/REPOS/TW"
 alias soz='exec zsh'
 alias tw='tiddlywiki'
 alias lss='colorls'
@@ -87,6 +88,7 @@ alias gh='git-open'
 alias gits='git status'
 
 alias gitu='git add . && git commit && git push'
+alias gitut='git add . && git commit -m "doc: update(automatically)" && git push'
 alias gite='git config -e'
 
 # just for kitty terminal, other terminal please use \ssh temporary
