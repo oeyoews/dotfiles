@@ -90,6 +90,7 @@ alias gits='git status'
 alias gitu='git add . && git commit && git push'
 alias gitut='git add . && git commit -m "doc: update(automatically)" && git push'
 alias gite='git config -e'
+alias gita='git tag'
 
 # just for kitty terminal, other terminal please use \ssh temporary
 alias ssh="kitty +kitten ssh"
