@@ -1,3 +1,4 @@
+# counter command
 function zsh_stats() {
   fc -l 1 \
     | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' \
@@ -481,6 +482,8 @@ function tw5() {
   nohup google-chrome-stable http://127.0.0.1:8090 >/tmp/google.log 2>&1 &
 }
 
+# tiddlywiki mywikifolder --listen username=test password=tset
+# tiddlywiki --output public --build index
 function twc() {
   #NOTE: must have comma to disable show error in zsh startup `then` should put single line
   if [[ $# -gt 0  ]];

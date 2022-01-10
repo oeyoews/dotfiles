@@ -91,6 +91,7 @@
 * colorls
 * tmux
 * cdate
+* gource
 * cloc
 * rg(ripgrep)
 * ranger
