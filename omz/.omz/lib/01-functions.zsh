@@ -444,6 +444,7 @@ function on() {
 # tiddlywiki
 function two() {
   #TODO: adjsut folder
+  # generial
   #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
   #(cmd)
   #setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
@@ -466,6 +467,7 @@ function two() {
 }
 
 # TODO: how to in subprocess to resolve this path reduce double path
+# special
 function tw5() {
   local CURRENT_DIR=`pwd`
   local TARGET_DIR=~/REPOS/TW
@@ -476,15 +478,22 @@ function tw5() {
   #pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
   make
   cd ${CURRENT_DIR}
+  nohup google-chrome-stable http://127.0.0.1:8090 >/tmp/google.log 2>&1 &
 }
 
 function twc() {
-  #NOTE: must have comma to disable show error in zsh startup
-  if [[ $# -eq 0  ]];
+  #NOTE: must have comma to disable show error in zsh startup `then` should put single line
+  if [[ $# -gt 0  ]];
   then
-    echo "ERROR: No parameter input!!!"
+    if [ ! -d "$1" ];
+    then
+      tiddlywiki $1 --init server
+      nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1&
+      nohup google-chrome-stable http://127.0.0.1:8081 >/tmp/google.log 2>&1 &
+    else
+      echo "This folder has exits!!!"
+    fi
   else
-    tiddlywiki $1 --init server
-    nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1&
+    echo "ERROR: No parameter input!!!"
   fi
 }
