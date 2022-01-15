@@ -227,3 +227,6 @@ alias vik="vim ~/.config/kitty/kitty.conf"
 alias todo="gnome-todo"
 
 alias gll="setsid google-chrome-stable http://127.0.0.1:8090 > /tmp/ll.log 2>&1 &"
+
+# tips
+# jc -xe  > /tmp/1.log

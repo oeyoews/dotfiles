@@ -479,7 +479,7 @@ function tw5() {
   #pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
   make
   cd ${CURRENT_DIR}
-  nohup google-chrome-stable http://127.0.0.1:8090 >/tmp/google.log 2>&1 &
+  setsid google-chrome-stable http://127.0.0.1:8090 >/tmp/google.log 2>&1 &
 }
 
 # tiddlywiki mywikifolder --listen username=test password=tset
