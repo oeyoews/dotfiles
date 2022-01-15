@@ -471,7 +471,7 @@ function two() {
 # special
 function tw5() {
   local CURRENT_DIR=`pwd`
-  local TARGET_DIR=~/REPOS/TW
+  local TARGET_DIR=~/REPOS/TiddlyWiki5
   cd ${TARGET_DIR} && make
   #pm2 stop tiddlywiki
   # NOTE:
