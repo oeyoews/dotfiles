@@ -69,6 +69,7 @@
 * downgrade
 * papirus-folders
 * gnome-keyring
+  * seahorse
 * gnome-todo
 * gnome locks
 * papirus

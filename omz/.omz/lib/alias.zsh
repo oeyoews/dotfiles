@@ -1,7 +1,7 @@
 # note this will cause $path load twice extra
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
-alias cdrt="cd ~/REPOS/TW"
+alias cdrt="cd ~/REPOS/TiddlyWiki5"
 alias soz='exec zsh'
 alias tw='tiddlywiki'
 alias lss='colorls'
