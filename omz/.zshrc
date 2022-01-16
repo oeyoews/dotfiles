@@ -44,3 +44,4 @@ ZSH_THEME="p10k/powerlevel10k"
 #
 # just support bash
 #export HISTTIMEFORMAT="%F %T `whoami` "
+export QT_IM_MODULE=fcitx5
