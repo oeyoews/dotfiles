@@ -48,6 +48,7 @@
 ### font
 * FiraCode
 * DeJaVu
+* Fantasque
 
 ---
 ### tools

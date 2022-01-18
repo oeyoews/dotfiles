@@ -248,13 +248,12 @@ function omz_urldecode {
 # =========  self add ================
 
 # alternatively, use `npx serve, but can't speciation direction
-# TODO: dependcy: ripgrep
+# TODO: depends: ripgrep
 function pym() {
-  # ip is third, input ip:port in your phone's browser
+  # ip is third, input ip:port in phone browser url
   ip addr | rg inet
   python -m http.server
-  #8090
-  # NOTE: is different by npm install
+  # or use npx http-server
 }
 
 # @nvm
