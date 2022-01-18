@@ -193,6 +193,7 @@ alias his="history -i"
 
 alias killalli="killall -i"
 alias killallv="killall -v"
+alias ktim="killall TIM.exe QQProtect.exe TXPlatform.exe explorer.exe winedevice.exe "
 
 
 # passline a/g/h/d/ -p -c
