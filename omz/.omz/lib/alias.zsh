@@ -38,16 +38,16 @@ alias ra='ranger'
 alias dust="dust -r"
 
 # @ trash
-alias rm='trash'
-alias rmm='\rm -rf'
+alias rmm='trash'
+alias rm='\rm -rf'
 # TODO
 # alias rm="mv ~/.local/share/..."
 
 # have some bugs
 #alias ms='musicbox'
 #
-alias tlpt='sudo tlp-stat -t'
-alias tlpb='sudo tlp-stat -b'
+#alias tlpt='sudo tlp-stat -t'
+#alias tlpb='sudo tlp-stat -b'
 
 ## arguments: -p -u
 #alias tsu='crow -u -s en '
