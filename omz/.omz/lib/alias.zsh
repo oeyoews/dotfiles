@@ -19,6 +19,7 @@ alias c='clear'
 
 # yay
 alias pas='sudo pacman -S'
+# sudo pacman-mirrors -c China -m rank -i -aS testing
 #alias yayy="yay -Yc"
 #alias yayr='yay -Rscn'
 alias yayr='yay -R'
@@ -46,8 +47,8 @@ alias rm='\rm -rf'
 # have some bugs
 #alias ms='musicbox'
 #
-#alias tlpt='sudo tlp-stat -t'
-#alias tlpb='sudo tlp-stat -b'
+alias tlpt='sudo tlp-stat -t'
+alias tlpb='sudo tlp-stat -b'
 
 ## arguments: -p -u
 #alias tsu='crow -u -s en '
@@ -234,3 +235,6 @@ alias gll="setsid google-chrome-stable http://127.0.0.1:8090 > /tmp/ll.log 2>&1 
 # tips
 # jc -xe  > /tmp/1.log
 alias ts="trans"
+
+#journalctl -p 3 -xb
+#journalctl -b -p warning
