@@ -62,6 +62,7 @@
 * foxit reader
 * gimp
 * mpv
+* xournal++
 * krita
 
 ---

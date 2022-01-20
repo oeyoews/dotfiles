@@ -45,7 +45,7 @@ alias rm='\rm -rf'
 # alias rm="mv ~/.local/share/..."
 
 # have some bugs
-#alias ms='musicbox'
+alias ms='musicbox'
 #
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
