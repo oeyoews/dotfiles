@@ -64,6 +64,8 @@
 * mpv
 * xournal++
 * krita
+* mycli
+
 
 ---
 ### terminal
