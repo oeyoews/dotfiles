@@ -11,7 +11,7 @@
   * [tools](#tools)
   * [terminal](#terminal)
   * [gnome](#gnome)
-  * [[ime](https://wiki.archlinux.org/title/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E8%BE%93%E5%85%A5%E6%B3%95%E5%BC%95%E6%93%8E)](#imehttpswikiarchlinuxorgtitlefcitx5_e7ae80e4bd93e4b8ade69687e8be93e585a5e6b395e5bc95e6938e)
+  * [ime](#ime)
 * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
@@ -87,7 +87,7 @@
 * base-devel
 
 ---
-### [ime](https://wiki.archlinux.org/title/Fcitx5_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E8%BE%93%E5%85%A5%E6%B3%95%E5%BC%95%E6%93%8E)
+### ime
 * fcitx5-im
 * fcitx5-chinese-addons
 * fcitx5-pinyin-zhwiki
