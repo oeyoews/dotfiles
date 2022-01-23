@@ -65,7 +65,7 @@
 * xournal++
 * krita
 * mycli
-
+* tlp tlp-rdw
 
 ---
 ### terminal
