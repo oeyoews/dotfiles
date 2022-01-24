@@ -7,6 +7,7 @@
   * [translate](#translate)
   * [browser](#browser)
   * [editor](#editor)
+* [* emacs](#-emacs)
   * [font](#font)
   * [tools](#tools)
   * [terminal](#terminal)
@@ -48,7 +49,7 @@
 * marktext
 * visual-studio-code-bin
 * libreoffice
-
+* emacs
 ---
 ### font
 * FiraCode

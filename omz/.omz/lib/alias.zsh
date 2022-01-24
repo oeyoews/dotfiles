@@ -127,9 +127,10 @@ alias se='nvim -u NONE'
 # get weather to your terminal
 alias wego='curl wttr.in'
 
-#alias emacs='emacs -nw'
-#alias ee='\emacs'
-#alias doom='~/.emacs.d/bin/doom'
+alias emacsn='emacs -nw'
+alias ee='\emacs'
+alias doom='~/.emacs.d/bin/doom'
+
 #alias fmo='fmo -r -c blue'
 
 # v2raya
@@ -238,3 +239,5 @@ alias ts="trans"
 
 #journalctl -p 3 -xb
 #journalctl -b -p warning
+#inxi -Fxz
+#sudo -s /bin/zsh ???
