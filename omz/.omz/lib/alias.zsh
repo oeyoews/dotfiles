@@ -241,3 +241,4 @@ alias ts="trans"
 #journalctl -b -p warning
 #inxi -Fxz
 #sudo -s /bin/zsh ???
+alias vie="vim ~/.doom.d/config.el"

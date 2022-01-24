@@ -53,7 +53,7 @@
        :lang
        cc                ; C > C++ == 1
        emacs-lisp          ; drown in parentheses
-       (org +pretty +present)
+       (org +roam2 +pretty +present)
 
        :config
        literate

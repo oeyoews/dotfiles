@@ -20,7 +20,8 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "DeJaVu Sans Mono" :size 28 :weight 'regular))
+(setq doom-font (font-spec :family "DeJaVu Sans Mono" :size 22 :weight 'regular))
+;(setq doom-font (font-spec :family "Fira Code" :size 24 :weight 'regular))
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 ;; (setq doom-font (font-spec :family "Droid Sans Mono" :size 20))
 ;; doom-variable-pitch-font (font-spec :family "sans" :size 16))
@@ -37,7 +38,8 @@
 ;; doom-one doom-dracula doom-vibrant 'doom-solarized-dark
 (setq doom-theme 'doom-one)
 
-(setq org-directory "~/org/")
+(setq org-directory "~/.org/")
+(setq org-roam-directory "~/.org/roam2/")
 (setq org-superstar-headline-bullets-list '("☰" "✿" "☷" ))
 (setq org-startup-folded t)
 (setq org-startup-indented t)
