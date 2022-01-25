@@ -20,7 +20,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "DeJaVu Sans Mono" :size 22 :weight 'regular))
+(setq doom-font (font-spec :family "DeJaVu Sans Mono" :size 24 :weight 'regular))
 ;(setq doom-font (font-spec :family "Fira Code" :size 24 :weight 'regular))
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 ;; (setq doom-font (font-spec :family "Droid Sans Mono" :size 20))
@@ -83,6 +83,10 @@
       :prefix "j"
       :desc "avy-goto-char-timer" "j" #'avy-goto-char-timer)
 
+(map! :leader
+      :prefix "f"
+      :desc "ranger in emacs" "t" #'ranger)
+
 (setq doom-modeline-enable-word-count t)
 
 (setq company-idle-delay 0.1)
@@ -108,4 +112,4 @@
 
 (add-load-path! "~/.doom.d/snippets/")
 
-(global-set-key (kbd "C-c C-f") #'ranger)
+;; (global-set-key (kbd "C-c C-f") #'ranger)
