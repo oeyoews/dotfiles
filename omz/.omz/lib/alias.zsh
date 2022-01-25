@@ -127,9 +127,12 @@ alias se='nvim -u NONE'
 # get weather to your terminal
 alias wego='curl wttr.in'
 
-alias emacsn='emacs -nw'
-alias ee='\emacs'
+#alias emacsn='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
+
+# This recursion order is important
+alias emacs="emacsclient -c"
+alias ee='emacs'
 
 #alias fmo='fmo -r -c blue'
 

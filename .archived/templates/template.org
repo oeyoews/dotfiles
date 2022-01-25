@@ -1,0 +1,626 @@
+#+STARTUP: hideall
+#+TAGS: { 状态: @开启(o) @关闭(c) }
+* org-mode简明教程笔记
+  本笔记为org-mode简明教程的笔记
+  原文地址为: [[https://orgmode.org/guide/][org-mode Compact guide]]
+** 基础介绍
+*** org能做的事
+**** 记笔记
+**** 维护TODO列表
+**** 做任务计划
+**** 创作及发布
+**** 文学编程
+*** 安装好org后的可选基础配置 :ATTACH:
+:PROPERTIES:
+:ID:       4e679e0f-ed95-46d8-a4e0-e3a2e52f523a
+:END:
+    #+begin_src emacs-lisp
+      (global-set-key (kbd "C-c l") 'org-store-link)
+      (global-set-key (kbd "C-c a") 'org-agenda)
+      (global-set-key (kbd "C-c c") 'org-capture)
+    #+end_src
+    在打开后缀为.org文件后会自动进入org-mode
+** 文档结构
+   Org是基于大纲的一种工具，大纲模式的好处是可以很好的记录笔记和临时的想法，还可以通过折叠来隐藏不需要查看的内容。
+   #+begin_src emacs-lisp
+     ;; 可以通过此命令或快捷键TAB进行显示和隐藏内容
+     (org-cycle)
+   #+end_src
+*** 标题
+    Org用*号表示标题的层级关系，就像这样:
+    #+begin_src org
+      ,* 标题一
+        一些文字
+      ,** 子标题1
+         子标题1的内容
+      ,** 子标题2
+         子标题2的内容
+      ,* 标题二
+        标题二的内容
+      ,** 子标题1
+         子标题1的内容
+    #+end_src
+**** 其他
+***** 标题的标题是啥？
+      标题的标题叫脚注，后面会讲，其中一个功能就是会在被导出时忽略掉
+***** 不想看那么多星星咋办？
+      后面也会讲到，不过这里可以提前说一下:
+      #+begin_src org
+        ,#+STARTUP: hidestars odd
+        ,* 标题一
+          一些文字
+        ,** 子标题1
+           子标题1的内容
+        ,** 子标题2
+           子标题2的内容
+        ,* 标题二
+          标题二的内容
+        ,** 子标题1
+           子标题1的内容
+
+      #+end_src
+*** 不同的显示样式
+    Org-mode有三种大纲显示模式，而又分为两种不同的状态:
+**** 子项 Subtree
+     - FOLDED 折叠
+     - CHILDREN 不知道咋翻译
+     - SUBTREE 不知道咋翻译
+       将光标放置与某个子项上键入_TAB_即可切换三种不同的显示模式，如果键入了_C-u TAB_或者是_S-TAB_（这里的S-，是Shift）将会调用全局的显示状态。
+**** 全局 Global
+     - OVERVIEW 概览
+     - CONTENTS 目次
+     - SHOW ALL 全部显示
+       可以在键入_S-TAB_或_C-u TAB_在这三个显示模式下切换，如果键入_C-u C-u C-u TAB_就会直接切换为SHOW ALL显示模式
+**** 其他
+     Org打开一个文件时默认为*概览*模式，想要设置打开一个文件后的显示模式可以设置变量~org-startuop-folded~：
+     #+begin_src emacs-lisp
+       ;; 非空意味着概览OVERVIEW，nil意味着全部显示SHOW ALL
+       (setq org-startup-folded t)
+     #+end_src
+     如果要针对单独的org文件配置，可以在org文件开头设置:
+     #+begin_src org
+       ,#+STARTUP: overview
+     #+end_src
+     可选参数有:
+     - content
+     - overview
+     - showall
+*** 移动相关
+    以下是关于在标题间跳转的命令
+    _C-c C-n_	下一个标题
+    _C-c C-p_	上一个标题
+    _C-c C-f_	下一个同级标题
+    _C-c C-b_	上一个同级标题
+    _C-c C-u_	跳转到父级目录
+*** 结构编辑
+    _M-RET_	创建同级别的新标题（如果在一个列表项中，则会创建新的列表项/如果在某一行中间键入，将会将其分割并创建新的标题）。
+    _M-S-RET_	创建同级别的TODO条目
+    _TAB_	循环改变未指定标题名的标题的标题等级
+    _M_LEFT/RIGHT_	将当前标题提升或降级
+    _M_UP/DOWN_	上下交换同级别
+    _C-c C-w_	将当前条目放置与指定条目下
+    _C-x n s/w_	以当前子项为单位进行变窄和变宽
+**** 其他
+     如果在创建统计目录的新标题时不想分割标题可以定制变量~org-M-RET-may-split-line~，例子（具体请查看文档）:
+     #+begin_src emacs-lisp
+       ;; 默认不分割
+       (setq org-M-RET-may-split-line '((headline . nil)))
+     #+end_src
+*** Sparse Trees 不知道咋翻译，称为稀疏树
+    org有关很重要的功能，根据选定的信息构建Sparse Trees
+    _
+    C-c /_	这会提示你要使用哪些Sparse Trees的命令
+    _C-c / r_	使用正则匹配，所有可匹配的Sparse Trees，匹配到的会高亮，键入_C-c C-c_取消高亮。
+*** 清单列表
+    我们不仅可以创建标题样的条目，还能创建例如：复选框，有序无序列表。
+    * 有序无须列表的创建方式：
+      - 无序列表用“-”，“+”或“*”
+      - 有序列表用“1. sometext”或“1) sometext”
+      - 可以指定列表的说明，用“::”与条目标题与说明隔开
+
+    同一个列表的项目的第一行必须是相同的缩进，下面是一些例子:
+    * 西游记观后感
+      我最喜欢的场景有（顺序）
+      1. 三打白骨精
+      2. 女儿国
+         + 要我是唐僧可能就留下来了
+         + 可惜我不是，哈哈哈
+      我最喜欢的角色有
+      - 如来佛祖 :: 跟我爸的体型有得一拼
+      - 孙悟空 :: 好一个齐天大圣！
+
+
+    * 下面是一些按键的介绍:-
+      - _TAB_ :: 类似于标题的折叠
+      - _M-RET_ :: 新建同级项，如果要改变条目类型，可以使用前缀参数
+      - _M-S_RET_ :: 新建带有复选框的同级项
+      - _M-S-UP/DOWN_ :: 上下移动当前项，如果是有序的还会自动编号。
+      - _M-LEFT/RIGHT_ :: 将当前项降级或者升级
+      - _C-c C-c_ :: 勾选复选框
+      - _C-c -_ :: 循环修改当前项的条目符号('-','+','*','1.','1\)')。
+** 表格
+   Org带有一个快速直观的表格编辑器，如果与Emacs的*calc*包一起使用可以实现类似电子表格的计算。
+
+   * 想要创建一个表格分为以下几步
+     1. 先创建列名
+        #+begin_src org
+          | name     | age | tel |
+
+
+
+
+        #+end_src
+     2. 创建分割线
+        #+begin_src org
+          | name | tel | age |
+          |------+-----+-----|
+
+          | name | tel | age|
+          | -
+            |
+            - - > TAB
+        #+end_src
+     3. 按TAB或RET新建行
+*** 按键说明
+    - _C-c C-c_ :: 重新对齐表格
+    - _TAB_ :: 重新对齐表格/移动到下一个单元格/创建新行
+    - _S-TAB_ :: 重新对齐表格/移动到上一个单元格
+    - _RET_ :: 重新对齐表格，并移动到下一行/创建新行
+    - _S-UP/DOWN/LEFT/RIGHT_ :: 交换单元格为上下左右的单元格
+    - _M-LEFT/RIGHT :: 交换列为左边或右边的列
+    - _M-S-LEFT_ :: 删除当前列
+    - _M-S-RIGHT_ :: 向右插入新列
+    - _M-UP/DOWN_ :: 上下移动当前行
+    - _M-S-UP_ :: 删除当前行
+    - _M-S-DOWN_ :: 在当前行上方插入新行，如果指定前缀参数会下下方插入新行
+    - _C-c -_ :: 在当前行上插入分割线
+    - _C-c RET_ :: 在当前行下插入分割线，并移动到水平线下一行
+    - _C-c ^_ :: 根据当前列对表格进行排序
+       c
+
+** 超链接
+   * 超链接有两种定义方式
+     - 带说明的超链接
+       #+begin_src org
+         [[https://www.baidu.com][百度一下，你就知道]]
+       #+end_src
+     - 不带说明的超链接
+       #+begin_src org
+         [[www.baidu.com]]
+       #+end_src
+   * 超链接的链接方式
+     - 内部链接
+       也就是指链接与当前文件的一些链接，例如链接到当前文件某处
+       #+begin_src org
+         [[My Target1]]
+         [[My Target2][目标2]]
+
+
+
+         <<My Target1>>
+         <<My Target2>>
+       #+end_src
+     - 外部链接
+       org的超链接支持指向文件，网站，电子邮件等等
+       #+begin_src org
+         [[https://www.baidu.com][百度一下，你就知道]]
+         [[file:~/.emacs.d/init.el][Emacs Config - init.el]]
+         [[mailto:the_lty_mail@foxmail.com][EvanMeek's 邮箱]]
+         [[irc:/irc.com/#emacs/evanmeek][IRC Emacs]]
+         [[info:org#Hyperlinks][Emacs Org超链接内部文档]]
+       #+end_src
+       + 其他
+         在指定文件为指向的链接时，可以指定特定行或目标:
+         - 特定行
+           #+begin_src org
+             [[file:~/.emacs.d/init.el::15][Emacs Config - init.el 15L]]
+           #+end_src
+         - 特定目标
+           #+begin_src org
+             [[file:~/.emacs.d/test.org::Test Target][test.org Test Target]]
+           #+end_src
+   * 处理超链接
+     我们可以使用命令~org-store-link~存储当前的位置，然后再通过一些处理超链接的方式处理当前位置的链接，你可以将其绑定一个快捷键，[[*安装好org后的可选基础配置][见: 安装好org后的可选基础配置]]
+
+
+   _C-c C-l_	插入链接
+   _C-c C-l_	当光标置于一个超链接上，可以直接编辑它
+   _C-c C-o_	打开当前光标下的超链接
+** 待办事项
+*** 待办事项基础
+**** LOOP 基础的待办事项功能
+     当标题的开头为"T[[https:oeyoew.top][hello]]ODO"时，任何标题都会成为一个待办事项，例如:
+     #+begin_src org
+       ,* TODO 完成ORG-MODE笔记xxx部分
+     #+end_src
+     可以通过按键_C-c C-t_来对一个已存在标题标记不同的待办状态，默认情况下有三种待办状态:
+     - TODO :: 待办事项
+     - DONE :: 已完成的待办事项
+     - unmarked :: 未标记为待办事项的标题，也就是普通的标题
+     -  ::
+
+
+     还可以通过agenda缓冲区的~t~命令按键来远程完成切换不同待办状态。
+
+     下面是一些按键说明:
+
+     - _S-RIGHT/LEFT_ :: 选择前或后一种待办状态，类似于循环切换待办状态.
+     - _C-c / t_ :: 用[[*Sparse Trees 不知道咋翻译，称为稀疏树][Sparse Trees]]浏览待办事项。这将会折叠整个buffer，但是会显示所有的待办状态（除了DONE状态），以及标题的层级关系。
+     - ~M-x org-agenda t~ :: 显示全局的待办事项，待办事项列表从所有的agenda文件中收集，然后在一个单独的缓冲区内显示。
+     - _S-M-RET_ :: 新建一个待办事项
+***** 其他
+      也可以通过改变标签从而修改待办事项状态，具体见函数[[help:org-todo-trigger-tag-changes][org-todo-tigger-tag-changes]]的文档。
+**** OKAY 多种工作流状态
+     你可以为使用"TODO"关键字表明@emph[顺序]工作流状态:
+     #+begin_src emacs-lisp
+       (setq org-todo-keywords
+             '((sequence "TODO" "FEEDBACK" "VERIFY" "|" "DONE" "DELEGATED")))
+     #+end_src
+     竖线之前的状态代表需要完成的事，而之后代表已完成的事。如果你没有提供竖线作为分割，那么就会把最后一个状态作为"DONE"的状态。安装好后，你就可以使用_C-c C-t_来循环切换这几个状态了。
+     有时你可能想要使用不同的方式设置"TODO"关键字，例如，你可能想要最基本的”TODO=/=DONE"，但同时也想要有修复bug的工作流，
+     你可以安装以下的代码:
+     #+begin_src emacs-lisp
+       (setq org-todo-keywords
+             '((sequence "TODO(t)" "WAIT(w)" "|" "DONE(d)" "CANCEL(c)")
+               (sequence "REPORT(r)" "BUG(b)" "KNOWNCAUSE(k)" "|" "FIXED(f)")))
+     #+end_src
+     以上代码让你在为一个标题提供待办事项状态时添加了一个键序列，你可以键入_C-c C-t_来查看效果。
+
+     如果你想为单独的Org文件提供一个待办状态，并且为其添加键序列，可以使用如下配置:
+     #+begin_src org
+       ,#+TODO: TODO(t) | DONE(d)
+       ,#+TODO: REPORT(r) BUG(b) KNOWNCAUSE(k) | FIXED(f)
+       ,#+TODO: | CANCELED(c)
+     #+end_src
+**** 进展日志
+     记录进展日志以及改变待办状态的时间戳可以使用前缀调用命令_org-todo_。
+
+
+     当你键入_C-u C-c C-t_将会提示你改变当前标题的待办状态，如果你将一个待办状态从TODO状态改为DONE状态的话，那么org就会为你创建一个时间戳，以记录你完成当前待办事项的时间。这个功能是基于一个特定的变量决定的：
+     #+begin_src emacs-lisp
+       (setq org-log-done 'note)
+     #+end_src
+     这边出了点小意外，就是我设定~org-log-done~的值，没有效果，可能是版本原因，这边简单讲下不同设定下的不同区别  。
+     实现的效果大概是这样的:
+     #+begin_src org
+       ,* 每日任务
+       ,** DONE 读书
+         - State "DONE"       from "TODO"       [2020-05-05 二 19:57] \\
+           读完了
+         - State "TODO"       from              [2020-05-05 二 19:09] \\
+           要开始读书了
+           今天读《西游记》
+       ,** FIXED 编程
+           - State "FIXED"      from "BUG"        [2020-05-05 二 19:58] \\
+             解决了BUG
+           - State "BUG"        from "TODO"       [2020-05-05 二 19:57] \\
+             有个BUG
+           - State "TODO"       from "WAIT"       [2020-05-05 二 19:57] \\
+             开始编程
+           - State "WAIT"       from              [2020-05-05 二 19:55] \\
+             等读完书再来写代码
+       ,**  CANCEL 打游戏
+             - State "CANCEL"     from "WAIT"       [2020-05-05 二 19:58] \\
+               由于写代码时解决bug时间花太长了，没时间打游戏了，取消掉
+             - State "WAIT"       from              [2020-05-05 二 19:56] \\
+               12点之前还有时间的话就打游戏
+     #+end_src
+     下面我还可以对TODO关键字进行单独的设置，让其具有进展日志的功能，比如下面我们为TODO和WAIT关键字指定了默认具有记录时间戳的功能，让DONE或CANCEL关键字具有记录日志的功能：
+     #+begin_src emacs-lisp
+       (setq org-todo-keywords
+                    '((sequence "TODO(t!)" "WAIT(w!)"  "|" "DONE(d@)" "CANCEL(c@)")))
+     #+end_src
+     其中*@*代表记录日志，而*!*代表记录时间戳，你也可以让他们具有两种功能: ~TODO(t@/!)~
+
+     同样，我们也可以单独为某个org文件设置:
+     #+begin_src org
+       ,#+TODO: TODO(t) | WAIT(w@/!) | DONE (d!) CANCEL(c@)
+     #+end_src
+**** 优先级
+     当你大量使用Org模式后，你可能会有大量的待办事项条目，这个时候你可以为其设置优先级标记:
+     #+begin_src org
+       ,*** TODO [#A] 洗碗
+     #+end_src
+     有三种优先级模式，A-C，若不指定优先级，'B'等级是默认的。
+
+     - _C-c ,_ :: 设置当前标题的优先级，键入A-C设置级别，或者键入_SPC_清除标记
+     - _S-UP/DOWN_ :: 提升/降低当前标题的优先级
+**** TO
+#+begin_export ascii
+#+end_export
+DO 任务细分
+     我们可以将一个待办事项分为多个小的待办事项，并且可以用一些标记用于对小的待办事项做统计：
+     #+begin_src org
+       ,* TODO 每日任务 [33%]
+       ,** TODO 写作业 [2/3]
+       ,*** TODO 语文
+       ,*** DONE 数学
+           CLOSED: [2020-05-06 三 05:53]
+           - State "DONE"       from "TODO"       [2020-05-06 三 05:53]
+       ,*** DONE 英语
+           CLOSED: [2020-05-06 三 07:53]
+           - CLOSING NOTE [2020-05-06 三 07:53] \\
+             为了 提高我的英语水平，我活出uqle
+       ,** TODO 健身 [50%]
+       ,*** TODO 1组仰卧起坐
+       ,*** DONE 1组上下蹲
+           CLOSED: [2020-05-06 三 07:52]
+           - CLOSING NOTE [2020-05-06 三 07:52] \\
+             累死我了
+       ,*** TODO 500次跳绳
+       ,*** DONE 5km慢跑
+           CLOSED: [2020-05-06 三 05:55]
+           - State "DONE"       from "TODO"       [2020-05-06 三 05:55]
+       ,** DONE 学做菜 [2/2]
+          CLOSED: [2020-05-06 三 05:56]
+          - State "DONE"       from "TODO"       [2020-05-06 三 05:56]
+       ,*** DONE 主菜
+           CLOSED: [2020-05-06 三 05:56]
+           - State "DONE"       from "TODO"       [2020-05-06 三 05:56]
+           - 东坡肉
+       ,*** DONE 副菜
+           CLOSED: [2020-05-06 三 05:56]
+           - State "DONE"       from "TODO"       [2020-05-06 三 05:56]
+           - 上海青
+           - 鱼汤
+     #+end_src
+     待办事项的进度有两种呈现方式，一种是标记为~[/]~另一种是标记为~[%]~，如果它们的子项已完成，那么当前待办事项会自动切换状态为DONE。
+     _C-c C-c_ 刷新进度的状态
+**** 复选框 [/]
+- [ ] demo
+
+     还记得清单列表么，其中有一个复选框的样式，复选框不会被包含在全局的待办事项列表中，因此很适合用来将一个待办事项划分为多个步骤的操作：
+     #+begin_src org
+       ,* TODO 每日任务 [33%]
+       ,** TODO 写作业 [3/3]
+          - [X] 语文
+          - [X] 数学
+          - [X] 英语
+       ,** TODO 健身 [100%]
+          - [X] 1组仰卧起坐
+          - [X] 1组上下蹲
+          - [X] 500
+          - [X] 5km慢跑
+       ,** TODO 学做菜 [2/2]
+       ,*** DONE 主菜 [100%]
+           CLOSED: [2020-05-06 三 06:08]
+           - State "DONE"       from "TODO"       [2020-05-06 三 06:08]
+           - [X] 东坡肉
+       ,*** DONE 副菜 [2/2]
+           CLOSED: [2020-05-06 三 06:08]
+           - State "DONE"       from "TODO"       [2020-05-06 三 06:08]
+           - [X] 上海青
+           - [X] 鱼汤
+     #+end_src
+** 标签
+   可以为一个标题提供一个标签列表，有助将上下文进行关联。
+
+   创建标签的方式是在任意标题后，由两个冒号包住的单词，这个单词可以是任意字母、数字、下划线、和@符号。就像这样:
+
+   #+begin_src org
+     ,* 测试标题	:@Test:title_name:etc:
+   #+end_src
+*** 标签继承
+    Org-mode的标签可以根据大纲树继承结构，也就说子标题的标签会继承父标题的标签，不需要显式的写出来。
+    #+begin_src org
+      ,* TODO 公司任务                                                        :work:
+      ,** DONE 小组开会                                                  :meet:talk:
+      ,** TODO 编写代码                                                       :code:
+    #+end_src
+
+    上面编写代码和小组开会项就继承了公司任务的标签:work:。
+
+    Org-mode还支持单独设置某个标签为所有标签的父标签，从而让当前文件的所有标签都继承与它。
+    #+begin_src org
+      ,#+FILETAGS: :EvanMeek:
+    #+end_src
+
+    当一个org文件开头写上上面这段标记后，那么这个org文件的所有标签都会继承与:EvanMeek:
+*** 设置标签 :@开启:
+    前面我们已经讲过一种设置标签的方式，直接在标题后手动输入，还有另外几种方式:
+    - _C-c C-q_ :: 为当前标题创建新的标签
+    - _C-c C-c_ :: 同上，不过只有光标在标题上才有效
+
+    我们还可以提前创建一些常用的标签，然后通过一个单独的按键来快速创建标签，首先设置变量~org-tag-alist~:
+    #+begin_src emacs-lisp
+    (setq org-tag-alist '(("@work" . ?w) ("@home" . ?h) ("laptop" . ?l)))
+    #+end_src
+
+    这样设置后在我们使用_C-c C-q_或_C-c C-c_创建标签时就可以通过一些快捷键来创建标签。
+    虽然这样很方便，但有随之出现一个文件，就是有些org文件根本用不上这些提前定义好的标签，所以我们就可以单独为文件提前创建标签，创建方式:
+
+    #+begin_src org
+      ,#+TAGS: @work(w) @home(h) laptop(l)
+      ,#+TAGS: t_tag1 t_tag2
+    #+end_src
+*** 标签组
+    可以将类似的标签类型定义成一组，有两种定义的方式:
+    - 多选式
+      #+begin_src org
+        ,#+TAGS: [ 错误(e) : 已修正(f) : 已知问题(i) ]
+      #+end_src
+    - 单选式
+      #+begin_src org
+        ,#+TAGS: { 状态: @开启(o) @关闭(c) }
+      #+end_src
+    顾名思义多选就是可以使用标签组中任意多个标签，而单选组内只能选择一种标签
+*** 搜索标签
+    - _C-c / m_或_C-c \_ :: 使用稀疏树搜索
+      如果指定前缀参数，那么会忽略所有非代办状态的标题
+** 属性
+
+   条目可以具有一些属性标记，这些属性被包含在一个`PROPERTIES`片段中。
+   一个简单的属性例子:
+   #+begin_src org
+     ,* 最爱的歌手
+     ,** Eminem
+        :PROPERTIES:
+        :COUNTRY: 美国
+        :成名曲: 《The real Slim Shady》
+        :唱片累计销售量: 2.2亿
+        :FavoriteSong_ALL: "Lose Yourself" "MockingBird"
+        :END:
+     ,** 红花会贝贝
+        :PROPERTIES:
+        :FavoriteSong: "H.B.U.F" "Demo"
+        :END:
+   #+end_src
+
+   - _C-c C-x p_ :: 设置属性
+   - _C-c C-c d_ :: 删除当前属性项
+** 日期和时间
+   我们可以为待办事项提供时间或日期，在Org-mode中叫时间戳.
+*** 时间戳
+    时间戳就是一个日期（有多种格式），时间戳可以出现在org文件的任何地方（标题或正文），如果为某个条目指定了个时间戳，那么在用~org-agenda~管理待办事项时就可以筛选指定日期的待办事项操作。
+**** 基本的时间戳（事件、约会）
+     一个简单的时间戳只是给予了日期或时间给一个条目而已，就像你在纸上做事件或约会的计划一样。
+     #+begin_src org
+       ,* 约小美看电影
+         <2020-05-28 四>
+       ,* 开学返校
+         <2020-05-18 一>
+     #+end_src
+**** 有规律的时间戳
+     时间戳不仅可以表示具体时间的事件还可以表示每周或每月甚至每天为单位间隔的事件，这代表了每隔多久就重复做的事件:
+     #+begin_src org
+       ,* 去医院体检
+         <2020-05-11 一 +1y>
+     #+end_src
+**** 日记样式的时间
+     Org模式对Emacs的 *calendar/diary* 插件包提供了支持:
+     #+begin_src org
+       ,* 每个月的第二周召开会议
+         <%%(diary-float t 4 2)>
+     #+end_src
+**** 时间/日期范围
+     可以使用`--`来连接两个时间戳以表示时间范围
+     #+begin_src org
+       ,* 减肥计划
+         <2021-05-01 六>--<2020-06-01 一>
+     #+end_src
+**** 非活动时间戳
+     跟普通的时间戳类似，不过括号是使用方括号，而不是尖括号，区别在于这种非活动的时间戳不会被~org-agenda~所管理。
+     #+begin_src org
+       ,* 第101次表白
+         [2020-05-11 一]
+     #+end_src
+*** 创建时间戳
+    想让Org-mode识别你创建的时间戳，那必须是有特殊的格式的。下面的按键或命令可以让你快速创建一些时间戳，并且符合特殊的格式。
+
+    - _C-c ._
+      提示你输入日期，确认后会在当前光标下插入时间戳。如果当前光标下已经有一个时间戳，那么就会修改那个时间戳。如果连续两次使用这个命令，将会插入一个时间范围的时间戳。当给予它前缀参数，那么将会直接插入当前的时间。
+      #+begin_src org
+        普通时间 C-c .
+         <2020-07-10 五>
+        修改时间
+        <2020-05-10 日>
+        时间范围
+        <2021-05-01 六>--<2020-06-01 一>
+      #+end_src
+      [2020-09-01 二]
+    - _C-c !_ :: 类似与_C-c ._，不同的是它创建的是非活动的时间戳
+    - _S-LEFT/RIGHT_ ~(org-timestamp-down/up-day)~ :: 将当前光标下的时间戳提前或延迟一天
+    - _S-UP/DOWN_ ~(org-timestamp-down/up)~ :: 同上，不过支持对年，月，日，周，以及时间戳类型(非活动时间戳)进行变换。
+*** 截止日期和计划安排
+    - State "[待办]"     from              [2020-05-12 二 13:19]
+    在日常的日程安排中，需要在某些事项错过截止日期后进行警告提示，这时候可以为待办事项的时间戳添加一个关键字，从而让那个时间戳变为这个待办事项的截止日期:
+
+    - _C-c C-d_ 插入截止时间戳
+      #+begin_src org
+        ,* TODO 完成ORG-MODE笔记
+          DEADLINE: <2020-05-11 一>
+        ,** DONE 第一部分
+        ,** TODO 第二部分
+      #+end_src
+      如果时间超过截止日期，那么将会报一个警告，直到这个待办事项为"Done"状态才会停止警告。
+    - _C-c C-s_ 插入开始时间戳
+      如果有了截止日期你还需要开始日期，通过下面的按键可以插入待办事项(非必须)的开始日期:
+      #+begin_src org
+        ,* TODO 完成ORG-MODE笔记
+          SCHEDULED: <2021-05-10 一>
+          DEADLINE: <2020-05-11 一>
+        ,** DONE 第一部分
+        ,** TODO 第二部分
+      #+end_src
+      如果当前的时间超过了计划的开始时间，那么推迟一天开始时间也会自动推迟。
+
+      有些需要重复执行的任务，可以为其添加一个间隔周期，例如下面这个例子就是每各一个月开始一次:
+      #+begin_src org
+        ,* TODO 完成ORG-MODE笔记
+          SCHEDULED: <2021-05-10 一 +1m>
+          DEADLINE: <2020-05-11 一>
+        ,** DONE 第一部分
+        ,** TODO 第二部分
+      #+end_src
+*** 记录工作时间
+    org-mode可以记录你在完成某项待办事项所用时间，下面是一些按键介绍：
+
+    - _C-c C-x C-i_ ~(org-clock-in)~ :: 开始为当前待办事项计时
+      开始计时后会在当前条目下创建一个带有 *CLOCK* 关键字的时间戳,如果指定了前缀参数，那么就会从最近的计时任务中选择。
+      #+begin_src org
+        ,* 写代码
+          :LOGBOOK:
+          CLOCK: [2020-05-11 一 16:09]--[2020-05-12 二 06:36] => 14:27
+          :END:
+      #+end_src
+    - _C-c C-x C-o_ ~(org-clock-out)~ :: 停止计时
+      停止计时，它将会在刚刚开始计时处后创建一个时间戳，并且还会计算出开始时间和停止时间的时间差。
+      #+begin_src org
+        ,* DONE 写代码
+          :LOGBOOK:
+          CLOCK: [2020-05-11 一 16:10]--[2020-05-11 一 19:10] =>  3:00
+          :END:
+      #+end_src
+      *切换待办状态为"DONE"也会停止计时*
+
+    - _C-c C-x C-e_ ~(org-clock-modify-effort-estimate)~ :: 更新计时任务进度
+    - _C-c C-x C-q_ ~(org-clock-cancel)~ :: 停止计时在你误操作计时时有用
+    - _C-c C-x C-j_ ~(org-clock-go)~ :: 跳转到计时任务
+      可以指定跳转到当前正在计时的条目去，如果指定前缀参数，那么会跳转到最近一次计时任务的条目下。
+** 捕获-转发-归档
+   组织系统必有一个很重要的功能，那就是快速的捕获新想法和新任务，并将其与某些资料关联的能力。Org-mode中使用 *Capture* 实现。它能够将与一个任务相关的文件存储在一个特殊的目录下。可能在某个系统下，任务和项目经常需要移动位置，而将整个项目树保存到一个归档文件中有利于保持系统的简洁和快速。
+*** 捕获
+    *本章借鉴了* [[https://www.zmonster.me/2018/02/28/org-mode-capture.html][此博客]]。
+    org-mode能让你在工作时中断一会儿，来写一段简短的笔记。你可以为捕获新想法定义模板，并且将其笔记与不同的目标文件关联起来。
+**** 设置捕获
+     以下代码可以设置了保存笔记的默认文件地址，以及定义了一个捕获新想法的全局快捷键:
+     #+begin_src emacs-lisp
+       (setq org-default-notes-file  "~/Documents/org/notes.org")
+
+       ;; 这里前面有写
+       (global-set-key (kbd "C-c c") 'org-capture)
+     #+end_src
+*** 使用Capture
+    - _M-x org-capture_ :: 开始捕获
+      新建了一个缓冲区，用于编辑新捕获的想法。
+    - _C-c C-c_ ::  保存并返回原窗口
+      在编辑完新想法后，可以快速保存，并且返回原先的窗口，不会打断你的工作流。
+    - C-c C-w ::  重新将当前项移动到其他位置
+      将一个或多个条目放置与其他地方。
+    - C-c C-k :: 退出捕获过程并且复原到原本的状态。
+*** Capture模板
+    可以使用模板来为不同情况下的要捕获项以不同方式来捕获到不同的位置。
+
+    现在假设你想要使用一个模板来创建些普通的TODO条目，并且你想要将这些条目放置到 ~~/org/gtd.org~ 中的 *Task* 标题下，那么这个模板可以这么写:
+
+    #+begin_src emacs-lisp
+      (setq org-capture-templates
+            '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Task")
+               "* TODO %?\n %i\n %a"))
+    #+end_src
+
+    如果你你还想用一种时间树的形式来记录捕获到的内容，那么可以这么写:
+
+    #+begin_src emacs-lisp
+      (setq org-capture-templates
+            '(("j" "Journal" entry (file+datetree "~/org/journal.org")
+               "* %?\n %U\n  %i\n  %a")))
+    #+end_src
+    让我们来分析一下这两个模板例子， ~org-capture-templates~ 这个变量保存着所有模板，它要求值是一个包含了多个模板的列表，所以我们每个模板都要写成一个列表，列表的第一个参数表示在Capture菜单中模板对应的快捷键，第二个参数表示在Capture菜单中模板快捷键对应的显示文本，第三个参数表示模板内容的类型，第四个参数表示模板内容的位置，第五参数是模板具体的写法。
+    | 模板参数    | 例子内容                      | 描述           |
+    |-------------+-------------------------------+----------------|
+    | key         | "t"                           | 模板快捷键     |
+    | description | "Todo"                        | 模板描述       |
+    | type        | entry                         | 模板内容类型   |
+    | target      | (file+headline "path" "Task") | 模板保存的位置 |
+    | template    | "* TODO %?\n %i\n %a"         | 具体的模板     |
