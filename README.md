@@ -54,6 +54,7 @@
 * FiraCode
 * DeJaVu
 * Fantasque
+* JetBrains
 
 ---
 ### tools

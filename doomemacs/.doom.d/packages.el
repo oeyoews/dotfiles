@@ -55,3 +55,5 @@
 ;; (package! airline-themes)
 (package! ranger)
 (package! yasnippet-snippets)
+;(package! cnfonts)
+
