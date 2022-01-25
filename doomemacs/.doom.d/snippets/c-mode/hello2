@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+name: h234
+key:  h2
+# --
+hello 2 printf
