@@ -15,6 +15,7 @@
 ;;      directory (for easy access to its source code).
 
 (doom! :input
+       ;; chinese
 
        :completion
        yasnippets
@@ -52,8 +53,11 @@
        rgb                 ;creating color strings
 
        :lang
-       cc                ; C > C++ == 1
+       ;;cc                ; C > C++ == 1
+       zig
        emacs-lisp          ; drown in parentheses
+       sh
+       markdown
        (org +roam2 +pretty +present)
 
        :config
