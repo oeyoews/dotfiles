@@ -104,7 +104,6 @@ alias kdiff="kitty +kitten diff"
 alias kemoj="kitty +kitten unicode_input"
 alias diffk="kitty +kitten diff"
 
-
 # @deprecated
 #alias che="cheat -e"
 #alias chl="cheat -l"
@@ -116,7 +115,6 @@ alias zprof="zprof > /tmp/zprof.log"
 #alias btop='bpytop'
 # `zsh -f' (vanilla for zsh)
 alias zsh_time="time (repeat 10 zsh -i -c exit)"
-
 
 #alias nvim="~/.local/share/nvim.appimage"
 alias vim='nvim'
@@ -133,13 +131,13 @@ alias doom='~/.emacs.d/bin/doom'
 # This recursion order is important
 alias emacs="emacsclient -nc"
 alias ee='emacs'
+
 alias eer="systemctl --user restart emacs.service"
 
 #alias fmo='fmo -r -c blue'
 
 # v2raya
 #journalctl -f -u v2raya.service
-# TODO
 alias pc="sudo systemctl stop v2raya"
 alias po="sudo systemctl start v2raya"
 
