@@ -131,7 +131,7 @@ alias wego='curl wttr.in'
 alias doom='~/.emacs.d/bin/doom'
 
 # This recursion order is important
-alias emacs="emacsclient -c"
+alias emacs="emacsclient -nc"
 alias ee='emacs'
 
 #alias fmo='fmo -r -c blue'

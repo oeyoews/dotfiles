@@ -105,3 +105,5 @@
 
 ;; fast quit emacs
 (setq confirm-kill-emacs nil)
+
+(add-load-path! "~/.doom.d/snippets/")

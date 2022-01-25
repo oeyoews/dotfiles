@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: hello2
+# key:
+# --
+alert('Hello'); SH
