@@ -133,6 +133,7 @@ alias doom='~/.emacs.d/bin/doom'
 # This recursion order is important
 alias emacs="emacsclient -nc"
 alias ee='emacs'
+alias eer="systemctl --user restart emacs.service"
 
 #alias fmo='fmo -r -c blue'
 

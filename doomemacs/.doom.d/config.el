@@ -83,9 +83,11 @@
       :prefix "j"
       :desc "avy-goto-char-timer" "j" #'avy-goto-char-timer)
 
+;; ranger binding
 (map! :leader
       :prefix "f"
       :desc "ranger in emacs" "t" #'ranger)
+;; (global-set-key (kbd "C-c C-f") #'ranger)
 
 (setq doom-modeline-enable-word-count t)
 
@@ -110,6 +112,4 @@
 ;; fast quit emacs
 (setq confirm-kill-emacs nil)
 
-(add-load-path! "~/.doom.d/snippets/")
-
-;; (global-set-key (kbd "C-c C-f") #'ranger)
+(add-hook 'server-after-make-frame-hook #'toggle-frame-fullscreen)

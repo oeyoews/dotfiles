@@ -45,3 +45,6 @@ ZSH_THEME="p10k/powerlevel10k"
 # just support bash
 #export HISTTIMEFORMAT="%F %T `whoami` "
 export QT_IM_MODULE=fcitx5
+
+# complete parameter for emacs and emacsclient
+compdef _gnu_generic emacs emacsclient

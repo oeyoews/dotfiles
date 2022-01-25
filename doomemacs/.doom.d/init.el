@@ -29,6 +29,7 @@
        neotree           ; a project drawer, like NERDTree for vim
        tabs              ; a tab bar for Emacs
        unicode           ; extended unicode support for various languages
+       vc-gutter
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
