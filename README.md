@@ -7,8 +7,7 @@
   * [translate](#translate)
   * [browser](#browser)
   * [editor](#editor)
-* [* emacs](#-emacs)
-  * [font](#font)
+  * [Fonts](#fonts)
   * [tools](#tools)
   * [terminal](#terminal)
   * [gnome](#gnome)
@@ -49,8 +48,9 @@
 * visual-studio-code-bin
 * libreoffice
 * emacs
+
 ---
-### font
+### Fonts
 * FiraCode
 * DeJaVu
 * Fantasque
@@ -65,7 +65,8 @@
 * xournal++
 * krita
 * mycli
-* tlp tlp-rdw
+* tlp
+  * tlp-rdw
 
 ---
 ### terminal
@@ -82,7 +83,8 @@
 * gnome-todo
 * gnome locks
 * papirus
-* gpaste
+<!--* gpaste-->
+* Clipboard indicator
 * dash-to-dock
 * base-devel
 
