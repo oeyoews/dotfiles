@@ -16,7 +16,6 @@
 * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
-<!--[[toc]]-->
 ## Softwares
 
 ### office

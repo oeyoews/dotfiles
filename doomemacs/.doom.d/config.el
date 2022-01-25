@@ -107,3 +107,5 @@
 (setq confirm-kill-emacs nil)
 
 (add-load-path! "~/.doom.d/snippets/")
+
+(global-set-key (kbd "C-c C-f") #'ranger)
