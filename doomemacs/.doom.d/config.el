@@ -89,6 +89,10 @@
       :desc "ranger in emacs" "t" #'ranger)
 ;; (global-set-key (kbd "C-c C-f") #'ranger)
 
+(map! :leader
+      :prefix "e"
+      :desc "yasnippet" "e" #'yas-new-snippet)
+
 (setq doom-modeline-enable-word-count t)
 
 (setq company-idle-delay 0.1)
@@ -109,8 +113,11 @@
 ;; use yasnipets
 (setq yas-triggers-in-field t)
 
-(add-hook 'server-after-make-frame-hook #'toggle-frame-fullscreen)
-
 ;; fast quit emacs
 (setq confirm-kill-emacs nil)
 
+;; org-mode image width
+;; (setq org-image-actual-width nil)
+(setq org-image-actual-width '(400))
+
+(add-hook 'server-after-make-frame-hook #'toggle-frame-fullscreen)

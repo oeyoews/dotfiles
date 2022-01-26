@@ -1,14 +1,23 @@
-#+SETUPFILE: ./theme.setup
+#+setupfile: ~/.doom.d/org2html/org/theme-readtheorg.setup
+#+attr_html: :width 500px
 
 * demo
 ** demo
 hello, if you want to this fonts
 ** demo
 if you want to write this hello, you must hello
-* demo
-** demo
+* WAIT demo :linux:
+** demo :hello:
 *** demo
 *** demo
 
-[[demo][https://oeyoews.top]]
 [[https://oeyoew.top][hello]]
+
+[[~/Pictures/grub.png]]
+
+#+begin_notes
+#+end_notes
+
+#+begin_export html
+<p> demo </p>
+#+end_export

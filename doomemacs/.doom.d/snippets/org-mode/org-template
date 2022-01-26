@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+name: org template
+key: orgtemplate
+# --
+
+#+title:
+#+setupfile: ~/.doom.d/org2html/org/theme-readtheorg.setup
+#+attr_html: :width 500px
