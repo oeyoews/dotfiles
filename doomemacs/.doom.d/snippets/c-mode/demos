@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: hel
+# uuid: demo
+# key: hello
+# condition: t
+# --
+demo hello for your
