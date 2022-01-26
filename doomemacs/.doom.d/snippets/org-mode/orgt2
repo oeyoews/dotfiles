@@ -5,9 +5,9 @@
 
 #+TITLE: ${1:`(file-name-base buffer-file-name)`}
 #+AUTHOR: oeyoews
-#+EMAIL:     jyao4783@gmail.com
+#+EMAIL:  jyao4783@gmail.com
 #+DESCRIPTION:
 #+KEYWORDS: org
 #+ATTR_HTML: :width 500px
-#+OPTIONS: toc:nil num:3 H:4 ^:nil pri:t
+#+OPTIONS: toc:t num:3 H:4 ^:nil pri:t
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/home/oeyoews/.doom.d/org2html/css/blue.css"/>
