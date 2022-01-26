@@ -133,6 +133,7 @@ alias emacs="emacsclient -nc"
 alias ee='emacs'
 
 alias eer="systemctl --user restart emacs.service"
+alias reveal="reveal-md"
 
 #alias fmo='fmo -r -c blue'
 

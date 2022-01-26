@@ -1,5 +1,9 @@
-#+STARTUP: hideall
-#+TAGS: { 状态: @开启(o) @关闭(c) }
+#+TITLE:
+#+AUTHOR: oeyoews
+#+SETUPFILE: ~/.doom.d/org2html/org/theme-readtheorg.setup
+#+ATTR_HTML: :width 500px
+
+
 * org-mode简明教程笔记
   本笔记为org-mode简明教程的笔记
   原文地址为: [[https://orgmode.org/guide/][org-mode Compact guide]]
