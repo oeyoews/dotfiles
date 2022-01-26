@@ -3,7 +3,7 @@
 # key: orgt
 # --
 
-#+TITLE:
+#+TITLE: ${1:`(file-name-base buffer-file-name)`}
 #+AUTHOR: oeyoews
 #+SETUPFILE: ~/.doom.d/org2html/org/theme-readtheorg.setup
 #+ATTR_HTML: :width 500px
