@@ -58,6 +58,7 @@
 
 ---
 ### tools
+* tiddlydesktop
 * obs
 * clementine
 * foxit reader
