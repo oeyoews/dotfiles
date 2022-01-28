@@ -112,6 +112,8 @@
 * cdate
 * gource
 * cloc
+* jdk-openjdk
+* make
 * rg(ripgrep)
 * ranger
 > NOTE: preview img just support kitty terminal
