@@ -37,5 +37,5 @@ setopt share_history          # share command history data
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
-[ "$HISTSIZE" -lt 5000 ] && HISTSIZE=5000
-[ "$SAVEHIST" -lt 1000 ] && SAVEHIST=1000
+[ "$HISTSIZE" -lt 10000 ] && HISTSIZE=10000
+[ "$SAVEHIST" -lt 10000 ] && SAVEHIST=10000
