@@ -442,29 +442,30 @@ function on() {
 
 
 # tiddlywiki
-function two() {
-  #TODO: adjsut folder
-  # generial
-  #nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
-  #(cmd)
-  #setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
-  # NOTE: this port is node and chrome, when this node process is closed, but this browser need refresh by hand if it's
-  # opened, because this port will show is assiging
-  twpid=`/usr/sbin/lsof -i :8090|grep -v "PID" | awk '{print $2}'`
-  if [ "$twpid" = "" ];
-  then
-    if [[ $# -eq 0 ]]
-    then
-      echo "No parameter input"
-    else
-      setsid tiddlywiki $1 --listen port=8090 > /tmp/tw.log 2>&1 &
-      disown
-      echo "$1 is running"
-    fi
-  else
-    echo "this service(port) has opened!"
-  fi
-}
+#function two() {
+  ##TODO: adjsut folder
+  ## generial
+  ##nohup tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
+  ##(cmd)
+  ##setsid tiddlywiki ~/REPOS/TW --listen port=8090 > /tmp/tw.log 2>&1 &
+  ## NOTE: this port is node and chrome, when this node process is closed, but this browser need refresh by hand if it's
+  ## opened, because this port will show is assiging
+
+  #twpid=`/usr/sbin/lsof -i :8090|grep -v "PID" | awk '{print $2}'`
+  #if [ "$twpid" = "" ];
+  #then
+    #if [[ $# -eq 0 ]]
+    #then
+      #echo "No parameter input"
+    #else
+      #setsid tiddlywiki $1 --listen port=8090 > /tmp/tw.log 2>&1 &
+      #disown
+      #echo "$1 is running"
+    #fi
+  #else
+    #echo "this service(port) has opened!"
+  #fi
+#}
 
 # TODO: how to in subprocess to resolve this path reduce double path
 # special
@@ -483,19 +484,19 @@ function tw5() {
 
 # tiddlywiki mywikifolder --listen username=test password=tset
 # tiddlywiki --output public --build index
-function twc() {
-  #NOTE: must have comma to disable show error in zsh startup `then` should put single line
-  if [[ $# -gt 0  ]];
-  then
-    if [ ! -d "$1" ];
-    then
-      tiddlywiki $1 --init server
-      nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1&
-      nohup google-chrome-stable http://127.0.0.1:8081 >/tmp/google.log 2>&1 &
-    else
-      echo "This folder has exits!!!"
-    fi
-  else
-    echo "ERROR: No parameter input!!!"
-  fi
-}
+#function twc() {
+  ##NOTE: must have comma to disable show error in zsh startup `then` should put single line
+  #if [[ $# -gt 0  ]];
+  #then
+    #if [ ! -d "$1" ];
+    #then
+      #tiddlywiki $1 --init server
+      #nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1&
+      #nohup google-chrome-stable http://127.0.0.1:8081 >/tmp/google.log 2>&1 &
+    #else
+      #echo "This folder has exits!!!"
+    #fi
+  #else
+    #echo "ERROR: No parameter input!!!"
+  #fi
+#}
