@@ -135,6 +135,7 @@ alias ee='emacs'
 alias eer="systemctl --user restart emacs.service"
 alias reveal="reveal-md"
 
+alias bp="btop"
 #alias fmo='fmo -r -c blue'
 
 # v2raya
