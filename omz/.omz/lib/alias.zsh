@@ -93,6 +93,7 @@ alias gitut='git add . && git commit -m "doc: update(automatically)" && git push
 alias gite='git config -e'
 alias gita='git tag'
 alias gitaa='git push origin --tags'
+alias gitg="vim ./.gitignore"
 #git push -uf origin main
 
 # just for kitty terminal, other terminal please use \ssh temporary
@@ -241,6 +242,7 @@ alias gll="setsid google-chrome-stable http://127.0.0.1:8090 > /tmp/ll.log 2>&1 
 
 # tips
 # jc -xe  > /tmp/1.log
+# jc -f(follow) -u halo
 alias ts="trans"
 
 #journalctl -p 3 -xb
