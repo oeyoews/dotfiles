@@ -1,25 +1,29 @@
 <!-- vim-markdown-toc GitLab -->
 
-* [Dependcy](#dependcy)
-* [Softwares](#softwares)
-  * [blog](#blog)
-  * [script manage](#script-manage)
-  * [write](#write)
-  * [office](#office)
-  * [idea](#idea)
-  * [iso](#iso)
-  * [translate](#translate)
-  * [browser](#browser)
-  * [editor](#editor)
-  * [Fonts](#fonts)
-  * [tools](#tools)
-  * [terminal](#terminal)
-  * [gnome](#gnome)
-  * [ime](#ime)
-* [Thanks](#thanks)
+* [README](#readme)
+  * [Dependcy](#dependcy)
+  * [Softwares](#softwares)
+    * [blog](#blog)
+    * [script manage](#script-manage)
+    * [write](#write)
+    * [office](#office)
+    * [idea](#idea)
+    * [iso](#iso)
+    * [translate](#translate)
+    * [browser](#browser)
+    * [editor](#editor)
+    * [Fonts](#fonts)
+    * [tools](#tools)
+    * [terminal](#terminal)
+    * [gnome](#gnome)
+    * [ime](#ime)
+  * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
+# README
+
 ## Dependcy
+
 * stow
 
 ## Softwares
@@ -54,26 +58,27 @@
 * libreoffice
 
 ### idea
+
 * atom material icons
 * atom onedark theme
 * indent reinbow
 * rainbow brackets
 
----
 ### iso
+
 * etcher
 * ventoy
 
----
 ### translate
+
 * translate-shell
 
----
 ### browser
+
 * google-chrome
 
----
 ### editor
+
 * neovim
 * typora-free
 * marktext
@@ -81,15 +86,15 @@
 * libreoffice
 * emacs
 
----
 ### Fonts
+
 * FiraCode
 * DeJaVu
 * Fantasque
 * JetBrains
 
----
 ### tools
+
 * tiddlydesktop
 * obs
 * clementine
@@ -102,14 +107,14 @@
 * tlp
   * tlp-rdw
 
----
 ### terminal
+
 * kitty
 * alacritty
 * wezterm
 
----
 ### gnome
+
 * downgrade
 * papirus-folders
 * gnome-keyring
@@ -117,21 +122,18 @@
 * gnome-todo
 * gnome locks
 * papirus
-<!--* gpaste-->
-* Clipboard indicator
+* gpaste
+  * <!--* Clipboard indicator-->
 * dash-to-dock
 * base-devel
 
----
 ### ime
+
 * fcitx5-im
 * fcitx5-chinese-addons
 * fcitx5-pinyin-zhwiki
 * fcitx5-pinyin-sougou
 * fcitx5-pinyin-moegirl
-
-
----
 
 * nload
 * gotop
@@ -171,7 +173,6 @@
 * ventoy
 * startuml
 * aria2
-
 
 ## Thanks
 <a href="https://jb.gg/OpenSource"><img src=".screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
