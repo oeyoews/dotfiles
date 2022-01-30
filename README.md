@@ -1,6 +1,8 @@
 <!-- vim-markdown-toc GitLab -->
 
+* [Dependcy](#dependcy)
 * [Softwares](#softwares)
+  * [blog](#blog)
   * [script manage](#script-manage)
   * [write](#write)
   * [office](#office)
@@ -17,12 +19,25 @@
 * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
+## Dependcy
+* stow
+
 ## Softwares
+
+### blog
+
+* hexo
+* docify
+* vuepress
+* docsaurus
+* hugo
+* halo
+* tiddlywiki5
 
 ### script manage
 
-package.json
-makefile
+* package.json
+* makefile
 
 ### write
 
