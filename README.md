@@ -1,6 +1,7 @@
 <!-- vim-markdown-toc GitLab -->
 
 * [Softwares](#softwares)
+  * [write](#write)
   * [office](#office)
   * [idea](#idea)
   * [iso](#iso)
@@ -17,7 +18,17 @@
 <!-- vim-markdown-toc -->
 ## Softwares
 
+### write
+
+* notion.so
+* tiddlywiki
+* cnblog
+* wolai
+* typora
+* mubu
+
 ### office
+
 * onlyoffice
 * libreoffice
 
