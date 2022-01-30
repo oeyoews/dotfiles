@@ -1,6 +1,7 @@
 <!-- vim-markdown-toc GitLab -->
 
 * [Softwares](#softwares)
+  * [script manage](#script-manage)
   * [write](#write)
   * [office](#office)
   * [idea](#idea)
@@ -17,6 +18,11 @@
 
 <!-- vim-markdown-toc -->
 ## Softwares
+
+### script manage
+
+package.json
+makefile
 
 ### write
 
