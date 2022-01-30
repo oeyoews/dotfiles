@@ -3,6 +3,7 @@
 * [README](#readme)
   * [Dependcy](#dependcy)
   * [Softwares](#softwares)
+    * [lint](#lint)
     * [blog](#blog)
     * [script manage](#script-manage)
     * [write](#write)
@@ -20,6 +21,7 @@
   * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
+
 # README
 
 ## Dependcy
@@ -27,6 +29,11 @@
 * stow
 
 ## Softwares
+
+### lint
+
+* mdl
+* shellcheck
 
 ### blog
 
@@ -150,7 +157,9 @@
 * make
 * rg(ripgrep)
 * ranger
+
 > NOTE: preview img just support kitty terminal
+
 * [tt](https://github.com/lemnos/tt)
 * ttyper
 * duf
@@ -175,4 +184,6 @@
 * aria2
 
 ## Thanks
-<a href="https://jb.gg/OpenSource"><img src=".screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/></a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
+
+<a href="https://jb.gg/OpenSource"><img src=".screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/>
+</a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.

@@ -38,3 +38,6 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #fzf
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #export FZF_DEFAULT_COMMAND='fd --type f'
+#
+
+export PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin
