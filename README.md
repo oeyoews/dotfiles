@@ -114,6 +114,9 @@
 * mycli
 * tlp
   * tlp-rdw
+* foliate
+* calibre
+
 
 ### terminal
 
