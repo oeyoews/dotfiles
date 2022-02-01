@@ -252,3 +252,5 @@ alias ts="trans"
 #inxi -Fxz
 #sudo -s /bin/zsh ???
 alias vie="vim ~/.doom.d/config.el"
+
+alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
