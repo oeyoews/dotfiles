@@ -364,25 +364,25 @@ function cdr() {
 # better redirection
 # disable: vim
 # enable: kooha goland
-function on() {
-  #https://www.ruanyifeng.com/blog/2019/12/mktemp.html
-  #while getopts "-h:--help:" arg
-  #do
-  #case "$arg" in
-  #-h)
-  #echo "-a表示all全部。。。参数值为； $OPTARG"
-  #;;
-#?)dotfiles
-  #echo "没有找到这条命令。。。。"
-  #;;
-  #esac
-  #done
-  #trap 'rm -rf "$RunName"' EXIT
-  #nohup：when you exit your terminal(need twice quit), this job is still running
-  RunName=$(mktemp -t ${1}.XXXXXX) || exit 1
-  nohup ${1} >${RunName} 2>&1 &
-  echo -e "\033[0;32m${1}\033[0m is runing ..."
-}
+#function on() {
+  ##https://www.ruanyifeng.com/blog/2019/12/mktemp.html
+  ##while getopts "-h:--help:" arg
+  ##do
+  ##case "$arg" in
+  ##-h)
+  ##echo "-a表示all全部。。。参数值为； $OPTARG"
+  ##;;
+##?)dotfiles
+  ##echo "没有找到这条命令。。。。"
+  ##;;
+  ##esac
+  ##done
+  ##trap 'rm -rf "$RunName"' EXIT
+  ##nohup：when you exit your terminal(need twice quit), this job is still running
+  #RunName=$(mktemp -t ${1}.XXXXXX) || exit 1
+  #nohup ${1} >${RunName} 2>&1 &
+  #echo -e "\033[0;32m${1}\033[0m is runing ..."
+#}
 
 #TODO:
 #function reload() {
@@ -469,18 +469,18 @@ function on() {
 
 # TODO: how to in subprocess to resolve this path reduce double path
 # special
-function tw5() {
-  local CURRENT_DIR=`pwd`
-  local TARGET_DIR=~/REPOS/TiddlyWiki5
-  cd ${TARGET_DIR} && make
-  #pm2 stop tiddlywiki
-  # NOTE:
-  #pm2 delete tw
-  #pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
-  #make
-  cd ${CURRENT_DIR}
-  #setsid google-chrome-stable http://127.0.0.1:8090 >/tmp/google.log 2>&1 &
-}
+#function tw5() {
+  #local CURRENT_DIR=`pwd`
+  #local TARGET_DIR=~/REPOS/TiddlyWiki5
+  #cd ${TARGET_DIR} && make
+  ##pm2 stop tiddlywiki
+  ## NOTE:
+  ##pm2 delete tw
+  ##pm2 start --name tw /usr/bin/tiddlywiki -- --listen port=8090
+  ##make
+  #cd ${CURRENT_DIR}
+  ##setsid google-chrome-stable http://127.0.0.1:8090 >/tmp/google.log 2>&1 &
+#}
 
 # tiddlywiki mywikifolder --listen username=test password=tset
 # tiddlywiki --output public --build index

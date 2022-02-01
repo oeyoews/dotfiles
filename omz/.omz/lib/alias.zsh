@@ -18,7 +18,7 @@ alias neo='fastfetch'
 alias open='xdg-open'
 alias c='clear'
 
-alias hugomd="cd /home/oeyoews/REPOS/hugoTest/content/docs"
+alias hmd="cd /home/oeyoews/REPOS/hugo2/content/post/"
 # yay
 alias pas='sudo pacman -S'
 # sudo pacman-mirrors -c China -m rank -i -aS testing
