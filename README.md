@@ -186,6 +186,16 @@
 * ventoy
 * startuml
 * aria2
+* git-filter-repo
+* oreo-cursors
+* lx-music-desktop
+* wudao-dict
+* musicbox
+* default.nvim
+* latern
+* v2raya
+* qv2ray
+* vim-init
 
 ## Thanks
 
