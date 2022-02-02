@@ -3,8 +3,12 @@
 * [README](#readme)
   * [Dependcy](#dependcy)
   * [Softwares](#softwares)
+  * [pages](#pages)
     * [lint](#lint)
     * [blog](#blog)
+      * [doc](#doc)
+      * [blog](#blog-1)
+      * [wiki](#wiki)
     * [script manage](#script-manage)
     * [write](#write)
     * [office](#office)
@@ -24,11 +28,21 @@
 
 # README
 
+
 ## Dependcy
 
 * stow
 
 ## Softwares
+
+## pages
+
+* github/gitlab
+* vercel
+* netlify
+* cloudfare
+* ~~gitee~~
+* jsDelivr
 
 ### lint
 
@@ -37,12 +51,19 @@
 
 ### blog
 
-* hexo
+#### doc
+
 * docify
 * vuepress
 * docsaurus
+
+#### blog
+* hexo
 * hugo
 * halo
+
+#### wiki
+
 * tiddlywiki5
 
 ### script manage
