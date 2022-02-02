@@ -143,7 +143,7 @@
 * fcitx5-im
 * fcitx5-chinese-addons
 * fcitx5-pinyin-zhwiki
-* fcitx5-pinyin-sougou
+* fcitx5-pinyin-sougou(maybe have memory out)
 * fcitx5-pinyin-moegirl
 
 * nload

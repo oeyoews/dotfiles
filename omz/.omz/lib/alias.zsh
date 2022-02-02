@@ -3,6 +3,7 @@
 #alias soz='source $HOME/.zshrc && exec zsh'
 alias cdrt="cd ~/REPOS/TiddlyWiki5"
 alias cdri="cd ~/REPOS/img"
+alias cdrh="cd ~/REPOS/hugo2"
 alias soz='exec zsh'
 alias tw='tiddlywiki'
 alias lss='colorls'
