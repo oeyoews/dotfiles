@@ -5,10 +5,9 @@
   * [Softwares](#softwares)
   * [pages](#pages)
     * [lint](#lint)
+    * [doc](#doc)
     * [blog](#blog)
-      * [doc](#doc)
-      * [blog](#blog-1)
-      * [wiki](#wiki)
+    * [wiki](#wiki)
     * [script manage](#script-manage)
     * [write](#write)
     * [office](#office)
@@ -49,20 +48,19 @@
 * mdl
 * shellcheck
 
-### blog
 
-#### doc
+### doc
 
 * docify
 * vuepress
 * docsaurus
 
-#### blog
+### blog
 * hexo
 * hugo
 * halo
 
-#### wiki
+### wiki
 
 * tiddlywiki5
 
@@ -104,7 +102,8 @@
 
 ### browser
 
-* google-chrome
+* firefox-nightly
+~~* google-chrome~~
 
 ### editor
 
@@ -137,6 +136,7 @@
   * tlp-rdw
 * foliate
 * calibre
+* stellarium
 
 
 ### terminal

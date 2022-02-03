@@ -255,3 +255,4 @@ alias ts="trans"
 alias vie="vim ~/.doom.d/config.el"
 
 alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
+#pacman -Si <packagename>
