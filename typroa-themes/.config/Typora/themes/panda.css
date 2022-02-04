@@ -101,7 +101,7 @@
   --node-border: var(--menu-divider-color);
   --node-fill: var(--bg-color5);
   --mermaid-theme:dark;
-  
+
   --window-border: none;
 }
 
@@ -177,19 +177,19 @@ h2 {
 	padding-bottom: 0.6em;
 	font-size:2.2em;
 	font-weight: normal;
-	text-align: center;
+	text-align: left;
 }
 
 h3 {
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	font-weight: normal;
-	font-style: italic;
+	font-style: normal;
 	font-size:1.6em;
-	text-align: center;
+	text-align: left;
 }
 
-h4 { 
+h4 {
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	font-size:1.2em;
@@ -1283,7 +1283,7 @@ pre.md-meta-block:active {
   border-radius: 6px;
   padding: 10px;
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
 
 /* switch between different mode */
@@ -1979,7 +1979,7 @@ g > text.slice {
 
 #write pre.md-meta-block {
     padding: 1rem;
-    line-height: 1.45;  
+    line-height: 1.45;
     background-color: var(--bg-color5);
     border: 0;
     border-radius: 0.3rem;
