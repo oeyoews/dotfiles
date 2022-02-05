@@ -3,7 +3,8 @@
 * [README](#readme)
   * [Dependcy](#dependcy)
   * [Softwares](#softwares)
-  * [pages](#pages)
+    * [games](#games)
+    * [pages](#pages)
     * [lint](#lint)
     * [doc](#doc)
     * [blog](#blog)
@@ -34,7 +35,11 @@
 
 ## Softwares
 
-## pages
+### games
+
+* bovo
+
+### pages
 
 * github/gitlab
 * vercel
