@@ -64,6 +64,7 @@
 * hexo
 * hugo
 * halo
+* ~~typecho~~
 
 ### wiki
 
