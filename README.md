@@ -129,6 +129,7 @@
 
 ### tools
 
+* sourcegraphy
 * tiddlydesktop
 * obs
 * clementine
