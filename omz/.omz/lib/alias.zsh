@@ -136,7 +136,9 @@ alias doom='~/.emacs.d/bin/doom'
 
 # This recursion order is important
 alias emacs="emacsclient -nc"
+#emacsclient -t
 alias ee='emacs'
+#\emacs -nw --color=no
 
 alias eer="systemctl --user restart emacs.service"
 alias reveal="reveal-md"
