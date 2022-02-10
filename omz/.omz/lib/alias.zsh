@@ -92,7 +92,7 @@ alias gh='git-open'
 alias gits='git status'
 
 alias gitu='git add . && git commit && git push'
-alias gitut='git add . && git commit -m "doc: update(automatically)" && git push'
+alias gitut='git add . && git commit -m "doc: This is an automatic push" && git push'
 alias gite='git config -e'
 alias gita='git tag'
 alias gitaa='git push origin --tags'
