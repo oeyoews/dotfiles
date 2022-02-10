@@ -3,13 +3,14 @@
 * [README](#readme)
   * [Dependcy](#dependcy)
   * [Softwares](#softwares)
+  * [picture](#picture)
     * [games](#games)
     * [pages](#pages)
     * [lint](#lint)
     * [doc](#doc)
     * [blog](#blog)
     * [wiki](#wiki)
-    * [script manage](#script-manage)
+    * [scriptmanage](#scriptmanage)
     * [write](#write)
     * [office](#office)
     * [idea](#idea)
@@ -34,6 +35,10 @@
 * stow
 
 ## Softwares
+
+## picture
+
+* feh
 
 ### games
 
@@ -70,7 +75,7 @@
 
 * tiddlywiki5
 
-### script manage
+### scriptmanage
 
 * package.json
 * makefile
