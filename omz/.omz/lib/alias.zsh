@@ -93,6 +93,7 @@ alias gits='git status'
 
 alias gitu='git add . && git commit && git push'
 alias gitut='git add . && git commit -m "doc: This is an automatic push" && git push'
+alias gitut1='git commit -m "doc: This is an automatic push" && git push'
 alias gite='git config -e'
 alias gita='git tag'
 alias gitaa='git push origin --tags'
@@ -117,6 +118,7 @@ alias diffk="kitty +kitten diff"
 alias ports='netstat -tulanp'  # need install `net-tools
 alias jc="journalctl"
 alias sc="systemctl"
+alias scc="sudo systemctl"
 alias zprof="zprof > /tmp/zprof.log"
 #alias btop='bpytop'
 # `zsh -f' (vanilla for zsh)
@@ -208,6 +210,7 @@ alias his="history -i"
 alias killalli="killall -i"
 alias killallv="killall -v"
 
+#maybe have some bug
 alias ktim="killall TIM.exe QQProtect.exe TXPlatform.exe explorer.exe winedevice.exe "
 alias kwps="killalli wpscloudsvr"
 
