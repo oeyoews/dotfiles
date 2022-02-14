@@ -211,12 +211,10 @@ alias killalli="killall -i"
 alias killallv="killall -v"
 
 #maybe have some bug
-alias ktim="killall TIM.exe QQProtect.exe TXPlatform.exe explorer.exe winedevice.exe "
+alias ktim="killall TIM.exe QQProtect.exe explorer.exe winedevice.exe "
 alias kwps="killalli wpscloudsvr"
 
-
 # passline a/g/h/d/ -p -c
-
 
 # path
 # TODO:

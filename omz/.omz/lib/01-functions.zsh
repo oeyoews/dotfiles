@@ -491,7 +491,7 @@ function cdr() {
     #if [ ! -d "$1" ];
     #then
       #tiddlywiki $1 --init server
-      #nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1&
+      #nohup tiddlywiki $1 --listen port=8081 >/tmp/testtw.log 2>&1 &
       #nohup google-chrome-stable http://127.0.0.1:8081 >/tmp/google.log 2>&1 &
     #else
       #echo "This folder has exits!!!"
@@ -500,3 +500,8 @@ function cdr() {
     #echo "ERROR: No parameter input!!!"
   #fi
 #}
+
+function twc() {
+      tiddlywiki $1 --init server
+      tiddlywiki $1 --listen port=8080
+}
