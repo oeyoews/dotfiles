@@ -35,6 +35,7 @@
 
 * you-get(fast)
 * youtube-dl
+* motrix
 
 ## picture
 
