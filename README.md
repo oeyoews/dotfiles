@@ -1,4 +1,5 @@
 <details>
+<summary>TOC</summary>
 <!-- vim-markdown-toc GitLab -->
 
 * [Softwares](#softwares)
