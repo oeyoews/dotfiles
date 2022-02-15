@@ -36,6 +36,7 @@
 * you-get(fast)
 * youtube-dl
 * motrix
+* aria2
 
 ## picture
 
@@ -221,7 +222,6 @@
 * dbeaver
 * ventoy
 * startuml
-* aria2
 * git-filter-repo
 * oreo-cursors
 * lx-music-desktop
