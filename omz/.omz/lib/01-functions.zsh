@@ -505,3 +505,7 @@ function twc() {
       tiddlywiki $1 --init server
       tiddlywiki $1 --listen port=8080
 }
+
+function twcp() {
+  cp -i ~/dotfiles/.archived/templates/tiddlywiki.info .
+}
