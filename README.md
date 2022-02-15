@@ -1,3 +1,4 @@
+<details>
 <!-- vim-markdown-toc GitLab -->
 
 * [Softwares](#softwares)
@@ -25,6 +26,7 @@
   * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
+</details>
 
 # Softwares
 
