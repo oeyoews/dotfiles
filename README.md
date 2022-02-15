@@ -1,4 +1,4 @@
-<details open="">
+<details>
 <summary>TOC</summary>
 <!-- vim-markdown-toc GitLab -->
 
