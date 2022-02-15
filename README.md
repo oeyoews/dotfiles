@@ -1,56 +1,47 @@
 <!-- vim-markdown-toc GitLab -->
 
-* [README](#readme)
-  * [Dependcy](#dependcy)
-  * [Softwares](#softwares)
-    * [download](#download)
-    * [picture](#picture)
-    * [games](#games)
-    * [pages](#pages)
-    * [lint](#lint)
-    * [doc](#doc)
-    * [blog](#blog)
-    * [wiki](#wiki)
-    * [scriptmanage](#scriptmanage)
-    * [write](#write)
-    * [office](#office)
-    * [idea](#idea)
-    * [iso](#iso)
-    * [translate](#translate)
-    * [browser](#browser)
-    * [editor](#editor)
-    * [Fonts](#fonts)
-    * [tools](#tools)
-    * [terminal](#terminal)
-    * [gnome](#gnome)
-    * [ime](#ime)
+* [Softwares](#softwares)
+  * [download](#download)
+  * [picture](#picture)
+  * [games](#games)
+  * [pages](#pages)
+  * [lint](#lint)
+  * [doc](#doc)
+  * [blog](#blog)
+  * [wiki](#wiki)
+  * [scriptmanage](#scriptmanage)
+  * [write](#write)
+  * [office](#office)
+  * [idea](#idea)
+  * [iso](#iso)
+  * [translate](#translate)
+  * [browser](#browser)
+  * [editor](#editor)
+  * [Fonts](#fonts)
+  * [tools](#tools)
+  * [terminal](#terminal)
+  * [gnome](#gnome)
+  * [ime](#ime)
   * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
 
-# README
+# Softwares
 
-
-## Dependcy
-
-* stow
-
-## Softwares
-
-### download
+## download
 
 * you-get(fast)
 * youtube-dl
 
-### picture
+## picture
 
 * feh
 
-### games
+## games
 
 * bovo
 
-### pages
+## pages
 
 * github/gitlab
 * vercel
@@ -59,34 +50,35 @@
 * ~~gitee~~
 * jsDelivr
 
-### lint
+## lint
 
 * mdl
 * shellcheck
 
 
-### doc
+## doc
 
 * docify
 * vuepress
 * docsaurus
 
-### blog
+## blog
+
 * hexo
 * hugo
 * halo
 * ~~typecho~~
 
-### wiki
+## wiki
 
 * tiddlywiki5
 
-### scriptmanage
+## scriptmanage
 
 * package.json
 * makefile
 
-### write
+## write
 
 * notion.so
 * tiddlywiki
@@ -96,33 +88,33 @@
 * mubu
 * marktext
 
-### office
+## office
 
 * onlyoffice
 * libreoffice
 
-### idea
+## idea
 
 * atom material icons
 * atom onedark theme
 * indent reinbow
 * rainbow brackets
 
-### iso
+## iso
 
 * etcher
 * ventoy
 
-### translate
+## translate
 
 * translate-shell
 
-### browser
+## browser
 
 * firefox-nightly
 ~~* google-chrome~~
 
-### editor
+## editor
 
 * neovim
 * typora-free
@@ -131,14 +123,14 @@
 * libreoffice
 * emacs
 
-### Fonts
+## Fonts
 
 * FiraCode
 * DeJaVu
 * Fantasque
 * JetBrains
 
-### tools
+## tools
 
 * markdown-lint(github)
 * sourcegraphy
@@ -158,13 +150,13 @@
 * stellarium
 
 
-### terminal
+## terminal
 
 * kitty
 * alacritty
 * wezterm
 
-### gnome
+## gnome
 
 * downgrade
 * papirus-folders
@@ -178,7 +170,7 @@
 * dash-to-dock
 * base-devel
 
-### ime
+## ime
 
 * fcitx5-im
 * fcitx5-chinese-addons
