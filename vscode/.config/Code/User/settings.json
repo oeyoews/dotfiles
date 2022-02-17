@@ -72,8 +72,8 @@
         "plaintext": true,
         "markdown": false
     },
-    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.untitled.hint": "text",
     "vsicons.dontShowNewVersionMessage": true,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
 }
