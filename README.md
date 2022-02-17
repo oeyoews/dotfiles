@@ -14,6 +14,7 @@
   * [blog](#blog)
   * [wiki](#wiki)
   * [scriptmanage](#scriptmanage)
+  * [read](#read)
   * [write](#write)
   * [office](#office)
   * [idea](#idea)
@@ -85,6 +86,10 @@
 
 * package.json
 * makefile
+
+## read
+
+* 简悦
 
 ## write
 
@@ -235,6 +240,7 @@
 * v2raya
 * qv2ray
 * vim-init
+
 
 ## Thanks
 
