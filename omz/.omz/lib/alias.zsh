@@ -261,3 +261,4 @@ alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
 #pacman -Si <packagename>
 
 alias yout="you-get"
+# npx http-server

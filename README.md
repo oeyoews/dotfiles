@@ -125,7 +125,8 @@
 ## browser
 
 * firefox-nightly
-~~* google-chrome~~
+* google-chrome
+* kiwibrowser
 
 ## editor
 
@@ -240,6 +241,7 @@
 * v2raya
 * qv2ray
 * vim-init
+
 
 
 ## Thanks
