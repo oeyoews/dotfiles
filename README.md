@@ -183,6 +183,7 @@
   * <!--* Clipboard indicator-->
 * dash-to-dock
 * base-devel
+* refresh wifi connections
 
 ## ime
 
