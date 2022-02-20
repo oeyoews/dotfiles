@@ -184,6 +184,8 @@
 * dash-to-dock
 * base-devel
 * refresh wifi connections
+* color-picker
+<!--* dynamic panel tranxxx-->
 
 ## ime
 
