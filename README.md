@@ -146,6 +146,7 @@
 
 ## tools
 
+* anki
 * markdown-lint(github)
 * sourcegraphy
 * tiddlydesktop
