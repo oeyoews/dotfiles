@@ -146,7 +146,7 @@
 
 ## tools
 
-* anki
+* anki(phone recommend)
 * markdown-lint(github)
 * sourcegraphy
 * tiddlydesktop
