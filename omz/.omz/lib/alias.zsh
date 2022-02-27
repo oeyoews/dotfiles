@@ -23,6 +23,7 @@ alias hmd="cd /home/oeyoews/REPOS/hugo2/content/post/"
 # yay
 alias pas='sudo pacman -S'
 # sudo pacman-mirrors -c China -m rank -i -aS testing
+# ??
 #alias yayy="yay -Yc"
 #alias yayr='yay -Rscn'
 alias yayr='yay -R'
