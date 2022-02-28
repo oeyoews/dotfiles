@@ -248,6 +248,7 @@
 * wemeet-bin
 * renovate
 * trello
+* html-minifier-terser
     <!--obrit-->
 
 
