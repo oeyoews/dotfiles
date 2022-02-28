@@ -246,7 +246,7 @@
 * qv2ray
 * vim-init
 * wemeet-bin
-*
+* renovate
 * trello
     <!--obrit-->
 
