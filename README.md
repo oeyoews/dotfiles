@@ -221,7 +221,6 @@
 * fastfetch
 * taskbook
 * [slides](https://github.com/maaslalani/slides)
-* [stow](https://www.gnu.org/software/stow/)
 * btop
 * gtop
 * gromit-mpx
