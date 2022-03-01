@@ -2,7 +2,7 @@
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
 alias cdrt="cd ~/REPOS/TiddlyWiki5"
-alias cdri="cd ~/REPOS/img"
+alias cdri="cd ~/REPOS/TiddlyWiki5/img"
 alias cdrh="cd ~/REPOS/hugo2"
 alias soz='exec zsh'
 alias tw='tiddlywiki'
