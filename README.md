@@ -40,7 +40,7 @@
 
 <div style="text-align: center">
 <p> Hello </p>
-<img src="https://cdn.jsdelivr.net/gh/oeyoews/img/dotfilesgraph.png" title="img" alt="img" style="zoom: 100%" />
+<img src="https://cdn.jsdelivr.net/gh/oeyoews/img/dotfilesgraph.png" title="img" alt="img" style="zoom: 100%" width=512 />
 </div>
 
 ## download
