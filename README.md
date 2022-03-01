@@ -5,6 +5,7 @@
 <!-- vim-markdown-toc GitLab -->
 
 * [Softwares](#softwares)
+  * [dependency](#dependency)
   * [download](#download)
   * [picture](#picture)
   * [games](#games)
@@ -34,6 +35,13 @@
 </div>
 
 # Softwares
+
+## dependency
+
+<div style="text-align: center">
+<p> Hello </p>
+<img src="https://cdn.jsdelivr.net/gh/oeyoews/img/dotfilesgraph.png" title="img" alt="img" style="zoom: 100%" />
+</div>
 
 ## download
 

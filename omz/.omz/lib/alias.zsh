@@ -3,7 +3,7 @@
 #alias soz='source $HOME/.zshrc && exec zsh'
 alias cdrt="cd ~/REPOS/TiddlyWiki5"
 alias cdri="cd ~/REPOS/TiddlyWiki5/img"
-alias cdrh="cd ~/REPOS/hugo2"
+#alias cdrh="cd ~/REPOS/hugo2"
 alias soz='exec zsh'
 alias tw='tiddlywiki'
 alias lss='colorls'
@@ -95,6 +95,8 @@ alias gits='git status'
 alias gitu='git add . && git commit && git push'
 alias gitut='git add . && git commit -m "doc: This is an automatic push" && git push'
 alias gitut1='git commit -m "doc: This is an automatic push" && git push'
+#remove tag
+#git push origin :refs/tags/v0.0.2
 alias gite='git config -e'
 alias gita='git tag'
 alias gitaa='git push origin --tags'
