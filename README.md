@@ -28,6 +28,7 @@
   * [terminal](#terminal)
   * [gnome](#gnome)
   * [ime](#ime)
+  * [todo](#todo)
   * [Thanks](#thanks)
 
 <!-- vim-markdown-toc -->
@@ -260,6 +261,9 @@
 * http-server
     <!--obrit-->
 
+## todo
+
+<!--- [ ] neorg bug(deprecated)-->
 
 
 ## Thanks
