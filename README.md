@@ -268,5 +268,5 @@
 
 ## Thanks
 
-<a href="https://jb.gg/OpenSource"><img src=".screenshots/jb_beam.svg" alt="JetBrains Logo" width="120px"/>
+<a href="https://jb.gg/OpenSource"><img src="https://cdn.jsdelivr.net/gh/oeyoews/img/jb_beam.svg" alt="JetBrains Logo" width="120px"/>
 </a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
