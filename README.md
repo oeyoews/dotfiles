@@ -61,12 +61,12 @@
 
 ## pages
 
-* github/gitlab
 * vercel
-* netlify
-* cloudfare
-* ~~gitee~~
+* github/gitlab
 * jsDelivr
+* netlify
+<!--* cloudfare-->
+<!--* ~~gitee~~-->
 
 ## lint
 

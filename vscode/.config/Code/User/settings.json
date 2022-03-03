@@ -76,4 +76,5 @@
     "vsicons.dontShowNewVersionMessage": true,
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.wrappingStrategy": "advanced",
 }
