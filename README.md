@@ -259,6 +259,7 @@
 * html-minifier-terser
 * viu
 * http-server
+* gzip
     <!--obrit-->
 
 ## todo

@@ -93,8 +93,9 @@ alias gh='git-open'
 alias gits='git status'
 
 alias gitu='git add . && git commit && git push'
-alias gitut='git add . && git commit -m "doc: This is an automatic push" && git push'
-alias gitut1='git commit -m "doc: This is an automatic push" && git push'
+alias gitut='git add . && git commit -m "🐈: This is an automatic push ✋" && git push'
+alias gitui='git commit -m "🍹: This is an automatic push for img" && git push'
+
 #remove tag
 #git push origin :refs/tags/v0.0.2
 alias gite='git config -e'
