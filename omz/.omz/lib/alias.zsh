@@ -93,8 +93,9 @@ alias gh='git-open'
 alias gits='git status'
 
 alias gitu='git add . && git commit && git push'
-alias gitut='git add . && git commit -m "🐈: This is an automatic push ✋" && git push'
-alias gitui='git commit -m "🍹: This is an automatic push for img" && git push'
+alias gitua='git add . && git commit -m "🐈 This is an automatic push ✋" && git push'
+alias gitui='git commit -m "🍹 This is an automatic push for img" && git push'
+alias gitp="git push"
 
 #remove tag
 #git push origin :refs/tags/v0.0.2
@@ -266,3 +267,5 @@ alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
 
 alias yout="you-get"
 # npx http-server
+
+alias pingb="ping bing.com"

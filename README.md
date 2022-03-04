@@ -5,15 +5,15 @@
 <!-- vim-markdown-toc GitLab -->
 
 * [Softwares](#softwares)
-  * [dependency](#dependency)
-  * [download](#download)
-  * [picture](#picture)
-  * [games](#games)
-  * [pages](#pages)
-  * [lint](#lint)
-  * [doc](#doc)
-  * [blog](#blog)
-  * [wiki](#wiki)
+  * [Dependency](#dependency)
+  * [Download](#download)
+  * [Picture](#picture)
+  * [Games](#games)
+  * [Pages](#pages)
+  * [Lint](#lint)
+  * [Doc](#doc)
+  * [Blog](#blog)
+  * [Wiki](#wiki)
   * [scriptmanage](#scriptmanage)
   * [read](#read)
   * [write](#write)
@@ -28,6 +28,7 @@
   * [terminal](#terminal)
   * [gnome](#gnome)
   * [ime](#ime)
+  * [Tips](#tips)
   * [todo](#todo)
   * [Thanks](#thanks)
 
@@ -37,29 +38,29 @@
 
 # Softwares
 
-## dependency
+## Dependency
 
 <div style="text-align: center">
 <p> Hello </p>
 <img src="https://cdn.jsdelivr.net/gh/oeyoews/img/dotfilesgraph.png" title="img" alt="img" style="zoom: 100%" width=512 />
 </div>
 
-## download
+## Download
 
 * you-get(fast)
 * youtube-dl
 * motrix
 * aria2
 
-## picture
+## Picture
 
 * feh
 
-## games
+## Games
 
 * bovo
 
-## pages
+## Pages
 
 * vercel
 * github/gitlab
@@ -68,26 +69,26 @@
 <!--* cloudfare-->
 <!--* ~~gitee~~-->
 
-## lint
+## Lint
 
 * mdl
 * shellcheck
 
 
-## doc
+## Doc
 
 * docify
 * vuepress
 * docsaurus
 
-## blog
+## Blog
 
 * hexo
 * hugo
 * halo
 * ~~typecho~~
 
-## wiki
+## Wiki
 
 * tiddlywiki5
 
@@ -260,11 +261,14 @@
 * viu
 * http-server
 * gzip
-    <!--obrit-->
+
+## Tips
+
+* fstrim.timer
+
+<!--obrit-->
 
 ## todo
-
-<!--- [ ] neorg bug(deprecated)-->
 
 
 ## Thanks
