@@ -86,7 +86,7 @@
 * hexo
 * hugo
 * halo
-* ~~typecho~~
+<!--* ~~typecho~~-->
 
 ## Wiki
 
@@ -261,6 +261,7 @@
 * viu
 * http-server
 * gzip
+* gnome-power-manager
 
 ## Tips
 
