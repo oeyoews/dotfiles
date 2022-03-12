@@ -262,6 +262,7 @@
 * http-server
 * gzip
 * gnome-power-manager
+* [trilium](https://github.com/zadam/trilium)
 
 ## Tips
 

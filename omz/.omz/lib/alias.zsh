@@ -269,3 +269,5 @@ alias yout="you-get"
 # npx http-server
 
 alias pingb="ping bing.com"
+
+alias vitw="google-chrome-stable ~/dotfiles/doc/twcn.html"
