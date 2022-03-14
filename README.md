@@ -263,6 +263,7 @@
 * gzip
 * gnome-power-manager
 * [trilium](https://github.com/zadam/trilium)
+- [ ] linuxhello
 
 ## Tips
 
