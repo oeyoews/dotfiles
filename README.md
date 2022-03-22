@@ -263,7 +263,12 @@
 * gzip
 * gnome-power-manager
 * [trilium](https://github.com/zadam/trilium)
+* gitclone
+* hub.fast.git
+* MDN
 - [ ] linuxhello
+
+- pastbin
 
 ## Tips
 
