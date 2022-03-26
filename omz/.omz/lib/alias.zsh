@@ -271,3 +271,5 @@ alias yout="you-get"
 alias pingb="ping bing.com"
 
 alias vitw="google-chrome-stable ~/dotfiles/doc/twcn.html"
+
+#sc --failed
