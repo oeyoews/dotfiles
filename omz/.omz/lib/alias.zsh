@@ -268,8 +268,9 @@ alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
 alias yout="you-get"
 # npx http-server
 
-alias pingb="ping bing.com"
+alias cib="ping bing.com"
 
 alias vitw="google-chrome-stable ~/dotfiles/doc/twcn.html"
 
 #sc --failed
+alias gedit="gnome-text-editor"
