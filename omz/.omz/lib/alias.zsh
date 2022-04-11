@@ -271,6 +271,7 @@ alias yout="you-get"
 alias cib="ping bing.com"
 
 alias vitw="google-chrome-stable ~/dotfiles/doc/twcn.html"
+alias vitwxp="google-chrome-stable ~/dotfiles/doc/xp.html"
 
 #sc --failed
 alias gedit="gnome-text-editor"
