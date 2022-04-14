@@ -141,10 +141,14 @@ alias wego='curl wttr.in'
 #alias emacsn='emacs -nw'
 alias doom='~/.emacs.d/bin/doom'
 
+# NOTE: not use scc alias
+# emacs --daemon=coding;
+# alias e="emacsclient -t --socket-name=coding"
 # This recursion order is important
-alias emacs="emacsclient -nc"
+#alias emacs="emacsclient -nc"
+alias ee="emacsclient -nc"
 #emacsclient -t
-alias ee='emacs'
+#alias ee='emacs'
 #\emacs -nw --color=no
 
 alias eer="systemctl --user restart emacs.service"
