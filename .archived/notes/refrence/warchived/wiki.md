@@ -336,6 +336,7 @@ path: $HOME/.config/libreoffice/4/fonts/  # 将 C:\Windows\Fonts 的字体拷贝
   * jctl -u (-f) tlp.service
 
 ## new archwikich for mariadb
+
   * sudo mysql_secure_installation # interactive config
   * SET PASSWORD FOR 'root'@'localhost' = PASSWORD('password');
   * SELECT user,authentication_string,plugin,host FROM mysql.user; set password for root@localhost =password('123');
