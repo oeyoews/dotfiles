@@ -222,6 +222,9 @@
 * gitclone
 * hub.fast.git
 * MDN
-- [?] linuxhello
+* [?] linuxhello
+* pastbin
 
-- pastbin
+## Favourite
+
+* emacs-talk
