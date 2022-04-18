@@ -22,14 +22,10 @@
 * jsDelivr
 * netlify
 
-<!--* cloudfare-->
-<!--* ~~gitee~~-->
-
 ## Lint
 
 * mdl
 * shellcheck
-
 
 ## Doc
 
@@ -42,6 +38,7 @@
 * hexo
 * hugo
 * halo
+
 <!--* ~~typecho~~-->
 
 ## Wiki
@@ -53,14 +50,9 @@
 * package.json
 * makefile
 
-## read
-
-* 简悦
-
 ## write
 
 * notion.so
-* tiddlywiki
 * cnblog
 * wolai
 * typora
@@ -124,12 +116,10 @@
 * xournal++
 * krita
 * mycli
-* tlp
-  * tlp-rdw
+* tlp and tlp-rdw
 * foliate
 * calibre
 * stellarium
-
 
 ## terminal
 
@@ -152,6 +142,7 @@
 * base-devel
 * refresh wifi connections
 * color-picker
+
 <!--* dynamic panel tranxxx-->
 
 ## ime
@@ -172,6 +163,9 @@
 * tmux
 * cdate
 * gource
+
+> software version control visualization for git repo
+
 * cloc
 * jdk-openjdk
 * make
@@ -228,3 +222,4 @@
 ## Favourite
 
 * emacs-talk
+
