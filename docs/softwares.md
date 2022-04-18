@@ -218,6 +218,8 @@
 * MDN
 * [?] linuxhello
 * pastbin
+* reveal.js
+* httrack
 
 ## Favourite
 
