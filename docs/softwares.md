@@ -141,7 +141,8 @@
 * dash-to-dock
 * base-devel
 * refresh wifi connections
-* color-picker
+<!--* bug color-picker-->
+* wl-color-picker
 
 <!--* dynamic panel tranxxx-->
 
@@ -220,6 +221,7 @@
 * pastbin
 * reveal.js
 * httrack
+* iredis
 
 ## Favourite
 
