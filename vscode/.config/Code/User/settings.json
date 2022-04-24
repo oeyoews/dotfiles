@@ -77,4 +77,8 @@
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
     "editor.wrappingStrategy": "advanced",
+    "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.experimental.classRegex": [
+    
+    ],
 }
