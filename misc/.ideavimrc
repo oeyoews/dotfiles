@@ -19,6 +19,7 @@ nnoremap <space>ss /
 nnoremap <space>fs :w<cr>
 nnoremap <space>bd <cmd>bd<cr>
 noremap L $
+noremap H 0
 
 " :action partern"
 map <leader>ld <Action>(Debug)

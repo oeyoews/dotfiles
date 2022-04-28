@@ -120,7 +120,10 @@
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "headwind.prependCustomClasses": true,
-    "window.menuBarVisibility": "hidden",
     "window.titleBarStyle": "custom",
     "npm.enableRunFromFolder": true,
+    "tailwindCSS.emmetCompletions": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "window.menuBarVisibility": "compact",
 }

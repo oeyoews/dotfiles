@@ -1,5 +1,6 @@
 # TODO
 
+* vscode multi cursor
 - [x] how to remove vscoe hove box(theme cause)
 - [ ] how to remove square in vscode
 - [ ] todo: update graph
