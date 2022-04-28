@@ -1,5 +1,6 @@
 # TODO
 
+- how to remove vscoe hove box
 - [ ] how to remove square in vscode
 - [ ] todo: update graph
 - [ ] doomemacs: use doomemacs later, and split mysel config

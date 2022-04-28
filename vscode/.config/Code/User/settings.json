@@ -12,12 +12,12 @@
     "vim.sneak": false,
     "vim.sneakReplacesF": false,
     "vim.useSystemClipboard": true,
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Community Material Theme Palenight",
     "workbench.startupEditor": "none",
     "workbench.editor.pinnedTabSizing": "compact",
-    "workbench.iconTheme": "vscode-icons",
+    "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#282c34",
+        // "statusBar.background": ,",
         "statusBar.noFolderBackground": "#0c0d0fa6",
         "statusBar.debuggingBackground": "#16091b6b",
         "statusBar.foreground": "#8a968afa"
@@ -120,4 +120,6 @@
     },
     "oneDarkPro.bold": true,
     "oneDarkPro.vivid": true,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
 }
