@@ -2,7 +2,7 @@
     "editor.fontLigatures": true,
     "editor.suggest.preview": true,
     "editor.fontFamily": "JetBrains Mono, Fira Code",
-    "terminal.integrated.fontFamily": "JetBrains Mono Fira Code",
+    "terminal.integrated.fontFamily": "Fira Code",
     "editor.fontSize": 18,
     "debug.console.fontFamily": "JetBrains Mono, Fira Code",
     "vim.vimrc.enable": true,
