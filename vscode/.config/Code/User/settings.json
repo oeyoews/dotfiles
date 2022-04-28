@@ -1,8 +1,8 @@
 {
     "editor.fontLigatures": true,
     "editor.suggest.preview": true,
-    "editor.fontFamily": "Fira Code",
-    "terminal.integrated.fontFamily": "Fira Code",
+    "editor.fontFamily": "JetBrains Mono",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
     "editor.fontSize": 16,
     "debug.console.fontFamily": "Fira Code",
     "vim.vimrc.enable": true,
@@ -78,7 +78,45 @@
     "editor.unicodeHighlight.ambiguousCharacters": true,
     "editor.wrappingStrategy": "advanced",
     "tailwindCSS.emmetCompletions": true,
-    "tailwindCSS.experimental.classRegex": [
-    
-    ],
+    "tailwindCSS.experimental.classRegex": [],
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "oneDarkPro.bold": true,
+    "oneDarkPro.vivid": true,
 }

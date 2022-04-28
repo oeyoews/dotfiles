@@ -63,6 +63,7 @@
 
 * onlyoffice
 * libreoffice
+* ~~wps~~
 
 ## idea
 
