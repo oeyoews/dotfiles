@@ -66,6 +66,7 @@
     "editor.inlineSuggest.enabled": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active",
+    "editor.matchBrackets": "always",
     "github.copilot.enable": {
         "*": true,
         "yaml": false,
