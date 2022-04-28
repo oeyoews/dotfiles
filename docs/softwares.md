@@ -1,5 +1,11 @@
 # software
 
+## npm packages
+
+* live-server(use npm i -g, not in current projects)
+* postcss(about tailwind projects)
+* git-open
+
 ## Download
 
 * you-get(fast)
@@ -187,7 +193,6 @@
 * gtop
 * gromit-mpx
 * tiddlywiki
-* git-open
 * tig
 * flameshot
 * pm2

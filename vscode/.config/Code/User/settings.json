@@ -3,8 +3,8 @@
     "editor.suggest.preview": true,
     "editor.fontFamily": "JetBrains Mono, Fira Code",
     "terminal.integrated.fontFamily": "Fira Code",
-    "editor.fontSize": 18,
-    "debug.console.fontFamily": "JetBrains Mono, Fira Code",
+    "editor.fontSize": 17,
+    "debug.console.fontFamily": "Fira Code",
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "~/.ideavimrc",
     "vim.camelCaseMotion.enable": true,
@@ -31,8 +31,7 @@
     "window.dialogStyle": "custom",
     "git.enabled": true,
     "explorer.confirmDelete": false,
-    "files.autoSave": "afterDelay",
-    "window.titleBarStyle": "custom",
+    "files.autoSave": "onFocusChange",
     "update.mode": "manual",
     "update.showReleaseNotes": false,
     "terminal.integrated.fontSize": 16,
@@ -57,7 +56,6 @@
     "C_Cpp.intelliSenseEngine": "Default",
     "files.trimTrailingWhitespace": true,
     "git.enableSmartCommit": true,
-    "window.menuBarVisibility": "compact",
     "terminal.external.linuxExec": "kitty",
     "window.zoomLevel": 1,
     "debug.terminal.clearBeforeReusing": true,
@@ -71,15 +69,14 @@
         "*": true,
         "yaml": false,
         "plaintext": true,
-        "markdown": false
+        "markdown": false,
+        "html": false
     },
     "workbench.editor.untitled.hint": "text",
     "vsicons.dontShowNewVersionMessage": true,
     "editor.unicodeHighlight.invisibleCharacters": true,
     "editor.unicodeHighlight.ambiguousCharacters": true,
     "editor.wrappingStrategy": "advanced",
-    "tailwindCSS.emmetCompletions": true,
-    "tailwindCSS.experimental.classRegex": [],
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -122,4 +119,8 @@
     "oneDarkPro.vivid": true,
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
+    "headwind.prependCustomClasses": true,
+    "window.menuBarVisibility": "hidden",
+    "window.titleBarStyle": "custom",
+    "npm.enableRunFromFolder": true,
 }
