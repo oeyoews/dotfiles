@@ -280,3 +280,5 @@ alias vitwxp="google-chrome-stable ~/dotfiles/doc/xp.html"
 
 #sc --failed
 alias gedit="gnome-text-editor"
+
+alias npmm="npm run"
