@@ -2,6 +2,7 @@
 
 ## npm packages
 
+* emoji
 * live-server(use npm i -g, not in current projects) and have vscode extensions(live server, not others)
 * postcss(about tailwind projects)
 * git-open
@@ -233,3 +234,4 @@
 
 * emacs-talk
 
+* figlet

@@ -17,9 +17,9 @@
     "workbench.editor.pinnedTabSizing": "compact",
     "workbench.iconTheme": "eq-material-theme-icons",
     "workbench.colorCustomizations": {
-        // "statusBar.background": ,",
-        "statusBar.noFolderBackground": "#0c0d0fa6",
-        "statusBar.debuggingBackground": "#16091b6b",
+        "statusBar.background": "#292d3e",
+        "statusBar.noFolderBackground": "#292d3e",
+        "statusBar.debuggingBackground": "#292d3e",
         "statusBar.foreground": "#8a968afa"
     },
     "[jsonc]": {
