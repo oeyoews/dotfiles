@@ -235,3 +235,4 @@
 * emacs-talk
 
 * figlet
+* lolcate
