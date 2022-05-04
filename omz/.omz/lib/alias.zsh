@@ -91,6 +91,7 @@ alias ipr='ip addr | rg 192'
 alias gh='git-open'
 #alias gits='git status --short'
 alias gits='git status'
+alias gitc1="git clone --depth 1"
 
 #alias gitp="git push 🐬"
 alias gitu='git add . && git commit && git push'
