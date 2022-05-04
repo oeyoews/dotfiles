@@ -4,6 +4,7 @@
 local wezterm = require 'wezterm'
 
 return {
+  window_background_opacity = 0.99,
   use_ime = true,
   --font = wezterm.font("Fira Code", {weight="Regular"}),
   --font = wezterm.font_with_fallback{ {family="Fira Code", weight="Regular"}, },
@@ -30,6 +31,7 @@ return {
 
   --color_scheme = "Dracula",
   color_scheme = "MaterialOcean",
+  --color_scheme = "PaleNightHC",
   --color_scheme = "DoomOne",
   keys = {
     -- This will create a new split and run your default program inside it
