@@ -6,7 +6,8 @@ local wezterm = require 'wezterm'
 return {
   use_ime = true,
   --font = wezterm.font("Fira Code", {weight="Regular"}),
-  font = wezterm.font_with_fallback{ {family="Fira Code", weight="Regular"}, },
+  --font = wezterm.font_with_fallback{ {family="Fira Code", weight="Regular"}, },
+  font = wezterm.font_with_fallback{ {family="JetBrains Mono", weight="Regular"}, },
   --default_cursor_style = "SteadyBar",
   default_cursor_style = "SteadyBlock",
 
@@ -16,7 +17,7 @@ return {
   --]]
 
   ---[[
-  font_size = 12.0,
+  font_size = 14.0,
   enable_wayland = false,
   --]]
 

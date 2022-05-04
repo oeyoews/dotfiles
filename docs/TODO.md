@@ -21,4 +21,4 @@
 - [ ] use snippets link vim
 - [ ] solve multi buffer memory with doomemacs
 - [ ] remove trailling space automatically
-
+- config wezterm theme
