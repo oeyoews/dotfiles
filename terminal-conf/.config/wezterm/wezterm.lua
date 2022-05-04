@@ -7,7 +7,14 @@ return {
   use_ime = true,
   --font = wezterm.font("Fira Code", {weight="Regular"}),
   --font = wezterm.font_with_fallback{ {family="Fira Code", weight="Regular"}, },
-  font = wezterm.font_with_fallback{ {family="JetBrains Mono", weight="Regular"}, },
+  --font = wezterm.font_with_fallback{ {"JetBrains Mono", weight="bold", italic=false}, },
+  -- bold
+  --font = wezterm.font("JetBrains Mono", {weight="Regular", italic=true}),
+  font = wezterm.font_with_fallback({
+    "JetBrains Mono",
+    "Fira Code",
+   }),
+
   --default_cursor_style = "SteadyBar",
   default_cursor_style = "SteadyBlock",
 
@@ -21,7 +28,8 @@ return {
   enable_wayland = false,
   --]]
 
-  color_scheme = "Dracula",
+  --color_scheme = "Dracula",
+  color_scheme = "MaterialOcean",
   --color_scheme = "DoomOne",
   keys = {
     -- This will create a new split and run your default program inside it
