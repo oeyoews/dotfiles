@@ -4,6 +4,7 @@
 
 * emoji
 * live-server(use npm i -g, not in current projects) and have vscode extensions(live server, not others)
+* tailwind
 * postcss(about tailwind projects)
 * git-open
 
@@ -190,6 +191,7 @@
 * fastfetch
 * taskbook
 * [slides](https://github.com/maaslalani/slides)
+* slidev
 * btop
 * gtop
 * gromit-mpx

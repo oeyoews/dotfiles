@@ -126,4 +126,5 @@
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
     "window.menuBarVisibility": "compact",
+    "slidev.enabled": true,
 }
