@@ -43,8 +43,8 @@
        (ibuffer +icons)        ; interactive buffer management
 
        :checkers
-       syntax              ; tasing you for every semicolon you forget
-       grammar           ; tasing grammar mistake every you make
+       ;;syntax              ; tasing you for every semicolon you forget
+       ;;grammar           ; tasing grammar mistake every you make
 
        :tools
        (eval +overlay)     ; run code, run (also, repls)
@@ -58,7 +58,7 @@
        emacs-lisp          ; drown in parentheses
        sh
        markdown
-       (org +roam2 +pretty +present)
+       ;;(org +roam2 +pretty +present)
 
        :config
        literate
