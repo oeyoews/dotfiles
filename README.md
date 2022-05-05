@@ -1,20 +1,3 @@
-<div style="text-align: left;background: lightyellow;border-radius: 5px; float:none">
-<details>
-<summary>TOC</summary>
-
-<!-- vim-markdown-toc GitLab -->
-
-* [README](#readme)
-  * [SOFTWARE](#software)
-  * [Dependency](#dependency)
-  * [Tips](#tips)
-  * [TODO](#todo)
-  * [Thanks](#thanks)
-
-<!-- vim-markdown-toc -->
-</details>
-</div>
-
 <!--
  ██████╗ ███████╗██╗   ██╗ ██████╗ ███████╗██╗    ██╗███████╗
 ██╔═══██╗██╔════╝╚██╗ ██╔╝██╔═══██╗██╔════╝██║    ██║██╔════╝
