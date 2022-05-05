@@ -93,9 +93,9 @@ alias gh='git-open'
 alias gits='git status'
 alias gitc1="git clone --depth 1"
 
-#alias gitp="git push 🐬"
+#alias gitp="git push 🐬"🎣
 alias gitu='git add . && git commit && git push'
-alias gitua='git add . && git commit -m "🎣 This is an automatic push by @oeyoews" && git push'
+alias gitua='git add . && git commit -m "🌹 This is an automatic push by @oeyoews" && git push'
 alias gituad='git add . && git commit -m "🔵 This is an automatic push" && git push'
 alias gituai='git commit -m "🧋 This is an automatic push for img" && git push'
 
