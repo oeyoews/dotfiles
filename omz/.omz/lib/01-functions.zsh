@@ -509,3 +509,7 @@ function twc() {
 function twcp() {
   cp -i ~/dotfiles/.archived/templates/tiddlywiki.info .
 }
+
+#function wdd() {
+  #wd $1 | clipcopy && wd $1
+#}
