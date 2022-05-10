@@ -160,6 +160,7 @@ alias bp="btop"
 #alias fmo='fmo -r -c blue'
 
 # v2raya
+# jc -u v2raya
 #journalctl -f -u v2raya.service
 alias pc="sudo systemctl stop v2raya"
 alias po="sudo systemctl start v2raya"

@@ -506,9 +506,9 @@ function twc() {
       tiddlywiki $1 --listen port=8080
 }
 
-function twcp() {
-  cp -i ~/dotfiles/.archived/templates/tiddlywiki.info .
-}
+#function twcp() {
+  #cp -i ~/dotfiles/.archived/templates/tiddlywiki.info .
+#}
 
 #function wdd() {
   #wd $1 | clipcopy && wd $1

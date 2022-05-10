@@ -10,3 +10,4 @@ plug
 tmp
 __pycache__
 config.org
+.yarnrc
