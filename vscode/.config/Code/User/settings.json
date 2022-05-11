@@ -70,7 +70,7 @@
         "yaml": false,
         "plaintext": true,
         "markdown": false,
-        "html": false
+        "html": true
     },
     "workbench.editor.untitled.hint": "text",
     "vsicons.dontShowNewVersionMessage": true,
@@ -127,4 +127,5 @@
     "liveServer.settings.donotVerifyTags": true,
     "window.menuBarVisibility": "compact",
     "slidev.enabled": true,
+    "redhat.telemetry.enabled": false,
 }
