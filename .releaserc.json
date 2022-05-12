@@ -5,6 +5,7 @@
   "branches": ["main"],
   "extends": "@semantic-release/gitlab-config",
   "plugins": [
+    "@semantic-release/git",
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
