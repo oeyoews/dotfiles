@@ -1,0 +1,13 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/oeyoews/dotfiles.git",
+  "author": "oeyoews <jyao4783@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/gitlab-config": "^10.0.0",
+    "semantic-release": "^19.0.2"
+  }
+}

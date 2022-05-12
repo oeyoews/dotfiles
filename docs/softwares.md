@@ -7,6 +7,8 @@
 * tailwind
 * postcss(about tailwind projects)
 * git-open
+* slideout
+* fancybox
 
 ## Download
 
