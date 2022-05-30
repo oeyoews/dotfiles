@@ -12,3 +12,4 @@ __pycache__
 config.org
 .yarnrc
 node_modules
+*.boltdb
