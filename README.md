@@ -4,21 +4,9 @@
 
 ## [🎉 Welcom](#)
 
-## 🌷 Tips
+## 🗞️ Run
 
-* fstrim.timer
-
-<!--obrit-->
-
-##  ✅ TODO
-
-[TODO](docs/TODO.md)
-
-## 🥘 SOFTWARE
-
-[SOFTWARE](docs/softwares.md)
-
-## 💝 Thanks
-
-<a href="https://jb.gg/OpenSource"><img src="https://cdn.jsdelivr.net/gh/oeyoews/img/jb_beam.svg" alt="JetBrains Logo" width="64px"/>
-</a>Thanks to [JetBrains](https://jb.gg/OpenSource)  for providing a free open source license for this project.
+```git
+pacman -S chezmoi
+chezmoi init --apply https://gitlab.com/oeyoews/dotfiles.git
+```
