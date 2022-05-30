@@ -1,4 +1,4 @@
-{{- if ne .chezmoi.hostname "work-laptop" }}
+{{- if ne .chezmoi.hostname "test" }}
 README.md
 LICENSE
 docs
