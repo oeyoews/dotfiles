@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.0.0...v1.1.0) (2022-05-30)
+
+
+### Features
+
+* add chezmoi config ([c051bad](https://gitlab.com/oeyoews/dotfiles/commit/c051bad4c0adb2b727a77012961830bc537ebc4d))
+
 # 1.0.0 (2022-05-30)
 
 
