@@ -1,6 +1,6 @@
 [git]
-    autoCommit = true
-    autoPush = true
+    autoCommit = false
+    autoPush = false
 [data]
     email = "jyao4783@gmail.com"
     name = "oeyoews"
