@@ -1,7 +1,7 @@
 {
   "dryRun": false,
   "debug": false,
-  "branches": ["main"],
+  "branches": ["chezmoi"],
   "plugins": [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
