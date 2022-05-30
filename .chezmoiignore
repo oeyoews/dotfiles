@@ -1,8 +1,9 @@
-{{- if ne .chezmoi.hostname "test" }}
 README.md
 LICENSE
 docs
 package.json
 yarn.lock
+CHANGELOG.md
+{{- if ne .chezmoi.hostname "test" }}
 .work # only manage .work on work-laptop
 {{- end }}
