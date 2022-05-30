@@ -4,6 +4,12 @@
 
 ## [🎉 Welcom](#)
 
+## Softwares
+
+* vscode
+
+> pacman -S vscode(code-Oss)
+
 ## 🗞️ Run
 
 ```git
