@@ -1,4 +1,5 @@
 [".config/nvim"]
 type = "git-repo"
 url = "https://gitlab.com/oeyoews/nvim.git"
+ref = "nvim"
 refreshPeriod = "24h"
