@@ -19,7 +19,6 @@ alias neo='fastfetch'
 alias open='xdg-open'
 alias c='clear'
 
-alias hmd="cd /home/oeyoews/REPOS/hugo2/content/post/"
 # yay
 alias pas='sudo pacman -S'
 # sudo pacman-mirrors -c China -m rank -i -aS testing
@@ -230,20 +229,20 @@ alias kwps="killalli wpscloudsvr"
 
 # path
 # TODO:
-alias cdd="cd ~/dotfiles/"
+#alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim/"
 #alias cdn="cd $Draft"
-alias cdn="cd ~/dotfiles/notes"
+#alias cdn="cd ~/dotfiles/notes"
 
 # zsh config file
-alias viz='vim $HOME/.zshrc'
-alias via='vim ~/.omz/lib/alias.zsh'
-alias vif='vim ~/.omz/lib/01-functions.zsh'
-alias vie="vim ${ZSH}/lib/export.zsh"
+#alias viz='vim $HOME/.zshrc'
+#alias via='vim ~/.omz/lib/alias.zsh'
+#alias vif='vim ~/.omz/lib/01-functions.zsh'
+#alias vie="vim ${ZSH}/lib/export.zsh"
 #alias vis="vim ~/.omz/lib/start.zsh"
 
 # terminal config file
-alias vik="vim ~/.config/kitty/kitty.conf"
+#alias vik="vim ~/.config/kitty/kitty.conf"
 #alias viw="vim ~/.config/wezterm/wezterm.lua"
 #alias via="vim ~/.config/alacritty/alacritty.yml"
 
