@@ -1,0 +1,42 @@
+[user]
+  email = jyao4783@gmail.com
+  name = oeyoews
+[credential]
+  helper = store
+[init]
+  defaultBranch = main
+[color]
+  ui = 1
+;[core]
+  ;editor = nvim
+
+[diff]
+  tool = kitty
+  guitool = kitty.gui
+[difftool]
+  prompt = false
+  trustExitCode = true
+[difftool "kitty"]
+  cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+  cmd = kitty kitty +kitten diff $LOCAL $REMOTE
+[alias]
+  ci = commit
+  lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  ; TODO
+  dog = !"git lg1"
+  ; alias "git visual"="gitk"
+	visual = !gitk
+  ;[dog](https://stackoverflow.com/questions/1057564/pretty-git-branch-graphs)
+  ;amend = ci
+[help]
+  ; not recommend enable
+  autocorrect = 0
+[core]
+	excludesfile = ~/dotfiles/misc/.gitignore
+	quotepath = false
+[pull]
+	rebase = true
+[merge]
+	ff = no

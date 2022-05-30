@@ -1,0 +1,134 @@
+{
+    "editor.fontLigatures": true,
+    "editor.suggest.preview": true,
+    "editor.fontFamily": "JetBrains Mono, Fira Code",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "editor.fontSize": 17,
+    "debug.console.fontFamily": "Fira Code",
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/.ideavimrc",
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": false,
+    "vim.sneak": false,
+    "vim.sneakReplacesF": false,
+    "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "Community Material Theme Palenight",
+    "workbench.startupEditor": "none",
+    "workbench.editor.pinnedTabSizing": "compact",
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#292d3e",
+        "statusBar.noFolderBackground": "#292d3e",
+        "statusBar.debuggingBackground": "#292d3e",
+        "statusBar.foreground": "#8a968afa"
+    },
+    "[jsonc]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace"
+    },
+    "window.dialogStyle": "custom",
+    "git.enabled": true,
+    "explorer.confirmDelete": false,
+    "files.autoSave": "onFocusChange",
+    "update.mode": "manual",
+    "update.showReleaseNotes": false,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "json.trace.server": "verbose",
+    "editor.tabSize": 4,
+    "editor.cursorStyle": "line",
+    "editor.insertSpaces": false,
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "grunt.autoDetect": "on",
+    "editor.mouseWheelZoom": true,
+    "editor.minimap.enabled": true,
+    "editor.suggestSelection": "first",
+    "editor.lineNumbers": "on",
+    "debug.console.fontSize": 18,
+    "debug.onTaskErrors": "showErrors",
+    "editor.renderWhitespace": "none",
+    "workbench.sideBar.location": "right",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "files.trimTrailingWhitespace": true,
+    "git.enableSmartCommit": true,
+    "terminal.external.linuxExec": "kitty",
+    "debug.terminal.clearBeforeReusing": true,
+    "terminal.integrated.copyOnSelection": true,
+    "editor.snippetSuggestions": "top",
+    "editor.inlineSuggest.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.matchBrackets": "always",
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false,
+        "html": true
+    },
+    "workbench.editor.untitled.hint": "text",
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.unicodeHighlight.invisibleCharacters": true,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "editor.wrappingStrategy": "advanced",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "name": "One Dark italic",
+                "scope": [
+                    "comment",
+                    "entity.other.attribute-name",
+                    "keyword",
+                    "markup.underline.link",
+                    "storage.modifier",
+                    "storage.type",
+                    "string.url",
+                    "variable.language.super",
+                    "variable.language.this"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "name": "One Dark italic reset",
+                "scope": [
+                    "keyword.operator",
+                    "keyword.other.type",
+                    "storage.modifier.import",
+                    "storage.modifier.package",
+                    "storage.type.built-in",
+                    "storage.type.function.arrow",
+                    "storage.type.generic",
+                    "storage.type.java",
+                    "storage.type.primitive"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "oneDarkPro.bold": true,
+    "oneDarkPro.vivid": true,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "headwind.prependCustomClasses": true,
+    "window.titleBarStyle": "custom",
+    "npm.enableRunFromFolder": true,
+    "tailwindCSS.emmetCompletions": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "window.menuBarVisibility": "compact",
+    "slidev.enabled": true,
+    "redhat.telemetry.enabled": false,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "window.zoomLevel": 1,
+}

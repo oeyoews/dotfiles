@@ -1,0 +1,70 @@
+@document.meta
+  title: template
+  description:
+  authors: oeyoews
+  categories:
+  created: 2021-12-22
+  version: 0.0.9
+@end
+
+* Index
+  -> [bug](@../wiki/bug.norg)
+  -> [wiki](@../wiki/wiki.md)
+  [soft](@../wiki/soft.md)
+  -[personal-todo](@../wiki/todo.norg)-
+
+* Examples
+ ** Link
+@notes
+-> link
+@end
+eg: +just support at beginning+
+->  +this is a link+
+
+ ** File Jump
+    [demo](@./index.norg)
+
+ ** delete line
+    -demo-
+
+ ** variable
+    =demo=
+
+ ** Task Icons
+    - [x] demo
+    - [?] demo
+    - [-] demo
+    - [_] demo
+    - [ ] demo
+    - [=] demo
+ ** sopiler
+@code
+    |demo|
+@end
+    eg: |demo|demmo|
++hide some text in normal, if you want see it , just put your cursor on it, and enter insert mode+
+
+@notes
+two list
+@end
+eg:
+
+- one
+-- sec
+-- second
+
+~ one
+~~ sec
+~~ third
+~ sec
+~~ demo
+~~ demos
+~~~ d meo
+~~~ demos
+
+@notes
+symbols
+@end
+eg:
+^sup^
+,sub,

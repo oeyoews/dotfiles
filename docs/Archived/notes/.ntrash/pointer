@@ -1,0 +1,28 @@
+---
+syntax: md
+---
+
+<!-- https://blog.csdn.net/soonfly/article/details/51131141 -->
+
+## pointer
+
+```c
+int p;  
+```
+- this is a fairly original variable
+
+```c
+int *p;
+```
+- this p is a pointer, 指针指向的内容类型为int 
+
+```c
+int p[3];
+```
+- this p is a array, 数组的元素类型为int
+
+```c
+int *p[3];
+```
+- this p still is a array, 数组的元素类型是指针类型, 指针指向的内容的类型为int 
+

@@ -1,0 +1,14 @@
+*.zwc
+*.log
+cache
+.cache
+.spacemacs.env
+eaf/
+.netrwhist
+plugged
+plug
+tmp
+__pycache__
+config.org
+.yarnrc
+node_modules

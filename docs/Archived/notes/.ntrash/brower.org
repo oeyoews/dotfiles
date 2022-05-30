@@ -1,0 +1,44 @@
+* Surfingkeys [[https://github.com/brookhong/Surfingkeys][surfingkeys]]
+1. yy  # copy the current url
+2. og  # open search use google
+3. alt s #  on/off vim in current page
+4. on  # creat a new pages
+5. zi zo zr  # 调整界面大小
+6. cf  # open one or more url_links   and gf have a simil
+7. yt  # clone current pages
+8. g0 g$ gt T  # choose a bookmark
+9. gu  # jump this website root
+10. ?  # show tip for surfindkeys
+11. ctrl+t  # new pages (for brower)
+12. f  # focus links
+13. gi  # into the first search box
+14. spc  # like j
+15.
+
+f # open links in self_pages
+;di # download  some images
+q # click images or button
+T   # choose some open tags
+gxt # close left_one tags  or gxT for right
+gxx # close all tags except current tags
+gx0 # close current_left all tags
+alt m #  sound off or sound on
+E # jump left tags
+R # jump right tags
+;u # edit this current url and jump new tags
+;U # edit this current url and open this current tags
+B # background this last tags
+F # jump to formter tags
+fnlock   # similar numlock
+alt p # fix this tag
+X # recover the moment tag
+W # move this tag to a new window
+ab # add bookmark for me
+oi # open new window in  secret
+ob # open baidu in current window
+ow # open bing.com in current window
+gs #  check this html_code
+. # search use bing.com
+### Shortkeys
+- C-M a # qq snapshot
+- WIN shift s # win system snapshot.
