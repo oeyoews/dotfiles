@@ -40,3 +40,5 @@
 	rebase = true
 [merge]
 	ff = no
+[commit]
+	template = /home/oeyoews/.gitmessage

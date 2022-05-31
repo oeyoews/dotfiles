@@ -13,6 +13,7 @@
 ## TODO
 
 * add ssh related files
+* add install.sh, install chezmoi automatically
 
 ## 🗞️ Run
 
