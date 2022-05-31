@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.2.0...v1.3.0) (2022-05-31)
+
+
+### Features
+
+* add missing alacritty and change omz name and locations ([1face1b](https://gitlab.com/oeyoews/dotfiles/commit/1face1b61048ed38eea867d8ee93b3fc60dfb9fe))
+
 # [1.2.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.1.0...v1.2.0) (2022-05-31)
 
 
