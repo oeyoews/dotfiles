@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.1.0...v1.2.0) (2022-05-31)
+
+
+### Features
+
+* add git commit template message ([e999249](https://gitlab.com/oeyoews/dotfiles/commit/e999249033169965d4de9c1542e2e239cbb864c1))
+
 # [1.1.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.0.0...v1.1.0) (2022-05-30)
 
 
