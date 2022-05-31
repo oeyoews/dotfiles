@@ -10,6 +10,10 @@
 
 > pacman -S vscode(code-Oss)
 
+## TODO
+
+* add ssh related files
+
 ## 🗞️ Run
 
 ```git
