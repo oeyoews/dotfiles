@@ -42,3 +42,4 @@
 	ff = no
 [commit]
 	template = /home/oeyoews/.gitmessage
+	cleanup = strip

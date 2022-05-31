@@ -1,0 +1,126 @@
+# BUG: for gitstatus, this font is not correct
+# BUG: this icon is not suitable
+# Bug: nvim cursor return affect alacritty
+
+#import:
+  #- '$HOME/.config/alacritty/theme.yml'
+
+
+env:
+  TERM: xterm-256color
+
+window:
+  dimensions:
+   columns: 100
+   lines: 80
+
+  padding:
+   x: 2
+   y: 2
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: false
+
+  startup_mode:  Fullscreen
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 1000
+
+  # Scrolling distance multiplier.
+  multiplier: 3
+
+# Font configuration
+font:
+  normal:
+    #family: "DejaVu Sans Mono"
+    family: "Fira Code"
+    style: Regular
+  italic:
+    #family: "DejaVu Sans Mono"
+    family: "Fira Code"
+    style: Italic
+  size: 16.0
+  offset:
+   x: 1
+   y: 0
+  glyph_offset:
+   x: 0
+   y: 0
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+window.opacity: 1.0
+
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+# Colors (Dracula)
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '#000000'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#caa9fa'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+
+  # Bright colors
+  bright:
+    black:   '#575b70'
+    red:     '#ff6e67'
+    green:   '#5af78e'
+    yellow:  '#f4f99d'
+    blue:    '#caa9fa'
+    magenta: '#ff92d0'
+    cyan:    '#9aedfe'
+    white:   '#e6e6e6'
+
+cursor:
+  style:
+    shape: Beam
+    blinking: Off
+
+  vi_mode_style: Beam
+
+  # Cursor blinking interval in milliseconds.
+  blink_interval: 0
+
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
+
+  # Thickness of the cursor relative to the cell width as floating point number
+  # from `0.0` to `1.0`.
+  thickness: 0.10
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+shell:
+ program: zsh
+
+# Directory the shell is started in. If this is unset, or `None`, the working
+# directory of the parent process will be used.
+working_directory: ~
+
+# Send ESC (\x1b) before characters when alt is pressed.
+#alt_send_esc: true
+
+mouse:
+  hide_when_typing: true
