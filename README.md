@@ -19,5 +19,5 @@
 
 ```git
 pacman -S chezmoi
-chezmoi init --apply https://gitlab.com/oeyoews/dotfiles.git
+chezmoi init https://gitlab.com/oeyoews/dotfiles.git
 ```
