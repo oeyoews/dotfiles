@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.4.0...v1.5.0) (2022-06-03)
+
+
+### Features
+
+* add execute privilege ([e5b0178](https://gitlab.com/oeyoews/dotfiles/commit/e5b017802df91ad0d4cc9e17d19dd854ac0e55bd))
+
 # [1.4.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.3.2...v1.4.0) (2022-06-03)
 
 
