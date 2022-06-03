@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.5.0...v1.6.0) (2022-06-03)
+
+
+### Features
+
+* new p10 prompt ([7a2c6db](https://gitlab.com/oeyoews/dotfiles/commit/7a2c6db937fabac512020ee38aedec0d448eb498))
+
 # [1.5.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.4.0...v1.5.0) (2022-06-03)
 
 
