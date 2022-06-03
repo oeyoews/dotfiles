@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.3.1...v1.3.2) (2022-06-03)
+
+
+### Bug Fixes
+
+* remove dot_yarnrc ([93eb5b3](https://gitlab.com/oeyoews/dotfiles/commit/93eb5b36f346fc7d535f1f60f3eab7a385ff6d03))
+
 ## [1.3.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.3.0...v1.3.1) (2022-06-03)
 
 
