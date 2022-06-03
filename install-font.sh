@@ -30,4 +30,7 @@ echo "fc-cache -f"
 fc-cache -f
 }
 
+# yay ttf-fira-code  // for arch
+# bug: this script can't work
+
 main
