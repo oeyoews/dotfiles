@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.6.0...v1.7.0) (2022-06-03)
+
+
+### Features
+
+* add font install-font.sh ([65e998c](https://gitlab.com/oeyoews/dotfiles/commit/65e998c884a626aad661a4e7736325b23d955c48))
+
 # [1.6.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.5.0...v1.6.0) (2022-06-03)
 
 
