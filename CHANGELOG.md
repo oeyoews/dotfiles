@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.3.0...v1.3.1) (2022-06-03)
+
+
+### Bug Fixes
+
+* remove org2html ([9b9a92c](https://gitlab.com/oeyoews/dotfiles/commit/9b9a92c01c9ded157bb0aed6afdcf240f200020b))
+
 # [1.3.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.2.0...v1.3.0) (2022-05-31)
 
 
