@@ -3,6 +3,7 @@
 #alias soz='source $HOME/.zshrc && exec zsh'
 alias cdd="cd ~/.local/share/chezmoi"
 alias cz="chezmoi"
+alias czu="chezmoi update"
 alias cdrt="cd ~/REPOS/TiddlyWiki5"
 alias cdri="cd ~/REPOS/img"
 #alias cdrh="cd ~/REPOS/hugo2"
@@ -230,7 +231,6 @@ alias kwps="killalli wpscloudsvr"
 
 # path
 # TODO:
-#alias cdd="cd ~/dotfiles/"
 alias cdv="cd ~/.config/nvim/"
 #alias cdn="cd $Draft"
 #alias cdn="cd ~/dotfiles/notes"
