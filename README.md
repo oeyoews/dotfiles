@@ -3,6 +3,10 @@
 
 ## [🎉 Welcom](#)
 
+## Dependencies
+
+* ttf-fira-code by arch system
+
 ## Softwares
 
 * vscode
