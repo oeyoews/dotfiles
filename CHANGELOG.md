@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.3.2...v1.4.0) (2022-06-03)
+
+
+### Features
+
+* add install.sh ([1ac2ab0](https://gitlab.com/oeyoews/dotfiles/commit/1ac2ab02141ce0ae469ba4ea154f82da8ee12b25))
+
 ## [1.3.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.3.1...v1.3.2) (2022-06-03)
 
 
