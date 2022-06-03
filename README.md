@@ -18,5 +18,5 @@
 
 ```git
 pacman -S chezmoi
-chezmoi init https://gitlab.com/oeyoews/dotfiles.git
+chezmoi init  --depth 1 https://gitlab.com/oeyoews/dotfiles.git
 ```
