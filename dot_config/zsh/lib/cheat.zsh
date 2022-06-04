@@ -66,3 +66,6 @@ _cheat() {
 }
 
 compdef _cheat cheat
+
+# complete parameter for emacs and emacsclient
+compdef _gnu_generic emacs emacsclient
