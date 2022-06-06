@@ -127,7 +127,7 @@ alias scc="sudo systemctl"
 alias zprof="zprof > /tmp/zprof.log"
 #alias btop='bpytop'
 # `zsh -f' (vanilla for zsh)
-alias zsh_time="time (repeat 10 zsh -i -c exit)"
+alias zsh-time="time (repeat 10 zsh -i -c exit)"
 
 #alias nvim="~/.local/share/nvim.appimage"
 alias vim='nvim'
