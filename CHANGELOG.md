@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.7.1...v1.8.0) (2022-06-06)
+
+
+### Features
+
+* add trans bin ([c72b11f](https://gitlab.com/oeyoews/dotfiles/commit/c72b11ffe9cb1d7a01dd46ae079a5989f0e75948))
+
 ## [1.7.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.7.0...v1.7.1) (2022-06-05)
 
 
