@@ -7,13 +7,32 @@
   #print("Installing ... 💉")
 #fi
 
+function isCmdExist() {
+	local cmd="$1"
+
+	which "$cmd" >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+    echo "Installing $cmd"
+    sh -c "$(curl -fsSL chezmoi.io/get)"
+		#return 0
+	fi
+}
+
+
 # TODO: add remove old or bk odl chezmoi and acquire user if to bk or delete
-chezmoi init  --depth 1 https://gitlab.com/oeyoews/dotfiles.git
-chezmoi apply
+function init() {
+  chezmoi init  --depth 1 https://gitlab.com/oeyoews/dotfiles.git
+}
+
+function apply() {
+  chezmoi apply
+}
 #chezmoi update -R
 
-#main() {
+main() {
+  isCmdExist chezmoii
+  init
+  apply
+}
 
-#}
-
-#main
+main

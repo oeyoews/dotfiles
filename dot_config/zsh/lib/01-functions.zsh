@@ -502,8 +502,10 @@ function cdr() {
 #}
 
 function twc() {
-      tiddlywiki $1 --init server
-      tiddlywiki $1 --listen port=8080
+      local newTiddlyWiki5 = $1
+      tiddlywiki $newTiddlyWiki5 --init server
+      echo "Creat $newTiddlyWiki5 folder"
+      tiddlywiki $newTiddlyWiki5 --listen port=8080
 }
 
 #function twcp() {
