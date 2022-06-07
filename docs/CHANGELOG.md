@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.4](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.3...v1.8.4) (2022-06-07)
+
+
+### Bug Fixes
+
+* move changelog to docs folder and remove LICENSE ([a0ff27f](https://gitlab.com/oeyoews/dotfiles/commit/a0ff27f5e349696da7b41acb1130af4f3a8b2a8c))
+* remove tmux config ([64117ed](https://gitlab.com/oeyoews/dotfiles/commit/64117edb85e7779cdbc631536d73be2d1ff624f9))
+
 ## [1.8.3](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.2...v1.8.3) (2022-06-07)
 
 
