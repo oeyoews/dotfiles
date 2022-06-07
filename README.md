@@ -6,6 +6,7 @@
 ## Dependencies
 
 * ttf-fira-code by arch system
+* jetbrains for kitty
 
 ## Softwares
 
