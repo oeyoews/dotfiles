@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.5...v1.9.0) (2022-06-07)
+
+
+### Features
+
+* add _config.yml ([c859143](https://gitlab.com/oeyoews/dotfiles/commit/c8591435f520d8e7d76a9342281d0cf4f3c530a3))
+
 ## [1.8.5](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.4...v1.8.5) (2022-06-07)
 
 
