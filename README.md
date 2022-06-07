@@ -21,7 +21,7 @@
 
 ## NOTE
 
-> Note recommand use `rm $(chezmoi managed)`
+> Note recommand use `rm -i $(chezmoi managed)`
 
 ## 🗞️ Run
 
