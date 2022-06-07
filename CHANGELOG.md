@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.3](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.2...v1.8.3) (2022-06-07)
+
+
+### Bug Fixes
+
+* rename zsh to ohmyzsh to fix can't manage zsh folder bug ([b2cb2ac](https://gitlab.com/oeyoews/dotfiles/commit/b2cb2acf3ae6aa55711eb1716fa987aebbe1612e))
+
 ## [1.8.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.1...v1.8.2) (2022-06-07)
 
 
