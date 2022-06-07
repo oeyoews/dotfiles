@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.1...v1.8.2) (2022-06-07)
+
+
+### Bug Fixes
+
+* remove directories.zsh ([5615532](https://gitlab.com/oeyoews/dotfiles/commit/5615532526dc71d895de41920a6d6bdbe953a7b1))
+
 ## [1.8.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.0...v1.8.1) (2022-06-07)
 
 
