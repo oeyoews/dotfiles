@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.0...v1.8.1) (2022-06-07)
+
+
+### Bug Fixes
+
+* format .releaserc ([a1c9f21](https://gitlab.com/oeyoews/dotfiles/commit/a1c9f216c64f24139b0cfb9783829bc0c64bb2f5))
+
 # [1.8.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.7.1...v1.8.0) (2022-06-06)
 
 
