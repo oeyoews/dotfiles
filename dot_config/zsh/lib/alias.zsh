@@ -92,6 +92,7 @@ alias ipr='ip addr | rg 192'
 alias gh='git-open'
 alias gits='git status'
 alias gitc1="git clone --depth 1"
+alias gitpp="git pull && git push"
 
 alias gitu='git add . && git commit && git push'
 alias gitua='git add . && git commit -m "🍺 This is an automatic push" && git push'
