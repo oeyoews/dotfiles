@@ -25,11 +25,17 @@
 
 ## 🗞️ Run
 
-```git
-pacman -S chezmoi
-chezmoi init  --depth 1 https://gitlab.com/oeyoews/dotfiles.git
+```zsh
+curl oeyoew.fun/install-dot.sh | bash  # fast metho use dotfiles
+```
+
+```zsh
+pacman -S chezmoi  # install chezmoi
+chezmoi init  --depth 1 gitlab.com/oeyoews   # gitlab repo
+or
+chezmoi init oeyoews  # github repo
 ```
 
 ```git
-chezmoi -R update  // update external repo
+chezmoi -R update  # update external repo
 ```
