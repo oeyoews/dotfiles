@@ -19,6 +19,10 @@
 * add ssh related files
 * add install.sh, install chezmoi automatically
 
+## NOTE
+
+> Note recommand use `rm $(chezmoi managed)`
+
 ## 🗞️ Run
 
 ```git
