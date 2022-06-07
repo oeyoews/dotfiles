@@ -141,7 +141,7 @@
 
 ## gnome
 
-* arcmenu
+<!--* arcmenu-->
 * downgrade
 * papirus-folders
 * gnome-keyring
