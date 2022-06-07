@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.5](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.4...v1.8.5) (2022-06-07)
+
+
+### Bug Fixes
+
+* move gitmsg to .config/gitmsg folder ([b55f6e6](https://gitlab.com/oeyoews/dotfiles/commit/b55f6e6deacfdd8bea682f9b8a62518a726c8537))
+
 ## [1.8.4](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.3...v1.8.4) (2022-06-07)
 
 
