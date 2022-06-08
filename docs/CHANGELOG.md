@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.9.0...v1.10.0) (2022-06-08)
+
+
+### Features
+
+* add some template for c ([fc37567](https://gitlab.com/oeyoews/dotfiles/commit/fc37567a958e655335dbb322e92e573353cb0d2c))
+
 # [1.9.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.8.5...v1.9.0) (2022-06-07)
 
 
