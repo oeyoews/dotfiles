@@ -4,6 +4,6 @@
 [data]
     email = "jyao4783@gmail.com"
     name = "oeyoews"
-#[edit]
-    #command = "code"
-    #args = ["--wait"]
+[edit]
+    command = "nvim"
+    # args = ["--wait"]
