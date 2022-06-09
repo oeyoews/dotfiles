@@ -1,0 +1,158 @@
+{
+  "editor.fontLigatures": true,
+  "editor.suggest.preview": true,
+  "editor.fontFamily": "JetBrains Mono, Fira Code",
+  "terminal.integrated.fontFamily": "Fira Code",
+  "editor.fontSize": 18,
+  "debug.console.fontFamily": "Fira Code",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "$HOME/.ideavimrc",
+  "vim.camelCaseMotion.enable": true,
+  "vim.easymotion": false,
+  "vim.sneak": false,
+  "vim.sneakReplacesF": false,
+  "vim.useSystemClipboard": true,
+  "workbench.colorTheme": "Community Material Theme Palenight",
+  "workbench.startupEditor": "none",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.iconTheme": "eq-material-theme-icons-palenight",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#292d3e",
+    "statusBar.noFolderBackground": "#292d3e",
+    "statusBar.debuggingBackground": "#292d3e",
+    "statusBar.foreground": "#8a968afa"
+  },
+  "[jsonc]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "window.dialogStyle": "custom",
+  "git.enabled": true,
+  "explorer.confirmDelete": false,
+  "files.autoSave": "onFocusChange",
+  "update.mode": "manual",
+  "update.showReleaseNotes": false,
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "clang-format.executable": "",
+  "json.trace.server": "verbose",
+  "editor.tabSize": 4,
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "grunt.autoDetect": "on",
+  "editor.mouseWheelZoom": true,
+  "editor.minimap.enabled": false,
+  "editor.suggestSelection": "first",
+  "editor.lineNumbers": "on",
+  "debug.console.fontSize": 18,
+  "debug.onTaskErrors": "prompt",
+  "editor.renderWhitespace": "none",
+  "workbench.sideBar.location": "right",
+  "files.trimTrailingWhitespace": true,
+  "terminal.external.linuxExec": "kitty",
+  "debug.terminal.clearBeforeReusing": true,
+  "terminal.integrated.copyOnSelection": true,
+  "editor.snippetSuggestions": "top",
+  "editor.inlineSuggest.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.matchBrackets": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false,
+    "html": true
+  },
+  "workbench.editor.untitled.hint": "text",
+  "editor.unicodeHighlight.invisibleCharacters": true,
+  "editor.unicodeHighlight.ambiguousCharacters": true,
+  "editor.wrappingStrategy": "advanced",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "One Dark italic",
+        "scope": [
+          "comment",
+          "entity.other.attribute-name",
+          "keyword",
+          "markup.underline.link",
+          "storage.modifier",
+          "storage.type",
+          "string.url",
+          "variable.language.super",
+          "variable.language.this"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "name": "One Dark italic reset",
+        "scope": [
+          "keyword.operator",
+          "keyword.other.type",
+          "storage.modifier.import",
+          "storage.modifier.package",
+          "storage.type.built-in",
+          "storage.type.function.arrow",
+          "storage.type.generic",
+          "storage.type.java",
+          "storage.type.primitive"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "window.titleBarStyle": "custom",
+  "npm.enableRunFromFolder": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+  "window.menuBarVisibility": "compact",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.zoomLevel": 1,
+  "material-icon-theme.saturation": 1,
+  "material-icon-theme.folders.color": "#7cb342",
+  "material-icon-theme.folders.theme": "specific",
+  "vsintellicode.features.apiExamples": "enabled",
+  "vsintellicode.features.apiExamplests": "enabled",
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "vsintellicode.modelDownloadPath": "",
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.ignoreTsConfigBaseUrl": true,
+  "workbench.editor.enablePreview": false,
+  "cmake.configureOnOpen": false,
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "launch": {
+    "version": "0.0.1",
+    "configurations": [
+      {
+        "type": "lldb",
+        "request": "launch",
+        "name": "Debug",
+        "program": "${command:cmake.launchTargetPath}",
+        "args": [],
+        "console": "integratedTerminal",
+        "cwd": "${workspaceFolder}"
+      }
+    ],
+    "compounds": []
+  },
+  "extensions.ignoreRecommendations": true
+}
