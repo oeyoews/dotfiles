@@ -4,6 +4,9 @@
 [data]
     email = "jyao4783@gmail.com"
     name = "oeyoews"
-[edit]
-    command = "nvim"
+# [edit]
+#     command = "nvim"
     # args = ["--wait"]
+[merge]
+    command = "nvim"
+    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
