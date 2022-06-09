@@ -279,7 +279,7 @@ alias cib="ping bing.com"
 #alias vitwxp="google-chrome-stable ~/dotfiles/doc/xp.html"
 
 #sc --failed
-alias gedit="gnome-text-editor"
+# alias gedit="gnome-text-editor"
 
 alias npmm="npm run"
 #alias yarn="yarn"
