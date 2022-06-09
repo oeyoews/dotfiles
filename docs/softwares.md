@@ -247,3 +247,4 @@
 * v2rayNG
 * chezmoi
 * mkdocs
+* dev-sidecar
