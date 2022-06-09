@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.10.0...v1.11.0) (2022-06-09)
+
+
+### Features
+
+* add command for chezmoi automatically apply ([8105df8](https://gitlab.com/oeyoews/dotfiles/commit/8105df8195b54ff35f84cb916acd5ab886dd6f0c))
+
 # [1.10.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.9.0...v1.10.0) (2022-06-08)
 
 
