@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.12.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.12.0...v1.12.1) (2022-06-09)
+
+
+### Bug Fixes
+
+* remove templates to nvim config ([36935de](https://gitlab.com/oeyoews/dotfiles/commit/36935defb7b9bc11e7841b5320dd239f8244efc4))
+
 # [1.12.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.11.0...v1.12.0) (2022-06-09)
 
 
