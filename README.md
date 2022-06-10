@@ -18,6 +18,7 @@
 
 * add ssh related files
 * add install.sh, install chezmoi automatically
+* the completion with chezmoi in another not work
 
 ## NOTE
 
