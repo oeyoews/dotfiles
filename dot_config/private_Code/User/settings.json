@@ -13,7 +13,7 @@
   "vim.sneakReplacesF": false,
   "vim.useSystemClipboard": true,
   "workbench.colorTheme": "Community Material Theme Palenight",
-  "workbench.startupEditor": "none",
+  "workbench.startupEditor": "newUntitledFile",
   "workbench.editor.pinnedTabSizing": "compact",
   "workbench.iconTheme": "eq-material-theme-icons-palenight",
   "workbench.colorCustomizations": {
@@ -26,7 +26,7 @@
     "editor.quickSuggestions": {
       "strings": true
     },
-    "editor.suggest.insertMode": "replace"
+    "editor.suggest.insertMode": "insert"
   },
   "window.dialogStyle": "custom",
   "git.enabled": true,
@@ -38,7 +38,6 @@
   "terminal.integrated.defaultProfile.linux": "zsh",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "clang-format.executable": "",
   "json.trace.server": "verbose",
   "editor.tabSize": 4,
   "editor.cursorStyle": "line",
@@ -48,17 +47,17 @@
   "grunt.autoDetect": "on",
   "editor.mouseWheelZoom": true,
   "editor.minimap.enabled": false,
-  "editor.suggestSelection": "first",
+  "editor.suggestSelection": "recentlyUsed",
   "editor.lineNumbers": "on",
   "debug.console.fontSize": 18,
   "debug.onTaskErrors": "prompt",
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "trailing",
   "workbench.sideBar.location": "right",
   "files.trimTrailingWhitespace": true,
   "terminal.external.linuxExec": "kitty",
   "debug.terminal.clearBeforeReusing": true,
   "terminal.integrated.copyOnSelection": true,
-  "editor.snippetSuggestions": "top",
+  "editor.snippetSuggestions": "inline",
   "editor.inlineSuggest.enabled": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
@@ -66,9 +65,7 @@
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
-    "plaintext": true,
-    "markdown": false,
-    "html": true
+    "markdown": false
   },
   "workbench.editor.untitled.hint": "text",
   "editor.unicodeHighlight.invisibleCharacters": true,
