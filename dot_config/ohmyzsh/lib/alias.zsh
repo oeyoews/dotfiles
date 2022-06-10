@@ -40,7 +40,7 @@ alias cp="cp -r"
 #alias 'onsshd'='sudo systemctl restart sshd.service && systemctl status sshd.service'
 
 # software
-alias ra='ranger'
+alias or='ranger'
 alias dust="dust -r"
 
 # @ trash
