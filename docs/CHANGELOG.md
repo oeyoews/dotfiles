@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.13.0...v1.14.0) (2022-06-11)
+
+
+### Features
+
+* use dragon-drop ([5fcdf0e](https://gitlab.com/oeyoews/dotfiles/commit/5fcdf0ec4bf46acbddfa158b28a23a03ea1d3754))
+
 # [1.13.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.12.1...v1.13.0) (2022-06-11)
 
 
