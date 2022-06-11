@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.12.1...v1.13.0) (2022-06-11)
+
+
+### Features
+
+* enable git for ranger ([f34d3c1](https://gitlab.com/oeyoews/dotfiles/commit/f34d3c105a555948d2d5fa2a8d0fb4e43c4bca12))
+
 ## [1.12.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.12.0...v1.12.1) (2022-06-09)
 
 
