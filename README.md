@@ -16,6 +16,7 @@
 
 ## TODO
 
+- [ ] how to add comment for completion or alias
 * add ssh related files
 * add install.sh, install chezmoi automatically
 * the completion with chezmoi in another not work
