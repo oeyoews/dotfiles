@@ -41,5 +41,5 @@
 [merge]
 	ff = no
 [commit]
-	template = ~/.config/gitmsg/.gitmessage
-	cleanup = strip
+	; template = ~/.config/gitmsg/.gitmessage
+	; cleanup = strip
