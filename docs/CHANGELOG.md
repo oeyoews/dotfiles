@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.14.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.14.1...v1.14.2) (2022-06-14)
+
+
+### Bug Fixes
+
+* disable gitmsg ([2401e3d](https://gitlab.com/oeyoews/dotfiles/commit/2401e3db536926cd22ff3af318d8acc5d3768aae))
+
 ## [1.14.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.14.0...v1.14.1) (2022-06-12)
 
 
