@@ -2,6 +2,8 @@
 
 ## npm packages
 
+* lookatme
+* pipx
 * ungit
 * emoji
 * live-server(use npm i -g, not in current projects) and have vscode extensions(live server, not others)
