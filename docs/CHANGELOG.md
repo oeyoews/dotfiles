@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.14.2...v1.15.0) (2022-06-16)
+
+
+### Features
+
+* use tabinsert to insert gitcommit filetypes ([80e1278](https://gitlab.com/oeyoews/dotfiles/commit/80e1278c6e7fa84453fbb916839d54a3cf31f60f))
+
 ## [1.14.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.14.1...v1.14.2) (2022-06-14)
 
 
