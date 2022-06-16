@@ -172,7 +172,7 @@ alias po="sudo systemctl start v2raya"
 
 # watch ls <dir>
 #alias watch="watch -n 1 -d"
-alias vu="nvim -c PlugUpdate"
+# alias vu="nvim -c PlugUpdate"
 alias pipu='pip3 install --user'
 
  #@DEPRECATED taskbook
