@@ -515,3 +515,12 @@ function twc() {
 #function wdd() {
   #wd $1 | clipcopy && wd $1
 #}
+
+function d () {
+  if [[ -n $1 ]]; then
+    dirs "$@"
+  else
+    dirs -v | head -n 10
+  fi
+}
+compdef _dirs d
