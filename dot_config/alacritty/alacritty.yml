@@ -61,8 +61,10 @@ selection:
 colors:
   # Default colors
   primary:
-    background: '#282a36'
-    foreground: '#f8f8f2'
+    # background: '#282a36'
+    background: '#24283B'
+    # foreground: '#f8f8f2'
+    foreground: '#979EAB'
 
   # Normal colors
   normal:
@@ -70,7 +72,8 @@ colors:
     red:     '#ff5555'
     green:   '#50fa7b'
     yellow:  '#f1fa8c'
-    blue:    '#caa9fa'
+    # blue:    '#caa9fa'
+    blue: '#bd92f8'
     magenta: '#ff79c6'
     cyan:    '#8be9fd'
     white:   '#bfbfbf'
@@ -81,7 +84,7 @@ colors:
     red:     '#ff6e67'
     green:   '#5af78e'
     yellow:  '#f4f99d'
-    blue:    '#caa9fa'
+    blue:    '#bd92f8'
     magenta: '#ff92d0'
     cyan:    '#9aedfe'
     white:   '#e6e6e6'
