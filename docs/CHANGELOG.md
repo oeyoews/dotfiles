@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.16.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.15.0...v1.16.0) (2022-06-17)
+
+
+### Features
+
+* update alacritty.yml ([f78a7ca](https://gitlab.com/oeyoews/dotfiles/commit/f78a7caac22f85dadfd69994ae9c21aed04bfcc1))
+
 # [1.15.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.14.2...v1.15.0) (2022-06-16)
 
 
