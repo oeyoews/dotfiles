@@ -182,7 +182,8 @@
 
 > software version control visualization for git repo
 
-* cloc
+* `cloc` count code lines
+
 * jdk-openjdk
 * make
 * rg(ripgrep)

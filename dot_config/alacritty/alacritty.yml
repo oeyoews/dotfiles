@@ -1,10 +1,3 @@
-# BUG: for gitstatus, this font is not correct
-# BUG: this icon is not suitable
-# Bug: nvim cursor return affect alacritty
-
-#import:
-  #- '$HOME/.config/alacritty/theme.yml'
-
 env:
   TERM: xterm-256color
 
@@ -35,15 +28,17 @@ scrolling:
 font:
   normal:
     #family: "DejaVu Sans Mono"
-    family: "Fira Code"
+    # family: "Fira Code"
+    family: "JetBrains Mono"
     style: Regular
   italic:
     #family: "DejaVu Sans Mono"
-    family: "Fira Code"
+    # family: "Fira Code"
+    family: "JetBrains Mono"
     style: Italic
-  size: 16.0
+  size: 20.0
   offset:
-   x: 1
+   x: 0
    y: 0
   glyph_offset:
    x: 0
@@ -51,6 +46,7 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
+
 window.opacity: 1.0
 
 selection:
@@ -106,7 +102,7 @@ cursor:
 
   # Thickness of the cursor relative to the cell width as floating point number
   # from `0.0` to `1.0`.
-  thickness: 0.10
+  thickness: 0.20
 
 # Live config reload (changes require restart)
 live_config_reload: true
@@ -123,3 +119,12 @@ working_directory: ~
 
 mouse:
   hide_when_typing: true
+
+# BUG: for gitstatus, this font is not correct
+# BUG: not rename suffix yml to yaml
+# BUG: this icon is not suitable
+# Bug: nvim cursor return affect alacritty
+
+#import:
+  #- '$HOME/.config/alacritty/theme.yml'
+
