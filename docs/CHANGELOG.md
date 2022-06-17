@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.3](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.2...v1.17.3) (2022-06-17)
+
+
+### Bug Fixes
+
+* replace beer to guitar ([f2d067e](https://gitlab.com/oeyoews/dotfiles/commit/f2d067e6f1157551ff760967eba00a6cd5cd1dd3))
+
 ## [1.17.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.1...v1.17.2) (2022-06-17)
 
 
