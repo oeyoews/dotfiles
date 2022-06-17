@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.0...v1.17.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* deprecated alacritty font ([f5e4cb0](https://gitlab.com/oeyoews/dotfiles/commit/f5e4cb06007cf269a17d518dbc6615f13a2d07cd))
+
 # [1.17.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.16.0...v1.17.0) (2022-06-17)
 
 
