@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.1...v1.17.2) (2022-06-17)
+
+
+### Bug Fixes
+
+* remove difftool about kitty ([96a3c5c](https://gitlab.com/oeyoews/dotfiles/commit/96a3c5cae947f61f0ad5755dbc9f5c4e58c8eac7))
+
 ## [1.17.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.0...v1.17.1) (2022-06-17)
 
 
