@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.18.1...v1.19.0) (2022-06-18)
+
+
+### Features
+
+* use ssh for git repo ([b6fd724](https://gitlab.com/oeyoews/dotfiles/commit/b6fd7240975901b16ac2753598ed3ec7f6c9708d))
+
 ## [1.18.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.18.0...v1.18.1) (2022-06-18)
 
 
