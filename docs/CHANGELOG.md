@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.18.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.18.0...v1.18.1) (2022-06-18)
+
+
+### Bug Fixes
+
+* enable cursor shape ([4ec56cd](https://gitlab.com/oeyoews/dotfiles/commit/4ec56cd964886cc9003e961e18d2e6d5f544a284))
+
 # [1.18.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.3...v1.18.0) (2022-06-18)
 
 
