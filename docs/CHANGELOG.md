@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.3...v1.18.0) (2022-06-18)
+
+
+### Features
+
+* chang p10 promap in vi-mode ([5da4bc4](https://gitlab.com/oeyoews/dotfiles/commit/5da4bc405e17c2b7d6a01e3816b4c45ed7f80ca7))
+
 ## [1.17.3](https://gitlab.com/oeyoews/dotfiles/compare/v1.17.2...v1.17.3) (2022-06-17)
 
 
