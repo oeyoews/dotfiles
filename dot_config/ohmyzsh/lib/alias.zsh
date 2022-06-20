@@ -1,6 +1,7 @@
 # note this will cause $path load twice extra
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
+alias pasm="sudo pacman-mirrors -c China -m rank -i -aS unstable"
 alias cdd="cd ~/.local/share/chezmoi"
 alias cm="chezmoi"
 alias cmu="chezmoi update"
