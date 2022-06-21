@@ -16,7 +16,7 @@
 
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     context
-    #os_icon
+    os_icon
     dir
     vcs
     prompt_char
@@ -109,7 +109,7 @@
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=44
   # Custom icon.       🐦️ 💡 🇻 📣
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=''
   #"\U1F608"
   #typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=""
 
