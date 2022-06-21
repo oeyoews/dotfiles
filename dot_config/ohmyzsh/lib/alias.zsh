@@ -108,15 +108,15 @@ alias gitg="vim ./.gitignore"
 #git push -uf origin main
 
 # just for kitty terminal, other terminal please use \ssh temporary
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
 # kitty list-fonts
 # PYTHONMALLOC=malloc valgrind --tool=massif kitty
 # massif-visualizer massif.out.*
-alias kcat="kitty +kitten icat"
-alias kdiff="kitty +kitten diff"
-alias kemoj="kitty +kitten unicode_input"
-alias diffk="kitty +kitten diff"
+# alias kcat="kitty +kitten icat"
+# alias kdiff="kitty +kitten diff"
+# alias kemoj="kitty +kitten unicode_input"
+# alias diffk="kitty +kitten diff"
 
 # @deprecated
 #alias che="cheat -e"
