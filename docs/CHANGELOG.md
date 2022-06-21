@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.19.2...v1.20.0) (2022-06-21)
+
+
+### Features
+
+* add tmux for chezmoiexternal ([7178b2b](https://gitlab.com/oeyoews/dotfiles/commit/7178b2b0103e833a18fe596adf796d4ca518bc1b))
+
 ## [1.19.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.19.1...v1.19.2) (2022-06-21)
 
 
