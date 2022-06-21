@@ -1,10 +1,14 @@
 local wezterm = require("wezterm")
 
 return {
+  colors = {
+
+    background = "#24283b",
+  },
   window_background_opacity = 1.0,
   use_ime = true,
-  font = wezterm.font_with_fallback({
-    "Fira Code",
+  font = wezterm.font("Fira Code", {
+    italic = false
   }),
 
   default_cursor_style = "SteadyBlock",
@@ -48,4 +52,3 @@ return {
 
   window_decorations = "TITLE",
 }
-
