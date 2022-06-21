@@ -97,7 +97,7 @@ alias gitpp="git pull --rebase=true && git push"
 
 alias gitu='git add . && git commit && git push'
 alias gitua='git add . && git commit -m "🦅 This is an automatic push" && git push '
-alias gituai='git commit -m "🧋 This is an automatic push for img" && git push'
+# alias gituai='git commit -m "🧋 This is an automatic push for img" && git push'
 
 #remove tag
 #git push origin :refs/tags/v0.0.2
@@ -138,10 +138,10 @@ alias e='nvim'
 alias se='nvim -u NONE'
 
 # get weather to your terminal
-alias wego='curl wttr.in'
+# alias wego='curl wttr.in'
 
 #alias emacsn='emacs -nw'
-alias doom='~/.emacs.d/bin/doom'
+# alias doom='~/.emacs.d/bin/doom'
 
 # NOTE: not use scc alias
 # emacs --daemon=coding;
