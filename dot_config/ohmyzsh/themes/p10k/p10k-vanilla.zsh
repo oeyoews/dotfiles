@@ -109,7 +109,7 @@
   # OS identifier color.
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=44
   # Custom icon.       🐦️ 💡 🇻 📣
-  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' '
+  typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='勇' # 
   #"\U1F608"
   #typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=""
 
