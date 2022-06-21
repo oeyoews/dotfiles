@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.19.0...v1.19.1) (2022-06-21)
+
+
+### Bug Fixes
+
+* kitty tab settings ([881252d](https://gitlab.com/oeyoews/dotfiles/commit/881252d437ac3233783891e7b19a788f56054b05))
+
 # [1.19.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.18.1...v1.19.0) (2022-06-18)
 
 
