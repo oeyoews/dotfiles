@@ -2,52 +2,41 @@ env:
   TERM: xterm-256color
 
 window:
-  padding:
-   x: 1
-   y: 0
 
-  # Spread additional padding evenly around the terminal content.
+  padding:
+    x: 1
+    y: 0
+
   dynamic_padding: true
 
   startup_mode:  Fullscreen
 
 scrolling:
-  # Maximum number of lines in the scrollback buffer.
-  # Specifying '0' will disable scrolling.
+
   history: 1000
 
-  # Scrolling distance multiplier.
   multiplier: 3
 
-# Font configuration
 font:
 
   normal:
-    # NOTE: not support all fontawesome
     family: "FiraCode"
-    # family: "JetBrains Mono"
-    # family: "DejaVu Sans Mono"
     style: Regular
-  # italic:
-    #family: "DejaVu Sans Mono"
-    # family: "Fira Code"  # no italic font
-    # family: "JetBrains Mono"
-    # style: Italic
 
   size: 22.0
 
   offset:
-   x: 0
-   y: 0
+    x: 0
+    y: 0
 
   glyph_offset:
-   x: 0
-   y: 0
+    x: 0
+    y: 0
 
-# If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+    # If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: false
 
-window.opacity: 1.0
+window.opacity: 0.97
 
 selection:
   # This string contains all characters that are used as separators for
@@ -56,45 +45,6 @@ selection:
 
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-
-# Colors (Dracula)
-colors:
-  # Default colors
-  primary:
-    # background: '#282a36'
-    background: '#24283B'
-    # foreground: '#f8f8f2'
-    foreground: '#979EAB'
-
-  # Normal colors
-  normal:
-    black:   '#565F89'
-    red:     '#ff5555'
-    green:   '#50fa7b'
-    yellow:  '#f1fa8c'
-    blue: '#bd92f8'
-    magenta: '#ff79c6'
-    cyan:    '#8be9fd'
-    white:   '#bfbfbf'
-
-  # Bright colors
-  bright:
-    # black:   '#575b70'
-    # red:     '#ff6e67'
-    # green:   '#5af78e'
-    # yellow:  '#f4f99d'
-    # blue:    '#bd92f8'
-    # magenta: '#ff92d0'
-    # cyan:    '#9aedfe'
-    # white:   '#e6e6e6'
-    black:   '#565F89'
-    red:     '#ff5555'
-    green:   '#50fa7b'
-    yellow:  '#f1fa8c'
-    blue: '#bd92f8'
-    magenta: '#ff79c6'
-    cyan:    '#8be9fd'
-    white:   '#bfbfbf'
 
 cursor:
   style:
@@ -114,14 +64,14 @@ cursor:
   # from `0.0` to `1.0`.
   thickness: 0.20
 
-# Live config reload (changes require restart)
+  # Live config reload (changes require restart)
 live_config_reload: true
 
 shell:
- program: zsh
+  program: zsh
 
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
+  # Directory the shell is started in. If this is unset, or `None`, the working
+  # directory of the parent process will be used.
 working_directory: ~
 
 # Send ESC (\x1b) before characters when alt is pressed.
@@ -130,10 +80,33 @@ working_directory: ~
 mouse:
   hide_when_typing: true
 
-# BUG: for gitstatus, this font is not correct
-# BUG: not rename suffix yml to yaml
-# BUG: this icon is not suitable
-# Bug: nvim cursor return affect alacritty
+  # Colors (Dracula)
+colors:
+  # Default colors
+  primary:
+    # background: '#282a36'
+    background: '#24283B'
+    # foreground: '#f8f8f2'
+    foreground: '#979EAB'
 
-#import:
-  #- '$HOME/.config/alacritty/theme.yml'
+    # Normal colors
+  normal:
+    black:   '#565F89'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue: '#bd92f8'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
+
+    # Bright colors
+  bright:
+    black:   '#565F89'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue: '#bd92f8'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#bfbfbf'
