@@ -140,6 +140,7 @@
 * kitty
 * alacritty
 * wezterm
+* qterminal
 
 ## gnome
 
