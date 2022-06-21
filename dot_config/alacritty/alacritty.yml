@@ -24,15 +24,15 @@ font:
 
   normal:
     # NOTE: not support all fontawesome
-    # family: "FiraCode"
+    family: "FiraCode"
     # family: "JetBrains Mono"
-    family: "DejaVu Sans Mono"
+    # family: "DejaVu Sans Mono"
     style: Regular
-  italic:
+  # italic:
     #family: "DejaVu Sans Mono"
     # family: "Fira Code"  # no italic font
-    family: "JetBrains Mono"
-    style: Italic
+    # family: "JetBrains Mono"
+    # style: Italic
 
   size: 22.0
 
