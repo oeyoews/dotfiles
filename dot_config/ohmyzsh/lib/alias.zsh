@@ -96,7 +96,7 @@ alias gitc1="git clone --depth 1"
 alias gitpp="git pull --rebase=true && git push"
 
 alias gitu='git add . && git commit && git push'
-alias gitua='git add . && git commit -m "This is an automatic push" && git push 勇'
+alias gitua='git add . && git commit -m "勇This is an automatic push" && git push '
 alias gituai='git commit -m "🧋 This is an automatic push for img" && git push'
 
 #remove tag
