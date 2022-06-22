@@ -501,12 +501,12 @@ function cdr() {
   #fi
 #}
 
-function twc() {
-      local newTiddlyWiki5 = $1
-      tiddlywiki $newTiddlyWiki5 --init server
-      echo "Creat $newTiddlyWiki5 folder"
-      tiddlywiki $newTiddlyWiki5 --listen port=8080
-}
+# function twc() {
+#       local newTiddlyWiki5 = $1
+#       tiddlywiki $newTiddlyWiki5 --init server
+#       echo "Creat $newTiddlyWiki5 folder"
+#       tiddlywiki $newTiddlyWiki5 --listen port=8080
+# }
 
 #function twcp() {
   #cp -i ~/dotfiles/.archived/templates/tiddlywiki.info .
