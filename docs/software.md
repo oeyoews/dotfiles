@@ -123,6 +123,7 @@
 * sourcegraphy
 * tiddlydesktop
 * obs
+* kookma
 * clementine
 * foxit reader
 * gimp
