@@ -31,7 +31,7 @@
 ## 🗞️ Run
 
 ```bash
-curl oeyoew.fun/install-dot.sh | bash  # fast metho use dotfiles
+curl -fSsL oeyoew.fun/install-dot.sh | bash  # fast metho use dotfiles
 ```
 
 ```bash
