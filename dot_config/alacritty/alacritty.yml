@@ -19,8 +19,11 @@ scrolling:
 
 font:
 
+  builtin_box_drawing: true
+
   normal:
-    family: "Hack Nerd Font"
+    # family: "Hack Nerd Font"
+    family: "JetBrains Mono"
     style: Regular
 
   size: 22.0
