@@ -1,4 +1,5 @@
 let mapleader=" "
+
 " == opts
 set nu
 set so=5
