@@ -10,6 +10,8 @@
 <img src="https://img.shields.io/badge/System-Linux-white.svg?style=flat-square&logo=linux&logoColor=white&color=BB9AF7" alt="system">
 <img src="https://img.shields.io/gitlab/v/tag/oeyoews/dotfiles?color=green&logo=FastAPI&style=flat-square" alt="tag">
 
+<hr>
+
 <img src="img/2022-06-25-11-11-25.png" width=28>
 
 </div>
