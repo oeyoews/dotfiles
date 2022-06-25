@@ -1,4 +1,4 @@
-<h1 align="center">DOTFILES</h1>
+<h1 align="center">dotfiles</h1>
 
 <div align="center">
 
@@ -9,9 +9,11 @@
 ![System](https://img.shields.io/badge/System-Linux-white.svg?style=flat-square&logo=linux&logoColor=9ECE6A&color=BB9AF7)
 ![Tag](https://img.shields.io/gitlab/v/tag/oeyoews/dotfiles?color=green&logo=FastAPI&style=flat-square)
 
+<img src="img/2022-06-25-11-11-25.png" width=28>
+
 </div>
 
-## Welcom
+## Welcome
 
 ## Dependencies
 
