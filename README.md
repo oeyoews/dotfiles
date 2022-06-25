@@ -1,11 +1,15 @@
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-[![Latest Release](https://gitlab.com/oeyoews/dotfiles/-/badges/release.svg)](https://gitlab.com/oeyoews/dotfiles/-/releases)
+<h1 align="center">DOTFILES</h1>
 
-## Welcom to dotfiles
+<div align="center">
 
-         ┏━━━━━━━━━┓
-         +DOTFILES ┃
-         ┗━━━━━━━━━┛
+![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-Semantic-e10079.svg?style=flat-square)
+![Git](https://img.shields.io/badge/GIT-Yes-green.svg?style=flat-square&logo=git&label=GIT)
+![Github](https://img.shields.io/badge/Github-Yes-green.svg?style=flat-square&logo=github&label=Github)
+![Gitlab](https://img.shields.io/badge/Gitlab-Yes-ffcc00.svg?style=flat-square&logo=gitlab&label=Gitlab)
+
+</div>
+
+## Welcom
 
 ## Dependencies
 
@@ -20,11 +24,11 @@
 
 ## TODO
 
-* learn tmux
+* [ ] learn tmux
 * [ ] how to add comment for completion or alias
-* add ssh related files
-* add install.sh, install chezmoi automatically
-* the completion with chezmoi in another not work
+* [ ] add ssh related files
+* [x] add install.sh, install chezmoi automatically
+* [ ] the completion with chezmoi in another not work
 
 ## NOTE
 
