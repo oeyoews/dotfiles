@@ -37,7 +37,7 @@
 	; excludesfile = $HOME/dotfiles/misc/.gitignore
 	quotepath = false
 [pull]
-	rebase = false
+	rebase = true
 [merge]
 	ff = no
 ; [commit]
