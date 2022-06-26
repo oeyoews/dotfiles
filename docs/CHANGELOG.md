@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.20.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.20.0...v1.20.1) (2022-06-26)
+
+
+### Bug Fixes
+
+* remove _config.yml ([edc3579](https://gitlab.com/oeyoews/dotfiles/commit/edc35794bf4f0fc9fb75ca9d162c3d5afd08e48f))
+
 # [1.20.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.19.2...v1.20.0) (2022-06-21)
 
 
