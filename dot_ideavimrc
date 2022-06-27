@@ -1,14 +1,11 @@
 let mapleader=" "
 
-" == opts
+" set so=5
 set nu
-set so=5
 set signcolumn=yes
 set ve=block
 set cursorline
 set incsearch " always highlight search keywords
-
-" == misc
 syntax on
 
 " == mappings
@@ -75,3 +72,4 @@ nnoremap <space>so :source ~/.ideavimrc<cr>
 map <leader>tb <Action>(ToggleLineBreakpoint)
 " format code in visual status
 map Q gqset ideajoin
+set ideastrictmode
