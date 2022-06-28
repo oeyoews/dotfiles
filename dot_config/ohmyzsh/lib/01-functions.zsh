@@ -113,7 +113,6 @@ function env_default() {
   export "$1=$2" && return 3
 }
 
-
 # Required for $langinfo
 zmodload zsh/langinfo
 
@@ -273,7 +272,6 @@ function pym() {
  #}
 #alias offproxy1="unset http_proxy https_proxy all_proxy && curl cip.cc"
 
-
 # color
 function 256color() {
   for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
@@ -405,7 +403,6 @@ function cdr() {
   #natapp -authtoken=ca8def303fc2485c
 #}
 
-
 ### GTD or ZTD
 #function oeq() {
   #$EDITOR ${NOTES}/refrence/question.md
@@ -439,7 +436,6 @@ function cdr() {
 #function oetl() {
   #$EDITOR + "${Notes}/todo/${1}"
 #}
-
 
 # tiddlywiki
 #function two() {
@@ -516,6 +512,9 @@ function cdr() {
   #wd $1 | clipcopy && wd $1
 #}
 
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
 function d () {
   if [[ -n $1 ]]; then
     dirs "$@"
