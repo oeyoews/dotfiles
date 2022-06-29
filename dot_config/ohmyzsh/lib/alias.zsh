@@ -109,7 +109,7 @@ alias gitg="vim ./.gitignore"
 #git push -uf origin main
 
 # just for kitty terminal, other terminal please use \ssh temporary
-alias ssh="kitty +kitten ssh"
+alias sshk="kitty +kitten ssh"
 # infocmp -a xterm-kitty | ssh myserver tic -x -o \~/.terminfo /dev/stdin
 # kitty list-fonts
 # PYTHONMALLOC=malloc valgrind --tool=massif kitty
