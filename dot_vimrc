@@ -1,7 +1,8 @@
 " have some bug
 set shortmess=atI  " disable show welcome and no clear this ui to quit vim
 set t_ti= t_te=
-set fillchars=eob:•
+" set fillchars=eob:•
+set fcs=eob:\ ,fold:•
 
 syntax on
 set t_Co=16
