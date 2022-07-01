@@ -2,7 +2,9 @@
 set shortmess=atI  " disable show welcome and no clear this ui to quit vim
 set t_ti= t_te=
 " set fillchars=eob:•
-set fcs=eob:\ ,fold:•
+" set fcs=eob:\ ,fold:•
+" https://github.com/neovim/neovim/pull/8546
+let &fcs='eob: '
 
 syntax on
 set t_Co=16
