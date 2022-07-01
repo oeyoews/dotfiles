@@ -45,4 +45,4 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin
 
 # export LUA_PATH="~/REPOS/lua/?.lua;~/temp/lua/?.lua;;"
-export LUA_PATH="~/REPOS/lua/?.lua;;"
+export LUA_PATH="~/REPOS/luatest/?.lua;;"
