@@ -6,7 +6,7 @@ set fillchars=eob:-
 syntax on
 set t_Co=16
 set nocompatible
-set noshowmode
+set showmode
 set noshowcmd
 set ruler
 set number
