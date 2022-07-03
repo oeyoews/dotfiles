@@ -118,6 +118,7 @@
 
 ## tools
 
+* Excalidraw
 * anki(phone recommend)
 * markdown-lint(github)
 * sourcegraphy
