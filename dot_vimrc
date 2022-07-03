@@ -1,7 +1,7 @@
 " have some bug
 set confirm
 set shortmess=atI  " disable show welcome and no clear this ui to quit vim
-set t_ti= t_te=
+" set t_ti= t_te=
 " set fillchars=eob:•
 " set fcs=eob:\ ,fold:•
 " https://github.com/neovim/neovim/pull/8546
