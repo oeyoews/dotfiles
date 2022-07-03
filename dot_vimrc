@@ -1,4 +1,5 @@
 " have some bug
+set confirm
 set shortmess=atI  " disable show welcome and no clear this ui to quit vim
 set t_ti= t_te=
 " set fillchars=eob:•
@@ -9,9 +10,9 @@ let &fcs='eob: '
 syntax on
 set t_Co=16
 set nocompatible
-set showmode
+set noshowmode
 set noshowcmd
-set ruler
+set noruler
 set number
 set nocursorline
 set expandtab
@@ -74,4 +75,3 @@ match group1 /\t/
 
 noremap <space>fs :w<CR>
 noremap <space>q :q<CR>
-set confirm
