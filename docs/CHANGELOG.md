@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.22.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.21.0...v1.22.0) (2022-07-03)
+
+
+### Features
+
+* add cargo config ([f955dd3](https://gitlab.com/oeyoews/dotfiles/commit/f955dd3a5da36a7f537cb1141ec3a9ed5f05b970))
+
 # [1.21.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.20.1...v1.21.0) (2022-07-01)
 
 
