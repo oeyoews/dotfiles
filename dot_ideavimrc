@@ -75,3 +75,6 @@ map <leader>tb <Action>(ToggleLineBreakpoint)
 " format code in visual status
 map Q gqset ideajoin
 set ideastrictmode
+
+nnoremap U <C-r>
+nnoremap <space>bd :bd<cr>
