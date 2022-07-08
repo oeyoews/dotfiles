@@ -66,6 +66,7 @@ set NERDTree
 set surround
 set commentary
 nnoremap <space>ei :edit ~/.ideavimrc<cr>
+nnoremap <space>bn :bn<cr>
 " map <space>f <Plug>(easymotion-s)
 nnoremap <space>so :source ~/.ideavimrc<cr>
 
