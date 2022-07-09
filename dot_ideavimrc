@@ -75,6 +75,7 @@ map <leader>tb <Action>(ToggleLineBreakpoint)
 map <space>wo <Action>(ToggleZenMode)
 map <space>ff <Action>(SearchEverywhere)
 map <space>fo <Action>(ActivateProjectToolWindow)
+map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
 " format code in visual status
 map Q gqset ideajoin
 set ideastrictmode
