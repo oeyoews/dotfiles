@@ -21,7 +21,7 @@ noremap H 0
 
 " :action partern"
 map <leader>ld <Action>(Debug)
-map <leader>ll <Action>(Run)
+map <leader>lm <Action>(Run)
 map <leader>lr <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
@@ -76,6 +76,7 @@ map <space>wo <Action>(ToggleZenMode)
 map <space>ff <Action>(SearchEverywhere)
 map <space>fo <Action>(ActivateProjectToolWindow)
 map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
+map <space>ll <Action>(RunClass)
 " format code in visual status
 map Q gqset ideajoin
 set ideastrictmode
