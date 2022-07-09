@@ -80,6 +80,7 @@ map <space>ti <Action>(ShowSettings)
 map <space>ta <Action>(GotoAction)
 map <space>tv <Action>(ViewToolButtons)
 map <space>ff <Action>(SearchEverywhere)
+map <space>tc <Action>(CloseAllEditorsButActive)
 " alt 1
 map <space>fo <Action>(ActivateProjectToolWindow)
 map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
