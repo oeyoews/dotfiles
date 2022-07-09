@@ -83,7 +83,7 @@ map <space>ff <Action>(SearchEverywhere)
 map <space>tc <Action>(CloseAllEditorsButActive)
 map <space>tf <Action>(Unsplit)
 " alt 1
-map <space>fo <Action>(ActivateProjectToolWindow)
+map <space>fo <Action>(SelectInProjectView)
 map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
 map <space>ll <Action>(RunClass)
 " format code in visual status
