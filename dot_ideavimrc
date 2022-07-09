@@ -59,6 +59,7 @@ Plug 'nerdtree'
 Plug 'vim-commentary'
 Plug 'vim-surround'
 Plug 'vim-easymotion'
+" alt 1
 nnoremap <leader>ft :NERDTreeFocus<cr>
 set highlightedyank
 let g:highlightedyank_highlight_duration = "100"
@@ -79,6 +80,7 @@ map <space>ti <Action>(ShowSettings)
 map <space>ta <Action>(GotoAction)
 map <space>tv <Action>(ViewToolButtons)
 map <space>ff <Action>(SearchEverywhere)
+" alt 1
 map <space>fo <Action>(ActivateProjectToolWindow)
 map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
 map <space>ll <Action>(RunClass)
