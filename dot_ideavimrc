@@ -72,6 +72,9 @@ nnoremap <space>bp :bp<cr>
 nnoremap <space>so :source ~/.ideavimrc<cr>
 
 map <leader>tb <Action>(ToggleLineBreakpoint)
+map <space>wo <Action>(ToggleZenMode)
+map <space>ff <Action>(SearchEverywhere)
+map <space>fo <Action>(ActivateProjectToolWindow)
 " format code in visual status
 map Q gqset ideajoin
 set ideastrictmode
