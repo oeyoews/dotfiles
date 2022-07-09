@@ -74,6 +74,7 @@ nnoremap <space>so :source ~/.ideavimrc<cr>
 map <leader>tb <Action>(ToggleLineBreakpoint)
 map <space>wo <Action>(ToggleZenMode)
 map <space>tt <Action>(ActivateTerminalToolWindow)
+map <space>bm <Action>(ActivateNotificationsToolWindow)
 map <space>ff <Action>(SearchEverywhere)
 map <space>fo <Action>(ActivateProjectToolWindow)
 map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
