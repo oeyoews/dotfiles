@@ -84,6 +84,7 @@ map <space>tc <Action>(CloseAllEditorsButActive)
 map <space>tf <Action>(Unsplit)
 " alt 1
 map <space>fo <Action>(SelectInProjectView)
+map <space>le <Action>(ShowIntentionActions)
 map <space>so <Action>(IdeaVim.ReloadVimRc.reload)
 map <space>ll <Action>(RunClass)
 " format code in visual status
