@@ -83,6 +83,8 @@ map <space>ff <Action>(SearchEverywhere)
 map <space>tc <Action>(CloseAllEditorsButActive)
 map <space>tf <Action>(Unsplit)
 map <space>tr <Action>(ActivateRunToolWindow)
+map <space>ls <Action>(Stop)
+
 " alt 1
 map <space>fo <Action>(SelectInProjectView)
 map <space>le <Action>(ShowIntentionActions)
