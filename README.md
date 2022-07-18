@@ -62,3 +62,9 @@ chezmoi -R update  # update external repo
 
 * if new files, or new folders, will not delete target
 * q: what's the different between target and destermination
+
+## Notes
+
+### Tmux
+
+* cd ~ && ln -s .tmux
