@@ -12,7 +12,7 @@
 
 <hr>
 
-<img src="img/2022-06-25-11-11-25.png" width=28>
+<img src="img/dot.png" width=28>
 
 </div>
 
