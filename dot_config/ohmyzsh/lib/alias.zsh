@@ -142,7 +142,7 @@ alias se='nvim -u NONE'
 # alias wego='curl wttr.in'
 
 #alias emacsn='emacs -nw'
-# alias doom='~/.emacs.d/bin/doom'
+alias doom='~/.emacs.d/bin/doom'
 
 # NOTE: not use scc alias
 # emacs --daemon=coding;
