@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.23.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.22.0...v1.23.0) (2022-07-19)
+
+
+### Features
+
+* split emacs config(doom) ([1493758](https://gitlab.com/oeyoews/dotfiles/commit/1493758a486ff775eea0bcd80f687eaaa95c39d0))
+
 # [1.22.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.21.0...v1.22.0) (2022-07-03)
 
 
