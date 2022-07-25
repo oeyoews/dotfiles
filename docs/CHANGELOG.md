@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.24.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.23.0...v1.24.0) (2022-07-25)
+
+
+### Features
+
+* **alacritty:** use alacritty ([68ce748](https://gitlab.com/oeyoews/dotfiles/commit/68ce7489434aa3bcb9b43f1dbd2cb51c52b0b3ca))
+
 # [1.23.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.22.0...v1.23.0) (2022-07-19)
 
 
