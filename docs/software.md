@@ -256,3 +256,7 @@
 * dev-sidecar
 
 * gollum
+
+## pdf
+
+* okular
