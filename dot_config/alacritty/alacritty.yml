@@ -22,9 +22,9 @@ font:
   builtin_box_drawing: true
 
   normal:
-    family: "Hack Nerd Font"  # this bottom space is best
+    family: "JetBrains Mono"
+    # family: "Hack Nerd Font"  # this bottom space is best
     # family: "monospace"
-    # family: "JetBrains Mono"
     style: Regular
 
   size: 22.0
