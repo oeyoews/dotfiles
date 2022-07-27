@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.24.0...v1.24.1) (2022-07-27)
+
+
+### Bug Fixes
+
+* **gitua:** remove push with the alias ([08d1fce](https://gitlab.com/oeyoews/dotfiles/commit/08d1fced57a56b28d7bb51e52995bae152e27ed4))
+
 # [1.24.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.23.0...v1.24.0) (2022-07-25)
 
 
