@@ -23,11 +23,11 @@ font:
 
   normal:
     family: "JetBrains Mono"
-    # family: "Hack Nerd Font"  # this bottom space is best
+    # family: "Hack Nerd Font"  # this bottom space is best, but this comma is like chinese comma
     # family: "monospace"
     style: Regular
 
-  size: 22.0
+  size: 24.0
 
   offset:
     x: 0
