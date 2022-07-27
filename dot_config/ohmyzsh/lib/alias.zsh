@@ -133,6 +133,7 @@ alias zprof="zprof > /tmp/zprof.log"
 alias zsh-time="time (repeat 10 zsh -i -c exit)"
 
 #alias nvim="~/.local/share/nvim.appimage"
+alias nvim="/home/oeyoews/REPOS/nvim-projects/nvim-linux64/bin"
 alias vim='nvim'
 alias vi='nvim'
 alias e='nvim'
