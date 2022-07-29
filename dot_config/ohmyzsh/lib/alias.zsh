@@ -96,6 +96,7 @@ alias gits='git status'
 alias gitc1="git clone --depth 1"
 alias gitpp="git pull --rebase=true && git push"
 
+# alias gittl="git describe --tags `git rev-list --tags --max-count=1`"
 alias gitu='git add . && git commit && git push'
 alias gitua='git add . && git commit -m "robot: This is an automatic push"'
 # alias gituai='git commit -m "🧋 This is an automatic push for img" && git push'
@@ -133,7 +134,7 @@ alias zprof="zprof > /tmp/zprof.log"
 alias zsh-time="time (repeat 10 zsh -i -c exit)"
 
 #alias nvim="~/.local/share/nvim.appimage"
-alias nvim="/home/oeyoews/REPOS/nvim-projects/nvim-linux64/bin"
+# alias nvim="/home/oeyoews/REPOS/nvim-projects/nvim-linux64/bin/nvim"
 alias vim='nvim'
 alias vi='nvim'
 alias e='nvim'
