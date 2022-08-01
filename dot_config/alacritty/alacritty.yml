@@ -19,11 +19,10 @@ font:
   builtin_box_drawing: true
 
   normal:
-    # family: "JetBrains Mono"
-    family: "Fira Code Regular"
+    family: "JetBrains Mono"
     style: Regular
 
-  size: 24.0
+  size: 22.0
 
   offset:
     x: 0
