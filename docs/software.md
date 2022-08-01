@@ -251,14 +251,14 @@
 - figlet
 - lolcate
 
-- jsbox
 - v2rayNG
 - chezmoi
 - mkdocs
 - dev-sidecar
 
-- gollum
+- [gollum](): github or gitlab wiki
 
 ## pdf
 
 - okular
+- [focalboard](https://github.com/mattermost/focalboard): notion replace?
