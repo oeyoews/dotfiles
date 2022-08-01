@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.24.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.24.1...v1.24.2) (2022-08-01)
+
+
+### Bug Fixes
+
+* **term:** remove all terminal config ([3f7f9f5](https://gitlab.com/oeyoews/dotfiles/commit/3f7f9f5d09b1366addc8c9627ffcae0ace536c46))
+
 ## [1.24.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.24.0...v1.24.1) (2022-07-27)
 
 
