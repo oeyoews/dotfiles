@@ -96,10 +96,10 @@ alias gits='git status'
 alias gitc1="git clone --depth 1"
 alias gitpp="git pull --rebase=true && git push"
 
+# bug: this cmd will be execute when zsh startup, have some output
 # alias gittl="git describe --tags `git rev-list --tags --max-count=1`"
-alias gitu='git add . && git commit && git push'
-alias gitua='git add . && git commit -m "robot: This is an automatic push"'
-# alias gituai='git commit -m "🧋 This is an automatic push for img" && git push'
+alias gitu='git add . && git commit'
+alias gitua='git add . && git commit -m "Automatic commit"'
 
 #remove tag
 #git push origin :refs/tags/v0.0.2
