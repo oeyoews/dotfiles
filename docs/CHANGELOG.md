@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.25.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.24.2...v1.25.0) (2022-08-04)
+
+
+### Features
+
+* **chrome-flags:** add chrome-flags ([8da6a53](https://gitlab.com/oeyoews/dotfiles/commit/8da6a534378a0a469ddda07302c08f6842e437c7))
+
 ## [1.24.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.24.1...v1.24.2) (2022-08-01)
 
 
