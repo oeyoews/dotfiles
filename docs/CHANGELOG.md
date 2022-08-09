@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.26.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.25.0...v1.26.0) (2022-08-09)
+
+
+### Features
+
+* add zathura ([c442920](https://gitlab.com/oeyoews/dotfiles/commit/c442920bc266909b6f135b1ce152638a5e7c7270))
+
 # [1.25.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.24.2...v1.25.0) (2022-08-04)
 
 
