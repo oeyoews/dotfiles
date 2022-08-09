@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.28.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.27.0...v1.28.0) (2022-08-09)
+
+
+### Features
+
+* **c:** add clang-format ([9485387](https://gitlab.com/oeyoews/dotfiles/commit/9485387a0f108dcda13a7fee5d972738de4eb560))
+
 # [1.27.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.26.0...v1.27.0) (2022-08-09)
 
 
