@@ -15,6 +15,7 @@ alias exai='exa --icons'
 alias colortree='colorls --tree=2'
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
+alias datee='date +"%H"'
 #alias date='date -u'
 #alias date='\date +%F'
 #alias date='\date -I'

@@ -1,0 +1,9 @@
+" c-r is default key to switch theme
+map <C-i> recolor
+set selection-clipboard clipboard
+set recolor true
+set recolor-darkcolor "#dcdccc"
+set recolor-lightcolor "#1f1f1f"
+" set recolor-lightcolor "#2E3440"
+
+" vim: ft=vim
