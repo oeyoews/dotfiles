@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.27.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.26.0...v1.27.0) (2022-08-09)
+
+
+### Features
+
+* **latexmkrc:** add latexmkrc ([aeb4a0f](https://gitlab.com/oeyoews/dotfiles/commit/aeb4a0f74b265d4766ea8ec94b83a0457929577a))
+
 # [1.26.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.25.0...v1.26.0) (2022-08-09)
 
 
