@@ -260,6 +260,7 @@
 
 ## pdf
 
+- zathura
 - okular
 - [focalboard](https://github.com/mattermost/focalboard): notion replace?
 
