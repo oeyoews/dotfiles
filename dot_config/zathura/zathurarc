@@ -1,4 +1,5 @@
 " c-r is default key to switch theme
+" https://github.com/Ziphilt/dotfiles/blob/master/.config/zathura/zathurarc
 map <C-i> recolor
 set selection-clipboard clipboard
 set recolor true
@@ -6,7 +7,7 @@ set recolor-darkcolor "#dcdccc"
 set default-fg "#A2ACCD"
 set recolor-lightcolor "#1f1f1f"
 " set recolor-lightcolor "#2E3440"
-" set font "monospace normal 9"
+set font "monospace normal 12"
 set guioptions ""
 set window-width 1200
 set window-height 1200
