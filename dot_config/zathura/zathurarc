@@ -15,4 +15,11 @@ set adjust-open best-fit
 set window-title-page true
 set zoom-center true
 
+set render-loading "false"
+set scroll-step 50
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+map D set "first-page-column 1:2"
+
 " vim: ft=vim
