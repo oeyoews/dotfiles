@@ -1,7 +1,8 @@
 # note this will cause $path load twice extra
 # bug: exe it twice
 #alias soz='source $HOME/.zshrc && exec zsh'
-alias tlmgr = "/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
+# have output bug
+# alias tlmgr = "/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
 alias fs="fc-list :family style"
 alias pasm="sudo pacman-mirrors -c China -m rank -i -aS unstable"
 alias cdd="cd ~/.local/share/chezmoi"
