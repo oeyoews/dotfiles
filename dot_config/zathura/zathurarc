@@ -2,11 +2,10 @@
 " https://github.com/Ziphilt/dotfiles/blob/master/.config/zathura/zathurarc
 map <C-i> recolor
 set selection-clipboard clipboard
-" set recolor true
-" set recolor-darkcolor "#dcdccc"
+set recolor true
+" set recolor-lightcolor "#dcdccc"
 " set default-fg "#A2ACCD"
-" set recolor-lightcolor "#1f1f1f"
-" set recolor-lightcolor "#2E3440"
+" set recolor-darkcolor "#1f1f1f"
 set font "monospace normal 12"
 set guioptions ""
 set window-width 1200
@@ -14,13 +13,14 @@ set window-height 1200
 set adjust-open best-fit
 set window-title-page true
 set zoom-center true
-
-set render-loading "false"
+set render-loading false
 set scroll-step 50
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 map D set "first-page-column 1:2"
 " map present mode f5
+set synctex true
+set synctex-editor-command "nvr --remote-silent %f -c %l"
 
 " vim: ft=vim
