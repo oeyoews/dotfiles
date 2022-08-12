@@ -112,6 +112,7 @@
 
 ## Fonts
 
+- twemoji to replace noto emoji font
 - FiraCode
 - DeJaVu
 - Fantasque
