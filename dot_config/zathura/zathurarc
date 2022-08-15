@@ -1,7 +1,7 @@
 " vim: ft=vim
 
 map <C-i> recolor
-set selection-notification false
+" set selection-notification false
 set selection-clipboard clipboard
 " set font "monospace normal 12"
 set font "Noto Sans CJK SC Regular 12"
@@ -16,7 +16,6 @@ set render-loading false
 set scroll-step 50
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
-map D set "first-page-column 1:2"
 set synctex true
 set synctex-editor-command "nvr --remote-silent %f -c %l"
 set incremental-search true
@@ -25,3 +24,9 @@ set statusbar-v-padding 0
 set statusbar-h-padding 20
 set sandbox none
 set vertical-center false
+set first-page-column 1:1
+map D set "first-page-column 1:1"
+" not work
+" map <cd> set "first-page-column 1:2"
+" s a r
+" note this in fullscreen mode, this map is not work
