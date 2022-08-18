@@ -267,3 +267,4 @@
 
 - showmethekey(wayland)
 - screenkey(x11)
+- rofi rofi-theme-selector
