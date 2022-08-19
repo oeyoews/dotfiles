@@ -5,3 +5,4 @@ package.json
 yarn.lock
 _config.yml
 renovate.json
+LICENSE
