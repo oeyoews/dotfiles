@@ -524,4 +524,17 @@ function d () {
     dirs -v | head -n 10
   fi
 }
+
 compdef _dirs d
+
+# Dec: init template file
+function init_project_template() {
+  $_folders="src docs"
+  $_files="README.md .gitignore"
+  if [[ -n $1 ]]; then mkdir $1
+    cd $1 || exit
+    git init
+    mkdir $_folders
+    touch $_files
+  end
+}
