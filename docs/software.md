@@ -267,7 +267,7 @@
 - [focalboard](https://github.com/mattermost/focalboard): notion replace?
 
 - showmethekey(wayland)
-- screenkey(x11)
+- [screenkey](https://gitlab.com/screenkey/screenkey#interactive-placement)
 - rofi rofi-theme-selector
 - thunar
 - pip-search
