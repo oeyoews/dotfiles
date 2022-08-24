@@ -112,6 +112,7 @@
 
 ## Fonts
 
+- cascadia
 - [maple](https://github.com/subframe7536/Maple-font)
 - twemoji to replace noto emoji font
 - FiraCode
