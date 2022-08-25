@@ -3,6 +3,7 @@
 #alias soz='source $HOME/.zshrc && exec zsh'
 # have output bug
 # alias tlmgr = "/usr/share/texmf-dist/scripts/texlive/tlmgr.pl --usermode"
+alias neovide="neovide --multigrid"
 alias za="zathura"
 alias fs="fc-list :family style"
 alias pasm="sudo pacman-mirrors -c China -m rank -i -aS unstable"
