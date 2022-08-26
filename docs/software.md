@@ -272,3 +272,4 @@
 - rofi rofi-theme-selector
 - thunar
 - pip-search
+- blanket(voice)
