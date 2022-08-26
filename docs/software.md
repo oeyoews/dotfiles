@@ -122,29 +122,25 @@
 
 ## tools
 
-- Excalidraw
-- anki(phone recommend)
-- markdown-lint(github)
-- sourcegraphy
-- tiddlydesktop
+- Excalidraw(draw)
+- anki(phone recommendor)
+- kookma(video recorder)
 - obs
-- kookma
-- clementine
-- foxit reader
-- gimp
-- mpv
-- xournal++
-- krita
-- mycli
+- clementine(music player)
+- foxit reader(book reader)
+- foliate(reader)
+- gimp(ps)
+- mpv(fullscreen): video player
+- xournal++(draw)
+- krita(?)
 - tlp and tlp-rdw
-- foliate
 - calibre
 - stellarium
 
 ## terminal
 
+- alacritty(fullscreen)
 - kitty
-- alacritty
 - wezterm
 - qterminal
 
@@ -263,7 +259,7 @@
 
 ## pdf
 
-- zathura
+- zathura(fullscreen)
 - okular
 - [focalboard](https://github.com/mattermost/focalboard): notion replace?
 
