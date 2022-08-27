@@ -269,3 +269,7 @@
 - thunar
 - pip-search
 - blanket(voice)
+
+## cmd
+
+- pkill
