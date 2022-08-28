@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.29.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.29.0...v1.29.1) (2022-08-28)
+
+
+### Bug Fixes
+
+* add yarn bin path ([25652c0](https://gitlab.com/oeyoews/dotfiles/commit/25652c03e525db410bf7671d337adfa1af2ecc1d))
+
 # [1.29.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.28.0...v1.29.0) (2022-08-16)
 
 
