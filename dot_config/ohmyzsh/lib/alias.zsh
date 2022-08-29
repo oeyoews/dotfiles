@@ -294,6 +294,7 @@ alias npmm="npm run"
 #alias yarn="yarn"
 
 alias tw='tiddlywiki'
+alias twu='tiddlywiki --listen anon-username=`echo $USER`'
 alias twsu="tiddlywiki --listen anon-username=oeyoews"
 
 # List directory contents
