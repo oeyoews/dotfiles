@@ -1,0 +1,17 @@
+# Maintainer: oeyoews <jyao4783@gmail.com>
+## ADD THEME
+pkgname=typora-free-bin
+pkgver=0.11.18
+pkgrel=1
+pkgdesc="A minimal markdown editor and reader."
+arch=('x86_64')
+url="https://typora.io"
+license=('custom:"Copyright (c) 2015 Abner Lee All Rights Reserved."')
+conflicts=("typora")
+filename="typora_${pkgver}_amd64.deb"
+source=("https://typora.io/linux/$filename")
+md5sums=('SKIP')
+
+package() {
+	bsdtar -xf data.tar.xz -C "$pkgdir/"
+}
