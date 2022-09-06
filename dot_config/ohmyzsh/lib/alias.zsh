@@ -172,6 +172,7 @@ alias bp="btop"
 #journalctl -f -u v2raya.service
 alias pc="sudo systemctl stop v2raya"
 alias po="sudo systemctl start v2raya"
+alias pvr="sudo systemctl restart v2raya"
 
 # nvim
 #nvim --startuptime startup.log -c exit && tail -100 startup.log

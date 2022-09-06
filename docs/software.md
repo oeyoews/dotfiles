@@ -273,3 +273,4 @@
 ## cmd
 
 - pkill
+- sysz(fzf for systemctl)
