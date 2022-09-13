@@ -29,4 +29,3 @@ map D set "first-page-column 1:1"
 " not work
 " map <cd> set "first-page-column 1:2"
 " s a r
-" note this in fullscreen mode, this map is not work
