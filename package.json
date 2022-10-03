@@ -1,6 +1,6 @@
 {
   "name": "dotfiles",
-  "version": "1.29.1",
+  "version": "1.30.0",
   "main": "index.js",
   "repository": "https://gitlab.com/oeyoews/dotfiles.git",
   "author": "oeyoews <jyao4783@gmail.com>",

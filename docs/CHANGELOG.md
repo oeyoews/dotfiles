@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.30.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.29.1...v1.30.0) (2022-10-03)
+
+
+### Features
+
+* add oreo_spark_lime_cursors ([4d2c5af](https://gitlab.com/oeyoews/dotfiles/commit/4d2c5af3283656c23c3e936944f2c9339d08e4ac))
+
 ## [1.29.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.29.0...v1.29.1) (2022-08-28)
 
 
