@@ -188,22 +188,20 @@ alias pvr="sudo systemctl restart v2raya"
 alias pipu='pip3 install --user'
 
  #@DEPRECATED taskbook
-alias tt="taskbook"
-alias tti='tt -i'
-alias ttt='tt -t'
-alias ttd='tt -d'
-alias ttb='tt -b'
-alias ttc='tt -c'
-alias ttpp='tt -p'
-alias tth='tt -h'
-alias ttr='tt -r'
-alias tta='tt -a'
-alias tte='tt -e'
-alias ttn='tt -n'
-# like star....
-alias ttp='tt -l pending'
-alias ttf='tt -f'
-alias ttm='tt -m' # : @idnumber boardname
+alias tbi='tb -i'
+alias tbt='tb -t'
+alias tbd='tb -d'
+alias tbb='tb -b'
+alias tbc='tb -c'
+alias tbpp='tb -p'
+alias tbh='tb -h'
+alias tbr='tb -r'
+alias tba='tb -a'
+alias tbe='tb -e'
+alias tbn='tb -n'
+alias tbp='tb -l pending'
+alias tbf='tb -f'
+alias tbm='tb -m' # : @idnumber boardname
 
 #alias dt="dict"
 

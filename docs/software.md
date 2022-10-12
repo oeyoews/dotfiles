@@ -274,3 +274,8 @@
 
 - pkill
 - sysz(fzf for systemctl)
+
+## cdn
+
+- unpkg
+- jsdelivr
