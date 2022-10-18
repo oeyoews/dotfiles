@@ -279,3 +279,4 @@
 
 - unpkg
 - jsdelivr
+- atom material icons for web extensions
