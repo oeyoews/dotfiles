@@ -1,10 +1,11 @@
 @document.meta
-  title: git
-  description:
-  author: oeyoews
-  categories:
-  created: 2021-11-30
-  version: 0.1
+title: git
+description:
+authors: oeyoews
+categories:
+created: 2022-10-25
+updated: 2022-10-25
+version: 0.0.15
 @end
 
 - git branch -a
@@ -136,14 +137,12 @@
   *** recommend
       - git clone --depth 1 --recurse-submodules  <url>
 
-
 * Blob
   - git init
   - touch demo.txt
   - git add . && git commit -m 'add git repository'
   - tree .git/
   - git cat-file -t/-p <id>
-
 
 * TIps
   - git remote -vv
@@ -152,7 +151,6 @@
   - clone just clone one branch, if you use depth
   - git checkout -t origin/xxx
   - git fetch origin feature:feature
-
 
 * WOrktree
   - git worktree add <path>

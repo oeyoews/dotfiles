@@ -1,10 +1,11 @@
 @document.meta
-  title: bug record
-  description:
-  authors: oeyoews
-  categories:
-  created: 2021-12-20
-  version: 0.0.9
+title: bug
+description:
+authors: oeyoews
+categories:
+created: 2022-10-25
+updated: 2022-10-25
+version: 0.0.15
 @end
 
 * document
@@ -36,7 +37,6 @@
    - [x] 由于链接文件找不到， 网络启动失败
    - [x] sudo /usr/bin/networkmanager/conf.d/...  --no-daemon
    - [x] tips: sudo /usr/bin/networkmanager  --no-daemon  it will output some errout
-
 
 * netease-cloud-music
   1. Q: netease-cloud-music font is too small in high-resoluation?

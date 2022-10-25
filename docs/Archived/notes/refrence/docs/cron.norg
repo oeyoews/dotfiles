@@ -1,12 +1,14 @@
 @document.meta
-  title: cr
-  description:
-  author: oeyoews
-  categories:
-  created: 2021-11-21
-  version: 0.1
+title: cron
+description:
+authors: oeyoews
+categories:
+created: 2022-10-25
+updated: 2022-10-25
+version: 0.0.15
 @end
 
+= TOC
 
 - crontab -e
 - crontab -l
