@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.30.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.30.0...v1.30.1) (2023-02-04)
+
+
+### Bug Fixes
+
+* remove yarn path ([9a79d2b](https://gitlab.com/oeyoews/dotfiles/commit/9a79d2b0ac4bd1633fdd2bde34b3ad1cf3bd850c))
+
 # [1.30.0](https://gitlab.com/oeyoews/dotfiles/compare/v1.29.1...v1.30.0) (2022-10-03)
 
 
