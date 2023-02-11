@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.30.2](https://gitlab.com/oeyoews/dotfiles/compare/v1.30.1...v1.30.2) (2023-02-11)
+
+
+### Bug Fixes
+
+* add skip ci to prevent twice ([1af234d](https://gitlab.com/oeyoews/dotfiles/commit/1af234dcfa8793220451eac5b5670cc1f0454ea3))
+
 ## [1.30.1](https://gitlab.com/oeyoews/dotfiles/compare/v1.30.0...v1.30.1) (2023-02-04)
 
 
