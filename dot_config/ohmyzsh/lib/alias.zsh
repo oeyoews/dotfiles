@@ -101,7 +101,7 @@ alias ipr='ip addr | rg 192'
 alias gh='git-open'
 alias gits='git status'
 alias gitc1="git clone --depth 1"
-alias gitpp="git pull origin main --rebase=true && git push"
+alias gitpp="git pull --rebase=true && git push"
 
 # bug: this cmd will be execute when zsh startup, have some output
 # alias gittl="git describe --tags `git rev-list --tags --max-count=1`"
