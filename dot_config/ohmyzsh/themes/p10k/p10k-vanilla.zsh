@@ -29,8 +29,8 @@
     # background_jobs
     # proxy
     #todo
-    # ranger
-    # vim_shell
+    ranger
+    vim_shell
     #load
     #public_ip
   )

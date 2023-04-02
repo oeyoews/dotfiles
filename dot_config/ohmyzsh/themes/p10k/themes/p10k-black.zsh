@@ -48,7 +48,7 @@
     #proxy                   # system-wide http/https/ftp proxy
     #battery               # internal battery
     #direnv                  # direnv status (https://direnv.net/)
-    #ranger                  # ranger shell (https://github.com/ranger/ranger)
+    # ranger                  # ranger shell (https://github.com/ranger/ranger)
     #taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     #time                  # current time
     #background_jobs         # presence of background jobs
@@ -181,7 +181,6 @@
   typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=44
   # Custom icon.⭐ arch
   typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' '
-
 
   ################################[ prompt_char: prompt symbol ]################################
   # Transparent background.
