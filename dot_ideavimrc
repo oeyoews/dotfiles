@@ -12,9 +12,9 @@ syntax on
 inoremap jk <ESC>
 nnoremap <leader>w <C-W>
 nnoremap <leader><leader> :
-nnoremap <space>qq :q<cr>
+nnoremap <space>qi :q<cr>
 nnoremap <space>ss /
-nnoremap <space>fs :w<cr>
+nnoremap <space>wi :w<cr>
 nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 noremap H 0
