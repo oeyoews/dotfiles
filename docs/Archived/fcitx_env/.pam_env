@@ -1,9 +1,0 @@
-# NOTE: in fcitx55, out of the box, not to edit this file, nothing to ,just use 
-# because manjaro-asian
-# fcitx5: free chinese input toy for X,中文名小企鹅输入法
-# https://hub.fastgit.org/star2000/manjaro-asian-input-support
-# /etc/profile.d/input-support.sh 
-GTK_IM_MODULE DEFAULT=fcitx5
-QT_IM_MODULE  DEFAULT=fcitx5
-XMODIFIERS    DEFAULT=\@im=fcitx5
-SDL_IM_MODULE DEFAULT=fcitx5

@@ -1,7 +1,0 @@
-Host arch
-  HostName 192.168.68.123
-  # remote username
-  User admin
-  #IndentityFile ~/.ssh/...rsa
-  Port 22
-  #UpdateHostKeys no
