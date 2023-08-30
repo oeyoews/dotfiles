@@ -19,7 +19,7 @@ nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 noremap H 0
 
-" :action partern"
+" :action pattern"
 map <leader>ld <Action>(Debug)
 map <leader>lm <Action>(Run)
 map <leader>lr <Action>(RenameElement)
@@ -96,3 +96,4 @@ set ideastrictmode
 
 nnoremap U <C-r>
 nnoremap <space>bd :bd<cr>
+set ideajoin
