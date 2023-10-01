@@ -11,12 +11,11 @@ alias fs="fc-list :family style"
 alias pasm="sudo pacman-mirrors -c China -m rank -i -aS unstable"
 alias cdd="cd ~/.local/share/chezmoi"
 alias cm="chezmoi"
-alias cmu="chezmoi update"
-alias cdrt="cd ~/REPOS/tiddlywiki-starter-kit"
+# alias cdrt="cd ~/REPOS/tiddlywiki-starter-kit"
 alias soz='exec zsh'
-alias lss='colorls'
-alias exai='exa --icons'
-alias colortree='colorls --tree=2'
+# alias lss='colorls'
+# alias exai='exa --icons'
+# alias colortree='colorls --tree=2'
 # system
 alias date='date +"%Y-%m-%d %H:%M:%S"'
 alias datee='date +"%H"'
