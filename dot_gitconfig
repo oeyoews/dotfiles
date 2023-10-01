@@ -9,17 +9,6 @@
   ui = 1
 [core]
   editor = nvim
-
-;  [diff]
-;    tool = kitty
-;    guitool = kitty.gui
-;  [difftool]
-;    prompt = false
-;    trustExitCode = true
-;  [difftool "kitty"]
-;    cmd = kitty +kitten diff $LOCAL $REMOTE
-;  [difftool "kitty.gui"]
-;    cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 [alias]
   count = rev-list --branches --count
   ci = commit
@@ -41,13 +30,6 @@
 	rebase = true
 [merge]
 	ff = no
-; [commit]
-; 	template = ~/.config/gitmsg/.gitmessage
-; 	cleanup = strip
-; [url "git@github.com:"]
-;   insteadOf = https://github.com/
-; [url "git@gitlab.com:"]
-; 	insteadOf = https://gitlab.com/
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
