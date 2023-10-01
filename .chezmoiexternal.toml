@@ -2,9 +2,3 @@
 type = "git-repo"
 url = "https://github.com/oeyoews/nvim.git"
 ref = "nvim"
-refreshPeriod = "24h"
-[".tmux"]
-type = "git-repo"
-url = "https://github.com/gpakosz/.tmux.git"
-ref = ".tmux"
-refreshPeriod = "24h"
