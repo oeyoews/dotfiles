@@ -7,31 +7,20 @@
 
 ## Dependencies
 
-- ttf-fira-code by arch system
-- jetbrains for kitty
+-  python-pygments(ranger)
 
-## Software
+## 🗞️ Usage
 
-- vscode
-
-> pacman -S vscode(code-Oss)
+```bash
+chezmoi init  --depth 1 github.com/oeyoews   # gitlab repo
+or
+chezmoi init oeyoews  # github repo
+chezmoi -R update  # update external repo
+```
 
 ## NOTE
 
 - Note recommend use `rm -i $(chezmoi managed)`
-
-## 🗞️ Run
-
-```bash
-pacman -S chezmoi  # install chezmoi
-chezmoi init  --depth 1 github.com/oeyoews   # gitlab repo
-or
-chezmoi init oeyoews  # github repo
-```
-
-```bash
-chezmoi -R update  # update external repo
-```
 
 ## Bug
 
