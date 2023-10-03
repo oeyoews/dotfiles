@@ -7,7 +7,8 @@
 
 ## Dependencies
 
--  python-pygments(ranger)
+- python-pygments(ranger)
+- net-tools(netstat)
 
 ## 🗞️ Usage
 
