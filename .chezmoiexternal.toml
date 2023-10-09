@@ -1,4 +1,4 @@
-[".config/nvim"]
-type = "git-repo"
-url = "https://github.com/oeyoews/nvim.git"
-ref = "nvim"
+# [".config/nvim"]
+# type = "git-repo"
+# url = "https://github.com/oeyoews/nvim.git"
+# ref = "nvim"
