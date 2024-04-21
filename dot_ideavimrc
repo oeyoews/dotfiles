@@ -97,3 +97,6 @@ set ideastrictmode
 nnoremap U <C-r>
 nnoremap <space>bd :bd<cr>
 set ideajoin
+
+set noerrorbells
+set visualbell
