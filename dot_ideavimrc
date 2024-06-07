@@ -20,6 +20,7 @@ noremap L $
 noremap H 0
 
 " :action pattern"
+map gh <Action>(ShowHoverInfo)
 map <leader>ld <Action>(Debug)
 map <leader>lm <Action>(Run)
 map <leader>lr <Action>(RenameElement)
