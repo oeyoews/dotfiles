@@ -14,6 +14,8 @@ nnoremap <leader>w <C-W>
 nnoremap <leader><leader> :
 nnoremap <space>qi :q<cr>
 nnoremap <space>ss /
+nnoremap <space>ws :split<cr>
+nnoremap <space>wv :vsplit<cr>
 nnoremap <space>wi :w<cr>
 nnoremap <space>bd <cmd>bd<cr>
 noremap L $
