@@ -10,9 +10,9 @@
 [core]
   editor = nvim
 [http]
-    proxy = http://127.0.0.1:20172
+    ; proxy = http://127.0.0.1:20172
 [https]
-    proxy = https://127.0.0.1:20172
+    ; proxy = https://127.0.0.1:20172
 [alias]
   count = rev-list --branches --count
   ci = commit
