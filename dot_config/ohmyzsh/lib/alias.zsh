@@ -12,7 +12,7 @@ alias pasm="sudo pacman-mirrors -c China -m rank -i -aS unstable"
 # alias pasm="sudo pacman-mirrors -c China"
 alias cdd="cd ~/.local/share/chezmoi"
 alias cm="chezmoi"
-alias cdrt="cd ~/REPOS/tiddlywiki-starter-kit"
+#alias cdrt="cd ~/REPOS/tiddlywiki-starter-kit"
 alias soz='exec zsh'
 # alias lss='colorls'
 # alias exai='exa --icons'
@@ -51,13 +51,13 @@ alias or='ranger'
 alias dust="dust -r"
 
 # @ trash
-alias rm='trash'
-alias rmm='\rm -rf'
+#alias rm='trash'
+#alias rmm='\rm -rf'
 # TODO
 # alias rm="mv ~/.local/share/..."
 
 # have some bugs
-alias ms='musicbox'
+#alias ms='musicbox'
 #
 alias tlpt='sudo tlp-stat -t'
 alias tlpb='sudo tlp-stat -b'
@@ -141,7 +141,7 @@ alias zsh-time="time (repeat 10 zsh -i -c exit)"
 
 #alias nvim="~/.local/share/nvim.appimage"
 # alias nvim="/home/oeyoews/REPOS/nvim-projects/nvim-linux64/bin/nvim"
-alias vim='nvim'
+#alias vim='nvim'
 alias vi='nvim'
 alias e='nvim'
 alias se='nvim -u NONE'
@@ -271,15 +271,15 @@ alias gll="setsid google-chrome-stable http://127.0.0.1:8090 > /tmp/ll.log 2>&1 
 alias ts="trans"
 
 #journalctl -p 3 -xb
-#journalctl -b -p warning
+#journalctl -b -p 警告警告ing
 #inxi -Fxz
 #sudo -s /bin/zsh ???
-alias vie="vim ~/.doom.d/config.el"
+#alias vie="vim ~/.doom.d/config.el"
 
-alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
+#alias hugod="cd ~/REPOS/hugo2/ && setsid hugo server > /tmp/hugod.log 2>&1 &"
 #pacman -Si <packagename>
 
-alias yout="you-get"
+#alias yout="you-get"
 # npx http-server
 
 alias cib="ping bing.com"
@@ -290,7 +290,7 @@ alias cib="ping bing.com"
 #sc --failed
 # alias gedit="gnome-text-editor"
 
-alias npmm="npm run"
+#alias npmm="npm run"
 #alias yarn="yarn"
 
 alias tw='tiddlywiki'
@@ -306,4 +306,4 @@ alias la='ls -lAh'
 alias md='mkdir -p'
 alias rd=rmdir
 
-alias clang-format-c="clang-format -style=google -dump-config > ./.clang-format"
+#alias clang-format-c="clang-format -style=google -dump-config > ./.clang-format"
