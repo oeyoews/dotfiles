@@ -17,12 +17,13 @@ nnoremap <space>ss /
 nnoremap <space>ws :split<cr>
 nnoremap <space>wv :vsplit<cr>
 nnoremap <space>wi :w<cr>
-nnoremap <space>bd <cmd>bd<cr>
+" nnoremap <space>bd <cmd>bd<cr>
 noremap L $
 noremap H 0
+nnoremap <space>ei :edit ~/.ideavimrc<cr>
 
 " :action pattern"
-map <leader>gh <Action>(ShowHoverInfo) 
+map <leader>gh <Action>(ShowHoverInfo)
 map <leader>ld <Action>(Debug)
 map <leader>lm <Action>(Run)
 map <leader>lr <Action>(RenameElement)
@@ -69,11 +70,10 @@ let g:highlightedyank_highlight_duration = "100"
 set NERDTree
 set surround
 set commentary
-nnoremap <space>ei :edit ~/.ideavimrc<cr>
 nnoremap <space>bn :bn<cr>
 nnoremap <space>bp :bp<cr>
 " map <space>f <Plug>(easymotion-s)
-nnoremap <space>so :source ~/.ideavimrc<cr>
+" nnoremap <space>so :source ~/.ideavimrc<cr>
 
 map <leader>tb <Action>(ToggleLineBreakpoint)
 map <space>wo <Action>(ToggleZenMode)
