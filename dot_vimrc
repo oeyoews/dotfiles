@@ -8,6 +8,7 @@ set shortmess=atI  " disable show welcome and no clear this ui to quit vim
 let &fcs='eob: '
 
 syntax on
+set mouse=a
 set t_Co=16
 set nocompatible
 set noshowmode
