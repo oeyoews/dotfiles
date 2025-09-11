@@ -26,3 +26,5 @@ export QT_IM_MODULE=fcitx5
 # tips
 # change default shell
 # chsh -s /xxx/zsh
+# offline install zsh(no deps)
+# https://github.com/oeyoews/zsh-bin
