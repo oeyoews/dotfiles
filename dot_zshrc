@@ -6,6 +6,8 @@ fi
 
 #export DISABLE_AUTO_UPDATE=true
 export ZSH_DISABLE_COMPFIX="true"
+# 有环境要求, 可以考虑禁用
+export disable_git=1
 
 # extract
 plugins=( zsh-autosuggestions zsh-syntax-highlighting )
@@ -20,3 +22,7 @@ export QT_IM_MODULE=fcitx5
 
 # source /usr/share/nvm/init-nvm.sh
 # [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+
+# tips
+# change default shell
+# chsh -s /xxx/zsh

@@ -18,7 +18,8 @@
     context
     # os_icon
     dir
-    vcs
+    # 默认启用 VCS 信息，设置 disable_git 时禁用
+    ${disable_git:+""}${disable_git:-"vcs"}
     prompt_char
   )
 
