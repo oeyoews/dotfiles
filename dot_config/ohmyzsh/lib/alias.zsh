@@ -141,8 +141,8 @@ alias zsh-time="time (repeat 10 zsh -i -c exit)"
 
 #alias nvim="~/.local/share/nvim.appimage"
 # alias nvim="/home/oeyoews/REPOS/nvim-projects/nvim-linux64/bin/nvim"
-#alias vim='nvim'
-alias vi='nvim'
+# alias vim='nvim'
+# alias vi='nvim'
 alias e='nvim'
 alias se='nvim -u NONE'
 
