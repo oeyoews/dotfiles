@@ -76,3 +76,9 @@ match group1 /\t/
 
 noremap <space>fs :w<CR>
 noremap <space>q :q<CR>
+
+" 一些终端需要的额外设置
+if &term =~ 'xterm'
+    let &t_SI = "\<Esc>[6 q"  " 插入模式：块状光标
+    let &t_EI = "\<Esc>[2 q"  " 正常模式：块状光标
+endif
