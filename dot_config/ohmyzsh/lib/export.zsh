@@ -45,4 +45,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 # export PATH=$PATH:~/.local/share/gem/ruby/3.0.0/bin:~/.yarn/bin
 
 # export LUA_PATH="~/REPOS/lua/?.lua;~/temp/lua/?.lua;;"
-export LUA_PATH="~/REPOS/luatest/?.lua;;"
+# export LUA_PATH="~/REPOS/luatest/?.lua;;"
+
+# zsh timestamp
+export HIST_STAMPS="yyyy-mm-dd"
