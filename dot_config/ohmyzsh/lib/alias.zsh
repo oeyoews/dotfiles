@@ -307,3 +307,4 @@ alias md='mkdir -p'
 alias rd=rmdir
 
 #alias clang-format-c="clang-format -style=google -dump-config > ./.clang-format"
+alias hi="hostname -I"
