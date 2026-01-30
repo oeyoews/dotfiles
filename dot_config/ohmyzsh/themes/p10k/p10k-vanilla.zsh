@@ -787,7 +787,8 @@
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
   # @SSH
-  typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
+  # 已注释：普通用户也显示 user@hostname（与 root 行为一致）
+  # typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
 
   # Custom icon.
   # typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION='⭐'
