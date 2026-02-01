@@ -1,11 +1,9 @@
-" have some bug
 set confirm
-set shortmess=atI  " disable show welcome and no clear this ui to quit vim
 " set t_ti= t_te=
 " set fillchars=eob:•
 " set fcs=eob:\ ,fold:•
 " https://github.com/neovim/neovim/pull/8546
-let &fcs='eob: '
+let &fcs='eob: ' " remove each line wave char
 
 syntax on
 set mouse=a
@@ -84,3 +82,5 @@ if &term =~ 'xterm'
     let &t_SI = "\<Esc>[6 q"  " 插入模式：块状光标
     let &t_EI = "\<Esc>[2 q"  " 正常模式：块状光标
 endif
+
+set shortmess+=aI  " disable show welcome and no clear this ui to quit vim, dont put first line, it doesn't work because of vim script load order.
