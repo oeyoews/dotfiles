@@ -245,7 +245,6 @@
   "editor.rename.enablePreview": false,
   "workbench.editor.enablePreview": false,
   "workbench.editor.empty.hint": "hidden",
-  "i18n-ally.displayLanguage": "zh",
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
