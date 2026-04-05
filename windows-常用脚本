@@ -1,0 +1,81 @@
+@echo off
+chcp 65001 >nul 2>&1
+title Internal Keyboard Toggle (No Restart)
+color 0A
+
+:: Auto run as administrator
+fltmc >nul 2>&1 || (
+    powershell -Command "Start-Process -Verb RunAs -FilePath '%~f0'"
+    exit /b
+)
+
+cls
+echo.
+echo ==============================================
+echo          Internal Keyboard Controller
+echo ==============================================
+echo.
+echo  [1] Auto Toggle (On ↔ Off)
+echo  [2] Manual Control
+echo  [3] Exit
+echo.
+echo ==============================================
+echo.
+
+:: Check current state
+sc query i8042prt | find "STOPPED" >nul 2>&1
+if %errorlevel% equ 0 (
+    set "STATE=Disabled"
+) else (
+    set "STATE=Enabled"
+)
+
+echo  Current status: Internal Keyboard is [%STATE%]
+echo.
+
+set /p "CHOICE=Please select 1/2/3: "
+
+if /i "%CHOICE%"=="1" goto TOGGLE
+if /i "%CHOICE%"=="2" goto MANUAL
+if /i "%CHOICE%"=="3" exit
+
+echo Invalid input!
+pause >nul
+exit
+
+:TOGGLE
+if "%STATE%"=="Enabled" (
+    echo Disabling internal keyboard...
+    sc stop i8042prt >nul 2>&1
+    sc config i8042prt start= disabled >nul 2>&1
+    echo Success: Internal keyboard DISABLED.
+) else (
+    echo Enabling internal keyboard...
+    sc config i8042prt start= demand >nul 2>&1
+    sc start i8042prt >nul 2>&1
+    echo Success: Internal keyboard ENABLED.
+)
+echo.
+echo External keyboard remains working normally.
+pause >nul
+exit
+
+:MANUAL
+cls
+echo.
+echo ============= MANUAL MODE =============
+echo.
+if "%STATE%"=="Enabled" (
+    echo [1] Disable Internal Keyboard
+) else (
+    echo [1] Enable Internal Keyboard
+)
+echo [2] Back to Main Menu
+echo.
+set /p "SUB=Please select 1/2: "
+
+if /i "%SUB%"=="1" goto TOGGLE
+if /i "%SUB%"=="2" exit
+
+echo Invalid input!
+pause >nul
