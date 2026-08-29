@@ -308,3 +308,5 @@ alias rd=rmdir
 
 #alias clang-format-c="clang-format -style=google -dump-config > ./.clang-format"
 alias hi="hostname -I"
+
+alias dl='docker logs -f $(docker ps -ql)'
